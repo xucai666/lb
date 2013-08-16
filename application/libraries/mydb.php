@@ -74,7 +74,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
 		 		unset($info['main'][$primary_key]);
 		 		$this->ds->insert($table_name,$info['main']);
 		 		$info['main'][$primary_key] = $this->ds->insert_id();
-		 		$info['sys_db_type'] = 'inesrt';
+		 		$info['sys_db_type'] = 'insert';
 		 		
 		 	}else{
 		 		$flag = $this->ds->get_where($table_name,array($primary_key=>$info['main'][$primary_key]))->num_rows();
@@ -85,7 +85,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
 		 		}else{
 		 			$this->ds->insert($table_name,$info['main']);
 		 			$info['main'][$primary_key] = $this->ds->insert_id();
-			 		$info['sys_db_type'] = 'inesrt';
+			 		$info['sys_db_type'] = 'insert';
 			 		
 		 		}
 		 		

@@ -8,6 +8,9 @@
  return array(
  	'8'=>'用户管理',
  	'9'=>'角色管理',
- 	'10'=>'其他',
+ 	'10'=>'fields manage',
+ 	'11'=>'modules manage',
+ 	'12'=>'modules data manage',
+ 	'13'=>'其他',
  );
 ?>

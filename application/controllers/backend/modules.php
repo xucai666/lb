@@ -58,6 +58,20 @@ class Modules extends CI_Controller{
 				//create tag
 				$this->im->create_tag($rs);
 				$this->im->create_menu($rs);
+
+				//insert log
+				$log_cf = $this->im->save_config();
+				$this->load->model('Logs_model');	
+		 		$this->Logs_model->log_insert(array(
+		 			'log_table'=>$log_cf['main']['table_name'],
+		 			'log_table_id'=>$rs['main'][$log_cf['main']['primary_key']],
+		 			'log_user'=>$this->myauth->fetch_auth('user_name'),
+		 			'log_date'=>date("Y-m-d H:i:s"),
+		 			'log_sql'=>trim(implode("\n",(array)$this->db->sql_log)),
+		 			'log_type'=>'11',
+		 			'log_desc'=>sprintf('%s module %s success.',$rs['sys_db_type'],$rs['main']['m_name']),
+		 		));
+
 				$this->mypage->backend_redirect('modules/action_list','保存成功');
 			}else{	
 				
@@ -100,10 +114,27 @@ class Modules extends CI_Controller{
 
            	//drop tables 
 			$drops =  $this->im->drop_table_sql($m_id);
-			$this->mydb->delete($m_id,$this->im->save_config());
+			//delete module
+			$rs = $this->mydb->delete($m_id,$this->im->save_config());
 			foreach($drops as $v):
 				$this->db->query($v);
 			endforeach;
+
+
+			//insert log
+			$log_cf = $this->im->save_config();
+			$this->load->model('Logs_model');	
+	 		$this->Logs_model->log_insert(array(
+	 			'log_table'=>$log_cf['main']['table_name'],
+	 			'log_table_id'=>$rs[$log_cf['main']['primary_key']],
+	 			'log_user'=>$this->myauth->fetch_auth('user_name'),
+	 			'log_date'=>date("Y-m-d H:i:s"),
+	 			'log_sql'=>trim(implode("\n",(array)$this->db->sql_log)),
+	 			'log_type'=>'11',
+	 			'log_desc'=>sprintf('delete module %s success.',$rs['m_name']),
+	 		));
+
+
 			//page redirect
 			$this->mypage->backend_redirect('modules/action_list','删除成功');
 		}catch(EXCEPTION $e){

@@ -37,11 +37,27 @@ class Fields extends CI_Controller{
 		try{
 			$this->form_validation->set_rules($this->im->valid_config());
 			if($this->form_validation->run()){
-				$this->mydb->save($data,$this->im->save_config());
+				$rs = $this->mydb->save($data,$this->im->save_config());
+				//insert log
+				$log_cf = $this->im->save_config();
+				$this->load->model('Logs_model');	
+		 		$this->Logs_model->log_insert(array(
+		 			'log_table'=>$log_cf['main']['table_name'],
+		 			'log_table_id'=>$rs['main'][$log_cf['main']['primary_key']],
+		 			'log_user'=>$this->myauth->fetch_auth('user_name'),
+		 			'log_date'=>date("Y-m-d H:i:s"),
+		 			'log_sql'=>trim(implode("\n",(array)$this->db->sql_log)),
+		 			'log_type'=>'10',
+		 			'log_desc'=>sprintf('%s field %s success.',$rs['sys_db_type'],$rs['main']['f_name']),
+		 		));
+
 				$this->mypage->backend_redirect('fields/action_list','保存成功');
 			}else{				
 				$this->mypage->load_backend_view('fields_add',$data);
 			}
+
+			
+
 
 		}catch(EXCEPTION $e){
 			$this->mypage->backend_redirect($_SREVER['HTTP_REFERER'],$e->getMessage());
@@ -55,7 +71,20 @@ class Fields extends CI_Controller{
 			$f_id = $this->input->post('f_id');
             $f_id = $f_id?$f_id:$this->uri->segment(4);
 			if(empty($f_id)) throw new Exception('参数错误');
-			$this->mydb->delete($f_id,$this->im->save_config());
+			$rs = $this->mydb->delete($f_id,$this->im->save_config());
+			//insert log
+			$log_cf = $this->im->save_config();
+			$this->load->model('Logs_model');	
+	 		$this->Logs_model->log_insert(array(
+	 			'log_table'=>$log_cf['main']['table_name'],
+	 			'log_table_id'=>$rs[$log_cf['main']['primary_key']],
+	 			'log_user'=>$this->myauth->fetch_auth('user_name'),
+	 			'log_date'=>date("Y-m-d H:i:s"),
+	 			'log_sql'=>trim(implode("\n",(array)$this->db->sql_log)),
+	 			'log_type'=>'10',
+	 			'log_desc'=>sprintf('delete field %s success.',$rs['f_name']),
+	 		));
+
 			$this->mypage->backend_redirect('fields/action_list','删除成功');
 		}catch(EXCEPTION $e){
 			$this->mypage->backend_redirect($_SERVER['HTTP_REFERER'],$e->getMessage());

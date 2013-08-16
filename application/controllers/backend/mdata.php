@@ -79,7 +79,21 @@ class Mdata extends CI_Controller{
 				$this->mypage->load_backend_view('mdata_add',$data);
 				
 			}else{	
-				$this->mydb->save($data,$this->im->save_config());
+				$rs = $this->mydb->save($data,$this->im->save_config());
+
+				//insert log
+				$log_cf = $this->im->save_config();
+				$this->load->model('Logs_model');	
+		 		$this->Logs_model->log_insert(array(
+		 			'log_table'=>$log_cf['main']['table_name'],
+		 			'log_table_id'=>$rs['main'][$log_cf['main']['primary_key']],
+		 			'log_user'=>$this->myauth->fetch_auth('user_name'),
+		 			'log_date'=>date("Y-m-d H:i:s"),
+		 			'log_sql'=>trim(implode("\n",(array)$this->db->sql_log)),
+		 			'log_type'=>'12',
+		 			'log_desc'=>sprintf('module %s,%s ID %s success',$this->m->main($this->im->get_mid(),'m_name'),$rs['sys_db_type'],$rs['main'][$log_cf['main']['primary_key']]),
+		 		));
+
 				$this->mypage->backend_redirect('mdata/action_list','保存成功');
 			}
 
@@ -96,7 +110,22 @@ class Mdata extends CI_Controller{
 			$ids = $this->input->post($primary);
             $ids = $ids?$ids:$this->uri->segment(4);
 			if(empty($ids)) throw new Exception('参数错误');
-			$this->mydb->delete($ids,$this->im->save_config());
+			$rs = $this->mydb->delete($ids,$this->im->save_config());
+
+			//insert log
+			$log_cf = $this->im->save_config();
+			$this->load->model('Logs_model');	
+	 		$this->Logs_model->log_insert(array(
+	 			'log_table'=>$log_cf['main']['table_name'],
+	 			'log_table_id'=>$rs[$log_cf['main']['primary_key']],
+	 			'log_user'=>$this->myauth->fetch_auth('user_name'),
+	 			'log_date'=>date("Y-m-d H:i:s"),
+	 			'log_sql'=>trim(implode("\n",(array)$this->db->sql_log)),
+	 			'log_type'=>'12',
+	 			'log_desc'=>sprintf('module %s,delete  %s success.',$this->m->main($this->im->get_mid(),'m_name'),$rs[$log_cf['main']['primary_key']]),
+	 		));
+
+
 			$this->mypage->backend_redirect('mdata/action_list','删除成功');
 		}catch(EXCEPTION $e){
 			$this->mypage->backend_redirect($_SERVER['HTTP_REFERER'],$e->getMessage());
