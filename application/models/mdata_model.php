@@ -185,17 +185,19 @@ class Mdata_model extends CI_Model{
 
 
 
+
 	/**
 	 * [select_list description]
 	 * @return [type] [description]
 	 */
 	function select_list(){
 		$list = $this->m->all();
+		$m_sub = $this->myform->array_re_index($this->m->all(array("m_sub > "=>0)),'m_sub','m_sub');
+		
 		foreach($list as $k=>&$v){
-			if($v[m_lock]){
+			if($v[m_lock] || in_array($v['m_id'], $m_sub)){
 				unset($list[$k]);
 				continue;
-				
 			}
 			$v['m_stat'] = $this->db->count_all_results($v['m_tb']);
 		}

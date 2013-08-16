@@ -110,8 +110,10 @@ class Modules_model extends CI_Model{
 	/**
 	* list all
 	**/
-	function all(){
-		return $this->db->select("*",false)->from('module')->order_by('m_id','asc')->get()->result_array();
+	function all($where=null){
+		$this->db->select("*",false)->from('module')->order_by('m_id','asc');
+		if($where) $this->db->where($where);
+		return $this->db->get()->result_array();
 	}
 
 	function subs($exclud){
@@ -207,10 +209,17 @@ class Modules_model extends CI_Model{
 					}
 					
 				endforeach;
-				//delete
-				
+
+				//delete				
+				$pm  = $this->db->select('m_id')->from('module')->where('m_sub',$info['main']['m_id'])->get()->first_row();
+				if($pm->m_id){
+					//if have parent module,keep it's primary field
+					$keep  = $this->fetch_primary($pm->m_id,'r_name');
+				}
+
 				$diff = array_diff($fields,$new_columns);
 				foreach ((array)$diff as $key => $value) {
+					if($value==$keep) continue;
 					$changes[] =" DROP $value ";
 				}
 				$reval = "ALTER TABLE `$tb` ";
@@ -291,6 +300,15 @@ class Modules_model extends CI_Model{
 		$t_name = $info['main']['m_name'];
 		$t_db_name = $info['main']['m_tb'];
 		$t_mid = $info['main']['m_id'];
+		//子模块不创建菜单
+		$m_sub = $this->myform->array_re_index($this->all(array("m_sub > "=>0)),'m_sub','m_sub');
+		if(in_array($t_mid,$m_sub)){
+			$this->db->where('r_type',1);
+			$this->db->where('r_title',$t_name);
+			$this->db->delete('system_rights');
+			return false;
+		}
+
 		$r_t = ($this->db->select('r_id',false)->from('system_rights')->where('r_type',1)->where('r_pid',0)->get()->first_row('array'));
 		$root_id = $r_t['r_id'];
 		$t = ($this->db->select('r_id',false)->from('system_rights')->where('r_type',1)->where('r_name',$t_name)->get()->first_row('array'));

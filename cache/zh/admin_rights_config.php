@@ -507,61 +507,33 @@
     ),
     36 => 
     array (
-      'r_id' => '102',
-      'r_title' => 'tttttttttttt',
+      'r_id' => '110',
+      'r_title' => '招聘模块',
       'r_pid' => '78',
-      'r_name' => 'tttttttttttt',
+      'r_name' => '招聘模块',
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/mdata/action_set_module/66',
-      'r_code' => '78,102',
+      'r_url' => 'backend/mdata/action_set_module/69',
+      'r_code' => '78,110',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
     37 => 
     array (
-      'r_id' => '103',
-      'r_title' => 'tt',
+      'r_id' => '112',
+      'r_title' => '招聘模块<test>',
       'r_pid' => '78',
-      'r_name' => 'tt',
+      'r_name' => '招聘模块<test>',
       'r_order' => '1',
-      'r_display' => '1',
-      'r_url' => 'backend/mdata/action_set_module/67',
-      'r_code' => '78,103',
+      'r_display' => '0',
+      'r_url' => 'backend/mdata/action_set_module/69',
+      'r_code' => '78,112',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
     38 => 
-    array (
-      'r_id' => '104',
-      'r_title' => '下级模块<test>',
-      'r_pid' => '78',
-      'r_name' => '下级模块<test>',
-      'r_order' => '1',
-      'r_display' => '1',
-      'r_url' => 'backend/mdata/action_set_module/68',
-      'r_code' => '78,104',
-      'r_level' => '2',
-      'r_js_action' => NULL,
-      'r_type' => '1',
-    ),
-    39 => 
-    array (
-      'r_id' => '105',
-      'r_title' => '上级模块',
-      'r_pid' => '78',
-      'r_name' => '上级模块',
-      'r_order' => '1',
-      'r_display' => '1',
-      'r_url' => 'backend/mdata/action_set_module/69',
-      'r_code' => '78,105',
-      'r_level' => '2',
-      'r_js_action' => NULL,
-      'r_type' => '1',
-    ),
-    40 => 
     array (
       'r_id' => '79',
       'r_title' => '复选框测试',
@@ -575,7 +547,7 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    41 => 
+    39 => 
     array (
       'r_id' => '80',
       'r_title' => '单选框测试',
@@ -589,7 +561,7 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    42 => 
+    40 => 
     array (
       'r_id' => '82',
       'r_title' => '是否',
@@ -603,7 +575,7 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    43 => 
+    41 => 
     array (
       'r_id' => '83',
       'r_title' => '单图',
@@ -617,7 +589,7 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    44 => 
+    42 => 
     array (
       'r_id' => '84',
       'r_title' => '多图',
@@ -631,7 +603,7 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    45 => 
+    43 => 
     array (
       'r_id' => '85',
       'r_title' => '碎片管理',
@@ -645,7 +617,7 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    46 => 
+    44 => 
     array (
       'r_id' => '87',
       'r_title' => '新闻管理',
@@ -659,7 +631,7 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    47 => 
+    45 => 
     array (
       'r_id' => '89',
       'r_title' => '分类管理',
@@ -673,7 +645,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    48 => 
+    46 => 
     array (
       'r_id' => '90',
       'r_title' => '产品模块',
@@ -687,7 +659,7 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    49 => 
+    47 => 
     array (
       'r_id' => '91',
       'r_title' => '友情链接',
@@ -701,7 +673,7 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    50 => 
+    48 => 
     array (
       'r_id' => '92',
       'r_title' => '网站栏目',
@@ -715,7 +687,7 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    51 => 
+    49 => 
     array (
       'r_id' => '95',
       'r_title' => '开发文档',
@@ -729,7 +701,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    52 => 
+    50 => 
     array (
       'r_id' => '76',
       'r_title' => '系统手册',
@@ -743,7 +715,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    53 => 
+    51 => 
     array (
       'r_id' => '77',
       'r_title' => '插件文档',
@@ -758,6 +730,6 @@
       'r_type' => NULL,
     ),
   ),
-  'count' => '54',
+  'count' => '52',
   'page_link' => '',
 );?>

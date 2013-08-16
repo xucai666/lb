@@ -125,9 +125,11 @@ class Modules extends CI_Controller{
 			endforeach;
 
 			//delete menu
+			$this->db->_reset_select();
 			$this->db->where_in('r_title',$m_names);
 			$this->db->where('r_type',1);
 			$this->db->delete("system_rights");
+			$this->db->_reset_select();
 
 			//insert log
 			$log_cf = $this->im->save_config();
