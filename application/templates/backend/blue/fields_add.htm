@@ -1,0 +1,53 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<fieldset>
+<legend><div class="nav_title">字段维护</div></legend>
+
+<form  name="form1" id="form1" method="post" action="<!--{func_site_url segments='backend/fields/action_save'}-->">
+<table>
+	<tr>
+		<td>字段类型：</td>
+		<td>
+			<select name="main[f_type]">
+				<!--{html_options options=$fields_types selected=$main.f_type}-->
+			</select>
+			<!--{php}-->
+				echo form_error("main[f_type]","<span id='error_span'>","</span>");
+			<!--{/php}-->
+		</td>
+		<td></td>
+	</tr>
+
+	<tr>
+		<td>字段名称：</td>
+		<td>
+			<input size="80" type="text" name="main[f_name]" id="main[f_name]" value="<!--{$main.f_name}-->">
+			<!--{php}-->
+				echo form_error("main[f_name]","<span id='error_span'>","</span>");
+			<!--{/php}-->
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>html调用代码：</td>
+		<td>
+			<textarea  name="main[f_html]" style="width:800px;height:400px"><!--{$main.f_html|escape:"html"}--></textarea>
+		<!--{php}-->
+				echo form_error("main[f_html]","<span id='error_span'>","</span>");
+		<!--{/php}-->
+		</td>
+		<td></td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td colspan="3" align="center">
+		<!--{create_button type='save'}-->
+		<input size="80" type="hidden" name="main[f_id]" value="<!--{$main.f_id}-->">
+	</td></tr>
+
+</table>
+</form>	
+</fieldset>
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

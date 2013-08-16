@@ -1,0 +1,17 @@
+set names 'utf8';
+TRUNCATE mysys_advs;
+TRUNCATE mysys_adv_detail;
+TRUNCATE mysys_apply;
+TRUNCATE mysys_ask;
+TRUNCATE mysys_ask_answer;
+TRUNCATE mysys_category;
+TRUNCATE mysys_commission;
+TRUNCATE mysys_engage;
+TRUNCATE mysys_engage_apply;
+TRUNCATE mysys_feel;
+TRUNCATE mysys_friendlink;
+TRUNCATE mysys_infos;
+TRUNCATE mysys_order_detail;
+TRUNCATE mysys_order_main;
+TRUNCATE mysys_picture_show;
+TRUNCATE mysys_products;

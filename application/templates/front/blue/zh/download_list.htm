@@ -1,0 +1,58 @@
+<!--{include file="`$dir_front`/top.htm"}-->
+<!--{include file="`$dir_front`/nav.htm"}-->
+<div class="container_width"><img src="<!--{$img_url}-->/source_download.jpg" width="896" height="106"></div>
+
+<div id="new_content_container" class="container_width">
+	
+    	<!--{include file="`$ci_config.template_dir`/front/`$lang_type`/left_download.htm"}-->
+    
+  
+  
+  <div id="right_container">
+    	<h4><span><a href="#">当前位置-</a>资源下载</span><!--{$list.0.c_title}--></h4>
+    <div class="new_list">
+
+     <br />
+
+     <table width="100%" border="0" cellspacing="1" cellpadding="1" bgcolor="#CCCCCC">
+  <tr>
+    <th width="5%" height="25" align="center" bgcolor="#FFFFFF">序号</th>
+    <th width="68%" height="25" align="center" bgcolor="#FFFFFF">名称</th>
+    <th width="6%" height="25" align="center" bgcolor="#FFFFFF">大小</th>
+    <th width="21%" height="25" align="center" bgcolor="#FFFFFF">更新时间</th>
+  </tr>
+   <!--{foreach from=$list item=item name="download_list"}-->
+  <tr>
+    <td height="25" align="center" bgcolor="#FFFFFF">
+    <!--{$smarty.foreach.download_list.iteration}-->
+    
+    &nbsp;</td>
+    <td height="25" bgcolor="#FFFFFF">&nbsp;<a href="<!--{$site_url}-->/front/download/view/?info_id=<!--{$item.info_id}-->"><!--{$item.info_title}--></a>&nbsp;</td>
+    <td height="25" align="center" bgcolor="#FFFFFF"><span><!--{$item.info_file_size}--></span>&nbsp;</td>
+    <td height="25" bgcolor="#FFFFFF" align="center"><span><!--{$item.info_last_update}--></span>&nbsp;</td>
+  </tr>
+    <!--{/foreach}-->
+</table>
+     
+     
+
+      
+      
+      
+      </div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="right">
+            <!--{$page_link}-->
+            
+            </td>
+          </tr>
+        </table>
+    </div>
+  
+  
+    <div class="clear"></div>
+</div>
+
+
+<!--{include file="`$dir_front`/foot.htm"}-->

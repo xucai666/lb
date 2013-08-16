@@ -1,0 +1,30 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<div class="nav_title">模型数据</div>
+
+
+  
+<table class='mytable'>
+	<thead>
+<tr>
+	<th>
+	请选择
+	</th>
+	
+	
+
+</tr>
+	</thead>
+<tbody>
+<!--{foreach from=$treeIds key=key item=item}-->	
+<tr>
+	<td>
+		<a href="<!--{func_site_url segments="backend/tree/action_root_set/`$key`"}-->">
+			<!--{$item}--></a>
+	</td>
+	
+</tr>
+<!--{/foreach}-->
+</tbody>	
+</table>
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

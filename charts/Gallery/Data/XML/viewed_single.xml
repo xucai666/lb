@@ -1,0 +1,23 @@
+<chart caption="Hotel Supplies各阶段浏览量统计日报表01/01~01/04"  lineThickness='1'  formatNumberScale='0' anchorRadius='2'   divLineAlpha='20' divLineColor='CC3300' divLineIsDashed='1' showAlternateHGridColor='1' alternateHGridColor='CC3300' shadowAlpha='40'  numvdivlines='15' chartRightMargin='35' bgColor='FFFFFF,CC3300' bgAngle='270' bgAlpha='10,10' alternateHGridAlpha='5'  legendPosition ='RIGHT '  numVisiblePlot='250' numberPrefix='' xAxisName='时间周期' yAxisName='浏览量' exportEnabled='1' exportHandler='/plugins/charts/ExportHandlers/PHP/FCExporter.php' exportAtClient='0' exportAction='download' >
+<categories >
+<category value='2013-01-01'  label="2013-01-01" />
+<category value='2013-01-02'  label="2013-01-02" />
+<category value='2013-01-03'  label="2013-01-03" />
+<category value='2013-01-04'  label="2013-01-04" />
+</categories >
+<dataset color='f1a56' seriesName=' category' anchorBorderColor='f1a56' anchorBgColor='f1a56' >
+<set value='9846'    displayValue='9846' valuePosition='AUTO'  toolText="" />
+<set value='10523'    displayValue='10523' valuePosition='AUTO'  toolText="" />
+<set value='8780'    displayValue='8780' valuePosition='AUTO'  toolText="" />
+<set value='1484'    displayValue='1484' valuePosition='AUTO'  toolText="" />
+</dataset>
+<styles>
+<definition>
+<style name='CaptionFont' type='font' size='12'　start='0'　duration='1' />
+</definition>
+<application>
+<apply toObject='CAPTION' styles='CaptionFont' />
+<apply toObject='SUBCAPTION' styles='CaptionFont' />
+<apply toObject='DATALABELS' styles='LabelFont' /></application>
+</styles>
+</chart>

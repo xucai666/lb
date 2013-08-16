@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><!--{$optimize.title}--></title>
+<meta name="Keywords" content="<!--{$optimize.meta}-->" />
+<meta name="Description" content="<!--{$optimize.description}-->" />
+<!--{$header_html.css}-->
+<!--{$header_html.js}-->
+</head>
+<body>
+<table width="991" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="3"><img src="<!--{$img_url}-->/top_02.jpg" width="3" height="95" /></td>
+    <td style="background:url(<!--{$img_url}-->/top_04.jpg) repeat-x"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="<!--{$img_url}-->/logo_02.jpg" width="248" height="95" style="margin-left:20px;" /></td>
+        <td width="208" style="position:relative">
+        <div class="top_right1">
+<a href="<!--{$site_url|cat:$next_lang}-->"><img src="<!--{$img_url}-->/lang_change.gif">&nbsp;<!--{$lang_type}--></a>
+
+</div>
+        
+        <form id="form1" name="form1" method="post" action="<!--{func_site_url segments='front/search'}-->" >
+        <table width="188" border="0" cellspacing="0" cellpadding="0" style="margin-top:35px; margin-right:20px;">
+  <tr>
+            <td align="right">
+            
+            <input type="text" name="title" id="textfield"  style="width:155px; height:18px; border:0; line-height:18px;" class=" input" /> </td>
+            <td align="left"><input type="image" src="<!--{$img_url}-->/sousuo_07.jpg" width="30" height="19" style=" margin-bottom:1px;" border="0"/></td>
+          </tr>
+      </table>
+
+        
+        
+        </form>
+        
+        
+        </td>
+      </tr>
+    </table></td>
+    <td width="3"><img src="<!--{$img_url}-->/top_06.jpg" width="3" height="95" /></td>
+  </tr>
+</table>
+<table width="991" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+    <SCRIPT type='text/javascript'>
+function selectTag(showContent,selfObj,str){
+	// 操作标签
+	var tag = document.getElementById("top_dhlm").getElementsByTagName("li");
+	var taglength = tag.length;
+	for(i=0; i<taglength; i++){
+		tag[i].className = "";
+	}
+	selfObj.parentNode.className = "selectTag"+str;
+	// 操作内容
+	for(i=0; j=document.getElementById("top_dhlmContent"+i); i++){
+		j.style.display = "none";
+	}
+	document.getElementById(showContent).style.display = "block";
+}
+</SCRIPT>
+
+
+
+    <div id="top_flash">
+		<script>
+            var widths=991;
+            var heights=470;	
+            var counts=parseInt("<!--{$pics.stat}-->");
+			<!--{foreach from=$pics.list item=item key=key}-->
+            img<!--{$key+1}-->=new Image ();
+            url<!--{$key+1}-->=new Image ();
+            url<!--{$key+1}-->.src='<!--{$base_url}-->/swfupload/uploads/<!--{$item.p_thumb}-->';
+            img<!--{$key+1}-->.src='<!--{$base_url}-->/swfupload/uploads/<!--{$item.p_thumb}-->';
+			
+			<!--{/foreach}-->
+            var nn=1; 
+            var key=0; 
+            function change_img() 
+            {if(key==0){key=1;} 
+            else if(document.all) 
+            {document.getElementById("pic1").filters[0].Apply();document.getElementById("pic1").filters[0].Play(duration=2);} 
+            eval('document.getElementById("pic1").src=img'+nn+'.src'); 
+            eval('document.getElementById("url").href=url'+nn+'.src'); 
+            for (var i=1;i<=counts;i++){document.getElementById("xxjdjj"+i).className='axx';} 
+            document.getElementById("xxjdjj"+nn).className='bxx'; 
+            nn++;if(nn>counts){nn=1;} 
+            tt=setTimeout('change_img()',6000);}
+            function changeimg(n){nn=n;window.clearInterval(tt);change_img();} 
+            document.write('<style>'); 
+            document.write('.axx{padding:1px 7px;border-left:#cccccc 1px solid;}'); 
+            document.write('a.axx:link,a.axx:visited{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:#666;}'); 
+            document.write('a.axx:active,a.axx:hover{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:#999;}'); 
+            document.write('.bxx{padding:1px 7px;border-left:#cccccc 1px solid;}'); 
+            document.write('a.bxx:link,a.bxx:visited{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:##66CC33;}'); 
+            document.write('a.bxx:active,a.bxx:hover{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:##66CC33;}'); 
+            document.write('</style>'); 
+            document.write('<div style="width:'+widths+'px;height:'+heights+'px;overflow:hidden;text-overflow:clip;">'); 
+            document.write('<div><a id="url"><img id="pic1" style="border:0px;filter:progid:dximagetransform.microsoft.wipe(gradientsize=1.0,wipestyle=4, motion=forward)" width='+widths+' height='+heights+' /></a></div>'); 
+            document.write('<div style="filter:alpha(style=1,opacity=10,finishOpacity=0);background: #888888;width:100%-2px;text-align:right;top:-12px;position:relative;margin:1px;height:12px;padding:0px;margin:0px;border:0px;">'); 
+          
+			for(var i=1;i<counts+1;i++){document.write('<a href="javascript:changeimg('+i+');" id="xxjdjj'+i+'" class="axx" target="_self">'+i+'</a>');} 
+            document.write('</div></div>'); 
+            change_img(); 
+        </script>
+	</div>
+    </td>
+  </tr>
+</table>
+<table width="991" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <!--{tag t_id=44  }-->
+    <td style="background:url(<!--{$img_url}-->/daohan_25.jpg) repeat-x">&nbsp;</td>
+    <td width="2"><img src="<!--{$img_url}-->/daohan_27.jpg" width="2" height="33" /></td>
+  </tr>
+</table>
+<table width="991" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:13px;">
+  <tr>
+    <td width="652" valign="top"><table width="642" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="142" ><img src="<!--{$img_url}-->/about_09.jpg" width="142" height="28" /></td>
+        <td width="496" style="background:url(<!--{$img_url}-->/about_11.jpg) repeat-x">&nbsp;</td>
+        <td width="4"><img src="<!--{$img_url}-->/about_13.jpg" width="4" height="28" /></td>
+      </tr>
+      <tr>
+        <td colspan="3"><table width="642" height="168" border="0" cellspacing="0" cellpadding="0" style="margin-top:3px; background-color:#f7f7f7" class="bian">
+          <tr>
+            <td><span class="tutu"><img src="<!--{$img_url}-->/tu_05.jpg" width="268"  border="0" style="margin-top:5px; margin-left:5px; float:left"/></span></td>
+            <td style="padding-left:8px; padding-right:8px; line-height:18px;" class="link_qq">
+            <a  href="<!--{func_site_url segments='front/about'}-->">
+            <!--{tag t_id=24 where="f_id=2" html_type='style1'}-->
+            </a>
+            </td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+    <td><table width="339" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="175"><img src="<!--{$img_url}-->/new_09.jpg" width="175" height="28" /></td>
+        <td  style="background:url(<!--{$img_url}-->/new_11.jpg) repeat-x">&nbsp;</td>
+        <td width="3"><img src="<!--{$img_url}-->/new_13.jpg" width="3" height="28" /></td>
+      </tr>
+      <tr>
+        <td colspan="3"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="bian" style="background-color:#f7f7f7; margin-top:3px;">
+          <tr>
+            <td style="line-height:30px; padding-top:7px; padding-bottom:8px;">
+            <!--{tag t_id=46  html_type="style1" page_size=5}-->
+            </td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
+
+
+
+
+<!--{include file="`$dir_front`/foot.htm"}-->

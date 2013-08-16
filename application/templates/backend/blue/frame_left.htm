@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<title><!--{$item_lang.sys_backend}--></title> 
+<!--{$header_html.css}-->
+<!--{$header_html.js}-->
+</head>
+<BODY >
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" id='mytb1' >
+  <tr>
+    <td valign="top" style="padding-top:10px; ">
+		<table class="alpha">
+		  <tr>
+			<td valign="top" class="menu" id="menubar">
+			
+			 <!--{foreach from=$rights_options  item=item key=key}-->			
+				<!--{foreach from=$item.detail  key=key1 item=item1}--> 
+					<!--{if $item1.url}-->
+						<li><a href="<!--{if $item1.url=='event'}-->javascript:;<!--{else}--><!--{$site_url}-->/<!--{$item1.url}--><!--{/if}-->"  <!--{$item1.js_action}-->  title="<!--{$item1.title}-->" target="frmright"><!--{$item1.title}--></a></li>
+					<!--{/if}--> 	
+				<!--{/foreach}-->				
+			
+ 			<!--{/foreach}-->	
+			
+			
+			</td>
+		  </tr>
+		</table>
+	</td>
+  </tr>
+ 
+</table>
+
+</body>
+</html>

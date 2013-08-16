@@ -1,0 +1,115 @@
+<!--{include file="`$dir_backend`/top.htm"}-->  
+  
+<fieldset>
+<legend><!--{$lang_sys.basic_config}--></legend>  
+        
+<form action="<!--{$site_url}-->/backend/system_manage/action_config_save" method="post" enctype="multipart/form-data" name="form1" id="form1" onsubmit="return validator(this)">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" >
+     <tr>
+      <td width="31%" height="20" align="left" bgcolor="#f1f1f1">&nbsp;&nbsp;&nbsp;开发配置</td>
+      <td width="69%" height="20" bgcolor="#f1f1f1">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="40" align="right">开启调试模式：</td>
+      <td height="40"><input name="develop[debug]" type="checkbox" id="develop[debug]" value="1" <!--{if $develop.debug}-->checked="true" <!--{/if}--> /></td>
+    </tr>
+
+     <tr>
+      <td height="40" align="right">选择模板</td>
+      <td height="40"><select name="develop[template]" id="develop[template]">
+      <!--{html_options  values=$styles output=$styles selected=$develop.template}-->
+
+
+      </select></td>
+    </tr>
+
+<tr>
+      <td height="40" align="right">页面跳转等待时间</td>
+      <td height="40"><input name="develop[time_page_redirect]" type="text" id="develop[time_page_redirect]" size="5" value="<!--{$develop.time_page_redirect|default:'3000'}-->" />ms</td>
+    </tr>
+
+
+    <tr>
+      <td width="31%" height="20" align="left" bgcolor="#f1f1f1">&nbsp;&nbsp;&nbsp;<!--{$lang_sys.opt}--></td>
+      <td width="69%" height="20" bgcolor="#f1f1f1">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="40" align="right"><!--{$lang_sys.opt_title}-->：</td>
+      <td height="40"><input name="optimize[title]" type="text" id="optimize[title]" size="50" value="<!--{$optimize.title}-->" /></td>
+    </tr>
+    <tr>
+      <td height="40" align="right"><!--{$lang_sys.opt_meta}-->：</td>
+      <td height="40"><input name="optimize[meta]" type="text" id="optimize[meta]" size="50" value="<!--{$optimize.meta}-->"  /></td>
+    </tr>
+    <tr>
+      <td height="40" align="right"><!--{$lang_sys.opt_des}-->：</td>
+      <td height="40"><textarea name="optimize[description]" cols="50" rows="4" id="optimize[description]"><!--{$optimize.description}--></textarea></td>
+    </tr>
+    
+    
+     <tr>
+      <td height="20" align="left" bgcolor="#f1f1f1">&nbsp;&nbsp;&nbsp;联系我们</td>
+      <td height="20" bgcolor="#f1f1f1">&nbsp;</td>
+    </tr>
+    
+    
+    <tr>
+      <td height="20" align="right" >地址：</td>
+      <td height="20" ><input name="contact[addr]" type="text" id="contact[addr]" value="<!--{$contact.addr}-->" size="50"/></td>
+    </tr>
+    <tr>
+      <td height="20" align="right" >&nbsp;&nbsp;&nbsp;电话：</td>
+      <td height="20" ><label for="textfield"></label>
+        <input type="text" name="contact[tel]"  value="<!--{$contact.tel}-->" /></td>
+    </tr>
+    <tr>
+      <td height="20" align="right" >&nbsp;&nbsp;传真：</td>
+      <td height="20" ><label for="textfield"></label>
+        <input type="text" name="contact[fax]"  value="<!--{$contact.fax}-->" /></td>
+    </tr>
+    <tr>
+      <td height="20" align="right" >&nbsp;&nbsp;&nbsp;E-mail：</td>
+      <td height="20" ><label for="textfield"></label>
+        <input type="text" name="contact[email]"  value="<!--{$contact.email}-->" /></td>
+    </tr>
+    
+    
+    <!--
+    
+    <tr>
+      <td height="20" align="left" bgcolor="#f1f1f1">&nbsp;&nbsp;&nbsp;<!--{$lang_sys.smt_config}--></td>
+      <td height="20" bgcolor="#f1f1f1">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="40" align="right"><!--{$lang_sys.smt_host}-->：</td>
+      <td height="40"><label>
+        <input type="text" name="smtp[host]" id="smtp[host]" value="<!--{$smtp.host}-->" />
+      </label></td>
+    </tr>
+    <tr>
+      <td height="40" align="right"><!--{$lang_sys.smt_user}-->：</td>
+      <td height="40"><input type="text" name="smtp[user]" id="smtp[user]" value="<!--{$smtp.user}-->" /></td>
+    </tr>
+    <tr>
+      <td height="40" align="right"><!--{$lang_sys.smt_pass}-->：</td>
+      <td height="40"><input type="text" name="smtp[password]" id="smtp[password]"  value="<!--{$smtp.password}-->" /></td>
+    </tr>
+    <tr>
+      <td height="40" align="right"><!--{$lang_sys.smtp_from}-->：</td>
+      <td height="40"><input type="text" name="smtp[email_from]" id="smtp[email_from]" value="<!--{$smtp.email_from}-->" /></td>
+    </tr>
+   -->
+   
+    <tr>
+      <td height="40" align="right">&nbsp;</td>
+      <td height="40">
+	  
+	  <!--{create_button type='save'}-->
+	  
+	  </td>
+    </tr> 
+   
+  </table>
+</form>
+</fieldset>
+<!--{include file="`$dir_backend`/foot.htm"}-->

@@ -1,0 +1,94 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<div class="mytheme1" align="left" ><!--{$lang_admins.theme_manage}--></div>
+
+<!--{php}-->
+	$attr  = array('method'=>'get');
+	echo form_open("backend/admins/action_list",$attr);
+<!--{/php}-->
+<div  align="right"><a href="<!--{func_site_url segments='/backend/fields/action_add'}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
+<table  align="center" class="search" >
+<tr>
+	<td>
+	<!--{$lang_admins.username}-->：
+	</td>
+	<td>
+		<input type="text" name="admin_user"  value="<!--{php}--> echo set_value(null,$_GET['admin_user']); <!--{/php}-->"/>
+	</td>
+	<td>
+	<!--{$lang_admins.name}-->：
+	</td>
+	<td>
+	<input type="text" name="name"  value="<!--{php}--> echo set_value(null,$_GET['name']); <!--{/php}-->"/>
+	</td>
+	<td>
+	<!--{$lang_admins.mobile}-->：
+	</td>
+	<td>
+	<input type="text" name="mobile" value="<!--{php}--> echo set_value(null,$_GET['mobile']); <!--{/php}-->"  />
+	</td>
+
+	<td>
+	
+		<!--{create_button type='search'}-->
+	</td>
+</tr>
+</table>
+<!--{php}-->
+	echo form_close();
+<!--{/php}-->
+
+
+<table class="mytable" width="100%">
+	<tr class="tr_theme">
+		<th><!--{$lang_admins.username}--></th>
+		<th><!--{$lang_admins.name}--></th>
+		<th><!--{$lang_admins.role}--></th>
+		<th><!--{$lang_admins.mobile}--></th>
+		<th><!--{$lang_admins.tel}--></th>
+		<th><!--{$lang_admins.qq}--></th>
+		<th><!--{$lang_admins.email}--></th>
+		<th><!--{$lang_admins.operate}--></th>
+	</tr>
+	<!--{foreach from=$list item=v}-->
+	<tr class="tr_center">
+		<td><!--{$v.admin_user}--></td>
+		<td><!--{$v.name}--></td>
+		<td><!--{$group_options[$v.group_id].role_name}--></td>
+		<td><!--{$v.mobile}--></td>
+		<td><!--{$v.tel}--></td>
+		<td><!--{$v.qq}--></td>
+		<td><!--{$v.email}--></td>
+		<td>
+			<!--{php}--> 
+			\$attrs  = array(
+				'class'=>'link_view',
+				'target'=>'_blank',
+			);
+			echo anchor('backend/admins/action_view/'.\$template->tpl_vars["v"]->value["admin_id"],'&nbsp;',\$attrs);
+			 <!--{/php}-->
+			
+
+            	<!--{if $v.group_id>=$current_role_id || $current_admin_id==$v.admin_id}-->	
+				<!--{php}--> 				
+				\$attrs  = array(
+					'class'=>'link_mod',
+				);
+				echo anchor('backend/admins/action_add/'.\$template->tpl_vars["v"]->value["admin_id"],'&nbsp;',\$attrs);
+				<!--{/php}-->
+				<a  href='<!--{func_site_url segments="backend/admins/action_delete/`$v.admin_id`"}-->' onclick="return confirm('<!--{$lang_admins.delete_confirm}-->')" class="link_del">&nbsp;</a>
+                <!--{/if}-->
+           
+			
+			
+		</td>
+	
+	</tr>
+	<!--{/foreach}-->
+</table>
+<div class="margin_25 center">
+	<!--{$page_link}-->
+</div>
+<div class="hide" id="dialog_delete" icon="icon-save" style="padding:5px;width:400px;height:150px;">
+		<div class="center margin_25"><!--{$lang_admins.delete_confirm}--></div>
+</div>
+<!--{include file="`$dir_backend`/foot.htm"}-->

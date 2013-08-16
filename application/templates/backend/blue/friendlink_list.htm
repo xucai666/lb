@@ -1,0 +1,67 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<div class="nav_title" align="left" >友情链接</div>
+<div  align="right"><a href="<!--{$site_url}-->/backend/friendlink/action_add"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
+
+
+<div class="search"><form action="<!--{$site_url}-->/backend/friendlink/action_list/" method="get">
+    
+    站点名称： 
+      <input type="text" name="link_title" value="<!--{$smarty.get.link_title}-->" />
+	<input type="hidden" name="parent_class" value="<!--{$smarty.get.parent_class}-->">
+	<input type="submit" name="submit" value="查询" />
+	</form>
+
+
+</div>
+
+<table class='mytable'>
+  <tr>
+    <th class="l1">编号</th>
+    <th class="l2">站点名称</th>
+    <th class="l3">图片</th>   
+    <th class="l4">链接地址</th>    
+    <th class="l5">添加日期</th>
+     <th class="l8">操作</th>
+  </tr>
+
+  <!--{foreach from=$list item=item key=key}-->
+<tr  class="mouse_pointer" >
+  	   <td ><!--{$item.link_id}--></td>
+       <td ><!--{$item.link_title}--></td>
+        <td >
+         <!--{if $item.link_pic}-->
+         <div > <img src="<!--{$base_url}-->uploads/link/<!--{$item.link_pic}-->" width="120" height="80" /> </div>
+   
+         <!--{/if}-->&nbsp;
+        </td>  
+       <td ><a href="<!--{$item.link_url}-->" target='_blank'><!--{$item.link_url}--></a></td>
+    <td >&nbsp;<!--{$item.link_date}--></td>
+   
+  
+   
+    <td  > 
+      
+        <a  title="查看链接"   href="<!--{$site_url}-->/backend/friendlink/action_add/?link_id=<!--{$item.link_id}-->&parent_class=<!--{$smarty.get.parent_class}-->" > 
+      <img src="<!--{$img_url}-->/mod1.gif" border="0" > </a> 
+      
+      <a  title="删除链接" href="<!--{$site_url}-->/backend/friendlink/action_del/?link_id=<!--{$item.link_id}-->&parent_class=<!--{$smarty.get.parent_class}-->" onclick="return confirm('确定删除?');"> 
+      <img src="<!--{$img_url}-->/del1.gif" border="0" > </a> 
+    
+     
+      </td>
+  </tr>
+
+<!--{/foreach}-->
+
+
+
+</table>
+<div class="page_link">
+	<!--{$page_link}-->
+</div>
+<script language="JavaScript">
+	overclass($('#archives ul'));
+	
+</script>
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

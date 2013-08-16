@@ -1,0 +1,39 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+
+<fieldset>
+<legend><!--{$lang_roles.rights_config}--></legend>
+<form method="post" action="<!--{$site_url}-->/backend/roles/action_save"> 
+
+<table class="center" width="100%">
+<tr class="tr_theme" >
+	<td  colspan="2" align="left">
+    角色名称：<input type="text" size="25" name="main[role_name]" value="<!--{$main.role_name}-->">
+	
+	</td>
+</tr>
+
+
+
+<tr >
+	<td width="94" align="left" valign="top" ><!--{$lang_roles.rights_config}-->：</td><td class="td_left">	
+		<ul  class="rights_options">	
+		 <!--{$rights_options}-->
+		</ul>	
+	
+	</td>
+</tr>
+<tr><td width="94" align="left"></td><td class="td_left">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="check_all" id="check_all" onclick="checkAll();" ><!--{$lang_roles.select_all}--></td></tr>
+
+
+</table>
+<center>
+
+<input type="hidden" name="main[role_id]" value="<!--{$main.role_id}-->">
+<!--{create_button type='save'}-->
+</center>
+
+</form>
+</fieldset>
+<!--{include file="`$dir_backend`/foot.htm"}-->

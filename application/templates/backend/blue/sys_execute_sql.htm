@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+</head>
+
+ <body>
+ <form id="form1" name="form1" method="post" action="<!--{$site_url}-->/backend/system_manage/action_execute_sql_submit">
+   <table width="100%" border="0" cellspacing="3" cellpadding="3">
+     <tr>
+       <td>粘贴sql语句：</td>
+       <td><label for="sql"></label>
+       <textarea name="sql" cols="60" rows="10" id="sql"></textarea></td>
+     </tr>
+     <tr>
+       <td colspan="2" align="center">
+	   
+	   <!--{create_button type='save'}-->
+	   </td>
+     </tr>
+   </table>
+ </form>
+<hr>
+Affect Rows:<!--{$qr_afr}-->
+ <div style="border:1px dashed  #cccccc">
+	 <pre>
+		 <!--{$qr}-->
+	 </pre>
+ </div>
+ </body>
+</html>

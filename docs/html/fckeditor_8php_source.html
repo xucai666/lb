@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>Codeigniter: application/libraries/fckeditor.php 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Codeigniter
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.4 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d75c23162a2652451dce46d2e7e8aead.html">application</a></li><li class="navelem"><a class="el" href="dir_c728ed93dccbeaf53c1fa7ba8b634998.html">libraries</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">fckeditor.php</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="fckeditor_8php.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * FCKeditor - The text editor for Internet - http://www.fckeditor.net</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Copyright (C) 2003-2009 Frederico Caldeira Knabben</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * == BEGIN LICENSE ==</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * Licensed under the terms of any of the following licenses at your</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * choice:</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  - GNU General Public License Version 2 or later (the &quot;GPL&quot;)</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *    http://www.gnu.org/licenses/gpl.html</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *  - GNU Lesser General Public License Version 2.1 or later (the &quot;LGPL&quot;)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *    http://www.gnu.org/licenses/lgpl.html</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  - Mozilla Public License Version 1.1 or later (the &quot;MPL&quot;)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *    http://www.mozilla.org/MPL/MPL-1.1.html</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * == END LICENSE ==</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * This is the integration file for PHP 5.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * It defines the FCKeditor class that can be used to create editor</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * instances in PHP pages on server side.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="fckeditor_8php.html#a57ec5e2e203d2ae8b4c5502f7a1fe1f6">   34</a></span>&#160;<span class="keyword">function</span> <a class="code" href="fckeditor_8php.html#a57ec5e2e203d2ae8b4c5502f7a1fe1f6">FCKeditor_IsCompatibleBrowser</a>()</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">if</span> ( isset( $_SERVER ) ) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        $sAgent = $_SERVER[<span class="stringliteral">&#39;HTTP_USER_AGENT&#39;</span>] ;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        global $HTTP_SERVER_VARS ;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">if</span> ( isset( $HTTP_SERVER_VARS ) ) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            $sAgent = $HTTP_SERVER_VARS[<span class="stringliteral">&#39;HTTP_USER_AGENT&#39;</span>] ;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            global $HTTP_USER_AGENT ;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            $sAgent = $HTTP_USER_AGENT ;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> ( strpos($sAgent, <span class="stringliteral">&#39;MSIE&#39;</span>) !== <span class="keyword">false</span> &amp;&amp; strpos($sAgent, <span class="stringliteral">&#39;mac&#39;</span>) === <span class="keyword">false</span> &amp;&amp; strpos($sAgent, <span class="stringliteral">&#39;Opera&#39;</span>) === <span class="keyword">false</span> )</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        $iVersion = (float)substr($sAgent, strpos($sAgent, <span class="stringliteral">&#39;MSIE&#39;</span>) + 5, 3) ;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> ($iVersion &gt;= 5.5) ;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( strpos($sAgent, <span class="stringliteral">&#39;Gecko/&#39;</span>) !== false )</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        $iVersion = (int)substr($sAgent, strpos($sAgent, <span class="stringliteral">&#39;Gecko/&#39;</span>) + 6, 8) ;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> ($iVersion &gt;= 20030210) ;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( strpos($sAgent, <span class="stringliteral">&#39;Opera/&#39;</span>) !== false )</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        $fVersion = (float)substr($sAgent, strpos($sAgent, <span class="stringliteral">&#39;Opera/&#39;</span>) + 6, 4) ;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> ($fVersion &gt;= 9.5) ;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( preg_match( <span class="stringliteral">&quot;|AppleWebKit/(\d+)|i&quot;</span>, $sAgent, $matches ) )</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        $iVersion = $matches[1] ;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span> ( $matches[1] &gt;= 522 ) ;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">return</span> false ;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="code" href="class_f_c_keditor.html">   74</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_f_c_keditor.html">FCKeditor</a></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="code" href="class_f_c_keditor.html#a1d66c267bbb55d318964fc5d3359055b">   82</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_f_c_keditor.html#a1d66c267bbb55d318964fc5d3359055b">$InstanceName</a> ;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="code" href="class_f_c_keditor.html#ab04caea3638dd218d55c55fba2ca4699">   88</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_f_c_keditor.html#ab04caea3638dd218d55c55fba2ca4699">$BasePath</a> ;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="code" href="class_f_c_keditor.html#a0e982448e4623d6918304b15333965f4">   95</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_f_c_keditor.html#a0e982448e4623d6918304b15333965f4">$Width</a> ;</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="code" href="class_f_c_keditor.html#aaf3bd87548f0abdef3e664ff691bb7ef">  102</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_f_c_keditor.html#aaf3bd87548f0abdef3e664ff691bb7ef">$Height</a> ;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="class_f_c_keditor.html#a96ec0d088f3912950f96cfd5e4275162">  108</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_f_c_keditor.html#a96ec0d088f3912950f96cfd5e4275162">$ToolbarSet</a> ;</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="code" href="class_f_c_keditor.html#a5fbbe870fb455ac6ff4891c8f97ff9d4">  114</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_f_c_keditor.html#a5fbbe870fb455ac6ff4891c8f97ff9d4">$Value</a> ;</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="code" href="class_f_c_keditor.html#ac2e162a2e94a6861acb555bb17919717">  122</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_f_c_keditor.html#ac2e162a2e94a6861acb555bb17919717">$Config</a> ;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="code" href="class_f_c_keditor.html#a095c5d389db211932136b53f25f39685">  130</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_f_c_keditor.html#a095c5d389db211932136b53f25f39685">__construct</a>(  )</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    {             </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="code" href="class_f_c_keditor.html#ad01f71fa0ecc039494e3c282864298c3">  140</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_f_c_keditor.html#ad01f71fa0ecc039494e3c282864298c3">Create</a>()    {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        echo $this-&gt;<a class="code" href="class_f_c_keditor.html#af565fcf84a54cdc1e5506dec1268ed31">CreateHtml</a>() ;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="code" href="class_f_c_keditor.html#af565fcf84a54cdc1e5506dec1268ed31">  150</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_f_c_keditor.html#af565fcf84a54cdc1e5506dec1268ed31">CreateHtml</a>($config=null)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    {   </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        $this-&gt;BasePath     = base_url().<span class="stringliteral">&#39;/fckeditor/&#39;</span> ;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        $this-&gt;Config       = array_slice($config,5) ;              </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">if</span>($config){</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            $this-&gt;InstanceName         = empty($config[<span class="charliteral">&#39;i&#39;</span>])?<span class="stringliteral">&quot;Default&quot;</span>:$config[<span class="charliteral">&#39;i&#39;</span>] ;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            $this-&gt;Width                = $config[<span class="charliteral">&#39;w&#39;</span>] ;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            $this-&gt;Height               =  $config[<span class="charliteral">&#39;h&#39;</span>] ;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            $this-&gt;ToolbarSet           = empty($config[<span class="charliteral">&#39;t&#39;</span>])?<span class="stringliteral">&quot;Basic&quot;</span>:$config[<span class="charliteral">&#39;t&#39;</span>] ;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            $this-&gt;Value                = $config[<span class="charliteral">&#39;v&#39;</span>] ;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            $this-&gt;InstanceName         = <span class="stringliteral">&#39;instance_name&#39;</span> ;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            $this-&gt;Width                = <span class="stringliteral">&#39;100%&#39;</span> ;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            $this-&gt;Height               = <span class="stringliteral">&#39;200&#39;</span> ;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            $this-&gt;ToolbarSet           = <span class="stringliteral">&#39;Basic&#39;</span> ;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            $this-&gt;Value                = <span class="stringliteral">&#39;&#39;</span> ;  </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            $this-&gt;ToolbarCanCollapse   = t1;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        }           </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        $HtmlValue = htmlspecialchars( $this-&gt;Value ) ;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        $Html = <span class="stringliteral">&#39;&#39;</span> ;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;<a class="code" href="class_f_c_keditor.html#a44f878b99f3e8c44613ebbbcd76b6f16">IsCompatible</a>() )</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="keywordflow">if</span> ( isset( $_GET[<span class="stringliteral">&#39;fcksource&#39;</span>] ) &amp;&amp; $_GET[<span class="stringliteral">&#39;fcksource&#39;</span>] == <span class="stringliteral">&quot;true&quot;</span> )</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                $File = <span class="stringliteral">&#39;fckeditor.original.html&#39;</span> ;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                $File = <span class="stringliteral">&#39;fckeditor.html&#39;</span> ;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            $Link = <span class="stringliteral">&quot;{$this-&gt;BasePath}editor/{$File}?InstanceName={$this-&gt;InstanceName}&quot;</span> ;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <span class="keywordflow">if</span> ( $this-&gt;ToolbarSet != <span class="stringliteral">&#39;&#39;</span> )</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                $Link .= <span class="stringliteral">&quot;&amp;amp;Toolbar={$this-&gt;ToolbarSet}&quot;</span> ;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="comment">// Render the linked hidden field.</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            $Html .= <span class="stringliteral">&quot;&lt;input type=\&quot;hidden\&quot; id=\&quot;{$this-&gt;InstanceName}\&quot; name=\&quot;{$this-&gt;InstanceName}\&quot; value=\&quot;{$HtmlValue}\&quot; style=\&quot;display:none\&quot; /&gt;&quot;</span> ;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="comment">// Render the configurations hidden field.</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            $Html .= <span class="stringliteral">&quot;&lt;input type=\&quot;hidden\&quot; id=\&quot;{$this-&gt;InstanceName}___Config\&quot; value=\&quot;&quot;</span> . $this-&gt;<a class="code" href="class_f_c_keditor.html#a78a0eaf692e0aa9e27282362ecf3c1d5">GetConfigFieldString</a>() . <span class="stringliteral">&quot;\&quot; style=\&quot;display:none\&quot; /&gt;&quot;</span> ;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <span class="comment">// Render the editor IFRAME.</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            $Html .= <span class="stringliteral">&quot;&lt;iframe id=\&quot;{$this-&gt;InstanceName}___Frame\&quot; src=\&quot;{$Link}\&quot; width=\&quot;{$this-&gt;Width}\&quot; height=\&quot;{$this-&gt;Height}\&quot; frameborder=\&quot;0\&quot; scrolling=\&quot;no\&quot;&gt;&lt;/iframe&gt;&quot;</span> ;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        {</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keywordflow">if</span> ( strpos( $this-&gt;Width, <span class="charliteral">&#39;%&#39;</span> ) === <span class="keyword">false</span> )</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                $WidthCSS = $this-&gt;Width . <span class="stringliteral">&#39;px&#39;</span> ;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                $WidthCSS = <a class="code" href="class_f_c_keditor.html#a0e982448e4623d6918304b15333965f4">$this-&gt;Width</a> ;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordflow">if</span> ( strpos( $this-&gt;Height, <span class="charliteral">&#39;%&#39;</span> ) === <span class="keyword">false</span> )</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                $HeightCSS = $this-&gt;Height . <span class="stringliteral">&#39;px&#39;</span> ;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                $HeightCSS = <a class="code" href="class_f_c_keditor.html#aaf3bd87548f0abdef3e664ff691bb7ef">$this-&gt;Height</a> ;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            $Html .= <span class="stringliteral">&quot;&lt;textarea name=\&quot;{$this-&gt;InstanceName}\&quot; rows=\&quot;4\&quot; cols=\&quot;40\&quot; style=\&quot;width: {$WidthCSS}; height: {$HeightCSS}\&quot;&gt;{$HtmlValue}&lt;/textarea&gt;&quot;</span> ;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">return</span> $Html ;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="code" href="class_f_c_keditor.html#a44f878b99f3e8c44613ebbbcd76b6f16">  215</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_f_c_keditor.html#a44f878b99f3e8c44613ebbbcd76b6f16">IsCompatible</a>()</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="fckeditor_8php.html#a57ec5e2e203d2ae8b4c5502f7a1fe1f6">FCKeditor_IsCompatibleBrowser</a>() ;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="code" href="class_f_c_keditor.html#a78a0eaf692e0aa9e27282362ecf3c1d5">  226</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_f_c_keditor.html#a78a0eaf692e0aa9e27282362ecf3c1d5">GetConfigFieldString</a>()</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        $sParams = <span class="stringliteral">&#39;&#39;</span> ;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        $bFirst = true ;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordflow">foreach</span> ( $this-&gt;Config as $sKey =&gt; $sValue )</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            <span class="keywordflow">if</span> ( $bFirst == <span class="keyword">false</span> )</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                $sParams .= <span class="stringliteral">&#39;&amp;amp;&#39;</span> ;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                $bFirst = false ;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <span class="keywordflow">if</span> ( $sValue === <span class="keyword">true</span> )</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                $sParams .= $this-&gt;<a class="code" href="class_f_c_keditor.html#acde961075f94616c0b8f2f32eae37e9e">EncodeConfig</a>( $sKey ) . <span class="stringliteral">&#39;=true&#39;</span> ;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $sValue === <span class="keyword">false</span> )</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                $sParams .= $this-&gt;<a class="code" href="class_f_c_keditor.html#acde961075f94616c0b8f2f32eae37e9e">EncodeConfig</a>( $sKey ) . <span class="stringliteral">&#39;=false&#39;</span> ;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                $sParams .= $this-&gt;<a class="code" href="class_f_c_keditor.html#acde961075f94616c0b8f2f32eae37e9e">EncodeConfig</a>( $sKey ) . <span class="charliteral">&#39;=&#39;</span> . $this-&gt;<a class="code" href="class_f_c_keditor.html#acde961075f94616c0b8f2f32eae37e9e">EncodeConfig</a>( $sValue ) ;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordflow">return</span> $sParams ;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00256"></a><span class="lineno"><a class="code" href="class_f_c_keditor.html#acde961075f94616c0b8f2f32eae37e9e">  256</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_f_c_keditor.html#acde961075f94616c0b8f2f32eae37e9e">EncodeConfig</a>( $valueToEncode )</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        $chars = array(</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            <span class="charliteral">&#39;&amp;&#39;</span> =&gt; <span class="stringliteral">&#39;%26&#39;</span>,</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <span class="charliteral">&#39;=&#39;</span> =&gt; <span class="stringliteral">&#39;%3D&#39;</span>,</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            <span class="charliteral">&#39;&quot;&#39;</span> =&gt; <span class="stringliteral">&#39;%22&#39;</span> ) ;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordflow">return</span> strtr( $valueToEncode,  $chars ) ;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    }</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2013年 八月 11日 星期日 19:47:09 , 为 Codeigniter使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

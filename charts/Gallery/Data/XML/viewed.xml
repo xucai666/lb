@@ -1,0 +1,15 @@
+<chart  showValues='1' rotateValues='0' labelDisplay='Rotate' slantLabels='1'  caption='统计图表01/01~01/04' xAxisName='项目' yAxisName='记录' numberPrefix='' showValues= '0'  exportEnabled='1' exportHandler='/plugins/charts/ExportHandlers/PHP/FCExporter.php' exportAtClient='0' exportAction='download' >		   <set label='Ceramic Tableware'  link='N-http://localhost/lb/'   value='2411' displayValue='2411' />
+		   <set label='Glass & Crystal Tableware'  link='N-http://localhost/lb/'   value='1539' displayValue='1539' />
+		   <set label='Restaurant Supplies'  link='N-http://localhost/lb/'   value='3349' displayValue='3349' />
+		   <set label='Catering Equipment'  link='N-http://localhost/lb/'   value='4251' displayValue='4251' />
+		   <set label='Bar Equipment & Supplies'  link='N-http://localhost/lb/'   value='1841' displayValue='1841' />
+		   <set label='Kitchen Equipment & Supplies'  link='N-http://localhost/lb/'   value='2272' displayValue='2272' />
+		   <set label='Bedding & Bathroom Linen'  link='N-http://localhost/lb/'   value='2337' displayValue='2337' />
+		   <set label='Furniture'  link='N-http://localhost/lb/'   value='4137' displayValue='4137' />
+		   <set label='Guestroom Supplies'  link='N-http://localhost/lb/'   value='4803' displayValue='4803' />
+		   <set label='Lobby Equipment & Supplies'  link='N-http://localhost/lb/'   value='786' displayValue='786' />
+		   <set label='Cleaning Equipment & Supplies'  link='N-http://localhost/lb/'   value='562' displayValue='562' />
+		   <set label='Uniform & Signs '  link='N-http://localhost/lb/'   value='161' displayValue='161' />
+		   <set label='Engineering Equipment'  link='N-http://localhost/lb/'   value='1212' displayValue='1212' />
+		   <set label='Decoration & Artware'  link='N-http://localhost/lb/'   value='971' displayValue='971' />
+</chart>

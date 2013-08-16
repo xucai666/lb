@@ -1,0 +1,42 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<center>
+<div class="nav_title" style="width:60%;text-align:left;">HTML字段效果预览</div>
+<table class="mytable" style="width:60%;" >
+	<tr>
+		<td>字段类型：</td>
+		<td>
+			
+			<!--{$fields_types[$main.f_type]}-->
+		</td>
+		
+	</tr>
+
+	<tr>
+		<td>字段名称：</td>
+		<td>
+			<!--{$main.f_name}-->
+		</td>
+		
+	</tr>
+	<tr>
+		<td style="width:150px">html代码预览：</td>
+		<td style="height:350px;">
+			<!--{tag_input_html f_id=$main.f_id name="name" value="value"}-->
+		
+		</td>
+		
+	</tr>
+	
+	<tr>
+		<td colspan="3" align="center">
+		<!--{create_button type='close' ext="onclick='window.close();';"}-->
+		
+	</td></tr>
+	
+
+</table>
+</center>
+
+
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

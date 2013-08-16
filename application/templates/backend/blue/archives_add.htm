@@ -1,0 +1,122 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+
+
+
+      
+        
+        
+<form action="<!--{$site_url}-->/backend/archives/action_save" method="post" enctype="multipart/form-data" name="form1" id="form1" onsubmit="return validator(this)">
+
+
+
+        
+  <table border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td  colspan="2" align="left" class="nav_title"><!--{$class_info.class_theme}--></td>
+    </tr>
+    <tr>
+      <td height="40" align="right"><!--{$lang_archives.category}-->：</td>
+      <td height="40">   
+      <select name="main[info_class_sn]"  >   
+      <!--{$class_info.class_select}-->
+      </select>
+      &nbsp;</td>
+    </tr>
+    <tr>
+      <td height="40" align="right"><!--{$lang_archives.title}-->：</td>
+      <td height="40"><label>
+        <input name="main[info_title]" type="text" id="main[info_title]" size="50" value="<!--{$main.info_title}-->"  valid='required' errmsg='<!--{$lang_archives.inp_title}-->' />
+        <!--{php}-->echo form_error("main[info_title]"); <!--{/php}-->
+      </label></td>
+    </tr>
+      <tr>
+      <td height="40" align="right"><!--{$lang_archives.date}-->：</td>
+      <td height="40"><label>
+        <input name="main[info_date]" readonly="readonly" type="text" id="main[info_date]" size="12"  value="<!--{$main.info_date|default:$smarty.now|date_format:"%Y-%m-%d"}-->" class="Wdate" onfocus="WdatePicker();"/>
+      </label>
+      <!--{php}-->echo form_error("main[info_date]"); <!--{/php}-->
+      
+      </td>
+    </tr>
+    <tr>
+      <td height="40" align="right"><!--{$lang_archives.content}-->：</td>
+      <td height="400"><label>
+        <textarea name="main[info_content]"  cols="45" rows="5"   errmsg="<!--{$lang_archives.inp_content}-->" id="content"   valid="custom" custom="getContentValue"     style="display:none" ><!--{$main.info_content}--></textarea>
+                      <!--{$editor}--></textarea>
+      </label>
+        <!--{php}-->echo form_error("main[info_content]",'
+        <div id="error_span" class="red_font">','</div>'); <!--{/php}-->      </td>
+    </tr>
+   
+    <tr>
+      <td height="40" align="right">&nbsp;</td>
+      <td height="40" align="right">
+       
+       
+        <input name="parent_class" type="hidden" id="parent_class" value="<!--{$class_info.parent_class}-->" />
+        
+        
+        
+        
+        <input name="main[info_id]" type="hidden"  value="<!--{$main.info_id}-->" />
+        </td>
+    </tr>
+    
+   
+           <tr>
+             <td height="40" align="right"><!--{$lang_archives.upload_pic}-->：</td>
+             <td height="40"><label>
+               <input type="file" name="file1" id="file1" />
+               <input name="main[info_pic]" type="hidden" id="main[info_pic]" value="<!--{$main.info_pic}-->" />
+             </label>
+             <!--{if $main.info_pic}-->
+             <div>
+             <img src="<!--{$base_url}-->/<!--{$main.info_pic}-->" width="120" height="100">
+             </div>
+             <!--{/if}-->
+             
+             </td>
+           </tr>
+           <tr>
+      <td height="40" align="right"><!--{$lang_archives.prop_slide}-->：</td>
+      <td height="40">
+      <!--{html_radios name="main[info_slide]" options=$options_slide selected=$options_slide_select}-->
+      
+      </td>
+    </tr>
+   
+            
+            
+            <tr>
+      <td height="40" align="right"><!--{$lang_archives.author}-->：</td>
+      <td height="40"><label>
+        <input type="text" name="main[info_author]" id="main[info_author]"  value="<!--{$main.info_author}-->"/>
+      </label></td>
+    </tr>
+
+    
+     <tr>
+      <td height="40" align="right"><!--{$lang_archives.order}-->：</td>
+      <td height="40" align="left"><label>
+        <input name="main[info_order]" type="text" id="main[info_order]" size="5" maxlength="15" value="<!--{$main.info_order}-->" />
+      </label></td>
+    </tr>
+    <tr>
+      <td height="40" align="right"><!--{$lang_archives.visit}-->：</td>
+      <td height="40" align="left"><input name="main[info_view]" type="text" id="main[info_view]" size="5" maxlength="15" value="<!--{$main.info_view}-->" /></td>
+    </tr>
+    <tr>
+      <td height="40" align="right">&nbsp;</td>
+      <td height="40" align="left"><!--{create_button type='save'}--></td>
+    </tr>        
+  </table>
+        
+        
+	
+         
+           
+	
+        
+
+</form>
+<!--{include file="`$dir_backend`/foot.htm"}-->

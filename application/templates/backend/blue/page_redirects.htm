@@ -1,0 +1,19 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<center>
+<div style='text-align:left;text-indent:20px;width:400px;padding-top:4px;height:24;font-size:10pt;border-left:1px solid #b9df92;border-top:1px solid #b9df92;border-right:1px solid #b9df92;background-color:#f0f0f0;'>系统提示信息：</div>
+<div style='width:400px;height:100;font-size:10pt;border:1px solid #b9df92;background-color:#ffffff'>
+<br/><br/><!--{$msg}--><br/>
+<br/>
+<div>
+	<!--{foreach from=$urls item=item key=key}-->
+	<a href="<!--{$item}-->"><!--{$key}--></a>&nbsp;&nbsp;&nbsp;
+	<!--{/foreach}-->
+</div>
+<br/>
+</div>
+
+</center>
+
+<!--{include file="`$dir_backend`/foot.htm"}-->
+
+

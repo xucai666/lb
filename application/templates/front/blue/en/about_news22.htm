@@ -1,0 +1,89 @@
+﻿<!--{include file="`$dir_front`/top.htm"}-->
+
+
+<table width="850" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:15px;">
+  <tr>
+    <td><!-- #BeginLibraryItem "/Library/Untitled.lbi" -->
+<div style="margin:0;padding:0;z-index:100" align="center" >
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="850" height="306">
+  <param name="movie" value="images/banner.swf" />
+  <param name="quality" value="high" />
+  
+ <param name="wmode" value="Opaque" />
+
+  <embed src="<!--{$img_url}-->/banner.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="850" height="306"></embed>
+</object>
+</div><!-- #EndLibraryItem --></td>
+  </tr>
+</table>
+
+<table width="850" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:15px;">
+  <tr>
+    <td width="200" align="left" valign="top">
+      <!--{include file="`$ci_config.template_dir`/front/`$lang_type`/about_left_mehu.htm"}-->
+      <table width="200" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td style="background:url(<!--{$img_url}-->/03.jpg);width:20px;height:18px;"></td>
+          <td style="background:url(<!--{$img_url}-->/03.jpg) -20px 0;">&nbsp;</td>
+          <td style="background:url(<!--{$img_url}-->/03.jpg) right;width:20px;"></td>
+        </tr>
+      </table>
+    </td>
+    <td>&nbsp;</td>
+    <td width="600" align="right" valign="top">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background:#e60012;">
+        <tr>
+          <td width="16"><img src="<!--{$img_url}-->/index_25.jpg" width="16" height="27" /></td>
+          <td align="center" class="di_color chu"><!--{$class_info.class_theme}--></td>
+          <td width="16"><img src="<!--{$img_url}-->/123.jpg" width="16" height="27" /></td>
+        </tr>
+      </table>
+      <table width="100%" border=0 cellspacing=0 cellpadding=0 style="background:#f1f1f1;margin-top:2px;">
+        <tr>
+          <td height="250" align="left" valign="top" style="padding:18px;line-height:180%;">
+        
+        
+
+        
+                  
+<!--{foreach from=$list item=v}-->
+<table cellspacing="0" border="0" id="dlarticle" style="width:100%;border-collapse:collapse;">
+	<tr><td>&nbsp;</td></tr><tr>
+		<td>
+            <table width="100%" >
+            <tr><td><img id="dlarticle_ctl02_companyImg" alt="" src="" style="height:100px;width:365px;border-width:0px;display:none;" /></td></tr>
+            <tr><td><a href="<!--{$site_url}-->/front/detail?info_id=<!--{$v.info_id}--> "><strong><!--{$v.info_title}--></strong></a></td>
+            <td align ="right" style="height:44px" ><!--{$v.info_date}-->&nbsp;&nbsp;(<span style="color:Blue;"><!--{$v.info_auth}--></span>)</td>
+            </tr>
+            <tr><td width="100%" colspan="2"><!--{$v.info_content|strip_tags|truncate:200:"..."}-->...<br/></td></tr>
+            </table>
+           <div style ="width:100px;"><a href="<!--{$site_url}-->/front/detail?info_id=<!--{$v.info_id}--> "><strong>&gt;&gt; 阅读全文</strong></a></div><hr />
+            </td>
+	</tr>
+</table>
+<!--{/foreach}-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:10px;">
+  <tr>
+    <td height="34" width="80%"><div class="quotes"><!--{$page_link}--></div></td>
+    <td width="10%" align="right"><input name="page" type="text" class="kuang4" id="page" size="4"   /></td>
+    <td width="10%" align="left">&nbsp;<img src="<!--{$img_url}-->/35.jpg" width="20" height="24"  onclick="jump();" /></td>
+  </tr>
+</table>
+          
+          
+          
+          
+          </td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td style="background:url(<!--{$img_url}-->/44.jpg);width:100px;height:18px;"></td>
+          <td style="background:url(<!--{$img_url}-->/44.jpg) -20px 0;">&nbsp;</td>
+          <td style="background:url(<!--{$img_url}-->/44.jpg) right;width:100px;"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--{include file="`$dir_front`/foot.htm"}-->

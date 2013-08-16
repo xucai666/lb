@@ -1,0 +1,3 @@
+
+CREATE VIEW `mysys_v_all` AS select `mysys_infos`.`info_title` AS `i_title`,`mysys_infos`.`info_content` AS `i_content`,`mysys_infos`.`info_id` AS `i_id`,`mysys_infos`.`info_class_sn` AS `i_class_sn`,`mysys_infos`.`info_class` AS `i_class` from `mysys_infos` union all select `mysys_products`.`pro_title` AS `i_title`,`mysys_products`.`pro_content` AS `i_content`,`mysys_products`.`pro_id` AS `i_id`,`mysys_products`.`pro_class_sn` AS `i_class_sn`,10000 AS `i_class` from `mysys_products`;
+

@@ -1,0 +1,178 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<fieldset>
+<legend><div class="nav_title">模板维护</div></legend>
+
+<form  name="form1" id="form1" method="post" action="<!--{func_site_url segments='backend/templates/action_save'}-->">
+<table>
+	<tr>
+		<td>模板分类：</td>
+		<td>
+			<select name="main[t_type]">
+				<!--{html_options options=$template_types selected=$main.t_type}-->
+			</select>
+			<!--{php}-->
+				echo form_error("main[t_type]","<span id='error_span'>","</span>");
+			<!--{/php}-->
+		</td>
+		<td></td>
+	</tr>
+
+	<tr>
+		<td>名称：</td>
+		<td>
+			<input size="80" type="text" name="main[t_name]" id="main[t_name]" value="<!--{$main.t_name}-->">
+			<!--{php}-->
+				echo form_error("main[t_name]","<span id='error_span'>","</span>");
+			<!--{/php}-->
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>模板代码：</td>
+		<td>
+			
+
+
+
+
+		 <div id="tab_area">
+    
+    	
+        <ul class="tabs">
+            <li><a href="javascript:;" title="content_1" class="tab active">列表页</a></li>
+            <li><a href="javascript:;" title="content_2" class="tab">内页</a></li>
+            <li><a href="javascript:;" title="content_3" class="tab">样式1</a></li>
+            <li><a href="javascript:;" title="content_4" class="tab">样式2</a></li>
+            <li><a href="javascript:;" title="content_5" class="tab">样式3</a></li>
+            <li><a href="javascript:;" title="content_6" class="tab">样式4</a></li>
+        </ul>
+        
+        <div id="content_1" class="content">
+        	<textarea  name="main[t_html]" ><!--{$main.t_html|escape:"html"}--></textarea>
+		<!--{php}-->
+				echo form_error("main[t_html]","<span id='error_span'>","</span>");
+		<!--{/php}-->
+
+
+
+        </div>
+        <div id="content_2" class="content">
+        	<textarea  name="main[t_html_detail]" ><!--{$main.t_html_detail|escape:"html"}--></textarea>
+		<!--{php}-->
+				echo form_error("main[t_html_detail]","<span id='error_span'>","</span>");
+		<!--{/php}-->
+
+
+
+        </div>
+    	 <div id="content_3" class="content">
+        	<textarea  name="main[t_html_style1]" ><!--{$main.t_html_style1|escape:"html"}--></textarea>		
+        </div>    	 
+        <div id="content_4" class="content">
+        	<textarea  name="main[t_html_style2]" ><!--{$main.t_html_style2|escape:"html"}--></textarea>		
+        </div>       
+         <div id="content_5" class="content">
+        	<textarea  name="main[t_html_style3]" ><!--{$main.t_html_style3|escape:"html"}--></textarea>		
+        </div>        
+        <div id="content_6" class="content">
+        	<textarea  name="main[t_html_style4]" ><!--{$main.t_html_style4|escape:"html"}--></textarea>		
+        </div>
+    
+    </div>
+
+
+
+		</td>
+		<td>（如：%name,%value，有几个字段就写几个）</td>
+	</tr>
+	<tr>
+		<td>表格名称：</td>
+		<td>
+			<input size="80" type="text" name="main[t_db_name]" value="<!--{$main.t_db_name}-->">
+			<!--{php}-->
+				echo form_error("main[t_db_name]","<span id='error_span'>","</span>");
+			<!--{/php}-->
+		</td>
+		<td>（如：infos as a）</td>
+	</tr>
+	<tr>
+		<td>查询字段：</td>
+		<td>
+			<input size="80" type="text" name="main[t_db_fields]" value="<!--{$main.t_db_fields}-->">
+			<!--{php}-->
+				echo form_error("main[t_db_fields]","<span id='error_span'>","</span>");
+			<!--{/php}-->
+		</td>
+		<td>（如：a.info_id,a.info_title,a.info_content,a.info_date）</td>
+	</tr>
+	<tr>
+		<td>联合查询：</td>
+		<td>
+			<input size="80" type="text" name="main[t_db_join]" value="<!--{$main.t_db_join}-->">
+			<!--{php}-->
+				echo form_error("main[t_db_join]","<span id='error_span'>","</span>");
+			<!--{/php}-->
+		</td>
+		<td>（如：admins as b,b.admin_id=a.info_user,left;admins as c,c.admin_id=a.info_user,left）</td>
+	</tr>
+	<tr>
+		<td>查询条件：</td>
+		<td>
+			<input size="80" type="text" name="main[t_db_where]" value="<!--{$main.t_db_where}-->">
+			
+			<!--{php}-->
+				echo form_error("main[t_db_where]","<span id='error_span'>","</span>");
+			<!--{/php}-->
+
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>分组查询：</td>
+		<td>
+			<input size="80" type="text" name="main[t_db_group]" value="<!--{$main.t_db_group}-->">
+			<!--{php}-->
+				echo form_error("main[t_db_group]","<span id='error_span'>","</span>");
+			<!--{/php}-->
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>排序：</td>
+		<td>
+			<input size="80" type="text" name="main[t_db_order]" value="<!--{$main.t_db_order}-->">
+			<!--{php}-->
+				echo form_error("main[t_db_order]","<span id='error_span'>","</span>");
+			<!--{/php}-->
+		</td>
+		<td>（如：a.info_title asc,a.info_order desc）</td>
+	</tr>
+	<tr>
+		<td>查询记录数：</td>
+		<td>
+			<input size="80" type="text" name="main[t_db_limit]" value="<!--{$main.t_db_limit}-->">
+			<!--{php}-->
+				echo form_error("main[t_db_limit]","<span id='error_span'>","</span>");
+			<!--{/php}-->
+		</td>
+		<td></td>
+	</tr>
+	
+	
+	<tr>
+		<td colspan="3" align="center">
+		<!--{create_button type='save'}-->
+		<input size="80" type="hidden" name="main[t_id]" value="<!--{$main.t_id}-->">
+	</td></tr>
+
+</table>
+</form>	
+
+   
+
+
+
+
+</fieldset>
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

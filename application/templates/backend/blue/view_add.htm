@@ -1,0 +1,39 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<fieldset>
+<legend><div class="nav_title">模板维护</div></legend>
+
+<form  name="form1" id="form1" method="post" action="<!--{func_site_url segments='backend/templates/view_save'}-->">
+<table>
+	
+
+	<tr>
+		<td>名称：</td>
+		<td>
+			
+			<!--{$main.t_name}-->
+
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>模板代码：</td>
+		<td>
+			<textarea  name="main[t_html]" style="width:800px;height:400px"  ><!--{$main.t_html}--></textarea>
+		<!--{php}-->
+				echo form_error("main[t_html]","<span id='error_span'>","</span>");
+		<!--{/php}-->
+		</td>
+		<td></td>
+	</tr>
+	
+	<tr>
+		<td colspan="3" align="center">
+		<!--{create_button type='save'}-->
+		<input size="80" type="hidden" name="main[t_file]"  value="<!--{$main.t_file}-->">
+	</td></tr>
+
+</table>
+</form>	
+</fieldset>
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

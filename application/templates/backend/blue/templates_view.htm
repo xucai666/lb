@@ -1,0 +1,96 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<center>
+<div class="nav_title" style="width:800px;text-align:left;">万能标签效果预览</div>
+<table class="mytable" style="width:800px;" >
+	<tr>
+		<td>标签编号：</td>
+		<td>
+			
+			<!--{$main.t_id}-->
+		</td>
+		
+	</tr>
+<tr>
+		<td>标签名称：</td>
+		<td>
+			
+			<!--{$main.t_name}-->
+		</td>
+		
+	</tr>
+
+	<tr>
+		<td>类型：</td>
+		<td>
+			<!--{$templates_type[$main.t_type]}-->
+		</td>
+		
+	</tr>
+	<tr>
+		<td >数据表：</td>
+		<td >
+				<!--{$main.t_db_name}-->
+		
+		</td>
+		
+	</tr>
+	<tr>
+		<td style="width:150px">效果：</td>
+		<td style="height:350px;">
+		
+
+
+		 <div id="tab_area">
+    
+	    	
+	        <ul class="tabs">
+	            <li><a href="javascript:;" title="content_1" class="tab active">列表页</a></li>
+	            <li><a href="javascript:;" title="content_2" class="tab">内页</a></li>
+	            <li><a href="javascript:;" title="content_3" class="tab">样式1</a></li>
+	            <li><a href="javascript:;" title="content_4" class="tab">样式2</a></li>
+	            <li><a href="javascript:;" title="content_5" class="tab">样式3</a></li>
+	            <li><a href="javascript:;" title="content_6" class="tab">样式4</a></li>
+	        </ul>
+        
+	        <div id="content_1" class="content">
+	     
+				<pre class="brush:php;toolbar:false;" >
+					      <!--{tag t_id=$main.t_id html_type="list" escape=true}-->
+				</pre>
+	        	
+	        </div>
+	        <div id="content_2" class="content">
+	        	<pre class="brush:php;toolbar:false;"><!--{tag t_id=$main.t_id html_type="detail"}--></pre>
+	        </div>
+	        <div id="content_3" class="content">
+	        	<pre class="brush:php;toolbar:false;"><!--{tag t_id=$main.t_id html_type="style1"}--></pre>
+	        </div>
+	        <div id="content_4" class="content">
+	        	<pre class="brush:php;toolbar:false;"><!--{tag t_id=$main.t_id html_type="style2"}--></pre>
+	        </div>
+	        <div id="content_5" class="content">
+	        	<pre class="brush:php;toolbar:false;"><!--{tag t_id=$main.t_id html_type="style3"}--></pre>
+	        </div>
+	        <div id="content_6" class="content">
+	        	<pre class="brush:php;toolbar:false;"><!--{tag t_id=$main.t_id html_type="style4"}--></pre>
+	        </div>
+
+
+		</td>
+		
+	</tr>
+	
+	<tr>
+		<td colspan="3" align="center">
+		<!--{create_button type='close' ext="onclick='window.close();';"}-->
+		
+	</td></tr>
+	
+
+</table>
+</center>
+
+
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

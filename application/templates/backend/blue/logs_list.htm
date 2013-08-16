@@ -1,0 +1,84 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<script language="javascript" src="<!--{$base_url}-->/js/jquery.form.js?v2.43"></script>
+<div class="nav_title" align="left" >&nbsp;<!--{$lang_log.theme_list}--></div>
+
+<table class="search"   style="width:100%">
+<tr><td>
+	<form action="<!--{$site_url}-->/backend/logs/action_list/" method="get">   
+    <!--{$lang_log.operator}-->：
+        <input type="text" name="log_user" value="<!--{$smarty.get.log_user}-->" />
+
+    <!--{$lang_log.module_name}-->：
+    
+    <label>
+      <select name="log_type" id="log_type">
+      <!--{html_options options=$log_types selected=$log_type_default}-->
+      </select>
+    </label>
+    
+        
+        
+  
+    <!--{$lang_log.date}-->：
+        <input type="text" name="log_date" size="10" readonly="readonly" onclick="WdatePicker()" class="Wdate" value="<!--{$smarty.get.log_date}-->" />      
+        
+
+	<input type="submit" name="submit" value="<!--{$lang_log.query}-->" />
+	</form>
+
+</td>
+</tr>
+</table>
+<br />
+
+
+<form id="form1" name="form1" method="post" action="<!--{$site_url}-->/backend/logs/action_del">
+
+
+<table width="100%" class="mytable" >
+  <thead>
+<tr>
+ 
+  <th><!--{$lang_log.select}--></th>
+   <th>编号</th>
+  <th><!--{$lang_log.operator}--></th>
+  <th><!--{$lang_log.module_name}--></th>
+  <th><!--{$lang_log.content}--></th>
+  <th><!--{$lang_log.date}--></th>
+  </tr>
+</thead>
+   
+  <!--{foreach from=$list item=item key=key}-->
+  <tr>
+     
+    <td align="center"><label>
+      <input name="log_ids[]" type="checkbox" id="log_ids" class="log_ids" value="<!--{$item.log_id}-->" />
+    </label></td>
+    <td align="center"><!--{$item.log_id}-->&nbsp;</td>
+    <td align="center"><!--{$item.log_user}-->&nbsp;</td>
+    <td align="center"><!--{$item.log_type_str}-->&nbsp;</td>
+    <td align="left"><!--{$item.log_desc|nl2br}-->&nbsp;</td>
+    <td align="center"><!--{$item.log_date}-->&nbsp;</td>
+  </tr>
+
+
+
+<!--{/foreach}-->
+</table>
+
+<div align="center">
+  <label>
+    <input type="button" name="button2" id="button2" value="<!--{$lang_log.select_all}-->" onclick='$(".log_ids").attr("checked",true);' />
+    <input type="submit" name="button" id="button" value="<!--{$lang_log.del}-->" onclick="return confirm('<!--{$lang_log.del_confirm}-->')" />
+  </label>
+</div>
+
+</form>
+<div class="page_link">
+	<!--{$page_link}-->
+</div>
+<script language="JavaScript">
+	overclass($('#archives ul'));
+</script>
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

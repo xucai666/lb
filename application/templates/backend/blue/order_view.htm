@@ -1,0 +1,91 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<div class="nav_title" align="left" >订单查看</div>
+<div  align="right"></div>
+
+<h2>收货信息</h2>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="mytable">
+    
+  <tr>
+    <td>
+    
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="120"  align="right">联系人：</td>
+                <td  ><!--{$main.contact}-->&nbsp;</td>
+              </tr>
+              <tr>
+                <td  align="right">手机：</td>
+                <td ><!--{$main.mobile}-->&nbsp;</td>
+              </tr>
+               <tr>
+                <td  align="right">E-mail：</td>
+                <td ><!--{$main.email}-->&nbsp;</td>
+              </tr> 
+              
+              
+              <tr>
+                <td  align="right">收货地址：</td>
+                <td ><!--{$main.address}-->&nbsp;</td>
+              </tr>
+              <tr>
+                <td  align="right">附注：</td>
+                <td ><!--{$main.remarks}-->&nbsp;</td>
+              </tr>
+            </table>
+    
+    
+    
+    </td>
+  </tr>
+</table>
+    <h2>订单明细</h2>
+    <table class="mytable">
+  
+         <tr>
+        
+       <thead> <th>编号</th>
+        <th>名称</th>
+        <th>单价</th>
+        <th>图片</th>
+        <th>数量</th>
+        <th>金额</th>
+       
+      </thead>
+    
+      </tr>
+          </tr>      
+             <!--{foreach from=$detail  item=item }-->
+                  
+                     <tr class='tr_center'>
+        
+        <td><!--{$item.p_id}--></td>
+        <td><!--{$item.p_name}--></td>
+        <td><!--{$item.p_price}--></td>
+        <td><img src="<!--{$item.p_pic}-->" width="80" /></td>
+        <td class="opt2">
+           <!--{$item.p_qty}-->
+
+        </td>
+        <td><!--{$item.sub_total}-->
+        </td>
+               
+        </tr>     
+           <!--{/foreach}-->   
+         </table>
+    
+  
+    </td>
+  </tr>
+</table>
+ <h2>合计</h2>
+ <hr>
+ 订购总额：<span class="red_font"><!--{$amount_total}--></span>，
+ 产品种类：<span class="red_font"><!--{$p_count}--></span>，
+ 订购总数：<span class="red_font"><!--{$p_num}--></span>，
+<!--{include file="`$dir_backend`/foot.htm"}-->
+  <div align="center" style="margin:20px 0px 0px 0px;" class="noprint">
+   <!--{create_button type="print" url="javascript:window.print();"}-->
+   <!--{create_button type="back" url="javascript:history.back(1);"}-->
+    </div>
