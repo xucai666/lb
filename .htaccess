@@ -1,0 +1,8 @@
+﻿RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond $1 !^(index\.php|robots\.txt|swfupload|templates|fckeditor|uploads)    
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+
