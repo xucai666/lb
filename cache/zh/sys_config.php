@@ -15,6 +15,7 @@
   ),
   'develop' => 
   array (
+    'debug' => '1',
     'template' => 'blue',
     'time_page_redirect' => '300',
   ),

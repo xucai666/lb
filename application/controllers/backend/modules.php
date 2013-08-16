@@ -34,8 +34,10 @@ class Modules extends CI_Controller{
 			$main = array();
  			$detail = array_fill(0,$t,array('f_id'=>'','r_name'=>'','r_desc'=>'','r_value'=>'','main_id'=>'','detail_id'=>''));
 	 	}
-	 		 
-		$data = array('detail_total'=>count($detail),'detail'=>$detail,'main'=>$main,'f_ids'=>$f_ids,'query_types'=>$this->mycache->cache_fetch('query_types'));
+	 	
+	 	
+	 	
+		$data = array('detail_total'=>count($detail),'detail'=>$detail,'main'=>$main,'f_ids'=>$f_ids,'query_types'=>$this->mycache->cache_fetch('query_types'),'subs'=>$this->im->subs($m_id));
 		$this->mypage->load_backend_view('modules_add',$data);
 	}
 
@@ -55,6 +57,8 @@ class Modules extends CI_Controller{
 				$rs = $this->mydb->save($data,$this->im->save_config());
 				//create table
 				$this->im->create_table($data);
+				//create sub module column
+				$this->im->create_sub($rs);
 				//create tag
 				$this->im->create_tag($rs);
 				$this->im->create_menu($rs);
@@ -120,6 +124,10 @@ class Modules extends CI_Controller{
 				$this->db->query($v);
 			endforeach;
 
+			//delete menu
+			$this->db->where_in('r_title',$m_names);
+			$this->db->where('r_type',1);
+			$this->db->delete("system_rights");
 
 			//insert log
 			$log_cf = $this->im->save_config();

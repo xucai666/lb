@@ -18,6 +18,7 @@ class Fields extends CI_Controller{
 		//auth login
         $this->myauth->execute_auth();
 		$this->load->model("Fields_model",'im');
+		
 	}
 
 	function action_add(){

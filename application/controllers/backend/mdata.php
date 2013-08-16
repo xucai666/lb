@@ -39,46 +39,83 @@ class Mdata extends CI_Controller{
 	function action_add(){
 
 		$id = $this->uri->segment(4);
+		$module_id = $this->im->get_mid();
 		//fetch fileds
 
 		$main = array();
 		if($id){
 			$main = $this->im->detail($id);
+			
 		}
+
+		$detail = $this->im->details($id);
+
 		//all fields
-		$fields = $this->m->details($this->im->get_mid(),array('r_primary'=>'0'));
+		$fields = $this->m->details($module_id,array('r_primary'=>'0'));	
+
+	
 		
 		//primary key
-		$primary = $this->m->fetch_primary($this->im->get_mid(),'r_name');
+		$primary = $this->m->fetch_primary($module_id,'r_name');
+
+
+		
 
 		//fields html
 		$fields_html = $this->m->fetch_f_html();
 		
 
 		$data = array('ops'=>array(1=>1,2=>2,3=>3),'main'=>$main,'fields'=>$fields,'html'=>$fields_html,'primary'=>$primary);
-		$data = array_merge($data,array('theme'=>$this->m->main($this->im->get_mid(),'m_name')));
+		$data = array_merge($data,array('theme'=>$this->m->main($module_id,'m_name')));
+
+		//detail
+		$dt_mid = $this->m->main($module_id,'m_sub');
+		$dt_fields = $this->m->details($dt_mid,array('r_primary'=>'0'));	
+
+		//detail primary key
+		$dt_primary = $this->m->fetch_primary($dt_mid,'r_name');
+
+		$data = array_merge($data,array('dt_fields'=>$dt_fields,'dt_primary'=>$dt_primary,'detail'=>$detail,'detail_total'=>count($detail),'dt_mid'=>$dt_mid));
+		
 		$this->mypage->load_backend_view('mdata_add',$data);
 	}
 
 	function action_save(){
 		$main = $this->input->post('main');
-		$data = array('main'=>$main);
+		$detail = $this->myform->post_to_set($this->input->post('detail'));
+
+		
+		$data = array('main'=>$main,'detail'=>$detail);
 		try{
 			$rules = $this->im->valid_config($data);
 			$this->form_validation->set_rules($rules);
+
 			if($this->form_validation->run()==false && $rules){
+				$module_id = $this->im->get_mid();
 				//all fields
-				$fields = $this->m->details($this->im->get_mid(),array('r_primary'=>'0'));
+				$fields = $this->m->details($module_id,array('r_primary'=>'0'));
 				//primary key
-				$primary = $this->m->fetch_primary($this->im->get_mid(),'r_name');
+				$primary = $this->m->fetch_primary($module_id,'r_name');
 
 				//fields html
 				$fields_html = $this->m->fetch_f_html();
 				
-				$data = array('main'=>$main,'fields'=>$fields,'html'=>$fields_html,'primary'=>$primary);	
+				$data = array('main'=>$main,'fields'=>$fields,'html'=>$fields_html,'primary'=>$primary);
+
+				//detail
+				$dt_mid = $this->m->main($module_id,'m_sub');
+				$dt_fields = $this->m->details($dt_mid,array('r_primary'=>'0'));	
+
+				//detail primary key
+				$dt_primary = $this->m->fetch_primary($dt_mid,'r_name');
+
+				$data = array_merge($data,array('dt_fields'=>$dt_fields,'dt_primary'=>$dt_primary,'detail'=>$detail,'detail_total'=>count($detail),'dt_mid'=>$dt_mid));	
+
+				
 				$this->mypage->load_backend_view('mdata_add',$data);
 				
 			}else{	
+				
 				$rs = $this->mydb->save($data,$this->im->save_config());
 
 				//insert log

@@ -114,6 +114,17 @@ class Modules_model extends CI_Model{
 		return $this->db->select("*",false)->from('module')->order_by('m_id','asc')->get()->result_array();
 	}
 
+	function subs($exclud){
+		$subs_tmp = $this->all();
+		foreach($subs_tmp as $k=>$v){
+			if($v['m_id'] == $exclud){
+				continue;
+			}
+			$subs[$v[m_id]] = $v[m_name];
+		}
+		return $subs;
+	}
+
 	function fetch_f_types(){
 		//fields types
 		$fields_types_c = $this->mycache->cache_fetch('fields_types');
@@ -307,6 +318,19 @@ class Modules_model extends CI_Model{
 		}
 	}
 
+	/**
+	 * 创建父子模块关系
+	 * @param  [type] $r [description]
+	 * @return [type]    [description]
+	 */
+	function create_sub($r){
+		if(!$r['main']['m_sub']) return false;
+		$primary = $this->fetch_primary($r['main']['m_id'],'r_name');
+		$sub_table = $this->main($r['main']['m_sub'],'m_tb');
+		if(!$this->db->field_exists($primary,$sub_table)){
+			$this->db->query("ALTER TABLE  `".$this->db->dbprefix.$sub_table."` ADD  `".$primary."` INT ");
+		}
+	}
 }
 
 

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-16 04:38:37
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-16 10:21:34
          compiled from "application\templates\backend\blue\modules_add.htm" */ ?>
-<?php /*%%SmartyHeaderCode:28422520daccd82f4c3-15750627%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:23485520dfd2ed9c2d6-36659146%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '44df3b944a2e8a143ed6643366f14f1e5ec5ae6f' => 
     array (
       0 => 'application\\templates\\backend\\blue\\modules_add.htm',
-      1 => 1375758512,
+      1 => 1376640274,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '28422520daccd82f4c3-15750627',
+  'nocache_hash' => '23485520dfd2ed9c2d6-36659146',
   'function' => 
   array (
   ),
@@ -19,6 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'dir_backend' => 0,
     'main' => 0,
+    'subs' => 0,
     'detail' => 0,
     'k' => 0,
     'f_ids' => 0,
@@ -28,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_520dacce5f0067_54047635',
+  'unifunc' => 'content_520dfd30258265_62372122',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_520dacce5f0067_54047635')) {function content_520dacce5f0067_54047635($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_options')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\function.html_options.php';
+<?php if ($_valid && !is_callable('content_520dfd30258265_62372122')) {function content_520dfd30258265_62372122($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_options')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\function.html_options.php';
 ?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <fieldset>
@@ -51,6 +52,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				echo form_error("main[m_name]","<span id='error_span'>","</span>");
 			<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>
 
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>下级模块</td>
+		<td>
+			<select name="main[m_sub]">
+				<option value="">请选择</option>
+				<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['subs']->value,'selected'=>$_smarty_tpl->tpl_vars['main']->value['m_sub']),$_smarty_tpl);?>
+
+			</select>
 		</td>
 		<td></td>
 	</tr>

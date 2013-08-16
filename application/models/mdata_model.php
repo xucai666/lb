@@ -18,16 +18,32 @@ class Mdata_model extends CI_Model{
 	}
 
 	function  save_config(){
-		return array('main'=>array(
+		$config = array('main'=>array(
 				'table_name'=>$this->m->main($this->get_mid(),'m_tb'),
 				'primary_key'=>$this->m->fetch_primary($this->get_mid(),'r_name')
 			));
 
+
+		$dt_mid = $this->m->main($this->get_mid(),'m_sub');
+		if($dt_mid){
+		
+			$config =array_merge($config,array('detail'=>array(
+					'table_name'=> $this->m->main($dt_mid,'m_tb'),
+					'primary_key'=> $this->m->fetch_primary($dt_mid,'r_name'),
+
+			)));
+
+		}
+		
+
+		return $config;
+
 	}
 
 	function valid_config($info){
+		$module_id = $this->get_mid();
 		$config = array();
-		$fields = $this->m->details($this->get_mid(),array('r_primary'=>'0'));
+		$fields = $this->m->details($module_id,array('r_primary'=>'0'));
 		foreach($fields as $v):
 				if(empty($v[r_valid])) continue;
 				array_push($config,array(
@@ -37,6 +53,24 @@ class Mdata_model extends CI_Model{
 				)
 		);
 		endforeach;
+
+
+		$dt_mid = $this->m->main($module_id,'m_sub');
+		$dt_fields = $this->m->details($dt_mid,array('r_primary'=>'0'));	
+		if($dt_mid){
+			foreach($info['detail'] as $k=>$v){
+				foreach($dt_fields as $v):
+						if(empty($v[r_valid])) continue;
+						array_push($config,array(
+							"field"=>"detail[$v[r_name]][$k]",	
+		 					"label"=>$v[r_alias],	
+		 					"rules"=>$v[r_valid],		
+							)
+						);
+				endforeach;		
+			}
+		}
+
 		
 		return $config;
 	}
@@ -63,6 +97,7 @@ class Mdata_model extends CI_Model{
 	}
 
 	function fetch_list($size,$query=null){
+		
 		//config table
 		$tb = $this->m->main($this->get_mid(),'m_tb');
 	    $query_types = $this->mycache->cache_fetch('query_types');
@@ -76,13 +111,16 @@ class Mdata_model extends CI_Model{
 		foreach($fields_r as $k=>$v){
 		if($v['r_primary']) $primary = $v['r_name'];
 			if($v['r_queryable']){
+
+
 				if(is_array($query[$v['r_name']])){
 					foreach($query[$v['r_name']] as $v1):
 						$this->db->or_where("FIND_IN_SET('$v1',$v[r_name])>0",NULL,'or');
 					endforeach;	
 				}else{
-					$this->db->like($v['r_name'],$query[$v['r_name']],$query_types[$v[r_queryable]]);
+					$query[$v['r_name']] && $this->db->like($v['r_name'],$query[$v['r_name']],$query_types[$v[r_queryable]]);
 				}
+
 				
 				$querys[$v['r_name']] = array('name'=>$v['r_alias'],'html'=>$fields_html[$v['f_id']]);
 			}
@@ -123,6 +161,28 @@ class Mdata_model extends CI_Model{
 
 		return $ds;
 	}
+
+
+
+	//details for main table 
+	function details($main_id){
+		
+		$sub_id = $this->m->main($this->get_mid(),'m_sub');
+		if(!$sub_id) return false;
+		$primary = $this->m->fetch_primary($this->get_mid(),'r_name');
+		$detail_tb = $this->m->main($sub_id,'m_tb');
+		$detail_primary = $this->m->fetch_primary($sub_id,'r_name');
+		$dt = array();
+		if($main_id){
+
+			$dt =  $this->db->select('*',false)->from($detail_tb)->where($primary,$main_id);
+
+			$dt = $this->db->order_by($detail_primary,'asc')->get()->result_array();
+		}
+		return array_pad($dt,3,array());
+	}
+
+
 
 
 	/**
