@@ -532,7 +532,14 @@ class Common_model  extends CI_Model{
 		return $this->uid;
 	}
 
-
+	/**
+	 * [get_nav 导航，上一页，下一页]
+	 * @param  [type] $tb          [description]
+	 * @param  [type] $id          [description]
+	 * @param  [type] $title_field [description]
+	 * @param  string $where       [description]
+	 * @return [type]              [description]
+	 */
 	function get_nav($tb,$id,$title_field,$where='1=1'){
 		$tb = $this->mydb->table($tb);
 		$primary = $this->mydb->primary($tb);
@@ -545,6 +552,21 @@ class Common_model  extends CI_Model{
 EOT;
 		return $this->myform->array_re_index($this->mydb->fetch_values($sq),'nav_title',array('url',$title_field));
 	}
+
+	/**
+	 * [debug 测试，默认追加模式]
+	 * @return [type] [description]
+	 */
+	function debug($mode='a'){
+		$h =fopen(FCPATH.'/debug/debug.txt',$mode);
+ 		if($h){
+ 			fwrite($h,"test\n");
+ 			fclose($h);
+ 		}
+		
+	}
+
+
  	
 
 }

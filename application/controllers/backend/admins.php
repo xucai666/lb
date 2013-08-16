@@ -18,7 +18,6 @@
  		parent::__construct();
  		//验证登陆
 		$this->myauth->execute_auth();
- 		$this->mypage->fetch_js('item/agents_add');
  		$this->load->model('Admins_model');
  		$this->im = $this->Admins_model;
  		//角色模块
@@ -89,10 +88,25 @@
 					
 	 			}	
 	 			$db_config = array('main'=>array('primary_key'=>'admin_id','table_name'=>$this->mydb2->table($this->act.'')));
-	 			$admins_return = $this->mydb2->save(array('main'=>$main),$db_config);		
-	 			$main['admin_id'] = $admins_return['main']['admin_id'];	 
+	 			$rs = $this->mydb2->save(array('main'=>$main),$db_config);		
+	 			$main['admin_id'] = $rs['main']['admin_id'];	 
 	 		
-	 			
+		 			
+		 			//添加日志	
+		 			 
+		 		$log_desc = sprintf('修改用户%s',$rs[main]['admin_user']);	
+		 		$this->load->model('Logs_model');	
+		 	
+		 		$this->Logs_model->log_insert(array(
+		 			'log_table'=>$db_config['main']['table_name'],
+		 			'log_table_id'=>$rs['main'][$db_config['main']['primary_key']],
+		 			'log_user'=>$this->myauth->fetch_auth('user_name'),
+		 			'log_date'=>date("Y-m-d H:i:s"),
+		 			'log_sql'=>trim(implode("\n",(array)$this->ds->sql_log)),
+		 			'log_type'=>'8',
+		 			'log_desc'=>$log_desc,
+		 		));
+			 		
 	 			$this->mypage->pop_redirect('保存成功',site_url("backend/".$this->act."/action_list"));	
 	 		}else{
 	 			$data = array(
@@ -174,13 +188,34 @@
  	 */
  	function action_delete(){
  		try{
+ 			$this->load->model('Logs_model');	
  			//验证权限
  			$this->myauth->execute_auth('28,34');
- 			$this->mydb2->delete($this->uri->segment(4),$this->im->db_config());
- 			$this->mypage->pop_redirect('删除成功',site_url("backend/".$this->act."/action_list"));		
+ 			$rs = $this->mydb2->delete($this->uri->segment(4),$this->im->db_config());
+
+ 			//添加日志	
+	 		$cf  = $this->im->db_config();	 
+	 		$log_desc = sprintf('删除用户%s',$rs['admin_user']);	
+	 		
+	 		
+	 		$this->Logs_model->log_insert(array(
+	 			'log_table'=>$cf['main']['table_name'],
+	 			'log_table_id'=>$rs[$cf['main']['primary_key']],
+	 			'log_user'=>$this->myauth->fetch_auth('user_name'),
+	 			'log_date'=>date("Y-m-d H:i:s"),
+	 			'log_sql'=>trim(implode("\n",(array)$this->ds->sql_log)),
+	 			'log_type'=>'8',
+	 			'log_desc'=>$log_desc,
+		 		));
+	 		//跳页
+	 		
+ 			$this->mypage->backend_redirect('admins/action_list','删除成功');	
+
+
  			
  		}catch(Exception $e){
- 			$this->mypage->pop_redirect($e->getMessage(),site_url("backend/".$this->act."/action_list"));	
+ 			
+ 			$this->mypage->backend_redirect('admins/action_list',$e->getMessage());
  		}
  		
  	}

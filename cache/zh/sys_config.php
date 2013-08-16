@@ -16,6 +16,6 @@
   'develop' => 
   array (
     'template' => 'blue',
-    'time_page_redirect' => '2000',
+    'time_page_redirect' => '5000',
   ),
 );?>

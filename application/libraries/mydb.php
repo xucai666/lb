@@ -83,7 +83,6 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
 			 		$this->ds->update($table_name,$info['main']);
 			 		$info['sys_db_type'] = 'update';
 		 		}else{
-		 			//unset($info['main'][$primary_key]);
 		 			$this->ds->insert($table_name,$info['main']);
 		 			$info['main'][$primary_key] = $this->ds->insert_id();
 			 		$info['sys_db_type'] = 'inesrt';
@@ -114,7 +113,6 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  				$this->ds->update($table_name,$v);				
  				
  			}else{
- 				//unset($v[$primary_key]);
  				$v[$save_config['main']['primary_key']] = $info['main'][$save_config['main']['primary_key']];
  				$this->ds->insert($table_name,$v);
  				$this->ds->close();
@@ -142,6 +140,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  		if(!empty($diff_key)){
  			$this->ds->where_in($save_config['detail']['primary_key'],$diff_key);
  			$this->ds->delete($save_config['detail']['table_name']);
+ 			$this->ds->close();
  		}
  	}
  	
@@ -168,6 +167,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  		$main_temp = $this->ds->from($save_config['main']['table_name'])->where_in($save_config['main']['primary_key'],$id)->get()->result_array();
  		$this->ds->where_in($save_config['main']['primary_key'],$id);
  		$this->ds->delete($save_config['main']['table_name']);
+ 		$this->ds->close();
  		return $main_temp[0];
  		
  	}
@@ -178,7 +178,8 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  	function detail_delete($id,$save_config){
  			 				
  		$this->ds->where_in($save_config['main']['primary_key'],$id);
- 		$this->ds->delete($save_config['detail']['table_name']); 		
+ 		$this->ds->delete($save_config['detail']['table_name']); 
+ 		$this->ds->close();		
  	}
  	
  	/**
