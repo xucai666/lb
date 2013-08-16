@@ -26,6 +26,7 @@ class Modules extends CI_Controller{
 		$m_id = $this->uri->segment(4);
 		if($m_id){
 			$main = $this->im->main($m_id);
+			
 			$detail = $this->im->details($m_id);
 			
 			
@@ -36,7 +37,7 @@ class Modules extends CI_Controller{
 	 	}
 	 	
 	 	
-	 	
+	 
 		$data = array('detail_total'=>count($detail),'detail'=>$detail,'main'=>$main,'f_ids'=>$f_ids,'query_types'=>$this->mycache->cache_fetch('query_types'),'subs'=>$this->im->subs($m_id));
 		$this->mypage->load_backend_view('modules_add',$data);
 	}
