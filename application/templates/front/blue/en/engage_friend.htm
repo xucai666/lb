@@ -1,87 +1,42 @@
 <!--{include file="`$dir_front`/top.htm"}-->
 
-
-<table width="850" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:15px;">
+<table width="992" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:13px;">
   <tr>
-    <td><!-- #BeginLibraryItem "/Library/Untitled.lbi" -->
-<div style="margin:0;padding:0;z-index:100" align="center" >
-<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="850" height="306">
-  <param name="movie" value="images/banner.swf" />
-  <param name="quality" value="high" />
-  
- <param name="wmode" value="Opaque" />
-
-  <embed src="<!--{$img_url}-->/banner.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="850" height="306"></embed>
-</object>
-</div><!-- #EndLibraryItem --></td>
+    <td><img src="<!--{$img_url}-->/ban_05.jpg" width="992" height="178" /></td>
   </tr>
 </table>
-<table width="850" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:15px;">
+<table width="992" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:13px;">
   <tr>
-    <td width="200" align="left" valign="top">
-      <!--{include file="`$ci_config.template_dir`/front/`$lang_type`/about_left_mehu.htm"}-->
-      <table width="200" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td style="background:url(<!--{$img_url}-->/03.jpg);width:20px;height:18px;"></td>
-          <td style="background:url(<!--{$img_url}-->/03.jpg) -20px 0;">&nbsp;</td>
-          <td style="background:url(<!--{$img_url}-->/03.jpg) right;width:20px;"></td>
-        </tr>
-      </table>
-    </td>
-    <td>&nbsp;</td>
-    <td width="600" align="right" valign="top">
-      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background:#e60012;">
-        <tr>
-          <td width="16"><img src="<!--{$img_url}-->/index_25.jpg" width="16" height="27" /></td>
-          <td align="center" class="di_color chu">职位推荐</td>
-          <td width="16"><img src="<!--{$img_url}-->/123.jpg" width="16" height="27" /></td>
-        </tr>
-      </table>
-      <table width="100%" border=0 cellspacing=0 cellpadding=0 style="background:#f1f1f1;margin-top:2px;">
-        <tr>
-          <td height="250" align="left" valign="top" style="padding:18px;line-height:180%;">
-          
-            <table width="100%" border="0" cellpadding="0" cellspacing="0">
-          <tbody>
-            <tr>
-              <td height="20"> </td>
-            </tr>
-            <tr>
-              <td height="48">&nbsp;</td>
-            </tr>
-            <tr>
-              <td align="center" valign="top"><form action="<!--{$site_url}-->/front/engage/action_email?eg_id=<!--{$smarty.get.eg_id}-->" method="post" name="einput" id="einput">
+    <td width="246" valign="top">
+    
+     <!--{include file="`$dir_front`/left_about.htm"}-->
+     <!--{include file="`$dir_front`/left_contact.htm"}-->
+    
+      
+    <td valign="top">
+  <h1>职位推荐</h1>
+    
+                <form action="<!--{$site_url}-->/front/engage/action_email?eg_id=<!--{$smarty.get.eg_id}-->" method="post" name="einput" id="einput">
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                   <tbody>
                     <tr>
-                      <td colspan="7"><br />
-                        如果您希望把 资深产品经理 职位介绍给您的朋友：</td>
-                    </tr>
-                    <tr>
-                      <td colspan="7" align="center">请输入您朋友的电子邮件地址： 
+                      <td colspan="7">
+                        如果您希望把 资深产品经理 职位介绍给您的朋友：
+请输入您朋友的电子邮件地址： 
                         <input name="email" id="email" />
                         <label>
                           <input type="submit" name="button" id="button" value="发送邮件" />
-                        </label></td>
+                        </label>
+
+
+                      </td>
                     </tr>
+                   
                   </tbody>
                 </table>
-              </form></td>
-            </tr>
-          </tbody>
-        </table>       
-          
-          </td>
-        </tr>
-      </table>
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td style="background:url(<!--{$img_url}-->/44.jpg);width:100px;height:18px;"></td>
-          <td style="background:url(<!--{$img_url}-->/44.jpg) -20px 0;">&nbsp;</td>
-          <td style="background:url(<!--{$img_url}-->/44.jpg) right;width:100px;"></td>
-        </tr>
-      </table>
-    </td>
+              </form>
+  </td>
   </tr>
 </table>
 <!--{include file="`$dir_front`/foot.htm"}-->
+

@@ -29,6 +29,7 @@
   <form id="form2" method="post" action="<!--{$site_url}-->/backend/download/action_del/?parent_class=<!--{$smarty.get.parent_class}-->">   
   
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="mytable">
+  <thead>
   <tr>
     <th align="center"><input name="submit" value="<!--{$lang_download.delete}-->" type="submit" onclick="return chkdel2();" />
     
@@ -46,6 +47,7 @@
 
 
   </tr>
+</thead>
   <!--{foreach from=$list item=item key=key}-->
     <tr>
       <td align="center">  <input type="checkbox" class="info_ids"  name="info_id[]" value="<!--{$item.info_id}-->">&nbsp;</td>

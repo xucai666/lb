@@ -70,3 +70,5 @@ function isInteger( str ){
 			var regu = /^[0-9]{1,}$/;
 			return regu.test(str);
 			}
+
+

@@ -19,6 +19,8 @@ class Modules extends CI_Controller{
         $this->myauth->execute_auth();		
 		$this->load->model("Modules_model",'im');
 		$this->load->model("Fields_model",'fm');
+		$this->lang->load('item_backend_modules',$this->Common_model->lang_get());
+
 	}
 
 	function action_add(){
@@ -48,13 +50,13 @@ class Modules extends CI_Controller{
 		$data = array('main'=>$post_main,'detail'=>$this->myform->post_to_set($post_detail),'query_types'=>$this->mycache->cache_fetch('query_types'));
 		try{
 			if(array_search(1,$post_detail['r_primary'])===false){
-				throw new Exception("请添加主键字段");
+				throw new Exception(lang("modules_valid_primary"));
 				
 			}
 			$this->form_validation->set_rules($this->im->valid_config($data));
 			if($this->form_validation->run()){
 				$flag = $this->db->select("*")->from('module')->where('m_tb',$data['main']['m_tb'])->where_not_in('m_id',$data['main']['m_id'])->count_all_results();
-				if($flag) throw new Exception('保存失败，表格已经存在');
+				if($flag) throw new Exception(lang('modules_valid_table'));
 				$rs = $this->mydb->save($data,$this->im->save_config());
 				//create table
 				$this->im->create_table($data);
@@ -77,7 +79,7 @@ class Modules extends CI_Controller{
 		 			'log_desc'=>sprintf('%s module %s success.',$rs['sys_db_type'],$rs['main']['m_name']),
 		 		));
 
-				$this->mypage->backend_redirect('modules/action_list','保存成功');
+				$this->mypage->backend_redirect('modules/action_list',lang('modules_success_save'));
 			}else{	
 				
 				$f_ids = $this->fm->fetch_select();
@@ -100,7 +102,7 @@ class Modules extends CI_Controller{
             if(!is_array($m_id)){
             	$m_id = array($m_id);
             }
-			if(empty($m_id)) throw new Exception('参数错误');
+			if(empty($m_id)) throw new Exception(lang('modules_error_parameter'));
             //judgment from module table
             $tn = 0;
             $ts = $this->db->select('m_tb,m_name',false)->from('module')->where_in('m_id',$m_id)->get()->result_array();
@@ -110,7 +112,7 @@ class Modules extends CI_Controller{
            	}
 
            	if($tn>0){
-           		throw new Exception('删除失败，请先清除模型下的数据');
+           		throw new Exception(lang('modules_error_delete'));
            	}
            	
            	//delete from tag template
@@ -147,7 +149,7 @@ class Modules extends CI_Controller{
 
 
 			//page redirect
-			$this->mypage->backend_redirect('modules/action_list','删除成功');
+			$this->mypage->backend_redirect('modules/action_list',lang('modules_success_delete'));
 		}catch(EXCEPTION $e){
 			$this->mypage->backend_redirect('modules/action_list',$e->getMessage());
 		}

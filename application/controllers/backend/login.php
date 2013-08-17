@@ -34,7 +34,7 @@ class Login extends CI_Controller {
 			$this->mypage->backend_redirect('login/center');
 		}			
 		$this->load->helper('form');	
-		$this->mypage->fetch_css(array('public','login'));	
+		$this->mypage->fetch_css(array('login'));	
 		$this->mypage->load_backend_view("login");
 		
 		
@@ -117,7 +117,7 @@ class Login extends CI_Controller {
 				}	
 				$data['weather'] = $weather;
 			endif;
-			$this->mypage->fetch_css('style',null,$this->mypage->getRes('css','backend'));
+			$this->mypage->fetch_css('style',null,getRootUrl('css','backend'));
 			$this->mypage->load_backend_view("center",$data);
 	}
 	
@@ -200,7 +200,7 @@ class Login extends CI_Controller {
 		
 		$config = &get_config();
 		$theme = $config['backend_theme'];
-		$this->mypage->fetch_css('style_left',null,$this->mypage->getRes('css','backend'));
+		$this->mypage->fetch_css('style_left',null,getRootUrl('css','backend'));
 		
 		//加载公共语言包
 		$this->lang->load('item_backend', $this->Common_model->lang_get());

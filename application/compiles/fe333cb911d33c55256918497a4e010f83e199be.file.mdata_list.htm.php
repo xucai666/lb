@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-16 14:20:31
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-17 09:42:18
          compiled from "application\templates\backend\blue\mdata_list.htm" */ ?>
-<?php /*%%SmartyHeaderCode:27034520e352fc50f41-11943519%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:8594520f457a957887-84303327%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'fe333cb911d33c55256918497a4e010f83e199be' => 
     array (
       0 => 'application\\templates\\backend\\blue\\mdata_list.htm',
-      1 => 1376274771,
+      1 => 1376730339,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '27034520e352fc50f41-11943519',
+  'nocache_hash' => '8594520f457a957887-84303327',
   'function' => 
   array (
   ),
@@ -33,9 +33,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_520e3530b15632_50784723',
+  'unifunc' => 'content_520f457ab71c94_84129364',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_520e3530b15632_50784723')) {function content_520e3530b15632_50784723($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_520f457ab71c94_84129364')) {function content_520f457ab71c94_84129364($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
 <div class="nav_title">模型数据&raquo;<?php echo $_smarty_tpl->tpl_vars['theme']->value;?>
@@ -112,8 +112,7 @@ $_smarty_tpl->tpl_vars['f']->_loop = true;
 	<td><?php echo $_smarty_tpl->tpl_vars['item']->value[$_smarty_tpl->tpl_vars['f']->value['r_name']];?>
 </td>
 	<?php } ?>	
-	<td align='center'>
-		
+	<td>
 			<?php echo ci_anchor(array('segment'=>"backend/mdata/action_add/".((string)$_smarty_tpl->tpl_vars['item']->value[$_smarty_tpl->tpl_vars['primary']->value]),'attrs'=>"class:link_mod"),$_smarty_tpl);?>
 
 			<?php echo ci_anchor(array('segment'=>"backend/mdata/action_del/".((string)$_smarty_tpl->tpl_vars['item']->value[$_smarty_tpl->tpl_vars['primary']->value]),'attrs'=>"class:link_del,onclick:return confirm('确定删除?');"),$_smarty_tpl);?>

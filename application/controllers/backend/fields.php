@@ -18,10 +18,13 @@ class Fields extends CI_Controller{
 		//auth login
         $this->myauth->execute_auth();
 		$this->load->model("Fields_model",'im');
-		
+		$this->lang->load('item_backend_fields',$this->Common_model->lang_get());
+
+
 	}
 
 	function action_add(){
+
 		$fields_types = $this->mycache->cache_fetch('fields_types');
 		$f_id = $this->uri->segment(4);
 		$main = array();
@@ -52,7 +55,7 @@ class Fields extends CI_Controller{
 		 			'log_desc'=>sprintf('%s field %s success.',$rs['sys_db_type'],$rs['main']['f_name']),
 		 		));
 
-				$this->mypage->backend_redirect('fields/action_list','保存成功');
+				$this->mypage->backend_redirect('fields/action_list',lang('fields_save_ok'));
 			}else{				
 				$this->mypage->load_backend_view('fields_add',$data);
 			}
@@ -71,7 +74,7 @@ class Fields extends CI_Controller{
 		try{
 			$f_id = $this->input->post('f_id');
             $f_id = $f_id?$f_id:$this->uri->segment(4);
-			if(empty($f_id)) throw new Exception('参数错误');
+			if(empty($f_id)) throw new Exception(lang('fields_parameter_error'));
 			$rs = $this->mydb->delete($f_id,$this->im->save_config());
 			//insert log
 			$log_cf = $this->im->save_config();
@@ -86,7 +89,7 @@ class Fields extends CI_Controller{
 	 			'log_desc'=>sprintf('delete field %s success.',$rs['f_name']),
 	 		));
 
-			$this->mypage->backend_redirect('fields/action_list','删除成功');
+			$this->mypage->backend_redirect('fields/action_list',lang('fields_delete_ok'));
 		}catch(EXCEPTION $e){
 			$this->mypage->backend_redirect($_SERVER['HTTP_REFERER'],$e->getMessage());
 		}

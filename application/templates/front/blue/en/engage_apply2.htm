@@ -1,0 +1,1875 @@
+<!--{include file="`$ci_config.template_dir`/front/top.htm"}-->
+
+<SCRIPT language=JavaScript src="http://co.51job.com/cooperate/inc/js/Func.js" type="text/javascript"></SCRIPT> 
+<SCRIPT language=JavaScript> 
+<!--
+//Basic Info
+function ChkRecordBasic()
+{
+	var f1 = document.forms[1];
+ 
+	f1.Name.value = Jtrim(f1.Name.value);
+	//f1.IDCard.value = Jtrim(f1.IDCard.value);
+	if(""==f1.Name.value || strlen(f1.Name.value)>20)
+	{
+		alert("请输入姓名(20字符内)！");
+		f1.Name.focus();
+		return false;
+	}
+	if(!isEmail(f1.EmailAdd.value))
+	{
+		f1.EmailAdd.focus();
+		return false;
+	}
+	if("0000"==f1.YearOfBirthday.value || "00"==f1.MonthOfBirthday.value || "00"==f1.DayOfBirthday.value)
+	{
+		alert("请输入生日！");
+		f1.YearOfBirthday.focus();
+		return false;
+	}
+	if ( ! isValidDate(f1.YearOfBirthday.value, f1.MonthOfBirthday.value, f1.DayOfBirthday.value ))
+	{  f1.YearOfBirthday.focus();
+	    return false;
+	}
+	/*
+	if(!isIDNumber())
+	{
+		alert("请输入合法的证件号！");
+		f1.IDCard.focus();
+		return false;
+	}
+	*/
+	if("0000"==f1.Location.value)
+	{
+		alert("请输入居住地！");
+		f1.Location.focus();
+		return false;
+	}
+	if("00"==f1.HuKou.value)
+	{
+		alert("请输入户口！");
+		f1.HuKou.focus();
+		return false;
+	}
+	if("0"==f1.WorkYear.value)
+	{
+		alert("请输入工作年限！");
+		f1.WorkYear.focus();
+		return false;
+	}
+	/*
+	if(""==f1.FPNumber.value || strlen(f1.FPNation.value)>5 || strlen(f1.FPCity.value)>5 || 
+		strlen(f1.FPNumber.value)>40 || strlen(f1.FPExt.value)>10)
+	{
+		alert("请输入正确的电话号码！");
+		return false;
+	}
+	if(strlen(f1.MPNation.value)>5 || strlen(f1.MPNumber.value)>20)
+	{
+		alert("请输入正确的手机号码！");
+		return false;
+	}
+	*/
+	if(!IsWorkExpOK())	
+	{
+		alert("请填写工作经验！"); 
+		return false; 
+	}
+	if(!IsEduExpOK())	
+	{ 
+		alert("请填写教育经历！"); 
+		return false; 
+	}
+	if(!IsForLangOK())	
+	{
+		alert("请填写语言！");
+		return false; 
+	}
+ 
+	return true;
+}
+function isIDNumber()
+{
+	var f1 = document.forms[1];
+	var IDCARD = f1.IDCard.value;
+	var IDTYPE = f1.IDType.value;
+	var lenID = strlen(IDCARD);
+ 
+	if (IDCARD == "" || lenID > 25 )
+	{
+		return false; 
+	}
+	else if (IDTYPE == "0")
+	{
+		if (lenID != 15 && lenID != 18 )
+		{ 
+			return false;
+		}
+		else if(isNaN(IDCARD))
+		{
+			return false;
+		}
+		else
+		{
+			var YearOfBirthday = f1.YearOfBirthday.value;
+			var MonthOfBirthday = f1.MonthOfBirthday.value;
+			var DayOfBirthday = f1.DayOfBirthday.value;
+			var MonthStr,DayStr;
+ 
+			if (MonthOfBirthday < 10 ) MonthStr = "0"+MonthOfBirthday;
+			else MonthStr = MonthOfBirthday;
+			if (DayOfBirthday < 10 )   DayStr = "0"+DayOfBirthday;
+			else DayStr = DayOfBirthday;
+			MustStr = YearOfBirthday+MonthStr+DayStr;
+ 
+			if (( lenID == 15 && IDCARD.substr(6, 6) != MustStr.substr(2) )
+				|| ( lenID == 18 && IDCARD.substr(6, 8) != MustStr ))
+			{
+				return false;
+			}
+		}
+	}
+ 
+	return true;
+}
+//Work Exp
+function ChkRecordWorkExp()
+{
+	var f1 = document.forms[1];
+ 
+	//f1.workexp_startdate.value	= Jtrim(f1.workexp_startdate.value);
+	//f1.workexp_enddate.value	= Jtrim(f1.workexp_enddate.value);
+	f1.Company.value	= Jtrim(f1.Company.value);
+	f1.Division.value	= Jtrim(f1.Division.value);
+	//f1.workexp_cjobtitle.value	= Jtrim(f1.workexp_cjobtitle.value);
+	f1.Responsibility.value		= Jtrim(f1.Responsibility.value);
+	//f1.workexp_cleavereason.value	= Jtrim(f1.workexp_cleavereason.value);
+	//f1.workexp_cachievement.value	= Jtrim(f1.workexp_cachievement.value);
+		
+	var tmpFromYear = f1.FromYearWorkExp.value;
+	var tmpFromMonth = f1.FromMonthWorkExp.value;
+	var tmpToYear = f1.ToYearWorkExp.value;
+	var tmpToMonth = f1.ToMonthWorkExp.value;
+	if("0000"==tmpFromYear || "00"==tmpFromMonth)
+	{
+		f1.FromYearWorkExp.focus();
+		alert("请输入日期！");
+		return false;
+	}
+ 
+	if(!("0000"==tmpToYear && "00"==tmpToMonth) && 
+		!("0000"!=tmpToYear && "00"!=tmpToMonth))
+	{
+		f1.ToYearWorkExp.focus();
+		alert("请输入日期！");
+		return false;
+	}
+	if(("0000"!=tmpToYear && "00"!=tmpToMonth) &&
+		(tmpToYear<tmpFromYear || (tmpToYear==tmpFromYear && tmpToMonth-tmpFromMonth<0))
+		)
+	{
+		f1.ToYearWorkExp.focus();
+		alert("结束时间不能小于开始时间！");
+		return false;
+	}
+ 
+	if("00"==f1.Industry.value)
+	{
+		f1.Industry.focus();
+		alert("请输入行业！");
+		return false;
+	}
+	if("0"==f1.CompanyType.value)
+	{
+		f1.CompanyType.focus();
+		alert("请输入公司性质！");
+		return false;
+	}
+	if("0000"==f1.SubFunction.value)
+	{
+		f1.SubFunction.focus();
+		alert("请输入职能！");
+		return false;
+	}
+	
+	if(""==f1.Company.value)
+	{
+		f1.Company.focus();
+		alert("请输入公司名称！");
+		return false;
+	}
+	/**/
+	/*
+	if(""==f1.workexp_cjobtitle.value && "0000"==f1.workexp_functype.value)
+	{
+		//f1.workexp_functype.focus();
+		alert("Please input job title or select function type");
+		return false;
+	}
+	*/
+	/*
+	if(""==f1.Division.value)
+	{
+		f1.Division.focus();
+		alert("请输入部门！");
+		return false;
+	}
+	*/
+	/*
+	if(""==f1.Responsibility.value)
+	{
+		f1.Responsibility.focus();
+		alert("请输入职责描述！");
+		return false;
+	}
+	*/
+		
+	return true;
+}
+function AddRecordWorkExp()
+{
+	if(!ChkRecordWorkExp())
+	{
+		return;
+	}
+	var f1	= document.forms[1];
+	var pf	= f1;
+	var txt = document.all['workexp'];
+	var hidden_txt	= "";
+	var total		= (""==pf.workexp_total.value)?0:pf.workexp_total.value;
+	var last_num	= (""==pf.workexp_last_num.value)?0:pf.workexp_last_num.value;
+	//var tmp_jobtitle= ("0000"!=f1.workexp_functype.value)?f1.workexp_functype[f1.workexp_functype.selectedIndex].text:f1.workexp_cjobtitle.value;
+	var date_from	= f1.FromYearWorkExp.value+"-"+f1.FromMonthWorkExp.value;
+	var date_to		= f1.ToYearWorkExp.value+"-"+f1.ToMonthWorkExp.value;
+		
+	hidden_txt	+= "<input type=\"hidden\" name=\"workexp_status_"+last_num+"\" value=\"1\">"
+	hidden_txt	+= "<input type=\"hidden\" name=\"workexp_startdate_"+last_num+"\" value=\""+date_from+"\">"
+	hidden_txt	+= "<input type=\"hidden\" name=\"workexp_enddate_"+last_num+"\" value=\""+date_to+"\">"
+	hidden_txt	+= "<input type=\"hidden\" name=\"workexp_coName_"+last_num+"\" value=\""+f1.Company.value+"\">"
+	hidden_txt	+= "<input type=\"hidden\" name=\"workexp_divName_"+last_num+"\" value=\""+f1.Division.value+"\">"
+		hidden_txt	+= "<input type=\"hidden\" name=\"workexp_coname_"+last_num+"\" value=\""+f1.Company.value+"\">"
+	hidden_txt	+= "<input type=\"hidden\" name=\"workexp_divname_"+last_num+"\" value=\""+f1.Division.value+"\">"
+	/*
+	if("0000"==f1.workexp_functype.value)
+	{
+		hidden_txt	+= "<input type=\"hidden\" name=\"workexp_cjobtitle_"+last_num+"\" value=\""+f1.workexp_cjobtitle.value+"\">"
+	}
+	else
+	{
+		hidden_txt	+= "<input type=\"hidden\" name=\"workexp_cjobtitle_"+last_num+"\" value=\"\">"
+	}
+	*/
+	hidden_txt	+= "<input type=\"hidden\" name=\"workexp_cotype_"+last_num+"\" value=\""+f1.CompanyType.value+"\">"
+	hidden_txt	+= "<input type=\"hidden\" name=\"workexp_industry_"+last_num+"\" value=\""+f1.Industry.value+"\">"
+	hidden_txt	+= "<input type=\"hidden\" name=\"workexp_functype_"+last_num+"\" value=\""+f1.SubFunction.value+"\">"
+	hidden_txt	+= "<input type=\"hidden\" name=\"workexp_cdetail_"+last_num+"\" value=\""+f1.Responsibility.value+"\">"
+	
+	//hidden_txt	+= "<input type=\"hidden\" name=\"workexp_cleavereason_"+last_num+"\" value=\""+f1.workexp_cleavereason.value+"\">"
+	//hidden_txt	+= "<input type=\"hidden\" name=\"workexp_cachievement_"+last_num+"\" value=\""+f1.workexp_cachievement.value+"\">"
+	
+	//tmp_jobtitle	= 
+ 
+	//alert(txt.innerHTML)
+	txt.innerHTML	+= hidden_txt;
+	/*
+	txt.innerHTML	+= "<TABLE class=word id="+last_num+" width=\"100%\"><tr><td width=\"20%\" nowrap>"+f1.workexp_startdate.value+" - "+f1.workexp_enddate.value+
+		"</td><td width=\"30%\">"+tmp_jobtitle+
+		"</td><td width=\"30%\">"+f1.workexp_coName.value+
+		"</td><td width=\"20%\" nowrap><a href=\"javascript: EditItem('EditWorkExp.asp?workexpid="+last_num+"&workexp_functype="+f1.workexp_functype.value+"',540,450);\">编辑</a> | <a href=\"javascript: DelItem("+last_num+",'workexp');\">删除</a></td></tr></table>";
+	*/
+	//alert(txt.innerHTML)
+	var tmp_workexp_str = date_from+ "--" + ("0000-00"==date_to?"至今":date_to) + "    " + f1.Company.value + "    " + f1.Division.value;
+	AddOption('WorkExpList[]',tmp_workexp_str,last_num);
+	total++;
+	last_num++;
+	pf.workexp_total.value	= total;
+	pf.workexp_last_num.value	= last_num;
+	ClearRecordWorkExp();
+}
+function ClearRecordWorkExp()
+{
+	var f1	= document.forms[1];
+	f1.FromYearWorkExp.value = "0000";
+	f1.FromMonthWorkExp.value = "00";
+	f1.ToYearWorkExp.value = "0000";
+	f1.ToMonthWorkExp.value = "00";
+	f1.Industry.value = "00";
+	f1.CompanyType.value = "0";
+	f1.Function.value = "0000";
+	ChangeOption('Function','SubFunction');
+	f1.Company.value = "";
+	f1.Division.value = "";
+	f1.Responsibility.value = "";
+	
+}
+function ShowRecordWorkExp(id)
+{
+	var f1	= document.forms[1];
+	var tmp_startdate = f1.elements['workexp_startdate_'+id].value.split("-");
+	var tmp_enddate = f1.elements['workexp_enddate_'+id].value.split("-");
+	if(tmp_enddate[0]=="") tmp_enddate[0]="0000";
+ 
+ 
+	f1.FromYearWorkExp.value = tmp_startdate[0];
+	f1.FromMonthWorkExp.value = eval(tmp_startdate[1]);
+	f1.ToYearWorkExp.value = tmp_enddate[0];
+	f1.ToMonthWorkExp.value = eval(tmp_enddate[1]);
+	if(f1.ToMonthWorkExp.value=="") f1.ToMonthWorkExp.value="00";
+	f1.Industry.value = f1.elements['workexp_industry_'+id].value;
+	f1.CompanyType.value = f1.elements['workexp_cotype_'+id].value;
+	
+	f1.Function.value = f1.elements['workexp_functype_'+id].value.substr(0,2)+"00";
+	//alert(f1.Function.value);
+	ChangeOption('Function','SubFunction');
+	f1.SubFunction.value = f1.elements['workexp_functype_'+id].value;
+	f1.Company.value = f1.elements['workexp_coname_'+id].value;
+	f1.Division.value = f1.elements['workexp_divname_'+id].value;
+	f1.Responsibility.value = f1.elements['workexp_cdetail_'+id].value;
+}
+function DelRecordWorkExp()
+{
+	var f1 = document.forms[1];
+	var id = f1.elements['WorkExpList[]'].selectedIndex
+	if(-1!=id)
+	{
+		if(DelItem(f1.elements['WorkExpList[]'].options[id].value,'workexp'))
+		{
+			DelOption('WorkExpList[]');
+			ClearRecordWorkExp();
+		}
+	}
+}
+ 
+function DelItem(id,section_name)
+{
+	if(window.confirm("确定删除?"))
+	{
+		var f1	= document.forms[1];
+		var txt = document.all[section_name];
+		var hidden_txt	= "";
+		var total		= f1.elements[section_name+'_total'].value;
+		var last_num	= f1.elements[section_name+'_last_num'].value;
+		var is_ie5		= true;
+	
+		/**/
+		index1	= txt.innerHTML.indexOf("<INPUT name="+section_name+"_status_"+id);
+		if(-1==index1)
+		{
+			index1	= txt.innerHTML.indexOf("<INPUT type=hidden value=1 name="+section_name+"_status_"+id);
+			if(-1!=index1)
+			{
+				is_ie5	= false;
+			}
+		}
+	
+		rest_part	= txt.innerHTML.substr(index1+1);
+		if(is_ie5)
+		{
+			index2	= rest_part.indexOf("<INPUT name="+section_name+"_status_");
+		}
+		else
+		{
+			index2	= rest_part.indexOf("<INPUT type=hidden value=1 name="+section_name+"_status_");
+		}
+	
+		part1	= txt.innerHTML.substr(0,index1);
+		part2	= (-1==index2)?"":rest_part.substr(index2);
+	
+		txt.innerHTML	= part1+part2;
+		
+		//alert(txt.innerHTML)
+		//f1.elements[section_name+'_status'].value	= 0;
+		f1.elements[section_name+'_total'].value--;
+ 
+		return true;
+	}
+	return false;
+}
+ 
+//Edu Exp
+function AddRecordEduExp()
+{
+	if(!ChkRecordEduExp())
+	{
+		return;
+	}
+	var f1	= document.forms[1];
+	var pf	= f1;
+	var txt = document.all['eduexp'];
+	var hidden_txt	= "";
+	var total		= (""==pf.eduexp_total.value)?0:pf.eduexp_total.value;
+	var last_num	= (""==pf.eduexp_last_num.value)?0:pf.eduexp_last_num.value;
+	//var tmp_majortitle	= ("0000"!=f1.eduexp_major.value)?f1.eduexp_major[f1.eduexp_major.selectedIndex].text:f1.eduexp_cmajortitle.value;
+	var date_from	= f1.FromYearEduExp.value+"-"+f1.FromMonthEduExp.value;
+	var date_to		= f1.ToYearEduExp.value+"-"+f1.ToMonthEduExp.value;
+		
+	hidden_txt	+= "<input type=\"hidden\" name=\"eduexp_status_"+last_num+"\" value=\"1\">"
+	hidden_txt	+= "<input type=\"hidden\" name=\"eduexp_startdate_"+last_num+"\" value=\""+date_from+"\">"
+	hidden_txt	+= "<input type=\"hidden\" name=\"eduexp_enddate_"+last_num+"\" value=\""+date_to+"\">"
+	hidden_txt	+= "<input type=\"hidden\" name=\"eduexp_schcname_"+last_num+"\" value=\""+f1.SchoolName.value+"\">"
+	hidden_txt	+= "<input type=\"hidden\" name=\"eduexp_degree_"+last_num+"\" value=\""+f1.Degree.value+"\">"
+	/*
+	if("0000"==f1.eduexp_major.value)
+	{
+		hidden_txt	+= "<input type=\"hidden\" name=\"eduexp_cmajortitle_"+last_num+"\" value=\""+f1.eduexp_cmajortitle.value+"\">"
+	}
+	else
+	{
+		hidden_txt	+= "<input type=\"hidden\" name=\"eduexp_cmajortitle_"+last_num+"\" value=\"\">"
+	}
+	*/
+	hidden_txt	+= "<input type=\"hidden\" name=\"eduexp_major_"+last_num+"\" value=\""+f1.SubMajor.value+"\">"
+	//hidden_txt	+= "<input type=\"hidden\" name=\"eduexp_cdetail_"+last_num+"\" value=\""+f1.eduexp_cdetail.value+"\">"
+	
+	//alert(txt.innerHTML)
+	txt.innerHTML	+= hidden_txt;
+	/*
+	txt.innerHTML	+= "<TABLE class=word id="+last_num+" width=\"100%\"><tr><td width=\"20%\" nowrap>"+f1.eduexp_startdate.value+" - "+f1.eduexp_enddate.value+
+		"</td><td width=\"30%\">"+f1.eduexp_schName.value+
+		"</td><td width=\"30%\">"+tmp_majortitle+
+		"</td><td width=\"20%\" nowrap><a href=\"javascript: EditItem('EditEduExp.asp?eduexpid="+last_num+"&eduexp_major="+f1.eduexp_major.value+"',540,320);\">编辑</a> | <a href=\"javascript: DelItem("+last_num+",'eduexp');\">删除</a></td></tr></table>";
+	*/
+ 
+	//alert(txt.innerHTML)
+	var tmp_eduexp_str = date_from+ "--" + ("0000-00"==date_to?"至今":date_to) + "    " + f1.SchoolName.value + "    " + f1.SubMajor.options[f1.SubMajor.selectedIndex].text;
+	AddOption('EduExpList[]',tmp_eduexp_str,last_num);
+	
+	total++;
+	last_num++;
+	pf.eduexp_total.value	= total;
+	pf.eduexp_last_num.value	= last_num;
+ 
+	ClearRecordEduExp();
+}
+function ChkRecordEduExp()
+{
+	var f1 = document.forms[1];
+ 
+	f1.SchoolName.value	= Jtrim(f1.SchoolName.value);
+		
+	var tmpFromYear = f1.FromYearEduExp.value;
+	var tmpFromMonth = f1.FromMonthEduExp.value;
+	var tmpToYear = f1.ToYearEduExp.value;
+	var tmpToMonth = f1.ToMonthEduExp.value;
+	if("0000"==tmpFromYear || "00"==tmpFromMonth)
+	{
+		f1.FromYearEduExp.focus();
+		alert("请输入日期！");
+		return false;
+	}
+ 
+	if(!("0000"==tmpToYear && "00"==tmpToMonth) && 
+		!("0000"!=tmpToYear && "00"!=tmpToMonth))
+	{
+		f1.ToYearEduExp.focus();
+		alert("请输入日期！");
+		return false;
+	}
+	if(("0000"!=tmpToYear && "00"!=tmpToMonth) &&	(tmpToYear<tmpFromYear || (tmpToYear==tmpFromYear && tmpToMonth-tmpFromMonth<0))){
+		f1.ToYearEduExp.focus();
+		alert("结束时间不能小于开始时间！");
+		return false;
+	} 
+ 
+	if(eval(f1.Degree.value)>=5 && ("0000"==f1.SubMajor.value || "0"==f1.SubMajor.value))
+	{
+		f1.SubMajor.focus();
+		alert("请输入专业！");
+		return false;
+	}
+	if("0"==f1.Degree.value)
+	{
+		f1.Degree.focus();
+		alert("请输入学历！");
+		return false;
+	}
+	if(""==f1.SchoolName.value)
+	{
+		f1.SchoolName.focus();
+		alert("请输入学校名称！");
+		return false;
+	}
+		
+	return true;
+}
+function ClearRecordEduExp()
+{
+	var f1	= document.forms[1];
+	f1.FromYearEduExp.value = "0000";
+	f1.FromMonthEduExp.value = "00";
+	f1.ToYearEduExp.value = "0000";
+	f1.ToMonthEduExp.value = "00";
+	f1.SchoolName.value = "";
+	f1.Degree.value = "0";
+	f1.Major.value = "0000";
+	ChangeOption('Major','SubMajor','MajorCode');
+}
+function ShowRecordEduExp(id)
+{
+	var f1	= document.forms[1];
+	var tmp_startdate = f1.elements['eduexp_startdate_'+id].value.split("-");
+	var tmp_enddate = f1.elements['eduexp_enddate_'+id].value.split("-");
+ 
+	f1.FromYearEduExp.value = tmp_startdate[0];
+	f1.FromMonthEduExp.value = eval(tmp_startdate[1]);
+	f1.ToYearEduExp.value = tmp_enddate[0];
+	if(f1.ToYearEduExp.value=="") f1.ToYearEduExp.value="0000";
+	f1.ToMonthEduExp.value = eval(tmp_enddate[1]);
+	if(f1.ToMonthEduExp.value=="") f1.ToMonthEduExp.value="00";
+	f1.SchoolName.value = f1.elements['eduexp_schcname_'+id].value;
+	f1.Degree.value = f1.elements['eduexp_degree_'+id].value;
+	f1.Major.value = f1.elements['eduexp_major_'+id].value.substr(0,2)+"00";
+	ChangeOption('Major','SubMajor','MajorCode');
+	f1.SubMajor.value = f1.elements['eduexp_major_'+id].value;
+}
+function DelRecordEduExp()
+{
+	var f1 = document.forms[1];
+	var id = f1.elements['EduExpList[]'].selectedIndex
+	if(-1!=id)
+	{
+		if(DelItem(f1.elements['EduExpList[]'].options[id].value,'eduexp'))
+		{
+			ClearRecordEduExp();
+			DelOption('EduExpList[]');
+		}
+	}
+}
+ 
+//Foreign Lang
+function AddRecordForLang()
+{
+	if(!ChkRecordForLang())
+	{
+		return;
+	}
+ 
+	var f1	= document.forms[1];
+	var pf	= f1;
+	var txt = document.all['forlang'];
+	var hidden_txt	= "";
+	var total		= (""==pf.forlang_total.value)?0:pf.forlang_total.value;
+	var last_num	= (""==pf.forlang_last_num.value)?0:pf.forlang_last_num.value;
+		
+	hidden_txt	+= "<input type=\"hidden\" name=\"forlang_status_"+last_num+"\" value=\"1\">"
+	hidden_txt	+= "<input type=\"hidden\" name=\"forlang_name_"+last_num+"\" value=\""+f1.Language.value+"\">"
+	hidden_txt	+= "<input type=\"hidden\" name=\"forlang_level_"+last_num+"\" value=\""+f1.Master.value+"\">"
+	
+	txt.innerHTML	+= hidden_txt;
+ 
+	var tmp_forlang_str = f1.Language.options[f1.Language.selectedIndex].text+ "    " + f1.Master.options[f1.Master.selectedIndex].text;
+	AddOption('ForLangList[]',tmp_forlang_str,last_num);
+ 
+	total++;
+	last_num++;
+	pf.forlang_total.value		= total;
+	pf.forlang_last_num.value	= last_num;
+ 
+	ClearRecordForLang();
+}
+function ChkRecordForLang()
+{
+	var f1 = document.forms[1];
+ 
+	
+	if("00"==f1.Language.value)
+	{
+		f1.Language.focus();
+		alert("请输入语种！");
+		return false;
+	}
+	/*
+	if("0"==f1.Master.value)
+	{
+		f1.Master.focus();
+		alert("请输入程度！");
+		return false;
+	}
+	*/
+	if(f1.forlang_total.value >=3)
+	{
+		alert("最多输入三条！");
+		return false;
+	}
+		
+	return true;
+}
+function ClearRecordForLang()
+{
+	var f1	= document.forms[1];
+	f1.Language.value = "00";
+	f1.Master.value = "0";
+}
+function ShowRecordForLang(id)
+{
+	var f1	= document.forms[1];
+ 
+	f1.Language.value = f1.elements['forlang_name_'+id].value;
+	f1.Master.value = f1.elements['forlang_level_'+id].value;
+}
+function DelRecordForLang()
+{
+	var f1 = document.forms[1];
+	var id = f1.elements['ForLangList[]'].selectedIndex
+	if(-1!=id)
+	{
+		if(DelItem(f1.elements['ForLangList[]'].options[id].value,'forlang'))
+		{
+			ClearRecordForLang();
+			DelOption('ForLangList[]');
+		}
+	}
+}
+ 
+function IsWorkExpOK()
+{
+	var f1 = document.forms[1];
+	if(f1.workexp_total.value>0)
+	{
+		return true;
+	}
+	return false;
+}
+function IsEduExpOK()
+{
+	var f1 = document.forms[1];
+	if(f1.eduexp_total.value>0)
+	{
+		return true;
+	}
+	return false;
+}
+function IsForLangOK()
+{
+	var f1 = document.forms[1];
+	if(f1.forlang_total.value>0)
+	{
+		return true;
+	}
+	return false;
+}
+//--> 
+</SCRIPT> 
+<table width="850" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:15px;">
+  <tr>
+    <td><!-- #BeginLibraryItem "/Library/Untitled.lbi" -->
+<div style="margin:0;padding:0;z-index:100" align="center" >
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="850" height="306">
+  <param name="movie" value="images/banner.swf" />
+  <param name="quality" value="high" />
+  
+ <param name="wmode" value="Opaque" />
+
+  <embed src="images/banner.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="850" height="306"></embed>
+</object>
+</div><!-- #EndLibraryItem --></td>
+  </tr>
+</table>
+<table width="850" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:15px;"> 
+  <tr> 
+    <td width="850" height="357" align="right" valign="top"><table width="850" border="0" cellspacing="0" cellpadding="0" style="background-color:#c70008;"> 
+      <tr> 
+        <td width="16"><img src="images/index_25.jpg" width="16" height="27" alt="" /></td> 
+        <td width="1200" align="center" class="di_color chu">职位机会</td> 
+        <td width="16"><img src="images/123.jpg" width="16" height="27" /></td> 
+        </tr> 
+      </table>
+   
+      <form name="form1" method="post" action="<!--{$site_url}-->/front/engage/engage_apply_save"> 
+        </form> 
+        <script language="javascript" src="http://co.51job.com/in/js/Base.js"></script> 
+<form name="fResumeBase" method="POST" action="" onSubmit="javascript: return ChkRecordBasic();"> 
+		<input type="hidden" name="jobid" value="41584775"> 
+		<input type="hidden" name="AccountID" value="103270451"> 
+		<input type="hidden" name="ReSumeID" value="103270451"> 
+		<input type="hidden" name="NextAction" value="update"> 
+		<input type="hidden" name="isEnglish" value="0"> 
+      
+      
+        <table border="0" cellpadding="5" cellspacing="0" width="90%" align="center">
+          <tbody>
+            <tr align="center">
+              <td colspan="4" height="50">&nbsp;</td>
+            </tr>
+            <tr>
+              <td height="30" colspan="4"><img align="absmiddle" height="16" src="<!--{$base_url}-->/images/sys/icon-arrow.gif" width="20" /> 谢谢 您的配合，为便于将您的简历归档，请您花两分钟完成一些选择项（带*为必须提供的信息）</td>
+            </tr>
+            <tr>
+              <td height="30" colspan="4"><table width="90%" border="0" cellspacing="3" cellpadding="0" align="center">
+                <tbody>
+                  <tr>
+                    <td align="left">1、基本选项*</td>
+                  </tr>
+                  <tr>
+                    <td align="left">2、附加选项 （可不提供）</td>
+                  </tr>
+                  <tr>
+                    <td align="left">备注：这些信息以选择项为主，不需要您花很多时间填写。</td>
+                  </tr>
+                </tbody>
+              </table></td>
+            </tr>
+            <tr>
+              <td height="30" colspan="4"><strong></strong>
+                <hr />
+                <strong>1、基本选项</strong>（所有项目均为必填项）</td>
+            </tr>
+            <tr>
+              <td height="30" colspan="4"><img align="absmiddle" height="16" src="<!--{$base_url}-->/images/sys/icon-arrow.gif" width="20" /> <strong>基本信息和求职意向</strong></td>
+            </tr>
+            <tr>
+              <td height="30" colspan="4"><table border="0" cellpadding="3" cellspacing="3" width="100%">
+                <tbody>
+                  <tr>
+                    <td width="13%" align="left">姓名*</td>
+                    <td width="40%" align="left"><input name="Name" id="Name" value="" maxlength="20" /></td>
+                    <td width="8%" align="left">Email*</td>
+                    <td width="39%" align="left"><input name="EmailAdd" id="EmailAdd" value="" size="20" maxlength="100" /></td>
+                  </tr>
+                  <tr>
+                    <td width="13%" align="left" nowrap="nowrap">出生日期*</td>
+                    <td width="40%" align="left" nowrap="nowrap"><select name="YearOfBirthday">
+                      
+                                             							
+                                            
+                      <option value="0000" selected="selected">----</option>
+                      
+                                             							
+                                            
+                      <option value="2000">2000</option>
+                      <option value="1999">1999</option>
+                      <option value="1998">1998</option>
+                      <option value="1997">1997</option>
+                      <option value="1996">1996</option>
+                      <option value="1995">1995</option>
+                      <option value="1994">1994</option>
+                      <option value="1993">1993</option>
+                      <option value="1992">1992</option>
+                      <option value="1991">1991</option>
+                      <option value="1990">1990</option>
+                      <option value="1989">1989</option>
+                      <option value="1988">1988</option>
+                      <option value="1987">1987</option>
+                      <option value="1986">1986</option>
+                      <option value="1985">1985</option>
+                      <option value="1984">1984</option>
+                      <option value="1983">1983</option>
+                      <option value="1982">1982</option>
+                      <option value="1981">1981</option>
+                      <option value="1980">1980</option>
+                      <option value="1979">1979</option>
+                      <option value="1978">1978</option>
+                      <option value="1977">1977</option>
+                      <option value="1976">1976</option>
+                      <option value="1975">1975</option>
+                      <option value="1974">1974</option>
+                      <option value="1973">1973</option>
+                      <option value="1972">1972</option>
+                      <option value="1971">1971</option>
+                      <option value="1970">1970</option>
+                      <option value="1969">1969</option>
+                      <option value="1968">1968</option>
+                      <option value="1967">1967</option>
+                      <option value="1966">1966</option>
+                      <option value="1965">1965</option>
+                      <option value="1964">1964</option>
+                      <option value="1963">1963</option>
+                      <option value="1962">1962</option>
+                      <option value="1961">1961</option>
+                      <option value="1960">1960</option>
+                      <option value="1959">1959</option>
+                      <option value="1958">1958</option>
+                      <option value="1957">1957</option>
+                      <option value="1956">1956</option>
+                      <option value="1955">1955</option>
+                      <option value="1954">1954</option>
+                      <option value="1953">1953</option>
+                      <option value="1952">1952</option>
+                      <option value="1951">1951</option>
+                      <option value="1950">1950</option>
+                      <option value="1949">1949</option>
+                      <option value="1948">1948</option>
+                      <option value="1947">1947</option>
+                      <option value="1946">1946</option>
+                      <option value="1945">1945</option>
+                      <option value="1944">1944</option>
+                      <option value="1943">1943</option>
+                      <option value="1942">1942</option>
+                      <option value="1941">1941</option>
+                      <option value="1940">1940</option>
+                      
+                                                                    
+                                          
+                    </select>
+                      年 
+                      <select name="MonthOfBirthday">
+                        
+                                               							
+                                              
+                        <option value="00" selected="selected">----</option>
+                        
+                                               							
+                                              
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        
+                                                                      
+                                            
+                      </select>
+                      月 
+                      <select name="DayOfBirthday">
+                        
+                                               							
+                                              
+                        <option value="00" selected="selected">----</option>
+                        
+                                               							
+                                              
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        
+                                                                      
+                                            
+                      </select>
+                      日</td>
+                    <td width="8%" align="left">性别*</td>
+                    <td width="39%" align="left"><select name="Gender">
+                      
+                                             							
+                                            
+                      <option value="0" selected="selected">男</option>
+                      
+                                             							
+                                            
+                      <option value="1">女</option>
+                      
+                                                                     
+                                          
+                    </select></td>
+                  </tr>
+                  <tr>
+                    <td width="13%" align="left">居住地*</td>
+                    <td align="left"><select name="LocCat" onchange="JavaScript:ChangeOptionLoc('LocCat', 'Location','AreaCode')">
+                      
+                                             							
+                                            
+                      <option value="0000" selected="selected">-请选择-</option>
+                      
+                                             							
+                                            
+                      <option value="0100">北京</option>
+                      <option value="0200">上海</option>
+                      <option value="0300">广东省</option>
+                      <option value="0400">深圳</option>
+                      <option value="0500">天津</option>
+                      <option value="0600">重庆</option>
+                      <option value="0700">江苏省</option>
+                      <option value="0800">浙江省</option>
+                      <option value="0900">四川省</option>
+                      <option value="1000">海南省</option>
+                      <option value="1100">福建省</option>
+                      <option value="1200">山东省</option>
+                      <option value="1300">江西省</option>
+                      <option value="1400">广西</option>
+                      <option value="1500">安徽省</option>
+                      <option value="1600">河北省</option>
+                      <option value="1700">河南省</option>
+                      <option value="1800">湖北省</option>
+                      <option value="1900">湖南省</option>
+                      <option value="2000">陕西省</option>
+                      <option value="2100">山西省</option>
+                      <option value="2200">黑龙江省</option>
+                      <option value="2300">辽宁省</option>
+                      <option value="2400">吉林省</option>
+                      <option value="2500">云南省</option>
+                      <option value="2600">贵州省</option>
+                      <option value="2700">甘肃省</option>
+                      <option value="2800">内蒙古</option>
+                      <option value="2900">宁夏</option>
+                      <option value="3000">西藏</option>
+                      <option value="3100">新疆</option>
+                      <option value="3200">青海省</option>
+                      <option value="3300">香港</option>
+                      <option value="3400">澳门</option>
+                      <option value="3500">台湾</option>
+                      <option value="3600">国外</option>
+                      
+                                                                    
+                                          
+                    </select>
+                      <select name="Location">
+                        
+                                               							
+                                              
+                        <option value="0000" selected="selected">---请选择---</option>
+                        
+                                               							                        
+                                            
+                      </select></td>
+                    <td align="left">户口*</td>
+                    <td align="left"><select name="HuKou">
+                      
+                                             							
+                                            
+                      <option value="00" selected="selected">请选择</option>
+                      
+                                             							
+                                            
+                      <option value="01">北京</option>
+                      <option value="02">上海</option>
+                      <option value="03">天津</option>
+                      <option value="04">重庆</option>
+                      <option value="05">江苏</option>
+                      <option value="06">浙江</option>
+                      <option value="07">广东</option>
+                      <option value="08">海南</option>
+                      <option value="09">福建</option>
+                      <option value="10">山东</option>
+                      <option value="11">江西</option>
+                      <option value="12">四川</option>
+                      <option value="13">安徽</option>
+                      <option value="14">河北</option>
+                      <option value="15">河南</option>
+                      <option value="16">湖北</option>
+                      <option value="17">湖南</option>
+                      <option value="18">陕西</option>
+                      <option value="19">山西</option>
+                      <option value="20">黑龙江</option>
+                      <option value="21">辽宁</option>
+                      <option value="22">吉林</option>
+                      <option value="23">广西</option>
+                      <option value="24">云南</option>
+                      <option value="25">贵州</option>
+                      <option value="26">甘肃</option>
+                      <option value="27">内蒙</option>
+                      <option value="28">宁夏</option>
+                      <option value="29">西藏</option>
+                      <option value="30">新疆</option>
+                      <option value="31">青海</option>
+                      <option value="32">香港</option>
+                      <option value="33">澳门</option>
+                      <option value="34">台湾</option>
+                      <option value="35">国外</option>
+                      
+                                                                    
+                                          
+                    </select></td>
+                  </tr>
+                  <tr>
+                    <td width="13%" align="left" valign="top">工作年限*</td>
+                    <td colspan="3" align="left"><select name="WorkYear">
+                      
+                                             							
+                                            
+                      <option value="0" selected="selected">--请选择--</option>
+                      
+                                             							
+                                            
+                      <option value="1">在读学生</option>
+                      <option value="2">应届毕业生</option>
+                      <option value="3">一年以上</option>
+                      <option value="4">二年以上</option>
+                      <option value="5">三年以上</option>
+                      <option value="6">五年以上</option>
+                      <option value="7">八年以上</option>
+                      <option value="8">十年以上</option>
+                      
+                                                                    
+                                          
+                    </select></td>
+                  </tr>
+                  <tr bgcolor="#000000">
+                    <td height="1" colspan="4" align="left"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="4" align="left"><br />
+                      <div id="workexp"></div>
+                      <table width="100%" border="0" cellspacing="3" cellpadding="3">
+                        <tbody>
+                          <tr>
+                            <td colspan="4"><img align="absmiddle" height="16" src="<!--{$base_url}-->/images/sys/icon-arrow.gif" width="20" /> <strong>工作经验</strong></td>
+                          </tr>
+                          <tr>
+                            <td width="16%">时间*</td>
+                            <td colspan="3">从 
+                              <select name="FromYearWorkExp">
+                                
+                                                                                       
+                                                      
+                                <option value="0000"> 年</option>
+                                
+                                                       								
+                                                      
+                                <option value="2010">2010</option>
+                                <option value="2009">2009</option>
+                                <option value="2008">2008</option>
+                                <option value="2007">2007</option>
+                                <option value="2006">2006</option>
+                                <option value="2005">2005</option>
+                                <option value="2004">2004</option>
+                                <option value="2003">2003</option>
+                                <option value="2002">2002</option>
+                                <option value="2001">2001</option>
+                                <option value="2000">2000</option>
+                                <option value="1999">1999</option>
+                                <option value="1998">1998</option>
+                                <option value="1997">1997</option>
+                                <option value="1996">1996</option>
+                                <option value="1995">1995</option>
+                                <option value="1994">1994</option>
+                                <option value="1993">1993</option>
+                                <option value="1992">1992</option>
+                                <option value="1991">1991</option>
+                                <option value="1990">1990</option>
+                                <option value="1989">1989</option>
+                                <option value="1988">1988</option>
+                                <option value="1987">1987</option>
+                                <option value="1986">1986</option>
+                                <option value="1985">1985</option>
+                                <option value="1984">1984</option>
+                                <option value="1983">1983</option>
+                                <option value="1982">1982</option>
+                                <option value="1981">1981</option>
+                                <option value="1980">1980</option>
+                                <option value="1979">1979</option>
+                                <option value="1978">1978</option>
+                                <option value="1977">1977</option>
+                                <option value="1976">1976</option>
+                                <option value="1975">1975</option>
+                                <option value="1974">1974</option>
+                                <option value="1973">1973</option>
+                                <option value="1972">1972</option>
+                                <option value="1971">1971</option>
+                                <option value="1970">1970</option>
+                                <option value="1969">1969</option>
+                                <option value="1968">1968</option>
+                                <option value="1967">1967</option>
+                                <option value="1966">1966</option>
+                                <option value="1965">1965</option>
+                                <option value="1964">1964</option>
+                                <option value="1963">1963</option>
+                                <option value="1962">1962</option>
+                                <option value="1961">1961</option>
+                                <option value="1960">1960</option>
+                                <option value="1959">1959</option>
+                                <option value="1958">1958</option>
+                                <option value="1957">1957</option>
+                                <option value="1956">1956</option>
+                                <option value="1955">1955</option>
+                                <option value="1954">1954</option>
+                                <option value="1953">1953</option>
+                                <option value="1952">1952</option>
+                                <option value="1951">1951</option>
+                                <option value="1950">1950</option>
+                                <option value="1949">1949</option>
+                                <option value="1948">1948</option>
+                                <option value="1947">1947</option>
+                                <option value="1946">1946</option>
+                                <option value="1945">1945</option>
+                                <option value="1944">1944</option>
+                                <option value="1943">1943</option>
+                                <option value="1942">1942</option>
+                                <option value="1941">1941</option>
+                                <option value="1940">1940</option>
+                                
+                                                                                    
+                                                    
+                              </select>
+                              <select name="FromMonthWorkExp">
+                                
+                                                                                       
+                                                      
+                                <option value="00">月</option>
+                                
+                                                       								
+                                                      
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                
+                                                                                    
+                                                    
+                              </select>
+                              到 
+                              <select name="ToYearWorkExp">
+                                
+                                                                                       
+                                                      
+                                <option value="0000">年</option>
+                                
+                                                       								
+                                                      
+                                <option value="2015">2015</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                                <option value="2011">2011</option>
+                                <option value="2010">2010</option>
+                                <option value="2009">2009</option>
+                                <option value="2008">2008</option>
+                                <option value="2007">2007</option>
+                                <option value="2006">2006</option>
+                                <option value="2005">2005</option>
+                                <option value="2004">2004</option>
+                                <option value="2003">2003</option>
+                                <option value="2002">2002</option>
+                                <option value="2001">2001</option>
+                                <option value="2000">2000</option>
+                                <option value="1999">1999</option>
+                                <option value="1998">1998</option>
+                                <option value="1997">1997</option>
+                                <option value="1996">1996</option>
+                                <option value="1995">1995</option>
+                                <option value="1994">1994</option>
+                                <option value="1993">1993</option>
+                                <option value="1992">1992</option>
+                                <option value="1991">1991</option>
+                                <option value="1990">1990</option>
+                                <option value="1989">1989</option>
+                                <option value="1988">1988</option>
+                                <option value="1987">1987</option>
+                                <option value="1986">1986</option>
+                                <option value="1985">1985</option>
+                                <option value="1984">1984</option>
+                                <option value="1983">1983</option>
+                                <option value="1982">1982</option>
+                                <option value="1981">1981</option>
+                                <option value="1980">1980</option>
+                                <option value="1979">1979</option>
+                                <option value="1978">1978</option>
+                                <option value="1977">1977</option>
+                                <option value="1976">1976</option>
+                                <option value="1975">1975</option>
+                                <option value="1974">1974</option>
+                                <option value="1973">1973</option>
+                                <option value="1972">1972</option>
+                                <option value="1971">1971</option>
+                                <option value="1970">1970</option>
+                                <option value="1969">1969</option>
+                                <option value="1968">1968</option>
+                                <option value="1967">1967</option>
+                                <option value="1966">1966</option>
+                                <option value="1965">1965</option>
+                                <option value="1964">1964</option>
+                                <option value="1963">1963</option>
+                                <option value="1962">1962</option>
+                                <option value="1961">1961</option>
+                                <option value="1960">1960</option>
+                                <option value="1959">1959</option>
+                                <option value="1958">1958</option>
+                                <option value="1957">1957</option>
+                                <option value="1956">1956</option>
+                                <option value="1955">1955</option>
+                                <option value="1954">1954</option>
+                                <option value="1953">1953</option>
+                                <option value="1952">1952</option>
+                                <option value="1951">1951</option>
+                                <option value="1950">1950</option>
+                                <option value="1949">1949</option>
+                                <option value="1948">1948</option>
+                                <option value="1947">1947</option>
+                                <option value="1946">1946</option>
+                                <option value="1945">1945</option>
+                                <option value="1944">1944</option>
+                                <option value="1943">1943</option>
+                                <option value="1942">1942</option>
+                                <option value="1941">1941</option>
+                                <option value="1940">1940</option>
+                                
+                                                                                    
+                                                    
+                              </select>
+                              <select name="ToMonthWorkExp">
+                                
+                                                                                       
+                                                      
+                                <option value="00">月</option>
+                                
+                                                       								
+                                                      
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                
+                                                                                    
+                                                    
+                              </select>
+                              (后两项不填表示至今)</td>
+                          </tr>
+                          <tr>
+                            <td width="16%">行业*</td>
+                            <td width="34%"><select name="Industry">
+                              
+                                                                                     
+                                                    
+                              <option value="00">---请选择---</option>
+                              
+                                                     								
+                                                    
+                              <option value="01">计算机软件</option>
+                              <option value="37">计算机硬件</option>
+                              <option value="38">计算机服务(系统、数据服务，维修)</option>
+                              <option value="31">通信/电信/网络设备</option>
+                              <option value="39">通信/电信运营、增值服务</option>
+                              <option value="32">互联网/电子商务</option>
+                              <option value="40">网络游戏</option>
+                              <option value="02">电子技术/半导体/集成电路</option>
+                              <option value="35">仪器仪表/工业自动化</option>
+                              <option value="41">会计/审计</option>
+                              <option value="03">金融/投资/证券</option>
+                              <option value="42">银行</option>
+                              <option value="43">保险</option>
+                              <option value="04">贸易/进出口</option>
+                              <option value="22">批发/零售</option>
+                              <option value="05">快速消费品(食品,饮料,化妆品)</option>
+                              <option value="06">服装/纺织/皮革</option>
+                              <option value="44">家具/家电/工艺品/玩具/珠宝</option>
+                              <option value="45">办公用品及设备</option>
+                              <option value="14">机械/设备/重工</option>
+                              <option value="33">汽车及零配件</option>
+                              <option value="08">制药/生物工程</option>
+                              <option value="46">医疗/护理/保健/卫生</option>
+                              <option value="47">医疗设备/器械</option>
+                              <option value="12">广告</option>
+                              <option value="48">公关/市场推广/会展</option>
+                              <option value="49">影视/媒体/艺术</option>
+                              <option value="13">文字媒体/出版</option>
+                              <option value="15">印刷/包装/造纸</option>
+                              <option value="26">房地产开发</option>
+                              <option value="09">建筑/建材/工程</option>
+                              <option value="50">家居/室内设计/装潢</option>
+                              <option value="51">物业管理/商业中心</option>
+                              <option value="34">中介服务</option>
+                              <option value="07">专业服务(咨询，人力资源)</option>
+                              <option value="59">外包服务</option>
+                              <option value="52">检测，认证</option>
+                              <option value="18">法律</option>
+                              <option value="23">教育/培训</option>
+                              <option value="24">学术/科研</option>
+                              <option value="11">餐饮业</option>
+                              <option value="53">酒店/旅游</option>
+                              <option value="17">娱乐/休闲/体育</option>
+                              <option value="54">美容/保健</option>
+                              <option value="27">生活服务</option>
+                              <option value="21">交通/运输/物流</option>
+                              <option value="55">航天/航空</option>
+                              <option value="19">石油/化工/矿产/地质</option>
+                              <option value="16">采掘业/冶炼</option>
+                              <option value="36">电力/水利</option>
+                              <option value="56">原材料和加工</option>
+                              <option value="28">政府</option>
+                              <option value="57">非盈利机构</option>
+                              <option value="20">环保</option>
+                              <option value="29">农业/渔业/林业</option>
+                              <option value="58">多元化业务集团公司</option>
+                              <option value="30">其他行业</option>
+                              
+                                                                                  
+                                                  
+                            </select></td>
+                            <td width="14%">公司性质</td>
+                            <td width="36%"><select name="CompanyType">
+                              
+                                                                                     
+                                                    
+                              <option value="0">--请选择--</option>
+                              
+                                                     								
+                                                    
+                              <option value="01">外资(欧美)</option>
+                              <option value="02">外资(非欧美)</option>
+                              <option value="03">合资(欧美)</option>
+                              <option value="04">合资(非欧美)</option>
+                              <option value="05">国企</option>
+                              <option value="06">民营公司</option>
+                              <option value="07">外企代表处</option>
+                              <option value="09">政府机关</option>
+                              <option value="10">事业单位</option>
+                              <option value="11">非盈利机构</option>
+                              <option value="08">其它性质</option>
+                              
+                                                                                  
+                                                  
+                            </select></td>
+                          </tr>
+                          <tr>
+                            <td width="16%">职能*</td>
+                            <td colspan="3"><select name="Function" onchange="JavaScript:ChangeOption('Function','SubFunction')">
+                              
+                                                                                     
+                                                    
+                              <option value="0000">---请选择---</option>
+                              
+                                                     								
+                                                    
+                              <option value="2400">计算机硬件</option>
+                              <option value="0100">计算机软件</option>
+                              <option value="2500">互联网开发及应用</option>
+                              <option value="2600">IT-管理</option>
+                              <option value="2700">IT-品管、技术支持及其它</option>
+                              <option value="2800">通信技术</option>
+                              <option value="2900">电子/电器/半导体/仪器仪表</option>
+                              <option value="0200">销售管理</option>
+                              <option value="3000">销售人员</option>
+                              <option value="3100">销售行政及商务</option>
+                              <option value="3200">客服及技术支持</option>
+                              <option value="0400">财务/审计/税务</option>
+                              <option value="3300">证券/金融/投资</option>
+                              <option value="2200">银行</option>
+                              <option value="3400">保险</option>
+                              <option value="3500">生产/营运</option>
+                              <option value="3600">质量/安全管理</option>
+                              <option value="0500">工程/机械/能源</option>
+                              <option value="5400">汽车</option>
+                              <option value="3700">技工</option>
+                              <option value="3800">服装/纺织/皮革</option>
+                              <option value="3900">采购</option>
+                              <option value="4000">贸易</option>
+                              <option value="0800">物流/仓储</option>
+                              <option value="4100">生物/制药/医疗器械</option>
+                              <option value="5500">化工</option>
+                              <option value="1300">医院/医疗/护理</option>
+                              <option value="4200">广告</option>
+                              <option value="4300">公关/媒介</option>
+                              <option value="0300">市场/营销</option>
+                              <option value="4400">影视/媒体</option>
+                              <option value="4500">写作/出版/印刷</option>
+                              <option value="0900">艺术/设计</option>
+                              <option value="2100">建筑工程</option>
+                              <option value="4600">房地产</option>
+                              <option value="4700">物业管理</option>
+                              <option value="0600">人力资源</option>
+                              <option value="0700">高级管理</option>
+                              <option value="2300">行政/后勤</option>
+                              <option value="1400">咨询/顾问</option>
+                              <option value="1100">律师/法务/合规</option>
+                              <option value="1200">教师</option>
+                              <option value="5700">培训</option>
+                              <option value="1000">科研人员</option>
+                              <option value="4800">餐饮/娱乐</option>
+                              <option value="4900">酒店/旅游</option>
+                              <option value="5000">美容/健身/体育</option>
+                              <option value="5100">百货/连锁/零售服务</option>
+                              <option value="1800">交通运输服务</option>
+                              <option value="5200">保安/家政/其他服务</option>
+                              <option value="1500">公务员</option>
+                              <option value="2000">翻译</option>
+                              <option value="1600">在校学生</option>
+                              <option value="1700">储备干部/培训生/实习生</option>
+                              <option value="5300">兼职</option>
+                              <option value="1900">其他</option>
+                              <option value="5600">环保</option>
+                              <option value="5800">农/林/牧/渔</option>
+                              
+                                                                                  
+                                                  
+                            </select>
+                              <select name="SubFunction">
+                                
+                                                                                       
+                                                      
+                                <option value="0000">---请选择---</option>
+                                
+                                                       								                              
+                                                    
+                              </select></td>
+                          </tr>
+                          <tr>
+                            <td width="16%">公司*</td>
+                            <td colspan="3"><input type="text" name="Company" maxlength="100" size="50" value="" /></td>
+                          </tr>
+                          <tr>
+                            <td width="16%">部门</td>
+                            <td colspan="3"><input type="text" name="Division" maxlength="100" size="50" value="" /></td>
+                          </tr>
+                          <tr>
+                            <td width="16%" valign="top"><input name="Input" onclick="JavaScript:AddRecordWorkExp();" type="button" value="添加>>" />
+                              <br />
+                              <input name="Input" onclick="JavaScript:DelRecordWorkExp();" type="button" value="<<删除" /></td>
+                            <td colspan="3"><select name="WorkExpList[]" multiple="multiple" size="4" onchange="javascipt: ShowRecordWorkExp(this.value);">
+                              
+                                                     																	
+                                                  
+                            </select></td>
+                          </tr>
+                          <tr>
+                            <td colspan="4" align="right" height="19"><hr size="1" /></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div id="eduexp"></div>
+                      <table border="0" cellpadding="3" cellspacing="3" width="100%" align="center">
+                        <tbody>
+                          <tr>
+                            <td height="30" colspan="4"><img align="absmiddle" height="16" src="<!--{$base_url}-->/images/sys/icon-arrow.gif" width="20" /> <strong>教育背景</strong></td>
+                          </tr>
+                          <tr>
+                            <td height="30" colspan="4"><table width="100%" border="0" cellspacing="3" cellpadding="3">
+                              <tbody>
+                                <tr>
+                                  <td width="16%">时间*</td>
+                                  <td width="84%">从 
+                                    <select name="FromYearEduExp">
+                                      
+                                                                                                   
+                                                            
+                                      <option value="0000">年</option>
+                                      
+                                                             									  
+                                                            
+                                      <option value="2010">2010</option>
+                                      <option value="2009">2009</option>
+                                      <option value="2008">2008</option>
+                                      <option value="2007">2007</option>
+                                      <option value="2006">2006</option>
+                                      <option value="2005">2005</option>
+                                      <option value="2004">2004</option>
+                                      <option value="2003">2003</option>
+                                      <option value="2002">2002</option>
+                                      <option value="2001">2001</option>
+                                      <option value="2000">2000</option>
+                                      <option value="1999">1999</option>
+                                      <option value="1998">1998</option>
+                                      <option value="1997">1997</option>
+                                      <option value="1996">1996</option>
+                                      <option value="1995">1995</option>
+                                      <option value="1994">1994</option>
+                                      <option value="1993">1993</option>
+                                      <option value="1992">1992</option>
+                                      <option value="1991">1991</option>
+                                      <option value="1990">1990</option>
+                                      <option value="1989">1989</option>
+                                      <option value="1988">1988</option>
+                                      <option value="1987">1987</option>
+                                      <option value="1986">1986</option>
+                                      <option value="1985">1985</option>
+                                      <option value="1984">1984</option>
+                                      <option value="1983">1983</option>
+                                      <option value="1982">1982</option>
+                                      <option value="1981">1981</option>
+                                      <option value="1980">1980</option>
+                                      <option value="1979">1979</option>
+                                      <option value="1978">1978</option>
+                                      <option value="1977">1977</option>
+                                      <option value="1976">1976</option>
+                                      <option value="1975">1975</option>
+                                      <option value="1974">1974</option>
+                                      <option value="1973">1973</option>
+                                      <option value="1972">1972</option>
+                                      <option value="1971">1971</option>
+                                      <option value="1970">1970</option>
+                                      <option value="1969">1969</option>
+                                      <option value="1968">1968</option>
+                                      <option value="1967">1967</option>
+                                      <option value="1966">1966</option>
+                                      <option value="1965">1965</option>
+                                      <option value="1964">1964</option>
+                                      <option value="1963">1963</option>
+                                      <option value="1962">1962</option>
+                                      <option value="1961">1961</option>
+                                      <option value="1960">1960</option>
+                                      <option value="1959">1959</option>
+                                      <option value="1958">1958</option>
+                                      <option value="1957">1957</option>
+                                      <option value="1956">1956</option>
+                                      <option value="1955">1955</option>
+                                      <option value="1954">1954</option>
+                                      <option value="1953">1953</option>
+                                      <option value="1952">1952</option>
+                                      <option value="1951">1951</option>
+                                      <option value="1950">1950</option>
+                                      <option value="1949">1949</option>
+                                      <option value="1948">1948</option>
+                                      <option value="1947">1947</option>
+                                      <option value="1946">1946</option>
+                                      <option value="1945">1945</option>
+                                      <option value="1944">1944</option>
+                                      <option value="1943">1943</option>
+                                      <option value="1942">1942</option>
+                                      <option value="1941">1941</option>
+                                      <option value="1940">1940</option>
+                                      
+                                                                                                
+                                                          
+                                    </select>
+                                    <select name="FromMonthEduExp">
+                                      
+                                                                                                   
+                                                            
+                                      <option value="00">月</option>
+                                      
+                                                             									  
+                                                            
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                      <option value="6">6</option>
+                                      <option value="7">7</option>
+                                      <option value="8">8</option>
+                                      <option value="9">9</option>
+                                      <option value="10">10</option>
+                                      <option value="11">11</option>
+                                      <option value="12">12</option>
+                                      
+                                                                                                
+                                                          
+                                    </select>
+                                    到 
+                                    <select name="ToYearEduExp">
+                                      
+                                                                                                   
+                                                            
+                                      <option value="0000">年</option>
+                                      
+                                                             									  
+                                                            
+                                      <option value="2015">2015</option>
+                                      <option value="2014">2014</option>
+                                      <option value="2013">2013</option>
+                                      <option value="2012">2012</option>
+                                      <option value="2011">2011</option>
+                                      <option value="2010">2010</option>
+                                      <option value="2009">2009</option>
+                                      <option value="2008">2008</option>
+                                      <option value="2007">2007</option>
+                                      <option value="2006">2006</option>
+                                      <option value="2005">2005</option>
+                                      <option value="2004">2004</option>
+                                      <option value="2003">2003</option>
+                                      <option value="2002">2002</option>
+                                      <option value="2001">2001</option>
+                                      <option value="2000">2000</option>
+                                      <option value="1999">1999</option>
+                                      <option value="1998">1998</option>
+                                      <option value="1997">1997</option>
+                                      <option value="1996">1996</option>
+                                      <option value="1995">1995</option>
+                                      <option value="1994">1994</option>
+                                      <option value="1993">1993</option>
+                                      <option value="1992">1992</option>
+                                      <option value="1991">1991</option>
+                                      <option value="1990">1990</option>
+                                      <option value="1989">1989</option>
+                                      <option value="1988">1988</option>
+                                      <option value="1987">1987</option>
+                                      <option value="1986">1986</option>
+                                      <option value="1985">1985</option>
+                                      <option value="1984">1984</option>
+                                      <option value="1983">1983</option>
+                                      <option value="1982">1982</option>
+                                      <option value="1981">1981</option>
+                                      <option value="1980">1980</option>
+                                      <option value="1979">1979</option>
+                                      <option value="1978">1978</option>
+                                      <option value="1977">1977</option>
+                                      <option value="1976">1976</option>
+                                      <option value="1975">1975</option>
+                                      <option value="1974">1974</option>
+                                      <option value="1973">1973</option>
+                                      <option value="1972">1972</option>
+                                      <option value="1971">1971</option>
+                                      <option value="1970">1970</option>
+                                      <option value="1969">1969</option>
+                                      <option value="1968">1968</option>
+                                      <option value="1967">1967</option>
+                                      <option value="1966">1966</option>
+                                      <option value="1965">1965</option>
+                                      <option value="1964">1964</option>
+                                      <option value="1963">1963</option>
+                                      <option value="1962">1962</option>
+                                      <option value="1961">1961</option>
+                                      <option value="1960">1960</option>
+                                      <option value="1959">1959</option>
+                                      <option value="1958">1958</option>
+                                      <option value="1957">1957</option>
+                                      <option value="1956">1956</option>
+                                      <option value="1955">1955</option>
+                                      <option value="1954">1954</option>
+                                      <option value="1953">1953</option>
+                                      <option value="1952">1952</option>
+                                      <option value="1951">1951</option>
+                                      <option value="1950">1950</option>
+                                      <option value="1949">1949</option>
+                                      <option value="1948">1948</option>
+                                      <option value="1947">1947</option>
+                                      <option value="1946">1946</option>
+                                      <option value="1945">1945</option>
+                                      <option value="1944">1944</option>
+                                      <option value="1943">1943</option>
+                                      <option value="1942">1942</option>
+                                      <option value="1941">1941</option>
+                                      <option value="1940">1940</option>
+                                      
+                                                                                                
+                                                          
+                                    </select>
+                                    <select name="ToMonthEduExp">
+                                      
+                                                                                                   
+                                                            
+                                      <option value="00">月</option>
+                                      
+                                                             									  
+                                                            
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                      <option value="6">6</option>
+                                      <option value="7">7</option>
+                                      <option value="8">8</option>
+                                      <option value="9">9</option>
+                                      <option value="10">10</option>
+                                      <option value="11">11</option>
+                                      <option value="12">12</option>
+                                    </select>
+                                    (后两项不填表示至今)</td>
+                                </tr>
+                                <tr>
+                                  <td width="16%">专业</td>
+                                  <td width="84%"><select name="Major" onchange="JavaScript:ChangeOption('Major','SubMajor','MajorCode')">
+                                    
+                                                                                                 
+                                                          
+                                    <option value="0000">---请选择---</option>
+                                    
+                                                           									  
+                                                          
+                                    <option value="0200">管理科学与工程类</option>
+                                    <option value="0300">工商管理类</option>
+                                    <option value="0400">公共管理类</option>
+                                    <option value="3500">图书档案学类</option>
+                                    <option value="0100">电子信息类</option>
+                                    <option value="0500">机械类</option>
+                                    <option value="2100">仪器仪表类</option>
+                                    <option value="2200">能源动力类</option>
+                                    <option value="1900">材料类</option>
+                                    <option value="2800">轻工纺织食品类</option>
+                                    <option value="0600">土建类</option>
+                                    <option value="1800">力学类</option>
+                                    <option value="2000">环境科学与安全类</option>
+                                    <option value="2500">制药工程类</option>
+                                    <option value="2600">交通运输类</option>
+                                    <option value="2900">航空航天类</option>
+                                    <option value="2700">船舶与海洋工程类</option>
+                                    <option value="2300">水利类</option>
+                                    <option value="2400">测绘类</option>
+                                    <option value="3200">公安技术类</option>
+                                    <option value="3000">武器类</option>
+                                    <option value="1400">数学类</option>
+                                    <option value="1500">物理学类</option>
+                                    <option value="1600">化学类</option>
+                                    <option value="3100">生物类</option>
+                                    <option value="1700">天文地质地理类</option>
+                                    <option value="1000">经济学类</option>
+                                    <option value="0700">语言文学类</option>
+                                    <option value="1200">艺术类</option>
+                                    <option value="0900">法学类</option>
+                                    <option value="1100">哲学类</option>
+                                    <option value="0800">教育学类</option>
+                                    <option value="3400">医学类</option>
+                                    <option value="3300">农业类</option>
+                                    <option value="1300">历史学类</option>
+                                    
+                                                                                              
+                                                        
+                                  </select>
+                                    <select name="SubMajor">
+                                      
+                                                             										
+                                                            
+                                      <option value="0000">---请选择---</option>
+                                      
+                                                             																				                                    
+                                                          
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                  <td width="16%">学历*</td>
+                                  <td width="84%"><select name="Degree">
+                                    
+                                                           										
+                                                          
+                                    <option value="1">初中</option>
+                                    <option value="2">高中</option>
+                                    <option value="3">中技</option>
+                                    <option value="4">中专</option>
+                                    <option value="5">大专</option>
+                                    <option value="6">本科</option>
+                                    <option value="7">硕士</option>
+                                    <option value="8">博士</option>
+                                    <option value="9">其他</option>
+                                    
+                                                                                              
+                                                        
+                                  </select></td>
+                                </tr>
+                                <tr>
+                                  <td width="16%">学校*</td>
+                                  <td width="84%"><input type="text" name="SchoolName" size="50" maxlength="100" /></td>
+                                </tr>
+                                <tr>
+                                  <td width="13%" valign="top"><input name="Input" onclick="JavaScript:AddRecordEduExp();" type="button" value="添加>>" />
+                                    <br />
+                                    <input name="Input" onclick="JavaScript:DelRecordEduExp();" type="button" value="<<删除" /></td>
+                                  <td colspan="3"><select name="EduExpList[]" multiple="multiple" size="4" onchange="javascipt: ShowRecordEduExp(this.value);">
+                                    
+                                                           									  									  
+                                                        
+                                  </select></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                              <div id="forlang"></div>
+                              <table width="100%" border="0" cellspacing="3" cellpadding="3">
+                                <tbody>
+                                  <tr>
+                                    <td colspan="4"><hr size="1" /></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="4"><img align="absmiddle" height="16" src="<!--{$base_url}-->/images/sys/icon-arrow.gif" width="20" /> <strong>语言（可多选）</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="77" valign="top">语种*</td>
+                                    <td width="106" valign="top"><select name="Language">
+                                      
+                                                                                                 	
+                                                            
+                                      <option value="00">---请选择---</option>
+                                      
+                                                                                                   
+                                                            
+                                      <option value="01">英语</option>
+                                      <option value="02">日语</option>
+                                      <option value="05">俄语</option>
+                                      <option value="08">阿拉伯语</option>
+                                      <option value="03">法语</option>
+                                      <option value="04">德语</option>
+                                      <option value="06">西班牙语</option>
+                                      <option value="11">葡萄牙语</option>
+                                      <option value="12">意大利语</option>
+                                      <option value="07">韩语/朝鲜语</option>
+                                      <option value="10">普通话</option>
+                                      <option value="13">粤语</option>
+                                      <option value="14">闽南语</option>
+                                      <option value="15">上海话</option>
+                                      <option value="09">其它</option>
+                                      
+                                                                                                
+                                                          
+                                    </select></td>
+                                    <td rowspan="2" valign="top" width="25%" align="right"><input name="Input22" onclick="JavaScript:AddRecordForLang();" type="button" value="添加>>" />
+                                      <br />
+                                      <input name="Input2" onclick="JavaScript:DelRecordForLang();" type="button" value="<<删除" /></td>
+                                    <td rowspan="2" valign="top" align="left" width="271"><select multiple="multiple" name="ForLangList[]" size="4" onchange="javascipt: ShowRecordForLang(this.value);">
+                                      
+                                                             										                                    
+                                                            
+                                      <option value="0">日语    不限</option>
+                                      <option value="1">西班牙语    精通</option>
+                                    </select></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="77" valign="top" nowrap="nowrap">掌握程度*</td>
+                                    <td width="106" valign="top"><select name="Master">
+                                      
+                                                             										
+                                                            
+                                      <option value="0" selected="selected">不限</option>
+                                      <option value="1">一般</option>
+                                      <option value="2">良好</option>
+                                      <option value="3">熟练</option>
+                                      <option value="4">精通</option>
+                                      
+                                                                                                
+                                                          
+                                    </select></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="4"><hr size="1" /></td>
+                                  </tr>
+                                  <tr align="right">
+                                    <td colspan="4"><div align="center">
+                                      <input name="submit1" type="submit" value="  提  交  " />
+                                    </div></td>
+                                  </tr>
+                                </tbody>
+                              </table></td>
+                          </tr>
+                        </tbody>
+                      </table></td>
+                  </tr>
+                </tbody>
+              </table></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+      <table width="560" border="0" cellspacing="0" cellpadding="0"> 
+        <tr> 
+          <td><img src="images/44.jpg" width="850" height="18" /></td> 
+        </tr> 
+    </table></td> 
+  </tr> 
+</table>
+<!--{include file="`$ci_config.template_dir`/front/foot.htm"}-->

@@ -1,3 +1,14 @@
+/**
+ * [load_files description]
+ * @type {Array}
+ * call example:$('#xxx').iwin({
+	w:"400",
+	h:"300",
+	align:'center',
+	valign:'middle',
+	modal:true
+});
+ */
 var load_files  = [];
 load_files.push('/jquery-ui-1.10.2.custom.min.js');
 load_files.push('/jquery.mCustomScrollbar.concat.min.js');
@@ -62,15 +73,17 @@ $.fn.mmmmm_bottom = function() {
 
 $.fn.extend({
 
-	iwin: function(obj) {
+	iwin: function(cfg) {
 		//create window object
+		
 		var gid = $(this).attr("id");
+
 		var w_id = gid+'_window';
 		if($('#'+w_id).length>0){
 			$('#'+w_id).find('.mmmmm_close').trigger("click");
 		}	
 		var reval = "<div id='mmmmm_cover' ></div>";
-		reval += "<div id=\""+w_id+"\"   >";
+		reval += "<div id=\""+w_id+"\"  >";
 		reval += "			<div class='mmmmm_title' ></div>";
 		reval += "			<a href=\"javascript:;\"  class='mmmmm_close' >×</a>";
 		reval += "			<div  class='mmmmm_content'>			";
@@ -89,26 +102,26 @@ $.fn.extend({
 
 		w_body.removeAttr("style");
 		w_body.css({			
-			"width": obj.w,
-			"height": obj.h,
+			"width": cfg.w,
+			"height": cfg.h,
 			"position": "absolute",
 			"border":"1px solid #A2C8F4",
 			"padding": "1px",
 			"display":"none"
 		});
-		var exit_flag = 0;
-		eval("w_body.mmmmm_" + obj.align + "()");
-		eval("w_body.mmmmm_" + obj.valign + "()");
+
+		eval("w_body.mmmmm_" + cfg.align + "()");
+		eval("w_body.mmmmm_" + cfg.valign + "()");
 
 
 
-		w_title.html(obj.title);
+		w_title.html(cfg.title);
 
 		$(this).appendTo(w_content);
 		
 		w_content.css({
-			"width": obj.w - 10,
-			"height": obj.h - w_title.height() - 10
+			"width": cfg.w - 10,
+			"height": cfg.h - w_title.height() - 10
 		});
 
 		
@@ -141,7 +154,7 @@ $.fn.extend({
 		});
 
 		//show cover
-		if(typeof(obj.modal)!="undefined"){
+		if(typeof(cfg.modal)!="undefined"){
 			w_cover.fadeTo("slow", 0.46);
 		}
 
@@ -152,8 +165,8 @@ $.fn.extend({
 		var _ostop = os.top;
 		var _osleft = os.left;
 
-		var m_top =  typeof(obj.move_top)!="undefined"?obj.move_top:0;
-		var m_left = typeof(obj.move_left)!="undefined"?obj.move_left:0;
+		var m_top =  typeof(cfg.move_top)!="undefined"?cfg.move_top:0;
+		var m_left = typeof(cfg.move_left)!="undefined"?cfg.move_left:0;
 
 		w_body.css({
 			"top": _ostop + m_top+'px',
@@ -184,16 +197,18 @@ $.fn.extend({
 			w_cover.remove();
 
 		})
-		w_body.hover(function(){exit_flag=1;},function(){exit_flag=0;})
+		
 		//handle for keyboard event
-		$(document.body).bind("keydown", function(e) {
+		$('#'+w_id).attr('tabindex', 1).keydown(function(e){
+			
 			var code = e.keyCode ? e.keyCode : e.which;
 			if (code == 27 || code == 96){
-				if(exit_flag){
+				
 					w_close.trigger("click");
-				}
 				
 			}
+
 		});
+	
 	}
 });

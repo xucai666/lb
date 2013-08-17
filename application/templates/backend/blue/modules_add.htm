@@ -1,13 +1,14 @@
 <!--{include file="`$dir_backend`/top.htm"}-->
 <fieldset>
-<legend><div class="nav_title">模型维护</div></legend>
+<legend><div class="nav_title"><!--{ci_helper name="language" function="lang" param1="modules_manage"}--></div></legend>
+
 
 <form  name="form1" id="form1" method="post" action="<!--{func_site_url segments='backend/modules/action_save'}-->">
 <table>
 	
 
 	<tr>
-		<td>模块名称</td>
+		<td><!--{ci_helper name="language" function="lang" param1="modules_input_name"}-->:</td>
 		<td>
 			<input size="80" type="text" name="main[m_name]" id="main[m_name]" value="<!--{$main.m_name}-->">
 			<!--{php}-->
@@ -17,17 +18,17 @@
 		<td></td>
 	</tr>
 	<tr>
-		<td>下级模块</td>
+		<td><!--{"modules_input_sub_module"|lang}-->:</td>
 		<td>
 			<select name="main[m_sub]">
-				<option value="">请选择</option>
+				<option value=""><!--{'modules_input_select'|lang}--></option>
 				<!--{html_options options=$subs selected=$main.m_sub}-->
 			</select>
 		</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>数据表：</td>
+		<td><!--{'modules_input_tb'|lang}-->：</td>
 		<td>
 			<textarea  name="main[m_tb]" ><!--{$main.m_tb}--></textarea>
 		<!--{php}-->
@@ -37,7 +38,7 @@
 		<td></td>
 	</tr>
 	<tr>
-		<td>模块描述：</td>
+		<td><!--{'modules_input_desc'|lang}-->:</td>
 		<td>
 			<input size="80" type="text" name="main[m_desc]" value="<!--{$main.m_desc}-->">
 			<!--{php}-->
@@ -48,22 +49,22 @@
 	</tr>
 	
 	<tr>
-		<td>关联字段：</td>
+		<td><!--{'modules_input_related_fields'|lang}-->:</td>
 		<td>
 			<table class="mytable">
 				<thead>
 					<tr>
-						<th>字段类型</th>
-						<th>字段名称</th>
-						<th>别名</th>
-						<th>字段长度</th>
-						<th>输入值</th>
-						<th>输出值</th>
-						<th>主键</th>
-						<th>可查询</th>
-						<th>验证</th>
-						<th>字段说明</th>					
-						<th>操作</th>					
+						<th><!--{'modules_input_field_type'|lang}--></th>
+						<th><!--{'modules_input_field_name'|lang}--></th>
+						<th><!--{'modules_input_field_alias'|lang}--></th>
+						<th><!--{'modules_input_field_length'|lang}--></th>
+						<th><!--{'modules_input_field_input_value'|lang}--></th>
+						<th><!--{'modules_input_field_output_value'|lang}--></th>
+						<th><!--{'modules_input_field_primary'|lang}--></th>
+						<th><!--{'modules_input_field_query_able'|lang}--></th>
+						<th><!--{'modules_input_field_valid'|lang}--></th>
+						<th><!--{'modules_input_field_desc'|lang}--></th>					
+						<th><!--{'modules_input_field_opt'|lang}--></th>					
 					</tr>
 			    </thead>
 				<!--{foreach from=$detail item=v key=k}-->

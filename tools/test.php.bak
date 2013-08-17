@@ -1,0 +1,16 @@
+
+  <script   language=javascript><!--   
+  /*@cc_on   @*/   
+  /*@if   (@_win32   &&   @_jscript_version>=5)   
+  function   window.confirm(str)   
+  {   
+          str=str.replace(/\'/g,   "'&chr(39)&'").replace(/\r\n|\n|\r/g,   "'&VBCrLf&'");   
+          execScript("n   =   msgbox('"+   str   +"',   257,   '自定的的   confirm')",   "vbscript");   
+          return(n   ==   1);   
+  }   
+  @end   @*/   
+  alert(confirm('1.\'第一行\';\r\n2.第二行;\r\n'));   
+  //   --></script>
+
+</script>
+<input type=text name=a id=a onclick="confirm('看看焦点在哪里?')">

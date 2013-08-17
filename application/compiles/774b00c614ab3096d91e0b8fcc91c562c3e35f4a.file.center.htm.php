@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-16 14:20:27
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-17 09:42:17
          compiled from "application\templates\backend\blue\center.htm" */ ?>
-<?php /*%%SmartyHeaderCode:1452520e352b997975-93993543%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:14458520f457970a574-13584333%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '774b00c614ab3096d91e0b8fcc91c562c3e35f4a' => 
     array (
       0 => 'application\\templates\\backend\\blue\\center.htm',
-      1 => 1376043272,
+      1 => 1376732057,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1452520e352b997975-93993543',
+  'nocache_hash' => '14458520f457970a574-13584333',
   'function' => 
   array (
   ),
@@ -29,14 +29,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ci_config' => 0,
     'lang_all_options' => 0,
     'lang_type' => 0,
-    'weather' => 0,
     'user_info' => 0,
+    'weather' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_520e352d750ab2_74519166',
+  'unifunc' => 'content_520f4579a3cb35_76779635',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_520e352d750ab2_74519166')) {function content_520e352d750ab2_74519166($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_options')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\function.html_options.php';
+<?php if ($_valid && !is_callable('content_520f4579a3cb35_76779635')) {function content_520f4579a3cb35_76779635($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_options')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\function.html_options.php';
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -61,8 +61,8 @@ $(window).load(function(){
 	.main_left_top{ background:url(<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /left_menu_bg.gif); padding-top:2px !important; padding-top:5px;}
 	.main_left_title{text-align:left; padding-left:15px; font-size:14px; font-weight:bold; color:#fff;}
-	.left_iframe{HEIGHT: 92%; VISIBILITY: inherit;WIDTH: 180px; background:transparent;}
-	.main_iframe{HEIGHT: 92%; VISIBILITY: inherit; WIDTH:100%; Z-INDEX: 1}
+	.left_iframe{height: 92%; visibility: inherit;width: 180px; background:transparent;}
+	.main_iframe{height: 92%; visibility: inherit; width:100%; Z-INDEX: 1}
 	table { font-size:12px; font-family : tahoma, 宋体, fantasy; }
 	td { font-size:12px; font-family : tahoma, 宋体, fantasy;}
 </style>
@@ -85,7 +85,7 @@ $(window).load(function(){
 	     }
 	}
 </SCRIPT>
-
+<body onload=show()>
 <!--导航部分-->
 <div class="top_table">
 <div class="top_table_leftbg">
@@ -94,7 +94,6 @@ $(window).load(function(){
 	<div class="menu">
 	
 		<ul>
-
 
  <?php  $_smarty_tpl->tpl_vars['item'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['item']->_loop = false;
  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
@@ -175,8 +174,8 @@ $_smarty_tpl->tpl_vars['item2']->_loop = true;
 /menu01_right.gif" style="vertical-align:bottom;"></div></li>
  <?php } ?>
 			<?php if ($_smarty_tpl->tpl_vars['ci_config']->value['lang_multiple']){?>
-			<li style="float:right;">   
-			  <DIV style="DISPLAY: block; HEIGHT: 54px;text-align:right;color:#ffffff!important;padding-right:20px;">选择语种:
+			<li style="float:right;background:none;">   
+			  <DIV style="DISPLAY: block; height: 54px;text-align:right;color:#ffffff!important;padding-right:20px;">选择语种:
 			    <select style="color:#ff0000!important" onChange="parent.location.href='<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
 /backend/common/lang_set/?lang='+this.value+'&url=<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
 /backend/login/center/';" >
@@ -205,8 +204,8 @@ $_smarty_tpl->tpl_vars['item2']->_loop = true;
 	    <td valign="top" align="right"></td>
 	  </tr>
 	</table>
-	<IFRAME frameBorder=0 id=frmleft name=frmleft src="<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
-/backend/login/left" class="left_iframe" allowTransparency="true" ></IFRAME>
+	<iframe frameBorder=0 id=frmleft name=frmleft src="<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
+/backend/login/left" class="left_iframe" allowTransparency="true" ></iframe>
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
 	  <tr height="32">
 	    <td valign="top"></td>
@@ -215,11 +214,11 @@ $_smarty_tpl->tpl_vars['item2']->_loop = true;
 	  </tr>
 	</table>
   </td>
-  <TD bgColor=#337ABB style="WIDTH: 10px">
+  <TD bgColor=#337ABB style="width: 10px">
 	   <TABLE border=0 cellPadding=0 cellSpacing=0 height="100%">
 	    <TBODY>
 	    <TR>
-	     <TD onclick=switchSysBar() style="HEIGHT: 100%">
+	     <TD onclick=switchSysBar() style="height: 100%">
 	     <SPAN class=navPoint id=switchPoint title="关闭/打开左栏"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /right.gif"></SPAN>
 	     </TD>
@@ -237,22 +236,8 @@ $_smarty_tpl->tpl_vars['item2']->_loop = true;
 /bg2.gif"width="28" ><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /arrow.gif" alt="" align="absmiddle" /></td>
 	    <td background="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
-/bg2.gif"><span style="float:left"></span><span style="float:left;width:500px;" id="dvbbsannounce">
-<script type="text/javascript">
-	function show(){
-	var aa=new Date();
-	bb=aa.getFullYear()+"年"+(aa.getMonth()+1)+"月"+aa.getDate()+"日\r";
-	bb+="星期"+'日一二三四五六'.charAt(aa.getDay())+"\r"+aa.getHours()+"时";
-	bb+=aa.getMinutes()+"分"+aa.getSeconds()+"秒";
-	document.all.cc.innerHTML=bb+'&nbsp;&nbsp;<?php echo $_smarty_tpl->tpl_vars['weather']->value['future']['name'];?>
-&nbsp;<?php echo $_smarty_tpl->tpl_vars['weather']->value['future']['wea_0'];?>
-&nbsp;<?php echo $_smarty_tpl->tpl_vars['weather']->value['real']['temperature'];?>
-&#8451;';
-	setTimeout("show()",1000)
-	}
-</script>
-<body onload=show()>
-<div id=cc></div></span></td>
+/bg2.gif"><span style="float:left"></span><span style="float:left;width:500px;" id="dvbbsannounce"><span id=cc></span></span>
+	    </td>
 		<td background="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /bg2.gif" style="text-align:right; color: #135294; "><?php echo $_smarty_tpl->tpl_vars['user_info']->value['admin_user'];?>
 (<?php echo $_smarty_tpl->tpl_vars['user_info']->value['role_name'];?>
@@ -266,7 +251,7 @@ $_smarty_tpl->tpl_vars['item2']->_loop = true;
 	    <td align="right" width="16" bgcolor="#337ABB"></td>
 	  </tr>
 	</table>
-	<IFRAME frameBorder=0 id=frmright name=frmright scrolling=yes src="" class="main_iframe"></IFRAME>
+	<iframe frameBorder=0 id=frmright name=frmright scrolling=yes src="" class="main_iframe"></iframe>
 	<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background:#C4D8ED;">
 	<tr>
 	<td><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
@@ -280,6 +265,18 @@ $_smarty_tpl->tpl_vars['item2']->_loop = true;
 </TR>
 </TBODY>
 </TABLE>
-
+<script type="text/javascript">
+	function show(){
+	var aa=new Date();
+	bb=aa.getFullYear()+"年"+(aa.getMonth()+1)+"月"+aa.getDate()+"日\r";
+	bb+="星期"+'日一二三四五六'.charAt(aa.getDay())+"\r"+aa.getHours()+"时";
+	bb+=aa.getMinutes()+"分"+aa.getSeconds()+"秒";
+	document.all.cc.innerHTML=bb+'&nbsp;&nbsp;<?php echo $_smarty_tpl->tpl_vars['weather']->value['future']['name'];?>
+&nbsp;<?php echo $_smarty_tpl->tpl_vars['weather']->value['future']['wea_0'];?>
+&nbsp;<?php echo $_smarty_tpl->tpl_vars['weather']->value['real']['temperature'];?>
+&#8451;';
+	setTimeout("show()",1000)
+	}
+</script>
 </body>
 </html><?php }} ?>

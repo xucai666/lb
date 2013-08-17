@@ -1,11 +1,11 @@
 <!--{include file="`$dir_backend`/top.htm"}-->
 <fieldset>
-<legend><div class="nav_title">字段维护</div></legend>
+<legend><div class="nav_title"><!--{"fields_fields_manage"|helper:'language':'lang'}--></div></legend>
 
 <form  name="form1" id="form1" method="post" action="<!--{func_site_url segments='backend/fields/action_save'}-->">
 <table>
 	<tr>
-		<td>字段类型：</td>
+		<td><!--{"fields_field_type"|helper:'language':'lang'}-->：</td>
 		<td>
 			<select name="main[f_type]">
 				<!--{html_options options=$fields_types selected=$main.f_type}-->
@@ -18,7 +18,7 @@
 	</tr>
 
 	<tr>
-		<td>字段名称：</td>
+		<td><!--{"fields_field_name"|helper:'language':'lang'}-->：</td>
 		<td>
 			<input size="80" type="text" name="main[f_name]" id="main[f_name]" value="<!--{$main.f_name}-->">
 			<!--{php}-->
@@ -28,7 +28,7 @@
 		<td></td>
 	</tr>
 	<tr>
-		<td>html调用代码：</td>
+		<td><!--{"field_html"|helper:'language':'lang'}-->：</td>
 		<td>
 			<textarea  name="main[f_html]" style="width:800px;height:400px"><!--{$main.f_html|escape:"html"}--></textarea>
 		<!--{php}-->

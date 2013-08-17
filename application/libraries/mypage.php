@@ -511,9 +511,11 @@ class Mypage{
 		exit();
 	}
 	
+
 	/**
-	 * 加载语言包
-	 * 
+	 * load default language
+	 * @param  string $type flag for front or backend
+	 * @void return      
 	 */
 	 function load_language($type='backend'){
 	 	$CI = & get_instance();				

@@ -91,35 +91,60 @@ textarea{
 
 .link_view{	
 
-	background-image: url(../images/view.png);
-	background-repeat: no-repeat;
-	background-position: 0px 0px;
-	padding-left:20px;
-	padding-bottom:10px;
-	
+	background: url(../images/icons/magnifier.png) no-repeat;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	float: left;
+	border: none !important;
+	padding: 0px !important;
+	padding-bottom: 0px !important;
+	margin-left: 8px;
+	display: block;
+		
 }
 
 .link_mod{	
 
-	background-image: url(../images/mod1.gif);
-	background-repeat: no-repeat;
-	background-position: 0px 0px;
-	padding-left:20px;
-	padding-bottom:10px;
+	background: url(../images/icons/edit.png) no-repeat;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	float: left;
+	border: none !important;
+	padding: 0px !important;
+	padding-bottom: 0px !important;
+	margin-left: 8px;
+	display: block;
 	
 }
 
 
-
 .link_del{	
-	background-image: url(../images/del1.gif);
-	background-repeat: no-repeat;
-	background-position: 0px 0px;
-	padding-left:20px;
-	padding-bottom:10px;
+	background: url(../images/icons/close.png) no-repeat;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	float: left;
+	border: none !important;
+	padding: 0px !important;
+	padding-bottom: 0px !important;
+	margin-left: 8px;
+	display: block;
 }
 
-
+.link_copy{	
+	background: url(../images/copy.png) no-repeat;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	float: left;
+	border: none !important;
+	padding: 0px !important;
+	padding-bottom: 0px !important;
+	margin-left: 8px;
+	display: block;
+}
 
 .link_add{	
 	background-image: url(../images/add1.png);
@@ -129,14 +154,7 @@ textarea{
 	padding-bottom:10px;
 	
 }
-.link_copy{	
-	background-image: url(../images/copy.png);
-	background-repeat: no-repeat;
-	background-position: 0px 0px;
-	padding-left:20px;
-	padding-bottom:10px;
-	
-}
+
 body{
 
 	font-size:13px;
@@ -478,13 +496,7 @@ width:603px;
 color:#ffffff;
 }
 
-.tr_theme{
-	background-image:url(../images/dlgtitle.gif);
-	background-repeat:repeat-x;
 
-
-
-}
 
 
 .link_indent_1{

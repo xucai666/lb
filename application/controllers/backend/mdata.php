@@ -20,6 +20,7 @@ class Mdata extends CI_Controller{
 		$this->load->model("Modules_model",'m');
 		$this->load->model("Fields_model",'f');
 		$this->load->model("Mdata_model",'im');
+		$this->lang->load('item_backend_mdata',$this->Common_model->lang_get());
 		
 		
 

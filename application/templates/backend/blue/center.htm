@@ -17,8 +17,8 @@ $(window).load(function(){
 	.main_left {table-layout:auto; background:url(<!--{$img_url}-->/left_bg.gif)}
 	.main_left_top{ background:url(<!--{$img_url}-->/left_menu_bg.gif); padding-top:2px !important; padding-top:5px;}
 	.main_left_title{text-align:left; padding-left:15px; font-size:14px; font-weight:bold; color:#fff;}
-	.left_iframe{HEIGHT: 92%; VISIBILITY: inherit;WIDTH: 180px; background:transparent;}
-	.main_iframe{HEIGHT: 92%; VISIBILITY: inherit; WIDTH:100%; Z-INDEX: 1}
+	.left_iframe{height: 92%; visibility: inherit;width: 180px; background:transparent;}
+	.main_iframe{height: 92%; visibility: inherit; width:100%; Z-INDEX: 1}
 	table { font-size:12px; font-family : tahoma, 宋体, fantasy; }
 	td { font-size:12px; font-family : tahoma, 宋体, fantasy;}
 </style>
@@ -39,7 +39,7 @@ $(window).load(function(){
 	     }
 	}
 </SCRIPT>
-
+<body onload=show()>
 <!--导航部分-->
 <div class="top_table">
 <div class="top_table_leftbg">
@@ -47,7 +47,6 @@ $(window).load(function(){
 	<div class="menu">
 	
 		<ul>
-
 
  <!--{foreach from=$rights_options item=item key=key}-->
 
@@ -89,8 +88,8 @@ $(window).load(function(){
 			<div class="menu_div"><img src="<!--{$img_url}-->/menu01_right.gif" style="vertical-align:bottom;"></div></li>
  <!--{/foreach}-->
 			<!--{if $ci_config.lang_multiple}-->
-			<li style="float:right;">   
-			  <DIV style="DISPLAY: block; HEIGHT: 54px;text-align:right;color:#ffffff!important;padding-right:20px;">选择语种:
+			<li style="float:right;background:none;">   
+			  <DIV style="DISPLAY: block; height: 54px;text-align:right;color:#ffffff!important;padding-right:20px;">选择语种:
 			    <select style="color:#ff0000!important" onChange="parent.location.href='<!--{$site_url}-->/backend/common/lang_set/?lang='+this.value+'&url=<!--{$site_url}-->/backend/login/center/';" >
 			    <!--{html_options options=$lang_all_options selected=$lang_type}-->
 			    </select>
@@ -116,7 +115,7 @@ $(window).load(function(){
 	    <td valign="top" align="right"></td>
 	  </tr>
 	</table>
-	<IFRAME frameBorder=0 id=frmleft name=frmleft src="<!--{$site_url}-->/backend/login/left" class="left_iframe" allowTransparency="true" ></IFRAME>
+	<iframe frameBorder=0 id=frmleft name=frmleft src="<!--{$site_url}-->/backend/login/left" class="left_iframe" allowTransparency="true" ></iframe>
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
 	  <tr height="32">
 	    <td valign="top"></td>
@@ -125,11 +124,11 @@ $(window).load(function(){
 	  </tr>
 	</table>
   </td>
-  <TD bgColor=#337ABB style="WIDTH: 10px">
+  <TD bgColor=#337ABB style="width: 10px">
 	   <TABLE border=0 cellPadding=0 cellSpacing=0 height="100%">
 	    <TBODY>
 	    <TR>
-	     <TD onclick=switchSysBar() style="HEIGHT: 100%">
+	     <TD onclick=switchSysBar() style="height: 100%">
 	     <SPAN class=navPoint id=switchPoint title="关闭/打开左栏"><img src="<!--{$img_url}-->/right.gif"></SPAN>
 	     </TD>
 	    </TR>
@@ -141,25 +140,14 @@ $(window).load(function(){
 	  <tr height="32">
 	    <td valign="top" width="10" background="<!--{$img_url}-->/bg2.gif"><img src="<!--{$img_url}-->/teble_top_left.gif" alt="" /></td>
 	    <td background="<!--{$img_url}-->/bg2.gif"width="28" ><img src="<!--{$img_url}-->/arrow.gif" alt="" align="absmiddle" /></td>
-	    <td background="<!--{$img_url}-->/bg2.gif"><span style="float:left"></span><span style="float:left;width:500px;" id="dvbbsannounce">
-<script type="text/javascript">
-	function show(){
-	var aa=new Date();
-	bb=aa.getFullYear()+"年"+(aa.getMonth()+1)+"月"+aa.getDate()+"日\r";
-	bb+="星期"+'日一二三四五六'.charAt(aa.getDay())+"\r"+aa.getHours()+"时";
-	bb+=aa.getMinutes()+"分"+aa.getSeconds()+"秒";
-	document.all.cc.innerHTML=bb+'&nbsp;&nbsp;<!--{$weather.future.name}-->&nbsp;<!--{$weather.future.wea_0}-->&nbsp;<!--{$weather.real.temperature}-->&#8451;';
-	setTimeout("show()",1000)
-	}
-</script>
-<body onload=show()>
-<div id=cc></div></span></td>
+	    <td background="<!--{$img_url}-->/bg2.gif"><span style="float:left"></span><span style="float:left;width:500px;" id="dvbbsannounce"><span id=cc></span></span>
+	    </td>
 		<td background="<!--{$img_url}-->/bg2.gif" style="text-align:right; color: #135294; "><!--{$user_info.admin_user}-->(<!--{$user_info.role_name}-->) | <a href="<!--{$site_url}-->/backend/login/center" target='_top'>后台首页</a> | <a href="<!--{$site_url}-->" target="_blank">网站首页</a> | <a href="<!--{$site_url}-->/backend/system_manage/exit_system" target="_top">退出</a> </td>
 	    <td align="right" valign="top" background="<!--{$img_url}-->/bg2.gif" width="28" ><img src="<!--{$img_url}-->/teble_top_right.gif" alt="" /></td>
 	    <td align="right" width="16" bgcolor="#337ABB"></td>
 	  </tr>
 	</table>
-	<IFRAME frameBorder=0 id=frmright name=frmright scrolling=yes src="" class="main_iframe"></IFRAME>
+	<iframe frameBorder=0 id=frmright name=frmright scrolling=yes src="" class="main_iframe"></iframe>
 	<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background:#C4D8ED;">
 	<tr>
 	<td><img src="<!--{$img_url}-->/teble_bottom_left.gif" alt="" width="5" height="6" /></td>
@@ -171,6 +159,15 @@ $(window).load(function(){
 </TR>
 </TBODY>
 </TABLE>
-
+<script type="text/javascript">
+	function show(){
+	var aa=new Date();
+	bb=aa.getFullYear()+"年"+(aa.getMonth()+1)+"月"+aa.getDate()+"日\r";
+	bb+="星期"+'日一二三四五六'.charAt(aa.getDay())+"\r"+aa.getHours()+"时";
+	bb+=aa.getMinutes()+"分"+aa.getSeconds()+"秒";
+	document.all.cc.innerHTML=bb+'&nbsp;&nbsp;<!--{$weather.future.name}-->&nbsp;<!--{$weather.future.wea_0}-->&nbsp;<!--{$weather.real.temperature}-->&#8451;';
+	setTimeout("show()",1000)
+	}
+</script>
 </body>
 </html>

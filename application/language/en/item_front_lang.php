@@ -60,6 +60,8 @@
 		$lang['sys_exit']						 = '退出系统';
 		$lang['mypage_remarks']				 = '知道了，请继续';
 		$lang['mypage_theme']					 = '提示信息';
+		$lang['Prev']					         = '上一页';
+		$lang['Next']					         = '下一页';
 		
 		
 		

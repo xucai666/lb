@@ -2,7 +2,8 @@
 	<form id="form2" method="post" action="<!--{$site_url}-->/backend/product/action_del/?parent_class=<!--{$smarty.get.parent_class}-->">   
 	  
 	<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="mytable">
-	  <tr class="tr_theme">
+		<thead>
+	  <tr >
 	    <th align="center">
 		<input type="image" name="submit" src="<!--{$img_url}-->/button_del.gif" onclick="return chkdel2();"  >
 	    <input type="checkbox" id="chkall"  value="1" onclick="chkall2(this);">
@@ -15,6 +16,7 @@
 	    <th align="center"><!--{$lang_products.order}-->&nbsp;</th>
 	    <th align="center"><!--{$lang_products.operate}-->&nbsp;</th>
 	  </tr>
+	</thead>
 	    <!--{foreach from=$list item=item key=key}-->
 	    <tr>
 	      <td align="center">  <input type="checkbox" class="pro_ids"  name="pro_id[]" value="<!--{$item.pro_id}-->">&nbsp;</td>

@@ -21,7 +21,10 @@ class Archives extends CI_Controller{
  		$this->act = 'archives';
  		$this->im = $this->Archives_model;
  		$this->lang->load('item_backend_archives',$this->Common_model->lang_get());
- 		$this->m_lang = $this->lang->language;	
+
+ 		$this->m_lang = $this->lang->language;
+
+
 		$this->tpl->assign('lang_archives',$this->m_lang);
 	}
 

@@ -39,7 +39,8 @@
 
 
 <table class="mytable" width="100%">
-	<tr class="tr_theme">
+	<thead>
+	<tr >
 		<th><!--{$lang_admins.username}--></th>
 		<th><!--{$lang_admins.name}--></th>
 		<th><!--{$lang_admins.role}--></th>
@@ -49,6 +50,7 @@
 		<th><!--{$lang_admins.email}--></th>
 		<th><!--{$lang_admins.operate}--></th>
 	</tr>
+	</thead>
 	<!--{foreach from=$list item=v}-->
 	<tr class="tr_center">
 		<td><!--{$v.admin_user}--></td>

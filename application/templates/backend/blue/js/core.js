@@ -478,3 +478,11 @@ function window_close(){
 function window_back(){
 	history.go(-1);
 }
+
+
+//document ready
+$(function($){
+	if($(".mytable").length>0){
+		overclass($('.mytable tr'));
+	}
+});
