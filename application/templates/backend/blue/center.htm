@@ -44,60 +44,56 @@ $(window).load(function(){
 <div class="top_table">
 <div class="top_table_leftbg">
 	<div class="system_logo"><img src="<!--{$img_url}-->/logo_up.gif"></div>
-	<div class="menu">
-	
-		<ul>
-
- <!--{foreach from=$rights_options item=item key=key}-->
-
-			<li id="menu_<!--{$key}-->"  onClick="getleftbar(this);"><a href="javascript:;" target='_self'><!--{$item.r_title}--></a>
-			<div class="menu_childs" onMouseOut="Menus.Hide(0);">
-				<ul>
-				<!--{foreach from=$item.detail key=key1 item=item1}--> 
-						
-						<li class='<!--{$item1.detail|output_true:'category':'detail'}-->'>
-							<!--{if $item1.r_url|mb_substr:0:4:'utf8'=='http'}-->
-								<a href="<!--{if $item1.r_url=='event'}-->javascript:;<!--{else}--><!--{$item1.r_url}--><!--{/if}-->"  <!--{$item1.r_js_action}-->  title="<!--{$item1.r_title}-->" ztarget="frmright"><!--{$item1.r_title}--></a></li>
-							<!--{else}-->
-								<a href="<!--{if $item1.r_url=='event'}-->javascript:;<!--{else}--><!--{$site_url}-->/<!--{$item1.r_url}--><!--{/if}-->"  <!--{$item1.r_js_action}-->  title="<!--{$item1.r_title}-->" target="frmright"><!--{$item1.r_title}--></a></li>
-							<!--{/if}-->
-							<!--{if $item1.detail}-->	
-								<ul class='hide'>
-								<!--{foreach from=$item1.detail key=key2 item=item2}--> 
-									<!--{if $item2.r_url}-->
-										<li class="detail">
-										<!--{if $item2.r_url|mb_substr:0:4:'utf8'=='http'}-->
-											<a href="<!--{if $item2.r_url=='event'}-->javascript:;<!--{else}--><!--{$item2.r_url}--><!--{/if}-->"  <!--{$item2.r_js_action}-->  title="<!--{$item2.r_title}-->" target="frmright"><!--{$item2.r_title}--></a></li>
-										<!--{else}-->
-											<a href="<!--{if $item2.r_url=='event'}-->javascript:;<!--{else}--><!--{$site_url}-->/<!--{$item2.r_url}--><!--{/if}-->"  <!--{$item2.r_js_action}-->  title="<!--{$item2.r_title}-->" target="frmright"><!--{$item2.r_title}--></a></li>
-										<!--{/if}-->
-									</li> 
-						
-									<!--{/if}-->	
-
-								<!--{/foreach}-->
+	<div class="menu">			
+	<ul>	
+			 <!--{foreach from=$rights_options item=item key=key}-->			
+						<li id="menu_<!--{$key}-->"  onClick="getleftbar(this);">
+								<a href="javascript:void(0);" target='_self'><!--{$item.r_title}--></a>
+								<div class="menu_childs" onMouseOut="Menus.Hide(0);">
+								<ul>
+											<!--{foreach from=$item.detail key=key1 item=item1}--> 						
+													  <li class='<!--{$item1.detail|output_true:'category':'detail'}-->'>
+															<!--{if $item1.r_url|mb_substr:0:4:'utf8'=='http'}-->
+																<a href="<!--{if $item1.r_url=='event'}-->javascript:void(0);<!--{else}--><!--{$item1.r_url}--><!--{/if}-->"  <!--{$item1.r_js_action}-->  title="<!--{$item1.r_title}-->" target="frmright"><!--{$item1.r_title}--></a>
+															<!--{else}-->
+																<a href="<!--{if $item1.r_url=='event'}-->javascript:void(0);<!--{else}--><!--{$site_url}-->/<!--{$item1.r_url}--><!--{/if}-->"  <!--{$item1.r_js_action}-->  title="<!--{$item1.r_title}-->" target="frmright"><!--{$item1.r_title}--></a>
+															<!--{/if}-->
+													   	
+														<!--{if $item1.detail}-->	
+																	<ul class='hide'>
+																		<!--{foreach from=$item1.detail key=key2 item=item2}--> 
+																				<!--{if $item2.r_url}-->
+																					<li class="detail">
+																							<!--{if $item2.r_url|mb_substr:0:4:'utf8'=='http'}-->
+																								<a href="<!--{if $item2.r_url=='event'}-->javascript:void(0);<!--{else}--><!--{$item2.r_url}--><!--{/if}-->"  <!--{$item2.r_js_action}-->  title="<!--{$item2.r_title}-->" target="frmright"><!--{$item2.r_title}--></a>
+																							<!--{else}-->
+																								<a href="<!--{if $item2.r_url=='event'}-->javascript:void(0);<!--{else}--><!--{$site_url}-->/<!--{$item2.r_url}--><!--{/if}-->"  <!--{$item2.r_js_action}-->  title="<!--{$item2.r_title}-->" target="frmright"><!--{$item2.r_title}--></a>
+																							<!--{/if}-->
+																					</li> 															
+																				<!--{/if}-->								
+																		<!--{/foreach}-->
+																	</ul>
+														<!--{/if}-->	
+													</li>	
+													
+											<!--{/foreach}-->
 								</ul>
-							<!--{/if}-->	
-							
-						 </li>
-							
-						
-				<!--{/foreach}-->
-				</ul>
-			</div>
-			<div class="menu_div"><img src="<!--{$img_url}-->/menu01_right.gif" style="vertical-align:bottom;"></div></li>
- <!--{/foreach}-->
+								</div>
+								<div class="menu_div"><img src="<!--{$img_url}-->/menu01_right.gif" style="vertical-align:bottom;"></div>
+						</li>
+			 <!--{/foreach}-->
 			<!--{if $ci_config.lang_multiple}-->
-			<li style="float:right;background:none;">   
-			  <DIV style="DISPLAY: block; height: 54px;text-align:right;color:#ffffff!important;padding-right:20px;">选择语种:
-			    <select style="color:#ff0000!important" onChange="parent.location.href='<!--{$site_url}-->/backend/common/lang_set/?lang='+this.value+'&url=<!--{$site_url}-->/backend/login/center/';" >
-			    <!--{html_options options=$lang_all_options selected=$lang_type}-->
-			    </select>
-    
-   			  </DIV>
-  		  </li>
-		<!--{/if}-->
-		</ul>
+				<li style="float:right;background:none;">   
+				  <DIV style="DISPLAY: block; height: 54px;text-align:right;color:#ffffff!important;padding-right:20px;">选择语种:
+					<select style="color:#ff0000!important" onChange="parent.location.href='<!--{$site_url}-->/backend/common/lang_set/?lang='+this.value+'&url=<!--{$site_url}-->/backend/login/center/';" >
+					<!--{html_options options=$lang_all_options selected=$lang_type}-->
+					</select>
+		
+   			  	</DIV>
+  			  </li>
+		  <!--{/if}-->		
+			
+	 </ul>
 	</div>
 </div>
 </div>

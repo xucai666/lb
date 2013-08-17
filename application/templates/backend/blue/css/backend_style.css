@@ -362,7 +362,7 @@ h2{
 .search{
 
 	font-size:14px;font-weight:lighter;color:#cccccc;padding-left:0px;
-	height:50px;
+	height:30px;
 	background-position: 22px 5px;
 	padding-top:5px;
 	border:1px dashed  #D2E0F2;
@@ -372,7 +372,23 @@ h2{
 
 }
 
+.search li{
+	float:left;
+	list-style-type: none;
+	width: auto;	
+	
+	overflow: hidden;
+	display: inline;
+	vertical-align: middle;
+	
+	height: 22px;
 
+
+}
+
+.search li input{
+	border:1px solid #ccc;
+}
 
 .clear{
 	clear:both;
@@ -613,3 +629,21 @@ color:#ffffff;
 /**
  * ------------------------icon area end
  */
+
+/**
+ * ------------------------align
+ */
+.float_left{
+	float:left;
+}
+.float_right{
+	float:right;
+}
+
+.no-border{
+	border: none!important;
+}
+.inline{
+	display: inline;
+}
+

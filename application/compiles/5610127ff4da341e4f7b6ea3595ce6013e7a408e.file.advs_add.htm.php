@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-17 12:22:28
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-17 15:59:20
          compiled from "application\templates\backend\blue\advs_add.htm" */ ?>
-<?php /*%%SmartyHeaderCode:14595520f6b04b6ff74-65309471%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:8982520f9dd8f3f567-03929952%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5610127ff4da341e4f7b6ea3595ce6013e7a408e' => 
     array (
       0 => 'application\\templates\\backend\\blue\\advs_add.htm',
-      1 => 1376725509,
+      1 => 1376744515,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '14595520f6b04b6ff74-65309471',
+  'nocache_hash' => '8982520f9dd8f3f567-03929952',
   'function' => 
   array (
   ),
@@ -22,17 +22,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'main' => 0,
     'adv_show' => 0,
     'detail' => 0,
-    'key' => 0,
     'item' => 0,
+    'key' => 0,
     'img_url' => 0,
     'editor' => 0,
     'total_size' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_520f6b04d9d788_19760859',
+  'unifunc' => 'content_520f9dd9216f38_32741001',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_520f6b04d9d788_19760859')) {function content_520f6b04d9d788_19760859($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_520f9dd9216f38_32741001')) {function content_520f9dd9216f38_32741001($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <form action="<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
 /backend/advs/action_save" method="post" enctype="multipart/form-data" name="form1" id="form1">
@@ -136,7 +136,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->key => $_smarty_tpl->tpl_vars
 $_smarty_tpl->tpl_vars['item']->_loop = true;
  $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['item']->key;
 ?>  
-           <?php if ($_smarty_tpl->tpl_vars['key']->value>0){?>  
+           
           <tr>
 	        <td>
 	          <?php if ($_smarty_tpl->tpl_vars['item']->value['adv_pic']){?>
@@ -174,7 +174,7 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
             
             </td>
           </tr>
-        	<?php }?>
+        
             <?php } ?>
             
         </table>

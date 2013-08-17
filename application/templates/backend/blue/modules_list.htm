@@ -2,26 +2,27 @@
 <div class="nav_title">模型管理</div>
 <div  align="right"><a href="<!--{func_site_url segments='/backend/modules/action_add'}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
 
-<table class='search'>
-	<tr><td>
+<div class='search'>
+	
 		<form action='<!--{func_site_url segments="backend/modules/action_list"}-->' method="get">
+			<li>
 			模块名称：
 			<input type="text" name="m_name" value="<!--{$smarty.get.m_name}-->">			
 			数据表：
 			<input type="text" name="m_tb" value="<!--{$smarty.get.m_tb}-->">
-			
-			<!--{create_button type="search"}-->
+			</li>
+			<li><!--{create_button type="search"}--></li>
 		</form>
-	</td></tr>
-</table>
+	
+</div>
 
   <form id="form2" method="post" action="<!--{func_site_url segments='/backend/modules/action_del'}-->" onsubmit="return chkdel2();">   
 <table class='mytable'>
 	<thead>
 <tr>
-	<th>
-		<!--{create_button type='delete' ext=''}-->		
+	<th class="float_left">
 		<input type="checkbox" id="chkall"  value="1" onclick="CheckAll(this.form);">
+		<!--{create_button type='delete' ext=''}-->
 	</th>
 	<th>编号</th>
 	<th>模型名称</th>

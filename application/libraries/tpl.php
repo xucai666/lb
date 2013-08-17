@@ -262,12 +262,12 @@ function create_button($array){
 	$src = $CI->mypage->getRes('img','backend').'/button_'.$type.'.gif';
 	if($url){
 		if(strpos($url, 'javascript')!==false || strpos($url, 'http:')!==false){
-			$html = '<a href="'.$url.'"><img src="'.$src.'" /></a>';
+			$html = '<a href="'.$url.'"><img src="'.$src.'" class="no-border"  /></a>';
 		}else{
-			$html = '<a href="'.site_url($url).'"><img src="'.$src.'" /></a>';
+			$html = '<a href="'.site_url($url).'"><img src="'.$src.'" class="no-border"  /></a>';
 		}
 	}else{
-	 	 $html = '<input type="image" src="'.$src.'"  '.$ext.' />';
+	 	 $html = '<input type="image" src="'.$src.'"  '.$ext.' class="no-border"   />';
 	}
 	return $html;
 

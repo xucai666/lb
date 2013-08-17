@@ -1,20 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-17 12:15:32
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-17 16:30:40
          compiled from "application\templates\backend\blue\modules_list.htm" */ ?>
-<?php /*%%SmartyHeaderCode:10839520f6964c8c712-21366623%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:22838520f9b6ae4e858-93974594%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c77d3a3ce10ca52ae0010454fdc10006d39e86a3' => 
     array (
       0 => 'application\\templates\\backend\\blue\\modules_list.htm',
-      1 => 1375931727,
+      1 => 1376757027,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '10839520f6964c8c712-21366623',
+  'nocache_hash' => '22838520f9b6ae4e858-93974594',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_520f9b6b1269d4_15563072',
   'variables' => 
   array (
     'dir_backend' => 0,
@@ -25,10 +27,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'page_link' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_520f6964e767f4_53543235',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_520f6964e767f4_53543235')) {function content_520f6964e767f4_53543235($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_520f9b6b1269d4_15563072')) {function content_520f9b6b1269d4_15563072($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <div class="nav_title">模型管理</div>
 <div  align="right"><a href="<?php echo func_site_url(array('segments'=>'/backend/modules/action_add'),$_smarty_tpl);?>
@@ -36,32 +36,33 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /add_<?php echo $_smarty_tpl->tpl_vars['lang_type']->value;?>
 .png"  /></a></div>
 
-<table class='search'>
-	<tr><td>
+<div class='search'>
+	
 		<form action='<?php echo func_site_url(array('segments'=>"backend/modules/action_list"),$_smarty_tpl);?>
 ' method="get">
+			<li>
 			模块名称：
 			<input type="text" name="m_name" value="<?php echo $_GET['m_name'];?>
 ">			
 			数据表：
 			<input type="text" name="m_tb" value="<?php echo $_GET['m_tb'];?>
 ">
-			
-			<?php echo create_button(array('type'=>"search"),$_smarty_tpl);?>
-
+			</li>
+			<li><?php echo create_button(array('type'=>"search"),$_smarty_tpl);?>
+</li>
 		</form>
-	</td></tr>
-</table>
+	
+</div>
 
   <form id="form2" method="post" action="<?php echo func_site_url(array('segments'=>'/backend/modules/action_del'),$_smarty_tpl);?>
 " onsubmit="return chkdel2();">   
 <table class='mytable'>
 	<thead>
 <tr>
-	<th>
-		<?php echo create_button(array('type'=>'delete','ext'=>''),$_smarty_tpl);?>
-		
+	<th class="float_left">
 		<input type="checkbox" id="chkall"  value="1" onclick="CheckAll(this.form);">
+		<?php echo create_button(array('type'=>'delete','ext'=>''),$_smarty_tpl);?>
+
 	</th>
 	<th>编号</th>
 	<th>模型名称</th>

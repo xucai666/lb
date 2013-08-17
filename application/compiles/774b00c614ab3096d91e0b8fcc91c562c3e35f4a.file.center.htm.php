@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-17 12:55:00
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-17 15:48:15
          compiled from "application\templates\backend\blue\center.htm" */ ?>
-<?php /*%%SmartyHeaderCode:31904520f6935deabb3-88476321%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1955520f9b183b4092-50522734%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '774b00c614ab3096d91e0b8fcc91c562c3e35f4a' => 
     array (
       0 => 'application\\templates\\backend\\blue\\center.htm',
-      1 => 1376744099,
+      1 => 1376754492,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '31904520f6935deabb3-88476321',
+  'nocache_hash' => '1955520f9b183b4092-50522734',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_520f69361e7fa0_49463308',
+  'unifunc' => 'content_520f9b186ea3d1_09751179',
   'variables' => 
   array (
     'item_lang' => 0,
@@ -36,7 +36,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_520f69361e7fa0_49463308')) {function content_520f69361e7fa0_49463308($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_output_true')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\modifier.output_true.php';
+<?php if ($_valid && !is_callable('content_520f9b186ea3d1_09751179')) {function content_520f9b186ea3d1_09751179($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_output_true')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\modifier.output_true.php';
 if (!is_callable('smarty_function_html_options')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\function.html_options.php';
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML xmlns="http://www.w3.org/1999/xhtml">
@@ -92,103 +92,99 @@ $(window).load(function(){
 <div class="top_table_leftbg">
 	<div class="system_logo"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /logo_up.gif"></div>
-	<div class="menu">
-	
-		<ul>
-
- <?php  $_smarty_tpl->tpl_vars['item'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['item']->_loop = false;
+	<div class="menu">			
+	<ul>	
+			 <?php  $_smarty_tpl->tpl_vars['item'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['item']->_loop = false;
  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['rights_options']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->key => $_smarty_tpl->tpl_vars['item']->value){
 $_smarty_tpl->tpl_vars['item']->_loop = true;
  $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['item']->key;
-?>
-
-			<li id="menu_<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
-"  onClick="getleftbar(this);"><a href="javascript:;" target='_self'><?php echo $_smarty_tpl->tpl_vars['item']->value['r_title'];?>
+?>			
+						<li id="menu_<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
+"  onClick="getleftbar(this);">
+								<a href="javascript:void(0);" target='_self'><?php echo $_smarty_tpl->tpl_vars['item']->value['r_title'];?>
 </a>
-			<div class="menu_childs" onMouseOut="Menus.Hide(0);">
-				<ul>
-				<?php  $_smarty_tpl->tpl_vars['item1'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['item1']->_loop = false;
+								<div class="menu_childs" onMouseOut="Menus.Hide(0);">
+								<ul>
+											<?php  $_smarty_tpl->tpl_vars['item1'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['item1']->_loop = false;
  $_smarty_tpl->tpl_vars['key1'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['item']->value['detail']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['item1']->key => $_smarty_tpl->tpl_vars['item1']->value){
 $_smarty_tpl->tpl_vars['item1']->_loop = true;
  $_smarty_tpl->tpl_vars['key1']->value = $_smarty_tpl->tpl_vars['item1']->key;
-?> 
-						
-						<li class='<?php echo smarty_modifier_output_true($_smarty_tpl->tpl_vars['item1']->value['detail'],'category','detail');?>
+?> 						
+													  <li class='<?php echo smarty_modifier_output_true($_smarty_tpl->tpl_vars['item1']->value['detail'],'category','detail');?>
 '>
-							<?php if (mb_substr($_smarty_tpl->tpl_vars['item1']->value['r_url'],0,4,'utf8')=='http'){?>
-								<a href="<?php if ($_smarty_tpl->tpl_vars['item1']->value['r_url']=='event'){?>javascript:;<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['item1']->value['r_url'];?>
+															<?php if (mb_substr($_smarty_tpl->tpl_vars['item1']->value['r_url'],0,4,'utf8')=='http'){?>
+																<a href="<?php if ($_smarty_tpl->tpl_vars['item1']->value['r_url']=='event'){?>javascript:void(0);<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['item1']->value['r_url'];?>
 <?php }?>"  <?php echo $_smarty_tpl->tpl_vars['item1']->value['r_js_action'];?>
   title="<?php echo $_smarty_tpl->tpl_vars['item1']->value['r_title'];?>
-" ztarget="frmright"><?php echo $_smarty_tpl->tpl_vars['item1']->value['r_title'];?>
-</a></li>
-							<?php }else{ ?>
-								<a href="<?php if ($_smarty_tpl->tpl_vars['item1']->value['r_url']=='event'){?>javascript:;<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
+" target="frmright"><?php echo $_smarty_tpl->tpl_vars['item1']->value['r_title'];?>
+</a>
+															<?php }else{ ?>
+																<a href="<?php if ($_smarty_tpl->tpl_vars['item1']->value['r_url']=='event'){?>javascript:void(0);<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['item1']->value['r_url'];?>
 <?php }?>"  <?php echo $_smarty_tpl->tpl_vars['item1']->value['r_js_action'];?>
   title="<?php echo $_smarty_tpl->tpl_vars['item1']->value['r_title'];?>
 " target="frmright"><?php echo $_smarty_tpl->tpl_vars['item1']->value['r_title'];?>
-</a></li>
-							<?php }?>
-							<?php if ($_smarty_tpl->tpl_vars['item1']->value['detail']){?>	
-								<ul class='hide'>
-								<?php  $_smarty_tpl->tpl_vars['item2'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['item2']->_loop = false;
+</a>
+															<?php }?>
+													   	
+														<?php if ($_smarty_tpl->tpl_vars['item1']->value['detail']){?>	
+																	<ul class='hide'>
+																		<?php  $_smarty_tpl->tpl_vars['item2'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['item2']->_loop = false;
  $_smarty_tpl->tpl_vars['key2'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['item1']->value['detail']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['item2']->key => $_smarty_tpl->tpl_vars['item2']->value){
 $_smarty_tpl->tpl_vars['item2']->_loop = true;
  $_smarty_tpl->tpl_vars['key2']->value = $_smarty_tpl->tpl_vars['item2']->key;
 ?> 
-									<?php if ($_smarty_tpl->tpl_vars['item2']->value['r_url']){?>
-										<li class="detail">
-										<?php if (mb_substr($_smarty_tpl->tpl_vars['item2']->value['r_url'],0,4,'utf8')=='http'){?>
-											<a href="<?php if ($_smarty_tpl->tpl_vars['item2']->value['r_url']=='event'){?>javascript:;<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['item2']->value['r_url'];?>
+																				<?php if ($_smarty_tpl->tpl_vars['item2']->value['r_url']){?>
+																					<li class="detail">
+																							<?php if (mb_substr($_smarty_tpl->tpl_vars['item2']->value['r_url'],0,4,'utf8')=='http'){?>
+																								<a href="<?php if ($_smarty_tpl->tpl_vars['item2']->value['r_url']=='event'){?>javascript:void(0);<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['item2']->value['r_url'];?>
 <?php }?>"  <?php echo $_smarty_tpl->tpl_vars['item2']->value['r_js_action'];?>
   title="<?php echo $_smarty_tpl->tpl_vars['item2']->value['r_title'];?>
 " target="frmright"><?php echo $_smarty_tpl->tpl_vars['item2']->value['r_title'];?>
-</a></li>
-										<?php }else{ ?>
-											<a href="<?php if ($_smarty_tpl->tpl_vars['item2']->value['r_url']=='event'){?>javascript:;<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
+</a>
+																							<?php }else{ ?>
+																								<a href="<?php if ($_smarty_tpl->tpl_vars['item2']->value['r_url']=='event'){?>javascript:void(0);<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['item2']->value['r_url'];?>
 <?php }?>"  <?php echo $_smarty_tpl->tpl_vars['item2']->value['r_js_action'];?>
   title="<?php echo $_smarty_tpl->tpl_vars['item2']->value['r_title'];?>
 " target="frmright"><?php echo $_smarty_tpl->tpl_vars['item2']->value['r_title'];?>
-</a></li>
-										<?php }?>
-									</li> 
-						
-									<?php }?>	
-
-								<?php } ?>
+</a>
+																							<?php }?>
+																					</li> 															
+																				<?php }?>								
+																		<?php } ?>
+																	</ul>
+														<?php }?>	
+													</li>	
+													
+											<?php } ?>
 								</ul>
-							<?php }?>	
-							
-						 </li>
-							
-						
-				<?php } ?>
-				</ul>
-			</div>
-			<div class="menu_div"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
-/menu01_right.gif" style="vertical-align:bottom;"></div></li>
- <?php } ?>
+								</div>
+								<div class="menu_div"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
+/menu01_right.gif" style="vertical-align:bottom;"></div>
+						</li>
+			 <?php } ?>
 			<?php if ($_smarty_tpl->tpl_vars['ci_config']->value['lang_multiple']){?>
-			<li style="float:right;background:none;">   
-			  <DIV style="DISPLAY: block; height: 54px;text-align:right;color:#ffffff!important;padding-right:20px;">选择语种:
-			    <select style="color:#ff0000!important" onChange="parent.location.href='<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
+				<li style="float:right;background:none;">   
+				  <DIV style="DISPLAY: block; height: 54px;text-align:right;color:#ffffff!important;padding-right:20px;">选择语种:
+					<select style="color:#ff0000!important" onChange="parent.location.href='<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
 /backend/common/lang_set/?lang='+this.value+'&url=<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
 /backend/login/center/';" >
-			    <?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['lang_all_options']->value,'selected'=>$_smarty_tpl->tpl_vars['lang_type']->value),$_smarty_tpl);?>
+					<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['lang_all_options']->value,'selected'=>$_smarty_tpl->tpl_vars['lang_type']->value),$_smarty_tpl);?>
 
-			    </select>
-    
-   			  </DIV>
-  		  </li>
-		<?php }?>
-		</ul>
+					</select>
+		
+   			  	</DIV>
+  			  </li>
+		  <?php }?>		
+			
+	 </ul>
 	</div>
 </div>
 </div>

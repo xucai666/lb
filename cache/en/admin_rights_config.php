@@ -4,7 +4,7 @@
     0 => 
     array (
       'r_id' => '35',
-      'r_title' => '系统管理',
+      'r_title' => '设置',
       'r_pid' => NULL,
       'r_name' => '系统相关',
       'r_order' => '5',
@@ -242,7 +242,7 @@
     17 => 
     array (
       'r_id' => '66',
-      'r_title' => '插件管理',
+      'r_title' => '插件',
       'r_pid' => NULL,
       'r_name' => NULL,
       'r_order' => '3',
@@ -396,7 +396,7 @@
     28 => 
     array (
       'r_id' => '67',
-      'r_title' => '模块设置',
+      'r_title' => '模块',
       'r_pid' => NULL,
       'r_name' => NULL,
       'r_order' => '2',
@@ -676,7 +676,7 @@
     48 => 
     array (
       'r_id' => '95',
-      'r_title' => '开发',
+      'r_title' => '文档',
       'r_pid' => NULL,
       'r_name' => NULL,
       'r_order' => '4',
