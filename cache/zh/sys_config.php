@@ -1,9 +1,9 @@
 <?php return array (
   'optimize' => 
   array (
-    'title' => 'Codeigniter Cms System',
-    'meta' => 'Codeigniter Cms System',
-    'description' => 'Codeigniter cms system',
+    'title' => 'Co.Cms',
+    'meta' => 'Co.Cms',
+    'description' => 'Codeigniter CMS',
   ),
   'smtp' => false,
   'contact' => 
