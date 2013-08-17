@@ -55,17 +55,17 @@ $(window).load(function(){
 				<ul>
 				<!--{foreach from=$item.detail key=key1 item=item1}--> 
 						
-						<li>
+						<li class='<!--{$item1.detail|output_true:'category':'detail'}-->'>
 							<!--{if $item1.r_url|mb_substr:0:4:'utf8'=='http'}-->
-								<a href="<!--{if $item1.r_url=='event'}-->javascript:;<!--{else}--><!--{$item1.r_url}--><!--{/if}-->"  <!--{$item1.r_js_action}-->  title="<!--{$item1.r_title}-->" target="frmright"><!--{$item1.r_title}--></a></li>
+								<a href="<!--{if $item1.r_url=='event'}-->javascript:;<!--{else}--><!--{$item1.r_url}--><!--{/if}-->"  <!--{$item1.r_js_action}-->  title="<!--{$item1.r_title}-->" ztarget="frmright"><!--{$item1.r_title}--></a></li>
 							<!--{else}-->
 								<a href="<!--{if $item1.r_url=='event'}-->javascript:;<!--{else}--><!--{$site_url}-->/<!--{$item1.r_url}--><!--{/if}-->"  <!--{$item1.r_js_action}-->  title="<!--{$item1.r_title}-->" target="frmright"><!--{$item1.r_title}--></a></li>
 							<!--{/if}-->
 							<!--{if $item1.detail}-->	
-								<ul>
+								<ul class='hide'>
 								<!--{foreach from=$item1.detail key=key2 item=item2}--> 
 									<!--{if $item2.r_url}-->
-										<li>
+										<li class="detail">
 										<!--{if $item2.r_url|mb_substr:0:4:'utf8'=='http'}-->
 											<a href="<!--{if $item2.r_url=='event'}-->javascript:;<!--{else}--><!--{$item2.r_url}--><!--{/if}-->"  <!--{$item2.r_js_action}-->  title="<!--{$item2.r_title}-->" target="frmright"><!--{$item2.r_title}--></a></li>
 										<!--{else}-->

@@ -55,7 +55,7 @@
 		$lang['stat']							 = '访问统计';
 		
 		//系统语言 sys
-		$lang['sys_backend']					 = '网站后台管理';
+		$lang['sys_backend']					 = 'Management Center';
 		$lang['sys_window_main']				 = '主窗口';
 		$lang['sys_browse']					 = '浏览站点';
 		$lang['sys_exit']						 = '退出系统';

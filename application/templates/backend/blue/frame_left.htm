@@ -6,23 +6,23 @@
 <title><!--{$item_lang.sys_backend}--></title> 
 <!--{$header_html.css}-->
 <!--{$header_html.js}-->
+<script  type="text/javascript" >
+	function trigger_menu(){
+		$("#menubar .category").on("click",function(){
+			$(this).next().toggle();
+		});
+	
+	}	
+</script>
 </head>
 <BODY >
 <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" id='mytb1' >
   <tr>
-    <td valign="top" style="padding-top:10px; ">
+    <td valign="top" >
 		<table class="alpha">
 		  <tr>
 			<td valign="top" class="menu" id="menubar">
 			
-			 <!--{foreach from=$rights_options  item=item key=key}-->			
-				<!--{foreach from=$item.detail  key=key1 item=item1}--> 
-					<!--{if $item1.url}-->
-						<li><a href="<!--{if $item1.url=='event'}-->javascript:;<!--{else}--><!--{$site_url}-->/<!--{$item1.url}--><!--{/if}-->"  <!--{$item1.js_action}-->  title="<!--{$item1.title}-->" target="frmright"><!--{$item1.title}--></a></li>
-					<!--{/if}--> 	
-				<!--{/foreach}-->				
-			
- 			<!--{/foreach}-->	
 			
 			
 			</td>
