@@ -417,7 +417,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  	 * 提取单记录信息s
  	 */
  	
- 	function fetch_one($array=null){
+ 	function fetch_one($array=null,$key=null){
  		if(empty($array)) return false; 		
  		extract($array);
  		if(empty($primary_val)) return null;
@@ -426,8 +426,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  		
  		$rq =  $this->ds->select($fields,false)->from($table_name)->where($primary_id,$primary_val)->order_by($primary_id,'desc')->limit(1)->get();
  		$rs = $rq->first_row('array');
- 		
- 	
+ 		$rs = $key?$rs[$key]:$rs;
  		return $rs;
  	}
  	

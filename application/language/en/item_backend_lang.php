@@ -72,5 +72,18 @@
 		//提示信息
 		$lang['mypage_theme']					 = '系统提示信息';
 		$lang['mypage_remarks']				 = '如果你的浏览器没反应，请点击这里';
+
+		//button
+		$lang['button_save']					 = '保存';
+		$lang['button_search']					 = '查询';
+		$lang['button_del']					 = '删除';
+		$lang['button_delete']					 = '删除';
+		$lang['button_ok']					 = '确定';
+		$lang['button_reset']					 = '重置';
+		$lang['button_close']					 = '关闭';
+		$lang['button_back']					 = '返回';
+		$lang['button_prev']					 = '上一级';
+		$lang['button_next']					 = '下一级';
+		$lang['button_upload']					 = '上传';
  
 ?>

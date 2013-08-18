@@ -16,7 +16,7 @@ class Common extends CI_Controller{
 	
 	function __construct(){
 		parent::__construct();
-		$this->myauth->execute_auth();	//验证是否登陆
+		
 		$this->load->model('Common_model');
 		
 	}
@@ -43,6 +43,15 @@ class Common extends CI_Controller{
     echo "<span></span>";     
   }
  	
+
+
+  function insert(){
+    $array = $this->input->post();
+    $tb = array_shift($array);
+    $this->db->insert($tb,$array);
+    echo 'true';
+  }
+
 
  	
  	

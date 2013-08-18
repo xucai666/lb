@@ -28,7 +28,7 @@ class Search extends CI_Controller {
 	function index()
 	{
 	
-		$page_size = 8;
+		$page_size = 15;
 
 		//modules 
 		$modules = array(

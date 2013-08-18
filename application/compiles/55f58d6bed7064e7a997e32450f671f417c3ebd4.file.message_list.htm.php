@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-17 15:55:31
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-18 05:24:31
          compiled from "application\templates\backend\blue\message_list.htm" */ ?>
-<?php /*%%SmartyHeaderCode:7904520f9cf379ac60-40655538%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1388252105a8f83acb5-26838646%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '55f58d6bed7064e7a997e32450f671f417c3ebd4' => 
     array (
       0 => 'application\\templates\\backend\\blue\\message_list.htm',
-      1 => 1375776742,
+      1 => 1376782096,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '7904520f9cf379ac60-40655538',
+  'nocache_hash' => '1388252105a8f83acb5-26838646',
   'function' => 
   array (
   ),
@@ -27,9 +27,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_520f9cf39763e0_64488257',
+  'unifunc' => 'content_52105a8fa8a5c1_75847750',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_520f9cf39763e0_64488257')) {function content_520f9cf39763e0_64488257($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_52105a8fa8a5c1_75847750')) {function content_52105a8fa8a5c1_75847750($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <script language='javascript'>
 
@@ -98,8 +98,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 " />      
         
 
-	<input type="submit" name="submit" value="<?php echo $_smarty_tpl->tpl_vars['lang_message']->value['query'];?>
-" />
+	 <?php echo create_button(array('type'=>'search'),$_smarty_tpl);?>
+
 	</form>
 
 </td>

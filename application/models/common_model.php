@@ -336,11 +336,11 @@ class Common_model  extends CI_Model{
 			}
 			
 		}
-		$page_size = $page_size?$page_size:$CI->config->item('per_page');
-		$limit_from = $_GET['per_page']; 		
+		
+		$limit_from = $page_size>0 ? $_GET['per_page']:0;		
 		
 		$params = array( 		
-			'limit_to'=>$page_size,
+			'limit_to'=>$page_size?$page_size:$CI->config->item('per_page'),
 			'limit_from'=>$limit_from,
 		); 	 		
 		$config['base_url'] = 		current_url().$link_str;

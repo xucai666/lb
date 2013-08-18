@@ -31,7 +31,11 @@
              </tr>
           
         </table>
-		<div class="page" align="center"><!--{$page_link}--></div>		</td>
+		<div class="page" align="center">
+
+ <!--{tag_pager t_id=40 where="p_pid like '`$ci_uri.4|base64_decode`%' and p_name like '%`$smarty.request.p_name`%'"}-->
+
+    </div>		</td>
       </tr>
     </table></td>
   </tr>

@@ -81,10 +81,6 @@ h1{
 
 
 
-textarea{
-	width:500px;
-	height:250px;
-}
 .td_op{
 	text-align:left!important;padding-left:10px!important;
 }
@@ -381,14 +377,12 @@ h2{
 	display: inline;
 	vertical-align: middle;
 	
-	height: 22px;
+	
 
 
 }
 
-.search li input{
-	border:1px solid #ccc;
-}
+
 
 .clear{
 	clear:both;
@@ -476,6 +470,24 @@ a:hover{
 .btn1_mouseover {
  BORDER-RIGHT: #7EBF4F 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #7EBF4F 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 12px; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#CAE4B6); BORDER-LEFT: #7EBF4F 1px solid; CURSOR: hand; COLOR: black; PADDING-TOP: 2px; BORDER-BOTTOM: #7EBF4F 1px solid
 }
+
+.button_bg{
+	height:21px;
+	width:69px;
+	background-image:url(../images/button_bg.png);
+	background-repeat:no-repeat;
+	text-align: center;
+	font-size: 14px;
+	display:inline-block;
+	padding-top: 2px;
+
+}
+.button_bg:hover{
+	color:#ff0000;
+}
+
+
+
 
 .gray{
 	color:#333333;
@@ -647,3 +659,13 @@ color:#ffffff;
 	display: inline;
 }
 
+.tag_textarea{
+	width: 644px;
+	height: 397px;
+}
+
+.a_trans{
+	display: block;
+	width:30px;
+	height: 30px;
+}

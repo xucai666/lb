@@ -244,6 +244,83 @@ class System_manage extends CI_Controller{
  			$this->mypage->load_backend_view('helper_docs',$data);
  	}
  	
+ 	/**
+ 	 * 翻译
+ 	 * @return [type] [description]
+ 	 */
+ 	function action_lang_trans(){
+ 		$this->db->select('*',false)->from('lang');
+ 		$this->input->get('lang_type') && $this->db->where('lang_type',$this->input->get('lang_type'));
+ 		$this->input->get('status')>=0 && $this->db->where('is_trans',$this->input->get('status'));
+ 		$this->db->order_by('lang_id','asc');
+ 		$data = $this->mydb->fetch_all(15);
+ 		$status = array(
+ 			'1'=>'已翻译',
+ 			'0'=>'未翻译',
+ 		);
+ 		$data = array_merge($data,array('status'=>$status));
+		$this->mypage->load_backend_view('lang_trans',$data);
+ 	}
+ 	
+ 	/**
+ 	 * 导入
+ 	 * @return [type] [description]
+ 	 */
+ 	function action_lang_import(){
+ 		$this->load->helper('file');
+ 		$path = APPPATH.'language/zh/';
+ 		$lang_files = get_filenames($path);
+ 		//empty
+ 		$this->db->truncate('lang');
+ 		foreach($lang_files as $v){
+ 			if(strpos($v, 'lang.php')!==false){
+ 				$lang = null;
+ 				include_once($path.$v);
+ 				foreach((array)$lang as $k1=>$v1){
+ 					foreach($this->config->item('support_language') as $v2){
+ 						$data = array('lang_type'=>$v2,'lang_file'=>$v,'lang_key'=>$k1,'lang_val'=>is_array($v1)?implode('|',$v1):$v1,'is_trans'=>$v2=='zh'?1:0); 
+ 						
+ 						$this->db->insert('lang',$data);
+ 						
+ 					}
+ 				}
+
+ 			}
+ 		}
+
+ 		$this->mypage->backend_redirect('system_manage/action_lang_trans','导入完毕');
+
+		
+ 	}
+ 	
+ 	/**
+ 	 * 导出
+ 	 * @return [type] [description]
+ 	 */
+ 	function action_lang_export(){
+		$this->mypage->load_backend_view('lang_trans',$data);
+ 	}
+
+ 	/**
+ 	 * [action_trans_batch description]
+ 	 * @return [type] [description]
+ 	 */
+ 	function action_trans(){
+ 		$this->load->model('Trans_model','it');
+	    if($_REQUEST['type']=='auto'){
+	  		 $this->it->batch_trans($_GET['lang_id'],$_GET['run']);
+	  		 exit();
+	  	}
+	  	if($_REQUEST['type']=='once'){
+	  		  $this->it->single_trans($_GET['lang_id'],$_GET['run']);
+	  		 exit();
+	  	}
+
+ 	}
+
+
+
+
  	
 }
 

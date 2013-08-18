@@ -169,6 +169,7 @@ class MY_Pagination extends CI_Pagination {
 		// Render the "next" link
 		if ($this->cur_page < $num_pages)
 		{
+			$this->setNextPage($this->base_url.($this->cur_page * $this->per_page));
 			$output .= $this->next_tag_open.'<a href="'.$this->base_url.($this->cur_page * $this->per_page).'">'.$this->next_link.'</a>'.$this->next_tag_close;
 		}
 
@@ -193,7 +194,7 @@ class MY_Pagination extends CI_Pagination {
 		$output = preg_replace("#([^:])//+#", "\\1/", $output);
 		// Add the wrapper HTML if exists
 		$output = $this->full_tag_open.$output.$this->full_tag_close;
-
+		$output.= '  Total '.$this->total_rows.' Records';
 		return $output;
 	}
 	
@@ -343,6 +344,15 @@ class MY_Pagination extends CI_Pagination {
 		$output = $this->full_tag_open.$output.$this->full_tag_close;
 
 		return $output;
+	}
+
+
+	function setNextPage($url){
+		$this->next_link_url = $url;
+	}
+
+	function getNextPage(){
+		return $this->next_link_url;
 	}
 }
 // END Pagination Class

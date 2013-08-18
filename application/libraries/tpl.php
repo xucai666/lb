@@ -259,15 +259,15 @@ function func_get_nav($parameter){
 function create_button($array){
 	extract($array);
 	$CI = & get_instance();
-	$src = $CI->mypage->getRes('img','backend').'/button_'.$type.'.gif';
+	$title = lang('button_'.$type);
 	if($url){
 		if(strpos($url, 'javascript')!==false || strpos($url, 'http:')!==false){
-			$html = '<a href="'.$url.'"><img src="'.$src.'" class="no-border"  /></a>';
+			$html = '<a href="'.$url.'" class="button_bg" id="'.$id.'" >'.$title.'</a>';
 		}else{
-			$html = '<a href="'.site_url($url).'"><img src="'.$src.'" class="no-border"  /></a>';
+			$html = '<a href="'.site_url($url).'" class="button_bg" id="'.$id.'">'.$title.'</a>';
 		}
 	}else{
-	 	 $html = '<input type="image" src="'.$src.'"  '.$ext.' class="no-border"   />';
+	 	 $html ='<input type="submit" class="button_bg no-border"  id="'.$id.'"  value="'.$title.'" '.$ext.'    />';
 	}
 	return $html;
 

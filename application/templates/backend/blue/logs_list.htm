@@ -12,7 +12,8 @@
     
     <label>
       <select name="log_type" id="log_type">
-      <!--{html_options options=$log_types selected=$log_type_default}-->
+        <option value=''>请选择</option>
+        <!--{html_options options=$log_types selected=$log_type_default}-->
       </select>
     </label>
     
@@ -23,7 +24,7 @@
         <input type="text" name="log_date" size="10" readonly="readonly" onclick="WdatePicker()" class="Wdate" value="<!--{$smarty.get.log_date}-->" />      
         
 
-	<input type="submit" name="submit" value="<!--{$lang_log.query}-->" />
+        <!--{create_button type='search'}-->
 	</form>
 
 </td>
@@ -39,7 +40,9 @@
   <thead>
 <tr>
  
-  <th><!--{$lang_log.select}--></th>
+  <th>
+    <input type="checkbox" onclick="$('.log_ids').prop('checked',$(this).prop('checked'));" />
+    <!--{create_button type='delete'}--></th>
    <th>编号</th>
   <th><!--{$lang_log.operator}--></th>
   <th><!--{$lang_log.module_name}--></th>
@@ -68,8 +71,8 @@
 
 <div align="center">
   <label>
-    <input type="button" name="button2" id="button2" value="<!--{$lang_log.select_all}-->" onclick='$(".log_ids").attr("checked",true);' />
-    <input type="submit" name="button" id="button" value="<!--{$lang_log.del}-->" onclick="return confirm('<!--{$lang_log.del_confirm}-->')" />
+  
+
   </label>
 </div>
 
