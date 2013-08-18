@@ -1,34 +1,28 @@
 <?php
-/*
- * Created on 2010-1-4
- * 分类语言
- * To change the template for this generated file go to
- * Window - Preferences - PHPeclipse - PHP - Code Templates
- */
- //标签
- $lang['modules_manage']													= '模型维护';
- $lang['modules_valid_primary']													= '请添加主键字段';
- $lang['modules_valid_table']													= '保存失败，表格已经存在';
- $lang['modules_success_save']													= '保存成功';
- $lang['modules_success_delete']												= '删除成功';
- $lang['modules_error_parameter']												= '参数错误';
- $lang['modules_error_delete']													= '删除失败，请先清除模型下的数据';
- $lang['modules_input_name']													= '模块名称';
- $lang['modules_input_sub_module']													= '下级模块';
- $lang['modules_input_select']													= '请选择';
- $lang['modules_input_tb']													= '数据表';
- $lang['modules_input_desc']													= '模块描述';
- $lang['modules_input_related_fields']													= '关联字段';
- $lang['modules_input_field_type']													= '字段类型';
- $lang['modules_input_field_name']													= '字段名称';
- $lang['modules_input_field_alias']													= '别名';
- $lang['modules_input_field_length']													= '字段长度';
- $lang['modules_input_field_input_value']													= '输入值';
- $lang['modules_input_field_output_value']													= '输出值';
- $lang['modules_input_field_primary']													= '主键';
- $lang['modules_input_field_query_able']													= '可查询';
- $lang['modules_input_field_valid']													= '验证式';
- $lang['modules_input_field_desc']													= '字段说明';
- $lang['modules_input_field_opt']													= '操作';
-
+ $lang = array (
+  'modules_manage' => 'Model maintenance',
+  'modules_valid_primary' => 'Please add the primary key fields',
+  'modules_valid_table' => 'Failed to save table already exists',
+  'modules_success_save' => 'Successfully saved',
+  'modules_success_delete' => 'Deleted successfully',
+  'modules_error_parameter' => 'Parameter error',
+  'modules_error_delete' => 'Delete fails, please clear the model data',
+  'modules_input_name' => 'Module name',
+  'modules_input_sub_module' => 'Subordinate modules',
+  'modules_input_select' => 'Please select',
+  'modules_input_tb' => 'Data table',
+  'modules_input_desc' => 'Module description',
+  'modules_input_related_fields' => 'Associated fields',
+  'modules_input_field_type' => 'Field type',
+  'modules_input_field_name' => 'Field name',
+  'modules_input_field_alias' => 'Alias',
+  'modules_input_field_length' => 'Field length',
+  'modules_input_field_input_value' => 'Enter a value',
+  'modules_input_field_output_value' => 'Output value',
+  'modules_input_field_primary' => 'Primary key',
+  'modules_input_field_query_able' => 'Query',
+  'modules_input_field_valid' => 'Validation type',
+  'modules_input_field_desc' => 'Field description',
+  'modules_input_field_opt' => 'Operation',
+);
 ?>

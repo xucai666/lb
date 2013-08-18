@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-18 16:33:25
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-18 17:48:40
          compiled from "application\templates\backend\blue\lang_trans.htm" */ ?>
 <?php /*%%SmartyHeaderCode:1878952105948deb8d9-88192751%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '34afc598be3111b360e4d65c8ae23fe3a4ab978d' => 
     array (
       0 => 'application\\templates\\backend\\blue\\lang_trans.htm',
-      1 => 1376843547,
+      1 => 1376848119,
       2 => 'file',
     ),
   ),
@@ -27,6 +27,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'item' => 0,
     'key' => 0,
     'page_link' => 0,
+    'page_size' => 0,
+    'count' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -34,9 +36,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <div class="nav_title">多语言翻译</div>
-<div  align="right"><a href="<?php echo func_site_url(array('segments'=>'/backend/system_manage/action_lang_import'),$_smarty_tpl);?>
+<div  align="right">
+
+	<a href="<?php echo func_site_url(array('segments'=>'/backend/system_manage/action_lang_import'),$_smarty_tpl);?>
 " onclick="return confirm('重新载入将清空已翻译数据？');"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
-/import_lang.png"  /></a></div>
+/import_lang.png"  /></a>
+
+	<a href="<?php echo func_site_url(array('segments'=>'/backend/system_manage/action_lang_export'),$_smarty_tpl);?>
+" onclick="return confirm('确定导出？');"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
+/export_lang.png"  /></a>
+
+
+</div>
 
 <table class='search'>
 	<tr><td>
@@ -155,31 +166,47 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 
 <script type="text/javascript">
 	var run=0;	
-	function next_trans(){		
+	var page_size = +("<?php echo $_smarty_tpl->tpl_vars['page_size']->value;?>
+");
+	var next_page = (+getquerystring('per_page'))+page_size;
+	var total_page = +("<?php echo $_smarty_tpl->tpl_vars['count']->value;?>
+");
+	
+	function next_trans(){	
+		var obj = document.getElementById('js_'+run);
+		if(run==page_size ||  obj==undefined){
+			if(next_page>total_page) next_page = 0;
+			var lnk = location.href;
+			 lnk = replace_url_param(lnk,"per_page",next_page);
+			
+			 lnk = replace_url_param(lnk,"auto",1);
+			
+			
+			 location.href = lnk;
+			 return false;
+		}		
 		var ps = jQuery('#trans_status_'+run).position();
 		document.body.scrollTop = parseInt(ps.top)-180;		
-		var obj = document.getElementById('js_'+run);				
+						
 		if(obj!=undefined) {	
 			document.getElementById('trans_status_'+run).innerHTML='<img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /loader.gif" />';		
 			obj.src  = obj.getAttribute('translink')+'&rnd='+Math.random();		
 					
 		}	
-				
+
+
 		run++;
-		if(run==15){
-			var lnk = location.href;
-			 lnk = replace_url_param(lnk,"per_page",(+getquerystring('per_page'))+15);
-			 lnk = replace_url_param(lnk,"auto",1);
-			 location.href = lnk;
-		}
+
+
+
 		
 	}
 	
 
 	function resetrun(){
 		run = 0;
-		clearTimeout(setTimeout(function(){next_trans();},4000)-1);		
+		clearTimeout(setTimeout(function(){next_trans();},1000)-1);		
 	}
 	
 	
@@ -199,15 +226,16 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 
 
  function replace_url_param(url,name,val){
+ 
 	var s ;
 	var reg = new RegExp(name+"=([^&]*)(&|$)","ig");
 	var h = reg.exec(url);
 	if(!h){
-		if(url.lastIndexOf('&')!="-1"){
-			url = url.substr(0, url.lastIndexOf('&'));
+
+		if(url.substr(-1, 1)=='&'){
+			url = url.substr(0, url.length-1);
 		}
 			
-		
 		s = (url.indexOf("?")=="-1")?'?'+name+"="+val:"&"+name+"="+val;
 		s = url+s;
 		

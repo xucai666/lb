@@ -1,6 +1,13 @@
 <!--{include file="`$dir_backend`/top.htm"}-->
 <div class="nav_title">多语言翻译</div>
-<div  align="right"><a href="<!--{func_site_url segments='/backend/system_manage/action_lang_import'}-->" onclick="return confirm('重新载入将清空已翻译数据？');"><img src="<!--{$img_url}-->/import_lang.png"  /></a></div>
+<div  align="right">
+
+	<a href="<!--{func_site_url segments='/backend/system_manage/action_lang_import'}-->" onclick="return confirm('重新载入将清空已翻译数据？');"><img src="<!--{$img_url}-->/import_lang.png"  /></a>
+
+	<a href="<!--{func_site_url segments='/backend/system_manage/action_lang_export'}-->" onclick="return confirm('确定导出？');"><img src="<!--{$img_url}-->/export_lang.png"  /></a>
+
+
+</div>
 
 <table class='search'>
 	<tr><td>
@@ -90,30 +97,44 @@
 
 <script type="text/javascript">
 	var run=0;	
-	function next_trans(){		
+	var page_size = +("<!--{$page_size}-->");
+	var next_page = (+getquerystring('per_page'))+page_size;
+	var total_page = +("<!--{$count}-->");
+	
+	function next_trans(){	
+		var obj = document.getElementById('js_'+run);
+		if(run==page_size ||  obj==undefined){
+			if(next_page>total_page) next_page = 0;
+			var lnk = location.href;
+			 lnk = replace_url_param(lnk,"per_page",next_page);
+			
+			 lnk = replace_url_param(lnk,"auto",1);
+			
+			
+			 location.href = lnk;
+			 return false;
+		}		
 		var ps = jQuery('#trans_status_'+run).position();
 		document.body.scrollTop = parseInt(ps.top)-180;		
-		var obj = document.getElementById('js_'+run);				
+						
 		if(obj!=undefined) {	
 			document.getElementById('trans_status_'+run).innerHTML='<img src="<!--{$img_url}-->/loader.gif" />';		
 			obj.src  = obj.getAttribute('translink')+'&rnd='+Math.random();		
 					
 		}	
-				
+
+
 		run++;
-		if(run==15){
-			var lnk = location.href;
-			 lnk = replace_url_param(lnk,"per_page",(+getquerystring('per_page'))+15);
-			 lnk = replace_url_param(lnk,"auto",1);
-			 location.href = lnk;
-		}
+
+
+
 		
 	}
 	
 
 	function resetrun(){
 		run = 0;
-		clearTimeout(setTimeout(function(){next_trans();},4000)-1);		
+		clearTimeout(setTimeout(function(){next_trans();},1000)-1);		
 	}
 	
 	
@@ -132,15 +153,16 @@
 
 
  function replace_url_param(url,name,val){
+ 
 	var s ;
 	var reg = new RegExp(name+"=([^&]*)(&|$)","ig");
 	var h = reg.exec(url);
 	if(!h){
-		if(url.lastIndexOf('&')!="-1"){
-			url = url.substr(0, url.lastIndexOf('&'));
+
+		if(url.substr(-1, 1)=='&'){
+			url = url.substr(0, url.length-1);
 		}
 			
-		
 		s = (url.indexOf("?")=="-1")?'?'+name+"="+val:"&"+name+"="+val;
 		s = url+s;
 		

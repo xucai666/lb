@@ -1,57 +1,42 @@
 <?php
-/*
- * Created on 2010-1-4
- * 分类语言
- * To change the template for this generated file go to
- * Window - Preferences - PHPeclipse - PHP - Code Templates
- */
- //标签
- $lang['title']													= '产品名称';
- $lang['date']														= '日期';
- $lang['content']													= '产品描述';
- $lang['submit']													= '提交';
- $lang['query']													= '查询';
- $lang['operate']													= '操作';
- $lang['category']													= '分类';
- $lang['author']													= '出处';
- $lang['order']													= '排序';
- $lang['visit']													= '访问次数';
- $lang['select']													= '请选择'; 
- $lang['basic_property']											= '基本属性'; 
- $lang['external_property']										= '扩展属性'; 
- $lang['view']														= '查看'; 
- $lang['add']														= '添加'; 
- $lang['modify']													= '修改'; 
- $lang['delete']													= '删除'; 
- $lang['confirm_delete']											= '确定删除?'; 
- $lang['goods_param_memo']										= '默认表格宽度500，行高25，字体宋体，12px'; 
- $lang['goods_pic']												= '图片'; 
- //新添加部分
- $lang['p_intr']													= '描述'; 
- $lang['p_param']													= '技术参数'; 
- $lang['p_doc_relate']											= '相关文档'; 
- $lang['p_driver']													= '软件驱动'; 
- $lang['p_demo']													= '示例下载'; 
- $lang['p_fit']													= '相关配件'; 
- $lang['p_news']													= '产品新闻'; 
- $lang['p_adv']													= '宣传彩页'; 
- $lang['p_faq']													= 'FAQ'; 
- 
- $lang['p_dt']														= '数据类型'; 
- $lang['p_rm']														= '识读方式'; 
- $lang['p_int']													= '通讯方式'; 
- $lang['p_wir']													= '无线通讯'; 
- 
- //验证
- $lang['inp_title']												= '请输入产品名称';
- $lang['inp_content']												= '请输入内容';
- $lang['inp_category']											= '请选择分类';
- 
- 
- //主题
- 
- //日志
-  $lang['log_add']													= '添加 %s';
-  $lang['log_mod']													= '修改 %s';
-  
+ $lang = array (
+  'title' => 'Product name',
+  'date' => 'Date',
+  'content' => 'Product description',
+  'submit' => 'Submit',
+  'query' => 'Query',
+  'operate' => 'Operation',
+  'category' => 'Classification',
+  'author' => 'Source',
+  'order' => 'Sort',
+  'visit' => 'Number of visits',
+  'select' => 'Please select',
+  'basic_property' => 'Basic properties',
+  'external_property' => 'Extended properties',
+  'view' => 'View',
+  'add' => 'Add',
+  'modify' => 'Modify',
+  'delete' => 'Delete',
+  'confirm_delete' => 'Sure you want to delete?',
+  'goods_param_memo' => 'The default table width 500, row 25, font Arial 12px',
+  'goods_pic' => 'Pictures',
+  'p_intr' => 'Description',
+  'p_param' => 'Technical parameters',
+  'p_doc_relate' => 'Related document',
+  'p_driver' => 'Software driver',
+  'p_demo' => 'Sample download',
+  'p_fit' => 'Related accessories',
+  'p_news' => 'Product news',
+  'p_adv' => 'Brochure',
+  'p_faq' => 'FAQ',
+  'p_dt' => 'Data type',
+  'p_rm' => 'Reading mode',
+  'p_int' => 'Means of communication',
+  'p_wir' => 'Wireless communication',
+  'inp_title' => 'Please enter the product name',
+  'inp_content' => 'Please enter content',
+  'inp_category' => 'Please select a category',
+  'log_add' => 'Adding%s',
+  'log_mod' => 'Modify the%s',
+);
 ?>

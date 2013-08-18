@@ -251,14 +251,19 @@ class System_manage extends CI_Controller{
  	function action_lang_trans(){
  		$this->db->select('*',false)->from('lang');
  		$this->input->get('lang_type') && $this->db->where('lang_type',$this->input->get('lang_type'));
- 		$this->input->get('status')>=0 && $this->db->where('is_trans',$this->input->get('status'));
+ 		
+ 		if(isset($_GET['status']) && $_GET['status']!="-1"){
+ 			$this->db->where('is_trans',$this->input->get('status'));
+ 		}
  		$this->db->order_by('lang_id','asc');
- 		$data = $this->mydb->fetch_all(15);
+ 		$page_size = 15;
+ 		$data = $this->mydb->fetch_all($page_size);
  		$status = array(
  			'1'=>'已翻译',
  			'0'=>'未翻译',
  		);
- 		$data = array_merge($data,array('status'=>$status));
+ 		$data = array_merge($data,array('status'=>$status,'page_size'=>$page_size));
+ 		
 		$this->mypage->load_backend_view('lang_trans',$data);
  	}
  	
@@ -298,7 +303,22 @@ class System_manage extends CI_Controller{
  	 * @return [type] [description]
  	 */
  	function action_lang_export(){
-		$this->mypage->load_backend_view('lang_trans',$data);
+
+ 		$this->load->helper('file');
+ 		$path = APPPATH.'language/';
+ 		
+ 		$ls = $this->db->select('*',false)->from('lang')->where("lang_type !='zh'")->order_by('lang_id','asc')->get()->result_array();
+ 		foreach($ls as $v){
+ 			$file = $path.$v['lang_type'].'/'.$v['lang_file'];
+ 			$data[$file][$v['lang_key']] = $v['lang_val'];
+ 		}
+ 		
+ 		foreach($data as $key=>$v){
+ 			write_file($key,"<?php\n \$lang = ".var_export($v,true).";\n?>");
+ 		}
+
+ 		$this->mypage->backend_redirect('system_manage/action_lang_trans','导出完毕');
+		
  	}
 
  	/**
