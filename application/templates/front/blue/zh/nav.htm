@@ -1,36 +1,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<script language='javascript' type='text/javascript'>
-function trunNav(num){
-	var navNum = 7;				// 菜单数
-	var navName = "nav";			// 菜单名(去除id后面的序号的名称)
-	var navContent = "navContent";// 内容名(去除id后面的序号的名称)
-
-	for (i=1; i<=navNum; i++){
-		if (i==num){
-			document.getElementById(navName + i).style.background = "url(<!--{$img_url}-->/index_22.jpg)";	// 鼠标经过时图片
-			document.getElementById(navName + i).style.color = "#305490";
-			document.getElementById(navName + i).style.fontSize = "14";
-			/*没有切换内容不需要这两个背景document.getElementById(navContent + i).style.display = "";	// 显示选中菜单的内容*/
-		}else{
-			document.getElementById(navName + i).style.background = "url()";	// 还原成原来的图片
-			document.getElementById(navName + i).style.color = "#333333";
-			/*document.getElementById(navContent + i).style.display = "none";	// 关闭没选中菜单的内容*/
-			document.getElementById(navName + i).style.fontSize = "12";
-		}
-	}
-}
-</script>
-
-<script language='javascript' type='text/javascript'>
-// 默认显示的菜单
-function resetNav(){
-	trunNav('<!--{$module_select}-->');	// 默认菜单
-}
-</script>
-
-    <script language='javascript' type='text/javascript'>
-resetNav();	// 默认第一个菜单为选中项
-</script>
+	
 
 <table width="233" border="0" cellspacing="0" cellpadding="0">
       <tr>
@@ -43,7 +12,7 @@ resetNav();	// 默认第一个菜单为选中项
           	<ul>
     
       <!--{foreach from=$modules item=item key=key }-->
-        <li id="nav<!--{$key}-->" onmouseover="trunNav(<!--{$key}-->)" onmouseout="resetNav()"  ><!--{ci_anchor title=$item.title segment="front/search/index/`$key`"}--></li>
+        <li id="nav<!--{$key}-->"   ><!--{ci_anchor title=$item.title segment="front/search/index/`$key`"}--></li>
         <!--{/foreach}-->
       </ul>    
          

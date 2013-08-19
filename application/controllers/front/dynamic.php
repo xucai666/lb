@@ -26,6 +26,7 @@ class Dynamic extends CI_Controller {
 		
 
 		$this->mypage->view_cache_all($act2view);
+		$this->load->library('Breadcrumb');
 
 	}
 	
@@ -37,7 +38,11 @@ class Dynamic extends CI_Controller {
 	
 			
 		
-		
+		// add breadcrumbs
+		$this->breadcrumb->append_crumb('Home', '/');
+		$this->breadcrumb->append_crumb('Dynamic', 'front/dynamic');
+		$this->breadcrumb->output();
+
 		$this->mypage->load_front_view("dynamic",$data);
 		
 		
@@ -48,7 +53,12 @@ class Dynamic extends CI_Controller {
 	//显示信息
 	function view(){
 		//加载语言包
-		
+		// add breadcrumbs
+		$this->breadcrumb->append_crumb('Home', '/');
+		$this->breadcrumb->append_crumb('Dynamic', 'front/dynamic');
+		$this->breadcrumb->append_crumb('View', 'front/dynamic/view');
+		$this->breadcrumb->output();
+	
 		$this->mypage->load_front_view("dynamic_view",$data);
 	}
 	

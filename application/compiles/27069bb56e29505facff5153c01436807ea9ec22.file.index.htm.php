@@ -1,20 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-18 15:28:40
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-19 01:33:05
          compiled from "application\templates\front\blue\zh\index.htm" */ ?>
-<?php /*%%SmartyHeaderCode:284195210e82880a5d2-42526140%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:11570521167e8d6d617-04577616%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '27069bb56e29505facff5153c01436807ea9ec22' => 
     array (
       0 => 'application\\templates\\front\\blue\\zh\\index.htm',
-      1 => 1376547020,
+      1 => 1376875968,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '284195210e82880a5d2-42526140',
+  'nocache_hash' => '11570521167e8d6d617-04577616',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_521167e91d4604_24371649',
   'variables' => 
   array (
     'optimize' => 0,
@@ -30,10 +32,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dir_front' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5210e828a20f86_82649919',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5210e828a20f86_82649919')) {function content_5210e828a20f86_82649919($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_521167e91d4604_24371649')) {function content_521167e91d4604_24371649($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -183,7 +183,7 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 /daohan_27.jpg" width="2" height="33" /></td>
   </tr>
 </table>
-<table width="991" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:13px;">
+<table width="991" border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
     <td width="652" valign="top"><table width="642" border="0" cellspacing="0" cellpadding="0">
       <tr>
