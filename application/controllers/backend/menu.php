@@ -42,6 +42,9 @@
  	function action_add(){
  		
  		$m_id = $this->uri->segment(4);
+
+ 		
+
 		if($m_id){
 			$db_conf = array(
 				'table_name'=>$this->mydb2->table('system_rights'),
@@ -54,7 +57,9 @@
 			$main['checked'] = $main['r_display']?"checked=checked":"";	
 			
 		}else{
+
 			$main['checked'] = "checked=checked";
+			$main['r_pid'] =  $this->input->get('pid');
 		}
 		//parent menu	
  		$db_menus = $this->myauth->getAuthMenu();

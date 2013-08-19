@@ -308,6 +308,9 @@ class System_manage extends CI_Controller{
  		$path = APPPATH.'language/';
  		
  		$ls = $this->db->select('*',false)->from('lang')->where("lang_type !='zh'")->order_by('lang_id','asc')->get()->result_array();
+ 		if(!count($ls)){
+ 			$this->mypage->backend_redirect('system_manage/action_lang_trans','操作失败，无数据');
+ 		}
  		foreach($ls as $v){
  			$file = $path.$v['lang_type'].'/'.$v['lang_file'];
  			$data[$file][$v['lang_key']] = $v['lang_val'];
