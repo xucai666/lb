@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-19 00:34:01
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-19 04:05:22
          compiled from "application\templates\front\blue\zh\message.htm" */ ?>
 <?php /*%%SmartyHeaderCode:7755521167f98e95f3-92226303%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd1722a81ed772567b0c0bc9b1c8698f0db641d48' => 
     array (
       0 => 'application\\templates\\front\\blue\\zh\\message.htm',
-      1 => 1374155501,
+      1 => 1376875968,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_521167f9a3c028_95498722',
   'variables' => 
   array (
     'dir_front' => 0,
@@ -22,18 +24,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'site_url' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_521167f9a3c028_95498722',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_521167f9a3c028_95498722')) {function content_521167f9a3c028_95498722($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_front']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
-<table width="992" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:13px;">
+<table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
     <td><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /shousou_05.jpg" width="992" height="180" /></td>
   </tr>
 </table>
-<table width="992" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:13px;">
+<table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
     <td width="246" valign="top">
      	    <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_front']->value)."/left_message.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>

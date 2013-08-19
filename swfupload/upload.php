@@ -62,6 +62,8 @@ isset($_SERVER['HTTP_REFERER']) or exit(Header("HTTP/1.1 404 Not Found"));
 	$post_path = $_POST['save_path'];
 	$save_path = $post_path? base64_decode($post_path).DIRECTORY_SEPARATOR:getcwd()."/uploads/"; // The path were we will save the file (getcwd() may not be reliable and should be tested in your environment)
 
+	make_dir($save_path);
+
 	$upload_name = "Filedata";
 	$max_file_size_in_bytes = 2147483647;				// 2GB in bytes
 	$extension_whitelist = array("jpg", "gif", "png","css","js","htm","swf");	// Allowed file extensions
@@ -174,4 +176,10 @@ function HandleError($message) {
 	header("HTTP/1.1 500 Internal Server Error");
 	echo $message;
 }
+
+function make_dir($pathname, $mode = null) {  
+	    is_dir($pathname) or mkdir($pathname, $mode, true);  
+	    return realpath($pathname);  
+	}  
+
 ?>

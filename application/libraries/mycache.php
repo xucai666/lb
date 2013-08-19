@@ -166,7 +166,12 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
 		}  
 	}  
 
- 	
+
+	function make_dir($pathname, $mode = null) {  
+	    is_dir($pathname) or mkdir($pathname, $mode, true);  
+	    return realpath($pathname);  
+	}  
+	 	
  	
  		
  }
