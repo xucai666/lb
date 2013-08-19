@@ -115,7 +115,7 @@ class Mdata_model extends CI_Model{
 
 				if(is_array($query[$v['r_name']])){
 					foreach($query[$v['r_name']] as $v1):
-						$this->db->or_where("FIND_IN_SET('$v1',$v[r_name])>0",NULL,'or');
+						$this->db->where("FIND_IN_SET('$v1',$v[r_name])>0",NULL,'or');
 					endforeach;	
 				}else{
 					$query[$v['r_name']] && $this->db->like($v['r_name'],$query[$v['r_name']],$query_types[$v[r_queryable]]);

@@ -298,6 +298,9 @@ function func_vsprintf($array){
 
 	$html = htmlspecialchars_decode($html);
 	
+	$html = str_replace("%name",$array[name],$html);
+	$html = str_replace("%value",$array[value],$html);
+	
 	$html = preg_replace("/<\?php(.*?)\?>/ies","eval(stripcslashes('\\1'))",$html);
 
 	//select options 
@@ -333,8 +336,8 @@ function func_vsprintf($array){
 	endforeach;
 	
 	
-	$html = str_replace("%name",$array[name],$html);
-	$html = str_replace("%value",$array[value],$html);
+	//$html = str_replace("%name",$array[name],$html);
+	//$html = str_replace("%value",$array[value],$html);
 	
 	return $html;	
 }

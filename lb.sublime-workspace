@@ -427,6 +427,10 @@
 		"selected_items":
 		[
 			[
+				"removep",
+				"Package Control: Remove Package"
+			],
+			[
 				"smarty",
 				"Set Syntax: Smarty"
 			],
@@ -437,10 +441,6 @@
 			[
 				"install",
 				"Package Control: Install Package"
-			],
-			[
-				"removep",
-				"Package Control: Remove Package"
 			],
 			[
 				"reove",
@@ -555,7 +555,7 @@
 				"Snippet: pri"
 			]
 		],
-		"width": 512.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -572,15 +572,20 @@
 	},
 	"file_history":
 	[
+		"/E/phpnow/htdocs/lb/application/models/mdata_model.php",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/mdata.php",
+		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/mdata_add.htm",
+		"/E/phpnow/htdocs/lb/application/models/admins_model.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/core.js",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/core.js",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/common.php",
 		"/E/phpnow/htdocs/lb/system/libraries/Form_validation.php",
 		"/E/phpnow/htdocs/lb/system/language/en/form_validation_lang.php",
 		"/E/phpnow/htdocs/lb/system/language/zh/form_validation_lang.php",
 		"/E/phpnow/htdocs/lb/system/core/Common.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/mdata.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/fields.php",
 		"/E/phpnow/htdocs/lb/application/helpers/MY_url_helper.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/core.js",
 		"/E/phpnow/htdocs/lb/application/libraries/mypage.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/fields_list.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/backend_style.css",
@@ -602,7 +607,6 @@
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/jquery-1.8.2.min.js",
 		"/D/tools/k开发成果/develop/php/PHP作品/newland/system/cache/%%69^695^695A10D0%%school_list.tpl.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/iwin.js",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/core.js",
 		"/E/phpnow/htdocs/lb/application/libraries/myform.php",
 		"/D/tools/k开发成果/develop/php/PHP作品/newland/system/cache/%%6B^6BA^6BA30A49%%member_add.tpl.php",
 		"/E/phpnow/htdocs/lb/application/libraries/mycache.php",
@@ -658,7 +662,6 @@
 		"/E/phpnow/htdocs/lb/application/libraries/breadcrumb.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/top.htm",
 		"/E/phpnow/htdocs/lb/application/libraries/mydb.php",
-		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
 		"/E/phpnow/htdocs/lb/application/config/breadcrumb.php",
 		"/E/phpnow/htdocs/lb/application/libraries/Breadcrumb.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/mdata_list.htm",
@@ -687,7 +690,6 @@
 		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_lang.php",
 		"/E/phpnow/htdocs/lb/application/libraries/Smarty-3.1.14/libs/sysplugins/smarty_internal_compile_private_registered_block.php",
 		"/E/phpnow/htdocs/lb/system/libraries/Pagination.php",
-		"/E/phpnow/htdocs/lb/application/models/admins_model.php",
 		"/D/tools/k开发成果/个人开发/ec/admin/templates/goods_list.htm",
 		"/D/tools/k开发成果/个人开发/ec/admin/templates/goods_search.htm",
 		"/E/phpnow/htdocs/lb/system/core/Lang.php",
@@ -697,9 +699,7 @@
 		"/E/phpnow/htdocs/lb/application/controllers/front/search.php",
 		"/E/phpnow/htdocs/lb/docs/待完成.txt.dump",
 		"/E/phpnow/htdocs/lb/docs/待完成.txt",
-		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_admins_lang.php",
-		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_download_lang.php",
-		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_message_lang.php"
+		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_admins_lang.php"
 	],
 	"find":
 	{
@@ -707,7 +707,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 99.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"E:\\phpnow\\htdocs\\lb\\application\\templates",
@@ -845,6 +845,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"FIND_IN_SET",
+			"func_vsprintf",
+			"ran_index",
 			"_error_messages",
 			"msg",
 			"error",
@@ -969,10 +972,7 @@
 			"link_ww",
 			"inputsearch",
 			"input_tag_open",
-			"1=1",
-			"per_page",
-			"query_string_segment",
-			"$output"
+			"1=1"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1123,6 +1123,34 @@
 		"selected_items":
 		[
 			[
+				"mdata_mo",
+				"application/models/mdata_model.php"
+			],
+			[
+				"mdata.php",
+				"application/controllers/backend/mdata.php"
+			],
+			[
+				"mdata_add",
+				"application/templates/backend/blue/mdata_add.htm"
+			],
+			[
+				"tpl.php",
+				"application/libraries/tpl.php"
+			],
+			[
+				"mdata_ad",
+				"application/templates/backend/blue/mdata_add.htm"
+			],
+			[
+				"admins_mo",
+				"application/models/admins_model.php"
+			],
+			[
+				"core.js",
+				"application/templates/front/blue/zh/js/core.js"
+			],
+			[
 				"valida",
 				"system/libraries/Form_validation.php"
 			],
@@ -1131,20 +1159,12 @@
 				"application/controllers/backend/common.php"
 			],
 			[
-				"mdata.php",
-				"application/controllers/backend/mdata.php"
-			],
-			[
 				"fields.php",
 				"application/controllers/backend/fields.php"
 			],
 			[
 				"myurl_",
 				"application/helpers/MY_url_helper.php"
-			],
-			[
-				"core.js",
-				"application/templates/backend/blue/js/core.js"
 			],
 			[
 				"backend_sty",
@@ -1273,10 +1293,6 @@
 			[
 				"mydb.php",
 				"application/libraries/mydb.php"
-			],
-			[
-				"tpl.php",
-				"application/libraries/tpl.php"
 			],
 			[
 				"common_mode",
@@ -1611,28 +1627,12 @@
 				"debug/debug.txt"
 			],
 			[
-				"admins_mo",
-				"application/models/admins_model.php"
-			],
-			[
 				"common",
 				"application/models/common_model.php"
 			],
 			[
 				"agents_add",
 				"application/templates/front/blue/en/js/item/agents_sub_add.js"
-			],
-			[
-				"de",
-				"debug/debug.txt"
-			],
-			[
-				"debug",
-				"debug/debug.txt"
-			],
-			[
-				"auto",
-				"application/config/autoload.php"
 			]
 		],
 		"width": 0.0

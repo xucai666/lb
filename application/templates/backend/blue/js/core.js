@@ -501,35 +501,30 @@ function resizeImage(objImg,maxWidth,maxHeight){
 	$(objImg).height(h);
 }
 
+/**
+ * autoComplete
+ * @param  {[type]} _auto_obj [description]
+ * @return {[type]}           [description]
+ */
 function load_autocomplete(_auto_obj){
-
-			var cache = {};
-				
-
-					_auto_obj.autocomplete({
-						autoFocus:true,
-						
-					     source: function( request, response ) {
-					     	
-					     var ran_index = Math.round(Math.random()*100000);
-						_auto_url = site_url+_auto_obj.attr('rel');
-				        var term = request.term;
-				        if ( term in cache ) {
-				          response( cache[term] );
-				          return;
-				        }
-				        
-				        $.getJSON(_auto_url, request, function( data, status, xhr ) {
-				          cache[term] = data;
-				          response( data );
-				        });
-				      },
-					      minLength: 1,
-					      delay:40,
-					     
-					      response: function( event, ui ) {	_auto_obj.prevAll('input.auto_id').val('').val('');}, 
-					      focus: function( event, ui ) {	_auto_obj.prevAll('input.auto_id').val(ui.item.id);},
-
-					    });
-
-			}
+	var cache = {};
+	_auto_obj.autocomplete({
+		autoFocus:true,
+	     source: function( request, response ) {
+				_auto_url = site_url+_auto_obj.attr('rel');
+		        var term = request.term;
+		        if ( term in cache ) {
+		          response( cache[term] );
+		          return;
+		        }
+		        $.getJSON(_auto_url, request, function( data, status, xhr ) {
+		          cache[term] = data;
+		          response( data );
+		        });
+	      },
+	      minLength: 1,
+	      delay:40,
+	      response: function( event, ui ) {	_auto_obj.prevAll('input.auto_id').val('').val('');}, 
+	      focus: function( event, ui ) {	_auto_obj.prevAll('input.auto_id').val(ui.item.id);},
+	    });
+}
