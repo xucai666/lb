@@ -669,3 +669,7 @@ color:#ffffff;
 	width:30px;
 	height: 30px;
 }
+
+ .ui-autocomplete-loading {
+    background: white url('../images/loader.gif') right center no-repeat;
+  }

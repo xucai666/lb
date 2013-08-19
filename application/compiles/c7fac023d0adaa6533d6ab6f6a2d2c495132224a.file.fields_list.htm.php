@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-18 17:51:10
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-19 10:42:27
          compiled from "application\templates\backend\blue\fields_list.htm" */ ?>
 <?php /*%%SmartyHeaderCode:181065211098e34fd29-29433765%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c7fac023d0adaa6533d6ab6f6a2d2c495132224a' => 
     array (
       0 => 'application\\templates\\backend\\blue\\fields_list.htm',
-      1 => 1376726720,
+      1 => 1376908945,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5211098e517817_44170458',
   'variables' => 
   array (
     'dir_backend' => 0,
@@ -26,8 +28,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'page_link' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5211098e517817_44170458',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5211098e517817_44170458')) {function content_5211098e517817_44170458($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_options')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\function.html_options.php';
 ?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
@@ -52,6 +52,64 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ">
 			
 			<?php echo create_button(array('type'=>"search"),$_smarty_tpl);?>
+
+			<input type="text" name="%name" value="%value" class="auto_id">
+			<input type="text" id="autoComplete_tag" value="" rel="backend/common/action_autocomplete_admins2">
+
+			<input type="text" name="%name" value="%value" class="auto_id">
+
+			<input type="text" id="autoComplete_tag3" value="" rel="backend/common/action_autocomplete_admins3">
+			
+
+
+			<script language='javascript'>
+
+
+			function load_autocomplete(_auto_obj){
+
+	  	
+			
+			var cache = {};
+				
+
+					_auto_obj.autocomplete({
+						autoFocus:true,
+						
+					     source: function( request, response ) {
+					     	
+					     var ran_index = Math.round(Math.random()*100000);
+						_auto_url = site_url+_auto_obj.attr('rel');
+				        var term = request.term;
+				        if ( term in cache ) {
+				          response( cache[term] );
+				          return;
+				        }
+				        
+				        $.getJSON(_auto_url, request, function( data, status, xhr ) {
+				          cache[term] = data;
+				          response( data );
+				        });
+				      },
+					      minLength: 1,
+					      delay:400,
+					     
+					      response: function( event, ui ) {	_auto_obj.prevAll('input.auto_id').val('').val('');}, 
+					      focus: function( event, ui ) {	_auto_obj.prevAll('input.auto_id').val(ui.item.id);},
+
+					    });
+
+			}
+  $(function() {
+    
+
+  load_autocomplete($('#autoComplete_tag'));
+  load_autocomplete($('#autoComplete_tag3'));
+
+
+
+  });
+  </script>
+
 
 		</form>
 	</td></tr>

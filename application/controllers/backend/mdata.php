@@ -23,6 +23,7 @@ class Mdata extends CI_Controller{
 		$this->lang->load('item_backend_mdata',$this->Common_model->lang_get());
 		
 		
+		
 
 	}
 

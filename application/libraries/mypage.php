@@ -67,7 +67,7 @@ class Mypage{
 	*@return 文件路径
 	**/
 	function getRes($key,$type='front',$cat=''){
-		 return getRootUrl($key,$type).$cat;
+		 return getRootUrl($key,$type,$cat);
 	}
 	/**
 	 * 获取按钮
@@ -299,8 +299,8 @@ class Mypage{
 			if(empty($js)) return '';
 			$html_all_js = '';
 			if(is_array($js)){					
-				foreach($js as $value){				
-					$html_all_js .= '<script language="JavaScript" type="text/javascript" src="'.$catalog.'/'.$value.'.js"></script>'.chr(13);		
+				foreach($js as $v){				
+					$html_all_js .= '<script language="JavaScript" type="text/javascript" src="'.$catalog.'/'.$v.'.js"></script>'.chr(13);		
 													
 				}					
 			}else{

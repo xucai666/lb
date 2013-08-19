@@ -45,8 +45,17 @@
 	     function js_url($uri=null,$type='front',$catalog=null)
 	     {
 	         if(empty($uri)) return theme_url($type)."/js/";
-	         $catalog = $catalog ? $catalog:theme_url($type)."/js/";  
-	         $str= "<script type='text/javascript' src='".$catalog.$uri.".js' ></script>";
+	         $catalog = $catalog ? $catalog:theme_url($type)."/js/"; 
+	         $str = '';
+	         if(is_array($uri)){
+	         	foreach($uri as $v){
+	         		 $str .= "<script type='text/javascript' src='".$catalog.$v.".js' ></script>";
+	         	}
+	         }else{
+	          	$str = "<script type='text/javascript' src='".$catalog.$uri.".js' ></script>";
+	         }
+	          
+	        
 	         return $str;
 	     }
 	 }
@@ -103,9 +112,10 @@
 		 * @param  string $type front=>前台,backend=>后台
 		 * @return string       
 		 */
-	 	function getRootUrl($key,$type='front'){
+	 	function getRootUrl($key,$type='front',$cat=null){
 			$full_key  = $key.'_url';	
-			return  $full_key(null,$type);		
+			$path = $full_key(null,$type);
+			return  $cat?$path.$cat.'/':$path;		
 		}
 
 	 }

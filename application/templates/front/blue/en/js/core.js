@@ -150,14 +150,19 @@ function loadCity(areaid){
 	
 //加载自动完成	
 function load_autocomplete(obj,action_name){	
-	function format(item) {
-		return item.name;
-	}	
-	$(obj).autocomplete($('#sys_base_url').html()+"index.php/backend/common/"+action_name, {
-		width: 200,
+	
+	$(obj).focus().autocomplete(site_url+"/backend/common/"+action_name, {
+		width: 10,
 		dataType: "json",	
 		minChars:2,
-		autoFill:true,
+		autoFill:false,
+		selectFirst:false,
+		delay:400,
+		max:10,
+		mustMatch:true,
+		highlight: true,
+		scroll: true, 
+
 		parse: function(data) {				
 			return $.map(data, function(row) {	
 				return {
@@ -169,7 +174,7 @@ function load_autocomplete(obj,action_name){
 			});
 		},
 		formatItem: function(item) {
-			return format(item);
+			return item.name;
 		}
 	}).result(function(event,item){		
 		if($(obj).prev(".auto_id").size()>0){

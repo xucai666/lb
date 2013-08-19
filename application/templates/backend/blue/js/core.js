@@ -200,12 +200,13 @@ function load_autocomplete(obj,action_name){
 	function format(item) {
 		return item.name;
 	}	
-	$(obj).autocomplete($('#sys_base_url').html()+"index.php/backend/common/"+action_name, {
+	$(obj).autocomplete(site_url+"/backend/common/"+action_name, {
 		width: 200,
 		dataType: "json",	
-		minChars:2,
+		minChars:0,
 		autoFill:true,
-		parse: function(data) {				
+		matchContains: true,  
+		parse: function(data) {	
 			return $.map(data, function(row) {	
 				return {
 					data: row,
@@ -215,12 +216,20 @@ function load_autocomplete(obj,action_name){
 			
 			});
 		},
+ 		
+          formatMatch: function(row, i, max) {
+              return row.name;
+           },
+           formatResult: function(row) {
+               return row.id;
+         },
 		formatItem: function(item) {
-			return format(item);
+
+			return item.name;
 		}
-	}).result(function(event,item){		
+	}).result(function(event,id){		
 		if($(obj).prev(".auto_id").size()>0){
-			$(obj).prev(".auto_id").val(item.id);	
+			$(obj).prev(".auto_id").val(id);	
 		}
 	});
 		

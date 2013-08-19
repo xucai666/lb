@@ -153,7 +153,7 @@ function load_autocomplete(obj,action_name){
 	function format(item) {
 		return item.name;
 	}	
-	$(obj).autocomplete($('#sys_base_url').html()+"index.php/backend/common/"+action_name, {
+	$(obj).autocomplete(site_url+"/backend/common/"+action_name, {
 		width: 200,
 		dataType: "json",	
 		minChars:2,
