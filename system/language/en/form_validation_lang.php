@@ -15,6 +15,7 @@ $lang['alpha_dash']			= "The %s field may only contain alpha-numeric characters,
 $lang['numeric']			= "The %s field must contain only numbers.";
 $lang['is_numeric']			= "The %s field must contain only numeric characters.";
 $lang['integer']			= "The %s field must contain an integer.";
+$lang['pinteger']			= "The %s field must contain an integer and greater than zero.";
 $lang['regex_match']		= "The %s field is not in the correct format.";
 $lang['matches']			= "The %s field does not match the %s field.";
 $lang['is_unique'] 			= "The %s field must contain a unique value.";

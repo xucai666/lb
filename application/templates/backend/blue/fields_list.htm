@@ -13,62 +13,7 @@
 			<input type="text" name="f_name" value="<!--{$smarty.get.f_name}-->">
 			
 			<!--{create_button type="search"}-->
-			<input type="text" name="%name" value="%value" class="auto_id">
-			<input type="text" id="autoComplete_tag" value="" rel="backend/common/action_autocomplete_admins2">
-
-			<input type="text" name="%name" value="%value" class="auto_id">
-
-			<input type="text" id="autoComplete_tag3" value="" rel="backend/common/action_autocomplete_admins3">
 			
-
-
-			<script language='javascript'>
-
-
-			function load_autocomplete(_auto_obj){
-
-	  	
-			
-			var cache = {};
-				
-
-					_auto_obj.autocomplete({
-						autoFocus:true,
-						
-					     source: function( request, response ) {
-					     	
-					     var ran_index = Math.round(Math.random()*100000);
-						_auto_url = site_url+_auto_obj.attr('rel');
-				        var term = request.term;
-				        if ( term in cache ) {
-				          response( cache[term] );
-				          return;
-				        }
-				        
-				        $.getJSON(_auto_url, request, function( data, status, xhr ) {
-				          cache[term] = data;
-				          response( data );
-				        });
-				      },
-					      minLength: 1,
-					      delay:400,
-					     
-					      response: function( event, ui ) {	_auto_obj.prevAll('input.auto_id').val('').val('');}, 
-					      focus: function( event, ui ) {	_auto_obj.prevAll('input.auto_id').val(ui.item.id);},
-
-					    });
-
-			}
-  $(function() {
-    
-
-  load_autocomplete($('#autoComplete_tag'));
-  load_autocomplete($('#autoComplete_tag3'));
-
-
-
-  });
-  </script>
 
 
 		</form>

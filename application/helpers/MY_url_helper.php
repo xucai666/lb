@@ -112,10 +112,10 @@
 		 * @param  string $type front=>前台,backend=>后台
 		 * @return string       
 		 */
-	 	function getRootUrl($key,$type='front',$cat=null){
+	 	function getRootUrl($key,$type='front'){
 			$full_key  = $key.'_url';	
-			$path = $full_key(null,$type);
-			return  $cat?$path.$cat.'/':$path;		
+			return  $full_key(null,$type);
+				
 		}
 
 	 }

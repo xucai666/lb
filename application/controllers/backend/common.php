@@ -94,24 +94,15 @@ class Common extends CI_Controller{
 	
 
 	function action_autocomplete_admins(){
-		$ls = $this->db->select('admin_id as id,admin_user as name',false)->from('admins')->get()->result_array();
-		echo json_encode($ls);
-		exit;
-	}
- 	function action_autocomplete_admins2(){
 		$ls = $this->db->select('admin_id as id,admin_user as label',false)->from('admins');
-		$this->input->get('term') && $this->db->like('admin_user',$this->input->get('term'));
-		$ls = $this->db->get()->result_array();
+		$term = $this->input->get('term');
+		$term && $this->db->like('admin_user',$term,'after');
+		$ls =  $this->db->get()->result_array();
 		echo json_encode($ls);
 		exit;
 	}
-	function action_autocomplete_admins3(){
-		$ls = $this->db->select('n_id as id,n_title as label',false)->from('module_news');
-		$this->input->get('term') && $this->db->like('n_title',$this->input->get('term'));
-		$ls = $this->db->get()->result_array();
-		echo json_encode($ls);
-		exit;
-	}
+ 	
+	
  	
  	
 }

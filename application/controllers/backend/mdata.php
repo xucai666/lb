@@ -39,7 +39,6 @@ class Mdata extends CI_Controller{
 
 
 	function action_add(){
-
 		$id = $this->uri->segment(4);
 		$module_id = $this->im->get_mid();
 		//fetch fileds

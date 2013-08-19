@@ -24,7 +24,6 @@ class Fields extends CI_Controller{
 	}
 
 	function action_add(){
-
 		$fields_types = $this->mycache->cache_fetch('fields_types');
 		$f_id = $this->uri->segment(4);
 		$main = array();
@@ -96,8 +95,6 @@ class Fields extends CI_Controller{
 	}
 
 	function action_list(){
-		$this->mypage->fetch_js('jquery-ui-1.10.3.custom.min','view',getRootUrl('js','backend'));
-		$this->mypage->fetch_css('jquery-ui-1.10.3.custom','view',getRootUrl('css','backend','ui-lightness'));
 		$fields_types = $this->mycache->cache_fetch('fields_types');
 		$f_type = $this->input->get('f_type');
 		$this->db->select('*',false)->from('module_fields')->like('f_name',$this->input->get('f_name'))->order_by('f_id','desc');

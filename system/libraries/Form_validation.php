@@ -1144,6 +1144,21 @@ class CI_Form_validation {
 
 	}
 
+	/**
+	 * Numeric
+	 *
+	 * @access	public
+	 * @param	string
+	 * @return	bool
+	 */
+	public function pinteger($str)
+	{
+		return (bool)preg_match( '/^[0-9]*[1-9][0-9]*$/', $str);
+
+	}
+
+
+
 	// --------------------------------------------------------------------
 
 	/**
