@@ -24,7 +24,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  		
  		$CI->db = $CI->load->database($CI->Common_model->lang_get(),true);
     
- 		$CI->load->library('mydb',null,'mydb');
+ 		$CI->load->library('mydb');
  				
  		$CI->mydb->setDs($CI->db);
 

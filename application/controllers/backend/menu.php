@@ -24,14 +24,14 @@
 		$this->m_lang = $this->lang->language;	
 		$this->tpl->assign('lang_menu',$this->m_lang);
 		//只调用中文数据库 	
- 		$this->ds = $this->mydb2->getDs();
+ 		$this->ds = $this->mydb->getDs();
 		
 
  	}
  	function action_list(){
 
  		$this->ds->select('*')->from('system_rights')->order_by('r_code','ASC')->order_by('r_order','asc');
- 		$data = $this->mydb2->fetch_all(115); 			
+ 		$data = $this->mydb->fetch_all(115); 			
  		foreach($data['list'] as  $k=>$v){
  			if(in_array($v['r_id'],array(43,44))) unset($data['list'][$k]);
  		}
@@ -47,13 +47,13 @@
 
 		if($m_id){
 			$db_conf = array(
-				'table_name'=>$this->mydb2->table('system_rights'),
+				'table_name'=>$this->mydb->table('system_rights'),
 				'fields'=>'*',
 				'primary_id'=>'r_id',
 				'primary_val'=>$m_id,
 			);	
 				
-			$main = $this->mydb2->fetch_one($db_conf);	
+			$main = $this->mydb->fetch_one($db_conf);	
 			$main['checked'] = $main['r_display']?"checked=checked":"";	
 			
 		}else{
@@ -85,33 +85,33 @@
 
 		 		//query old r_code
 		 		if($main['r_id']){
-		 			$r_code_old = $this->mydb2->fetch_value('select r_code from '.$this->mydb2->table('system_rights').' where r_id='.$main['r_id'],'r_code');
+		 			$r_code_old = $this->mydb->fetch_value('select r_code from '.$this->mydb->table('system_rights').' where r_id='.$main['r_id'],'r_code');
 		 		}
 		 		//update self r_code
 		 		if($main['r_pid']):
-			 		$sql = 'select *  from  '.$this->mydb2->table('system_rights','r_code').' where r_id='.$main['r_pid'];
-			 		$r_code_parent = $this->mydb2->fetch_value($sql,'r_code');
+			 		$sql = 'select *  from  '.$this->mydb->table('system_rights','r_code').' where r_id='.$main['r_pid'];
+			 		$r_code_parent = $this->mydb->fetch_value($sql,'r_code');
 		 		endif;
 
 
 		 		$save_data['main'] = $main;
-		 		$save = $this->mydb2->save($save_data,$this->im->db_menu_config());
+		 		$save = $this->mydb->save($save_data,$this->im->db_menu_config());
 		 		$m_id  = $save['main']['r_id'];
 		 		
 		 		
 		 		$r_code_new = $r_code_parent?$r_code_parent.','.$m_id:$m_id;
 		 		$this->ds->where('r_id',$m_id);
-		 		$this->ds->update($this->mydb2->table('system_rights'),array('r_code'=>$r_code_new,'r_level'=>intval(substr_count($r_code_new,','))+1));
+		 		$this->ds->update($this->mydb->table('system_rights'),array('r_code'=>$r_code_new,'r_level'=>intval(substr_count($r_code_new,','))+1));
 		 		//if change r_pid,update childeren r_code
 		 		if($r_code_old!=$r_code_new):
-			 		$sql = "update ".$this->mydb2->table('system_rights')." set r_code = replace(r_code,'$r_code_old','$r_code_new') where r_code like '".$r_code_old."_%'";
+			 		$sql = "update ".$this->mydb->table('system_rights')." set r_code = replace(r_code,'$r_code_old','$r_code_new') where r_code like '".$r_code_old."_%'";
 			 		$this->ds->query($sql);
 		 		endif;
 		 		
 		 		//create cache
 		 		
-			 	$this->ds->select('*')->from($this->mydb2->table('system_rights'))->order_by('r_code','asc')->order_by('r_order','asc');
-		   		$data = $this->mydb2->fetch_all(250);
+			 	$this->ds->select('*')->from($this->mydb->table('system_rights'))->order_by('r_code','asc')->order_by('r_order','asc');
+		   		$data = $this->mydb->fetch_all(250);
 		   				
 		   		$this->mycache->cache_create($data,'admin_rights_config');
 	   		
@@ -136,7 +136,7 @@
  	}
  	
  	function action_del(){
- 		$this->mydb2->delete($this->uri->segment(4),$this->im->db_menu_config());
+ 		$this->mydb->delete($this->uri->segment(4),$this->im->db_menu_config());
  		$this->mypage->backend_redirect('menu/action_list','删除成功');
  	}
  }

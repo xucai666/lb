@@ -64,7 +64,7 @@ class System_manage extends CI_Controller{
 				'admin_pass'=>$this->mypage->my_encrypt($data['main']['new_password'],"ENCODE"),
 				'admin_id'=>$data['main']['admin_id'],
 			));			
-			$this->mydb2->save($save_data,$this->Admins_model->db_config());
+			$this->mydb->save($save_data,$this->Admins_model->db_config());
 			$this->mypage->backend_redirect('system_manage/exit_system','修改成功，需要重新登陆系统');
 		}
 	}
@@ -203,7 +203,7 @@ class System_manage extends CI_Controller{
  	
  	function action_execute_sql_submit(){
  		$sql = $this->input->post("sql");
- 		$sql = $this->mydb2->adjust_sql_str($sql);
+ 		$sql = $this->mydb->adjust_sql_str($sql);
  		if(empty($sql)){
  			$this->mypage->pop_redirect('请输入要执行的sql语句',site_url("backend/system_manage/action_execute_sql"));
  		} 

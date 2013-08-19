@@ -27,7 +27,7 @@
  		$this->m_lang = $this->lang->language;	
  		$this->tpl->assign('lang_admins',$this->m_lang);
 		//只调用中文数据库	
- 		$this->ds = $this->mydb2->getDs();
+ 		$this->ds = $this->mydb->getDs();
  			
 		
  	}
@@ -43,9 +43,9 @@
  			$admin_select_config  = array(
 	 			'primary_id'=>'admin_id',
 	 			'primary_val'=>$main_id,
-	 			'table_name'=>$this->mydb2->table($this->act.''),
+	 			'table_name'=>$this->mydb->table($this->act.''),
  			);
- 			$main_info = $this->mydb2->fetch_one($admin_select_config); 	
+ 			$main_info = $this->mydb->fetch_one($admin_select_config); 	
  		}else{
  			//添加
 			$main_info = array(
@@ -53,7 +53,7 @@
 			);
 		} 		
 		
-		$user_group  = $this->mydb2->fetch_value('select group_id from '.$this->mydb2->table('admins').' where admin_id='.get_cookie('user_id'),'group_id');
+		$user_group  = $this->mydb->fetch_value('select group_id from '.$this->mydb->table('admins').' where admin_id='.get_cookie('user_id'),'group_id');
 		
  		$groups = $this->Roles_model->fetch_roles_list();
 		foreach($groups as $k=>$v):
@@ -87,8 +87,8 @@
 	 				$main['admin_pass'] = $this->mypage->my_encrypt($main['admin_pass'],'ENCODE');	 
 					
 	 			}	
-	 			$db_config = array('main'=>array('primary_key'=>'admin_id','table_name'=>$this->mydb2->table($this->act.'')));
-	 			$rs = $this->mydb2->save(array('main'=>$main),$db_config);		
+	 			$db_config = array('main'=>array('primary_key'=>'admin_id','table_name'=>$this->mydb->table($this->act.'')));
+	 			$rs = $this->mydb->save(array('main'=>$main),$db_config);		
 	 			$main['admin_id'] = $rs['main']['admin_id'];	 
 	 		
 		 			
@@ -132,8 +132,8 @@
  			$this->form_validation->set_message('admin_user_check',' 对不起，%s 必须输入');
  			return false; 			
  		}
-		$select_array = array('fields'=>'admin_user,admin_id','table_name'=>$this->mydb2->table($this->act.''),'primary_id'=>'admin_user','primary_val'=>$str);
-		$db_admin = $this->mydb2->fetch_one($select_array);
+		$select_array = array('fields'=>'admin_user,admin_id','table_name'=>$this->mydb->table($this->act.''),'primary_id'=>'admin_user','primary_val'=>$str);
+		$db_admin = $this->mydb->fetch_one($select_array);
 		$form_admin = $this->input->post('main');
 		if(($form_admin['admin_id']!=$db_admin['admin_id'])&&$db_admin){
 			$this->form_validation->set_message('admin_user_check',' 对不起，%s 已存在');
@@ -172,11 +172,11 @@
  		$this->ds->like('mobile',$this->input->get('mobile'));
 	 	$this->ds->select("*",false)->from('admins',false)
 	 	->order_by('admin_id','desc');	 	
-	 	$data = array_merge($this->mydb2->fetch_all(),array('group_options'=>$groups)); 
+	 	$data = array_merge($this->mydb->fetch_all(),array('group_options'=>$groups)); 
 	 	
 	 	$data['current_admin_id'] = get_cookie('user_id');
 	 	
- 		$data['current_role_id'] = $this->mydb2->fetch_value('select group_id from '.$this->mydb2->table('admins').' where admin_id='.get_cookie('user_id'),'group_id');
+ 		$data['current_role_id'] = $this->mydb->fetch_value('select group_id from '.$this->mydb->table('admins').' where admin_id='.get_cookie('user_id'),'group_id');
  		$data['login_user_id'] = get_cookie('user_id');
  		$this->mypage->load_backend_view('admins_list',$data);
  		
@@ -191,7 +191,7 @@
  			$this->load->model('Logs_model');	
  			//验证权限
  			$this->myauth->execute_auth('28,34');
- 			$rs = $this->mydb2->delete($this->uri->segment(4),$this->im->db_config());
+ 			$rs = $this->mydb->delete($this->uri->segment(4),$this->im->db_config());
 
  			//添加日志	
 	 		$cf  = $this->im->db_config();	 
@@ -228,10 +228,10 @@
  		$select_config  = array(
 	 			'primary_id'=>'admin_id',
 	 			'primary_val'=>$this->uri->segment(4),
-	 			'table_name'=>$this->mydb2->table($this->act.''),
+	 			'table_name'=>$this->mydb->table($this->act.''),
 	 			
  		);
- 		$data = array('main'=>$this->mydb2->fetch_one($select_config));
+ 		$data = array('main'=>$this->mydb->fetch_one($select_config));
  		$this->mypage->load_backend_view(strtolower($this->act).'_view',$data);
  	}
  	

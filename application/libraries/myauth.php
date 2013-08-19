@@ -14,26 +14,17 @@
   */
  class Myauth{
  	function __construct(){
-		$CI = &get_instance();
-		$uid = get_cookie('user_id');
-		//只调用中文数据库 	
-		$this->mycache =  $CI->mycache;
-		$this->ds = $CI->load->database('zh',true);
-		$CI->load->library('mydb',null,'mydb2');
-		$CI->mydb2->setDs($this->ds);
-		$this->mydb2 = $CI->mydb2;
-			
-			
+ 	   
+		
  	}
  	
- 	function ds(){
- 		return $this->ds;
- 	}
+ 
  	/**
  	 * 判断是否有权限访问各功能模块
  	 * @parameter $auth ,之间用逗号分隔，字符来自cache数据层级
  	 */
  	function execute_auth($auth=null){
+        $CI = &get_instance();
  		$uid = get_cookie('user_id');
  		if(empty($uid)){ 
  			echo "<script language='javascript'>parent.location.href='".site_url("admin")."';</script>";
@@ -41,8 +32,8 @@
  		}
  		if($auth):
  			$uid = $this->fetch_auth('user_id');
- 			$sql = "select a.rights,a.role_id from ".$this->ds->dbprefix."roles as a  inner join ".$this->ds->dbprefix."admins as b on a.role_id=b.group_id where b.admin_id=".$uid." ";
-		    $db_rights =  $this->ds->query($sql)->first_row("array");
+ 			$sql = "select a.rights,a.role_id from ".$CI->db->dbprefix."roles as a  inner join ".$CI->db->dbprefix."admins as b on a.role_id=b.group_id where b.admin_id=".$uid." ";
+		    $db_rights =  $CI->db->query($sql)->first_row("array");
 		    $config =  &get_config();
 		    if($db_rights['role_id'] == $config['admin_role_id']) return true;
 		    $righs = $this->fetch_auth('user_rights');
@@ -101,10 +92,12 @@
  	 * 获取登陆信息
  	 */
  	function fetch_auth($type=null){
+ 		$CI = &get_instance();
  		$uid = get_cookie('user_id');
  		
- 		$sql = "select a.rights from ".$this->ds->dbprefix."roles as a  inner join ".$this->ds->dbprefix."admins as b on a.role_id=b.group_id where b.admin_id=".$uid." ";
-		$db_rights =  $this->ds->query($sql)->first_row("array"); 
+ 		$sql = "select a.rights from ".$CI->db->dbprefix."roles as a  inner join ".$CI->db->dbprefix."admins as b on a.role_id=b.group_id where b.admin_id=".$uid." ";
+ 		
+		$db_rights =  $CI->db->query($sql)->first_row("array"); 
 		
  	 	$auth_info =  array(
  			'user_name'=>get_cookie('user_name'),
@@ -125,8 +118,8 @@
  		if($id){
  				$CI->load->model('Roles_model');
  				$group = $CI->Roles_model->fetch_roles_list();
-				$sql = "select a.* from ".$this->ds->dbprefix."admins as a  where a.admin_id=".$id." ";
-				$user_info =  $this->ds->query($sql)->first_row("array");
+				$sql = "select a.* from ".$CI->db->dbprefix."admins as a  where a.admin_id=".$id." ";
+				$user_info =  $CI->db->query($sql)->first_row("array");
 				$user_info['role_name'] = $group[$user_info['group_id']]['role_name'];
 				
 				return $field ? $user_info[$field]:$user_info;
@@ -142,14 +135,15 @@
  	 * 取得权限，列出仅有权限菜单
  	 */
  	function fetch_rights_menus($role_id = null,$menu=false){
+ 		$CI = &get_instance();
  		 $config =  &get_config();
  		 if($role_id == $config['admin_role_id']) unset($role_id);
  		 $rights_all = $this->get_rights_item();
  		 $have_rights = $this->fetch_auth('user_rights');
  		
  		 $uid = $this->fetch_auth('user_id');
- 		 $sql = "select b.group_id from   ".$this->ds->dbprefix."admins  as b where b.admin_id=".$uid." ";
-		 $db_rights =  $this->ds->query($sql)->first_row("array");
+ 		 $sql = "select b.group_id from   ".$CI->db->dbprefix."admins  as b where b.admin_id=".$uid." ";
+		 $db_rights =  $CI->db->query($sql)->first_row("array");
 				
 		//administrator
 		 if($db_rights['group_id'] == $config['admin_role_id']){
@@ -276,14 +270,15 @@
  	 * query result for menu list
  	 */
  	function getAuthMenu(){
- 		if($this->mycache->cache_exists('admin_rights_config','zh')){
- 			$data = $this->mycache->cache_fetch('admin_rights_config',null,'zh');
+ 		$CI = &get_instance();
+ 		if($CI->mycache->cache_exists('admin_rights_config',$CI->Common_model->lang_get())){
+ 			$data = $CI->mycache->cache_fetch('admin_rights_config',null,$CI->Common_model->lang_get());
  		}else{
- 			$this->ds->select('*')->from('system_rights')->order_by('r_code','asc')->order_by('r_order','asc');
+ 			$CI->db->select('*')->from('system_rights')->order_by('r_code','asc')->order_by('r_order','asc');
 
-	   		$data = $this->mydb2->fetch_all(250);
+	   		$data = $CI->mydb->fetch_all(250);
 
-	   		$this->mycache->cache_create($data,'admin_rights_config');
+	   		$CI->mycache->cache_create($data,'admin_rights_config');
  		}
 
 	   	

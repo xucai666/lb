@@ -29,7 +29,7 @@
  		$this->tpl->assign('lang_roles',$this->lang->language);
  				
 		//只调用中文数据库	
- 		$this->ds = $this->mydb2->getDs();
+ 		$this->ds = $this->mydb->getDs();
 
  	}
  	
@@ -47,9 +47,9 @@
 	 			$role_select_config  = array(
 		 			'primary_id'=>'role_id',
 		 			'primary_val'=>$main_id,
-		 			'table_name'=>$this->mydb2->table($this->act.''),
+		 			'table_name'=>$this->mydb->table($this->act.''),
 	 			); 			
-	 			$main_info = $this->mydb2->fetch_one($role_select_config);  	
+	 			$main_info = $this->mydb->fetch_one($role_select_config);  	
 	 			$this->ds->_reset_select();
 	 			$rights_have = unserialize($main_info['rights']);	
 	 		}else{
@@ -100,9 +100,9 @@
  		try{ 			
 	 		$main = $this->input->post('main'); 
 	 		$main['rights'] = serialize($this->input->post('admin'));
-	 		$db_config = array('main'=>array('primary_key'=>'role_id','table_name'=>$this->mydb2->table('roles')));			
+	 		$db_config = array('main'=>array('primary_key'=>'role_id','table_name'=>$this->mydb->table('roles')));			
  			
- 			$roles_return = $this->mydb2->save(array('main'=>$main),$db_config);
+ 			$roles_return = $this->mydb->save(array('main'=>$main),$db_config);
  			
  			//添加日志	
 	 		$lang = $this->m_lang;				 
@@ -137,7 +137,7 @@
  				
  		$data = array('list'=>$this->im->fetch_roles_list());
  		
- 		$data['current_role_id'] = $this->mydb2->fetch_value('select group_id from '.$this->mydb2->table('admins').' where admin_id='.get_cookie('user_id'),'group_id');
+ 		$data['current_role_id'] = $this->mydb->fetch_value('select group_id from '.$this->mydb->table('admins').' where admin_id='.get_cookie('user_id'),'group_id');
  		$this->mypage->load_backend_view(strtolower($this->act).'_list',$data);
  		
  	}
@@ -148,7 +148,7 @@
  	 */
  	function action_del(){
  		try{
- 			$rs = $this->mydb2->delete($this->uri->segment(4),$this->im->db_config());
+ 			$rs = $this->mydb->delete($this->uri->segment(4),$this->im->db_config());
  			//-------------添加日志
  			$cf = $this->im->db_config();
  			$this->load->model('Logs_model');

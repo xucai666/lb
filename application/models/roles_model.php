@@ -15,14 +15,14 @@
 class Roles_model extends CI_Model{
 	function __construct(){
 		parent::__construct();
-		$this->ds = $this->mydb2->getDs();	
+		$this->ds = $this->mydb->getDs();	
 	}
 	
 	/**
 	 * 管理员明细
 	 */
 	function fetch_detail($admin_id){
-		$db_temp  = $this->ds->select('*')->from($this->mydb2->table('admins'))->where('admin_id',1)->get()->result_array();
+		$db_temp  = $this->ds->select('*')->from($this->mydb->table('admins'))->where('admin_id',1)->get()->result_array();
 		return $db_temp[0];
 	}
 	
@@ -52,7 +52,7 @@ class Roles_model extends CI_Model{
 	 function db_config(){
 	 	return array(
 	 		'main'=>array(
-	 			'table_name'=>$this->mydb2->table('roles'),
+	 			'table_name'=>$this->mydb->table('roles'),
 	 			'primary_key'=>'role_id',	 			
 	 		),
 	 	);
@@ -70,10 +70,10 @@ class Roles_model extends CI_Model{
 	  
 	  function fetch_roles_list(){
 	  		
-	  	$this->ds->select("*",false)->from($this->mydb2->table('roles'))
+	  	$this->ds->select("*",false)->from($this->mydb->table('roles'))
 		->order_by("role_id","asc");
 		
-		$data = $this->mydb2->fetch_all(15);	
+		$data = $this->mydb->fetch_all(15);	
 		
 		foreach($data['list'] as $v){
 			$list[$v['role_id']] = $v;

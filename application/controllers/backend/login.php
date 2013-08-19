@@ -17,8 +17,7 @@ class Login extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		//只调用中文数据库
- 		$this->ds = $this->mydb2->getDs();
+		
 			
 		$this->lang->load('item_backend_login',$this->Common_model->lang_get());
 		$cur_lang = $this->lang->language;
@@ -45,8 +44,7 @@ class Login extends CI_Controller {
 	function chklogin(){	
 		try{
 			
-		  	  $this->load->helper(array('form', 'url'));		  
-			  $this->load->library('form_validation');
+		  	  
 			  $this->load->library('encrypt');		
 			  $this->form_validation->set_rules('user_name',$this->m_lang->username, 'required|callback_user_name_check');
 			  $this->form_validation->set_rules('user_pass', $this->m_lang->password, 'required|callback_user_pass_check');
@@ -59,10 +57,10 @@ class Login extends CI_Controller {
 				  	$select_config  = array(
 			 			'primary_id'=>'admin_user',
 			 			'primary_val'=>$this->input->post("user_name"),
-			 			'table_name'=>$this->mydb2->table('admins'),
+			 			'table_name'=>$this->mydb->table('admins'),
 		 			);	
 		 			
-			  		$login_info_temp = $this->ds->select('a.*,b.rights',false)->from($this->mydb2->table('admins').' as a')->join($this->mydb2->table('roles').' as b','a.group_id=b.role_id','`')
+			  		$login_info_temp = $this->db->select('a.*,b.rights',false)->from($this->mydb->table('admins').' as a')->join($this->mydb->table('roles').' as b','a.group_id=b.role_id','`')
 			  		->where('a.admin_user','\''.$this->input->post("user_name").'\'',false)->get()->result_array();
 			  		$login_info = $login_info_temp[0];
 			  		$this->myauth->process_login(array("user_name"=>$login_info['admin_user'],"user_id"=>$login_info['admin_id']));
@@ -126,7 +124,7 @@ class Login extends CI_Controller {
 	{
 		
 		$group_id = $this->input->post('group_id');
-		$user_flag = $this->ds->select('count(1) as user_flag',false)->from($this->mydb2->table('admins'))->where('admin_user',$str)
+		$user_flag = $this->db->select('count(1) as user_flag',false)->from($this->mydb->table('admins'))->where('admin_user',$str)
 		->where('group_id in','(1,2,3,4)',false)->get()->first_row('array');
 		if ($user_flag['user_flag']==0)
 		{
@@ -146,7 +144,7 @@ class Login extends CI_Controller {
 		
 	
 		 
-		$db_temp = $this->ds->select('admin_pass',false)->from($this->mydb2->table('admins'))->where('admin_user',$this->input->post('user_name'))->get()->result_array();
+		$db_temp = $this->db->select('admin_pass',false)->from($this->mydb->table('admins'))->where('admin_user',$this->input->post('user_name'))->get()->result_array();
 		$admin_pass = $db_temp[0]['admin_pass'];
 		if(empty($admin_pass)) {
 			$this->form_validation->set_message('user_pass_check','');
