@@ -19,7 +19,7 @@
 <table width="850" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:15px;">
   <tr>
     <td width="200" align="left" valign="top">
-      <!--{include file="`$ci_config.template_dir`/front/`$lang_type`/study_left.htm"}-->
+      <!--{include file="`$ci_config.template_dir`/`$lang_type`/study_left.htm"}-->
     </td>
     <td>&nbsp;</td>
     <td width="600" align="right" valign="top">
@@ -38,7 +38,7 @@
         <!--{if $smarty.get.from!='left'}-->
         <div align="left" style="margin-top:10px;border-top:1px dashed #999;padding-top:5px;">
         <!--{foreach from=$nav item=v2}-->
-        	<!--{$v2.type}-->：<a href="<!--{$site_url}-->/front/study/detail/?info_id=<!--{$v2.info_id}-->"><!--{$v2.info_title}--></a><br>
+        	<!--{$v2.type}-->：<a href="<!--{$site_url}-->/study/detail/?info_id=<!--{$v2.info_id}-->"><!--{$v2.info_title}--></a><br>
          <!--{/foreach}-->        
         </div>
         <!--{/if}-->

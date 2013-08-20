@@ -4,7 +4,7 @@
 
 <div id="new_content_container" class="container_width">
 	
-    	<!--{include file="`$ci_config.template_dir`/front/`$lang_type`/left_download.htm"}-->
+    	<!--{include file="`$ci_config.template_dir`/`$lang_type`/left_download.htm"}-->
     
   
   
@@ -27,7 +27,7 @@
     <!--{$smarty.foreach.download_list.iteration}-->
     
     &nbsp;</td>
-    <td height="25" bgcolor="#FFFFFF">&nbsp;<a href="<!--{$site_url}-->/front/download/view/?info_id=<!--{$item.info_id}-->"><!--{$item.info_title}--></a>&nbsp;</td>
+    <td height="25" bgcolor="#FFFFFF">&nbsp;<a href="<!--{$site_url}-->/download/view/?info_id=<!--{$item.info_id}-->"><!--{$item.info_title}--></a>&nbsp;</td>
     <td height="25" align="center" bgcolor="#FFFFFF"><span><!--{$item.info_file_size}--></span>&nbsp;</td>
     <td height="25" bgcolor="#FFFFFF" align="center"><span><!--{$item.info_last_update}--></span>&nbsp;</td>
   </tr>

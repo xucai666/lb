@@ -8,8 +8,9 @@
  */ 
  
  return array (
-  1 => '文章模块',
-  2 => '产品模块',
+  1 => 'infomation module',
+  2 => 'product module',
 );
  
 ?>
+ 

@@ -119,7 +119,7 @@
 			    $this->email->subject('你的朋友向您推荐职位'.$main['eg_pos']);
 			    $sys_config = $this->cor_cache->cache_fetch('sys_config','develop',lang_get());
 
-			    $tpl_dir = $config['template_dir'].'front/'.$sys_config['template'].'/'.lang_get().'/';
+			    $tpl_dir = $config['template_dir'].''.$sys_config['template'].'/'.lang_get().'/';
 			 
 			    $email_temp = $this->tpl->fetch($tpl_dir.'email_template.htm');
 			  
@@ -134,7 +134,7 @@
 			  		'eg_years'=>$main['eg_years'],
 			  		'eg_eng'=>$main['eg_eng'],
 			  		'eg_content'=>$main['eg_content'],			  	
-			  		'eg_link'=>site_url('/front/engage/detail/?eg_id='.$eg_id),			  	
+			  		'eg_link'=>site_url('/engage/detail/?eg_id='.$eg_id),			  	
 			  	);		  	
 			  	
 			  	//替换
@@ -155,7 +155,7 @@
 				
 				
 				
-				$this->cor_page->front_redirect("front/engage/",'邮件已经发送');		
+				$this->cor_page->front_redirect("engage/",'邮件已经发送');		
 				
 		}
 			
@@ -266,7 +266,7 @@
 			
 			$this->cor_db->save($data,$this->Engage_model->db_config_apply())	;			
 			
-			$this->cor_page->front_redirect("front/engage/",'应聘信息已经提交');	
+			$this->cor_page->front_redirect("engage/",'应聘信息已经提交');	
 			
 		
 		}catch(Exception $e){

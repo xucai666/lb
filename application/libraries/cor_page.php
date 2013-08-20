@@ -392,12 +392,10 @@ class Cor_page{
 	 * 跳转
 	 */
 	function front_redirect($url,$msg,$direct=0){	
-		if(preg_match("/javascript/",$url)||$direct){
+		if(preg_match("/javascript/",$url)||$direct||preg_match("/http/",$url)){
 			$url_new = $url;
 		}else{
-			if(!preg_match("/front/",$url)){
-				$url = 'front/'.$url;
-			}			
+					
 			$url_new = site_url($url);
 		}
 		$data = array('url'=>$url_new,'msg'=>$msg);	

@@ -29,7 +29,7 @@ class Search_model  extends CI_Model{
 	 */
 	function get_url($m){
 		$ar = $this->url_define();
-		return site_url($ar[$m['tb']].$m['id']);
+		return site_url($ar[$m['tb']].$m['id']).'.htm';
 	}
 
 	/**
@@ -38,8 +38,8 @@ class Search_model  extends CI_Model{
 	 */
 	function url_define(){
 		return array(
-			'mysys_module_news'=>'front/dynamic/view/',
-			'mysys_module_product'=>'front/product/view/',
+			'mysys_module_news'=>'dynamic/view/',
+			'mysys_module_product'=>'product/view/',
 			
 		);
 	}

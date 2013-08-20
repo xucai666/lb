@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 02:16:53
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 11:21:19
          compiled from "application\templates\front\blue\zh\search.htm" */ ?>
-<?php /*%%SmartyHeaderCode:141005212d195776ec1-28398445%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:109835213512f295e34-11328072%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '34d2b13f9b1ff82f3c54db4233a029f15e0420ea' => 
     array (
       0 => 'application\\templates\\front\\blue\\zh\\search.htm',
-      1 => 1376875968,
+      1 => 1376994823,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '141005212d195776ec1-28398445',
+  'nocache_hash' => '109835213512f295e34-11328072',
   'function' => 
   array (
   ),
@@ -25,9 +25,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5212d1958bdbc4_79056268',
+  'unifunc' => 'content_5213512f3e3531_28891704',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5212d1958bdbc4_79056268')) {function content_5212d1958bdbc4_79056268($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_front']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_5213512f3e3531_28891704')) {function content_5213512f3e3531_28891704($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_front']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
@@ -62,7 +62,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <tr>
   <td width="691" colspan="3" class="bian1 search_list" valign="top">
        <div align="center">
-        <form method="get" action="<?php echo func_site_url(array('segments'=>'front/search'),$_smarty_tpl);?>
+        <form method="get" action="<?php echo func_site_url(array('segments'=>'search'),$_smarty_tpl);?>
 ">
             请输入关键字：<input type="text" name="title" value="<?php echo $_GET['title'];?>
 ">

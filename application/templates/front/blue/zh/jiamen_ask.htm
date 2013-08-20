@@ -23,7 +23,7 @@
   <tr>
     <td width="250" height="357" align="left" valign="top">
     
-        <!--{include file="`$ci_config.template_dir`/front/`$lang_type`/jiamen_left_menu.htm"}-->
+        <!--{include file="`$ci_config.template_dir`/`$lang_type`/jiamen_left_menu.htm"}-->
     
     
       
@@ -95,7 +95,7 @@
                <div align="center" class="quotes"><!--{$page_link}--></div>
                
                <div align="right"><!--{if $show_submit==1}--><a href="javascript:;" onclick="submit_question();">>>提交问卷</a><!--{/if}--></div>
-                <form id="frm_json" style="visibility:hidden;width:0;height:0;" action="<!--{$site_url}-->/front/jiamen/action_ask_redirect" method="post">
+                <form id="frm_json" style="visibility:hidden;width:0;height:0;" action="<!--{$site_url}-->/jiamen/action_ask_redirect" method="post">
                 <input type="hidden" id="total_integral" name="total_integral" value="">
                 <input type="hidden" id="integral_require" name="integral_require" value="<!--{$integral_require}-->">
                  <input type="hidden" id="integral_require" name="from" value="<!--{$from}-->">

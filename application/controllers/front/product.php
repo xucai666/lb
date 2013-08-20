@@ -31,7 +31,7 @@ class Product extends CI_Controller {
 	
 		// add breadcrumbs
 		$this->breadcrumb->append_crumb('Home', '/');
-		$this->breadcrumb->append_crumb('Product', 'front/product');
+		$this->breadcrumb->append_crumb('Product', 'product');
 		$this->breadcrumb->output();
 		
 		$this->cor_page->load_front_view('product',$data);
@@ -44,8 +44,8 @@ class Product extends CI_Controller {
 	function view(){
 		// add breadcrumbs
 		$this->breadcrumb->append_crumb('Home', '/');
-		$this->breadcrumb->append_crumb('Product', '/front/product');
-		$this->breadcrumb->append_crumb('View', '/front/product/view');
+		$this->breadcrumb->append_crumb('Product', '/product');
+		$this->breadcrumb->append_crumb('View', '/product/view');
 		$this->breadcrumb->output();
 
 		$this->cor_page->load_front_view("product_view",$data);
@@ -89,7 +89,7 @@ class Product extends CI_Controller {
 			'table_name'=>$this->cor_db->table('module_product'),
 			'fields'=>'*',
 			'primary_id'=>'p_id',
-			'primary_val'=>$this->uri->segment(4),
+			'primary_val'=>$this->uri->segment(3),
 		);	
 		$main = $this->cor_db->fetch_one($sql_arr);
 		$data = array(
@@ -106,7 +106,7 @@ class Product extends CI_Controller {
 		}   
 	       
 		$this->cart->insert($data);		
-		redirect("front/product/good_cart_list");		
+		redirect("product/good_cart_list");		
 	}
 	
 	
@@ -114,7 +114,7 @@ class Product extends CI_Controller {
 		
 	//购物车更新
 	function good_cart_update(){	
-		$rowid = $this->uri->segment(4);	
+		$rowid = $this->uri->segment(3);	
 		$qty = $this->input->post('qty');	
 		
 		$this->load->library('cart');	
@@ -132,12 +132,12 @@ class Product extends CI_Controller {
 	function good_cart_delete(){	
 		$data = array(array(
 			'qty'=>0,
-			'rowid'=>$this->uri->segment(4),
+			'rowid'=>$this->uri->segment(3),
 		));	
 		
 		$this->load->library('cart');		
 		$this->cart->update($data);
-		redirect("front/product/good_cart_list");		
+		redirect("product/good_cart_list");		
 	}
 	
 	function order_create(){
@@ -195,7 +195,7 @@ class Product extends CI_Controller {
 			if($this->form_validation->run()){
 				$this->cor_db->save($data,$this->im->db_config_order());
 				$this->cart->destroy();			
-				$this->cor_page->front_redirect("front/product",'订单提交成功');	
+				$this->cor_page->front_redirect("product",'订单提交成功');	
 			}else{
 				$this->load->library('cart');			
 				$cart_arr =  $this->cart->contents();
@@ -220,7 +220,7 @@ class Product extends CI_Controller {
 		}	
 		catch(Exception $e){
 			
-			$this->cor_page->front_redirect('front/product',$e->getMessage());
+			$this->cor_page->front_redirect('product',$e->getMessage());
 			
 		}	
 		

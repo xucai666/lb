@@ -20,7 +20,7 @@
 <table width="850" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:15px;">
   <tr>
     <td width="200" align="left" valign="top">
-      <!--{include file="`$ci_config.template_dir`/front/`$lang_type`/about_left_mehu.htm"}-->
+      <!--{include file="`$ci_config.template_dir`/`$lang_type`/about_left_mehu.htm"}-->
       <table width="200" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td style="background:url(<!--{$img_url}-->/03.jpg);width:20px;height:18px;"></td>
@@ -52,12 +52,12 @@
 		<td>
             <table width="100%" >
             <tr><td><img id="dlarticle_ctl02_companyImg" alt="" src="" style="height:100px;width:365px;border-width:0px;display:none;" /></td></tr>
-            <tr><td><a href="<!--{$site_url}-->/front/detail?info_id=<!--{$v.info_id}--> "><strong><!--{$v.info_title}--></strong></a></td>
+            <tr><td><a href="<!--{$site_url}-->/detail?info_id=<!--{$v.info_id}--> "><strong><!--{$v.info_title}--></strong></a></td>
             <td align ="right" style="height:44px" ><!--{$v.info_date}-->&nbsp;&nbsp;(<span style="color:Blue;"><!--{$v.info_auth}--></span>)</td>
             </tr>
             <tr><td width="100%" colspan="2"><!--{$v.info_content|strip_tags|truncate:200:"..."}-->...<br/></td></tr>
             </table>
-           <div style ="width:100px;"><a href="<!--{$site_url}-->/front/detail?info_id=<!--{$v.info_id}--> "><strong>&gt;&gt; 阅读全文</strong></a></div><hr />
+           <div style ="width:100px;"><a href="<!--{$site_url}-->/detail?info_id=<!--{$v.info_id}--> "><strong>&gt;&gt; 阅读全文</strong></a></div><hr />
             </td>
 	</tr>
 </table>

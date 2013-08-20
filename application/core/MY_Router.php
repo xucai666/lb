@@ -40,6 +40,7 @@ class MY_Router extends CI_Router
  
         function _validate_request($segments)
         {
+     
 
                 if (count($segments) == 0)
                 {
@@ -72,7 +73,7 @@ class MY_Router extends CI_Router
                         $segments = array_diff($segments, $temp['dir']);
                         $segments = array_values($segments);
                         unset($temp);
- 
+
                         if (count($segments) > 0)
                         {
                                 // Does the requested controller exist in the sub-folder?
@@ -118,7 +119,7 @@ class MY_Router extends CI_Router
                                 }
  
                         }
- 
+
                         return $segments;
                 }
  

@@ -427,7 +427,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 52.0,
+		"height": 192.0,
 		"selected_items":
 		[
 			[
@@ -576,134 +576,134 @@
 	},
 	"file_history":
 	[
-		"/E/phpnow/htdocs/lb/application/controllers/backend/templates.php",
-		"/E/phpnow/htdocs/lb/application/helpers/cor_lang_helper.php",
-		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_lang.php",
-		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_login_lang.php",
-		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_mdata_lang.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/mdata_list.htm",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/mdata.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/center.htm",
-		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
-		"/E/phpnow/htdocs/lb/application/config/config.php",
-		"/E/phpnow/htdocs/lb/system/helpers/form_helper.php",
-		"/E/phpnow/htdocs/lb/system/helpers/html_helper.php",
-		"/E/phpnow/htdocs/lb/system/helpers/email_helper.php",
-		"/E/phpnow/htdocs/lb/system/helpers/language_helper.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_view.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/dynamic_view.htm",
-		"/E/phpnow/htdocs/lb/application/libraries/cor_lang.php",
-		"/E/phpnow/htdocs/lb/application/models/common_model.php",
-		"/E/phpnow/htdocs/lb/application/libraries/myauth.php",
-		"/E/phpnow/htdocs/lb/application/libraries/cor_cache.php",
-		"/E/phpnow/htdocs/lb/application/libraries/cor_page.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/index.php",
-		"/E/phpnow/htdocs/lb/application/helpers/MY_url_helper.php",
-		"/E/phpnow/htdocs/lb/application/libraries/cor_auth.php",
-		"/E/phpnow/htdocs/lb/application/libraries/cor_db.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/admins.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/archive.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/archives.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/category.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/download.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/engage.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/fields.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/friendlink.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/login.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/logs.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/menu.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/message.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/modules.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/product.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/roles.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/system_manage.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/engage.php",
-		"/E/phpnow/htdocs/lb/application/models/archives_model.php",
-		"/E/phpnow/htdocs/lb/application/models/category_model.php",
-		"/E/phpnow/htdocs/lb/application/models/download_model.php",
-		"/E/phpnow/htdocs/lb/application/models/pictures_model.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/common.php",
-		"/E/phpnow/htdocs/lb/application/config/autoload.php",
-		"/E/phpnow/htdocs/lb/system/core/Common.php",
-		"/E/phpnow/htdocs/lb/application/helpers/JSON.php",
-		"/E/phpnow/htdocs/lb/application/helpers/json_helper.php",
-		"/E/phpnow/htdocs/lb/application/helpers/timecount_helper.php",
-		"/E/phpnow/htdocs/lb/application/helpers/imgcode_helper.php",
-		"/E/phpnow/htdocs/lb/application/helpers/debug.php",
-		"/E/phpnow/htdocs/lb/cache/zh/lang_type.php",
-		"/E/phpnow/htdocs/lb/application/core/MY_Input.php",
-		"/E/phpnow/htdocs/lb/application/hooks/Langclass.php",
-		"/E/phpnow/htdocs/lb/system/core/Lang.php",
-		"/E/phpnow/htdocs/lb/application/core/MY_Router.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/lang_trans.htm",
-		"/E/phpnow/htdocs/lb/system/core/Input.php",
-		"/E/phpnow/htdocs/lb/application/controllers/admin.php",
-		"/E/phpnow/htdocs/lb/application/libraries/cor_zip.php",
-		"/E/phpnow/htdocs/lb/installed/index.php",
-		"/E/phpnow/htdocs/lb/installed/index_2.php",
-		"/E/phpnow/htdocs/lb/installed/index_3.php",
-		"/E/phpnow/htdocs/lb/application/libraries/cor_form.php",
-		"/E/phpnow/htdocs/lb/application/libraries/breadcrumb.php",
-		"/E/phpnow/htdocs/lb/application/libraries/myzip.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/tree.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/download.php",
-		"/E/phpnow/htdocs/lb/application/libraries/mycache.php",
-		"/E/phpnow/htdocs/lb/application/models/mdata_model.php",
-		"/E/phpnow/htdocs/lb/application/models/modules_model.php",
-		"/E/phpnow/htdocs/lb/application/libraries/mylang.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
-		"/E/phpnow/htdocs/lb/application/libraries/myform.php",
-		"/E/phpnow/htdocs/lb/application/models/advs_model.php",
-		"/E/phpnow/htdocs/lb/application/models/fields_model.php",
-		"/E/phpnow/htdocs/lb/application/models/product_model.php",
-		"/E/phpnow/htdocs/lb/application/models/tree_model.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/jquery.form.js",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/js/jquery.form.js",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/jquery.form.js",
-		"/E/phpnow/htdocs/lb/application/compiles/926c21d0586ad8183cf0cf42f8c1aa662847750f.file.page_redirect.htm.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/advs.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/pictures.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/welcome.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/about.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/contact.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/detail.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/dynamic.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/feel.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/logs.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/message.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/sales.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/search.htm",
 		"/E/phpnow/htdocs/lb/application/controllers/front/search.php",
-		"/E/phpnow/htdocs/lb/application/language/en/item_backend_lang.php",
-		"/E/phpnow/htdocs/lb/application/language/en/item_front_lang.php",
-		"/E/phpnow/htdocs/lb/application/language/zh/item_front_lang.php",
-		"/E/phpnow/htdocs/lb/application/libraries/invoke.php",
-		"/E/phpnow/htdocs/lb/application/libraries/mypage.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/page_redirect.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/page_redirect.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/page_redirect.htm",
-		"/E/phpnow/htdocs/lb/application/controllers/front/common.php",
-		"/E/phpnow/htdocs/lb/application/libraries/mydb.php",
-		"/E/phpnow/htdocs/lb/application/models/admins_model.php",
-		"/E/phpnow/htdocs/lb/application/models/archive_model.php",
-		"/E/phpnow/htdocs/lb/application/models/commission_model.php",
-		"/E/phpnow/htdocs/lb/application/models/engage_model.php",
-		"/E/phpnow/htdocs/lb/application/models/friendlink_model.php",
-		"/E/phpnow/htdocs/lb/application/models/logs_model.php",
-		"/E/phpnow/htdocs/lb/application/models/menu_model.php",
-		"/E/phpnow/htdocs/lb/application/models/message_model.php",
-		"/E/phpnow/htdocs/lb/application/models/roles_model.php",
-		"/E/phpnow/htdocs/lb/application/models/trans_model.php",
-		"/E/phpnow/htdocs/lb/application/libraries/cor_invoke.php",
-		"/E/phpnow/htdocs/lb/application/libraries/Smarty-3.1.14/libs/plugins/modifiercompiler.count_paragraphs.php",
-		"/E/phpnow/htdocs/lb/application/libraries/corauth.php",
-		"/E/phpnow/htdocs/lb/application/libraries/corpage.php",
-		"/E/phpnow/htdocs/lb/application/libraries/cordb.php",
-		"/E/phpnow/htdocs/lb/application/libraries/corcache.php",
-		"/E/phpnow/htdocs/lb/application/libraries/corform.php",
-		"/E/phpnow/htdocs/lb/application/libraries/corlang.php",
-		"/E/phpnow/htdocs/lb/application/libraries/curl.php",
-		"/E/phpnow/htdocs/lb/cache/zh/admin_group.php",
-		"/E/phpnow/htdocs/lb/cache/en/admin_rights_config.php"
+		"/E/phpnow/htdocs/lb/application/models/search_model.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product.htm",
+		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
+		"/E/phpnow/htdocs/lb/application/models/common_model.php",
+		"/E/phpnow/htdocs/lb/application/config/routes.php",
+		"/E/phpnow/htdocs/lb/.htaccess",
+		"/E/phpnow/htdocs/lb/tools/test.php",
+		"/E/phpnow/htdocs/lb/application/core/MY_Router.php",
+		"/E/phpnow/htdocs/lb/application/config/config.php",
+		"/E/phpnow/htdocs/lb/application/controllers/front/dynamic.php",
+		"/E/phpnow/htdocs/lb/system/core/Router.php",
+		"/E/phpnow/htdocs/lb/system/core/URI.php",
+		"/E/phpnow/htdocs/lb/application/helpers/MY_url_helper.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/dynamic_view.htm",
+		"/E/phpnow/htdocs/lb/application/config/autoload.php",
+		"/E/phpnow/htdocs/lb/application/libraries/cor_page.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/about.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/dynamic.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/dynamic_view.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/product.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/product_view.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/sales.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/about.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/dynamic.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_view.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/sales.htm",
+		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
+		"/E/phpnow/htdocs/lb/application/controllers/front/about.php",
+		"/E/phpnow/htdocs/lb/application/compiles/06ca12fe274efe0f709f42728f0fe40938d24c24.file.left_message.htm.php",
+		"/E/phpnow/htdocs/lb/application/compiles/21e8d472322fa62d36474bd82bd366ec0911523d.file.engage.htm.php",
+		"/E/phpnow/htdocs/lb/application/compiles/27069bb56e29505facff5153c01436807ea9ec22.file.index.htm.php",
+		"/E/phpnow/htdocs/lb/application/compiles/3498e30ed6d2b4482daf7fe24352b367c7eb6de6.file.index.htm.php",
+		"/E/phpnow/htdocs/lb/application/compiles/56bf8ca68b93ecb0788df6107fbd64dd4dc4d730.file.top.htm.php",
+		"/E/phpnow/htdocs/lb/application/compiles/655212df7baa163b1a52cad84881ad3aa38fbe10.file.left_sales.htm.php",
+		"/E/phpnow/htdocs/lb/application/compiles/71f047dcf6182257cbce821a6a845f841f704a28.file.top.htm.php",
+		"/E/phpnow/htdocs/lb/application/compiles/79ed871eccdf9b191024b335b54e9516f2ee54b5.file.engage.htm.php",
+		"/E/phpnow/htdocs/lb/application/compiles/90fa8378798dfd6afc0bad598775d94cea8ab7ec.file.left_about.htm.php",
+		"/E/phpnow/htdocs/lb/application/compiles/965cce86569090c0f7dd460484fa5c49b7ec2bbb.file.message.htm.php",
+		"/E/phpnow/htdocs/lb/application/compiles/c9b7d78433bdc517d36a68dc09e94b8acb6cb9ec.file.left_message.htm.php",
+		"/E/phpnow/htdocs/lb/application/compiles/cb776ba6c6beeb124039a9d0a590a2c4e23797e8.file.left_sales.htm.php",
+		"/E/phpnow/htdocs/lb/application/compiles/d1722a81ed772567b0c0bc9b1c8698f0db641d48.file.message.htm.php",
+		"/E/phpnow/htdocs/lb/application/compiles/dce5e537e008105053d3ed50ebd8d840e88310c4.file.left_about.htm.php",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/templates.php",
+		"/E/phpnow/htdocs/lb/application/controllers/front/engage.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/common.js",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/core.js",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/about_archives.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/about_news.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/about_news22.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/business_archives.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/business_left_menu.html",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/detail.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/download.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/download_list.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/download_view.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/engage_apply2.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/index.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/jiamen.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/jiamen_archives.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/jiamen_ask.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/jiamen_ask_zone.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/js/common.js",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/js/core.js",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/logs.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/message.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/nav.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/product_cart.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/product_order.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/search.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/search_comm_add.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/search_comm_detail.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/search_ecman.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/service.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/study.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/study_detail.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/top.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/v_all.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/about_archives.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/about_news.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/about_news22.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/business_archives.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/business_left_menu.html",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/detail.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/download.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/download_list.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/download_view.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/engage_apply2.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/index.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/jiamen.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/jiamen_archives.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/jiamen_ask.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/jiamen_ask_zone.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/common.js",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/core.js",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/logs.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/message.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/nav.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_cart.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_order.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/search_comm_add.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/search_comm_detail.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/search_ecman.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/service.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/study.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/study_detail.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/top.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/v_all.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/about_left_mehu.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/engage.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/engage_apply.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/engage_detail.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/engage_friend.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/engage_left_mehu.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/jiamen_left_menu.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/left.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/left_about.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/left_download.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/left_message.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/left_sales.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/search_comm.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/search_left.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/service_left.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/study_left.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/about_left_mehu.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/engage.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/engage_apply.htm"
 	],
 	"find":
 	{
@@ -711,9 +711,16 @@
 	},
 	"find_in_files":
 	{
-		"height": 99.0,
+		"height": 0.0,
 		"where_history":
 		[
+			"E:\\phpnow\\htdocs\\lb\\system",
+			"E:\\phpnow\\htdocs\\lb\\application",
+			"E:\\phpnow\\htdocs\\lb\\application\\",
+			"E:\\phpnow\\htdocs\\lb\\application\\controllers",
+			"E:\\phpnow\\htdocs\\lb\\application\\controllers\\front",
+			"E:\\phpnow\\htdocs\\lb\\application",
+			"E:\\phpnow\\htdocs\\lb\\system",
 			"E:\\phpnow\\htdocs\\lb\\application\\templates",
 			"E:\\phpnow\\htdocs\\lb\\application",
 			"E:\\phpnow\\htdocs\\lb\\application\\libraries",
@@ -834,13 +841,6 @@
 			"E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14",
 			"E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins",
 			"E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs",
 			"E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14"
 		]
 	},
@@ -849,6 +849,27 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"array",
+			"route",
+			"$this->routes",
+			"$route",
+			"$this->uri_string",
+			"segments",
+			"segment",
+			"$ci_uri.4",
+			"func_tag",
+			"$CI->uri->segment(4)",
+			"$this->uri->segment(4)",
+			"dir_front",
+			"application//templates",
+			"front/",
+			"func_site_url",
+			"<!--{$site_url}-->/front/",
+			"site_url(\"front/",
+			"site_url('front/",
+			"message",
+			":any",
+			"$route",
 			"_ok",
 			"ata",
 			"theme",
@@ -955,28 +976,7 @@
 			"$this->ds",
 			"$this->mydb2",
 			"mydb2",
-			"mydb",
-			"link__add",
-			"helper",
-			"FIND_IN_SET",
-			"func_vsprintf",
-			"ran_index",
-			"_error_messages",
-			"msg",
-			"error",
-			"load_autocomplete",
-			"gif",
-			"getRes",
-			"function format",
-			"helper",
-			"js_url",
-			"autocom",
-			"auto",
-			"include",
-			"autocomplete_school",
-			"load_autocomplete",
-			"autocomplete_school",
-			"load_autocomplete"
+			"mydb"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -984,6 +984,14 @@
 		"regex": false,
 		"replace_history":
 		[
+			"$ci_uri.3",
+			"$CI->uri->segment(3)",
+			"$this->uri->segment(3)",
+			"application/front/templates",
+			"",
+			"<!--{$site_url}-->/",
+			"site_url(\"",
+			"site_url('",
 			"lang_get()",
 			"lang_get",
 			"cor_zip",
@@ -1155,6 +1163,122 @@
 		"selected_items":
 		[
 			[
+				"search.php",
+				"application/controllers/front/search.php"
+			],
+			[
+				"search.",
+				"application/templates/front/blue/zh/search.htm"
+			],
+			[
+				"prouct.htm",
+				"application/templates/front/blue/zh/product.htm"
+			],
+			[
+				"tpl.php",
+				"application/libraries/tpl.php"
+			],
+			[
+				"test.php",
+				"tools/test.php"
+			],
+			[
+				"config.php",
+				"application/config/config.php"
+			],
+			[
+				".htac",
+				".htaccess"
+			],
+			[
+				"dynami",
+				"application/controllers/front/dynamic.php"
+			],
+			[
+				"uri",
+				"system/core/URI.php"
+			],
+			[
+				"my",
+				"application/core/MY_Router.php"
+			],
+			[
+				"myur",
+				"application/helpers/MY_url_helper.php"
+			],
+			[
+				"myro",
+				"application/core/MY_Router.php"
+			],
+			[
+				"myr",
+				"application/core/MY_Router.php"
+			],
+			[
+				"router",
+				"system/core/Router.php"
+			],
+			[
+				"dynaic.php",
+				"application/controllers/front/dynamic.php"
+			],
+			[
+				"dynamic_view",
+				"application/templates/front/blue/zh/dynamic_view.htm"
+			],
+			[
+				"myrou",
+				"application/core/MY_Router.php"
+			],
+			[
+				"cor_page",
+				"application/libraries/cor_page.php"
+			],
+			[
+				"tpl",
+				"application/libraries/tpl.php"
+			],
+			[
+				"dynami_vie",
+				"application/templates/front/blue/en/dynamic_view.htm"
+			],
+			[
+				"tpl.p",
+				"application/libraries/tpl.php"
+			],
+			[
+				"dynamic_view.ht",
+				"application/templates/front/blue/en/dynamic_view.htm"
+			],
+			[
+				"dynai",
+				"application/controllers/front/dynamic.php"
+			],
+			[
+				"about.php",
+				"application/controllers/front/about.php"
+			],
+			[
+				"product.htm",
+				"application/templates/front/blue/zh/product.htm"
+			],
+			[
+				"left_about",
+				"application/templates/front/blue/en/left_about.htm"
+			],
+			[
+				"dynamic.htm",
+				"application/templates/front/blue/zh/dynamic.htm"
+			],
+			[
+				"system_",
+				"application/controllers/backend/system_manage.php"
+			],
+			[
+				"lang",
+				"application/hooks/Langclass.php"
+			],
+			[
 				"templates.php",
 				"application/controllers/backend/templates.php"
 			],
@@ -1187,20 +1311,8 @@
 				"application/templates/backend/blue/center.htm"
 			],
 			[
-				"config.php",
-				"application/config/config.php"
-			],
-			[
-				"tpl.php",
-				"application/libraries/tpl.php"
-			],
-			[
 				"produt_view",
 				"application/templates/front/blue/zh/product_view.htm"
-			],
-			[
-				"dynamic_view",
-				"application/templates/front/blue/zh/dynamic_view.htm"
 			],
 			[
 				"product_view",
@@ -1227,16 +1339,8 @@
 				"application/models/common_model.php"
 			],
 			[
-				"lang",
-				"application/hooks/Langclass.php"
-			],
-			[
 				"common_mod",
 				"application/models/common_model.php"
-			],
-			[
-				"cor_page",
-				"application/libraries/cor_page.php"
 			],
 			[
 				"common.php",
@@ -1403,10 +1507,6 @@
 				"application/templates/backend/blue/css/jquery.autocomplete.css"
 			],
 			[
-				"myur",
-				"application/helpers/MY_url_helper.php"
-			],
-			[
 				"myurl",
 				"application/helpers/MY_url_helper.php"
 			],
@@ -1435,10 +1535,6 @@
 				"application/libraries/mycache.php"
 			],
 			[
-				"test.php",
-				"tools/test.php"
-			],
-			[
 				"lb.css",
 				"application/templates/front/blue/zh/css/lb.css"
 			],
@@ -1449,14 +1545,6 @@
 			[
 				"dyn",
 				"application/controllers/front/dynamic.php"
-			],
-			[
-				"dynamic.htm",
-				"application/templates/front/blue/zh/dynamic.htm"
-			],
-			[
-				"product.htm",
-				"application/templates/front/blue/zh/product.htm"
 			],
 			[
 				"common.js",
@@ -1547,10 +1635,6 @@
 				"application/templates/backend/blue/lang_trans.htm"
 			],
 			[
-				"search.php",
-				"application/controllers/front/search.php"
-			],
-			[
 				"mypage",
 				"application/libraries/mypage.php"
 			],
@@ -1589,82 +1673,6 @@
 			[
 				"templates_view",
 				"application/templates/backend/blue/templates_view.htm"
-			],
-			[
-				"templaet_view",
-				"application/templates/backend/blue/templates_view.htm"
-			],
-			[
-				"fields_list",
-				"application/templates/backend/blue/fields_list.htm"
-			],
-			[
-				"tpl.pp",
-				"application/libraries/tpl.php"
-			],
-			[
-				"frame_left.htm",
-				"application/templates/backend/blue/frame_left.htm"
-			],
-			[
-				"frame_left",
-				"application/templates/backend/blue/frame_left.htm"
-			],
-			[
-				"table.css",
-				"application/templates/backend/blue/css/table.css"
-			],
-			[
-				"back",
-				"application/templates/backend/blue/css/backend_style.css"
-			],
-			[
-				"module_list",
-				"application/templates/backend/blue/modules_list.htm"
-			],
-			[
-				"adv_add",
-				"application/templates/backend/blue/advs_add.htm"
-			],
-			[
-				"admin.js",
-				"application/templates/backend/blue/js/admin.js"
-			],
-			[
-				"frame",
-				"application/templates/backend/blue/frame_left.htm"
-			],
-			[
-				"tpl.p",
-				"application/libraries/tpl.php"
-			],
-			[
-				"log",
-				"application/controllers/backend/login.php"
-			],
-			[
-				"style_left",
-				"application/templates/backend/blue/css/style_left.css"
-			],
-			[
-				"login.htm",
-				"application/templates/backend/blue/login.htm"
-			],
-			[
-				"config",
-				"application/config/config.php"
-			],
-			[
-				"style.cs",
-				"application/templates/backend/blue/css/style.css"
-			],
-			[
-				"center.ht",
-				"application/templates/backend/blue/center.htm"
-			],
-			[
-				"fields_add.h",
-				"application/templates/backend/blue/fields_add.htm"
 			]
 		],
 		"width": 0.0

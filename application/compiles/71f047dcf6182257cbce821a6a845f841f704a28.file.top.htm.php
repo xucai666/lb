@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 02:16:50
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 10:50:45
          compiled from "application\templates\front\blue\zh\top.htm" */ ?>
-<?php /*%%SmartyHeaderCode:62735212d192403e57-10512911%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1160652134a0555ea65-83648507%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '71f047dcf6182257cbce821a6a845f841f704a28' => 
     array (
       0 => 'application\\templates\\front\\blue\\zh\\top.htm',
-      1 => 1376876154,
+      1 => 1376994823,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '62735212d192403e57-10512911',
+  'nocache_hash' => '1160652134a0555ea65-83648507',
   'function' => 
   array (
   ),
@@ -23,9 +23,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5212d192478819_07301869',
+  'unifunc' => 'content_52134a055d73e7_00987527',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5212d192478819_07301869')) {function content_5212d192478819_07301869($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_52134a055d73e7_00987527')) {function content_52134a055d73e7_00987527($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -62,7 +62,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         
                    
             
-               <form id="form1" name="form1" method="get" action="<?php echo func_site_url(array('segments'=>'front/search'),$_smarty_tpl);?>
+               <form id="form1" name="form1" method="get" action="<?php echo func_site_url(array('segments'=>'search'),$_smarty_tpl);?>
 "  style="margin:0">
         <table width="188" border="0" cellspacing="0" cellpadding="0" style="margin-top:5px; margin-right:10px;">
   <tr>

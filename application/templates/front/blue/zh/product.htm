@@ -17,8 +17,8 @@
     <table     border="0" cellspacing="0" cellpadding="0" >
       <tr>
        
-        <td  style="background:url(<!--{$img_url}-->/daohanhh_11.jpg) repeat-x; padding-left:20px; height:25px" class="hong">
-      <!--{tag t_id=49 where="id="|cat:(","|explode:base64_decode($ci_uri.4)|end|default:2) html_type='detail'}-->
+        <td  style="background:url(<!--{$img_url}-->/daohanhh_11.jpg) repeat-x; padding-left:20px; height:25px" class="hong" width="746">
+      <!--{tag t_id=49 where="id="|cat:(","|explode:base64_decode($ci_uri.3)|end|default:2) html_type='detail'}-->
 
         </td>
        
@@ -28,7 +28,7 @@
           <tr>
            <td  valign="top"  align="center"  class="product">
             <ul>
-	         	 <!--{tag t_id=40 where="p_pid like '`$ci_uri.4|base64_decode`%' and p_name like '%`$smarty.request.p_name`%'"}-->
+	         	 <!--{tag t_id=40 where="p_pid like '`$ci_uri.3|base64_decode`%' and p_name like '%`$smarty.request.p_name`%'"}-->
             </ul>
 			  </td>
 			  
@@ -37,7 +37,7 @@
         </table>
 		<div class="page" align="center">
 
- <!--{tag_pager t_id=40 where="p_pid like '`$ci_uri.4|base64_decode`%' and p_name like '%`$smarty.request.p_name`%'"}-->
+ <!--{tag_pager t_id=40 where="p_pid like '`$ci_uri.3|base64_decode`%' and p_name like '%`$smarty.request.p_name`%'"}-->
 
     </div>		</td>
       </tr>

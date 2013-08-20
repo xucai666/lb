@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 02:16:53
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 11:21:19
          compiled from "application\templates\front\blue\zh\nav.htm" */ ?>
-<?php /*%%SmartyHeaderCode:152935212d1959ffdf3-98343372%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:221645213512f42d9e5-74379255%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'f5c850e164df724a1559652af49f899c153d119d' => 
     array (
       0 => 'application\\templates\\front\\blue\\zh\\nav.htm',
-      1 => 1376884334,
+      1 => 1376994822,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '152935212d1959ffdf3-98343372',
+  'nocache_hash' => '221645213512f42d9e5-74379255',
   'function' => 
   array (
   ),
@@ -24,9 +24,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5212d195a46615_23091825',
+  'unifunc' => 'content_5213512f477095_13195170',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5212d195a46615_23091825')) {function content_5212d195a46615_23091825($_smarty_tpl) {?><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?php if ($_valid && !is_callable('content_5213512f477095_13195170')) {function content_5213512f477095_13195170($_smarty_tpl) {?><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	
 
 <table width="233" border="0" cellspacing="0" cellpadding="0">
@@ -50,7 +50,7 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
  $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['item']->key;
 ?>
         <li id="nav<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
-"   ><?php echo ci_anchor(array('title'=>$_smarty_tpl->tpl_vars['item']->value['title'],'segment'=>"front/search/index/".((string)$_smarty_tpl->tpl_vars['key']->value)),$_smarty_tpl);?>
+"   ><?php echo ci_anchor(array('title'=>$_smarty_tpl->tpl_vars['item']->value['title'],'segment'=>"search/index/".((string)$_smarty_tpl->tpl_vars['key']->value)),$_smarty_tpl);?>
 </li>
         <?php } ?>
       </ul>    

@@ -254,6 +254,7 @@ class System_manage extends CI_Controller{
  		
  		if(isset($_GET['status']) && $_GET['status']!="-1"){
  			$this->db->where('is_trans',$this->input->get('status'));
+ 			if(empty($_GET['status'])) $this->db->or_where('is_trans is null');
  		}
  		$this->db->order_by('lang_id','asc');
  		$page_size = 15;

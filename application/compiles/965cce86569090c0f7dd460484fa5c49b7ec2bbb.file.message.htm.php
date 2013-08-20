@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 02:09:57
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 11:21:45
          compiled from "application\templates\front\blue\en\message.htm" */ ?>
-<?php /*%%SmartyHeaderCode:228115212cff57a12b5-72464411%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:357752135149d507b1-20875597%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '965cce86569090c0f7dd460484fa5c49b7ec2bbb' => 
     array (
       0 => 'application\\templates\\front\\blue\\en\\message.htm',
-      1 => 1376875966,
+      1 => 1376994820,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '228115212cff57a12b5-72464411',
+  'nocache_hash' => '357752135149d507b1-20875597',
   'function' => 
   array (
   ),
@@ -23,9 +23,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5212cff58acc31_65300068',
+  'unifunc' => 'content_52135149e70a46_78924820',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5212cff58acc31_65300068')) {function content_5212cff58acc31_65300068($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_front']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_52135149e70a46_78924820')) {function content_52135149e70a46_78924820($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_front']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
@@ -60,7 +60,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <table width="742" border="0" cellspacing="0" cellpadding="0" class="bian1">
         <tr>
           <td><form id="form1" name="form1" method="post" action="<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
-/front/message/save" onsubmit="return validator(this)">
+/message/save" onsubmit="return validator(this)">
             <table width="500" border="0" cellspacing="0" cellpadding="0" style="margin-left:43px">
               <tr>
                 <td width="91" height="40">您的姓名：</td>
@@ -96,12 +96,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                      <td>
 					 
 					   <a href="javascript:;"  >
-           		 <img id='captcha1' src='<?php echo func_site_url(array('segments'=>"front/message/show_captcha"),$_smarty_tpl);?>
+           		 <img id='captcha1' src='<?php echo func_site_url(array('segments'=>"message/show_captcha"),$_smarty_tpl);?>
 '/>            </a>
             <script language="javascript">
 			$('#captcha1').bind('click',function(){
 				
-				$(this).attr('src','<?php echo func_site_url(array('segments'=>"front/message/show_captcha"),$_smarty_tpl);?>
+				$(this).attr('src','<?php echo func_site_url(array('segments'=>"message/show_captcha"),$_smarty_tpl);?>
 /?rnd='+Math.random());
 				
 				

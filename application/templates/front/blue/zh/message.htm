@@ -25,7 +25,7 @@
     </table>
       <table width="742" border="0" cellspacing="0" cellpadding="0" class="bian1">
         <tr>
-          <td><form id="form1" name="form1" method="post" action="<!--{$site_url}-->/front/message/save" onsubmit="return validator(this)">
+          <td><form id="form1" name="form1" method="post" action="<!--{$site_url}-->/message/save" onsubmit="return validator(this)">
             <table width="500" border="0" cellspacing="0" cellpadding="0" style="margin-left:43px">
               <tr>
                 <td width="91" height="40">您的姓名：</td>
@@ -61,11 +61,11 @@
                      <td>
 					 
 					   <a href="javascript:;"  >
-           		 <img id='captcha1' src='<!--{func_site_url segments="front/message/show_captcha"}-->'/>            </a>
+           		 <img id='captcha1' src='<!--{func_site_url segments="message/show_captcha"}-->'/>            </a>
             <script language="javascript">
 			$('#captcha1').bind('click',function(){
 				
-				$(this).attr('src','<!--{func_site_url segments="front/message/show_captcha"}-->/?rnd='+Math.random());
+				$(this).attr('src','<!--{func_site_url segments="message/show_captcha"}-->/?rnd='+Math.random());
 				
 				
 				})

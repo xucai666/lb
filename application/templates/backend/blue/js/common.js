@@ -9,7 +9,7 @@ function f(o) {
 function region(o) {
 	var span = o.nextSibling;
 	var sys_url = $('#sys_base_url').html().trim();	
-	var url_send = site_url+"/front/common/region?pid="+o.value;	
+	var url_send = site_url+"/common/region?pid="+o.value;	
 	j.ajax({
 		url : url_send,
 		type : 'GET',

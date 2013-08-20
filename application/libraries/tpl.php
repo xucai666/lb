@@ -221,12 +221,15 @@ function func_bottom_info(){
   */
 
  function func_tag_detail($parameter){
+
 	$CI = &get_instance();
+	
 	if(preg_match("/=\?/",$parameter['where'])){
-		$parameter['where']  = str_replace("=?", "=".$CI->uri->segment(4), $parameter['where']);
+		$parameter['where']  = str_replace("=?", "=".$CI->uri->segment(3), $parameter['where']);
 	}	
  	
  	$parameter[html_type] = 'detail';
+ 
  	return func_tag($parameter);
  }
 
@@ -246,7 +249,7 @@ function func_get_nav($parameter){
 	$CI = &get_instance();
 	extract($parameter);
 	$where = $where?$where:"1=1";
-	$id = $id?$id:$CI->uri->segment(4);
+	$id = $id?$id:$CI->uri->segment(3);
 	$r =  $CI->Common_model->get_nav($tb,$id,$title_field,$where);
 	foreach($r as $k=>$v){
 		$rl[$k] = anchor(current($v),'['.$CI->lang->language[$k].']&nbsp;'.next($v));

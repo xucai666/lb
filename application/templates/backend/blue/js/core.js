@@ -251,7 +251,7 @@ function ajax_change_val(tb,key,val,change_key,change_val){
 //验证重复
 function ajax_check_repeat(obj,tb,key_name,key_value,val_name){	
 
-	var url = site_url+"/front/common/ajax_repeat_valid";
+	var url = site_url+"/common/ajax_repeat_valid";
 	$.ajax({
    type: "POST",
 	   url: url,
@@ -272,7 +272,7 @@ function ajax_check_repeat(obj,tb,key_name,key_value,val_name){
 
 function start_download(files_id){
 	if(confirm('确定下载?')){
-		$.getJSON(site_url+"/front/common/ajax_integral_download/?files_id="+files_id,function(msg){	
+		$.getJSON(site_url+"/common/ajax_integral_download/?files_id="+files_id,function(msg){	
 			if(msg.var_return=="1"){				
 					self.location.replace("/loading.php?files_id="+msg.files_id);						
 					
@@ -296,7 +296,7 @@ function start_download(files_id){
 
 function getTeachersContact(teacher_id){
 	if(!teacher_id) return false;
-	$.getJSON(site_url+"/front/common/ajax_teacher_contact/?teacher_id="+teacher_id,function(data){		
+	$.getJSON(site_url+"/common/ajax_teacher_contact/?teacher_id="+teacher_id,function(data){		
 					
 			if(data.vars=='-1'){
 					alert('请先登录！');

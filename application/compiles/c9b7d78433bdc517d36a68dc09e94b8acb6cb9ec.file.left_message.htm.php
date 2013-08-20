@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 02:09:57
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 11:21:45
          compiled from "application\templates\front\blue\en\left_message.htm" */ ?>
-<?php /*%%SmartyHeaderCode:232245212cff58fdd37-20597879%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:31852135149ebe0f0-59396994%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c9b7d78433bdc517d36a68dc09e94b8acb6cb9ec' => 
     array (
       0 => 'application\\templates\\front\\blue\\en\\left_message.htm',
-      1 => 1295185552,
+      1 => 1376994756,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '232245212cff58fdd37-20597879',
+  'nocache_hash' => '31852135149ebe0f0-59396994',
   'function' => 
   array (
   ),
@@ -22,9 +22,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5212cff5943dd1_18793184',
+  'unifunc' => 'content_52135149f03ef6_69644942',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5212cff5943dd1_18793184')) {function content_5212cff5943dd1_18793184($_smarty_tpl) {?><table width="233" border="0" cellspacing="0" cellpadding="0">
+<?php if ($_valid && !is_callable('content_52135149f03ef6_69644942')) {function content_52135149f03ef6_69644942($_smarty_tpl) {?><table width="233" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td width="3"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /daohanhh_09.jpg" width="3" height="28" /></td>
@@ -38,7 +38,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <tr>
             <td height="30" valign="bottom" style="padding-bottom:3px;" class="link_pa"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /jiantou_05.jpg" width="6" height="9" style="margin-left:20px; margin-right:15px;"  /><a href="<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
-/front/message">我要留言</a></td>
+/message">我要留言</a></td>
           </tr>
           <tr>
             <td><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
@@ -47,7 +47,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <tr>
              <td height="30" valign="bottom" style="padding-bottom:3px;" class="link_pa"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /jiantou_05.jpg" width="6" height="9" style="margin-left:20px; margin-right:15px;" /><a href="<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
-/front/message/action_list">留言列表</a></td>
+/message/action_list">留言列表</a></td>
           </tr>
           <tr>
             <td><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>

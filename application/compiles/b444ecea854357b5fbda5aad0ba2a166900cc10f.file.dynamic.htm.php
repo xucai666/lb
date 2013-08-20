@@ -1,20 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 02:16:50
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 11:11:16
          compiled from "application\templates\front\blue\zh\dynamic.htm" */ ?>
-<?php /*%%SmartyHeaderCode:154645212d192236668-41735873%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2398152134a06c56132-39346392%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b444ecea854357b5fbda5aad0ba2a166900cc10f' => 
     array (
       0 => 'application\\templates\\front\\blue\\zh\\dynamic.htm',
-      1 => 1376883999,
+      1 => 1376997041,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '154645212d192236668-41735873',
+  'nocache_hash' => '2398152134a06c56132-39346392',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52134a06dfea88_48561541',
   'variables' => 
   array (
     'dir_front' => 0,
@@ -23,10 +25,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ci_uri' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5212d1923df227_07585248',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5212d1923df227_07585248')) {function content_5212d1923df227_07585248($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_front']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_52134a06dfea88_48561541')) {function content_52134a06dfea88_48561541($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_front']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
@@ -55,7 +55,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /daohanhh_09.jpg" width="3" height="28" /></td>
         <td  width="740" style="background:url(<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /daohanhh_11.jpg) repeat-x; " class="hong">
-      <?php echo func_tag(array('t_id'=>48,'where'=>("id=").(((($tmp = @end(explode(",",base64_decode($_smarty_tpl->tpl_vars['ci_uri']->value[4]))))===null||$tmp==='' ? 8 : $tmp))),'html_type'=>'detail'),$_smarty_tpl);?>
+      <?php echo func_tag(array('t_id'=>48,'where'=>("id=").(((($tmp = @end(explode(",",base64_decode($_smarty_tpl->tpl_vars['ci_uri']->value[3]))))===null||$tmp==='' ? 8 : $tmp))),'html_type'=>'detail'),$_smarty_tpl);?>
 
         
         </td>
@@ -66,7 +66,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   <td  colspan="3" class="bian1">
  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:5px; margin-bottom:14px;">
  
-    <?php echo func_tag(array('t_id'=>46,'where'=>"n_pid like '".((string)base64_decode($_smarty_tpl->tpl_vars['ci_uri']->value[4]))."%' "),$_smarty_tpl);?>
+    <?php echo func_tag(array('t_id'=>46,'where'=>"n_pid like '".((string)base64_decode($_smarty_tpl->tpl_vars['ci_uri']->value[3]))."%' "),$_smarty_tpl);?>
 
     
   </table>

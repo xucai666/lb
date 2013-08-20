@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 02:16:47
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 10:50:42
          compiled from "application\templates\front\blue\zh\index.htm" */ ?>
-<?php /*%%SmartyHeaderCode:84255212d18fa84818-51360126%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:25152134a0256a538-93027819%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '27069bb56e29505facff5153c01436807ea9ec22' => 
     array (
       0 => 'application\\templates\\front\\blue\\zh\\index.htm',
-      1 => 1376875968,
+      1 => 1376994822,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '84255212d18fa84818-51360126',
+  'nocache_hash' => '25152134a0256a538-93027819',
   'function' => 
   array (
   ),
@@ -31,9 +31,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5212d18fcc6d42_98319242',
+  'unifunc' => 'content_52134a027a59f9_13609617',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5212d18fcc6d42_98319242')) {function content_5212d18fcc6d42_98319242($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_52134a027a59f9_13609617')) {function content_52134a027a59f9_13609617($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -67,7 +67,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 </div>
         
-        <form id="form1" name="form1" method="post" action="<?php echo func_site_url(array('segments'=>'front/search'),$_smarty_tpl);?>
+        <form id="form1" name="form1" method="post" action="<?php echo func_site_url(array('segments'=>'search'),$_smarty_tpl);?>
 " >
         <table width="188" border="0" cellspacing="0" cellpadding="0" style="margin-top:35px; margin-right:20px;">
   <tr>
@@ -200,7 +200,7 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
             <td><span class="tutu"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /tu_05.jpg" width="268"  border="0" style="margin-top:5px; margin-left:5px; float:left"/></span></td>
             <td style="padding-left:8px; padding-right:8px; line-height:18px;" class="link_qq">
-            <a  href="<?php echo func_site_url(array('segments'=>'front/about'),$_smarty_tpl);?>
+            <a  href="<?php echo func_site_url(array('segments'=>'about'),$_smarty_tpl);?>
 ">
             <?php echo func_tag(array('t_id'=>24,'where'=>"f_id=2",'html_type'=>'style1'),$_smarty_tpl);?>
 
