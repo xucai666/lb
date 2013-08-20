@@ -147,44 +147,6 @@ function loadCity(areaid){
 
 
 
-	
-//加载自动完成	
-function load_autocomplete(obj,action_name){	
-	
-	$(obj).focus().autocomplete(site_url+"/backend/common/"+action_name, {
-		width: 10,
-		dataType: "json",	
-		minChars:2,
-		autoFill:false,
-		selectFirst:false,
-		delay:400,
-		max:10,
-		mustMatch:true,
-		highlight: true,
-		scroll: true, 
-
-		parse: function(data) {				
-			return $.map(data, function(row) {	
-				return {
-					data: row,
-					value: row.id,
-					result: row.name 
-				};
-			
-			});
-		},
-		formatItem: function(item) {
-			return item.name;
-		}
-	}).result(function(event,item){		
-		if($(obj).prev(".auto_id").size()>0){
-			$(obj).prev(".auto_id").val(item.id);	
-		}
-	});
-		
-}
-
-
 
 
 
@@ -424,4 +386,72 @@ function window_close(){
     window.open("","_self");
 
     window.close();
+}
+
+
+/**
+ * resize image
+ * @param {[type]} maxWidth  [description]
+ * @param {[type]} maxHeight [description]
+ * @param {[type]} objImg    [description]
+ */
+function resizeImage(objImg,maxWidth,maxHeight){
+
+	var img = new Image();
+	img.src = objImg.src;
+	var hRatio;
+	var wRatio;
+	var Ratio = 1;
+	var w = img.width;
+	var h = img.height;
+	wRatio = maxWidth / w;
+	hRatio = maxHeight / h;
+	if (maxWidth ==0 && maxHeight==0){
+	Ratio = 1;
+	}else if (maxWidth==0){//
+	if (hRatio<1) Ratio = hRatio;
+	}else if (maxHeight==0){
+	if (wRatio<1) Ratio = wRatio;
+	}else if (wRatio<1 || hRatio<1){
+	Ratio = (wRatio<=hRatio?wRatio:hRatio);
+	}
+	if (Ratio<1){
+	w = w * Ratio;
+	h = h * Ratio;
+	}
+	
+	
+	$(objImg).width(w);
+	$(objImg).height(h);
+	
+}
+
+
+
+/**
+ * autoComplete
+ * @param  {[type]} _auto_obj [description]
+ * @return {[type]}           [description]
+ */
+function load_autocomplete(_auto_obj){
+	var cache = {};
+	_auto_obj.autocomplete({
+		autoFocus:true,
+	     source: function( request, response ) {
+				_auto_url = site_url+_auto_obj.attr('rel');
+		        var term = request.term;
+		        if ( term in cache ) {
+		          response( cache[term] );
+		          return;
+		        }
+		        $.getJSON(_auto_url, request, function( data, status, xhr ) {
+		          cache[term] = data;
+		          response( data );
+		        });
+	      },
+	      minLength: 1,
+	      delay:40,
+	      response: function( event, ui ) {	_auto_obj.prevAll('input.auto_id').val('').val('');}, 
+	      focus: function( event, ui ) {	_auto_obj.prevAll('input.auto_id').val(ui.item.id);},
+	    });
 }

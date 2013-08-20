@@ -8,7 +8,8 @@ function f(o) {
 
 function region(o) {
 	var span = o.nextSibling;
-	var sys_url = $('#sys_base_url').html().trim();	
+	var sys_url = $('#sys_base_url').html();
+	sys_url = jQuery.trim(sys_url);
 	var url_send = site_url+"/front/common/region?pid="+o.value;	
 	j.ajax({
 		url : url_send,
@@ -69,3 +70,6 @@ function isInteger( str ){
 			var regu = /^[0-9]{1,}$/;
 			return regu.test(str);
 			}
+
+
+
