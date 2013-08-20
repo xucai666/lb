@@ -1,6 +1,6 @@
 <!--{include file="`$dir_backend`/top.htm"}-->
 
-<div class="nav_title">模型数据&raquo;<!--{$theme}--></div>
+<div class="nav_title"><!--{"module_data"|lang}-->&raquo;<!--{$theme}--></div>
 <div  align="right"><a href="<!--{func_site_url segments='/backend/mdata/action_add'}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
 <!--{if $querys}-->
 <table class='search'>
@@ -28,7 +28,7 @@
 	<th><!--{$f.r_alias}--></th>
 	<!--{/foreach}-->	
 	
-	<th>操作</th>
+	<th><!--{"opt"|lang}--></th>
 
 </tr>
 	</thead>
@@ -44,7 +44,7 @@
 	<!--{/foreach}-->	
 	<td>
 			<!--{ci_anchor segment="backend/mdata/action_add/`$item[$primary]`" attrs="class:link_mod"}-->
-			<!--{ci_anchor segment="backend/mdata/action_del/`$item[$primary]`" attrs="class:link_del,onclick:return confirm('确定删除?');"}-->
+			<!--{ci_anchor segment="backend/mdata/action_del/`$item[$primary]`" attrs="class:link_del,onclick:return confirm('<!--{"confirm_delete"|lang}-->');"}-->
 
 	</td>
 </tr>
@@ -60,14 +60,14 @@
 	//删除确认
 	function chkdel2(){
 		if($('.ids:checked').size()>0){
-			if(confirm('确定删除?')){
+			if(confirm(<!--{"confirm_delete"|lang}-->)){
 				return true;
 			}else{
 				return false;	
 			}
 			
 		}else{
-			alert('请选择');	
+			alert(<!--{"inp_select"|lang}-->);	
 			return false;
 		}
 	}

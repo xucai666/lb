@@ -161,7 +161,7 @@ class Templates extends CI_Controller {
           $this->load->helper('file'); 
           //define root_path
           $develop = $this->cor_cache->cache_fetch('sys_config','develop',lang_get());
-          $init_path = $this->config->item('template_dir').'/front/'.$develop['template'];
+          $init_path = $this->config->item('template_dir').'/front/'.$develop['template'].'/'.lang_get();
           $t_name = $this->input->get('t_name');
           $root_path = base64_decode($this->uri->segment(4));
           $root_path = $root_path ? $root_path:base64_decode($this->input->get('root_path'));

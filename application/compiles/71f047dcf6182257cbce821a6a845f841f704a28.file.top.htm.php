@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 02:16:16
-         compiled from "application\templates\front\blue\en\top.htm" */ ?>
-<?php /*%%SmartyHeaderCode:295795212cfef761407-65342825%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 02:16:50
+         compiled from "application\templates\front\blue\zh\top.htm" */ ?>
+<?php /*%%SmartyHeaderCode:62735212d192403e57-10512911%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '56bf8ca68b93ecb0788df6107fbd64dd4dc4d730' => 
+    '71f047dcf6182257cbce821a6a845f841f704a28' => 
     array (
-      0 => 'application\\templates\\front\\blue\\en\\top.htm',
+      0 => 'application\\templates\\front\\blue\\zh\\top.htm',
       1 => 1376876154,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '295795212cfef761407-65342825',
+  'nocache_hash' => '62735212d192403e57-10512911',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5212cfef7dc556_38352034',
   'variables' => 
   array (
     'optimize' => 0,
@@ -24,8 +22,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'img_url' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5212d192478819_07301869',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5212cfef7dc556_38352034')) {function content_5212cfef7dc556_38352034($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_5212d192478819_07301869')) {function content_5212d192478819_07301869($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-19 15:51:49
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 03:02:56
          compiled from "application\templates\backend\blue\mdata_list.htm" */ ?>
 <?php /*%%SmartyHeaderCode:2024052123f158756b5-61729764%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fe333cb911d33c55256918497a4e010f83e199be' => 
     array (
       0 => 'application\\templates\\backend\\blue\\mdata_list.htm',
-      1 => 1376730339,
+      1 => 1376967768,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52123f159feb78_65902364',
   'variables' => 
   array (
     'dir_backend' => 0,
@@ -32,13 +34,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'page_link' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52123f159feb78_65902364',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52123f159feb78_65902364')) {function content_52123f159feb78_65902364($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
-<div class="nav_title">模型数据&raquo;<?php echo $_smarty_tpl->tpl_vars['theme']->value;?>
+<div class="nav_title"><?php echo lang("module_data");?>
+&raquo;<?php echo $_smarty_tpl->tpl_vars['theme']->value;?>
 </div>
 <div  align="right"><a href="<?php echo func_site_url(array('segments'=>'/backend/mdata/action_add'),$_smarty_tpl);?>
 "><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
@@ -87,7 +88,8 @@ $_smarty_tpl->tpl_vars['f']->_loop = true;
 </th>
 	<?php } ?>	
 	
-	<th>操作</th>
+	<th><?php echo lang("opt");?>
+</th>
 
 </tr>
 	</thead>
@@ -115,7 +117,8 @@ $_smarty_tpl->tpl_vars['f']->_loop = true;
 	<td>
 			<?php echo ci_anchor(array('segment'=>"backend/mdata/action_add/".((string)$_smarty_tpl->tpl_vars['item']->value[$_smarty_tpl->tpl_vars['primary']->value]),'attrs'=>"class:link_mod"),$_smarty_tpl);?>
 
-			<?php echo ci_anchor(array('segment'=>"backend/mdata/action_del/".((string)$_smarty_tpl->tpl_vars['item']->value[$_smarty_tpl->tpl_vars['primary']->value]),'attrs'=>"class:link_del,onclick:return confirm('确定删除?');"),$_smarty_tpl);?>
+			<?php ob_start();?><?php echo lang("confirm_delete");?>
+<?php $_tmp1=ob_get_clean();?><?php echo ci_anchor(array('segment'=>"backend/mdata/action_del/".((string)$_smarty_tpl->tpl_vars['item']->value[$_smarty_tpl->tpl_vars['primary']->value]),'attrs'=>"class:link_del,onclick:return confirm('".$_tmp1."');"),$_smarty_tpl);?>
 
 
 	</td>
@@ -133,14 +136,14 @@ $_smarty_tpl->tpl_vars['f']->_loop = true;
 	//删除确认
 	function chkdel2(){
 		if($('.ids:checked').size()>0){
-			if(confirm('确定删除?')){
+			if(confirm(<!--{"confirm_delete"|lang}-->)){
 				return true;
 			}else{
 				return false;	
 			}
 			
 		}else{
-			alert('请选择');	
+			alert(<!--{"inp_select"|lang}-->);	
 			return false;
 		}
 	}

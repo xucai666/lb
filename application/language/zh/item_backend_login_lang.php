@@ -19,6 +19,9 @@
  $lang['inp_login_ok']											= '登陆成功';
  $lang['inp_error']												= '%s 输入错误';
  $lang['inp_pardon']												= '对不起';
+ $lang['inp_pardon']												= '对不起';
+ $lang['home_page']												= '网站首页';
+ $lang['exit']												= '退出';
  //主题
  
  

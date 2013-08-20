@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-19 15:51:48
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 02:36:13
          compiled from "application\templates\backend\blue\center.htm" */ ?>
 <?php /*%%SmartyHeaderCode:2735952123f14bbba50-34400707%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '774b00c614ab3096d91e0b8fcc91c562c3e35f4a' => 
     array (
       0 => 'application\\templates\\backend\\blue\\center.htm',
-      1 => 1376754492,
+      1 => 1376966172,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52123f14e0b094_61992044',
   'variables' => 
   array (
     'item_lang' => 0,
@@ -33,8 +35,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'weather' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52123f14e0b094_61992044',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52123f14e0b094_61992044')) {function content_52123f14e0b094_61992044($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_output_true')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\modifier.output_true.php';
 if (!is_callable('smarty_function_html_options')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\function.html_options.php';
@@ -239,10 +239,11 @@ $_smarty_tpl->tpl_vars['item2']->_loop = true;
 		<td background="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /bg2.gif" style="text-align:right; color: #135294; "><?php echo $_smarty_tpl->tpl_vars['user_info']->value['admin_user'];?>
 (<?php echo $_smarty_tpl->tpl_vars['user_info']->value['role_name'];?>
-) | <a href="<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
-/backend/login/center" target='_top'>后台首页</a> | <a href="<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
-" target="_blank">网站首页</a> | <a href="<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
-/backend/system_manage/exit_system" target="_top">退出</a> </td>
+)  | <a href="<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
+" target="_blank"><?php echo lang("home_page");?>
+</a> | <a href="<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
+/backend/system_manage/exit_system" target="_top"><?php echo lang("exit");?>
+</a> </td>
 	    <td align="right" valign="top" background="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /bg2.gif" width="28" ><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /teble_top_right.gif" alt="" /></td>

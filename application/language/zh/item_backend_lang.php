@@ -89,5 +89,22 @@
 		$lang['button_select_all']					 = '全选';
 		$lang['button_select']					 = '选择';
 		$lang['button_trans']					 = '翻译';
- 
+
+		//save
+		$lang['success_save']					 = '保存成功';
+		$lang['success_delete']					 = '删除成功';
+		$lang['success_add']					 = '添加成功';
+		$lang['success_modify']					 = '更新成功';
+	
+
+		//parameter
+		$lang['error_parameter']				 = '参数错误';
+		$lang['error_save']				 		 = '保存失败';
+		//input
+		$lang['inp_select']				 		 = '请选择';
+		//confirm
+		$lang['confirm_delete']				 	 = '确定删除?';
+		//operate
+		$lang['opt']				 		  	 = '操作';
+
 ?>

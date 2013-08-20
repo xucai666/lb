@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 02:16:20
-         compiled from "application\templates\front\blue\en\dynamic_view.htm" */ ?>
-<?php /*%%SmartyHeaderCode:70915212cff8be7e74-05666998%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 02:16:55
+         compiled from "application\templates\front\blue\zh\dynamic_view.htm" */ ?>
+<?php /*%%SmartyHeaderCode:137465212d197b39990-23817495%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'e25185a7c4b85b1dc38066a9f8d22a2603178824' => 
+    '7fa62a317207c00680215361da4eacca5cc99b85' => 
     array (
-      0 => 'application\\templates\\front\\blue\\en\\dynamic_view.htm',
+      0 => 'application\\templates\\front\\blue\\zh\\dynamic_view.htm',
       1 => 1376884006,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '70915212cff8be7e74-05666998',
+  'nocache_hash' => '137465212d197b39990-23817495',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5212cff8cd92e5_19522346',
   'variables' => 
   array (
     'dir_front' => 0,
@@ -25,8 +23,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ci_uri' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5212d197c399e8_07389718',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5212cff8cd92e5_19522346')) {function content_5212cff8cd92e5_19522346($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_front']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_5212d197c399e8_07389718')) {function content_5212d197c399e8_07389718($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_front']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>

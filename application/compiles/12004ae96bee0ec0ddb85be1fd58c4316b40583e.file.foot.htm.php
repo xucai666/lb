@@ -1,29 +1,29 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 02:16:16
-         compiled from "application\templates\front\blue\en\foot.htm" */ ?>
-<?php /*%%SmartyHeaderCode:3174352129a5df3a2a8-88838887%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 02:16:47
+         compiled from "application\templates\front\blue\zh\foot.htm" */ ?>
+<?php /*%%SmartyHeaderCode:126545212d18fd24131-50268301%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '42b34c46cb5221a3d9cb56083aaffebef11a03a6' => 
+    '12004ae96bee0ec0ddb85be1fd58c4316b40583e' => 
     array (
-      0 => 'application\\templates\\front\\blue\\en\\foot.htm',
+      0 => 'application\\templates\\front\\blue\\zh\\foot.htm',
       1 => 1376875968,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3174352129a5df3a2a8-88838887',
+  'nocache_hash' => '126545212d18fd24131-50268301',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52129a5e00df51_33795908',
   'variables' => 
   array (
     'img_url' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5212d18fd44421_70693528',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52129a5e00df51_33795908')) {function content_52129a5e00df51_33795908($_smarty_tpl) {?><table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
+<?php if ($_valid && !is_callable('content_5212d18fd44421_70693528')) {function content_5212d18fd44421_70693528($_smarty_tpl) {?><table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
     <td width="7"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /banquan_09.jpg" width="7" height="39" /></td>

@@ -49,7 +49,7 @@
 		$lang_get = $_GET['lang'];		
 		$lang = $lang_get?$lang_get:$lang;	
 		$config = &get_config();
-		$lang = $lang?$lang:$config('language');
+		$lang = $lang?$lang:$config['language'];
 		return $lang;	
 		
 	}	

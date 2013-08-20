@@ -132,7 +132,7 @@ class Mdata extends CI_Controller{
 		 			'log_desc'=>sprintf('module %s,%s ID %s success',$this->m->main($this->im->get_mid(),'m_name'),$rs['sys_db_type'],$rs['main'][$log_cf['main']['primary_key']]),
 		 		));
 
-				$this->cor_page->backend_redirect('mdata/action_list','保存成功');
+				$this->cor_page->backend_redirect('mdata/action_list',lang('success_save'));
 			}
 
 		}catch(EXCEPTION $e){
@@ -147,7 +147,7 @@ class Mdata extends CI_Controller{
 			$primary = $this->m->fetch_primary($this->im->get_mid(),'r_name');
 			$ids = $this->input->post($primary);
             $ids = $ids?$ids:$this->uri->segment(4);
-			if(empty($ids)) throw new Exception('参数错误');
+			if(empty($ids)) throw new Exception(lang('errro_parameter'));
 			$rs = $this->cor_db->delete($ids,$this->im->save_config());
 
 			//insert log
@@ -164,7 +164,7 @@ class Mdata extends CI_Controller{
 	 		));
 
 
-			$this->cor_page->backend_redirect('mdata/action_list','删除成功');
+			$this->cor_page->backend_redirect('mdata/action_list',lang('success_delete'));
 		}catch(EXCEPTION $e){
 			$this->cor_page->backend_redirect($_SERVER['HTTP_REFERER'],$e->getMessage());
 		}

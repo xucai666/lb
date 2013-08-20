@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 02:23:59
-         compiled from "application\templates\front\blue\en\product_view.htm" */ ?>
-<?php /*%%SmartyHeaderCode:13925212cffb004bc8-73905226%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 02:23:00
+         compiled from "application\templates\front\blue\zh\product_view.htm" */ ?>
+<?php /*%%SmartyHeaderCode:186915212d199658fa3-83309534%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '0c861152301e4212404f7cb5d0cd07a78a37f1f2' => 
+    '855b662c27f98243eb630f1ef085de78cb5833ea' => 
     array (
-      0 => 'application\\templates\\front\\blue\\en\\product_view.htm',
-      1 => 1376876359,
+      0 => 'application\\templates\\front\\blue\\zh\\product_view.htm',
+      1 => 1376965367,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '13925212cffb004bc8-73905226',
+  'nocache_hash' => '186915212d199658fa3-83309534',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5212cffb0ef965_88104314',
+  'unifunc' => 'content_5212d19974bc44_02726959',
   'variables' => 
   array (
     'dir_front' => 0,
@@ -26,7 +26,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5212cffb0ef965_88104314')) {function content_5212cffb0ef965_88104314($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_front']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_5212d19974bc44_02726959')) {function content_5212d19974bc44_02726959($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_front']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>

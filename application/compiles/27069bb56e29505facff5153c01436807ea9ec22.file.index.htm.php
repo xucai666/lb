@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 02:16:45
-         compiled from "application\templates\front\blue\en\index.htm" */ ?>
-<?php /*%%SmartyHeaderCode:1001452129a5dcd7382-36611955%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 02:16:47
+         compiled from "application\templates\front\blue\zh\index.htm" */ ?>
+<?php /*%%SmartyHeaderCode:84255212d18fa84818-51360126%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '3498e30ed6d2b4482daf7fe24352b367c7eb6de6' => 
+    '27069bb56e29505facff5153c01436807ea9ec22' => 
     array (
-      0 => 'application\\templates\\front\\blue\\en\\index.htm',
+      0 => 'application\\templates\\front\\blue\\zh\\index.htm',
       1 => 1376875968,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1001452129a5dcd7382-36611955',
+  'nocache_hash' => '84255212d18fa84818-51360126',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52129a5de465f1_13888532',
   'variables' => 
   array (
     'optimize' => 0,
@@ -32,8 +30,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dir_front' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5212d18fcc6d42_98319242',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52129a5de465f1_13888532')) {function content_52129a5de465f1_13888532($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_5212d18fcc6d42_98319242')) {function content_5212d18fcc6d42_98319242($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

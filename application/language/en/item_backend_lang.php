@@ -56,5 +56,14 @@
   'button_select_all' => 'Select all',
   'button_select' => 'Select',
   'button_trans' => 'Translation',
+  'success_save' => 'Successfully saved',
+  'success_delete' => 'Deleted successfully',
+  'success_add' => 'Added successfully',
+  'success_modify' => 'Update successful',
+  'error_parameter' => 'Parameter error',
+  'error_save' => 'Save failed',
+  'inp_select' => 'Please select',
+  'confirm_delete' => 'Sure you want to delete?',
+  'opt' => 'Operation',
 );
 ?>

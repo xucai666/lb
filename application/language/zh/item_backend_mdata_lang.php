@@ -7,5 +7,6 @@
  */
  //标签
  $lang['title']													= '标题';
+ $lang['module_data']													= '模型数据';
 
 ?>
