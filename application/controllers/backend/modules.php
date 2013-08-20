@@ -16,10 +16,10 @@ class Modules extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		//auth login
-        $this->myauth->execute_auth();		
+        $this->cor_auth->execute_auth();		
 		$this->load->model("Modules_model",'im');
 		$this->load->model("Fields_model",'fm');
-		$this->lang->load('item_backend_modules',$this->Common_model->lang_get());
+		$this->lang->load('item_backend_modules',lang_get());
 
 	}
 
@@ -40,14 +40,14 @@ class Modules extends CI_Controller{
 	 	
 	 	
 	 
-		$data = array('detail_total'=>count($detail),'detail'=>$detail,'main'=>$main,'f_ids'=>$f_ids,'query_types'=>$this->mycache->cache_fetch('query_types'),'subs'=>$this->im->subs($m_id));
-		$this->mypage->load_backend_view('modules_add',$data);
+		$data = array('detail_total'=>count($detail),'detail'=>$detail,'main'=>$main,'f_ids'=>$f_ids,'query_types'=>$this->cor_cache->cache_fetch('query_types'),'subs'=>$this->im->subs($m_id));
+		$this->cor_page->load_backend_view('modules_add',$data);
 	}
 
 	function action_save(){
 		$post_detail = $this->input->post('detail');
 		$post_main = $this->input->post('main');
-		$data = array('main'=>$post_main,'detail'=>$this->myform->post_to_set($post_detail),'query_types'=>$this->mycache->cache_fetch('query_types'));
+		$data = array('main'=>$post_main,'detail'=>$this->cor_form->post_to_set($post_detail),'query_types'=>$this->cor_cache->cache_fetch('query_types'));
 		try{
 			if(array_search(1,$post_detail['r_primary'])===false){
 				throw new Exception(lang("modules_valid_primary"));
@@ -57,7 +57,7 @@ class Modules extends CI_Controller{
 			if($this->form_validation->run()){
 				$flag = $this->db->select("*")->from('module')->where('m_tb',$data['main']['m_tb'])->where_not_in('m_id',$data['main']['m_id'])->count_all_results();
 				if($flag) throw new Exception(lang('modules_valid_table'));
-				$rs = $this->mydb->save($data,$this->im->save_config());
+				$rs = $this->cor_db->save($data,$this->im->save_config());
 				//create table
 				$this->im->create_table($data);
 				//create sub module column
@@ -72,24 +72,24 @@ class Modules extends CI_Controller{
 		 		$this->Logs_model->log_insert(array(
 		 			'log_table'=>$log_cf['main']['table_name'],
 		 			'log_table_id'=>$rs['main'][$log_cf['main']['primary_key']],
-		 			'log_user'=>$this->myauth->fetch_auth('user_name'),
+		 			'log_user'=>$this->cor_auth->fetch_auth('user_name'),
 		 			'log_date'=>date("Y-m-d H:i:s"),
 		 			'log_sql'=>trim(implode("\n",(array)$this->db->sql_log)),
 		 			'log_type'=>'11',
 		 			'log_desc'=>sprintf('%s module %s success.',$rs['sys_db_type'],$rs['main']['m_name']),
 		 		));
 
-				$this->mypage->backend_redirect('modules/action_list',lang('modules_success_save'));
+				$this->cor_page->backend_redirect('modules/action_list',lang('modules_success_save'));
 			}else{	
 				
 				$f_ids = $this->fm->fetch_select();
 				$data = array_merge($data,array('f_ids'=>$f_ids));
-				$this->mypage->load_backend_view('modules_add',$data);
+				$this->cor_page->load_backend_view('modules_add',$data);
 			}
 
 		}catch(EXCEPTION $e){
 		
-			$this->mypage->backend_redirect('javascript:history.go(-1);',$e->getMessage());
+			$this->cor_page->backend_redirect('javascript:history.go(-1);',$e->getMessage());
 		}
 
 	}
@@ -122,7 +122,7 @@ class Modules extends CI_Controller{
            	//drop tables 
 			$drops =  $this->im->drop_table_sql($m_id);
 			//delete module
-			$rs = $this->mydb->delete($m_id,$this->im->save_config());
+			$rs = $this->cor_db->delete($m_id,$this->im->save_config());
 			foreach($drops as $v):
 				$this->db->query($v);
 			endforeach;
@@ -140,7 +140,7 @@ class Modules extends CI_Controller{
 	 		$this->Logs_model->log_insert(array(
 	 			'log_table'=>$log_cf['main']['table_name'],
 	 			'log_table_id'=>$rs[$log_cf['main']['primary_key']],
-	 			'log_user'=>$this->myauth->fetch_auth('user_name'),
+	 			'log_user'=>$this->cor_auth->fetch_auth('user_name'),
 	 			'log_date'=>date("Y-m-d H:i:s"),
 	 			'log_sql'=>trim(implode("\n",(array)$this->db->sql_log)),
 	 			'log_type'=>'11',
@@ -149,9 +149,9 @@ class Modules extends CI_Controller{
 
 
 			//page redirect
-			$this->mypage->backend_redirect('modules/action_list',lang('modules_success_delete'));
+			$this->cor_page->backend_redirect('modules/action_list',lang('modules_success_delete'));
 		}catch(EXCEPTION $e){
-			$this->mypage->backend_redirect('modules/action_list',$e->getMessage());
+			$this->cor_page->backend_redirect('modules/action_list',$e->getMessage());
 		}
 	}
 
@@ -160,9 +160,9 @@ class Modules extends CI_Controller{
 		$m_type = $this->input->get('m_type');
 		$this->db->select('*',false)->from('module')->like('m_name',$this->input->get('m_name'))->like('m_tb',$this->input->get('m_tb'))->order_by('m_id','desc');
 		if($m_type) $this->db->where('m_type',$m_type);
-		$data = $this->mydb->fetch_all(15);
+		$data = $this->cor_db->fetch_all(15);
 		$data['f_ids'] = $f_ids;
-		$this->mypage->load_backend_view('modules_list',$data);
+		$this->cor_page->load_backend_view('modules_list',$data);
 	}
 }
 ?>

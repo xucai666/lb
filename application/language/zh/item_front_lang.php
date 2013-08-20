@@ -58,8 +58,8 @@
 		$lang['sys_window_main']				 = '主窗口';
 		$lang['sys_browse']					 = '浏览站点';
 		$lang['sys_exit']						 = '退出系统';
-		$lang['mypage_remarks']				 = '知道了，请继续';
-		$lang['mypage_theme']					 = '提示信息';
+		$lang['cor_page_remarks']				 = '知道了，请继续';
+		$lang['cor_page_theme']					 = '提示信息';
 		$lang['Prev']					         = '上一页';
 		$lang['Next']					         = '下一页';
 		

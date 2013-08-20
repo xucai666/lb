@@ -25,7 +25,7 @@ class Archives_model extends CI_Model{
 	function db_config(){
 		return array(
 			'main'=>array(
-				'table_name'=>$this->mydb->table('infos'),
+				'table_name'=>$this->cor_db->table('infos'),
 				'primary_key'=>'info_id',
 			)
 		);
@@ -46,7 +46,7 @@ class Archives_model extends CI_Model{
 	 			'w'=>'600',
 	 			'h'=>'400',
 	 			'ToolbarStartExpanded'=>1,
-	 			'DefaultLanguage'=>$this->Common_model->lang_get()=='english'?'en':'zh-cn',
+	 			'DefaultLanguage'=>lang_get()=='english'?'en':'zh-cn',
 		);
 		return  $this->fckeditor->CreateHtml($config);
 
@@ -121,7 +121,7 @@ class Archives_model extends CI_Model{
  */
 	function archive_class_left(){
 				
-		$sql  = "select * from ".$this->mydb->table("category")." where c_sn like '".$this->c_sn."_%' order by c_sn asc,c_level asc ";
+		$sql  = "select * from ".$this->cor_db->table("category")." where c_sn like '".$this->c_sn."_%' order by c_sn asc,c_level asc ";
 		$list = $this->db->query($sql)->result_array();
 		return $list;	
 	
@@ -134,8 +134,8 @@ class Archives_model extends CI_Model{
 	 */
 	function archive_content_nav($id){
 		$sq = "SELECT (SELECT b.c_sn   FROM mysys_category  AS b  WHERE   a.info_class_sn   LIKE  CONCAT(b.c_sn,'%') ORDER BY b.c_sn ASC LIMIT 1)  AS  parent_sn  FROM mysys_infos AS a WHERE a.info_id=".$id;
-		$p_sn = $this->mydb->fetch_value($sq,'parent_sn');
-		$tb = $this->mydb->table('infos');
+		$p_sn = $this->cor_db->fetch_value($sq,'parent_sn');
+		$tb = $this->cor_db->table('infos');
 		$sq = <<<EOT
 	SELECT *,'Prev' as nav_title FROM (SELECT *  FROM  $tb   WHERE info_class_sn like '$p_sn%' and info_id<$id ORDER BY info_id DESC LIMIT 1) AS t1 
 			UNION   ALL 
@@ -143,7 +143,7 @@ class Archives_model extends CI_Model{
 
 EOT;
 
-		return $this->mydb->fetch_values($sq);
+		return $this->cor_db->fetch_values($sq);
 	}
  	
  	

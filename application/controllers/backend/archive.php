@@ -16,11 +16,11 @@ class Archive extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		//验证登陆
-		$this->myauth->execute_auth();
+		$this->cor_auth->execute_auth();
 		$this->load->model('Archive_model'); 
 		$this->act = 'archive';	
 		$this->im = $this->Archive_model;
-		$this->lang->load('item_backend_archive',$this->Common_model->lang_get());	
+		$this->lang->load('item_backend_archive',lang_get());	
 		$this->m_lang = $this->lang->language;
 		$this->tpl->assign('lang_archive',$this->m_lang);
 		
@@ -36,17 +36,17 @@ class Archive extends CI_Controller{
 		$class_id = $this->input->get('info_class');
 		
 		$class_info = array(
-			'class_theme'=>$this->mycache->cache_fetch($this->act.'_class',$class_id),
+			'class_theme'=>$this->cor_cache->cache_fetch($this->act.'_class',$class_id),
 		);	
 					
 		//查询
 		$sql_arr = array(
-			'table_name'=>$this->mydb->table('infos'),
+			'table_name'=>$this->cor_db->table('infos'),
 			'fields'=>'*',
 			'primary_id'=>'info_class',
 			'primary_val'=>$class_id,
 		);	
-		$main = $this->mydb->fetch_one($sql_arr);
+		$main = $this->cor_db->fetch_one($sql_arr);
 		$main['info_class'] = $class_id;
 		$data = array(
 			'main'=>$main,
@@ -54,7 +54,7 @@ class Archive extends CI_Controller{
 			'class_info'=>$class_info,
 		);
 		
-		$this->mypage->load_backend_view(strtolower($this->act).'_add',$data);		
+		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);		
 	}
 	
 	
@@ -69,7 +69,7 @@ class Archive extends CI_Controller{
 	 		$main = $this->input->post('main'); 	
 	 		$class_id = $main['info_class'];		 	
 			$class_info = array(
-				'class_theme'=>$this->mycache->cache_fetch($this->act.'_class',$class_id),
+				'class_theme'=>$this->cor_cache->cache_fetch($this->act.'_class',$class_id),
 			);
 			$data  = array(
 				'main'=>$main,
@@ -80,16 +80,16 @@ class Archive extends CI_Controller{
 		 	$this->form_validation->set_rules($this->im->validator());
 		 	if($this->form_validation->run()==true){	
 		 		$db_config = $this->im->db_config();		 		 		
-		 		$data_var = $this->mydb->save($data,$db_config);
+		 		$data_var = $this->cor_db->save($data,$db_config);
 		 		
-		 		$this->mypage->pop_redirect('已保存',site_url('backend/archive/action_add/?info_class='.$class_id));
+		 		$this->cor_page->pop_redirect('已保存',site_url('backend/archive/action_add/?info_class='.$class_id));
 		 	}else{
 				$data['editor']  = $this->Common_model->editor($main['info_content']);
-		 		$this->mypage->load_backend_view(strtolower($this->act).'_add',$data);
+		 		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);
 		 	}
 	 		
 	 	}catch(Exception $e){
-	 		$this->mypage->backend_redirect($this->act.'/action_add',$e->getMessage());
+	 		$this->cor_page->backend_redirect($this->act.'/action_add',$e->getMessage());
 	 	}			
 	 }
 	

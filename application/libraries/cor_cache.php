@@ -13,7 +13,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
   * @version   1.0$
   * @link      http://phpsysinfo.sourceforge.net
   */
- class Mycache{
+ class Cor_cache{
  	
  	
  	private static $instance;
@@ -23,7 +23,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
 
  	}
  	
- 	public static function &get_mycache(){ 	
+ 	public static function &get_cor_cache(){ 	
  		return self::$instance;
  	}
  		
@@ -35,8 +35,9 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  		if(empty($config)){ 			
  			show_error("参数配置不正确");
  		}	 		
- 		extract($config);	 		
- 		$dd = $this->db->from($table_name)
+ 		extract($config);	
+ 		$db = &get_cor_db(); 		
+ 		$dd = $db->from($table_name)
  		->select($fields)->get()->result_array(); 	
  		$this->cache_create($dd,$cache_name);
  		
@@ -47,12 +48,13 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  	/**
  	 * 生成缓存文件
  	 */
- 	function cache_create_for_db($config){ 
+ 	function cache_create_for_db($config){
+ 		$db = &get_cor_db(); 
  		if(empty($config)){ 			
  			show_error("参数配置不正确");
  		}	 		
  		extract($config);	 		
- 		$dd_temp = $this->db->from($table_name)
+ 		$dd_temp = $db->from($table_name)
  		->select($fields)->get()->result_array(); 	
  		cache_create($dd_temp,$cache_name);
  	}
@@ -67,7 +69,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  		}	
  		$this->cache_delete($cache_name);
  		$ci = & get_instance();	
- 		$lang = $ci->Common_model->lang_get(); 	 		
+ 		$lang = lang_get(); 	 		
  		$handle = fopen(FCPATH.FOLDER_CACHE.'/'.$lang.'/'.$cache_name.$file_ext,'w');
  		if(!$handle){
  			show_error("不能打开文件，路径".FOLDER_CACHE_STATIC);
@@ -90,7 +92,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  	function cache_fetch($name,$index=null,$lang=null,$file_ext='.php'){
  		try{
  			$ci = & get_instance();	
-	 		$lang = $lang?$lang:$ci->Common_model->lang_get(); 
+	 		$lang = $lang?$lang:lang_get(); 
 	 		$file = FCPATH.FOLDER_CACHE.'/'.$lang.'/'.$name.$file_ext;
 	 		if(!file_exists($file))  throw new Exception($name.'缓存文件已丢失，请创建！');
 	 		$cache_return = @require($file);
@@ -110,7 +112,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  	 */
  	function cache_exists($name,$lang='zh',$file_ext='.php'){
  			$ci = & get_instance();	
-	 		$lang = $ci->Common_model->lang_get(); 
+	 		$lang = lang_get(); 
 	 		$file = FCPATH.FOLDER_CACHE.'/'.$lang.'/'.$name.$file_ext;
 	 		return file_exists($file) ? true:false;
  	}
@@ -118,7 +120,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  	
  	function cache_delete($cache_name,$file_ext='.php'){
  		$ci = & get_instance();	 
- 		$lang = $ci->Common_model->lang_get(); 
+ 		$lang = lang_get(); 
  		@unlink(FCPATH.FOLDER_CACHE.'/'.$lang.'/'.$cache_name.$file_ext);
  	}	
  	
@@ -126,7 +128,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  	 */
  	function cache_info($name,$lang='zh',$file_ext='.php'){
  			$ci = & get_instance();	
-	 		$lang = $ci->Common_model->lang_get(); 
+	 		$lang = lang_get(); 
 	 		$f_info = null;
 	 		$file = FCPATH.FOLDER_CACHE.'/'.$lang.'/'.$name.$file_ext;
 	 		if(file_exists($file)){
@@ -176,8 +178,8 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  		
  }
   
- function &get_mycache(){	
-	return Mycache::get_mycache();
+ function &get_cor_cache(){	
+	return cor_cache::get_cor_cache();
 } 
 	
 ?>

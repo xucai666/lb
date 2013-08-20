@@ -13,7 +13,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
   * @version   1.0$
   * @link      http://phpsysinfo.sourceforge.net
   */ 
- class Mylang {
+ class Cor_lang {
  	private static $instance;
  	
  	function __construct($db_conn=null){
@@ -22,17 +22,17 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  			$CI->load->model('Common_model');
  		} 
  		
- 		$CI->db = $CI->load->database($CI->Common_model->lang_get(),true);
+ 		$CI->db = $CI->load->database(lang_get(),true);
     
- 		$CI->load->library('mydb');
+ 		$CI->load->library('cor_db');
  				
- 		$CI->mydb->setDs($CI->db);
+ 		$CI->cor_db->setDs($CI->db);
 
  	}
  	 
  	
  	 	 	 
- 	public static function &get_mylang(){ 	
+ 	public static function &get_cor_lang(){ 	
  		return self::$instance;
  	}
  		
@@ -41,8 +41,8 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  
  } 
  
- function &get_mylang(){	
-	return Mylang::get_mylang();
+ function &get_cor_lang(){	
+	return cor_lang::get_cor_lang();
 } 
 	
 

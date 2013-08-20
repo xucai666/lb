@@ -18,7 +18,7 @@
 	to bind your own submit handler to the form.  For example,
 
 	$(document).ready(function() {
-		$('#myForm').bind('submit', function() {
+		$('#cor_form').bind('submit', function() {
 			$(this).ajaxSubmit({
 				target: '#output'
 			});
@@ -30,7 +30,7 @@
 	for you.  For example,
 
 	$(document).ready(function() {
-		$('#myForm').ajaxForm({
+		$('#cor_form').ajaxForm({
 			target: '#output'
 		});
 	});

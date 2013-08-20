@@ -21,7 +21,7 @@ class Menu_model extends CI_Model{
 	 * 管理员明细
 	 */
 	function fetch_detail($admin_id){
-		$db_temp  = $this->db->select('*')->from($this->mydb->table('admins'))->where('admin_id',$admin_id)->get()->result_array();
+		$db_temp  = $this->db->select('*')->from($this->cor_db->table('admins'))->where('admin_id',$admin_id)->get()->result_array();
 		return $db_temp[0];
 	}
 	
@@ -99,7 +99,7 @@ class Menu_model extends CI_Model{
 	 function db_config(){
 	 	return array(
 	 		'main'=>array(
-	 			'table_name'=>$this->mydb->table('admins'),
+	 			'table_name'=>$this->cor_db->table('admins'),
 	 			'primary_key'=>'admin_id',	 			
 	 		),
 	 	);
@@ -110,7 +110,7 @@ class Menu_model extends CI_Model{
 	 function db_menu_config(){
 	 	return array(
 	 		'main'=>array(
-	 			'table_name'=>$this->mydb->table('system_rights'),
+	 			'table_name'=>$this->cor_db->table('system_rights'),
 	 			'primary_key'=>'r_id',	 			
 	 		),
 	 	);

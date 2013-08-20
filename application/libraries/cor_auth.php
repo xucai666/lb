@@ -12,7 +12,7 @@
   * @version   1.0$
   * @link      http://phpsysinfo.sourceforge.net
   */
- class Myauth{
+ class Cor_auth{
  	function __construct(){
  	   
 		
@@ -271,14 +271,14 @@
  	 */
  	function getAuthMenu(){
  		$CI = &get_instance();
- 		if($CI->mycache->cache_exists('admin_rights_config',$CI->Common_model->lang_get())){
- 			$data = $CI->mycache->cache_fetch('admin_rights_config',null,$CI->Common_model->lang_get());
+ 		if($CI->cor_cache->cache_exists('admin_rights_config',lang_get())){
+ 			$data = $CI->cor_cache->cache_fetch('admin_rights_config',null,lang_get());
  		}else{
  			$CI->db->select('*')->from('system_rights')->order_by('r_code','asc')->order_by('r_order','asc');
 
-	   		$data = $CI->mydb->fetch_all(250);
+	   		$data = $CI->cor_db->fetch_all(250);
 
-	   		$CI->mycache->cache_create($data,'admin_rights_config');
+	   		$CI->cor_cache->cache_create($data,'admin_rights_config');
  		}
 
 	   	

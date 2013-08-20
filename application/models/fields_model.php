@@ -42,7 +42,7 @@ class Fields_model extends CI_Model{
 
 	//options
 	function fetch_select(){
-		return $this->myform->array_re_index($this->db->select("*",false)->from('module_fields')->get()->result_array(),'f_id','f_name');
+		return $this->cor_form->array_re_index($this->db->select("*",false)->from('module_fields')->get()->result_array(),'f_id','f_name');
 	}
 
 	//detail
@@ -52,7 +52,7 @@ class Fields_model extends CI_Model{
 				'primary_id'=>'f_id',
 				'table_name'=>'module_fields',
 			);
-		$ds = $this->mydb->fetch_one($cf);
+		$ds = $this->cor_db->fetch_one($cf);
 		return $key?$ds[$key]:$ds;
 	}
 

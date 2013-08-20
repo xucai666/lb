@@ -103,7 +103,7 @@ class Modules_model extends CI_Model{
 				'primary_id'=>'m_id',
 				'table_name'=>'module',
 			);
-		$ds = $this->mydb->fetch_one($cf);
+		$ds = $this->cor_db->fetch_one($cf);
 		return  $key?$ds[$key]:$ds;
 	}
 
@@ -129,7 +129,7 @@ class Modules_model extends CI_Model{
 
 	function fetch_f_types(){
 		//fields types
-		$fields_types_c = $this->mycache->cache_fetch('fields_types');
+		$fields_types_c = $this->cor_cache->cache_fetch('fields_types');
 		$ds = $this->db->select('f_id,f_type',false)->from('module_fields')->get()->result_array();
 		foreach($ds as $v):
 			$fields_types[$v[f_id]] = $fields_types_c[$v[f_type]];
@@ -261,7 +261,7 @@ class Modules_model extends CI_Model{
 	function  drop_table_sql($m_id){
 
 		$sql = "select m_tb from ".$this->db->dbprefix."module where m_id in(".implode(',',$m_id).")";
-		$vs = $this->mydb->fetch_values($sql);
+		$vs = $this->cor_db->fetch_values($sql);
 		$sq = array();
 		foreach($vs as $v){
 			$sq[] = 'drop table if exists  '.$this->db->dbprefix.$v[m_tb].' ';
@@ -274,7 +274,7 @@ class Modules_model extends CI_Model{
 		$t_name = $info['main']['m_name'];
 		$t_db_name = $info['main']['m_tb'];
 		$t_mid = $info['main']['m_id'];
-		$t_db_fields = array_keys($this->myform->array_re_index($info['detail'],'r_name','r_name'));
+		$t_db_fields = array_keys($this->cor_form->array_re_index($info['detail'],'r_name','r_name'));
 		$t = ($this->db->select('t_id',false)->from('templates')->where('t_type',4)->where('t_mid',$t_mid)->get()->first_row('array'));
 		$t_id = $t['t_id'];
 		$data = array(
@@ -301,7 +301,7 @@ class Modules_model extends CI_Model{
 		$t_db_name = $info['main']['m_tb'];
 		$t_mid = $info['main']['m_id'];
 		//子模块不创建菜单
-		$m_sub = $this->myform->array_re_index($this->all(array("m_sub > "=>0)),'m_sub','m_sub');
+		$m_sub = $this->cor_form->array_re_index($this->all(array("m_sub > "=>0)),'m_sub','m_sub');
 		if(in_array($t_mid,$m_sub)){
 			$this->db->where('r_type',1);
 			$this->db->where('r_title',$t_name);

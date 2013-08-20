@@ -23,7 +23,7 @@ class Index extends CI_Controller {
 		$act_to_view = array(
 			'index'=>'index',
 		);
-		$this->mypage->view_cache_all($act_to_view);
+		$this->cor_page->view_cache_all($act_to_view);
 		
 	}
 	
@@ -41,12 +41,12 @@ class Index extends CI_Controller {
 		;
 		function filter_same($v){
 			$CI = &get_instance();
-			return $v==$CI->Common_model->lang_get()?false:true;
+			return $v==lang_get()?false:true;
 		}
 		$next_lang = current(array_filter($langs,'filter_same'));
 		$data =  array_merge($data,array('next_lang'=>$next_lang));
 
-		$this->mypage->load_front_view("index",$data);
+		$this->cor_page->load_front_view("index",$data);
 	}	
 	
 }

@@ -26,7 +26,7 @@ class About extends CI_Controller {
 			'contact'=>'contact',
 		);
 
-		$this->mypage->view_cache_all($act2view);
+		$this->cor_page->view_cache_all($act2view);
 		
 
 	}
@@ -39,7 +39,7 @@ class About extends CI_Controller {
 	
 	
 
-		$this->mypage->load_front_view('about',$data);
+		$this->cor_page->load_front_view('about',$data);
 	}	
 	
 	
@@ -53,7 +53,7 @@ class About extends CI_Controller {
 	//新闻列表
 	function archives_list(){			
 		
-		$this->mypage->load_front_view("about_news",$data);
+		$this->cor_page->load_front_view("about_news",$data);
 		
 	}	
 

@@ -17,11 +17,11 @@ class System_manage extends CI_Controller{
 	function __construct(){		
 		parent::__construct();
 		//验证登陆
-		$this->myauth->execute_auth();
+		$this->cor_auth->execute_auth();
 		$this->load->model('Admins_model');
 		$this->im = $this->Admins_model;
 		$this->load->library('encrypt');	
-		$this->lang->load("item_backend_sys",$this->Common_model->lang_get());
+		$this->lang->load("item_backend_sys",lang_get());
 		$this->m_lang = $this->lang->language;	
 		$this->tpl->assign('lang_sys',$this->m_lang);
 		
@@ -32,21 +32,21 @@ class System_manage extends CI_Controller{
 	 */
 	function change_password(){
 		$data = array('main'=>$this->Admins_model->fetch_detail(get_cookie('user_id')));
-		$this->mypage->load_backend_view('admins_change_password',$data);
+		$this->cor_page->load_backend_view('admins_change_password',$data);
 	}
 	
 	/**
 	 *退出系统
 	 */
 	function exit_system(){		
-		$this->myauth->process_logout(array('user_name','user_id'),'/admin');		
+		$this->cor_auth->process_logout(array('user_name','user_id'),'/admin');		
 	}
 	
 	/*
 	  *退出系统
 	 */
 	function relogin(){		
-		$this->myauth->process_logout(array('user_name','user_id'),"admin");		
+		$this->cor_auth->process_logout(array('user_name','user_id'),"admin");		
 	}
 	
 	
@@ -58,14 +58,14 @@ class System_manage extends CI_Controller{
 		$this->form_validation->set_rules($rules);
 		$data = array('main'=>$this->input->post('main'));
 		if($this->form_validation->run()==false){		
-			$this->mypage->load_backend_view('admins_change_password',$data);
+			$this->cor_page->load_backend_view('admins_change_password',$data);
 		}else{
 			$save_data = array('main'=>array(
-				'admin_pass'=>$this->mypage->my_encrypt($data['main']['new_password'],"ENCODE"),
+				'admin_pass'=>$this->cor_page->my_encrypt($data['main']['new_password'],"ENCODE"),
 				'admin_id'=>$data['main']['admin_id'],
 			));			
-			$this->mydb->save($save_data,$this->Admins_model->db_config());
-			$this->mypage->backend_redirect('system_manage/exit_system','修改成功，需要重新登陆系统');
+			$this->cor_db->save($save_data,$this->Admins_model->db_config());
+			$this->cor_page->backend_redirect('system_manage/exit_system','修改成功，需要重新登陆系统');
 		}
 	}
 	
@@ -88,7 +88,7 @@ class System_manage extends CI_Controller{
  	function old_password_check($str){
  		$main_form  = $this->input->post('main');
  		$main_db = $this->Admins_model->fetch_detail($main_form['admin_id']);
- 		$db_pass = $this->mypage->my_encrypt($main_db['admin_pass'],"DECODE");
+ 		$db_pass = $this->cor_page->my_encrypt($main_db['admin_pass'],"DECODE");
  		if($db_pass != $main_form['old_password']){
  			$this->form_validation->set_message("old_password_check","旧密码输入不正确!");
  			return false;
@@ -107,7 +107,7 @@ class System_manage extends CI_Controller{
  			$this->load->helper('file');
  			$file_name = 'ci_db'.date("Y-m-d-H-i-s").'.gz';
  			//保存路径
- 			$save_dir = FCPATH.'backup\\'.$this->Common_model->lang_get().'\\';
+ 			$save_dir = FCPATH.'backup\\'.lang_get().'\\';
  			$save_dir = str_replace("\\",'/',$save_dir);
  			$this->Common_model->mkdirs($save_dir);
  			$backup_file = $save_dir.$file_name;
@@ -131,7 +131,7 @@ class System_manage extends CI_Controller{
 				$this->load->helper('download');
 				force_download($file_name, $backup);
 			}			
-			$this->mypage->pop_redirect(implode(',',(array)$words_return),site_url("backend/system_manage/db_backup_list"));
+			$this->cor_page->pop_redirect(implode(',',(array)$words_return),site_url("backend/system_manage/db_backup_list"));
  
  		}catch(Exception $e){
  			show_error($e->getMessage());
@@ -148,9 +148,9 @@ class System_manage extends CI_Controller{
  	function db_backup_list(){
  		$this->load->helper("file");
  		$this->load->helper('number');
- 	    $data = $this->mycache->cache_fetch('sys_config');
- 	    $data['files'] = get_dir_file_info('backup/'.$this->Common_model->lang_get().'/',false);
- 		$this->mypage->load_backend_view('db_backup_list',$data);
+ 	    $data = $this->cor_cache->cache_fetch('sys_config');
+ 	    $data['files'] = get_dir_file_info('backup/'.lang_get().'/',false);
+ 		$this->cor_page->load_backend_view('db_backup_list',$data);
  		
  	}
  	
@@ -165,10 +165,10 @@ class System_manage extends CI_Controller{
  		$this->load->helper('directory'); 	
  		$styles = directory_map($this->config->item('template_dir').DIRECTORY_SEPARATOR.'backend',1);
  			
-		$data = $this->mycache->cache_fetch('sys_config');
+		$data = $this->cor_cache->cache_fetch('sys_config');
 		
 		$data['styles'] = $styles;
- 		$this->mypage->load_backend_view('config_save',$data);
+ 		$this->cor_page->load_backend_view('config_save',$data);
  		
  	}
  	
@@ -183,9 +183,9 @@ class System_manage extends CI_Controller{
 			'contact'=>$this->input->post('contact'),
 			'develop'=>$this->input->post('develop'),
 		);		
- 		$this->mycache->cache_create($arr,'sys_config'); 
+ 		$this->cor_cache->cache_create($arr,'sys_config'); 
  		
- 		$this->mypage->pop_redirect('保存成功',site_url("backend/system_manage/basic_config"));
+ 		$this->cor_page->pop_redirect('保存成功',site_url("backend/system_manage/basic_config"));
  				
  	}
  	
@@ -195,7 +195,7 @@ class System_manage extends CI_Controller{
  	 * 执行sql语句
  	 */	
  	function action_execute_sql(){
- 		$this->mypage->load_backend_view('sys_execute_sql');
+ 		$this->cor_page->load_backend_view('sys_execute_sql');
  		
  	}
  	
@@ -203,9 +203,9 @@ class System_manage extends CI_Controller{
  	
  	function action_execute_sql_submit(){
  		$sql = $this->input->post("sql");
- 		$sql = $this->mydb->adjust_sql_str($sql);
+ 		$sql = $this->cor_db->adjust_sql_str($sql);
  		if(empty($sql)){
- 			$this->mypage->pop_redirect('请输入要执行的sql语句',site_url("backend/system_manage/action_execute_sql"));
+ 			$this->cor_page->pop_redirect('请输入要执行的sql语句',site_url("backend/system_manage/action_execute_sql"));
  		} 
  		$query = $this->db->query($sql);
  		if ($query->num_rows() > 0){
@@ -215,7 +215,7 @@ class System_manage extends CI_Controller{
 		} 
 		$data['qr_afr'] = mysql_affected_rows();
 		
- 		$this->mypage->load_backend_view('sys_execute_sql',$data);
+ 		$this->cor_page->load_backend_view('sys_execute_sql',$data);
  		
  	}
  	
@@ -227,10 +227,10 @@ class System_manage extends CI_Controller{
  	 	$this->tpl->clearCompiledTemplate();
  	 	//清除模板缓存
  	 	//$this->tpl->clearAllCache();
- 	 	$this->mycache->clear_pages();
+ 	 	$this->cor_cache->clear_pages();
  	 	//clear rights config
- 	 	$this->mycache->cache_delete('admin_rights_config');
- 		$this->mypage->pop_redirect('缓存更新成功！','javascript:parent.location.reload();');
+ 	 	$this->cor_cache->cache_delete('admin_rights_config');
+ 		$this->cor_page->pop_redirect('缓存更新成功！','javascript:parent.location.reload();');
  	}
 
 
@@ -241,7 +241,7 @@ class System_manage extends CI_Controller{
  	function action_helper_docs(){
  			$this->load->helper("file");
  			$data = array('ls'=>get_dir_file_info(getcwd().'/docs'));
- 			$this->mypage->load_backend_view('helper_docs',$data);
+ 			$this->cor_page->load_backend_view('helper_docs',$data);
  	}
  	
  	/**
@@ -257,14 +257,14 @@ class System_manage extends CI_Controller{
  		}
  		$this->db->order_by('lang_id','asc');
  		$page_size = 15;
- 		$data = $this->mydb->fetch_all($page_size);
+ 		$data = $this->cor_db->fetch_all($page_size);
  		$status = array(
  			'1'=>'已翻译',
  			'0'=>'未翻译',
  		);
  		$data = array_merge($data,array('status'=>$status,'page_size'=>$page_size));
  		
-		$this->mypage->load_backend_view('lang_trans',$data);
+		$this->cor_page->load_backend_view('lang_trans',$data);
  	}
  	
  	/**
@@ -293,7 +293,7 @@ class System_manage extends CI_Controller{
  			}
  		}
 
- 		$this->mypage->backend_redirect('system_manage/action_lang_trans','导入完毕');
+ 		$this->cor_page->backend_redirect('system_manage/action_lang_trans','导入完毕');
 
 		
  	}
@@ -309,7 +309,7 @@ class System_manage extends CI_Controller{
  		
  		$ls = $this->db->select('*',false)->from('lang')->where("lang_type !='zh'")->order_by('lang_id','asc')->get()->result_array();
  		if(!count($ls)){
- 			$this->mypage->backend_redirect('system_manage/action_lang_trans','操作失败，无数据');
+ 			$this->cor_page->backend_redirect('system_manage/action_lang_trans','操作失败，无数据');
  		}
  		foreach($ls as $v){
  			$file = $path.$v['lang_type'].'/'.$v['lang_file'];
@@ -320,7 +320,7 @@ class System_manage extends CI_Controller{
  			write_file($key,"<?php\n \$lang = ".var_export($v,true).";\n?>");
  		}
 
- 		$this->mypage->backend_redirect('system_manage/action_lang_trans','导出完毕');
+ 		$this->cor_page->backend_redirect('system_manage/action_lang_trans','导出完毕');
 		
  	}
 

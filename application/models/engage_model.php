@@ -21,7 +21,7 @@
 	function save_config(){
 		return array(
 			'main'=>array(
-				'table_name'=>$this->mydb->table('engage'),
+				'table_name'=>$this->cor_db->table('engage'),
 				'primary_key'=>'eg_id',
 			
 			),		
@@ -33,7 +33,7 @@
 	function db_config_apply(){
 		return array(
 			'main'=>array(
-				'table_name'=>$this->mydb->table('engage_apply'),
+				'table_name'=>$this->cor_db->table('engage_apply'),
 				'primary_key'=>'apply_id',
 			
 			),		

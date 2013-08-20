@@ -70,8 +70,8 @@
 		$lang['sys_change_pass']				 = '修改密码';
 		
 		//提示信息
-		$lang['mypage_theme']					 = '系统提示信息';
-		$lang['mypage_remarks']				 = '如果你的浏览器没反应，请点击这里';
+		$lang['cor_page_theme']					 = '系统提示信息';
+		$lang['cor_page_remarks']				 = '如果你的浏览器没反应，请点击这里';
 
 
 		//button

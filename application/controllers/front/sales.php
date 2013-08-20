@@ -22,7 +22,7 @@ class Sales extends CI_Controller {
 		$act_to_view = array(
 			'index'=>'sales',
 		);
-		$this->mypage->view_cache_all($act_to_view);	
+		$this->cor_page->view_cache_all($act_to_view);	
 	}
 	
 		/**
@@ -31,7 +31,7 @@ class Sales extends CI_Controller {
 	function index()
 	{
 		
-		$this->mypage->load_front_view("sales",$data);
+		$this->cor_page->load_front_view("sales",$data);
 		
 		
 	}	

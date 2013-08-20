@@ -18,7 +18,7 @@ class Templates extends CI_Controller {
        {
             parent::__construct();
             //auth login
-            $this->myauth->execute_auth();
+            $this->cor_auth->execute_auth();
             $this->load->model('Templates_Model','IM');
             
        }
@@ -32,17 +32,17 @@ class Templates extends CI_Controller {
        		->like('t_type',$this->input->get('t_type'))
        		->like('t_db_name',$this->input->get('t_db_name'))
        		->order_by('t_id','desc');       			
-       		$data = $this->mydb->fetch_all(15);
-       		$data['template_types'] = $this->mycache->cache_fetch('template_types');
-       		$this->mypage->load_backend_view('templates_list',$data);
+       		$data = $this->cor_db->fetch_all(15);
+       		$data['template_types'] = $this->cor_cache->cache_fetch('template_types');
+       		$this->cor_page->load_backend_view('templates_list',$data);
        }
 
        /**
 		*添加/修改
        **/ 
       function action_add(){
-          $this->mypage->fetch_css('templates','view',$this->mypage->getRes('css','backend','item/'));
-          $this->mypage->fetch_js('templates','view',$this->mypage->getRes('js','backend','item/'));
+          $this->cor_page->fetch_css('templates','view',$this->cor_page->getRes('css','backend','item/'));
+          $this->cor_page->fetch_js('templates','view',$this->cor_page->getRes('js','backend','item/'));
       		$main_id = $this->uri->segment(4);
       		if($main_id){
       			$fetch_config  = array(
@@ -50,30 +50,30 @@ class Templates extends CI_Controller {
     		 			'primary_val'=>$main_id,
     		 			'table_name'=>'templates',
  				    );
- 				    $main = $this->mydb->fetch_one($fetch_config);
+ 				    $main = $this->cor_db->fetch_one($fetch_config);
       		}
-      		$data = array('main'=>$main,'template_types'=>$this->mycache->cache_fetch('template_types'));
-       		$this->mypage->load_backend_view('templates_add',$data);
+      		$data = array('main'=>$main,'template_types'=>$this->cor_cache->cache_fetch('template_types'));
+       		$this->cor_page->load_backend_view('templates_add',$data);
        }
 
           /**
     *添加/修改
        **/ 
       function action_copy(){
-          $this->mypage->fetch_css('templates','view',$this->mypage->getRes('css','backend','item/'));
-          $this->mypage->fetch_js('templates','view',$this->mypage->getRes('js','backend','item/'));
+          $this->cor_page->fetch_css('templates','view',$this->cor_page->getRes('css','backend','item/'));
+          $this->cor_page->fetch_js('templates','view',$this->cor_page->getRes('js','backend','item/'));
           $main_id = $this->uri->segment(4);
           $fetch_config  = array(
             'primary_id'=>'t_id',
             'primary_val'=>$main_id,
             'table_name'=>'templates',
           );
-          $main = $this->mydb->fetch_one($fetch_config);
+          $main = $this->cor_db->fetch_one($fetch_config);
           unset($main[t_id]);
           unset($main[t_mid]);
           $main[t_type]=5;
-          $data = array('main'=>$main,'template_types'=>$this->mycache->cache_fetch('template_types'));
-          $this->mypage->load_backend_view('templates_add',$data);
+          $data = array('main'=>$main,'template_types'=>$this->cor_cache->cache_fetch('template_types'));
+          $this->cor_page->load_backend_view('templates_add',$data);
        }
 
         /**
@@ -85,14 +85,14 @@ class Templates extends CI_Controller {
        			
 	       		$this->form_validation->set_rules($this->IM->validator_save());
 	       		if($this->form_validation->run()==true){
-	       			$main = $this->mydb->save(array('main'=>$main),$this->IM->db_config());
-	       			$this->mypage->pop_redirect('保存成功',site_url('backend/templates/action_list'));
+	       			$main = $this->cor_db->save(array('main'=>$main),$this->IM->db_config());
+	       			$this->cor_page->pop_redirect('保存成功',site_url('backend/templates/action_list'));
 	       		}else{
-	       			$t_types = $this->mycache->cache_fetch('template_types');
-	       			$this->mypage->load_backend_view('templates_add',array('main'=>$main,'template_types'=>$t_types));
+	       			$t_types = $this->cor_cache->cache_fetch('template_types');
+	       			$this->cor_page->load_backend_view('templates_add',array('main'=>$main,'template_types'=>$t_types));
 	       		}
        		}catch(Exception $e){
-       			$this->mypage->pop_redirect($e->getMessage(),site_url('backend/templates/action_list'));
+       			$this->cor_page->pop_redirect($e->getMessage(),site_url('backend/templates/action_list'));
        		}
        		
        	
@@ -107,10 +107,10 @@ class Templates extends CI_Controller {
             $ids = $ids?$ids:$this->uri->segment(4);
            
 
-        		$this->mydb->delete($ids,$this->IM->db_config());		
-        		$this->mypage->pop_redirect('删除成功',site_url("backend/templates/action_list"));		
+        		$this->cor_db->delete($ids,$this->IM->db_config());		
+        		$this->cor_page->pop_redirect('删除成功',site_url("backend/templates/action_list"));		
         	}catch(Excpetion $e){
-        		$this->mypage->pop_redirect($e->getMessage(),site_url("backend/templates/action_list"));		
+        		$this->cor_page->pop_redirect($e->getMessage(),site_url("backend/templates/action_list"));		
         	}
         	
        }
@@ -120,21 +120,21 @@ class Templates extends CI_Controller {
        * @return [type] [description]
        */
        function action_view(){
-         $this->mypage->fetch_css('shCoreDefault','view',base_url("syntaxhighlighter_3.0.83/styles/"));
-          $this->mypage->fetch_js('shCore','view',base_url("syntaxhighlighter_3.0.83/scripts/"));
-          $this->mypage->fetch_js('shBrushPhp','view',base_url("syntaxhighlighter_3.0.83/scripts/"));
+         $this->cor_page->fetch_css('shCoreDefault','view',base_url("syntaxhighlighter_3.0.83/styles/"));
+          $this->cor_page->fetch_js('shCore','view',base_url("syntaxhighlighter_3.0.83/scripts/"));
+          $this->cor_page->fetch_js('shBrushPhp','view',base_url("syntaxhighlighter_3.0.83/scripts/"));
 
-         $this->mypage->fetch_css('templates','view',$this->mypage->getRes('css','backend','item/'));
-         $this->mypage->fetch_js('templates','view',$this->mypage->getRes('js','backend','item/'));
+         $this->cor_page->fetch_css('templates','view',$this->cor_page->getRes('css','backend','item/'));
+         $this->cor_page->fetch_js('templates','view',$this->cor_page->getRes('js','backend','item/'));
          $main_id = $this->uri->segment(4);
           $fetch_config  = array(
             'primary_id'=>'t_id',
             'primary_val'=>$main_id,
             'table_name'=>'templates',
           );
-          $main = $this->mydb->fetch_one($fetch_config);
-          $t_types = $this->mycache->cache_fetch('template_types');
-         $this->mypage->load_backend_view('templates_view',array('main'=>$main,'template_types'=>$t_types));
+          $main = $this->cor_db->fetch_one($fetch_config);
+          $t_types = $this->cor_cache->cache_fetch('template_types');
+         $this->cor_page->load_backend_view('templates_view',array('main'=>$main,'template_types'=>$t_types));
        }
 
 
@@ -156,11 +156,11 @@ class Templates extends CI_Controller {
 
        //view file list
        function view_list(){
-          $this->mypage->fetch_js('swfupload','loadview',base_url().'/swfupload/api');
-          $this->mypage->fetch_js(array('fileprogress','handlers','swfupload.queue'),'loadview',base_url().'swfupload/js');
+          $this->cor_page->fetch_js('swfupload','loadview',base_url().'/swfupload/api');
+          $this->cor_page->fetch_js(array('fileprogress','handlers','swfupload.queue'),'loadview',base_url().'swfupload/js');
           $this->load->helper('file'); 
           //define root_path
-          $develop = $this->mycache->cache_fetch('sys_config','develop',$this->Common_model->lang_get());
+          $develop = $this->cor_cache->cache_fetch('sys_config','develop',lang_get());
           $init_path = $this->config->item('template_dir').'/front/'.$develop['template'];
           $t_name = $this->input->get('t_name');
           $root_path = base64_decode($this->uri->segment(4));
@@ -200,7 +200,7 @@ class Templates extends CI_Controller {
               $list[$k] = $v;
            }
           $data  = array('list'=>$list,'root_path'=>base64_encode($root_path),'root_path_parent'=>$root_path_parent,'root_url'=>$root_url);
-          $this->mypage->load_backend_view('view_list',$data);
+          $this->cor_page->load_backend_view('view_list',$data);
        }
 
 
@@ -208,7 +208,7 @@ class Templates extends CI_Controller {
        function view_add(){
            $t_file = base64_decode($this->uri->segment(4));
            $data = array('main'=>array('t_file'=>$t_file,'t_name'=>basename($t_file),'t_html'=>htmlspecialchars(file_get_contents($t_file)))); 
-           $this->mypage->load_backend_view('view_add',$data);
+           $this->cor_page->load_backend_view('view_add',$data);
 
        }
 
@@ -216,7 +216,7 @@ class Templates extends CI_Controller {
        function view_save(){
            $main = $this->input->post('main');
            file_put_contents($main[t_file],$main[t_html]);
-           $this->mypage->backend_redirect('templates/view_list/'.base64_encode(dirname($main[t_file])),$data);
+           $this->cor_page->backend_redirect('templates/view_list/'.base64_encode(dirname($main[t_file])),$data);
 
        }
 

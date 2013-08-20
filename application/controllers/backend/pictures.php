@@ -16,7 +16,7 @@ class Pictures extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		//验证登陆
-		$this->myauth->execute_auth();
+		$this->cor_auth->execute_auth();
 		$this->load->model('Pictures_model'); 
 		$this->act = 'pictures';	
 		$this->im = $this->Pictures_model;
@@ -28,11 +28,11 @@ class Pictures extends CI_Controller{
 
 
 	function action_head(){
-		$this->mypage->fetch_js('swfupload','loadview','swfupload/api');
-		$this->mypage->fetch_js(array('fileprogress','handlers','swfupload.queue'),'loadview','swfupload/js');
+		$this->cor_page->fetch_js('swfupload','loadview','swfupload/api');
+		$this->cor_page->fetch_js(array('fileprogress','handlers','swfupload.queue'),'loadview','swfupload/js');
 		$this->db->where('m_class','head');
 		$data = $this->im->list_head();
-		$this->mypage->load_backend_view(strtolower($this->act)."_head.htm",$data);
+		$this->cor_page->load_backend_view(strtolower($this->act)."_head.htm",$data);
 		
 	}
 
@@ -50,7 +50,7 @@ class Pictures extends CI_Controller{
 		//删除旧文件
 		$this->db->where('p_key',$this->input->post('p_key'));
 		$this->db->where('p_type',$this->input->post('p_type'));
-		$this->db->delete($this->mydb->table('pictures'));
+		$this->db->delete($this->cor_db->table('pictures'));
 		$this->im->save_single($post);
 		exit(0);
 	}
@@ -58,12 +58,12 @@ class Pictures extends CI_Controller{
 	
 	
 	function action_index_rotation(){
-		$this->mypage->fetch_js('swfupload','loadview',base_url().'/swfupload/api');
-		$this->mypage->fetch_js(array('fileprogress','handlers','swfupload.queue'),'loadview',base_url().'swfupload/js');
+		$this->cor_page->fetch_js('swfupload','loadview',base_url().'/swfupload/api');
+		$this->cor_page->fetch_js(array('fileprogress','handlers','swfupload.queue'),'loadview',base_url().'swfupload/js');
 		$this->db->where('m_class','index_rotation');
 		$data = $this->im->list_index();
 		$data['list'] = array_pad($data['list'],3,array());
-		$this->mypage->load_backend_view(strtolower($this->act)."_index_rotation.htm",$data);
+		$this->cor_page->load_backend_view(strtolower($this->act)."_index_rotation.htm",$data);
 		
 	}
 	
@@ -80,7 +80,7 @@ class Pictures extends CI_Controller{
 		//删除旧文件
 		$this->db->where('p_id',$this->input->post('p_id'));
 		$this->db->where('p_type',$this->input->post('p_type'));
-		$this->db->delete($this->mydb->table('pictures'));
+		$this->db->delete($this->cor_db->table('pictures'));
 		$data = $this->im->save_single($post);
 		echo json_encode($data);
 		exit(0);
@@ -103,8 +103,8 @@ class Pictures extends CI_Controller{
  	 */
  	function action_del_index_rotation(){
  		$this->db->where('p_id',$this->input->get('p_id'));
-		$this->db->delete($this->mydb->table('pictures'));
-		$this->mypage->backend_redirect('pictures/action_index_rotation');
+		$this->db->delete($this->cor_db->table('pictures'));
+		$this->cor_page->backend_redirect('pictures/action_index_rotation');
  		
  	}
  	

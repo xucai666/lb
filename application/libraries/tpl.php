@@ -20,7 +20,7 @@ function func_site_url($array){
 	extract($array);	
 	$CI = & get_instance();	
     if($CI->config->item('lang_multiple') && !preg_match("/backend/", $segments)){
-    	$lang_type = $CI->Common_model->lang_get();
+    	$lang_type = lang_get();
     	$segments = $lang_type.'/'.$segments;
     }
 	return site_url($segments);
@@ -63,7 +63,7 @@ function func_get_area_str( $array ) {
 	
 function func_get_areat($array) {
 	extract($array);
-	$mydb  =  &get_mydb();
+	$cor_db  =  &get_cor_db();
 	if( $id <= 1 ) $id=53;
 	$html = "";
 	while( $id > 1 ) {	
@@ -74,7 +74,7 @@ function func_get_areat($array) {
 			'primary_val'=>$id,
 		);	
 		
-		$a = $mydb->fetch_one($sql_arr);			
+		$a = $cor_db->fetch_one($sql_arr);			
 		$html = get_area_help( $a['parent_id'], $id ) ."<span>&nbsp;" .$html."</span>";
 		$id = $a['parent_id'];
 	}
@@ -91,8 +91,8 @@ function func_get_areat($array) {
 function func_sex($array){
 	$ci = &get_instance();	
 	extract($array);
-	$mycache  =  &get_mycache();
-	$cache = $mycache->cache_fetch('sex');
+	$cor_cache  =  &get_cor_cache();
+	$cache = $cor_cache->cache_fetch('sex');
 	if($sex){
 		 return $cache[$sex];
 		
@@ -112,8 +112,8 @@ function func_sex($array){
 function func_soft_language($array){
 	$ci = &get_instance();	
 	extract($array);
-	$mycache  =  &get_mycache();
-	$cache = $mycache->cache_fetch('select_language_soft');
+	$cor_cache  =  &get_cor_cache();
+	$cache = $cor_cache->cache_fetch('select_language_soft');
 	if($select_soft_language){
 		 return $cache[$select_soft_language];
 		
@@ -137,8 +137,8 @@ function func_soft_language($array){
 
 function func_work_year($array){
 	extract($array);
-	$mycache  =  &get_mycache();
-	$cache = $mycache->cache_fetch('work_year');
+	$cor_cache  =  &get_cor_cache();
+	$cache = $cor_cache->cache_fetch('work_year');
 	return $cache[$work_year];
 	
 }
@@ -159,7 +159,7 @@ function func_insert_css($array){
 	extract($array);
 	$ci = &get_instance();
 	$file = explode(",",$file);
-	return $ci->mypage->fetch_css($file,'loadview',$catalog);
+	return $ci->cor_page->fetch_css($file,'loadview',$catalog);
 	
 }
 
@@ -172,7 +172,7 @@ function func_insert_js($array){
 	$ci = &get_instance();
 	$file = explode(",",$file);
 	$path = $path?$path:'js';
-	return $ci->mypage->fetch_js($file,'loadview',$path);	
+	return $ci->cor_page->fetch_js($file,'loadview',$path);	
 }
 
 
@@ -181,14 +181,14 @@ function func_insert_js($array){
  * 底部信息
  */
 function func_bottom_info(){
-			$mydb  =  &get_mydb();
+			$cor_db  =  &get_cor_db();
 			$ds->_reset_select();		
 			$sql_paramater = array(
-				'table_name'=>$mydb->table('infos'),
+				'table_name'=>$cor_db->table('infos'),
 				'primary_id'=>'info_class',
 				'primary_val'=>'-4',
 			);
-			$detail =   $mydb->fetch_one($sql_paramater);	
+			$detail =   $cor_db->fetch_one($sql_paramater);	
 			$ds->_reset_select();			
 			echo $detail['info_content'];
 }
@@ -424,14 +424,14 @@ class tpl extends Smarty
 		
 		//vars assign
         
-        $lang_type = $CI->Common_model->lang_get();
+        $lang_type = lang_get();
       
         $this->assign("base_url", base_url()); // so we can get the full path to CI easily
         $this->assign("site_url", site_url()); // so we can get the full path to CI easily
         //backend path,js,css,img  ect.     
 		//template path
 
-		$sys_config = $CI->mycache->cache_fetch('sys_config','develop',$CI->Common_model->lang_get());
+		$sys_config = $CI->cor_cache->cache_fetch('sys_config','develop',lang_get());
 		if($sys_config['debug']) $CI->output->enable_profiler(true);			
         $this->assign("dir_front", $config['template_dir'].'front/'.$sys_config['template'].'/'.$lang_type); // so we can get the full path to CI easily
         $this->assign("dir_backend", $config['template_dir'].'backend/'.$sys_config['template'].'/'); // so we can get the full path to CI easily
@@ -498,8 +498,8 @@ class tpl extends Smarty
             show_error("template: [$resource_name] cannot be found.");
         }
        	//cache id
-       $mypage = &get_mypage();
-       return parent::display($resource_name,$mypage->get_cache_id());
+       $cor_page = &get_cor_page();
+       return parent::display($resource_name,$cor_page->get_cache_id());
         
     }
     

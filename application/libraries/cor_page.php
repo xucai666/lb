@@ -13,7 +13,7 @@
   * @version   1.0$
   * @link      http://phpsysinfo.sourceforge.net
   */ 
-class Mypage{	
+class Cor_page{	
 	private static $instance;
 	public $load_config_css = 1;
 
@@ -27,7 +27,7 @@ class Mypage{
 
 
 		
-	public static function &get_mypage()
+	public static function &get_cor_page()
 	{
 		return self::$instance;
 	}
@@ -45,12 +45,12 @@ class Mypage{
  		
 		//current lang		
 		
-		$this->lang_type = $CI->Common_model->lang_get();
+		$this->lang_type = lang_get();
 	
 		//current theme
 
 
-		$sys_config = $CI->mycache->cache_fetch('sys_config','develop',$CI->Common_model->lang_get());
+		$sys_config = $CI->cor_cache->cache_fetch('sys_config','develop',lang_get());
 		
 				
 		$this->backend_theme = $sys_config['template'];
@@ -93,7 +93,7 @@ class Mypage{
 			
 			$CI = & get_instance();	
 			$tpl = &get_tpl();
-			$cache = &get_mycache();
+			$cache = &get_cor_cache();
 			$config =& get_config(); 
 			
 
@@ -111,7 +111,7 @@ class Mypage{
 	 		$tpl->assign('theme_url',theme_url('backend')); 	
 			
 			//debug mode
-			$sys_config = $cache->cache_fetch('sys_config','develop',$CI->Common_model->lang_get());
+			$sys_config = $cache->cache_fetch('sys_config','develop',lang_get());
 			
 			if($sys_config['time_page_redirect']){ 				
 				$tpl->assign('time_page_redirect',$sys_config['time_page_redirect']);
@@ -190,7 +190,7 @@ class Mypage{
 			global $OUT;	
 			$CI = & get_instance();	
 			$tpl = &get_tpl();
-			$cache = &get_mycache();
+			$cache = &get_cor_cache();
 			$config =& get_config(); 
 			
 			$this->load_language('front');
@@ -519,7 +519,7 @@ class Mypage{
 	 */
 	 function load_language($type='backend'){
 	 	$CI = & get_instance();				
-	 	$CI->lang->load('item_'.$type, $CI->Common_model->lang_get());	 
+	 	$CI->lang->load('item_'.$type, lang_get());	 
 		$CI->tpl->assign('item_lang',$CI->lang->language);	 		 	
 	 }
 	
@@ -534,9 +534,9 @@ function myalert($msg){
 }
 
 
-function &get_mypage()
+function &get_cor_page()
 {
-	return Mypage::get_mypage();
+	return cor_page::get_cor_page();
 }
 
 

@@ -93,8 +93,8 @@
 	     function theme_url($type='front',$lang=null)
 	     {
 	         $CI =& get_instance();
-	         $lang = $lang?$lang:$CI->Common_model->lang_get();
-	         $c_f = $CI->mycache->cache_fetch('sys_config');
+	         $lang = $lang?$lang:lang_get();
+	         $c_f = $CI->cor_cache->cache_fetch('sys_config');
 	         $c_theme = $c_f['develop']['template'];
 	         $path = base_url($CI->config->item('template_dir').$type."/".$c_theme);
 	         $path = ($type == 'front')? $path.'/'.$lang:$path;

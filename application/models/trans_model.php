@@ -30,7 +30,7 @@ function detail($id,$ke=null){
 		'primary_id'=>'lang_id',
 		'primary_val'=>$id,
 	);
-	return $this->mydb->fetch_one($cf,$key);
+	return $this->cor_db->fetch_one($cf,$key);
 }
 
 

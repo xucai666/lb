@@ -13,7 +13,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
   * @version   1.0$
   * @link      http://phpsysinfo.sourceforge.net
   */
- class Mydb {
+ class Cor_db {
  	private static $instance;
  	private $ds;
  	
@@ -28,7 +28,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  	 
  	
  	 	 	 
- 	public static function &get_mydb(){ 	
+ 	public static function &get_cor_db(){ 	
  		return self::$instance;
  	}
  		
@@ -128,13 +128,13 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  	function detail_left_delete($info,$save_config){ 
  		$CI = &get_instance();
  		//表单提交过来的detail_id 
- 		$key_form = $this->myform->array_re_index($info['detail'],$save_config['detail']['primary_key'],$save_config['detail']['primary_key']);
+ 		$key_form = $CI->cor_form->array_re_index($info['detail'],$save_config['detail']['primary_key'],$save_config['detail']['primary_key']);
  		//数据库中的detail_id 	 		
  		$CI->db->select($save_config['detail']['primary_key']);
  		$CI->db->from($save_config['detail']['table_name']);
  		$CI->db->where($save_config['main']['primary_key'],$info['main'][$save_config['main']['primary_key']]);
  		$key_db_temp = $CI->db->get()->result_array();
- 		$key_db = $this->myform->array_re_index($key_db_temp,$save_config['detail']['primary_key'],$save_config['detail']['primary_key']); 
+ 		$key_db = $CI->cor_form->array_re_index($key_db_temp,$save_config['detail']['primary_key'],$save_config['detail']['primary_key']); 
  		$diff_key = array_diff($key_db,$key_form);	 
  		if(!empty($diff_key)){
  			$CI->db->where_in($save_config['detail']['primary_key'],$diff_key);
@@ -309,7 +309,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  		$CI = &get_instance();
  		if($total<=0) return '';
  		$config = array(
- 			'base_url'=>current_url().$CI->mypage->array_to_url($_GET),
+ 			'base_url'=>current_url().$CI->cor_page->array_to_url($_GET),
  			'per_page'=>$size,
  			'total_rows'=>$total,
  		);		
@@ -346,7 +346,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  		$page_size = $page_size?$page_size:$CI->config->item('per_page');
  		$limit_from = $_GET['per_page']; 
  		$limit_from = $limit_from?$limit_from:0;		
- 		$link_str = $this->mypage->array_to_url($_GET);		
+ 		$link_str = $CI->cor_page->array_to_url($_GET);		
  		$params = array( 		
  			'limit_to'=>$page_size,
  			'limit_from'=>$limit_from,
@@ -473,8 +473,8 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  
  } 
  
- function &get_mydb(){	
-	return Mydb::get_mydb();
+ function &get_cor_db(){	
+	return cor_db::get_cor_db();
 } 
 	
 

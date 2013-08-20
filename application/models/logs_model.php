@@ -24,7 +24,7 @@
 	function db_config(){		
 		return array(
 			'main'=>array(
-				'table_name'=>$this->mydb->table('log'),
+				'table_name'=>$this->cor_db->table('log'),
 				'primary_key'=>'log_id',
 			),
 		
@@ -61,7 +61,7 @@
 	 */
 	function log_list(){	
 		
-		$this->db->select("a.*",false)->from($this->mydb->table('log').' as a ')	
+		$this->db->select("a.*",false)->from($this->cor_db->table('log').' as a ')	
 		->order_by("log_id","desc")->limit(5);
 		$list = $this->db->get()->result_array();			
 		return $list;		

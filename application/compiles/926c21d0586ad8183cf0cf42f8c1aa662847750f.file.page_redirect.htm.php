@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-19 15:51:47
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-19 23:54:09
          compiled from "application\templates\backend\blue\page_redirect.htm" */ ?>
 <?php /*%%SmartyHeaderCode:588852123f138aa664-40871143%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '926c21d0586ad8183cf0cf42f8c1aa662847750f' => 
     array (
       0 => 'application\\templates\\backend\\blue\\page_redirect.htm',
-      1 => 1373382989,
+      1 => 1376956274,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52123f13937e50_76531301',
   'variables' => 
   array (
     'dir_backend' => 0,
@@ -24,8 +26,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'time_page_redirect' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52123f13937e50_76531301',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52123f13937e50_76531301')) {function content_52123f13937e50_76531301($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -41,7 +41,7 @@ document.write("<div style='width:400px;height:100;font-size:10pt;border:1px sol
 document.write("<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
 ");
 document.write("<br/><br/><a href='<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
-'><?php echo $_smarty_tpl->tpl_vars['item_lang']->value['mypage_remarks'];?>
+'><?php echo $_smarty_tpl->tpl_vars['item_lang']->value['cor_page_remarks'];?>
 ...</a><br/><br/></div>");
 setTimeout('JumpUrl()',<?php echo $_smarty_tpl->tpl_vars['time_page_redirect']->value;?>
 );</script>

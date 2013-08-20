@@ -31,22 +31,22 @@ class Message extends CI_Controller {
 	{
 		
  		
-		$this->mypage->load_front_view("message",$data);
+		$this->cor_page->load_front_view("message",$data);
 		
 	}	
 	
 	
 	function action_list(){
 		//clear cache
-		$this->db->select("a.*",false)->from($this->mydb->table('message').' as a ')	
+		$this->db->select("a.*",false)->from($this->cor_db->table('message').' as a ')	
 		->where('a.ms_valid',"1")
 		->order_by("ms_id","desc");
-		$data = $this->mydb->fetch_all(5);	
+		$data = $this->cor_db->fetch_all(5);	
 		$data = array_merge($data,array()	
 		);		
 		
 		
-		$this->mypage->load_front_view("message_list",$data);
+		$this->cor_page->load_front_view("message_list",$data);
 		
 	}	
 	
@@ -77,12 +77,12 @@ class Message extends CI_Controller {
 			$this->load->helper('date');
 			$_POST['main']['ms_date'] = date("Y-m-d H:i:s");
 			$_POST['main']['ms_ip'] = $this->input->ip_address();
-			$this->mydb->save($_POST,$this->Message_model->db_config());
-			$this->mypage->front_redirect('message','留言提交成功!');
+			$this->cor_db->save($_POST,$this->Message_model->db_config());
+			$this->cor_page->front_redirect('message','留言提交成功!');
 	 		
 	 	}catch(Exception $e){
-	 		$this->mypage->pop_redirect($e->getMessage(),"javascript:history.back(1);");	
-	 		//$this->mypage->backend_redirect($this->act.'/action_list',$e->getMessage());	  
+	 		$this->cor_page->pop_redirect($e->getMessage(),"javascript:history.back(1);");	
+	 		//$this->cor_page->backend_redirect($this->act.'/action_list',$e->getMessage());	  
 	 	}			
 		
 		

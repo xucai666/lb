@@ -16,12 +16,12 @@ class Friendlink extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		//验证登陆
-		$this->myauth->execute_auth();
+		$this->cor_auth->execute_auth();
 		$this->load->model(array('Friendlink_model','Category_model')); 
 		$this->act  = 'friendlink';
 		$this->im = $this->Friendlink_model;
-		$this->table = $this->mydb->table('friendlink');
-		$this->lang->load('item_backend_friendlink',$this->Common_model->lang_get());
+		$this->table = $this->cor_db->table('friendlink');
+		$this->lang->load('item_backend_friendlink',lang_get());
 	}
 
 	
@@ -41,7 +41,7 @@ class Friendlink extends CI_Controller{
 				'primary_val'=>$link_id,
 			);	
 				
-			$main = $this->mydb->fetch_one($sql_arr);				
+			$main = $this->cor_db->fetch_one($sql_arr);				
 			
 		}
 		
@@ -49,7 +49,7 @@ class Friendlink extends CI_Controller{
 			'main'=>$main,
 			'editor'=>$data['editor']  = $this->im->editor($main['link_content']),
 		);
-		$this->mypage->load_backend_view(strtolower($this->act).'_add',$data);		
+		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);		
 	}
 	
 	
@@ -80,7 +80,7 @@ class Friendlink extends CI_Controller{
 			 $this->load->library('upload', $file_config);				
 			 if($_FILES['file1']['size']>0){
 				if ( ! $this->upload->do_upload("file1")){						 
-						 $this->mypage->backend_redirect($this->act.'/action_add?',$this->upload->display_errors('<p>', '</p>'));				
+						 $this->cor_page->backend_redirect($this->act.'/action_add?',$this->upload->display_errors('<p>', '</p>'));				
 				  }else{
 						 $files_info = $this->upload->data();
 						 @unlink('../../'.$main['link_pic']);
@@ -88,15 +88,15 @@ class Friendlink extends CI_Controller{
 				 }				 	
 			 }			
 			 
-	 		$this->mydb->save($data,$this->im->db_config());
-	 		$this->mypage->pop_redirect('已保存',site_url('backend/'.$this->act.'/action_list/'));
+	 		$this->cor_db->save($data,$this->im->db_config());
+	 		$this->cor_page->pop_redirect('已保存',site_url('backend/'.$this->act.'/action_list/'));
 		 	}else{
 				$data['editor']  = $this->im->editor($main['link_content']);
-		 		$this->mypage->load_backend_view(strtolower($this->act).'_add',$data);
+		 		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);
 		 	}
 	 		
 	 	}catch(Exception $e){
-	 		$this->mypage->backend_redirect($this->act.'/action_add?',$e->getMessage());
+	 		$this->cor_page->backend_redirect($this->act.'/action_add?',$e->getMessage());
 	 	}			
 	 }
 	
@@ -106,12 +106,12 @@ class Friendlink extends CI_Controller{
 	
 	function action_list(){
 					
-		$this->mypage->fetch_css(array('backend_link'));
+		$this->cor_page->fetch_css(array('backend_link'));
 		$this->db->select("a.*",false)->from($this->table.' as a ')
 		->like('a.link_title',$this->input->get('link_title'))
 		->order_by("link_id","desc");
-		$data = $this->mydb->fetch_all(15);	
-		$this->mypage->load_backend_view(strtolower($this->act)."_list",$data);
+		$data = $this->cor_db->fetch_all(15);	
+		$this->cor_page->load_backend_view(strtolower($this->act)."_list",$data);
 		
 	}
 	
@@ -121,7 +121,7 @@ class Friendlink extends CI_Controller{
 			$id  = $this->input->get("link_id");	
 			$this->db->where('link_id',$id);
 	 		$this->db->delete($this->table);			
-			$this->mypage->pop_redirect('已删除',site_url('backend/'.$this->act.'_list'));
+			$this->cor_page->pop_redirect('已删除',site_url('backend/'.$this->act.'_list'));
 		}catch(Exception $e){			
 			show_error($e->getMessage());
 		}

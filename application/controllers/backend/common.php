@@ -17,7 +17,7 @@ class Common extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		//验证登陆
-		$this->myauth->execute_auth();
+		$this->cor_auth->execute_auth();
 		$this->load->model('Common_model');
 		
 	}	
@@ -26,7 +26,7 @@ class Common extends CI_Controller{
 	 * 设置语种 
 	 */
 	function lang_set(){	
-		$this->Common_model->lang_set();
+		lang_set($this->input->get('lang'));
 		$url = $this->input->get("url");	
 		$url = $url?$url:$_SERVER['HTTP_REFERER'];	
 		header("location:".$url."");

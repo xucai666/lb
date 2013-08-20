@@ -35,7 +35,7 @@ class Common_model  extends CI_Model{
 			$this->db->where("parent_id",0,false);
 		}
 		$list = $this->db->order_by("region_name","asc")->get()->result_array();
-		$ar = $this->myform->indexArrayByKey($list,'region_id','region_name');		
+		$ar = $this->cor_form->indexArrayByKey($list,'region_id','region_name');		
 		return $ar;
 		
 	}
@@ -57,7 +57,7 @@ class Common_model  extends CI_Model{
 	 */
 	function fetchClass($class_id){
 		static $ar;
-		$class_rs= $this->db->select("cc_id")->from($this->mydb->mytable('class_category'))
+		$class_rs= $this->db->select("cc_id")->from($this->cor_db->mytable('class_category'))
 		->where("cc_parent_id",$class_id)
 		->get()->result_array();
 		$ar[$class_id] = $class_id;
@@ -98,59 +98,25 @@ class Common_model  extends CI_Model{
 	function func_get_province() {
 		$CI  =  &get_instance();	
 		$a = $CI->db->select( "region_id, region_name, parent_id",false)->from("ecs_region")->where ("parent_id",1)->get()->result_array();
-		$select = $this->myform->array_re_index($a,'region_id','region_name');
+		$select = $this->cor_form->array_re_index($a,'region_id','region_name');
 		return $select;
 	}
 	
 	
 	
 	
-	/**
-	 * 设置语种 
-	 */
-	function lang_set(){	
-		$lang = $this->lang_get();
-		$cookie = array(
-               'name'   => 'lang',
-               'value'  => $lang,
-               'expire' => '86500',
-               'domain' => '',
-               'path'   => '/',
-           );	
-		set_cookie($cookie);
-	}
-
-
-
-	/**
-	 * 设置语种 
-	 */
-	
-	
-	//获取语种
-	function lang_get(){
-
-		$lang = get_cookie('lang');
-		
-		$lang_get = $this->input->get('lang');		
-		$lang = $lang_get?$lang_get:$lang;	
-		$lang = $lang?$lang:$this->config->item('language');
-	
-		return $lang;	
-		
-	}	
 	
 	function lang_all(){
-		return $this->mycache->cache_fetch('lang_type',null,$this->lang_get());		
+		return $this->cor_cache->cache_fetch('lang_type',null,lang_get());		
 	}
 	
 	//语种切换链接
 	function lang_get_link(){
 		$langs =  $this->lang_all();
-		$lang_current = $this->lang_get();
+		$lang_current = lang_get();
 		foreach($langs as $v){
 			if($v == $lang_current) continue;
-			$lang_cache[$v] = $this->mycache->cache_fetch('lang_type',null,$v);
+			$lang_cache[$v] = $this->cor_cache->cache_fetch('lang_type',null,$v);
 			
 		}	
 		return $lang_cache;		
@@ -258,19 +224,19 @@ class Common_model  extends CI_Model{
 		try{
 			$db_config = array(
 				'main'=>array(
-					'table_name'=>$this->mydb->table('invoke'),
+					'table_name'=>$this->cor_db->table('invoke'),
 					'primary_key'=>'i_url',
 				)
 			);
-			 return $this->mydb->save($data,$db_config);
+			 return $this->cor_db->save($data,$db_config);
 		}catch(Exception $e){
 			throw new Exception('save error');
 		}		
 	}
 
 	function tag($parameter){
-	 	$mydb  =  &get_mydb();	
-	 	$ds = $mydb->getDs();
+	 	$cor_db  =  &get_cor_db();	
+	 	$ds = $cor_db->getDs();
 	 	$CI = &get_instance();
 
 		extract($parameter);
@@ -283,7 +249,7 @@ class Common_model  extends CI_Model{
 				'primary_val'=>$t_id,
 			);
 
-		$rs = $mydb->fetch_one($config);
+		$rs = $cor_db->fetch_one($config);
 
 		
 		//template html
@@ -306,7 +272,7 @@ class Common_model  extends CI_Model{
 
 		//查询字段
 		
-		$select = $select?$select:implode(',',$mydb->getDs()->list_fields($rs['t_db_name']));
+		$select = $select?$select:implode(',',$cor_db->getDs()->list_fields($rs['t_db_name']));
 		
 			
 		//查询条件
@@ -394,9 +360,9 @@ class Common_model  extends CI_Model{
 
 
 	function tag_pager($parameter){
-		$mydb  =  &get_mydb();	
-	 	$mypage = &get_mypage();
-	 	$ds = $mydb->getDs();
+		$cor_db  =  &get_cor_db();	
+	 	$cor_page = &get_cor_page();
+	 	$ds = $cor_db->getDs();
 	 	$ci_conf = &get_config();
 	 	$CI = &get_instance();
 
@@ -409,7 +375,7 @@ class Common_model  extends CI_Model{
 				'primary_id'=>'t_id',
 				'primary_val'=>$t_id,
 			);
-		$rs = $mydb->fetch_one($config);
+		$rs = $cor_db->fetch_one($config);
 				
 		
 		
@@ -428,7 +394,7 @@ class Common_model  extends CI_Model{
 
 		//查询字段
 		
-		$select = $select?$select:implode(',',$mydb->getDs()->list_fields($rs['t_db_name']));
+		$select = $select?$select:implode(',',$cor_db->getDs()->list_fields($rs['t_db_name']));
 		
 			
 		//查询条件
@@ -461,7 +427,7 @@ class Common_model  extends CI_Model{
 		}
 		
 		$limit_from = $_GET['per_page']; 		
-		$link_str = $mypage->array_to_url($_GET);		
+		$link_str = $cor_page->array_to_url($_GET);		
 		$params = array( 		
 			'limit_to'=>$page_size,
 			'limit_from'=>$limit_from,
@@ -517,7 +483,7 @@ class Common_model  extends CI_Model{
 	 			'w'=>'600',
 	 			'h'=>'400',
 	 			'ToolbarStartExpanded'=>1,
-	 			'DefaultLanguage'=>$this->lang_get()=='english'?'en':'zh-cn',
+	 			'DefaultLanguage'=>lang_get()=='english'?'en':'zh-cn',
 		);
 		return  $this->fckeditor->CreateHtml($config);
 
@@ -541,8 +507,8 @@ class Common_model  extends CI_Model{
 	 * @return [type]              [description]
 	 */
 	function get_nav($tb,$id,$title_field,$where='1=1'){
-		$tb = $this->mydb->table($tb);
-		$primary = $this->mydb->primary($tb);
+		$tb = $this->cor_db->table($tb);
+		$primary = $this->cor_db->primary($tb);
 		$url = $this->uri->uri_string();
 		$url =  substr($url,0,strrpos($url,"/")+1);
 		$sq = <<<EOT
@@ -550,7 +516,7 @@ class Common_model  extends CI_Model{
 			UNION   ALL 
 		SELECT concat('$url',$primary) as url,'Next' as nav_title,`$title_field` FROM (SELECT  *  FROM  $tb   WHERE   $where and  $primary>$id ORDER BY $primary ASC  LIMIT 1) AS t2
 EOT;
-		return $this->myform->array_re_index($this->mydb->fetch_values($sq),'nav_title',array('url',$title_field));
+		return $this->cor_form->array_re_index($this->cor_db->fetch_values($sq),'nav_title',array('url',$title_field));
 	}
 
 	/**
@@ -605,7 +571,7 @@ EOT;
 
 	function category_options($id=0,$index=0,$m=0){		
 		$CI = &get_instance();
- 		$tree_db = $CI->db->select('cc_id,cc_title,cc_parent_id',false)->from($mydb->mytable('class_category'),false)->order_by('cc_id','asc')->order_by('sort','asc')->get()->result_array();
+ 		$tree_db = $CI->db->select('cc_id,cc_title,cc_parent_id',false)->from($cor_db->mytable('class_category'),false)->order_by('cc_id','asc')->order_by('sort','asc')->get()->result_array();
 		
 		foreach($tree_db as $k=>$v){
 		
@@ -622,7 +588,7 @@ EOT;
 //菜单处理	
 	
 function get_area($id) {
-	$mydb  =  &get_mydb();
+	$cor_db  =  &get_cor_db();
 	if( $id <= 1 ) return get_area_help( 1, 0 );
 	$html = "";
 	while( $id > 1 ) {	
@@ -633,7 +599,7 @@ function get_area($id) {
 			'primary_val'=>$id,
 		);	
 		
-		$a = $mydb->fetch_one($sql_arr);			
+		$a = $cor_db->fetch_one($sql_arr);			
 		$html = get_area_help( $a['parent_id'], $id ) ."<span>&nbsp;" .$html."</span>";
 		$id = $a['parent_id'];
 	}

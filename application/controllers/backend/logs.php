@@ -16,9 +16,9 @@
 	function __construct(){
 		parent::__construct();
 		//验证是否登陆 
-		$this->myauth->execute_auth();
+		$this->cor_auth->execute_auth();
 		$this->load->model("Logs_model",'im');
-		$this->lang->load('item_backend_log',$this->Common_model->lang_get());	
+		$this->lang->load('item_backend_log',lang_get());	
 		$this->m_lang = $this->lang->language;
 		
 		$this->tpl->assign('lang_log',$this->m_lang);
@@ -31,27 +31,27 @@
 	function action_list(){	
 		
 		//css	
-		$this->mypage->fetch_css(array('backend_logs'));
+		$this->cor_page->fetch_css(array('backend_logs'));
 		
 		//js
 		
-		$this->db->select("a.*",false)->from($this->mydb->table('log').' as a ')	
+		$this->db->select("a.*",false)->from($this->cor_db->table('log').' as a ')	
 		->like('a.log_user',$this->input->get('log_user'))		
 		->like('a.log_type',$this->input->get('log_type'))		
 		->order_by("log_id","desc");
 		$this->input->get('log_date') && $this->db->like('a.log_date',$this->input->get('log_date'),'after');
-		$data = $this->mydb->fetch_all();	
-		$cache_log_types = $this->mycache->cache_fetch("log_types");
+		$data = $this->cor_db->fetch_all();	
+		$cache_log_types = $this->cor_cache->cache_fetch("log_types");
 		foreach($data['list'] as &$v){
 			$v['log_type_str'] = $cache_log_types[$v['log_type']];
 		}
 		$data = array_merge($data,array(
-				'log_types'=>$this->mycache->cache_fetch('log_types'),
+				'log_types'=>$this->cor_cache->cache_fetch('log_types'),
 				'log_type_default'=>$this->input->get('log_type'),
 			)		
 		);
 		
-		$this->mypage->load_backend_view("logs_list",$data);
+		$this->cor_page->load_backend_view("logs_list",$data);
 		
 	}
 	
@@ -64,11 +64,11 @@
 				throw new Exception($this->m_lang['unselect']);
 			}
 			$this->db->where_in("log_id",$ids);
-			$this->db->delete($this->mydb->table('log'));
-			$this->mypage->backend_redirect('logs/action_list',$this->m_lang['del_ok']);
+			$this->db->delete($this->cor_db->table('log'));
+			$this->cor_page->backend_redirect('logs/action_list',$this->m_lang['del_ok']);
 			
 		}catch(Exception $e){
-	 		$this->mypage->backend_redirect('logs/action_list',$e->getMessage());
+	 		$this->cor_page->backend_redirect('logs/action_list',$e->getMessage());
 	 	}	
 		
 	}

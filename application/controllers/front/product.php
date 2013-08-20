@@ -34,7 +34,7 @@ class Product extends CI_Controller {
 		$this->breadcrumb->append_crumb('Product', 'front/product');
 		$this->breadcrumb->output();
 		
-		$this->mypage->load_front_view('product',$data);
+		$this->cor_page->load_front_view('product',$data);
 		
 	}
 	
@@ -48,7 +48,7 @@ class Product extends CI_Controller {
 		$this->breadcrumb->append_crumb('View', '/front/product/view');
 		$this->breadcrumb->output();
 
-		$this->mypage->load_front_view("product_view",$data);
+		$this->cor_page->load_front_view("product_view",$data);
 	}
 	
 	
@@ -64,13 +64,13 @@ class Product extends CI_Controller {
 			$p_all[$v['id']] = $v['id'];
 		}
 		$p_all && $imgs = $this->db->select('p_pic,p_id',false)
-		->from($this->mydb->table('module_product'))
+		->from($this->cor_db->table('module_product'))
 		->where_in('p_id',$p_all)
 		->get()->result_array();
-		$imgs_re = $this->myform->array_re_index($imgs,'p_id','p_pic');
+		$imgs_re = $this->cor_form->array_re_index($imgs,'p_id','p_pic');
 		$cart_arr && array_multisort($sort,SORT_ASC,$cart_arr);
 		foreach($cart_arr as &$v) $v['p_pic'] = $imgs_re[$v['id']];
-		$this->mypage->load_front_view("product_cart",array('list'=>$cart_arr));
+		$this->cor_page->load_front_view("product_cart",array('list'=>$cart_arr));
 		
 	}
 	
@@ -86,12 +86,12 @@ class Product extends CI_Controller {
 		$this->load->library('cart');	
 		//$this->cart->destroy();
 		$sql_arr = array(
-			'table_name'=>$this->mydb->table('module_product'),
+			'table_name'=>$this->cor_db->table('module_product'),
 			'fields'=>'*',
 			'primary_id'=>'p_id',
 			'primary_val'=>$this->uri->segment(4),
 		);	
-		$main = $this->mydb->fetch_one($sql_arr);
+		$main = $this->cor_db->fetch_one($sql_arr);
 		$data = array(
                'id'      => $main['p_id'],
                'qty'     => '1',
@@ -149,13 +149,13 @@ class Product extends CI_Controller {
 			$p_all[$v['id']] = $v['id'];
 		}
 		$p_all && $imgs = $this->db->select('p_pic,p_id',false)
-		->from($this->mydb->table('module_product'))
+		->from($this->cor_db->table('module_product'))
 		->where_in('p_id',$p_all)
 		->get()->result_array();
-		$imgs_re = $this->myform->array_re_index($imgs,'p_id','p_pic');
+		$imgs_re = $this->cor_form->array_re_index($imgs,'p_id','p_pic');
 		$cart_arr && array_multisort($sort,SORT_ASC,$cart_arr);
 		foreach($cart_arr as &$v) $v['p_pic'] = $imgs_re[$v['id']];
-		$this->mypage->load_front_view("product_order",array('list'=>$cart_arr));
+		$this->cor_page->load_front_view("product_order",array('list'=>$cart_arr));
 	}
 	//提交订单
 	
@@ -166,7 +166,7 @@ class Product extends CI_Controller {
 			$this->load->library('cart');	
 			$cart_arr =  $this->cart->contents();	
 			foreach($cart_arr as &$v){
-				$v['name'] = $this->mypage->my_encrypt($v['name'],'DECODE');
+				$v['name'] = $this->cor_page->my_encrypt($v['name'],'DECODE');
 			}
 			foreach((array)$cart_arr as $v){
 				$data['detail'][] = array(
@@ -182,7 +182,7 @@ class Product extends CI_Controller {
 			
 		
 			$date_order_no = date('Ymd');
-			$max = $this->db->query("select max(right(ifnull(order_no,0),3))  as max_order_no from ".$this->mydb->table('order_main')." where order_no like '".$date_order_no."___' order by order_id desc  limit 1 ")->first_row('array');
+			$max = $this->db->query("select max(right(ifnull(order_no,0),3))  as max_order_no from ".$this->cor_db->table('order_main')." where order_no like '".$date_order_no."___' order by order_id desc  limit 1 ")->first_row('array');
 			$max = $max['max_order_no'];
 			$max = ++$max;
 			$max = sprintf('%03d',$max);
@@ -193,26 +193,26 @@ class Product extends CI_Controller {
 			//验证
 		 	$this->form_validation->set_rules($this->im->validator_order());
 			if($this->form_validation->run()){
-				$this->mydb->save($data,$this->im->db_config_order());
+				$this->cor_db->save($data,$this->im->db_config_order());
 				$this->cart->destroy();			
-				$this->mypage->front_redirect("front/product",'订单提交成功');	
+				$this->cor_page->front_redirect("front/product",'订单提交成功');	
 			}else{
 				$this->load->library('cart');			
 				$cart_arr =  $this->cart->contents();
 				
 				foreach($cart_arr as &$v){
-					$v['name'] = $this->mypage->my_encrypt($v['name'],'DECODE');
+					$v['name'] = $this->cor_page->my_encrypt($v['name'],'DECODE');
 					$sort[$v['id']] = $v['id'];
 					$p_all[$v['id']] = $v['id'];
 				}
 				$p_all && $imgs = $this->db->select('p_pic,p_id',false)
-				->from($this->mydb->table('module_product'))
+				->from($this->cor_db->table('module_product'))
 				->where_in('p_id',$p_all)
 				->get()->result_array();
-				$imgs_re = $this->myform->array_re_index($imgs,'p_id','p_pic');
+				$imgs_re = $this->cor_form->array_re_index($imgs,'p_id','p_pic');
 				$cart_arr && array_multisort($sort,SORT_ASC,$cart_arr);
 				foreach($cart_arr as &$v) $v['p_pic'] = $imgs_re[$v['id']];
-				$this->mypage->load_front_view("product_order",array('main'=>$main,'list'=>$cart_arr));
+				$this->cor_page->load_front_view("product_order",array('main'=>$main,'list'=>$cart_arr));
 			}
 				
 			
@@ -220,7 +220,7 @@ class Product extends CI_Controller {
 		}	
 		catch(Exception $e){
 			
-			$this->mypage->front_redirect('front/product',$e->getMessage());
+			$this->cor_page->front_redirect('front/product',$e->getMessage());
 			
 		}	
 		

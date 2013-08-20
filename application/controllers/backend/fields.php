@@ -16,15 +16,15 @@ class Fields extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		//auth login
-        $this->myauth->execute_auth();
+        $this->cor_auth->execute_auth();
 		$this->load->model("Fields_model",'im');
-		$this->lang->load('item_backend_fields',$this->Common_model->lang_get());
+		$this->lang->load('item_backend_fields',lang_get());
 
 
 	}
 
 	function action_add(){
-		$fields_types = $this->mycache->cache_fetch('fields_types');
+		$fields_types = $this->cor_cache->cache_fetch('fields_types');
 		$f_id = $this->uri->segment(4);
 		$main = array();
 		if($f_id){
@@ -32,7 +32,7 @@ class Fields extends CI_Controller{
 		}
 		
 		$data = array('main'=>$main,'fields_types'=>$fields_types);
-		$this->mypage->load_backend_view('fields_add',$data);
+		$this->cor_page->load_backend_view('fields_add',$data);
 	}
 
 	function action_save(){
@@ -40,30 +40,30 @@ class Fields extends CI_Controller{
 		try{
 			$this->form_validation->set_rules($this->im->valid_config());
 			if($this->form_validation->run()){
-				$rs = $this->mydb->save($data,$this->im->save_config());
+				$rs = $this->cor_db->save($data,$this->im->save_config());
 				//insert log
 				$log_cf = $this->im->save_config();
 				$this->load->model('Logs_model');	
 		 		$this->Logs_model->log_insert(array(
 		 			'log_table'=>$log_cf['main']['table_name'],
 		 			'log_table_id'=>$rs['main'][$log_cf['main']['primary_key']],
-		 			'log_user'=>$this->myauth->fetch_auth('user_name'),
+		 			'log_user'=>$this->cor_auth->fetch_auth('user_name'),
 		 			'log_date'=>date("Y-m-d H:i:s"),
 		 			'log_sql'=>trim(implode("\n",(array)$this->db->sql_log)),
 		 			'log_type'=>'10',
 		 			'log_desc'=>sprintf('%s field %s success.',$rs['sys_db_type'],$rs['main']['f_name']),
 		 		));
 
-				$this->mypage->backend_redirect('fields/action_list',lang('fields_save_ok'));
+				$this->cor_page->backend_redirect('fields/action_list',lang('fields_save_ok'));
 			}else{				
-				$this->mypage->load_backend_view('fields_add',$data);
+				$this->cor_page->load_backend_view('fields_add',$data);
 			}
 
 			
 
 
 		}catch(EXCEPTION $e){
-			$this->mypage->backend_redirect($_SREVER['HTTP_REFERER'],$e->getMessage());
+			$this->cor_page->backend_redirect($_SREVER['HTTP_REFERER'],$e->getMessage());
 		}
 
 	}
@@ -74,41 +74,41 @@ class Fields extends CI_Controller{
 			$f_id = $this->input->post('f_id');
             $f_id = $f_id?$f_id:$this->uri->segment(4);
 			if(empty($f_id)) throw new Exception(lang('fields_parameter_error'));
-			$rs = $this->mydb->delete($f_id,$this->im->save_config());
+			$rs = $this->cor_db->delete($f_id,$this->im->save_config());
 			//insert log
 			$log_cf = $this->im->save_config();
 			$this->load->model('Logs_model');	
 	 		$this->Logs_model->log_insert(array(
 	 			'log_table'=>$log_cf['main']['table_name'],
 	 			'log_table_id'=>$rs[$log_cf['main']['primary_key']],
-	 			'log_user'=>$this->myauth->fetch_auth('user_name'),
+	 			'log_user'=>$this->cor_auth->fetch_auth('user_name'),
 	 			'log_date'=>date("Y-m-d H:i:s"),
 	 			'log_sql'=>trim(implode("\n",(array)$this->db->sql_log)),
 	 			'log_type'=>'10',
 	 			'log_desc'=>sprintf('delete field %s success.',$rs['f_name']),
 	 		));
 
-			$this->mypage->backend_redirect('fields/action_list',lang('fields_delete_ok'));
+			$this->cor_page->backend_redirect('fields/action_list',lang('fields_delete_ok'));
 		}catch(EXCEPTION $e){
-			$this->mypage->backend_redirect($_SERVER['HTTP_REFERER'],$e->getMessage());
+			$this->cor_page->backend_redirect($_SERVER['HTTP_REFERER'],$e->getMessage());
 		}
 	}
 
 	function action_list(){
-		$fields_types = $this->mycache->cache_fetch('fields_types');
+		$fields_types = $this->cor_cache->cache_fetch('fields_types');
 		$f_type = $this->input->get('f_type');
 		$this->db->select('*',false)->from('module_fields')->like('f_name',$this->input->get('f_name'))->order_by('f_id','desc');
 		if($f_type) $this->db->where('f_type',$f_type);
-		$data = $this->mydb->fetch_all(15);
+		$data = $this->cor_db->fetch_all(15);
 		$data['fields_types'] = $fields_types;
-		$this->mypage->load_backend_view('fields_list',$data);
+		$this->cor_page->load_backend_view('fields_list',$data);
 	}
 
 
 	function action_view(){
-		$fields_types = $this->mycache->cache_fetch('fields_types');
+		$fields_types = $this->cor_cache->cache_fetch('fields_types');
 		$data = array('main'=>$this->im->detail($this->uri->segment(4)),'fields_types'=>$fields_types);
-		$this->mypage->load_backend_view('fields_view',$data);
+		$this->cor_page->load_backend_view('fields_view',$data);
 	}
 }
 ?>

@@ -24,7 +24,7 @@ class Product_model extends CI_Model{
 	function db_config(){
 		return array(
 			'main'=>array(
-				'table_name'=>$this->mydb->table('products'),
+				'table_name'=>$this->cor_db->table('products'),
 				'primary_key'=>'pro_id',
 			)
 		);
@@ -36,11 +36,11 @@ class Product_model extends CI_Model{
 	function db_config_order(){
 		return array(
 			'main'=>array(
-				'table_name'=>$this->mydb->table('order_main'),
+				'table_name'=>$this->cor_db->table('order_main'),
 				'primary_key'=>'order_id',
 			),
 			'detail'=>array(
-				'table_name'=>$this->mydb->table('order_detail'),
+				'table_name'=>$this->cor_db->table('order_detail'),
 				'primary_key'=>'detail_id',
 			)
 		);
@@ -153,7 +153,7 @@ class Product_model extends CI_Model{
 	
 	function product_left(){
 				
-		$sql  = "select * from ".$this->mydb->table("products")." order by pro_id desc limit 8 ";
+		$sql  = "select * from ".$this->cor_db->table("products")." order by pro_id desc limit 8 ";
 		$list = $this->db->query($sql)->result_array();
 		return $list;	
 	
@@ -165,7 +165,7 @@ class Product_model extends CI_Model{
 	
 	function product_class_left(){
 				
-		$sql  = "select * from ".$this->mydb->table("category")." where c_sn like '".$this->c_sn."%' order by c_sn asc,c_level asc ";
+		$sql  = "select * from ".$this->cor_db->table("category")." where c_sn like '".$this->c_sn."%' order by c_sn asc,c_level asc ";
 		$list = $this->db->query($sql)->result_array();
 		return $list;	
 	
@@ -178,9 +178,9 @@ class Product_model extends CI_Model{
 	
 	function product_select(){
 				
-		$sql  = "select * from ".$this->mydb->table("products")." order by pro_id desc";
+		$sql  = "select * from ".$this->cor_db->table("products")." order by pro_id desc";
 		$list = $this->db->query($sql)->result_array();
-		$list = $this->myform->array_re_index($list,'pro_id','pro_title');
+		$list = $this->cor_form->array_re_index($list,'pro_id','pro_title');
 		return $list;	
 	
 	}

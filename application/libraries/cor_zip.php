@@ -12,7 +12,7 @@
   * @version   1.0$
   * @link      http://phpsysinfo.sourceforge.net
   */
-class myzip
+class Cor_zip
 {
 
 var $total_files = 0;

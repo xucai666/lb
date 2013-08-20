@@ -23,7 +23,7 @@ class Download_model extends CI_Model{
 	function db_config(){
 		return array(
 			'main'=>array(
-				'table_name'=>$this->mydb->table('infos'),
+				'table_name'=>$this->cor_db->table('infos'),
 				'primary_key'=>'info_id',
 			)
 		);
@@ -42,7 +42,7 @@ class Download_model extends CI_Model{
 	 			'w'=>'600',
 	 			'h'=>'400',
 	 			'ToolbarStartExpanded'=>1,
-	 			'DefaultLanguage'=>$this->Common_model->lang_get()=='english'?'en':'zh-cn',
+	 			'DefaultLanguage'=>lang_get()=='english'?'en':'zh-cn',
 		);
 		return  $this->fckeditor->CreateHtml($config);
 
@@ -84,7 +84,7 @@ class Download_model extends CI_Model{
 	 * 产品明细
 	 */
 	function download_for_product($pro_id){
-		$list = $this->db->query("select * from ".$this->mydb->table("infos")." where pro_id REGEXP '".$pro_id."' ")->result_array();
+		$list = $this->db->query("select * from ".$this->cor_db->table("infos")." where pro_id REGEXP '".$pro_id."' ")->result_array();
 		foreach($list as $v) $list_2[$v['info_class_sn']][]=$v;
 		return $list_2;		
 	}
@@ -95,7 +95,7 @@ class Download_model extends CI_Model{
 	  * 显示左边分类
 	  */	
 	 function download_left(){
-	 	$sql  = "select * from ".$this->mydb->table("category")." where c_sn like '0105_%' and c_sn<>'010505' order by c_sn asc,c_id asc";
+	 	$sql  = "select * from ".$this->cor_db->table("category")." where c_sn like '0105_%' and c_sn<>'010505' order by c_sn asc,c_id asc";
 		$list = $this->db->query($sql)->result_array();
 		return $list;	
 	 	

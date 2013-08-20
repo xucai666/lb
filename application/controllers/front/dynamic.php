@@ -25,7 +25,7 @@ class Dynamic extends CI_Controller {
 		);
 		
 
-		$this->mypage->view_cache_all($act2view);
+		$this->cor_page->view_cache_all($act2view);
 		$this->load->library('Breadcrumb');
 
 	}
@@ -43,7 +43,7 @@ class Dynamic extends CI_Controller {
 		$this->breadcrumb->append_crumb('Dynamic', 'front/dynamic');
 		$this->breadcrumb->output();
 
-		$this->mypage->load_front_view("dynamic",$data);
+		$this->cor_page->load_front_view("dynamic",$data);
 		
 		
 	}	
@@ -59,7 +59,7 @@ class Dynamic extends CI_Controller {
 		$this->breadcrumb->append_crumb('View', 'front/dynamic/view');
 		$this->breadcrumb->output();
 	
-		$this->mypage->load_front_view("dynamic_view",$data);
+		$this->cor_page->load_front_view("dynamic_view",$data);
 	}
 	
 	

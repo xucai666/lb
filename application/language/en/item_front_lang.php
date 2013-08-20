@@ -31,8 +31,8 @@
   'sys_window_main' => 'The main window',
   'sys_browse' => 'Browse the site',
   'sys_exit' => 'To exit the system',
-  'mypage_remarks' => 'Know, please continue',
-  'mypage_theme' => 'Prompt information',
+  'cor_page_remarks' => 'Know, please continue',
+  'cor_page_theme' => 'Prompt information',
   'Prev' => 'Previous page',
   'Next' => 'Next page',
 );

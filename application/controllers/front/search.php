@@ -46,9 +46,9 @@ class Search extends CI_Controller {
 
 
 
-		$this->mydb->set_page_link($page_size,$ct,null);
+		$this->cor_db->set_page_link($page_size,$ct,null);
 
-		$page_link  = $this->mydb->get_page_link();
+		$page_link  = $this->cor_db->get_page_link();
 		foreach($ls as &$v){
 			$v['url'] = $this->im->get_url($v);
 		}
@@ -60,7 +60,7 @@ class Search extends CI_Controller {
 		$this->db->reconnect();
 
 
-		$this->mypage->load_front_view("search",$data);
+		$this->cor_page->load_front_view("search",$data);
 		
 	}	
 	

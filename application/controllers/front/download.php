@@ -28,15 +28,15 @@ class Download extends CI_Controller {
 	function index()
 	{
 		$config = array(
- 				'table_name'=>$this->mydb->table('infos'),
+ 				'table_name'=>$this->cor_db->table('infos'),
  				'primary_id'=>'info_class',
  				'primary_val'=>'-33',
  			);
- 		$about  = $this->mydb->fetch_one($config);
+ 		$about  = $this->cor_db->fetch_one($config);
  		$develop = $this->db->select('a.*,b.c_title')
- 		->from($this->mydb->table('infos'.' as a '))
+ 		->from($this->cor_db->table('infos'.' as a '))
  		->like('a.info_class_sn','0102')
- 		->join($this->mydb->table('category').' as b','a.info_class_sn=b.c_sn','left')
+ 		->join($this->cor_db->table('category').' as b','a.info_class_sn=b.c_sn','left')
  		->order_by('a.info_class_sn','asc')
  		->order_by('b.c_order','desc')->get()->result_array();
  		foreach($develop as $v){
@@ -53,7 +53,7 @@ class Download extends CI_Controller {
  		$data['download_class_left'] = $this->im->download_left();
  
  
-		$this->mypage->load_front_view("download",$data);
+		$this->cor_page->load_front_view("download",$data);
 		
 		
 	}	
@@ -70,15 +70,15 @@ class Download extends CI_Controller {
 	function contact()
 	{
 		$config = array(
- 				'table_name'=>$this->mydb->table('infos'),
+ 				'table_name'=>$this->cor_db->table('infos'),
  				'primary_id'=>'info_class',
  				'primary_val'=>'-1',
  			);
- 		$about  = $this->mydb->fetch_one($config);
+ 		$about  = $this->cor_db->fetch_one($config);
  		$develop = $this->db->select('a.*,b.c_title')
- 		->from($this->mydb->table('infos'.' as a '))
+ 		->from($this->cor_db->table('infos'.' as a '))
  		->like('a.info_class_sn','0102')
- 		->join($this->mydb->table('category').' as b','a.info_class_sn=b.c_sn','left')
+ 		->join($this->cor_db->table('category').' as b','a.info_class_sn=b.c_sn','left')
  		->order_by('a.info_class_sn','asc')
  		->order_by('b.c_order','desc')->get()->result_array();
  		foreach($develop as $v){
@@ -93,7 +93,7 @@ class Download extends CI_Controller {
  		);
  		
  
-		$this->mypage->load_front_view("contact",$data);
+		$this->cor_page->load_front_view("contact",$data);
 		
 		
 	}	
@@ -103,14 +103,14 @@ class Download extends CI_Controller {
 	
 	//显示信息
 	function show_archives(){
-		$cache = $this->mycache->cache_fetch('archives_class');
+		$cache = $this->cor_cache->cache_fetch('archives_class');
 		$info_class = $this->input->get('info_class');
 		$data['nav_title'] = $cache[$info_class];		
-		$data['main'] = $this->db->query('select * from '.$this->mydb->table('infos').' where info_class='.$info_class)->first_row('array');
+		$data['main'] = $this->db->query('select * from '.$this->cor_db->table('infos').' where info_class='.$info_class)->first_row('array');
 		
 		
 		
-		$this->mypage->load_front_view("about_archives",$data);
+		$this->cor_page->load_front_view("about_archives",$data);
 		
 	}
 	
@@ -119,11 +119,11 @@ class Download extends CI_Controller {
 	function archives_list(){		
 		$parent_class = $this->input->get('c_sn');
 		$parent_class = $parent_class?$parent_class:'010501';
-		$this->db->select("a.*,b.c_title",false)->from($this->mydb->table('infos').' as a ')
-		->join($this->mydb->table('category').' as b ','a.info_class_sn=b.c_sn')
+		$this->db->select("a.*,b.c_title",false)->from($this->cor_db->table('infos').' as a ')
+		->join($this->cor_db->table('category').' as b ','a.info_class_sn=b.c_sn')
 		->like('a.info_class_sn',$parent_class,'after')
 		->order_by("info_id","desc");
-		$data = $this->mydb->fetch_all();	
+		$data = $this->cor_db->fetch_all();	
 		
 		foreach($data['list'] as &$v){
 			$v['info_file_size'] = $this->Common_model->file_size_stat(FCPATH.'/'.$v['info_soft_url']); 
@@ -137,7 +137,7 @@ class Download extends CI_Controller {
 		$data['download_class_left'] = $this->im->download_left();
 		
 		
-		$this->mypage->load_front_view("download_list",$data);
+		$this->cor_page->load_front_view("download_list",$data);
 		
 	}	
 
@@ -150,11 +150,11 @@ class Download extends CI_Controller {
 	function view()
 	{
 		$config = array(
- 				'table_name'=>$this->mydb->table('infos'),
+ 				'table_name'=>$this->cor_db->table('infos'),
  				'primary_id'=>'info_id',
  				'primary_val'=>$this->input->get("info_id"),
  			);
- 		$about  = $this->mydb->fetch_one($config);
+ 		$about  = $this->cor_db->fetch_one($config);
  		
  	
  	
@@ -172,7 +172,7 @@ class Download extends CI_Controller {
  			'about'=>$about,
  		);
  		$data['download_class_left'] = $this->im->download_left();
-		$this->mypage->load_front_view("download_view",$data);
+		$this->cor_page->load_front_view("download_view",$data);
 		
 		
 	}	
@@ -186,13 +186,13 @@ class Download extends CI_Controller {
 	function view2()
 	{
 		$config = array(
- 				'table_name'=>$this->mydb->table('infos'),
+ 				'table_name'=>$this->cor_db->table('infos'),
  				'primary_id'=>'info_id',
  				'primary_val'=>$this->input->get("info_id"),
  			);
- 		$about  = $this->mydb->fetch_one($config); 	
+ 		$about  = $this->cor_db->fetch_one($config); 	
  		
- 		$this->db->query("update ".$this->mydb->table('infos')." set info_download_times=info_download_times+1 where info_id=".$about['info_id']."");
+ 		$this->db->query("update ".$this->cor_db->table('infos')." set info_download_times=info_download_times+1 where info_id=".$about['info_id']."");
  		$this->Common_model->download(base_url().'/'.$about['info_soft_url']);	
  		exit();		
 	}	

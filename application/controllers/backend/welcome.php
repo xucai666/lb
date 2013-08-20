@@ -16,7 +16,7 @@ class Welcome extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		//验证登陆
-		$this->myauth->execute_auth();
+		$this->cor_auth->execute_auth();
 	}
 
 
@@ -25,11 +25,11 @@ class Welcome extends CI_Controller{
 	 */
 	 function index(){
 	 	try{
-		 		$this->mypage->load_backend_view('welcome');
+		 		$this->cor_page->load_backend_view('welcome');
 		 	
 	 		
 	 	}catch(Exception $e){
-	 		$this->mypage->load_backend_view('page_redirect',$e->getMessage());
+	 		$this->cor_page->load_backend_view('page_redirect',$e->getMessage());
 	 	}			
 	 }
 	

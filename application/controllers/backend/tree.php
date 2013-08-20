@@ -16,19 +16,19 @@ class Tree extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		//auth login
-        $this->myauth->execute_auth();
+        $this->cor_auth->execute_auth();
 		$this->load->model("Tree_model",'im');
 		
 	}
 
 	function index(){
-		$data = array('treeIds'=>$this->mycache->cache_fetch('treeIds'));
-		$this->mypage->load_backend_view('tree_select',$data);
+		$data = array('treeIds'=>$this->cor_cache->cache_fetch('treeIds'));
+		$this->cor_page->load_backend_view('tree_select',$data);
 	}
 
 	function action_root_set(){
 		$this->im->set_root($this->uri->segment(4));
-		$this->mypage->backend_redirect('tree/action_list');
+		$this->cor_page->backend_redirect('tree/action_list');
 
 	}
 
@@ -41,7 +41,7 @@ class Tree extends CI_Controller{
 			$main = $this->im->detail($id);
 		}
 		$data = array('main'=>$main,'pids'=>$pids);
-		$this->mypage->load_backend_view('tree_add',$data);
+		$this->cor_page->load_backend_view('tree_add',$data);
 	}
 
 	function action_save(){
@@ -62,14 +62,14 @@ class Tree extends CI_Controller{
 				$this->db->where('id',$main['id']);
 				$this->db->update('tree_node',$main);
 			
-				$this->mypage->backend_redirect('tree/action_list','保存成功');
+				$this->cor_page->backend_redirect('tree/action_list','保存成功');
 			}else{
 				$data = array_merge(array('pids'=>$this->im->fetch_select()),$data);				
-				$this->mypage->load_backend_view('tree_add',$data);
+				$this->cor_page->load_backend_view('tree_add',$data);
 			}
 
 		}catch(EXCEPTION $e){
-			$this->mypage->backend_redirect($_SREVER['HTTP_REFERER'],$e->getMessage());
+			$this->cor_page->backend_redirect($_SREVER['HTTP_REFERER'],$e->getMessage());
 		}
 
 	}
@@ -84,18 +84,18 @@ class Tree extends CI_Controller{
 				$this->db->query("CALL deleteTreeNode(".$item.",@resultCode,@resultMsg)");
 			}
 			
-			$this->mypage->backend_redirect('tree/action_list','删除成功');
+			$this->cor_page->backend_redirect('tree/action_list','删除成功');
 		}catch(EXCEPTION $e){
-			$this->mypage->backend_redirect($_SERVER['HTTP_REFERER'],$e->getMessage());
+			$this->cor_page->backend_redirect($_SERVER['HTTP_REFERER'],$e->getMessage());
 		}
 	}
 
 	function action_list(){
 		$this->db->select('id,treeId,pid',false)->select('LEVEL,CONCAT(REPEAT("|-",LEVEL),NAME) as name',false)->from('tree_node')->where('treeId',$this->im->get_root())->like('name',$this->input->get('name'))->order_by('leftId','asc');
 		if($treeId) $this->db->where('treeId',$treeId);
-		$data = $this->mydb->fetch_all(15);
+		$data = $this->cor_db->fetch_all(15);
 		$data['treeIds'] = $treeIds;
-		$this->mypage->load_backend_view('tree_list',$data);
+		$this->cor_page->load_backend_view('tree_list',$data);
 	}
 }
 ?>

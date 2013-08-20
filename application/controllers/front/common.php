@@ -31,7 +31,7 @@ class Common extends CI_Controller{
   function region(){  
     $pid = $this->input->get("pid");
     $pid = $pid?$pid:0;
-    $list = $this->db->query("SELECT region_id, region_name from ".$this->mydb->table('ecs_region')." where parent_id=" .$pid )->result_array();
+    $list = $this->db->query("SELECT region_id, region_name from ".$this->cor_db->table('ecs_region')." where parent_id=" .$pid )->result_array();
     if($list) {
       echo "&nbsp;<select name='area[]' onchange='region(this)'>";
       echo "<option value='0'>请选择</option>";

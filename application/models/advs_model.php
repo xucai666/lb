@@ -23,12 +23,12 @@ class Advs_model extends CI_Model{
 	function db_config(){
 		return array(
 			'main'=>array(
-				'table_name'=>$this->mydb->table('advs'),
+				'table_name'=>$this->cor_db->table('advs'),
 				'primary_key'=>'adv_id',
 			),
 			
 			'detail'=>array(
-				'table_name'=>$this->mydb->table('adv_detail'),
+				'table_name'=>$this->cor_db->table('adv_detail'),
 				'primary_key'=>'detail_id',
 			)
 		);
@@ -98,12 +98,12 @@ class Advs_model extends CI_Model{
 	//查询列表
 	function fetch_list(){	
 			$rs = $this->db->select('a.*,count(b.detail_id) as pic_stat',false)
- 			->from($this->mydb->table('advs').' as a ')
+ 			->from($this->cor_db->table('advs').' as a ')
  			->like('a.adv_title',$this->input->get('adv_title'))
- 			->join($this->mydb->table('adv_detail').' as b','a.adv_id=b.adv_id','left')
+ 			->join($this->cor_db->table('adv_detail').' as b','a.adv_id=b.adv_id','left')
  			->group_by('a.adv_id')
  			->order_by('a.adv_id','desc');
- 			return $this->mydb->fetch_all();
+ 			return $this->cor_db->fetch_all();
 	}	
 	 	
 	
@@ -146,7 +146,7 @@ class Advs_model extends CI_Model{
 		}	
 		return array(
 			'main'=>$main,
-			'detail'=>$this->myform->post_to_set($detail),
+			'detail'=>$this->cor_form->post_to_set($detail),
 		);
 	}	
 	
@@ -157,10 +157,10 @@ class Advs_model extends CI_Model{
 
 function showadv($id,$type='backend'){	
 	if(empty($id)) return false;
-	$main = $this->mydb->fetch_value( "SELECT * from ".$this->mydb->table("advs")." where adv_id='".$id."'" );
+	$main = $this->cor_db->fetch_value( "SELECT * from ".$this->cor_db->table("advs")." where adv_id='".$id."'" );
 	if($main['adv_type']==1){	
-		$this->mypage->fetch_js('jquery.Slider','view',$this->mypage->getRes('js',$type));
-		$detail = $this->db->query( "SELECT * from ".$this->mydb->table("adv_detail")." where adv_type=1 and adv_id='".$id."'" )->result_array();
+		$this->cor_page->fetch_js('jquery.Slider','view',$this->cor_page->getRes('js',$type));
+		$detail = $this->db->query( "SELECT * from ".$this->cor_db->table("adv_detail")." where adv_type=1 and adv_id='".$id."'" )->result_array();
 		$reval  = "";
 		$reval  = "<table   ><tr><td >";
 		$reval .= "\n";
@@ -259,8 +259,8 @@ function showadv($id,$type='backend'){
 	$reval .= "</table> \n";
 	
 	}else{
-		$this->mypage->fetch_js('swfobject','view',$this->mypage->getRes('js',$type));
-		$detail = $this->db->query( "SELECT * from ".$this->mydb->table("adv_detail")." where adv_type=2 and   adv_id='".$id."'" )->first_row("array");
+		$this->cor_page->fetch_js('swfobject','view',$this->cor_page->getRes('js',$type));
+		$detail = $this->db->query( "SELECT * from ".$this->cor_db->table("adv_detail")." where adv_type=2 and   adv_id='".$id."'" )->first_row("array");
 		$reval  = "";
 		$reval  = "<table><tr><td>";		
 		

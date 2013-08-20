@@ -13,13 +13,13 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
   * @version   1.0$
   * @link      http://phpsysinfo.sourceforge.net
   */
- class Myform{
+ class Cor_form{
  	private static $instance;
  	function __construct(){
  		self::$instance = $this; 		
  	}
  	
- 	public static function &get_myform(){ 		
+ 	public static function &get_cor_form(){ 		
  		return self::$instance;
  	}
  	
@@ -109,7 +109,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  
  
  
-function &get_myform(){	
-	return Myform::get_myform();
+function &get_cor_form(){	
+	return cor_form::get_cor_form();
 } 
 ?>
