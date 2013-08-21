@@ -109,10 +109,19 @@ isset($_SERVER['HTTP_REFERER']) or exit(Header("HTTP/1.1 404 Not Found"));
 // Validate file name (for our purposes we'll just remove invalid characters)
 //	$file_name = preg_replace('/[^'.$valid_chars_regex.']|\.+$/i', "", basename($_FILES[$upload_name]['name']));
 	$file_name = basename(iconv('utf-8','gbk',$_FILES[$upload_name]['name']));
+	//new name
+	$dir = $save_path;
+	$arr = scandir($dir); 
+	$all = count($arr)-1;
+	$file_name = substr($file_name,0,strrpos($file_name,'.')).'____'.sprintf("%06d",$all).substr(strrchr($file_name,'.'),0);
+	$save_url = $_POST['save_url'];
+
 	if (strlen($file_name) == 0 || strlen($file_name) > $MAX_FILENAME_LENGTH) {
 		HandleError("Invalid file name");
 		exit(0);
 	}
+
+
 
 
 // Validate that we won't over-write an existing file
@@ -131,6 +140,7 @@ isset($_SERVER['HTTP_REFERER']) or exit(Header("HTTP/1.1 404 Not Found"));
 			break;
 		}
 	}
+
 	if (!$is_valid_extension) {
 		HandleError("Invalid file extension");
 		exit(0);
@@ -157,14 +167,16 @@ isset($_SERVER['HTTP_REFERER']) or exit(Header("HTTP/1.1 404 Not Found"));
 		Depending on your server OS and needs you may need to set the Security Permissions on the file after it has
 		been saved.
 	*/
+
+
 	if (!@move_uploaded_file($_FILES[$upload_name]["tmp_name"], $save_path.$file_name)) {
 		HandleError("File could not be saved: ". $save_path.$file_name);
 		exit(0);
 	}
 
 // Return output to the browser (only supported by SWFUpload for Flash Player 9)
-
-	echo "File Received ". $save_path.$file_name;
+#echo  json_encode(array('file'=>$save_path.$file_name,'url'=>$_POST['save_url'].$file_name))
+	echo json_encode(array('file'=>$save_path.$file_name,'url'=>$save_url.$file_name));
 	exit(0);
 
 
@@ -177,6 +189,12 @@ function HandleError($message) {
 	echo $message;
 }
 
+/**
+ * 创建多级目录
+ * @param  [type] $pathname [description]
+ * @param  [type] $mode     [description]
+ * @return [type]           [description]
+ */
 function make_dir($pathname, $mode = null) {  
 	    is_dir($pathname) or mkdir($pathname, $mode, true);  
 	    return realpath($pathname);  

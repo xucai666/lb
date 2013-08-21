@@ -67,6 +67,7 @@
 		$lang['button_cart']					         = '加入购物车';
 		$lang['button_settle']					         = '下单';
 		$lang['button_continue']					     = '继续浏览';
+		$lang['button_print']					     = '打印';
 	
 
 		

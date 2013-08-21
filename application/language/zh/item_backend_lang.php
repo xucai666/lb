@@ -89,6 +89,7 @@
 		$lang['button_select_all']					 = '全选';
 		$lang['button_select']					 = '选择';
 		$lang['button_trans']					 = '翻译';
+		$lang['button_print']					 = '打印';
 
 		//save
 		$lang['success_save']					 = '保存成功';

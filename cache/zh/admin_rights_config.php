@@ -424,7 +424,7 @@
     30 => 
     array (
       'r_id' => '69',
-      'r_title' => '万能标签模板',
+      'r_title' => '标签调用配置',
       'r_pid' => '67',
       'r_name' => NULL,
       'r_order' => '1',
