@@ -114,7 +114,8 @@ $.fn.extend({
 			"position": "absolute",
 			"border":"1px solid #A2C8F4",
 			"padding": "1px",
-			"display":"none"
+			"display":"none",
+			"z-index":"3000"
 		});
 
 		eval("w_body.mmmmm_" + cfg.align + "()");
