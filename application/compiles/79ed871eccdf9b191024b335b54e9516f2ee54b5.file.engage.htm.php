@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 10:50:50
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-21 03:41:00
          compiled from "application\templates\front\blue\zh\engage.htm" */ ?>
 <?php /*%%SmartyHeaderCode:123152134a0ae39513-83542345%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '79ed871eccdf9b191024b335b54e9516f2ee54b5' => 
     array (
       0 => 'application\\templates\\front\\blue\\zh\\engage.htm',
-      1 => 1376994757,
+      1 => 1377056287,
       2 => 'file',
     ),
   ),
@@ -15,28 +15,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52134a0b053c27_07328621',
   'variables' => 
   array (
     'dir_front' => 0,
-    'img_url' => 0,
     'list' => 0,
     'site_url' => 0,
     'item' => 0,
     'page_link' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52134a0b053c27_07328621',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52134a0b053c27_07328621')) {function content_52134a0b053c27_07328621($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_front']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
-<table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
-  <tr>
-    <td><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
-/ban_05.jpg" width="992" height="178" /></td>
-  </tr>
-</table>
+
 <table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
     <td width="246" valign="top">

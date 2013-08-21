@@ -62,7 +62,13 @@
 		$lang['cor_page_theme']					 = '提示信息';
 		$lang['Prev']					         = '上一页';
 		$lang['Next']					         = '下一页';
-		
+
+		  //button
+		$lang['button_cart']					         = '加入购物车';
+		$lang['button_settle']					         = '下单';
+		$lang['button_continue']					     = '继续浏览';
+	
+
 		
 		
  

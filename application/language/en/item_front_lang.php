@@ -35,5 +35,9 @@
   'cor_page_theme' => 'Prompt information',
   'Prev' => 'Previous page',
   'Next' => 'Next page',
+  //button
+  'button_cart'=>'Add to Cart',
+  'button_settle'=>'Settle',
+  'button_continue'=>'Continue',
 );
 ?>

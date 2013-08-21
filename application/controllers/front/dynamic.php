@@ -24,7 +24,6 @@ class Dynamic extends CI_Controller {
 			'archives_list'=>'about_news',
 		);
 		
-
 		$this->cor_page->view_cache_all($act2view);
 		$this->load->library('Breadcrumb');
 
@@ -59,8 +58,6 @@ class Dynamic extends CI_Controller {
 		$this->breadcrumb->append_crumb('Dynamic', 'dynamic');
 		$this->breadcrumb->append_crumb('View', 'dynamic/view');
 		$this->breadcrumb->output();
-	
-	
 		$this->cor_page->load_front_view("dynamic_view",$data);
 	}
 	

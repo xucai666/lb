@@ -303,7 +303,8 @@ class Common_model  extends CI_Model{
 			
 		}
 		
-		$limit_from = $page_size>0 ? $_GET['per_page']:0;		
+		$limit_from = $page_size>0 ? $_GET['per_page']:0;
+		$limit_from  = $html_type=='detail'?0:$limit_from;	
 		
 		$params = array( 		
 			'limit_to'=>$page_size?$page_size:$CI->config->item('per_page'),
@@ -532,8 +533,13 @@ EOT;
 		
 	}
 
-
- 
+	/**
+	 * [getBanner description]
+	 * @return [type] [description]
+	 */
+ 	function getBanner(){
+ 		
+ 	}
 
 
 }

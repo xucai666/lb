@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 10:50:52
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-21 03:41:01
          compiled from "application\templates\front\blue\zh\message.htm" */ ?>
 <?php /*%%SmartyHeaderCode:2006052134a0c1bf3b0-73007065%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd1722a81ed772567b0c0bc9b1c8698f0db641d48' => 
     array (
       0 => 'application\\templates\\front\\blue\\zh\\message.htm',
-      1 => 1376994822,
+      1 => 1377056454,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52134a0c2d1f20_50855361',
   'variables' => 
   array (
     'dir_front' => 0,
@@ -22,17 +24,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'site_url' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52134a0c2d1f20_50855361',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52134a0c2d1f20_50855361')) {function content_52134a0c2d1f20_50855361($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_front']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
-<table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
-  <tr>
-    <td><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
-/shousou_05.jpg" width="992" height="180" /></td>
-  </tr>
-</table>
+
 <table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
     <td width="246" valign="top">

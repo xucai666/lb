@@ -22,6 +22,7 @@ function func_site_url($array){
     if($CI->config->item('lang_multiple') && !preg_match("/backend/", $segments)){
     	$lang_type = lang_get();
     	$segments = $lang_type.'/'.$segments;
+    
     }
 	return site_url($segments);
 }
@@ -385,6 +386,18 @@ function ci_uri($array=null){
 	
 }
 
+function ci_router($key=''){	
+	$CI = &get_instance();
+	$router = array('controller'=>$CI->router->fetch_class(),'method'=>$CI->router->fetch_method());;
+	
+	if($key){
+
+		return $router[$key];
+	}
+	
+	return $router;
+}
+
 /**
   * start page for webaccess
   *
@@ -467,6 +480,7 @@ class tpl extends Smarty
         $this->registerPlugin("function","ci_form_error","ci_form_error");  //灵动标签
         $this->registerPlugin("function","ci_anchor","ci_anchor");  //灵动标签
         $this->registerPlugin("function","func_get_nav","func_get_nav");  //灵动标签
+     
 
         
  		

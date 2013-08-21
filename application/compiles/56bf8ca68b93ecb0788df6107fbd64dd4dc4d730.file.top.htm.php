@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 11:21:41
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-21 04:22:48
          compiled from "application\templates\front\blue\en\top.htm" */ ?>
 <?php /*%%SmartyHeaderCode:1017752135145145c50-08066813%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '56bf8ca68b93ecb0788df6107fbd64dd4dc4d730' => 
     array (
       0 => 'application\\templates\\front\\blue\\en\\top.htm',
-      1 => 1376994821,
+      1 => 1377056172,
       2 => 'file',
     ),
   ),
@@ -15,15 +15,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_521351451c02d3_70590626',
   'variables' => 
   array (
     'optimize' => 0,
     'header_html' => 0,
     'img_url' => 0,
+    'breadcrumb' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_521351451c02d3_70590626',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_521351451c02d3_70590626')) {function content_521351451c02d3_70590626($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -103,5 +104,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </table>
 
 
+<table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
+  <tr>
+    <td>
+
+    <?php echo func_tag(array('t_id'=>44,'html_type'=>"detail",'where'=>(("c_url like '").((ci_router('controller')))).(("%'")),'page_size'=>"1"),$_smarty_tpl);?>
+
+
+    </td>
+  </tr>
+</table>
+<?php echo $_smarty_tpl->tpl_vars['breadcrumb']->value;?>
 
 <?php }} ?>

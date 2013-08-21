@@ -40,7 +40,7 @@ class MY_Router extends CI_Router
  
         function _validate_request($segments)
         {
-     
+    
 
                 if (count($segments) == 0)
                 {
