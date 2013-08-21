@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-21 09:54:16
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-21 15:54:37
          compiled from "application\templates\front\blue\zh\product.htm" */ ?>
 <?php /*%%SmartyHeaderCode:1003152148e48119b10-92140204%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '023877ecb77c1efce4bcc61177c2ab518ade10fa' => 
     array (
       0 => 'application\\templates\\front\\blue\\zh\\product.htm',
-      1 => 1377056786,
+      1 => 1377097657,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52148e4824f827_37465048',
   'variables' => 
   array (
     'dir_front' => 0,
@@ -22,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ci_uri' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52148e4824f827_37465048',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52148e4824f827_37465048')) {function content_52148e4824f827_37465048($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_front']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 

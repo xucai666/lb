@@ -59,7 +59,9 @@
 			'width': params.width,
 			'height': params.height,
 			'position': 'relative',
-			'background-position': 'top left'
+			'background-position': 'center center',
+			'background-repeat':'no-repeat',
+			'background-size':'contain'
 			});
 
 		// create title bar
@@ -86,10 +88,11 @@
 				tstripWidth = stripWidth;
 			}
 			
-			if(params.links)	
-				$('#'+el.id).append("<a href='"+links[el.id][0]+"' class='ft-"+el.id+"' id='ft-"+el.id+j+"' style='width:"+tstripWidth+"px; height:"+params.height+"px; float: left; position: absolute;outline:none;'></a>");
-			else
-				$('#'+el.id).append("<div class='ft-"+el.id+"' id='ft-"+el.id+j+"' style='width:"+tstripWidth+"px; height:"+params.height+"px; float: left; position: absolute;'></div>");
+			//links background cover each other
+			//if(params.links)	
+				//$('#'+el.id).append("<a href='"+links[el.id][0]+"' class='ft-"+el.id+"' id='ft-"+el.id+j+"' style='width:"+tstripWidth+"px; height:"+params.height+"px; float: left; position: absolute;outline:none;'></a>");
+			//else
+				//$('#'+el.id).append("<div class='ft-"+el.id+"' id='ft-"+el.id+j+"' style='width:"+tstripWidth+"px; height:"+params.height+"px; float: left; position: absolute;'></div>");
 							
 			// positioning bars
 			$("#ft-"+el.id+j).css({ 
@@ -146,7 +149,7 @@
 
 		stripInt[el.id] = setInterval(function() { $.strips(order[el.id][inc[el.id]], el)  },opts[el.id].stripDelay);
 		
-		$('#'+el.id).css({ 'background-image': 'url('+img[el.id][imgInc[el.id]]+')' });
+		$('#'+el.id).css({'background-size':'contain', 'background-image': 'url('+img[el.id][imgInc[el.id]]+')','background-repeat':'no-repeat','background-position':'center center' });
 		
 		if(typeof(direction) == "undefined")
 			imgInc[el.id]++;
@@ -205,10 +208,10 @@
 		$('.ft-'+el.id).attr('href',links[el.id][imgInc[el.id]]);
 		if(opts[el.id].position == 'curtain'){
 			currWidth = $('#ft-'+el.id+itemId).width();
-			$('#ft-'+el.id+itemId).css({ width: 0, opacity: 0, 'background-image': 'url('+img[el.id][imgInc[el.id]]+')' });
+			$('#ft-'+el.id+itemId).css({ width: 0, opacity: 0, 'background-image': 'url('+img[el.id][imgInc[el.id]]+')','background-repeat':'no-repeat','background-position':'center center' });
 			$('#ft-'+el.id+itemId).animate({ width: currWidth, opacity: 1 }, 1000);
 		} else {
-			$('#ft-'+el.id+itemId).css({ height: 0, opacity: 0, 'background-image': 'url('+img[el.id][imgInc[el.id]]+')' });
+			$('#ft-'+el.id+itemId).css({ height: 0, opacity: 0, 'background-image': 'url('+img[el.id][imgInc[el.id]]+')','background-repeat':'no-repeat','background-position':'center center' });
 			$('#ft-'+el.id+itemId).animate({ height: opts[el.id].height, opacity: 1 }, 1000);
 		}
 		

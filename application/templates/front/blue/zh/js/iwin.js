@@ -38,6 +38,7 @@ $.fn.mmmmm_left = function() {
 $.fn.mmmmm_right = function() {
 	return this.each(function(i) {
 		$(this).css("right", "0");
+		$(this).css("margin-left", "0px");
 		$(this).css("position", "absolute");
 	});
 };
@@ -66,10 +67,16 @@ $.fn.mmmmm_bottom = function() {
 		var oh = $(this).outerHeight();
 		$(this).css("bottom", "0");
 		$(this).css("position", "absolute");
+		$(this).css("margin-top", "0px");
 	});
 };
 
 
+function isFunctionDefined(functionName) {
+    if(eval("typeof(" + functionName + ") == typeof(Function)")) {
+        return true;
+    }
+}
 
 $.fn.extend({
 
@@ -159,6 +166,46 @@ $.fn.extend({
 		});
 		
 
+		//dblclick
+		var dbl_flag = 0;
+		var static_cfg = cfg;
+		var static_obj = $(this);
+		w_title.dblclick(function(event) {
+			if(dbl_flag==0){
+				w_body.css('width',$(document.body).width()-5);
+				w_body.css('height',$(document.body).height()-5);
+				w_content.css('width',$(document.body).width()-15);
+				w_content.css('height',$(document.body).height()-15);
+				w_body.mmmmm_left();
+				w_body.mmmmm_top();
+				
+				os = w_body.position();
+				_ostop = os.top;
+			    _osleft = os.left;
+			     m_top =  typeof(cfg.move_top)!="undefined"?cfg.move_top:0;
+				 m_left = typeof(cfg.move_left)!="undefined"?cfg.move_left:0;
+				w_body.css({
+					"top": _ostop + m_top+'px',
+					"left": _osleft + m_left+'px'
+				});
+				dbl_flag = 1;
+
+			}else{
+				w_close.trigger("click");
+				static_obj.iwin(static_cfg);
+				dbl_flag = 0;
+			}
+			//call back 
+			if(cfg.dbl_click_trigger!="undefind"){
+					if(isFunctionDefined(cfg.dbl_click_trigger)){
+						eval(cfg.dbl_click_trigger+"("+dbl_flag+")");
+					}
+					
+			}
+
+		});
+
+
 		$(window).scroll(function(e) {
 			scroll_val = document.documentElement.scrollTop + document.body.scrollTop;
 			w_cover.css({
@@ -173,19 +220,6 @@ $.fn.extend({
 		});
 
 
-		w_body.dblclick(function(event) {
-			w_body.css('width','100%');
-			w_body.css('height','100%');
-			w_content.css('width','100%');
-			w_content.css('height','100%');
-			w_body.mmmmm_left();
-			w_body.mmmmm_top();
-			if(cfg.dbl_click_trigger!="undefind"){
-			
-				eval(cfg.dbl_click_trigger+"()");
-			}
-
-		});
 		//close window
 		w_close.click(function() {
 			

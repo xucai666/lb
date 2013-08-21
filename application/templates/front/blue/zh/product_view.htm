@@ -8,40 +8,11 @@
     
     <td valign="top"> 
 
-    	<!--{tag t_id="40"  html_type="detail" where="p_id=`$ci_uri.3`"}--> 
+    	<!--{tag t_id="40"  html_type="style1" where="p_id=`$ci_uri.3`"}--> 
 
     </td>
   </tr>
 </table>
-<div id="test_slideshowHolder">xx</div>
-<script>
-$(function($){
-	
-	
-$('#slideshowHolder').hide();
-$('#slideshowHolder').iwin({w:800,h:600,align:"center",valign:"middle",modal:true,dbl_click_trigger:"picwin"});
 
-
-})
-
-function picwin(){
-	
-
-
-    $('#slideshowHolder').jqFancyTransitions({
- effect: 'zipper', // wave, zipper, curtain
-      
-        width:$(window).width(),
-        height:$(window).height(),
-        strips: 15, // number of strips
-       
-        navigation: false, // prev and next navigation buttons
-        links: false // show images as links
-
-});
-
-
-}
-</script
 
 <!--{include file="`$dir_front`/foot.htm"}-->

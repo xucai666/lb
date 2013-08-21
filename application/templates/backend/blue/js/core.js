@@ -525,6 +525,6 @@ function load_autocomplete(_auto_obj){
 	      minLength: 1,
 	      delay:40,
 	      response: function( event, ui ) {	_auto_obj.prevAll('input.auto_id').val('').val('');}, 
-	      focus: function( event, ui ) {	_auto_obj.prevAll('input.auto_id').val(ui.item.id);},
+	      focus: function( event, ui ) {	_auto_obj.prevAll('input.auto_id').val(ui.item.id);}
 	    });
 }
