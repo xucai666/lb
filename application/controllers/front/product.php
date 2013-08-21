@@ -42,7 +42,7 @@ class Product extends CI_Controller {
 	//产品查看	
 
 	function view(){
-		$this->cor_page->fetch_js('jqFancyTransitions.1.8.min','view',getRootUrl('js','front'));
+		$this->cor_page->fetch_js('iwin','view',getRootUrl('js','front'));
 		// add breadcrumbs
 		$this->breadcrumb->append_crumb('Home', '/');
 		$this->breadcrumb->append_crumb('Product', '/product');
