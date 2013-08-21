@@ -55,22 +55,22 @@
 <div class="page_link">
 	<!--{$page_link}-->
 </div>
-<!--{literal}-->
+
 <script language="JavaScript">
 	//删除确认
 	function chkdel2(){
 		if($('.ids:checked').size()>0){
-			if(confirm(<!--{"confirm_delete"|lang}-->)){
+			if(confirm('<!--{"confirm_delete"|lang}-->')){
 				return true;
 			}else{
 				return false;	
 			}
 			
 		}else{
-			alert(<!--{"inp_select"|lang}-->);	
+			alert('<!--{"inp_select"|lang}-->');	
 			return false;
 		}
 	}
 </script>
-<!--{/literal}-->
+
 <!--{include file="`$dir_backend`/foot.htm"}-->

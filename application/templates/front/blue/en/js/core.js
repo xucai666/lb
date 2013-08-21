@@ -42,39 +42,6 @@ function redirect(url){
 
 }
 
-$(document).ready(function(){
-
-	$("[id='error_span']").each(function(){		
-		var newp = $(this).prev().offset();
-		var width = $(this).prev().width()-20;
-		var new_left = newp.left;
-		var new_top = newp.top;
-		new_left = new_left+parseInt(width/2);
-		new_top = new_top+10;
-		var inner_html  = $(this).html();
-		$(this).hide();
-		$(this).html('');		
-		$(this).css({"line-height":"150%", "width":"120px","z_index":"100","position":"absolute","left":new_left+"px","top":new_top+"px" });
-	var error_html = '<div class="error_div_top"></div>';
-		 error_html += '<div class="error_div_center">'+inner_html+'<a href="javascript:void(0);"  style="float:right;color:#FF8D00"><b>×<b></a>&nbsp;&nbsp;</div>';
-		 error_html += '<div class="error_div_bottom"></div>';
-		 error_html += '</div>';
-		
-		$(this).html(error_html);
-		$(this).show();
-
-		$(this).bind('click',function(){
-			$(this).hide();
-			
-		})
-		
-		setTimeout(function(){		
-			$("[id='error_span']").hide();
-		},2000);
-	})
-
-
-})
 
 
 
@@ -455,3 +422,47 @@ function load_autocomplete(_auto_obj){
 	      focus: function( event, ui ) {	_auto_obj.prevAll('input.auto_id').val(ui.item.id);},
 	    });
 }
+
+
+
+
+
+$(document).ready(function(){
+	//error span
+	$("[id='error_span']").each(function(){		
+		var newp = $(this).prev().offset();
+		var width = $(this).prev().width()-20;
+		var new_left = newp.left;
+		var new_top = newp.top;
+		new_left = new_left+parseInt(width/2);
+		new_top = new_top+10;
+		var inner_html  = $(this).html();
+		$(this).hide();
+		$(this).html('');		
+		$(this).css({"line-height":"150%", "width":"120px","z_index":"100","position":"absolute","left":new_left+"px","top":new_top+"px" });
+	var error_html = '<div class="error_div_top"></div>';
+		 error_html += '<div class="error_div_center">'+inner_html+'<a href="javascript:void(0);"  style="float:right;color:#FF8D00"><b>×<b></a>&nbsp;&nbsp;</div>';
+		 error_html += '<div class="error_div_bottom"></div>';
+		 error_html += '</div>';
+		
+		$(this).html(error_html);
+		$(this).show();
+
+		$(this).bind('click',function(){
+			$(this).hide();
+			
+		})
+		
+		setTimeout(function(){		
+			$("[id='error_span']").hide();
+		},2000);
+	})
+
+	//link nav
+	$('.link_tu').hover(function() {
+		$('.link_tu').not(this).find("a:first").removeClass('selected');
+	}, function() {
+		/* Stuff to do when the mouse leaves the element */
+	});
+
+})

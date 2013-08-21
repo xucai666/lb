@@ -58,6 +58,7 @@ class Product extends CI_Controller {
 	function good_cart_list(){
 		$this->load->library('cart');			
 		$cart_arr =  $this->cart->contents();
+		
 		foreach($cart_arr as &$v){
 			$v['name'] = $v['name'];
 			$sort[$v['id']] = $v['id'];
@@ -201,7 +202,7 @@ class Product extends CI_Controller {
 				$cart_arr =  $this->cart->contents();
 				
 				foreach($cart_arr as &$v){
-					$v['name'] = $this->cor_page->my_encrypt($v['name'],'DECODE');
+					$v['name'] = $v['name'];
 					$sort[$v['id']] = $v['id'];
 					$p_all[$v['id']] = $v['id'];
 				}
@@ -212,6 +213,7 @@ class Product extends CI_Controller {
 				$imgs_re = $this->cor_form->array_re_index($imgs,'p_id','p_pic');
 				$cart_arr && array_multisort($sort,SORT_ASC,$cart_arr);
 				foreach($cart_arr as &$v) $v['p_pic'] = $imgs_re[$v['id']];
+
 				$this->cor_page->load_front_view("product_order",array('main'=>$main,'list'=>$cart_arr));
 			}
 				

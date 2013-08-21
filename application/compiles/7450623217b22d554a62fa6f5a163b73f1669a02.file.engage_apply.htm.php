@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 11:20:53
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-21 06:12:14
          compiled from "application\templates\front\blue\zh\engage_apply.htm" */ ?>
 <?php /*%%SmartyHeaderCode:839552135115b6ef71-70949422%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7450623217b22d554a62fa6f5a163b73f1669a02' => 
     array (
       0 => 'application\\templates\\front\\blue\\zh\\engage_apply.htm',
-      1 => 1376994757,
+      1 => 1377056287,
       2 => 'file',
     ),
   ),
@@ -15,10 +15,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52135115ce2108_44960780',
   'variables' => 
   array (
     'dir_front' => 0,
-    'img_url' => 0,
     'site_url' => 0,
     'engage' => 0,
     'sex' => 0,
@@ -26,19 +27,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'work_year' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52135115ce2108_44960780',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52135115ce2108_44960780')) {function content_52135115ce2108_44960780($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_options')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\function.html_options.php';
 ?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_front']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
-<table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
-  <tr>
-    <td><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
-/ban_05.jpg" width="992" height="178" /></td>
-  </tr>
-</table>
+
 <table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
     <td width="246" valign="top">

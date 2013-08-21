@@ -182,14 +182,14 @@ border:0;
 	border-bottom-style: solid;
 	border-right-color: #bad6ec;
 	border-bottom-color: #bad6ec;
-	color:#ffffff;
+	color:#333333;
 	line-height:150%;
-	font-size:14px;
+	font-size:12px;
 	text-align:center;
 }
 
 .product_cart thead{
-	background-color: #ff0000;
+	background-color: #cccccc;
 
 
 }

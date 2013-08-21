@@ -8,28 +8,7 @@ a{ font-family:"宋体"; font-size:12px; color:#000; text-decoration:none;}
 /*导航*/
 .link_tu a{ background:url(../images/nav.jpg) no-repeat  scroll 0px 0px; display:block; width:70px;height:23px;color:#ffffff;font-weight:bold;text-align:center;padding-top: 10px}
 .link_tu a:hover{ background:url(../images/nav.jpg) no-repeat scroll 0px -33px; display:block; border:0;color:#ffffff;}
-
-.link_tu1 a{ background:url(../images/daohan_17.jpg) no-repeat; width:69px; height:33px; display:block; border:0}
-.link_tu1 a:hover{ background:url(../images/daohan2_13.jpg) no-repeat; width:69px; height:33px; display:block; border:0}
-
-.link_tu2 a{ background:url(../images/daohan_18.jpg) no-repeat; width:69px; height:33px; display:block; border:0}
-.link_tu2 a:hover{ background:url(../images/daohan2_14.jpg) no-repeat; width:69px; height:33px; display:block; border:0}
-
-.link_tu3 a{ background:url(../images/daohan_19.jpg) no-repeat; width:69px; height:33px; display:block; border:0}
-.link_tu3 a:hover{ background:url(../images/daohan2_15.jpg) no-repeat; width:69px; height:33px; display:block; border:0}
-
-.link_tu4 a{ background:url(../images/daohan_20.jpg) no-repeat; width:69px; height:33px; display:block; border:0}
-.link_tu4 a:hover{ background:url(../images/daohan2_16.jpg) no-repeat; width:69px; height:33px; display:block; border:0}
-
-.link_tu5 a{ background:url(../images/daohan_21.jpg) no-repeat; width:69px; height:33px; display:block; border:0}
-.link_tu5 a:hover{ background:url(../images/daohan2_17.jpg) no-repeat; width:69px; height:33px; display:block; border:0}
-
-.link_tu6 a{ background:url(../images/daohan_22.jpg) no-repeat; width:69px; height:33px; display:block; border:0}
-.link_tu6 a:hover{ background:url(../images/daohan2_18.jpg) no-repeat; width:69px; height:33px; display:block; border:0}
-
-.link_tu7 a{ background:url(../images/daohan_23.jpg) no-repeat; width:69px; height:33px; display:block; border:0}
-.link_tu7 a:hover{ background:url(../images/daohan2_19.jpg) no-repeat; width:69px; height:33px; display:block; border:0}
-
+.link_tu .selected{ background:url(../images/nav.jpg) no-repeat scroll 0px -33px; display:block; border:0;color:#ffffff;}
 
 /*图片*/
 .tutu{ background:url(../images/bai1_05.jpg) no-repeat; display:block; width:278px; height:90px; margin-left:8px; margin-bottom:8px; margin-top:8px; margin-right:8px;}
@@ -205,13 +184,13 @@ border:0;
 	border-bottom-color: #bad6ec;
 	color:#333333;
 	line-height:150%;
-	font-size:14px;
+	font-size:12px;
 	text-align:center;
 }
 
 .product_cart thead{
-	background-image:url(../images/dlgtitle.gif);
-	background-repeat:repeat-x;
+	background-color: #cccccc;
+
 
 }
 
@@ -242,7 +221,7 @@ td,span,th,div,input,button,a{
 }
 
 .product_cart .opt a,.product_cart .opt input {
-	padding-left:30px;
+	margin-right:30px;
 }
 
 .product_cart .opt2{
@@ -345,4 +324,18 @@ td,span,th,div,input,button,a{
 }
 .button_bg:hover{
 	color:#ff0000;
+}
+
+
+.link_del{	
+	background: url(../images/icons/close.png) no-repeat;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	float: left;
+	border: none !important;
+	padding: 0px !important;
+	padding-bottom: 0px !important;
+	margin-left: 8px;
+	display: block;
 }

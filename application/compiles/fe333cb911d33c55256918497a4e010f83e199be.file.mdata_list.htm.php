@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 10:50:40
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-21 05:10:54
          compiled from "application\templates\backend\blue\mdata_list.htm" */ ?>
 <?php /*%%SmartyHeaderCode:339652134a00b1eb13-66727266%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fe333cb911d33c55256918497a4e010f83e199be' => 
     array (
       0 => 'application\\templates\\backend\\blue\\mdata_list.htm',
-      1 => 1376967768,
+      1 => 1377061852,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52134a00d85580_74743694',
   'variables' => 
   array (
     'dir_backend' => 0,
@@ -32,8 +34,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'page_link' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52134a00d85580_74743694',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52134a00d85580_74743694')) {function content_52134a00d85580_74743694($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -136,14 +136,16 @@ $_smarty_tpl->tpl_vars['f']->_loop = true;
 	//删除确认
 	function chkdel2(){
 		if($('.ids:checked').size()>0){
-			if(confirm(<!--{"confirm_delete"|lang}-->)){
+			if(confirm('<?php echo lang("confirm_delete");?>
+')){
 				return true;
 			}else{
 				return false;	
 			}
 			
 		}else{
-			alert(<!--{"inp_select"|lang}-->);	
+			alert('<?php echo lang("inp_select");?>
+');	
 			return false;
 		}
 	}

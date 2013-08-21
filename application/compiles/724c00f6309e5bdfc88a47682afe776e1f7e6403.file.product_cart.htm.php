@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-21 04:39:27
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-21 07:15:54
          compiled from "application\templates\front\blue\zh\product_cart.htm" */ ?>
 <?php /*%%SmartyHeaderCode:927052143e8bf19276-09789594%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '724c00f6309e5bdfc88a47682afe776e1f7e6403' => 
     array (
       0 => 'application\\templates\\front\\blue\\zh\\product_cart.htm',
-      1 => 1377059966,
+      1 => 1377069352,
       2 => 'file',
     ),
   ),
@@ -34,12 +34,14 @@ $(document).ready(function($) {
     /* Act on the event */
     var o_num  = (+$(this).siblings('.opt_num1').val());
     var l_num = o_num+(+$(this).attr('rel'));
-    l_num = l_num<0?0:l_num;
+    l_num = l_num<1?1:l_num;
     $(this).siblings('.opt_num1').val(l_num).trigger('change');
 
   });
     $('.opt_num1').change(function(event) {
-
+      if($(this).val()<1){
+        $(this).val(1);
+      }
       /* Act on the event */
        $.ajax({
           url: site_url+'/product/good_cart_update/'+$(this).parents("tr:first").find('#rowid').val(),
@@ -48,7 +50,9 @@ $(document).ready(function($) {
           data: {qty: $(this).val()},
         })
         .done(function() {
-        })
+        });
+        $(this).parent().next().find('span.sub').text($(this).val()*$(this).parent().prev().prev().find('span.price').text());
+
         
         
       });
@@ -94,8 +98,8 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 </td>
         <td style="width:150px;"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 </td>
-        <td><?php echo $_smarty_tpl->tpl_vars['item']->value['price'];?>
-</td>
+        <td><span class="price"><?php echo $_smarty_tpl->tpl_vars['item']->value['price'];?>
+</span></td>
         <td><img src="<?php echo $_smarty_tpl->tpl_vars['item']->value['p_pic'];?>
 " width="80" /></td>
         <td class="opt2">
@@ -105,8 +109,9 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
            <a href="###" class="opt_num" rel="1">+</a>
 
         </td>
-        <td><?php echo $_smarty_tpl->tpl_vars['item']->value['subtotal'];?>
-
+        <td>
+          <span class="sub"><?php echo $_smarty_tpl->tpl_vars['item']->value['subtotal'];?>
+</span>
           <input type="hidden" id="rowid" name="detail[rowid][]" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['rowid'];?>
 ">
         </td>
