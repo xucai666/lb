@@ -304,6 +304,7 @@ function func_vsprintf($array){
 	
 	$html = str_replace("%name",$array[name],$html);
 	$html = str_replace("%value",$array[value],$html);
+	$html = str_replace("%id",str_replace(array('[',']'), array('_','_'), $array[name]),$html);
 	
 	$html = preg_replace("/<\?php(.*?)\?>/ies","eval(stripcslashes('\\1'))",$html);
 
