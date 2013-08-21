@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-21 20:49:50
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-21 21:15:09
          compiled from "application\templates\front\blue\zh\product_view.htm" */ ?>
 <?php /*%%SmartyHeaderCode:206115214c1e41e8336-75609052%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '855b662c27f98243eb630f1ef085de78cb5833ea' => 
     array (
       0 => 'application\\templates\\front\\blue\\zh\\product_view.htm',
-      1 => 1377118135,
+      1 => 1377119709,
       2 => 'file',
     ),
   ),
@@ -36,7 +36,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     
     <td valign="top"> 
 
-    	<?php echo func_tag(array('t_id'=>"40",'html_type'=>"style1",'where'=>"p_id=".((string)$_smarty_tpl->tpl_vars['ci_uri']->value[3])),$_smarty_tpl);?>
+    	<?php echo func_tag(array('t_id'=>"40",'html_type'=>"style2",'where'=>"p_id=".((string)$_smarty_tpl->tpl_vars['ci_uri']->value[3])),$_smarty_tpl);?>
  
 
     </td>
