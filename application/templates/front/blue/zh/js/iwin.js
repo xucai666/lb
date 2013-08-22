@@ -81,10 +81,16 @@ function isFunctionDefined(functionName) {
 $.fn.extend({
 
 	iwin: function(cfg) {
+
 		//create window object
 		var static_self = $(this);
 		var static_parent = static_self.parent();
 		static_self.hide();
+		//dblclick
+		var dbl_flag = 0;
+		var static_cfg = cfg;
+
+
 		var gid = static_self.attr("id");
 		
 
@@ -170,9 +176,7 @@ $.fn.extend({
 		});
 		
 
-		//dblclick
-		var dbl_flag = 0;
-		var static_cfg = cfg;
+		
 		w_title.dblclick(function(event) {
 			if(dbl_flag==0){
 				w_body.css('width',$(document.body).width()-5);
@@ -206,6 +210,8 @@ $.fn.extend({
 					
 			}
 
+			
+
 		});
 
 		w_title.click(function(event) {
@@ -234,9 +240,14 @@ $.fn.extend({
 			var child_node = w_content.children();
 			child_node.hide();			
 			child_node.appendTo(static_parent);
-			static_self.show();
 			w_body.remove();
 			w_cover.remove();
+			if(cfg.close_trigger!="undefind"){
+				if(isFunctionDefined(cfg.close_trigger)){
+					eval(cfg.close_trigger+"(static_self,static_cfg)");
+				}
+					
+			}
 
 		})
 		

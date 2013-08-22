@@ -11,6 +11,7 @@
 **/
 
 (function($) {
+
 	var opts = new Array;
 	var level = new Array;
 	var img = new Array;
@@ -35,6 +36,13 @@
 		inc[el.id] = 0;
 
 		params = opts[el.id];
+
+
+		if(params.destroy){ 
+			$.destroy(el);
+			
+		}
+
 
 		if(params.effect == 'zipper'){ params.direction = 'alternate'; params.position = 'alternate'; }
 		if(params.effect == 'wave'){ params.direction = 'alternate'; params.position = 'top'; }
@@ -141,7 +149,15 @@
 		imgInt[el.id] = setInterval(function() { $.transition(el)  }, params.delay+params.stripDelay*params.strips);
 
 	};
+	//destroy
+	$.destroy = function(el){		
+	
+		$('#ft-title-'+el.id).remove();
+		$('#ft-next-'+el.id).remove();
+		$('#ft-prev-'+el.id).remove();
+		
 
+	};
 	// transition
 	$.transition = function(el,direction){
 
