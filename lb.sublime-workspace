@@ -5,7 +5,7 @@
 		[
 			[
 				"back",
-				"background-position"
+				"background-color"
 			],
 			[
 				"file_e",
@@ -447,6 +447,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "application/templates/front/blue/zh/js/jqFancyTransitions.1.8.js",
+			"settings":
+			{
+				"buffer_size": 9662,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -600,12 +608,14 @@
 	},
 	"file_history":
 	[
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/iwin.css",
-		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/css/iwin.css",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/iwin.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_view.htm",
-		"/E/phpnow/htdocs/lb/application/models/common_model.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/jqFancyTransitions.1.8.js",
+		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
+		"/E/phpnow/htdocs/lb/application/models/common_model.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/iwin.css",
+		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
 		"/E/phpnow/htdocs/lb/fckeditor/_whatsnew_history.html.dump",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/core.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/core.js",
@@ -613,7 +623,6 @@
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/jqFancyTransitions.1.8.min.js",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/product.php",
-		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
 		"/E/phpnow/htdocs/lb/swfupload/upload.php",
 		"/E/phpnow/htdocs/lb/tools/test.php",
 		"/E/phpnow/htdocs/lb/application/language/zh/item_front_lang.php",
@@ -726,8 +735,7 @@
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/detail.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/download.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/download_list.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/download_view.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/engage_apply2.htm"
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/download_view.htm"
 	],
 	"find":
 	{
@@ -873,6 +881,39 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"order",
+			"right",
+			"order",
+			"random",
+			"order",
+			"_close",
+			"wbody_close",
+			".close",
+			"$(this)",
+			"static_self",
+			"static_obj",
+			"$(this)",
+			"_close",
+			"append",
+			"ft-title",
+			"ft",
+			".css",
+			"background-color",
+			"mmmmm_ifr",
+			"z-index",
+			"iframe",
+			"next",
+			"w_body.removeAtt",
+			"clas",
+			"w_content",
+			"w_body",
+			"background",
+			"alpha",
+			"opacity",
+			"function tag",
+			"func_tag",
+			"vsprinf",
+			"$imgs",
 			"html_type",
 			":contain",
 			"contain",
@@ -967,40 +1008,7 @@
 			"fetch_class",
 			"fetch_method",
 			"control",
-			"array",
-			"route",
-			"$this->routes",
-			"$route",
-			"$this->uri_string",
-			"segments",
-			"segment",
-			"$ci_uri.4",
-			"func_tag",
-			"$CI->uri->segment(4)",
-			"$this->uri->segment(4)",
-			"dir_front",
-			"application//templates",
-			"front/",
-			"func_site_url",
-			"<!--{$site_url}-->/front/",
-			"site_url(\"front/",
-			"site_url('front/",
-			"message",
-			":any",
-			"$route",
-			"_ok",
-			"ata",
-			"theme",
-			"后台首页",
-			"template_dir",
-			"sex",
-			"func_get_areat",
-			"$this->input->get('lang'",
-			"$CI->Common_model->lang_get()",
-			"$this->",
-			"$this->cor_db",
-			"$this->cor_auth",
-			"$this->cor_cache"
+			"array"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1137,8 +1145,36 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "application/templates/front/blue/zh/js/jqFancyTransitions.1.8.js",
+					"settings":
+					{
+						"buffer_size": 9662,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3610,
+								3615
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 48.0,
+						"translation.y": 1733.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1188,24 +1224,52 @@
 		"selected_items":
 		[
 			[
-				"common_model",
-				"application/models/common_model.php"
+				"jqfan",
+				"application/templates/front/blue/zh/js/jqFancyTransitions.1.8.js"
 			],
 			[
-				"product.php",
-				"application/controllers/front/product.php"
+				"iwin.css",
+				"application/templates/front/blue/zh/css/iwin.css"
+			],
+			[
+				"iwin.js",
+				"application/templates/front/blue/zh/js/iwin.js"
+			],
+			[
+				"product_view.htm",
+				"application/templates/front/blue/zh/product_view.htm"
+			],
+			[
+				"iwinjs",
+				"application/templates/front/blue/zh/js/iwin.js"
+			],
+			[
+				"jqfa",
+				"application/templates/front/blue/zh/js/jqFancyTransitions.1.8.js"
+			],
+			[
+				"jqf",
+				"application/templates/front/blue/zh/js/jqFancyTransitions.1.8.js"
 			],
 			[
 				"jqfancytransitions.js",
 				"application/templates/front/blue/zh/js/jqFancyTransitions.1.8.js"
 			],
 			[
-				"iwin.css",
-				"application/templates/backend/blue/css/iwin.css"
+				"tpl.php",
+				"application/libraries/tpl.php"
 			],
 			[
-				"iwin.js",
-				"application/templates/front/blue/zh/js/iwin.js"
+				"common_model",
+				"application/models/common_model.php"
+			],
+			[
+				"product_view",
+				"application/templates/front/blue/zh/product_view.htm"
+			],
+			[
+				"product.php",
+				"application/controllers/front/product.php"
 			],
 			[
 				"product_view.ht",
@@ -1220,16 +1284,8 @@
 				"application/templates/front/blue/zh/js/core.js"
 			],
 			[
-				"product_view",
-				"application/templates/front/blue/zh/product_view.htm"
-			],
-			[
 				"product.htm",
 				"application/templates/front/blue/zh/product.htm"
-			],
-			[
-				"tpl.php",
-				"application/libraries/tpl.php"
 			],
 			[
 				"test.php",
@@ -1338,10 +1394,6 @@
 			[
 				"dynamic_view",
 				"application/templates/front/blue/zh/dynamic_view.htm"
-			],
-			[
-				"product_view.htm",
-				"application/templates/front/blue/zh/product_view.htm"
 			],
 			[
 				"sale.htm",
@@ -1682,22 +1734,6 @@
 			[
 				"fieldshtm",
 				"application/templates/backend/blue/fields_list.htm"
-			],
-			[
-				"mycache",
-				"application/libraries/mycache.php"
-			],
-			[
-				"dyn",
-				"application/controllers/front/dynamic.php"
-			],
-			[
-				"common.js",
-				"application/templates/front/blue/zh/js/common.js"
-			],
-			[
-				"prouct_view",
-				"application/templates/front/blue/zh/product_view.htm"
 			]
 		],
 		"width": 0.0

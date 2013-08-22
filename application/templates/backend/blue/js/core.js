@@ -398,7 +398,8 @@ function loadjs(file,id){
 function getJsPath(){
 	var scripts = document.getElementsByTagName('script');
 	var thisScript = scripts[scripts.length-1];
-	var path = thisScript.src.replace(/\/script\.js$/, '/'); 
+	var path = thisScript.src.replace(/\/script\.js$/, '/');
+
 	return path.substr(0,path.lastIndexOf("/"));
 
 }
@@ -408,6 +409,7 @@ $.extend({
     includePath: getJsPath(),
     include: function(file)
     {
+  
         var files = typeof file == "string" ? [file] : file;
         for (var i = 0; i < files.length; i++)
         {

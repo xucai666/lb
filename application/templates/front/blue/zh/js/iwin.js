@@ -82,8 +82,11 @@ $.fn.extend({
 
 	iwin: function(cfg) {
 		//create window object
+		var static_self = $(this);
+		var static_parent = static_self.parent();
+		static_self.hide();
+		var gid = static_self.attr("id");
 		
-		var gid = $(this).attr("id");
 
 		var w_id = gid+'_window';
 		if($('#'+w_id).length>0){
@@ -125,7 +128,7 @@ $.fn.extend({
 
 		w_title.html(cfg.title);
 
-		$(this).appendTo(w_content);
+		static_self.appendTo(w_content);
 		
 		w_content.css({
 			"width": cfg.w - 10,
@@ -135,7 +138,7 @@ $.fn.extend({
 		
 
 		w_body.fadeIn("slow");
-		$(this).show();
+		static_self.show();
 
 		w_body.draggable({
 			handle: w_title,
@@ -170,7 +173,6 @@ $.fn.extend({
 		//dblclick
 		var dbl_flag = 0;
 		var static_cfg = cfg;
-		var static_obj = $(this);
 		w_title.dblclick(function(event) {
 			if(dbl_flag==0){
 				w_body.css('width',$(document.body).width()-5);
@@ -193,7 +195,7 @@ $.fn.extend({
 
 			}else{
 				w_close.trigger("click");
-				static_obj.iwin(static_cfg);
+				static_self.iwin(static_cfg);
 				dbl_flag = 0;
 			}
 			//call back 
@@ -206,6 +208,11 @@ $.fn.extend({
 
 		});
 
+		w_title.click(function(event) {
+			/* Act on the event */
+
+			w_body.css('z-index',(+w_body.css('z-index'))+1);
+		});
 
 		$(window).scroll(function(e) {
 			scroll_val = document.documentElement.scrollTop + document.body.scrollTop;
@@ -226,7 +233,8 @@ $.fn.extend({
 			
 			var child_node = w_content.children();
 			child_node.hide();			
-			child_node.appendTo($(document.body));
+			child_node.appendTo(static_parent);
+			static_self.show();
 			w_body.remove();
 			w_cover.remove();
 

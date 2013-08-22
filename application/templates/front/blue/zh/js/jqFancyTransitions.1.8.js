@@ -149,7 +149,6 @@
 
 		stripInt[el.id] = setInterval(function() { $.strips(order[el.id][inc[el.id]], el)  },opts[el.id].stripDelay);
 		
-		$('#'+el.id).css({'background-size':'contain', 'background-image': 'url('+img[el.id][imgInc[el.id]]+')','background-repeat':'no-repeat','background-position':'center center' });
 		
 		if(typeof(direction) == "undefined")
 			imgInc[el.id]++;
@@ -167,6 +166,10 @@
 			imgInc[el.id] = img[el.id].length-1;
 		}
 		
+		$('#'+el.id).css({'background-size':'contain', 'background-image': 'url('+img[el.id][imgInc[el.id]]+')','background-repeat':'no-repeat','background-position':'center center' });
+
+
+
 		if(titles[el.id][imgInc[el.id]]!=''){
 			$('#ft-title-'+el.id).animate({ opacity: 0 }, opts[el.id].titleSpeed, function(){
 				$(this).html(titles[el.id][imgInc[el.id]]).animate({ opacity: opts[el.id].titleOpacity }, opts[el.id].titleSpeed);
@@ -222,8 +225,8 @@
 	// navigation
 	$.navigation = function(el){
 		// create prev and next 
-		$('#'+el.id).append("<a href='#' id='ft-prev-"+el.id+"' class='ft-prev'>prev</a>");
-		$('#'+el.id).append("<a href='#' id='ft-next-"+el.id+"' class='ft-next'>next</a>");
+		$('#'+el.id).append("<a target='_self' href='javascript:;' id='ft-prev-"+el.id+"' class='ft-prev'>prev</a>");
+		$('#'+el.id).append("<a target='_self' href='javascript:;' id='ft-next-"+el.id+"' class='ft-next'>next</a>");
 		$('#ft-prev-'+el.id).css({
 			'position' 	: 'absolute',
 			'top'		: params.height/2 - 15,
