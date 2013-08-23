@@ -52,10 +52,12 @@ class Member extends CI_Controller {
 	 	try{
 	 		$this->form_validation->set_error_delimiters('<span id="error_span">', '</span>');
 	 		$data = $this->input->post();
+	 		
 	 		$this->form_validation->set_rules($this->im->valid_login_rule());
 	 		if($this->form_validation->run()){
 	 			$this->cor_page->front_redirect('member/action_member_center','登陆成功');
 	 		}else{
+
 	 			$this->cor_page->load_front_view('member_login',$data);
 	 		}
 	 	}catch(Exception $e){
@@ -85,6 +87,7 @@ class Member extends CI_Controller {
  		try{
  			$this->form_validation->set_error_delimiters('<span id="error_span">', '</span>');
 	 		$data = array('main'=>$this->input->post('main'));
+	 		$data['main']['m_pass'] = base64_encode($data['main']['m_pass']);
 	 		$this->form_validation->set_rules($this->im->valid_save_rule());
  		    if($this->form_validation->run()){
  		    	$db_config = $this->im->db_config();
@@ -120,24 +123,24 @@ class Member extends CI_Controller {
 	 	exit;
 	 }
 
-	 function valid_login_m_name($val){
+	 function valid_login_m_user($val){
 	 	
- 		$this->db->select('*')->from('module_member')->where('m_name',($val));
+ 		$this->db->select('*')->from('module_member')->where('m_user',($val));
  		$rs = $this->db->get()->first_row('array');
  		if($rs){
  			return true;
  		}else{
- 			$this->form_validation->set_message('login_m_name','%s输入错误');
+ 			
  			return false;
  		}
 	 }
 
 	 function valid_login_m_pass($val){
-
-
- 		$this->db->select('*')->from('module_member')->where('m_name',$this->input->post('m_name'));
+ 		$this->db->select('*')->from('module_member')->where('m_user',$this->input->post('m_user'));
  		$rs = $this->db->get()->first_row('array');
+ 		
  		if(base64_encode($val) == $rs['m_pass']){
+
  			return true;
  		}else{
  			return false;
@@ -148,20 +151,19 @@ class Member extends CI_Controller {
 
 	 function valid_login_m_captcha($val){
 	 
-	 	if($val == $this->cm->get_captcha()){
+	 	if(strtolower($val) == strtolower($this->cm->get_captcha())){
 	 		return true;
 	 	}else{
 	 		return false;
 	 	}
 	 }
 
-	 function valid_m_name_exists($val){
-		$this->db->select('*')->from('module_member')->where('m_name',$val);
+	 function valid_m_user_exists($val){
+		$this->db->select('*')->from('module_member')->where('m_user',$val);
  		$rs = $this->db->get()->first_row('array');
  		if(!$rs){
  			return true;
  		}else{
- 			$this->form_validation->set_message('m_name_exists','%s已经存在，请更换');
  			return false;
  		}
 	 }

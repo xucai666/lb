@@ -9,10 +9,10 @@
 		//login
 		$lang['valid_login_m_name']					     = '%s不正确';
 		$lang['valid_login_m_pass']					     = '%s不正确';
-		$lang['valid_login_m_valid']					 = '%s不正确';
+		$lang['valid_login_m_captcha']					 = '%s不正确';
 		//register
 		
-		$lang['m_name_exists']					 		 = '%s已存在';
+		$lang['valid_m_user_exists']					 		 = '%s已存在';
 		
 	
 

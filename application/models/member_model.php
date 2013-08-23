@@ -20,23 +20,35 @@ class Member_model extends CI_Model{
 
     function  db_config(){
       return array(
-        'table_name'=>$this->cor_db->table('module_member'),
-        'primary_key'=>'m_id',
-      );
+        'main'=>array(
+          'table_name'=>$this->cor_db->table('module_member'),
+          'primary_key'=>'m_id',
+        )
+      ); 
     }
 
 
     function valid_save_rule(){
       return array(
          array(
-          'field'=>'main[m_name]',
+          'field'=>'main[m_user]',
           'label'=>'用户名',
-          'rules'=>'required|callback_valid_m_name_exists',
+          'rules'=>'required|callback_valid_m_user_exists',
          ),
          array(
           'field'=>'main[m_pass]',
           'label'=>'密码',
           'rules'=>'required|min_length:6',
+         ),  
+         array(
+          'field'=>'main[m_email]',
+          'label'=>'邮箱',
+          'rules'=>'required|valid_email',
+         ),  
+         array(
+          'field'=>'main[m_name]',
+          'label'=>'称呼',
+          'rules'=>'required',
          ),
         
       );
@@ -45,10 +57,11 @@ class Member_model extends CI_Model{
     function valid_login_rule(){
       return array(
         array(
-          'field'=>'m_name',
+          'field'=>'m_user',
           'label'=>'用户名',
-          'rules'=>'required|callback_valid_login_m_name',
+          'rules'=>'required|callback_valid_login_m_user',
         ),
+       
         array(
           'field'=>'m_pass',
           'label'=>'密码',
