@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-23 02:02:37
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-23 10:32:56
          compiled from "application\templates\front\blue\zh\index.htm" */ ?>
 <?php /*%%SmartyHeaderCode:9007521628f904ac51-90018841%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '27069bb56e29505facff5153c01436807ea9ec22' => 
     array (
       0 => 'application\\templates\\front\\blue\\zh\\index.htm',
-      1 => 1377223355,
+      1 => 1377253960,
       2 => 'file',
     ),
   ),
@@ -77,14 +77,29 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             
           
          </li>
-         <li > 
-            <input type="text" name="title" id="textfield"  style="width:155px; height:20px!important;" class="input" /> 
+         <li class="top_search_li" > 
+            <input type="text" name="title" id="textfield"   class="input" /> 
             <input type="image" src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
-/sousuo_07.jpg" width="30" height="20"  border="0"/>
+/sousuo_07.jpg"  border="0"/>
             </li>
-            <li class="account_link"><a href="<?php echo site_url("front/member/action_register");?>
+
+            <li class="account_link">
+            <?php if (get_cookie("member")){?>
+            <a href="<?php echo site_url("front/member/action_member_center");?>
+">
+
+            你好,<?php echo func_my_encrypt(get_cookie("member"),'DECODE');?>
+, 会员中心</a>
+
+            <?php }else{ ?>
+            <a href="<?php echo site_url("front/member/action_register");?>
 ">注册</a><a href="<?php echo site_url("front/member/index");?>
-">登陆</a></li>
+">登陆</a>
+            
+            <?php }?>
+
+
+            </li>
            
         </ul>
 

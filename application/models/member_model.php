@@ -38,7 +38,33 @@ class Member_model extends CI_Model{
          array(
           'field'=>'main[m_pass]',
           'label'=>'密码',
-          'rules'=>'required|min_length:6',
+          'rules'=>'required|min_length[6]|callback_valid_password_repeat',
+         ), array(
+          'field'=>'m_pass_repeat',
+          'label'=>'密码',
+          'rules'=>'required|min_length[6]',
+         ),  
+         array(
+          'field'=>'main[m_email]',
+          'label'=>'邮箱',
+          'rules'=>'required|valid_email',
+         ),  
+         array(
+          'field'=>'main[m_name]',
+          'label'=>'称呼',
+          'rules'=>'required',
+         ),
+        
+      );
+    }
+
+    function valid_save_rule_update(){
+      return array(
+        
+         array(
+          'field'=>'main[m_pass]',
+          'label'=>'密码',
+          'rules'=>'min_length[6]|callback_valid_password_repeat',
          ),  
          array(
           'field'=>'main[m_email]',
@@ -82,6 +108,15 @@ class Member_model extends CI_Model{
          exit;
 
       }
+    }
+
+    function  detail($m_user){
+      $config = array(
+        'table_name'=>'module_member',
+        'primary_id'=>'m_user',
+        'primary_val'=>$m_user,
+      );
+      return $this->cor_db->fetch_one($config);
     }
 
 }

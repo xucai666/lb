@@ -111,6 +111,38 @@ class Member extends CI_Controller {
  		}
 
 	 }
+/**
+	  * member register valid
+	  * @return [type] [description]
+	  */
+ 	function action_register_update(){
+ 		try{
+ 			$this->form_validation->set_error_delimiters('<span id="error_span">', '</span>');
+	 		$data = array('main'=>$this->input->post('main'));
+	 		if($data['main']['m_pass']){
+	 			$data['main']['m_pass'] = base64_encode($data['main']['m_pass']);
+	 		}else{
+	 			unset($data['main']['m_pass']);
+	 		}	 		
+	 		$this->form_validation->set_rules($this->im->valid_save_rule_update());
+ 		    if($this->form_validation->run()){
+ 		    	$this->db->where('m_user',$this->cor_page->my_encrypt(get_cookie('member'),'DECODE'));
+ 		    	$this->db->update('module_member',$data['main']);
+		 		$this->cor_page->front_redirect('member/action_member_center','资料更新成功');
+
+ 		    }else{
+ 		    	$this->cor_page->load_front_view('member_center',$data);
+ 		    }
+ 		}catch(Exception $e){
+	 		$this->cor_page->front_redirect('member/action_member_center',$e->getMessage());
+ 			
+ 		}
+
+	 }
+
+
+
+
 
 	 /**
 	  * member center
@@ -181,10 +213,60 @@ class Member extends CI_Controller {
  		}
 	 }
 
+	 function valid_password_repeat($val){
+	 		if($val || $this->input->post('m_pass_repeat')){
+		 		if($this->input->post('m_pass_repeat')!=$val){
+		 			return false;
+		 		}else{
+		 			return true;
+		 		}
+	 		}else{
+	 			return true;
+	 		}
+	 		
+	 }
+
 	 
 	 function action_exit(){
-	 	delete_cookie('mysys_member');
-	 	$this->cor_page->front_redirect('/');
+	 	delete_cookie('member');
+	 	$this->cor_page->front_redirect('member/index','已退出');
+	 }
+
+	 function action_order(){
+	 	$this->db->select('*',false)->from('order_main');
+	 	$this->db->where('member',$this->cor_page->my_encrypt(get_cookie('member'),'DECODE'));
+	 	$this->db->order_by('order_id','desc');
+	 	$data = $this->cor_db->fetch_all();
+	 	$ids  = $this->cor_form->array_re_index($data['list'],'order_id','order_id');
+	 	$stats = $this->cor_form->array_re_index($this->db->select('sum(1) as p_stat,sum(p_qty*p_price ) as sub,order_id',false)->from('order_detail')->group_by('order_id')->get()->result_array(),'order_id');
+	 	$data = array_merge($data,array('stats'=>$stats,'status'=>$this->cor_cache->cache_fetch('order_status')));	
+	 	$this->cor_page->load_front_view('member_order',$data);
+	 }
+
+	 function action_order_detail(){
+	 	$stats = $this->db->select('sum(1) as p_stat,sum(p_qty*p_price ) as sub',false)->from('order_detail')->where('order_id',$this->uri->segment(4))->get()->first_row('array');
+	 	$config = array(
+	 		'table_name'=>'order_main',
+	 		'primary_id'=>'order_id',
+	 		'primary_val'=>$this->uri->segment(4),
+	 	);
+	 	$main = $this->cor_db->fetch_one($config);
+	 	$list = $this->db->select('*',false)->from('order_detail')->where('order_id',$this->uri->segment(4))->get()->result_array();
+	 	$data = array('stats'=>$stats,'main'=>$main,'list'=>$list,'status'=>$this->cor_cache->cache_fetch('order_status'));
+	 	$this->cor_page->load_front_view('member_order_detail',$data);
+	 }
+
+	 function action_order_pay(){
+	 	$stats = $this->db->select('sum(1) as p_stat,sum(p_qty*p_price ) as sub',false)->from('order_detail')->where('order_id',$this->uri->segment(4))->get()->first_row('array');
+	 	$config = array(
+	 		'table_name'=>'order_main',
+	 		'primary_id'=>'order_id',
+	 		'primary_val'=>$this->uri->segment(4),
+	 	);
+	 	$main = $this->cor_db->fetch_one($config);
+	 	$main = $this->cor_db->fetch_one($config);
+	 	$data = array('stats'=>$stats,'main'=>$main);
+	 	$this->cor_page->load_front_view('member_order_pay',$data);
 	 }
 
 

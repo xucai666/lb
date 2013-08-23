@@ -391,16 +391,24 @@ class Cor_page{
 	/**
 	 * 跳转
 	 */
-	function front_redirect($url,$msg,$direct=0){	
+	function front_redirect($url,$msg=null,$direct=0){	
 		if(preg_match("/javascript/",$url)||$direct||preg_match("/http/",$url)){
 			$url_new = $url;
+			
 		}else{
-					
+			if(!preg_match("/front/",$url)){
+				$url = 'front/'.$url;
+			}			
 			$url_new = site_url($url);
 		}
 		$data = array('url'=>$url_new,'msg'=>$msg);	
+		if(empty($msg)){
+			redirect($url);
+		} else{
+			$this->load_front_view('page_redirect',$data);	
+		}
 		
-		$this->load_front_view('page_redirect',$data);	
+		
 	}
 	
 		
@@ -424,6 +432,7 @@ class Cor_page{
 		} else{
 			$this->load_backend_view('page_redirect',$data);	
 		}
+		
 		
 
 	}

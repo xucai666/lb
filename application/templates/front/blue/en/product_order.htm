@@ -85,7 +85,7 @@ $(document).ready(function($) {
         <td><!--{$item.id}--></td>
         <td style="width:150px;"><!--{$item.name}--></td>
         <td><!--{$item.price}--></td>
-        <td><img src="<!--{$item.p_pic}-->" width="80" /></td>
+        <td><img src="<!--{","|explode:$item.p_pic|current}-->" width="80" /></td>
         <td class="opt2">
            <!--{$item.qty}-->
 

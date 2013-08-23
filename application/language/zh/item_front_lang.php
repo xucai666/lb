@@ -71,6 +71,12 @@
 		$lang['button_login']					     = '登陆';
 		$lang['button_register']					     = '注册';
 		$lang['button_update']					     = '更新';
+		$lang['button_view']					     = '查看';
+		$lang['button_delete']					     = '删除';
+		$lang['button_add']					     = '添加';
+		$lang['button_back']					     = '返回';
+		$lang['button_pay']					     = '付款';
+		
 		
 	
 

@@ -236,7 +236,7 @@ class Product extends CI_Controller{
 		$data = $this->cor_db->fetch_all();	
 		
 		$data = array_merge($data,
-		array(
+		array('status'=>$this->cor_cache->cache_fetch('order_status'),
 		)
 		);			
 		
@@ -250,9 +250,23 @@ class Product extends CI_Controller{
 
 
 	//订单删除
-	function action_order_del(){		
+	function action_order_del(){
+		$config = array(
+			'table_name'=>'order_main',
+			'primary_id'=>'order_id',
+			'primary_val'=>$this->input->get('order_id'),
+
+		);		
+		$dt = $this->cor_db->fetch_one($config);
+		if($dt['status']>0){
+
+			$this->cor_page->pop_redirect('订单状态变更，不允许删除',site_url('backend/'.$this->act.'/action_order/'));
+
+		}else{
 		$this->cor_db->delete($this->input->get('order_id'),$this->im->db_config_order());	
 		$this->cor_page->pop_redirect('已删除',site_url('backend/'.$this->act.'/action_order/'));
+		
+		}
 		
 		
 	}
@@ -287,6 +301,7 @@ class Product extends CI_Controller{
 			'p_num'=>$p_num,
 			'p_count'=>$p_count,
 			'amount_total'=>$amount_total,
+			'status'=>$this->cor_cache->cache_fetch('order_status'),
 		);
 		
 		$this->cor_page->load_backend_view("order_view",$data);
@@ -294,7 +309,11 @@ class Product extends CI_Controller{
 	
 	
 	
-	
+	function action_order_status_change(){
+		$this->db->where('order_id',$this->input->get('order_id'));
+		$this->db->update('order_main',array('status'=>$this->input->get('status')));
+		$this->cor_page->backend_redirect($_SERVER['HTTP_REFERER'],'订单状态更新成功');
+	}
 
 
 	

@@ -23,6 +23,7 @@
   <thead>
   <tr>
     <th>订单编号</th>
+    <th>状态</th>
    
     <th>联系人</th>
     
@@ -36,6 +37,7 @@
   <!--{foreach from=$list item=item key=key}-->
 <tr  class="tr_center">
        <td class="l1"><!--{$item.order_no}--></td>
+       <td class="l1"><!--{$status[$item.status]}--></td>
        <td class="l2"><!--{$item.contact}--></td>
     <td class="l3"><!--{$item.mobile}--></td>
     <td class="l4"><!--{$item.email}--></td>
@@ -44,10 +46,10 @@
    
     <td class="l8"> 
       
-      <a  title="查看申请"   href="<!--{$site_url}-->/backend/product/action_order_view/?order_id=<!--{$item.order_id}-->&parent_class=<!--{$smarty.get.parent_class}-->" > 
+      <a  title="查看订单"   href="<!--{$site_url}-->/backend/product/action_order_view/?order_id=<!--{$item.order_id}-->&parent_class=<!--{$smarty.get.parent_class}-->" > 
       <img src="<!--{$img_url}-->/view.png" border="0" > </a> 
       
-      <a  title="删除申请" href="<!--{$site_url}-->/backend/product/action_order_del/?order_id=<!--{$item.order_id}-->&parent_class=<!--{$smarty.get.parent_class}-->" onclick="return confirm('确定删除?');"> 
+      <a  title="删除订单" href="<!--{$site_url}-->/backend/product/action_order_del/?order_id=<!--{$item.order_id}-->&parent_class=<!--{$smarty.get.parent_class}-->" onclick="return confirm('确定删除?');"> 
       <img src="<!--{$img_url}-->/del1.gif" border="0" > </a> 
       </td>
   </tr>

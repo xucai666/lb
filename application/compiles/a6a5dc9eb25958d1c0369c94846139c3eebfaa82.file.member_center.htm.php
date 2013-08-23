@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-23 03:21:46
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-23 10:22:37
          compiled from "application\templates\front\blue\zh\member_center.htm" */ ?>
 <?php /*%%SmartyHeaderCode:324735216bd9ca4a894-18854510%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a6a5dc9eb25958d1c0369c94846139c3eebfaa82' => 
     array (
       0 => 'application\\templates\\front\\blue\\zh\\member_center.htm',
-      1 => 1377228104,
+      1 => 1377253356,
       2 => 'file',
     ),
   ),
@@ -41,25 +41,29 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <td valign="top" class="login">
         <h1 align="center">基本资料维护</h1>
         
-       <form method="post" action="<?php echo site_url('front/member/action_register_save');?>
+       <form method="post" action="<?php echo site_url('front/member/action_register_update');?>
 ">
        <ul>
-           <li><h3 >注意：*号位必填项</h3></li>
+           <li><h3 class="red">注意：*号位必填项</h3></li>
            <li>账&nbsp;&nbsp;&nbsp;&nbsp;号：<?php echo $_smarty_tpl->tpl_vars['main']->value['m_user'];?>
-  </li>
-           <li> 密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" name="main[m_pass]" />*<?php echo form_error("main[m_pass]");?>
-注：不修改请留空</li>
-           <li> 重复密码：<input type="password" name="repeat_m_pass" />*<?php echo form_error("main[m_pass]");?>
+<input type="hidden" name="main[m_user]" value="<?php echo $_smarty_tpl->tpl_vars['main']->value['m_user'];?>
+" />  </li>
+           <li> 密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" name="main[m_pass]" /><?php echo form_error("main[m_pass]");?>
+&nbsp;注：不做修改，请留空</li>
+           <li> 重复密码：<input type="password" name="m_pass_repeat" /><?php echo form_error("main[m_pass]");?>
 </li>
 
-           <li> 手&nbsp;&nbsp;&nbsp;&nbsp;机：<input type="text" name="main[m_mobile]"  value="<?php echo $_smarty_tpl->tpl_vars['main']->value['mobile'];?>
+           <li> 手&nbsp;&nbsp;&nbsp;&nbsp;机：<input type="text" name="main[m_mobile]"  value="<?php echo $_smarty_tpl->tpl_vars['main']->value['m_mobile'];?>
 " /><?php echo form_error("main[m_mobile]");?>
 </li>
-           <li> 邮&nbsp;&nbsp;&nbsp;&nbsp;箱：<input type="text" name="main[m_email]" value="<?php echo $_smarty_tpl->tpl_vars['main']->value['email'];?>
-" />*<?php echo form_error("main[m_email]");?>
+           <li> 邮&nbsp;&nbsp;&nbsp;&nbsp;箱：<input type="text" name="main[m_email]" value="<?php echo $_smarty_tpl->tpl_vars['main']->value['m_email'];?>
+" /><span class="red">*</span><?php echo form_error("main[m_email]");?>
 </li>
            <li> 称&nbsp;&nbsp;&nbsp;&nbsp;呼：<input type="text" name="main[m_name]" value="<?php echo $_smarty_tpl->tpl_vars['main']->value['m_name'];?>
-" />*<?php echo form_error("main[m_name]");?>
+" /><span class="red">*</span><?php echo form_error("main[m_name]");?>
+</li>
+            <li> 默认地址：<input type="text" name="main[m_address]" value="<?php echo $_smarty_tpl->tpl_vars['main']->value['m_address'];?>
+" /><span class="red">*</span><?php echo form_error("main[m_address]");?>
 </li>
           
 

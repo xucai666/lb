@@ -357,6 +357,11 @@ function func_state($array){
 	return $state==1 ? 'yes':'no';
 }
 
+function func_my_encrypt($string,$direction){
+	$cor_page = &get_cor_page();
+	return $cor_page->my_encrypt($string,$direction);
+}
+
 //form_error
 function ci_form_error($array){
 	extract($array);		

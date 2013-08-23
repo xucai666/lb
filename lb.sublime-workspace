@@ -648,29 +648,54 @@
 	},
 	"file_history":
 	[
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/index.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/top.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/css/lb.css",
 		"/E/phpnow/htdocs/lb/application/controllers/front/member.php",
-		"/E/phpnow/htdocs/lb/application/language/zh/item_front_lang.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/left_member.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_login.htm",
 		"/E/phpnow/htdocs/lb/application/models/member_model.php",
+		"/E/phpnow/htdocs/lb/application/language/zh/item_front_member_lang.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_register.htm",
+		"/E/phpnow/htdocs/lb/application/language/zh/item_front_lang.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_center.htm",
+		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_order_pay.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_order.htm",
+		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_lang.php",
+		"/E/phpnow/htdocs/lb/application/libraries/cor_page.php",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/product.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/order_view.htm",
+		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/order_list.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/jqFancyTransitions.1.8.js",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_order_detail.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_order.htm",
+		"/E/phpnow/htdocs/lb/cache/zh/nation.php",
+		"/E/phpnow/htdocs/lb/cache/zh/order_status.php",
+		"/E/phpnow/htdocs/lb/application/libraries/cor_cache.php",
+		"/E/phpnow/htdocs/lb/cache/zh/eg_prop_select.php",
+		"/E/phpnow/htdocs/lb/cache/zh/edu_highest.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/product_order.htm",
+		"/E/phpnow/htdocs/lb/application/libraries/MY_Form_validation.php",
+		"/E/phpnow/htdocs/lb/system/libraries/Form_validation.php",
+		"/E/phpnow/htdocs/lb/application/libraries/MY_Pagination.php",
+		"/E/phpnow/htdocs/lb/application/libraries/cor_db.php",
 		"/E/phpnow/htdocs/lb/system/helpers/cookie_helper.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_cart.htm",
+		"/E/phpnow/htdocs/lb/application/index.html",
+		"/E/phpnow/htdocs/lb/system/database/DB_result.php",
+		"/E/phpnow/htdocs/lb/application/libraries/cor_form.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/left_member.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/left_product.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/product_cart.htm",
 		"/E/phpnow/htdocs/lb/application/core/MY_Input.php",
 		"/E/phpnow/htdocs/lb/application/helpers/cor_lang_helper.php",
 		"/E/phpnow/htdocs/lb/application/models/common_model.php",
-		"/E/phpnow/htdocs/lb/application/libraries/cor_page.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_register.htm",
 		"/E/phpnow/htdocs/lb/application/hooks/Langclass.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/My97DatePicker/lang/en.js",
-		"/E/phpnow/htdocs/lb/application/libraries/cor_db.php",
-		"/E/phpnow/htdocs/lb/application/language/zh/item_front_member_lang.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/css/lb.css",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/index.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_login.htm",
-		"/E/phpnow/htdocs/lb/system/libraries/Form_validation.php",
 		"/E/phpnow/htdocs/lb/application/config/form_validation.php",
 		"/E/phpnow/htdocs/lb/fckeditor/fckconfig.js.dump",
 		"/E/phpnow/htdocs/lb/application/models/commission_model.php",
-		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
 		"/E/phpnow/htdocs/lb/system/helpers/form_helper.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/meber_login.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/about.htm",
@@ -679,19 +704,15 @@
 		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/E/phpnow/htdocs/lb/application/controllers/front/message.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/login.php",
-		"/E/phpnow/htdocs/lb/system/database/DB_result.php",
 		"/E/phpnow/htdocs/lb/application/models/advs_model.php",
 		"/E/phpnow/htdocs/lb/application/libraries/breadcrumb.php",
 		"/E/phpnow/htdocs/lb/system/core/Common.php",
 		"/E/phpnow/htdocs/lb/installed/libs/phpMyImporter.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
 		"/E/phpnow/htdocs/lb/application/config/breadcrumb.php",
 		"/E/phpnow/htdocs/lb/application/models/archive_model.php",
 		"/E/phpnow/htdocs/lb/application/models/admins_model.php",
 		"/E/phpnow/htdocs/lb/application/controllers/front/dynamic.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/top.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/top.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/jqFancyTransitions.1.8.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/iwin.js",
 		"/E/phpnow/htdocs/lb/.tags_sorted_by_file",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/jqFancyTransitions.1.8.js",
@@ -707,25 +728,18 @@
 		"/E/phpnow/htdocs/lb/fckeditor/_whatsnew_history.html.dump",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/iwin.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product.htm",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/product.php",
 		"/E/phpnow/htdocs/lb/swfupload/upload.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/order_view.htm",
-		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_lang.php",
 		"/E/phpnow/htdocs/lb/application/language/en/item_backend_lang.php",
 		"/E/phpnow/htdocs/lb/application/config/routes.php",
 		"/E/phpnow/htdocs/lb/.htaccess",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/templates.php",
 		"/E/phpnow/htdocs/lb/application/compiles/1b14c21662570fb9fd828169a7dae18dca3782b2.file.product_order.htm.php",
 		"/E/phpnow/htdocs/lb/application/compiles/0c861152301e4212404f7cb5d0cd07a78a37f1f2.file.product_view.htm.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_cart.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_order.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/My97DatePicker/My97DatePicker.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/mdata_list.htm",
 		"/E/phpnow/htdocs/lb/application/language/en/item_front_lang.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/backend_style.css",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/product_order.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/css/lb.css",
-		"/E/phpnow/htdocs/lb/application/libraries/MY_Pagination.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/search.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/message.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/dynamic_view.htm",
@@ -745,7 +759,6 @@
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/engage_apply.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/engage_detail.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/engage_friend.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/product_cart.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/search.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/contact.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/engage.htm",
@@ -762,20 +775,7 @@
 		"/E/phpnow/htdocs/lb/application/config/config.php",
 		"/E/phpnow/htdocs/lb/application/helpers/MY_url_helper.php",
 		"/E/phpnow/htdocs/lb/application/config/autoload.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/about.php",
-		"/E/phpnow/htdocs/lb/application/compiles/06ca12fe274efe0f709f42728f0fe40938d24c24.file.left_message.htm.php",
-		"/E/phpnow/htdocs/lb/application/compiles/21e8d472322fa62d36474bd82bd366ec0911523d.file.engage.htm.php",
-		"/E/phpnow/htdocs/lb/application/compiles/27069bb56e29505facff5153c01436807ea9ec22.file.index.htm.php",
-		"/E/phpnow/htdocs/lb/application/compiles/3498e30ed6d2b4482daf7fe24352b367c7eb6de6.file.index.htm.php",
-		"/E/phpnow/htdocs/lb/application/compiles/56bf8ca68b93ecb0788df6107fbd64dd4dc4d730.file.top.htm.php",
-		"/E/phpnow/htdocs/lb/application/compiles/655212df7baa163b1a52cad84881ad3aa38fbe10.file.left_sales.htm.php",
-		"/E/phpnow/htdocs/lb/application/compiles/71f047dcf6182257cbce821a6a845f841f704a28.file.top.htm.php",
-		"/E/phpnow/htdocs/lb/application/compiles/79ed871eccdf9b191024b335b54e9516f2ee54b5.file.engage.htm.php",
-		"/E/phpnow/htdocs/lb/application/compiles/90fa8378798dfd6afc0bad598775d94cea8ab7ec.file.left_about.htm.php",
-		"/E/phpnow/htdocs/lb/application/compiles/965cce86569090c0f7dd460484fa5c49b7ec2bbb.file.message.htm.php",
-		"/E/phpnow/htdocs/lb/application/compiles/c9b7d78433bdc517d36a68dc09e94b8acb6cb9ec.file.left_message.htm.php",
-		"/E/phpnow/htdocs/lb/application/compiles/cb776ba6c6beeb124039a9d0a590a2c4e23797e8.file.left_sales.htm.php",
-		"/E/phpnow/htdocs/lb/application/compiles/d1722a81ed772567b0c0bc9b1c8698f0db641d48.file.message.htm.php"
+		"/E/phpnow/htdocs/lb/application/controllers/front/about.php"
 	],
 	"find":
 	{
@@ -783,7 +783,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"E:\\phpnow\\htdocs\\lb\\application",
@@ -921,6 +921,25 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"&nbsp;&nbsp;",
+			"*",
+			"red_font",
+			"order_s",
+			"action_order",
+			"$main.order_i",
+			"order_model",
+			"effect",
+			"setInterval",
+			"anima",
+			"，",
+			"action_order_view",
+			"Form_validation",
+			"m_name",
+			"$item.",
+			"th",
+			"order",
+			"min",
+			"action_register_save",
 			"auth_login",
 			"set_cookie",
 			"mysys_m_id",
@@ -1029,26 +1048,7 @@
 			"order",
 			"right",
 			"order",
-			"random",
-			"order",
-			"_close",
-			"wbody_close",
-			".close",
-			"$(this)",
-			"static_self",
-			"static_obj",
-			"$(this)",
-			"_close",
-			"append",
-			"ft-title",
-			"ft",
-			".css",
-			"background-color",
-			"mmmmm_ifr",
-			"z-index",
-			"iframe",
-			"next",
-			"w_body.removeAtt"
+			"random"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1237,68 +1237,204 @@
 		"selected_items":
 		[
 			[
-				"common_mod",
-				"application/models/common_model.php"
+				"top.htm",
+				"application/templates/front/blue/zh/top.htm"
+			],
+			[
+				"item_fo",
+				"application/language/zh/item_front_member_lang.php"
 			],
 			[
 				"member_model",
 				"application/models/member_model.php"
 			],
 			[
-				"left_member",
-				"application/templates/front/blue/zh/left_member.htm"
-			],
-			[
-				"cor_page.php",
-				"application/libraries/cor_page.php"
-			],
-			[
-				"mypage",
-				"application/templates/backend/blue/js/My97DatePicker/lang/en.js"
-			],
-			[
-				"cor_page",
-				"application/libraries/cor_page.php"
-			],
-			[
-				"cor_db",
-				"application/libraries/cor_db.php"
-			],
-			[
 				"member.php",
 				"application/controllers/front/member.php"
-			],
-			[
-				"item_fron",
-				"application/language/zh/item_front_lang.php"
-			],
-			[
-				"item_front",
-				"application/language/zh/item_front_member_lang.php"
-			],
-			[
-				"member_cen",
-				"application/templates/front/blue/zh/member_center.htm"
-			],
-			[
-				"member_re",
-				"application/templates/front/blue/zh/member_register.htm"
-			],
-			[
-				"lb.css",
-				"application/templates/front/blue/zh/css/lb.css"
 			],
 			[
 				"member_login",
 				"application/templates/front/blue/zh/member_login.htm"
 			],
 			[
-				"item_front_",
+				"lb.css",
+				"application/templates/front/blue/zh/css/lb.css"
+			],
+			[
+				"templates/index",
+				"application/templates/front/blue/zh/index.htm"
+			],
+			[
+				"member_regis",
+				"application/templates/front/blue/zh/member_register.htm"
+			],
+			[
+				"item_fro",
 				"application/language/zh/item_front_member_lang.php"
+			],
+			[
+				"item_font",
+				"application/language/zh/item_front_lang.php"
 			],
 			[
 				"member_mod",
 				"application/models/member_model.php"
+			],
+			[
+				"member_re",
+				"application/templates/front/blue/zh/member_register.htm"
+			],
+			[
+				"member_",
+				"application/templates/front/blue/zh/member_center.htm"
+			],
+			[
+				"product.php",
+				"application/controllers/front/product.php"
+			],
+			[
+				"member_pay",
+				"application/templates/front/blue/zh/member_order_pay.htm"
+			],
+			[
+				"product_order",
+				"application/templates/front/blue/zh/product_order.htm"
+			],
+			[
+				"item_back",
+				"application/language/zh/item_backend_lang.php"
+			],
+			[
+				"order_view.htm",
+				"application/templates/backend/blue/order_view.htm"
+			],
+			[
+				"cor_page",
+				"application/libraries/cor_page.php"
+			],
+			[
+				"order_list",
+				"application/templates/backend/blue/order_list.htm"
+			],
+			[
+				"procuct.php",
+				"application/controllers/backend/product.php"
+			],
+			[
+				"jqf",
+				"application/templates/front/blue/zh/js/jqFancyTransitions.1.8.js"
+			],
+			[
+				"member_order",
+				"application/templates/front/blue/zh/member_order_detail.htm"
+			],
+			[
+				"item_front",
+				"application/language/zh/item_front_lang.php"
+			],
+			[
+				"order_detail",
+				"application/templates/front/blue/zh/member_order_detail.htm"
+			],
+			[
+				"order_status",
+				"cache/zh/order_status.php"
+			],
+			[
+				"cor_cache",
+				"application/libraries/cor_cache.php"
+			],
+			[
+				"order_detail.t",
+				"application/templates/front/blue/zh/member_order_detail.htm"
+			],
+			[
+				"form",
+				"system/libraries/Form_validation.php"
+			],
+			[
+				"member_mo",
+				"application/models/member_model.php"
+			],
+			[
+				"member_cener",
+				"application/templates/front/blue/zh/member_center.htm"
+			],
+			[
+				"product_cart.htm",
+				"application/templates/front/blue/zh/product_cart.htm"
+			],
+			[
+				"tpl.php",
+				"application/libraries/tpl.php"
+			],
+			[
+				"cor_page.php",
+				"application/libraries/cor_page.php"
+			],
+			[
+				"templates/index.htm",
+				"application/templates/front/blue/zh/index.htm"
+			],
+			[
+				"application",
+				"application/index.html"
+			],
+			[
+				"left_member.ht",
+				"application/templates/front/blue/zh/left_member.htm"
+			],
+			[
+				"member_order.htm",
+				"application/templates/front/blue/zh/member_order.htm"
+			],
+			[
+				"member_center",
+				"application/templates/front/blue/zh/member_center.htm"
+			],
+			[
+				"product_ca",
+				"application/templates/front/blue/zh/product_cart.htm"
+			],
+			[
+				"left_pro",
+				"application/templates/front/blue/zh/left_product.htm"
+			],
+			[
+				"product_cart",
+				"application/templates/front/blue/zh/product_cart.htm"
+			],
+			[
+				"left_member",
+				"application/templates/front/blue/zh/left_member.htm"
+			],
+			[
+				"member_mode",
+				"application/models/member_model.php"
+			],
+			[
+				"common_mod",
+				"application/models/common_model.php"
+			],
+			[
+				"mypage",
+				"application/templates/backend/blue/js/My97DatePicker/lang/en.js"
+			],
+			[
+				"cor_db",
+				"application/libraries/cor_db.php"
+			],
+			[
+				"item_fron",
+				"application/language/zh/item_front_lang.php"
+			],
+			[
+				"member_cen",
+				"application/templates/front/blue/zh/member_center.htm"
+			],
+			[
+				"item_front_",
+				"application/language/zh/item_front_member_lang.php"
 			],
 			[
 				"form_va",
@@ -1321,10 +1457,6 @@
 				"application/libraries/tpl.php"
 			],
 			[
-				"tpl.php",
-				"application/libraries/tpl.php"
-			],
-			[
 				"tplphp",
 				"application/libraries/tpl.php"
 			],
@@ -1335,10 +1467,6 @@
 			[
 				"common_mode",
 				"application/models/common_model.php"
-			],
-			[
-				"member_mode",
-				"application/models/member_model.php"
 			],
 			[
 				"login.php",
@@ -1369,15 +1497,7 @@
 				"application/templates/front/blue/zh/index.htm"
 			],
 			[
-				"top.htm",
-				"application/templates/front/blue/zh/top.htm"
-			],
-			[
 				"jqfan",
-				"application/templates/front/blue/zh/js/jqFancyTransitions.1.8.js"
-			],
-			[
-				"jqf",
 				"application/templates/front/blue/zh/js/jqFancyTransitions.1.8.js"
 			],
 			[
@@ -1425,10 +1545,6 @@
 				"application/templates/front/blue/zh/product_view.htm"
 			],
 			[
-				"product.php",
-				"application/controllers/front/product.php"
-			],
-			[
 				"product_view.ht",
 				"application/templates/front/blue/zh/product_view.htm"
 			],
@@ -1453,10 +1569,6 @@
 				"application/language/zh/item_backend_lang.php"
 			],
 			[
-				"item_back",
-				"application/language/en/item_backend_lang.php"
-			],
-			[
 				"order_view",
 				"application/templates/backend/blue/order_view.htm"
 			],
@@ -1473,10 +1585,6 @@
 				"application/controllers/backend/templates.php"
 			],
 			[
-				"product_cart",
-				"application/templates/front/blue/zh/product_cart.htm"
-			],
-			[
 				"product_r",
 				"application/templates/front/blue/zh/product_order.htm"
 			],
@@ -1489,20 +1597,12 @@
 				"application/templates/backend/blue/mdata_list.htm"
 			],
 			[
-				"product_order",
-				"application/templates/front/blue/zh/product_order.htm"
-			],
-			[
 				"backend_s",
 				"application/templates/backend/blue/css/backend_style.css"
 			],
 			[
 				"product_car",
 				"application/templates/front/blue/zh/product_cart.htm"
-			],
-			[
-				"item_font",
-				"application/language/zh/item_front_lang.php"
 			],
 			[
 				"product_",
@@ -1647,106 +1747,6 @@
 			[
 				"mdata.ph",
 				"application/controllers/backend/mdata.php"
-			],
-			[
-				"backend_mdata",
-				"application/language/zh/item_backend_mdata_lang.php"
-			],
-			[
-				"mdata",
-				"application/templates/backend/blue/mdata_list.htm"
-			],
-			[
-				"center.htm",
-				"application/templates/backend/blue/center.htm"
-			],
-			[
-				"produt_view",
-				"application/templates/front/blue/zh/product_view.htm"
-			],
-			[
-				"cor_lang",
-				"application/libraries/cor_lang.php"
-			],
-			[
-				"myauth",
-				"application/libraries/myauth.php"
-			],
-			[
-				"autoload",
-				"application/config/autoload.php"
-			],
-			[
-				"comon_model",
-				"application/models/common_model.php"
-			],
-			[
-				"common.php",
-				"application/controllers/backend/common.php"
-			],
-			[
-				"myau",
-				"application/libraries/myauth.php"
-			],
-			[
-				"myauth.",
-				"application/libraries/myauth.php"
-			],
-			[
-				"tpl.pph",
-				"application/libraries/Smarty-3.1.14/libs/plugins/modifiercompiler.count_paragraphs.php"
-			],
-			[
-				"auto",
-				"application/config/autoload.php"
-			],
-			[
-				"corcache",
-				"application/libraries/corcache.php"
-			],
-			[
-				"corpage.php",
-				"application/libraries/corpage.php"
-			],
-			[
-				"cordb.ph",
-				"application/libraries/cordb.php"
-			],
-			[
-				"autoloa",
-				"application/config/autoload.php"
-			],
-			[
-				"corepage.php",
-				"application/libraries/corpage.php"
-			],
-			[
-				"core_page",
-				"application/libraries/cor_page.php"
-			],
-			[
-				"myauth.php",
-				"application/libraries/myauth.php"
-			],
-			[
-				"mydb.php",
-				"application/libraries/mydb.php"
-			],
-			[
-				"",
-				".gitignore"
-			],
-			[
-				"mypage.php",
-				"application/libraries/mypage.php"
-			],
-			[
-				"autoload.php",
-				"application/config/autoload.php"
-			],
-			[
-				"myform.php",
-				"application/libraries/myform.php"
 			]
 		],
 		"width": 0.0

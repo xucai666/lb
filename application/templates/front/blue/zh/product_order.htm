@@ -37,22 +37,22 @@ $(document).ready(function($) {
     <td valign="top">
 	 <div class="product_cart">
 		<form method="post" action="<!--{$site_url}-->/product/order_save">
-
+      <input type="hidden" name="main[member]" value="<!--{$main.member|default:$member_info.m_user}-->">
      <div>
        <img src="<!--{$img_url}-->/checkout-title.gif"><*号位必填项>
      </div>
      <div>
        <h3>收货人信息</h3>
        <ul>
-         <li>称呼：<input type="text"  size="10" name="main[contact]" value="<!--{$main.contact}-->"/>*
+         <li>称呼：<input type="text"  size="10" name="main[contact]" value="<!--{$main.contact|default:$member_info.m_name}-->"/>*
           <!--{ci_form_error k='main[contact]'}-->
           </li>
-         <li>手机：<input type="text" name="main[mobile]"  size="15" value="<!--{$main.mobile}-->" />*
+         <li>手机：<input type="text" name="main[mobile]"  size="15" value="<!--{$main.mobile|default:$member_info.m_mobile}-->" />*
            <!--{ci_form_error k='main[mobile]'}-->
          </li>
-         <li>邮箱：<input type="text" name="main[email]" size="25" value="<!--{$main.email}-->" />* <!--{ci_form_error k='main[email]'}-->
+         <li>邮箱：<input type="text" name="main[email]" size="25" value="<!--{$main.email|default:$member_info.m_email}-->" />* <!--{ci_form_error k='main[email]'}-->
          </li>
-         <li>地址：<input type="text" name="main[address]" size="50"  value="<!--{$main.address}-->"/>*  <!--{ci_form_error k='main[address]'}-->
+         <li>地址：<input type="text" name="main[address]" size="50"  value="<!--{$main.address|default:$member_info.m_address}-->"/>*  <!--{ci_form_error k='main[address]'}-->
          </li>
        </ul>
      </div>
@@ -85,7 +85,7 @@ $(document).ready(function($) {
         <td><!--{$item.id}--></td>
         <td style="width:150px;"><!--{$item.name}--></td>
         <td><!--{$item.price}--></td>
-        <td><img src="<!--{$item.p_pic}-->" width="80" /></td>
+       <td><img src="<!--{","|explode:$item.p_pic|current}-->" width="80" /></td>
         <td class="opt2">
            <!--{$item.qty}-->
 

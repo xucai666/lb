@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-22 15:57:30
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-23 10:42:55
          compiled from "application\templates\front\blue\zh\top.htm" */ ?>
 <?php /*%%SmartyHeaderCode:1537521634ea969154-49625849%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '71f047dcf6182257cbce821a6a845f841f704a28' => 
     array (
       0 => 'application\\templates\\front\\blue\\zh\\top.htm',
-      1 => 1377057698,
+      1 => 1377254573,
       2 => 'file',
     ),
   ),
@@ -15,16 +15,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_521634eaa18bb3_44638101',
   'variables' => 
   array (
     'optimize' => 0,
     'header_html' => 0,
     'img_url' => 0,
+    'site_url' => 0,
+    'next_lang' => 0,
+    'lang_type' => 0,
     'breadcrumb' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_521634eaa18bb3_44638101',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_521634eaa18bb3_44638101')) {function content_521634eaa18bb3_44638101($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -63,22 +66,46 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         
                    
             
-               <form id="form1" name="form1" method="get" action="<?php echo func_site_url(array('segments'=>'search'),$_smarty_tpl);?>
-"  style="margin:0">
-        <table width="188" border="0" cellspacing="0" cellpadding="0" style="margin-top:5px; margin-right:10px;">
-  <tr>
-            <td align="right">
+              <form id="form1" name="form1" method="post" action="<?php echo func_site_url(array('segments'=>'search'),$_smarty_tpl);?>
+" >
+         <ul class="index_top_right">
+           
+             <li>
+             <a href="<?php echo ($_smarty_tpl->tpl_vars['site_url']->value).($_smarty_tpl->tpl_vars['next_lang']->value);?>
+"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
+/lang_change.gif">&nbsp;<?php echo $_smarty_tpl->tpl_vars['lang_type']->value;?>
+</a>
             
-            <input type="text" name="title" value="<?php echo $_POST['title'];?>
-" id="textfield"  style="width:155px; height:18px; border:0; line-height:18px;" class=" input" /> </td>
-            <td align="left"><input type="image" src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
-/sousuo_07.jpg" width="30" height="19" style=" margin-bottom:1px;" border="0"/></td>
-          </tr>
-      </table>
+          
+         </li>
+         <li class="top_search_li" > 
+            <input type="text" name="title" id="textfield"   class="input" /> 
+            <input type="image" src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
+/sousuo_07.jpg"  border="0"/>
+            </li>
 
+            <li class="account_link">
+            <?php if (get_cookie("member")){?>
+            <a href="<?php echo site_url("front/member/action_member_center");?>
+">
+
+            你好,<?php echo func_my_encrypt(get_cookie("member"),'DECODE');?>
+, 会员中心</a>
+
+            <?php }else{ ?>
+            <a href="<?php echo site_url("front/member/action_register");?>
+">注册</a><a href="<?php echo site_url("front/member/index");?>
+">登陆</a>
+            
+            <?php }?>
+
+
+            </li>
+           
+        </ul>
+
+          </form>
         
-        
-        </form>
             
             </td>
           </tr>

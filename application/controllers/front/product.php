@@ -64,10 +64,8 @@ class Product extends CI_Controller {
 			$sort[$v['id']] = $v['id'];
 			$p_all[$v['id']] = $v['id'];
 		}
-		$p_all && $imgs = $this->db->select('p_pic,p_id',false)
-		->from($this->cor_db->table('module_product'))
-		->where_in('p_id',$p_all)
-		->get()->result_array();
+		$p_all && $imgs = $this->db->query("select SUBSTRING_INDEX(p_pic,',',1) as p_pic,p_id from ".$this->db->dbprefix."module_product where p_id in(".implode(',',$p_all).")")->result_array();
+
 		$imgs_re = $this->cor_form->array_re_index($imgs,'p_id','p_pic');
 		$cart_arr && array_multisort($sort,SORT_ASC,$cart_arr);
 		foreach($cart_arr as &$v) $v['p_pic'] = $imgs_re[$v['id']];
@@ -156,7 +154,14 @@ class Product extends CI_Controller {
 		$imgs_re = $this->cor_form->array_re_index($imgs,'p_id','p_pic');
 		$cart_arr && array_multisort($sort,SORT_ASC,$cart_arr);
 		foreach($cart_arr as &$v) $v['p_pic'] = $imgs_re[$v['id']];
-		$this->cor_page->load_front_view("product_order",array('list'=>$cart_arr));
+		$member = get_cookie('member');	
+		if($member){
+			$member = $this->cor_page->my_encrypt($member,'DECODE');
+			$this->load->model('Member_model','mm');
+			$member_info = $this->mm->detail($member);
+		}
+
+		$this->cor_page->load_front_view("product_order",array('member_info'=>$member_info,'list'=>$cart_arr));
 	}
 	//提交订单
 	
@@ -166,9 +171,7 @@ class Product extends CI_Controller {
 			
 			$this->load->library('cart');	
 			$cart_arr =  $this->cart->contents();	
-			foreach($cart_arr as &$v){
-				$v['name'] = $this->cor_page->my_encrypt($v['name'],'DECODE');
-			}
+			
 			foreach((array)$cart_arr as $v){
 				$data['detail'][] = array(
 					'p_id'=>$v['id'],
@@ -179,7 +182,7 @@ class Product extends CI_Controller {
 			}	
 
 
-			if(empty($data['detail'])) throw new Exception('请选择商品!');
+			if(empty($data['detail'])) throw new Exception('购物车无任何商品，请添加!');
 			
 		
 			$date_order_no = date('Ymd');

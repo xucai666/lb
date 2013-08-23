@@ -90,6 +90,9 @@
 		$lang['button_select']					 = '选择';
 		$lang['button_trans']					 = '翻译';
 		$lang['button_print']					 = '打印';
+		$lang['button_payed']					 = '已付款';
+		$lang['button_shipped']					 = '已发货';
+		$lang['button_complete']					 = '已完成';
 
 		//save
 		$lang['success_save']					 = '保存成功';

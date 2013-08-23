@@ -1,44 +1,45 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-23 05:59:47
-         compiled from "application\templates\front\blue\zh\left_member.htm" */ ?>
-<?php /*%%SmartyHeaderCode:140555216cf056500a0-01462256%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-23 08:46:41
+         compiled from "application\templates\front\blue\zh\left_sales.htm" */ ?>
+<?php /*%%SmartyHeaderCode:839052172171e007e8-61976058%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'f4623fb8f14a8368a4d24cf787337717a608429b' => 
+    '655212df7baa163b1a52cad84881ad3aa38fbe10' => 
     array (
-      0 => 'application\\templates\\front\\blue\\zh\\left_member.htm',
-      1 => 1377237567,
+      0 => 'application\\templates\\front\\blue\\zh\\left_sales.htm',
+      1 => 1376994758,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '140555216cf056500a0-01462256',
+  'nocache_hash' => '839052172171e007e8-61976058',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5216cf05686d74_52918120',
   'variables' => 
   array (
     'img_url' => 0,
     'site_url' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52172171e4cfd8_55342973',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5216cf05686d74_52918120')) {function content_5216cf05686d74_52918120($_smarty_tpl) {?>    <table width="233" border="0" cellspacing="0" cellpadding="0">
+<?php if ($_valid && !is_callable('content_52172171e4cfd8_55342973')) {function content_52172171e4cfd8_55342973($_smarty_tpl) {?><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<table width="233" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td width="3"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /daohanhh_09.jpg" width="3" height="28" /></td>
         <td width="212" style="background:url(<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
-/daohanhh_11.jpg) repeat-x; padding-left:15px;" class="hong">会员中心</td>
+/daohanhh_11.jpg) repeat-x; padding-left:15px;" class="hong"><span class="hong" style="background:url(&lt;!--{$img_url}--&gt;/daohanhh_11.jpg) repeat-x; padding-left:15px;">销售网络</span></td>
         <td width="3"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /daohanhh_13.jpg" width="3" height="28" /></td>
       </tr>
       <tr>
         <td colspan="3" class="bian1" ><table width="231" border="0" cellspacing="0" cellpadding="0" style="margin-top:5px; margin-bottom:17px;">
-         <tr>
+          <tr>
             <td height="30" valign="bottom" style="padding-bottom:3px;" class="link_pa"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /jiantou_05.jpg" width="6" height="9" style="margin-left:20px; margin-right:15px;"  /><a href="<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
-/member/action_member_center">基本资料</a></td>
+/sales/index/6">分店位置</a></td>
           </tr>
           <tr>
             <td><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
@@ -47,17 +48,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <tr>
              <td height="30" valign="bottom" style="padding-bottom:3px;" class="link_pa"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /jiantou_05.jpg" width="6" height="9" style="margin-left:20px; margin-right:15px;" /><a href="<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
-/product/good_cart_list">我的购物车</a></td>
-          </tr> 
-           <tr>
-             <td height="30" valign="bottom" style="padding-bottom:3px;" class="link_pa"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
-/jiantou_05.jpg" width="6" height="9" style="margin-left:20px; margin-right:15px;" /><a href="<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
-/member/action_order">我的订单</a></td>
-          </tr> 
-          <tr>
-             <td height="30" valign="bottom" style="padding-bottom:3px;" class="link_pa"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
-/jiantou_05.jpg" width="6" height="9" style="margin-left:20px; margin-right:15px;" /><a href="<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
-/member/action_exit">退出登陆</a></td>
+/sales/index/7">销售服务</a></td>
           </tr>
           <tr>
             <td><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>

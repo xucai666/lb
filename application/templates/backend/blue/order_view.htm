@@ -1,7 +1,9 @@
 <!--{include file="`$dir_backend`/top.htm"}-->
 <div class="nav_title" align="left" >订单查看</div>
 <div  align="right"></div>
+<h2>订单状态</h2>
 
+<em><!--{$status[$main.status]}--></em>
 <h2>收货信息</h2>
 
 
@@ -12,7 +14,7 @@
     
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <td width="120"  align="right">联系人：</td>
+                <td width="20%"  align="right">联系人：</td>
                 <td  ><!--{$main.contact}-->&nbsp;</td>
               </tr>
               <tr>
@@ -63,7 +65,7 @@
         <td><!--{$item.p_id}--></td>
         <td><!--{$item.p_name}--></td>
         <td><!--{$item.p_price}--></td>
-        <td><img src="<!--{$item.p_pic}-->" width="80" /></td>
+        <td><img src="<!--{","|explode:$item.p_pic|current}-->" width="80" /></td>
         <td class="opt2">
            <!--{$item.p_qty}-->
 
@@ -86,6 +88,17 @@
  订购总数：<span class="red_font"><!--{$p_num}--></span>，
 <!--{include file="`$dir_backend`/foot.htm"}-->
   <div align="center" style="margin:20px 0px 0px 0px;" class="noprint">
+   <!--{if $main.status==0}-->
+   <!--{create_button type="payed" url="backend/product/action_order_status_change?order_id=`$main.order_id`&status=1"}-->
+   <!--{/if}-->
+   <!--{if $main.status==1 }-->
+   <!--{create_button type="shipped" url="backend/product/action_order_status_change?order_id=`$main.order_id`&status=2"}-->
+   <!--{/if}-->
+
+   <!--{if $main.status==2 }-->
+   <!--{create_button type="complete" url="backend/product/action_order_status_change?order_id=`$main.order_id`&status=3"}-->
+   <!--{/if}-->
+
    <!--{create_button type="print" url="javascript:window.print();"}-->
-   <!--{create_button type="back" url="javascript:history.back(1);"}-->
+   <!--{create_button type="back" url="backend/product/action_order"}-->
     </div>
