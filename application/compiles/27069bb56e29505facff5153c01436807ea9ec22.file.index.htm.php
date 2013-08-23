@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-22 23:44:40
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-23 02:02:37
          compiled from "application\templates\front\blue\zh\index.htm" */ ?>
 <?php /*%%SmartyHeaderCode:9007521628f904ac51-90018841%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '27069bb56e29505facff5153c01436807ea9ec22' => 
     array (
       0 => 'application\\templates\\front\\blue\\zh\\index.htm',
-      1 => 1377215053,
+      1 => 1377223355,
       2 => 'file',
     ),
   ),
@@ -83,8 +83,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /sousuo_07.jpg" width="30" height="20"  border="0"/>
             </li>
             <li class="account_link"><a href="<?php echo site_url("front/member/action_register");?>
-">Sing Up</a><a href="<?php echo site_url("front/member/index");?>
-">Sign In</a></li>
+">注册</a><a href="<?php echo site_url("front/member/index");?>
+">登陆</a></li>
            
         </ul>
 

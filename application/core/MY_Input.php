@@ -94,7 +94,7 @@ class MY_Input extends CI_Input {
 			$expire = ($expire > 0) ? time() + $expire : 0;
 		}
 		//add 2013.8.20
-		$_COOKIE[$name] = $value; 
+		$_COOKIE[$prefix.$name] = $value; 
 		setcookie($prefix.$name, $value, $expire, $path, $domain, $secure);
 	}
 

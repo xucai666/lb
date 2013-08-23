@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"encrypt",
+				"mcrypt_encrypt"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
 				"front_",
 				"front_load_view"
 			],
@@ -30,10 +38,6 @@
 			[
 				"function",
 				"create_function"
-			],
-			[
-				"padd",
-				"padding-top"
 			],
 			[
 				"margi",
@@ -487,30 +491,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "application/controllers/front/member.php",
-			"settings":
-			{
-				"buffer_size": 4299,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/models/member_model.php",
-			"settings":
-			{
-				"buffer_size": 1441,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/templates/front/blue/zh/member_register.htm",
-			"settings":
-			{
-				"buffer_size": 1322,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -518,6 +498,10 @@
 		"height": 52.0,
 		"selected_items":
 		[
+			[
+				"snippet:smt",
+				"Snippet: smt"
+			],
 			[
 				"remoe",
 				"Package Control: Remove Package"
@@ -647,7 +631,7 @@
 				"Snippet: pri"
 			]
 		],
-		"width": 400.0
+		"width": 512.0
 	},
 	"console":
 	{
@@ -664,20 +648,31 @@
 	},
 	"file_history":
 	[
-		"/E/phpnow/htdocs/lb/application/language/zh/item_front_member_lang.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_register.htm",
 		"/E/phpnow/htdocs/lb/application/controllers/front/member.php",
-		"/E/phpnow/htdocs/lb/application/models/member_model.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_login.htm",
-		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
-		"/E/phpnow/htdocs/lb/system/libraries/Form_validation.php",
-		"/E/phpnow/htdocs/lb/system/helpers/form_helper.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/css/lb.css",
 		"/E/phpnow/htdocs/lb/application/language/zh/item_front_lang.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/left_member.htm",
+		"/E/phpnow/htdocs/lb/application/models/member_model.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_center.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/meber_login.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/index.htm",
+		"/E/phpnow/htdocs/lb/system/helpers/cookie_helper.php",
+		"/E/phpnow/htdocs/lb/application/core/MY_Input.php",
+		"/E/phpnow/htdocs/lb/application/helpers/cor_lang_helper.php",
 		"/E/phpnow/htdocs/lb/application/models/common_model.php",
+		"/E/phpnow/htdocs/lb/application/libraries/cor_page.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_register.htm",
+		"/E/phpnow/htdocs/lb/application/hooks/Langclass.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/My97DatePicker/lang/en.js",
+		"/E/phpnow/htdocs/lb/application/libraries/cor_db.php",
+		"/E/phpnow/htdocs/lb/application/language/zh/item_front_member_lang.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/css/lb.css",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/index.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_login.htm",
+		"/E/phpnow/htdocs/lb/system/libraries/Form_validation.php",
+		"/E/phpnow/htdocs/lb/application/config/form_validation.php",
+		"/E/phpnow/htdocs/lb/fckeditor/fckconfig.js.dump",
+		"/E/phpnow/htdocs/lb/application/models/commission_model.php",
+		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
+		"/E/phpnow/htdocs/lb/system/helpers/form_helper.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/meber_login.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/about.htm",
 		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/E/phpnow/htdocs/lb/application/controllers/test.php",
@@ -693,7 +688,6 @@
 		"/E/phpnow/htdocs/lb/application/config/breadcrumb.php",
 		"/E/phpnow/htdocs/lb/application/models/archive_model.php",
 		"/E/phpnow/htdocs/lb/application/models/admins_model.php",
-		"/E/phpnow/htdocs/lb/application/libraries/cor_page.php",
 		"/E/phpnow/htdocs/lb/application/controllers/front/dynamic.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/top.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/top.htm",
@@ -781,17 +775,7 @@
 		"/E/phpnow/htdocs/lb/application/compiles/965cce86569090c0f7dd460484fa5c49b7ec2bbb.file.message.htm.php",
 		"/E/phpnow/htdocs/lb/application/compiles/c9b7d78433bdc517d36a68dc09e94b8acb6cb9ec.file.left_message.htm.php",
 		"/E/phpnow/htdocs/lb/application/compiles/cb776ba6c6beeb124039a9d0a590a2c4e23797e8.file.left_sales.htm.php",
-		"/E/phpnow/htdocs/lb/application/compiles/d1722a81ed772567b0c0bc9b1c8698f0db641d48.file.message.htm.php",
-		"/E/phpnow/htdocs/lb/application/compiles/dce5e537e008105053d3ed50ebd8d840e88310c4.file.left_about.htm.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/engage.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/common.js",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/about_archives.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/about_news.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/about_news22.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/business_archives.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/business_left_menu.html",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/detail.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/download.htm"
+		"/E/phpnow/htdocs/lb/application/compiles/d1722a81ed772567b0c0bc9b1c8698f0db641d48.file.message.htm.php"
 	],
 	"find":
 	{
@@ -802,6 +786,7 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"E:\\phpnow\\htdocs\\lb\\application",
 			"E:\\phpnow\\htdocs\\lb\\system",
 			"E:\\phpnow\\htdocs\\lb\\application\\templates\\front",
 			"E:\\phpnow\\htdocs\\lb\\application\\templates\\front\\blue",
@@ -928,8 +913,7 @@
 			"E:\\phpnow\\htdocs\\lb\\application\\libraries",
 			"E:\\phpnow\\htdocs\\lb\\application\\models",
 			"E:\\phpnow\\htdocs\\lb\\application\\controllers",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14"
+			"E:\\phpnow\\htdocs\\lb\\application\\libraries"
 		]
 	},
 	"find_state":
@@ -937,6 +921,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"auth_login",
+			"set_cookie",
+			"mysys_m_id",
+			"auth_login",
+			"&nbsp;",
+			"email",
+			"login_m_user",
+			"valid_m_name_exists",
 			"$kthis->load->",
 			"front_load_view",
 			"form_captchaation",
@@ -1056,15 +1048,7 @@
 			"z-index",
 			"iframe",
 			"next",
-			"w_body.removeAtt",
-			"clas",
-			"w_content",
-			"w_body",
-			"background",
-			"alpha",
-			"opacity",
-			"function tag",
-			"func_tag"
+			"w_body.removeAtt"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1202,95 +1186,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "application/controllers/front/member.php",
-					"settings":
-					{
-						"buffer_size": 4299,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								908,
-								908
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2646.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "application/models/member_model.php",
-					"settings":
-					{
-						"buffer_size": 1441,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								917,
-								917
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 378.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "application/templates/front/blue/zh/member_register.htm",
-					"settings":
-					{
-						"buffer_size": 1322,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								447,
-								447
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1340,28 +1237,88 @@
 		"selected_items":
 		[
 			[
-				"item_front_member",
-				"application/language/zh/item_front_member_lang.php"
+				"common_mod",
+				"application/models/common_model.php"
 			],
 			[
-				"member_re",
-				"application/templates/front/blue/zh/member_register.htm"
-			],
-			[
-				"member_mod",
+				"member_model",
 				"application/models/member_model.php"
+			],
+			[
+				"left_member",
+				"application/templates/front/blue/zh/left_member.htm"
+			],
+			[
+				"cor_page.php",
+				"application/libraries/cor_page.php"
+			],
+			[
+				"mypage",
+				"application/templates/backend/blue/js/My97DatePicker/lang/en.js"
+			],
+			[
+				"cor_page",
+				"application/libraries/cor_page.php"
+			],
+			[
+				"cor_db",
+				"application/libraries/cor_db.php"
 			],
 			[
 				"member.php",
 				"application/controllers/front/member.php"
 			],
 			[
-				"tpl.ph",
-				"application/libraries/tpl.php"
+				"item_fron",
+				"application/language/zh/item_front_lang.php"
 			],
 			[
-				"member_model",
+				"item_front",
+				"application/language/zh/item_front_member_lang.php"
+			],
+			[
+				"member_cen",
+				"application/templates/front/blue/zh/member_center.htm"
+			],
+			[
+				"member_re",
+				"application/templates/front/blue/zh/member_register.htm"
+			],
+			[
+				"lb.css",
+				"application/templates/front/blue/zh/css/lb.css"
+			],
+			[
+				"member_login",
+				"application/templates/front/blue/zh/member_login.htm"
+			],
+			[
+				"item_front_",
+				"application/language/zh/item_front_member_lang.php"
+			],
+			[
+				"member_mod",
 				"application/models/member_model.php"
+			],
+			[
+				"form_va",
+				"system/libraries/Form_validation.php"
+			],
+			[
+				"form_v",
+				"application/config/form_validation.php"
+			],
+			[
+				"member_log",
+				"application/templates/front/blue/zh/member_login.htm"
+			],
+			[
+				"item_front_member",
+				"application/language/zh/item_front_member_lang.php"
+			],
+			[
+				"tpl.ph",
+				"application/libraries/tpl.php"
 			],
 			[
 				"tpl.php",
@@ -1372,24 +1329,12 @@
 				"application/libraries/tpl.php"
 			],
 			[
-				"item_front",
-				"application/language/zh/item_front_lang.php"
-			],
-			[
-				"lb.css",
-				"application/templates/front/blue/zh/css/lb.css"
-			],
-			[
 				"member.ph",
 				"application/controllers/front/member.php"
 			],
 			[
 				"common_mode",
 				"application/models/common_model.php"
-			],
-			[
-				"member_login",
-				"application/templates/front/blue/zh/meber_login.htm"
 			],
 			[
 				"member_mode",
@@ -1418,10 +1363,6 @@
 			[
 				"breadcrumb.php",
 				"application/config/breadcrumb.php"
-			],
-			[
-				"cor_page",
-				"application/libraries/cor_page.php"
 			],
 			[
 				"index.htm",
@@ -1594,10 +1535,6 @@
 			[
 				"dynamic.htm",
 				"application/templates/front/blue/zh/dynamic.htm"
-			],
-			[
-				"common_mod",
-				"application/models/common_model.php"
 			],
 			[
 				"core_page.php",
@@ -1810,46 +1747,6 @@
 			[
 				"myform.php",
 				"application/libraries/myform.php"
-			],
-			[
-				"myath",
-				"application/libraries/myauth.php"
-			],
-			[
-				"trans_mode",
-				"application/models/trans_model.php"
-			],
-			[
-				"system_mange.php",
-				"application/controllers/backend/system_manage.php"
-			],
-			[
-				"backend_style.css",
-				"application/templates/backend/blue/css/backend_style.css"
-			],
-			[
-				"menu_add.htm",
-				"application/templates/backend/blue/menu_add.htm"
-			],
-			[
-				"menu.php",
-				"application/controllers/backend/menu.php"
-			],
-			[
-				"function.ci_helper.php",
-				"application/libraries/Smarty-3.1.14/libs/plugins/function.ci_helper.php"
-			],
-			[
-				"modifier.helper.php",
-				"application/libraries/Smarty-3.1.14/libs/plugins/modifier.helper.php"
-			],
-			[
-				"menu_ist.ht",
-				"application/templates/backend/blue/menu_list.htm"
-			],
-			[
-				"mdata_mo",
-				"application/models/mdata_model.php"
 			]
 		],
 		"width": 0.0

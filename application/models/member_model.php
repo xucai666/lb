@@ -75,5 +75,14 @@ class Member_model extends CI_Model{
       );
     }
 
+    function auth_login(){
+   
+      if(!get_cookie('member')){
+         $this->cor_page->front_redirect('member/index','请先登陆');
+         exit;
+
+      }
+    }
+
 }
 ?>

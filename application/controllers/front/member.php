@@ -51,10 +51,18 @@ class Member extends CI_Controller {
 	 	$this->load->model('Common_model','cm');
 	 	try{
 	 		$this->form_validation->set_error_delimiters('<span id="error_span">', '</span>');
-	 		$data = $this->input->post();
-	 		
+	 		$data = $this->input->post();	 		
 	 		$this->form_validation->set_rules($this->im->valid_login_rule());
 	 		if($this->form_validation->run()){
+			    $cookie = array(
+                   'name'   => 'member',
+                   'value'  => $this->cor_page->my_encrypt($data['m_user'],'ENCODE'),
+                   'expire' => '86500',
+                   'domain' => '',
+                   'path'   => '/',
+                   'prefix' => 'mysys_',
+                );
+	 			set_cookie($cookie);
 	 			$this->cor_page->front_redirect('member/action_member_center','登陆成功');
 	 		}else{
 
@@ -109,11 +117,16 @@ class Member extends CI_Controller {
 	  * @return [type] [description]
 	  */
 	 function action_member_center(){
+	 	$this->im->auth_login();
 	 	// add breadcrumbs
 		$this->breadcrumb->append_crumb('Home', '/');
 		$this->breadcrumb->append_crumb('Member', 'Center');
 		$this->breadcrumb->output();
-	 	$this->cor_page->load_front_view('member_center');
+		$this->db->select('*')->from('module_member')->where('m_user',$this->cor_page->my_encrypt(get_cookie('member'),'DECODE'));
+ 		$rs = $this->db->get()->first_row('array');
+ 		$data = array('main'=>$rs);
+ 		
+	 	$this->cor_page->load_front_view('member_center',$data);
 	 }
 
 
@@ -169,6 +182,10 @@ class Member extends CI_Controller {
 	 }
 
 	 
+	 function action_exit(){
+	 	delete_cookie('mysys_member');
+	 	$this->cor_page->front_redirect('/');
+	 }
 
 
 	}

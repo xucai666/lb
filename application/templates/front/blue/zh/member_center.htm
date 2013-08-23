@@ -1,0 +1,36 @@
+<!--{include file="`$dir_front`/top.htm"}-->
+
+
+<table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
+  <tr>
+    <td width="246" valign="top">
+    
+     <!--{include file="`$dir_front`/left_member.htm"}-->
+     <!--{include file="`$dir_front`/left_contact.htm"}-->
+    
+      
+    <td valign="top" class="login">
+        <h1 align="center">基本资料维护</h1>
+        
+       <form method="post" action="<!--{'front/member/action_register_save'|site_url}-->">
+       <ul>
+           <li><h3 >注意：*号位必填项</h3></li>
+           <li>账&nbsp;&nbsp;&nbsp;&nbsp;号：<!--{$main.m_user}-->  </li>
+           <li> 密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" name="main[m_pass]" />*<!--{"main[m_pass]"|form_error}-->注：不修改请留空</li>
+           <li> 重复密码：<input type="password" name="repeat_m_pass" />*<!--{"main[m_pass]"|form_error}--></li>
+
+           <li> 手&nbsp;&nbsp;&nbsp;&nbsp;机：<input type="text" name="main[m_mobile]"  value="<!--{$main.mobile}-->" /><!--{"main[m_mobile]"|form_error}--></li>
+           <li> 邮&nbsp;&nbsp;&nbsp;&nbsp;箱：<input type="text" name="main[m_email]" value="<!--{$main.email}-->" />*<!--{"main[m_email]"|form_error}--></li>
+           <li> 称&nbsp;&nbsp;&nbsp;&nbsp;呼：<input type="text" name="main[m_name]" value="<!--{$main.m_name}-->" />*<!--{"main[m_name]"|form_error}--></li>
+          
+
+       </ul>
+        
+     <div align="center"> <!--{create_button type='update'}--></div>
+    
+    
+      </form>
+    </td>
+  </tr> 
+</table>
+<!--{include file="`$dir_front`/foot.htm"}-->

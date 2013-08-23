@@ -70,6 +70,7 @@
 		$lang['button_print']					     = '打印';
 		$lang['button_login']					     = '登陆';
 		$lang['button_register']					     = '注册';
+		$lang['button_update']					     = '更新';
 		
 	
 
