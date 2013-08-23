@@ -3,7 +3,8 @@
 body{ margin:0; padding:0; background-color:#FFF; font-family:"宋体"; font-size:12px; color:#000;}
 a{ font-family:"宋体"; font-size:12px; color:#000; text-decoration:none;}
 
-.input{ background:url(../images/sousuo_06.jpg) no-repeat}
+.input{ background:url(../images/sousuo_06.jpg) no-repeat;width:155px; }
+
 
 /*导航*/
 .link_tu a{ background:url(../images/nav.jpg) no-repeat  scroll 0px 0px; display:block; width:70px;height:23px;color:#ffffff;font-weight:bold;text-align:center;padding-top: 10px}
@@ -35,12 +36,53 @@ a{ font-family:"宋体"; font-size:12px; color:#000; text-decoration:none;}
 
 .link_ww a{ margin-left:15px;color:#000;}
 .link_ww a:hover{ color:#000; text-decoration:underline;}
-.top_right1{
-	text-align:right;top:15px;position:absolute;padding-right:20px;
+
+.index_top_right {
+	list-style-type: none;
+	float: right;
+
+
 }
-.top_right1 a{
-	margin-right:20px;	
+.index_top_right  li{
+	float:left;
+
+
+	width: auto;
+	
+	overflow: hidden;
+
+	vertical-align: middle;
+	text-align: left;
+	margin: auto;
+
+	padding-right: 20px;
+	display: inline;
+
+
+
+
 }	
+.index_top_right  li img{
+	float: left;
+}
+
+
+.index_top_right .account_link a{
+	font-size: 11px!important;
+	display: block;
+	width: auto;
+	height: 20px;
+	float:left;
+	padding-top: 5px;
+	padding-right: 10px;
+
+}
+
+.top_search_li{
+	
+	float:left;
+	padding:0px;
+}
 
 a img{
 border:0;
@@ -126,7 +168,7 @@ border:0;
 }
 .product li a:hover{
 	color:#ff0000;
-	font-size: 14px;
+
 
 }
 .product li a:visited{
@@ -338,4 +380,23 @@ td,span,th,div,input,button,a{
 	padding-bottom: 0px !important;
 	margin-left: 8px;
 	display: block;
+}
+
+.login ul{
+	list-style-type: none;
+	height: auto;
+
+	padding: auto;
+	width:500px;
+	text-align: left;
+	margin-left:30%;
+}
+.login li {
+	width: 500px;
+	height: 35px;
+	line-height: 150%;
+}
+
+.red{
+	color:#ff0000;
 }

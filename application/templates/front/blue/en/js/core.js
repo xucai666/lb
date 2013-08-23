@@ -419,11 +419,41 @@ function load_autocomplete(_auto_obj){
 	      minLength: 1,
 	      delay:40,
 	      response: function( event, ui ) {	_auto_obj.prevAll('input.auto_id').val('').val('');}, 
-	      focus: function( event, ui ) {	_auto_obj.prevAll('input.auto_id').val(ui.item.id);},
+	      focus: function( event, ui ) {	_auto_obj.prevAll('input.auto_id').val(ui.item.id);}
 	    });
 }
 
 
+
+function getJsPath(){
+	var scripts = document.getElementsByTagName('script');
+	var thisScript = scripts[scripts.length-1];
+	var path = thisScript.src.replace(/\/script\.js$/, '/'); 
+	return path.substr(0,path.lastIndexOf("/"));
+
+}
+
+
+
+$.extend({
+    includePath: getJsPath(),
+    include: function(file)
+    {
+        var files = typeof file == "string" ? [file] : file;
+        for (var i = 0; i < files.length; i++)
+        {
+            var name = files[i].replace(/^\s|\s$/g, "");
+            var att = name.split('.');
+            var ext = att[att.length - 1].toLowerCase();
+            var isCSS = ext == "css";
+            var tag = isCSS ? "link" : "script";
+            var attr = isCSS ? " type='text/css' rel='stylesheet' " : " language='javascript' type='text/javascript' ";
+            var link = (isCSS ? "href" : "src") + "='" + $.includePath + name + "'";
+           
+            if ($(tag + "[" + link + "]").length == 0) document.write("<" + tag + attr + link + "></" + tag + ">");
+        }
+    }
+});
 
 
 

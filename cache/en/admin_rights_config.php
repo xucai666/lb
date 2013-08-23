@@ -4,7 +4,7 @@
     0 => 
     array (
       'r_id' => '35',
-      'r_title' => 'Set',
+      'r_title' => '设置',
       'r_pid' => NULL,
       'r_name' => '系统相关',
       'r_order' => '5',
@@ -18,7 +18,7 @@
     1 => 
     array (
       'r_id' => '113',
-      'r_title' => 'Multilingual',
+      'r_title' => '多语言',
       'r_pid' => '35',
       'r_name' => NULL,
       'r_order' => '111',
@@ -32,7 +32,7 @@
     2 => 
     array (
       'r_id' => '28',
-      'r_title' => 'Permissions',
+      'r_title' => '权限',
       'r_pid' => '35',
       'r_name' => '权限',
       'r_order' => '1',
@@ -46,7 +46,7 @@
     3 => 
     array (
       'r_id' => '29',
-      'r_title' => 'Role management',
+      'r_title' => '角色管理',
       'r_pid' => '28',
       'r_name' => '角色管理',
       'r_order' => '1',
@@ -60,7 +60,7 @@
     4 => 
     array (
       'r_id' => '30',
-      'r_title' => 'Roles modifying',
+      'r_title' => '角色修改',
       'r_pid' => '28',
       'r_name' => '角色修改',
       'r_order' => '1',
@@ -74,7 +74,7 @@
     5 => 
     array (
       'r_id' => '31',
-      'r_title' => 'Add user',
+      'r_title' => '添加用户',
       'r_pid' => '28',
       'r_name' => '添加用户',
       'r_order' => '1',
@@ -88,7 +88,7 @@
     6 => 
     array (
       'r_id' => '32',
-      'r_title' => 'User management',
+      'r_title' => '用户管理',
       'r_pid' => '28',
       'r_name' => '用户',
       'r_order' => '1',
@@ -102,7 +102,7 @@
     7 => 
     array (
       'r_id' => '33',
-      'r_title' => 'Modify users',
+      'r_title' => '修改用户',
       'r_pid' => '28',
       'r_name' => '修改用户',
       'r_order' => '1',
@@ -116,7 +116,7 @@
     8 => 
     array (
       'r_id' => '34',
-      'r_title' => 'Delete user',
+      'r_title' => '删除用户',
       'r_pid' => '28',
       'r_name' => '删除用户',
       'r_order' => '1',
@@ -130,7 +130,7 @@
     9 => 
     array (
       'r_id' => '42',
-      'r_title' => 'Role delete',
+      'r_title' => '角色删除',
       'r_pid' => '28',
       'r_name' => '角色删除',
       'r_order' => '1',
@@ -144,7 +144,7 @@
     10 => 
     array (
       'r_id' => '36',
-      'r_title' => 'Basic configuration',
+      'r_title' => '基本配置',
       'r_pid' => '35',
       'r_name' => '基本配置',
       'r_order' => '1',
@@ -158,7 +158,7 @@
     11 => 
     array (
       'r_id' => '37',
-      'r_title' => 'Backing up the database',
+      'r_title' => '备份数据库',
       'r_pid' => '35',
       'r_name' => '备份数据库',
       'r_order' => '1',
@@ -172,7 +172,7 @@
     12 => 
     array (
       'r_id' => '38',
-      'r_title' => 'The implementation of SQL',
+      'r_title' => '执行sql',
       'r_pid' => '35',
       'r_name' => '执行sql',
       'r_order' => '1',
@@ -186,7 +186,7 @@
     13 => 
     array (
       'r_id' => '39',
-      'r_title' => 'Updating the cache',
+      'r_title' => '更新缓存',
       'r_pid' => '35',
       'r_name' => '更新缓存',
       'r_order' => '127',
@@ -200,7 +200,7 @@
     14 => 
     array (
       'r_id' => '40',
-      'r_title' => 'Modify password',
+      'r_title' => '修改密码',
       'r_pid' => '35',
       'r_name' => '修改密码',
       'r_order' => '1',
@@ -214,7 +214,7 @@
     15 => 
     array (
       'r_id' => '44',
-      'r_title' => 'Menu management',
+      'r_title' => '菜单管理',
       'r_pid' => '35',
       'r_name' => '菜单管理',
       'r_order' => '127',
@@ -228,7 +228,7 @@
     16 => 
     array (
       'r_id' => '97',
-      'r_title' => 'Log',
+      'r_title' => '日志',
       'r_pid' => '35',
       'r_name' => NULL,
       'r_order' => '88',
@@ -242,7 +242,7 @@
     17 => 
     array (
       'r_id' => '98',
-      'r_title' => 'Statistics',
+      'r_title' => '统计',
       'r_pid' => '35',
       'r_name' => NULL,
       'r_order' => '1',
@@ -256,7 +256,7 @@
     18 => 
     array (
       'r_id' => '66',
-      'r_title' => 'Plug-in',
+      'r_title' => '插件',
       'r_pid' => NULL,
       'r_name' => NULL,
       'r_order' => '3',
@@ -270,7 +270,7 @@
     19 => 
     array (
       'r_id' => '20',
-      'r_title' => 'Message feedback',
+      'r_title' => '留言反馈',
       'r_pid' => '66',
       'r_name' => '留言反馈',
       'r_order' => '1',
@@ -284,7 +284,7 @@
     20 => 
     array (
       'r_id' => '22',
-      'r_title' => 'Home picture round',
+      'r_title' => '首页图片轮显',
       'r_pid' => '66',
       'r_name' => '首页图片轮显',
       'r_order' => '1',
@@ -298,7 +298,7 @@
     21 => 
     array (
       'r_id' => '24',
-      'r_title' => 'Links',
+      'r_title' => '友情链接',
       'r_pid' => '66',
       'r_name' => '友情链接',
       'r_order' => '1',
@@ -312,7 +312,7 @@
     22 => 
     array (
       'r_id' => '25',
-      'r_title' => 'Advertising management',
+      'r_title' => '广告管理',
       'r_pid' => '66',
       'r_name' => '广告管理',
       'r_order' => '9',
@@ -326,7 +326,7 @@
     23 => 
     array (
       'r_id' => '26',
-      'r_title' => 'Ads added',
+      'r_title' => '广告添加',
       'r_pid' => '25',
       'r_name' => '添加',
       'r_order' => '1',
@@ -340,7 +340,7 @@
     24 => 
     array (
       'r_id' => '27',
-      'r_title' => 'Advertising management',
+      'r_title' => '广告管理',
       'r_pid' => '25',
       'r_name' => '管理',
       'r_order' => '1',
@@ -354,7 +354,7 @@
     25 => 
     array (
       'r_id' => '96',
-      'r_title' => 'Customer order management',
+      'r_title' => '客户订单管理',
       'r_pid' => '66',
       'r_name' => NULL,
       'r_order' => '1',
@@ -368,7 +368,7 @@
     26 => 
     array (
       'r_id' => '99',
-      'r_title' => 'Recruitment management',
+      'r_title' => '招聘管理',
       'r_pid' => '66',
       'r_name' => NULL,
       'r_order' => '11',
@@ -382,7 +382,7 @@
     27 => 
     array (
       'r_id' => '100',
-      'r_title' => 'Job posting',
+      'r_title' => '职位发布',
       'r_pid' => '99',
       'r_name' => NULL,
       'r_order' => '12',
@@ -396,7 +396,7 @@
     28 => 
     array (
       'r_id' => '101',
-      'r_title' => 'Candidates management',
+      'r_title' => '应聘管理',
       'r_pid' => '99',
       'r_name' => NULL,
       'r_order' => '13',
@@ -410,7 +410,7 @@
     29 => 
     array (
       'r_id' => '67',
-      'r_title' => 'Module',
+      'r_title' => '模块',
       'r_pid' => NULL,
       'r_name' => NULL,
       'r_order' => '2',
@@ -424,7 +424,7 @@
     30 => 
     array (
       'r_id' => '69',
-      'r_title' => 'Universal label templates',
+      'r_title' => '标签调用配置',
       'r_pid' => '67',
       'r_name' => NULL,
       'r_order' => '1',
@@ -438,7 +438,7 @@
     31 => 
     array (
       'r_id' => '70',
-      'r_title' => 'Module management',
+      'r_title' => '模块管理',
       'r_pid' => '67',
       'r_name' => NULL,
       'r_order' => '127',
@@ -452,7 +452,7 @@
     32 => 
     array (
       'r_id' => '71',
-      'r_title' => 'Html tags',
+      'r_title' => 'Html标签',
       'r_pid' => '70',
       'r_name' => NULL,
       'r_order' => '1',
@@ -466,7 +466,7 @@
     33 => 
     array (
       'r_id' => '72',
-      'r_title' => 'Model management',
+      'r_title' => '模型管理',
       'r_pid' => '70',
       'r_name' => NULL,
       'r_order' => '1',
@@ -480,7 +480,7 @@
     34 => 
     array (
       'r_id' => '73',
-      'r_title' => 'Model of data management',
+      'r_title' => '模型数据管理',
       'r_pid' => '70',
       'r_name' => NULL,
       'r_order' => '1',
@@ -494,7 +494,7 @@
     35 => 
     array (
       'r_id' => '74',
-      'r_title' => 'View template',
+      'r_title' => '视图模板',
       'r_pid' => '67',
       'r_name' => NULL,
       'r_order' => '1',
@@ -508,7 +508,7 @@
     36 => 
     array (
       'r_id' => '78',
-      'r_title' => 'Core',
+      'r_title' => '核心',
       'r_pid' => '0',
       'r_name' => NULL,
       'r_order' => '1',
@@ -522,7 +522,7 @@
     37 => 
     array (
       'r_id' => '110',
-      'r_title' => 'Recruiting modules',
+      'r_title' => '招聘模块',
       'r_pid' => '78',
       'r_name' => '招聘模块',
       'r_order' => '1',
@@ -535,8 +535,22 @@
     ),
     38 => 
     array (
+      'r_id' => '114',
+      'r_title' => '会员注册',
+      'r_pid' => '78',
+      'r_name' => '会员注册',
+      'r_order' => '1',
+      'r_display' => '1',
+      'r_url' => 'backend/mdata/action_set_module/74',
+      'r_code' => '78,114',
+      'r_level' => '2',
+      'r_js_action' => NULL,
+      'r_type' => '1',
+    ),
+    39 => 
+    array (
       'r_id' => '79',
-      'r_title' => 'Check box to test',
+      'r_title' => '复选框测试',
       'r_pid' => '78',
       'r_name' => '复选框测试',
       'r_order' => '1',
@@ -547,10 +561,10 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    39 => 
+    40 => 
     array (
       'r_id' => '80',
-      'r_title' => 'Radio box test',
+      'r_title' => '单选框测试',
       'r_pid' => '78',
       'r_name' => '单选框测试',
       'r_order' => '1',
@@ -561,10 +575,10 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    40 => 
+    41 => 
     array (
       'r_id' => '82',
-      'r_title' => 'Whether',
+      'r_title' => '是否',
       'r_pid' => '78',
       'r_name' => '是否',
       'r_order' => '1',
@@ -575,10 +589,10 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    41 => 
+    42 => 
     array (
       'r_id' => '83',
-      'r_title' => 'Single chart',
+      'r_title' => '单图',
       'r_pid' => '78',
       'r_name' => '单图',
       'r_order' => '1',
@@ -589,10 +603,10 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    42 => 
+    43 => 
     array (
       'r_id' => '84',
-      'r_title' => 'More map',
+      'r_title' => '多图',
       'r_pid' => '78',
       'r_name' => '多图',
       'r_order' => '1',
@@ -603,10 +617,10 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    43 => 
+    44 => 
     array (
       'r_id' => '85',
-      'r_title' => 'Debris management',
+      'r_title' => '碎片管理',
       'r_pid' => '78',
       'r_name' => '碎片管理',
       'r_order' => '1',
@@ -617,10 +631,10 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    44 => 
+    45 => 
     array (
       'r_id' => '87',
-      'r_title' => 'News management',
+      'r_title' => '新闻管理',
       'r_pid' => '78',
       'r_name' => '新闻管理',
       'r_order' => '1',
@@ -631,10 +645,10 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    45 => 
+    46 => 
     array (
       'r_id' => '89',
-      'r_title' => 'Classification management',
+      'r_title' => '分类管理',
       'r_pid' => '78',
       'r_name' => NULL,
       'r_order' => '1',
@@ -645,10 +659,10 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    46 => 
+    47 => 
     array (
       'r_id' => '90',
-      'r_title' => 'Product modules',
+      'r_title' => '产品模块',
       'r_pid' => '78',
       'r_name' => '产品模块',
       'r_order' => '1',
@@ -659,10 +673,10 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    47 => 
+    48 => 
     array (
       'r_id' => '91',
-      'r_title' => 'Links',
+      'r_title' => '友情链接',
       'r_pid' => '78',
       'r_name' => '友情链接',
       'r_order' => '1',
@@ -673,10 +687,10 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    48 => 
+    49 => 
     array (
       'r_id' => '92',
-      'r_title' => 'Site column',
+      'r_title' => '网站栏目',
       'r_pid' => '78',
       'r_name' => '网站栏目',
       'r_order' => '1',
@@ -687,10 +701,10 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    49 => 
+    50 => 
     array (
       'r_id' => '95',
-      'r_title' => 'Document',
+      'r_title' => '文档',
       'r_pid' => NULL,
       'r_name' => NULL,
       'r_order' => '4',
@@ -701,10 +715,10 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    50 => 
+    51 => 
     array (
       'r_id' => '76',
-      'r_title' => 'System manual',
+      'r_title' => '系统手册',
       'r_pid' => '95',
       'r_name' => NULL,
       'r_order' => '1',
@@ -715,10 +729,10 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    51 => 
+    52 => 
     array (
       'r_id' => '77',
-      'r_title' => 'Plug-in documentation',
+      'r_title' => '插件文档',
       'r_pid' => '95',
       'r_name' => NULL,
       'r_order' => '1',
@@ -730,6 +744,6 @@
       'r_type' => NULL,
     ),
   ),
-  'count' => '52',
+  'count' => '53',
   'page_link' => '',
 );?>
