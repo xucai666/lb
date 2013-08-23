@@ -68,6 +68,9 @@
 		$lang['button_settle']					         = '下单';
 		$lang['button_continue']					     = '继续浏览';
 		$lang['button_print']					     = '打印';
+		$lang['button_login']					     = '登陆';
+		$lang['button_register']					     = '注册';
+		
 	
 
 		

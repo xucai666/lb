@@ -534,13 +534,23 @@ EOT;
 	}
 
 	/**
-	 * [getBanner description]
+	 * show captacha
 	 * @return [type] [description]
 	 */
- 	function getBanner(){
- 		
- 	}
+	function show_captcha(){
+		$this->load->helper('imgCode');
+		$imgcode=new imgcode();
+		$imgcode->image(1);
+	}
 
+	/**
+	 * fetch captcha code 
+	 * @return [type] [description]
+	 */
+	function get_Captcha(){
+		@session_start();
+		return $_SESSION['IMGCODE'];
+	}
 
 }
 //class end

@@ -535,6 +535,20 @@
     ),
     38 => 
     array (
+      'r_id' => '114',
+      'r_title' => '会员注册',
+      'r_pid' => '78',
+      'r_name' => '会员注册',
+      'r_order' => '1',
+      'r_display' => '1',
+      'r_url' => 'backend/mdata/action_set_module/74',
+      'r_code' => '78,114',
+      'r_level' => '2',
+      'r_js_action' => NULL,
+      'r_type' => '1',
+    ),
+    39 => 
+    array (
       'r_id' => '79',
       'r_title' => '复选框测试',
       'r_pid' => '78',
@@ -547,7 +561,7 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    39 => 
+    40 => 
     array (
       'r_id' => '80',
       'r_title' => '单选框测试',
@@ -561,7 +575,7 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    40 => 
+    41 => 
     array (
       'r_id' => '82',
       'r_title' => '是否',
@@ -575,7 +589,7 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    41 => 
+    42 => 
     array (
       'r_id' => '83',
       'r_title' => '单图',
@@ -589,7 +603,7 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    42 => 
+    43 => 
     array (
       'r_id' => '84',
       'r_title' => '多图',
@@ -603,7 +617,7 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    43 => 
+    44 => 
     array (
       'r_id' => '85',
       'r_title' => '碎片管理',
@@ -617,7 +631,7 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    44 => 
+    45 => 
     array (
       'r_id' => '87',
       'r_title' => '新闻管理',
@@ -631,7 +645,7 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    45 => 
+    46 => 
     array (
       'r_id' => '89',
       'r_title' => '分类管理',
@@ -645,7 +659,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    46 => 
+    47 => 
     array (
       'r_id' => '90',
       'r_title' => '产品模块',
@@ -659,7 +673,7 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    47 => 
+    48 => 
     array (
       'r_id' => '91',
       'r_title' => '友情链接',
@@ -673,7 +687,7 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    48 => 
+    49 => 
     array (
       'r_id' => '92',
       'r_title' => '网站栏目',
@@ -687,7 +701,7 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    49 => 
+    50 => 
     array (
       'r_id' => '95',
       'r_title' => '文档',
@@ -701,7 +715,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    50 => 
+    51 => 
     array (
       'r_id' => '76',
       'r_title' => '系统手册',
@@ -715,7 +729,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    51 => 
+    52 => 
     array (
       'r_id' => '77',
       'r_title' => '插件文档',
@@ -730,6 +744,6 @@
       'r_type' => NULL,
     ),
   ),
-  'count' => '52',
+  'count' => '53',
   'page_link' => '',
 );?>

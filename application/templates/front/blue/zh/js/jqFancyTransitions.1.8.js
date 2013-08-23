@@ -97,10 +97,10 @@
 			}
 			
 			//links background cover each other
-			//if(params.links)	
-				//$('#'+el.id).append("<a href='"+links[el.id][0]+"' class='ft-"+el.id+"' id='ft-"+el.id+j+"' style='width:"+tstripWidth+"px; height:"+params.height+"px; float: left; position: absolute;outline:none;'></a>");
-			//else
-				//$('#'+el.id).append("<div class='ft-"+el.id+"' id='ft-"+el.id+j+"' style='width:"+tstripWidth+"px; height:"+params.height+"px; float: left; position: absolute;'></div>");
+			if(params.links)	
+				$('#'+el.id).append("<a target='_blank' href='"+links[el.id][0]+"' class='ft-"+el.id+"' id='ft-"+el.id+j+"' style='width:"+tstripWidth+"px; height:"+params.height+"px; float: left; position: absolute;outline:none;'></a>");
+			else
+				$('#'+el.id).append("<div class='ft-"+el.id+"' id='ft-"+el.id+j+"' style='width:"+tstripWidth+"px; height:"+params.height+"px; float: left; position: absolute;'></div>");
 							
 			// positioning bars
 			$("#ft-"+el.id+j).css({ 
@@ -225,6 +225,7 @@
 			return;
 		}
 		$('.ft-'+el.id).attr('href',links[el.id][imgInc[el.id]]);
+		$('.ft-'+el.id).attr('target','_blank');
 		if(opts[el.id].position == 'curtain'){
 			currWidth = $('#ft-'+el.id+itemId).width();
 			$('#ft-'+el.id+itemId).css({ width: 0, opacity: 0, 'background-image': 'url('+img[el.id][imgInc[el.id]]+')','background-repeat':'no-repeat','background-position':'center center' });

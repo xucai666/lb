@@ -15,25 +15,31 @@
     <td style="background:url(<!--{$img_url}-->/top_04.jpg) repeat-x"><table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td><img src="<!--{$img_url}-->/logo_02.jpg" width="248" height="95" style="margin-left:20px;" /></td>
-        <td width="208" style="position:relative">
-        <div class="top_right1">
-<a href="<!--{$site_url|cat:$next_lang}-->"><img src="<!--{$img_url}-->/lang_change.gif">&nbsp;<!--{$lang_type}--></a>
+        <td>
+      
+       
 
-</div>
         
-        <form id="form1" name="form1" method="post" action="<!--{func_site_url segments='search'}-->" >
-        <table width="188" border="0" cellspacing="0" cellpadding="0" style="margin-top:35px; margin-right:20px;">
-  <tr>
-            <td align="right">
+       
+      
+         <form id="form1" name="form1" method="post" action="<!--{func_site_url segments='search'}-->" >
+         <ul class="index_top_right">
+           
+             <li>
+             <a href="<!--{$site_url|cat:$next_lang}-->"><img src="<!--{$img_url}-->/lang_change.gif">&nbsp;<!--{$lang_type}--></a>
             
-            <input type="text" name="title" id="textfield"  style="width:155px; height:18px; border:0; line-height:18px;" class=" input" /> </td>
-            <td align="left"><input type="image" src="<!--{$img_url}-->/sousuo_07.jpg" width="30" height="19" style=" margin-bottom:1px;" border="0"/></td>
-          </tr>
-      </table>
+          
+         </li>
+         <li > 
+            <input type="text" name="title" id="textfield"  style="width:155px; height:20px!important;" class="input" /> 
+            <input type="image" src="<!--{$img_url}-->/sousuo_07.jpg" width="30" height="20"  border="0"/>
+            </li>
+            <li class="account_link"><a href="<!--{"front/member/action_register"|site_url}-->">Sing Up</a><a href="<!--{"front/member/index"|site_url}-->">Sign In</a></li>
+           
+        </ul>
 
+          </form>
         
-        
-        </form>
         
         
         </td>
