@@ -155,13 +155,16 @@ border:0;
 	
 
 }
-.product li img{
+.product li .img{
 	padding:2px;
 	border:solid 1px #cccccc;
 	width: 160px;
 	height: 140px;
-	margin-top:10px;
+	
 }
+
+
+
 
 .product li a{
 	text-decoration: underline;

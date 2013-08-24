@@ -31,6 +31,8 @@ class MY_Form_validation extends CI_Form_validation {
    function __construct() {
    	
 		parent::__construct();
+		$this->_error_prefix    = '<span id="error_span">';
+        $this->_error_suffix    = '</span>';
 		
 	}
 	

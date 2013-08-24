@@ -36,8 +36,24 @@ Notes:
 	 our defined max.
 	
 */
-header('content-type:text/html;charset=utf-8');
-isset($_SERVER['HTTP_REFERER']) or exit(Header("HTTP/1.1 404 Not Found"));
+	header('content-type:text/html;charset=utf-8');
+	isset($_SERVER['HTTP_REFERER']) or exit(Header("HTTP/1.1 404 Not Found"));
+	include_once('loader.php');
+	include_once(realpath(getcwd().'/../application/config/database.php'));
+	$lang = $_COOKIE['mysys_lang']?$_COOKIE['mysys_lang']:'zh';
+	$cfg = $db[$lang];
+	$loader->load_class('mysql','db_access');
+	$config = array(
+			'hostname'=>$cfg['hostname'],
+			'database'=>$cfg['database'],
+			'username'=>$cfg['username'],
+			'password'=>$cfg['password'],
+			'pconnect'=>$cfg['pconnect'],
+			'charset'=>$cfg['char_set'],
+			'autoconnect'=>'1',
+		);
+
+	$loader->mysql->open($config);
 // Code for Session Cookie workaround
 	if (isset($_POST["PHPSESSID"])) {
 		session_id($_POST["PHPSESSID"]);
@@ -108,21 +124,19 @@ isset($_SERVER['HTTP_REFERER']) or exit(Header("HTTP/1.1 404 Not Found"));
 
 // Validate file name (for our purposes we'll just remove invalid characters)
 //	$file_name = preg_replace('/[^'.$valid_chars_regex.']|\.+$/i', "", basename($_FILES[$upload_name]['name']));
-	$file_name = basename(iconv('utf-8','gbk',$_FILES[$upload_name]['name']));
+	
+
+	$file_name = $_FILES[$upload_name]['name'];
 	//new name
 	$dir = $save_path;
 	$arr = scandir($dir); 
 	$all = count($arr)-1;
 	$file_name = substr($file_name,0,strrpos($file_name,'.')).'____'.sprintf("%06d",$all).substr(strrchr($file_name,'.'),0);
 	$save_url = $_POST['save_url'];
-
 	if (strlen($file_name) == 0 || strlen($file_name) > $MAX_FILENAME_LENGTH) {
 		HandleError("Invalid file name");
 		exit(0);
 	}
-
-
-
 
 // Validate that we won't over-write an existing file
 	if (file_exists($save_path . $file_name)) {
@@ -169,17 +183,20 @@ isset($_SERVER['HTTP_REFERER']) or exit(Header("HTTP/1.1 404 Not Found"));
 	*/
 
 
-	if (!@move_uploaded_file($_FILES[$upload_name]["tmp_name"], $save_path.$file_name)) {
-		HandleError("File could not be saved: ". $save_path.$file_name);
-		exit(0);
-	}
-
+if (!@move_uploaded_file($_FILES[$upload_name]["tmp_name"], $save_path.$file_name)) {
+	HandleError("File could not be saved: ". $save_path.$file_name);
+	exit(0);
+}
+//save to db
+$uid = $_POST['uid'];
+$table = $_POST['table'];
+$data = array('i_url'=>$save_url.$file_name,'i_table'=>$cfg['dbprefix'].$_POST['table'],'i_uid'=>$uid);
+$loader->mysql->insert($data,$cfg['dbprefix'].'module_images');	
 // Return output to the browser (only supported by SWFUpload for Flash Player 9)
 #echo  json_encode(array('file'=>$save_path.$file_name,'url'=>$_POST['save_url'].$file_name))
-	echo json_encode(array('file'=>$save_path.$file_name,'url'=>$save_url.$file_name));
-	exit(0);
-
-
+ob_clean();
+echo json_encode(array('file'=>$save_path.$file_name,'url'=>$save_url.$file_name,'uid'=>$uid));
+exit(0);
 /* Handles the error output.  This function was written for SWFUpload for Flash Player 8 which
 cannot return data to the server, so it just returns a 500 error. For Flash Player 9 you will
 want to change this to return the server data you want to indicate an error and then use SWFUpload's

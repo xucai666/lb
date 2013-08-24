@@ -46,9 +46,16 @@ class Common extends CI_Controller{
 
 
   function insert(){
+    $this->Common_model->set_uid();
+    $uid =  $this->Common_model->get_uid();
     $array = $this->input->post();
+    $pic = $array['p_pic'];
+    $array['p_pic'] = $uid;
     $tb = array_shift($array);
+    //insert into product table
     $this->db->insert($tb,$array);
+    //insert image table
+    $this->db->insert('module_images',array('i_url'=>$pic,'i_uid'=>$uid,'i_table'=>$this->db->dbprefix.'module_product'));
     echo 'true';
   }
 

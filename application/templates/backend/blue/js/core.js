@@ -530,3 +530,10 @@ function load_autocomplete(_auto_obj){
 	      focus: function( event, ui ) {	_auto_obj.prevAll('input.auto_id').val(ui.item.id);}
 	    });
 }
+
+ //不显示无图占位符
+function ImgError(source){
+	source.src = img_backend+"noimg.jpg";
+	source.onerror = "";
+	return true;
+}

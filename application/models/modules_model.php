@@ -90,9 +90,9 @@ class Modules_model extends CI_Model{
 	}
 
 
-	function details($m_id,$where=null){
-		$dt =  $this->db->select('*',false)->from('module_relations')->where('m_id',$m_id);
-		if(is_array($where)) $this->db->where($where);
+	function details($m_id,$where=null,$fields='*'){
+		$dt =  $this->db->select($fields,false)->from('module_relations')->where('m_id',$m_id);
+		if($where) $this->db->where($where);
 		$dt = $this->db->order_by('r_id','asc')->get()->result_array();
 		return array_pad($dt,1,array());
 	}

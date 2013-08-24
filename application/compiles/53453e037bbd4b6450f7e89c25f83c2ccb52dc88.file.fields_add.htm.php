@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-22 15:05:18
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-24 10:23:10
          compiled from "application\templates\backend\blue\fields_add.htm" */ ?>
 <?php /*%%SmartyHeaderCode:11534521628aea96201-67758179%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '53453e037bbd4b6450f7e89c25f83c2ccb52dc88' => 
     array (
       0 => 'application\\templates\\backend\\blue\\fields_add.htm',
-      1 => 1376728465,
+      1 => 1377338272,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_521628aecacf77_97929971',
   'variables' => 
   array (
     'dir_backend' => 0,
@@ -22,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'main' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_521628aecacf77_97929971',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_521628aecacf77_97929971')) {function content_521628aecacf77_97929971($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_helper')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\modifier.helper.php';
 if (!is_callable('smarty_function_html_options')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\function.html_options.php';
@@ -82,7 +82,20 @@ if (!is_callable('smarty_function_html_options')) include 'E:\\phpnow\\htdocs\\l
 		<td></td>
 	</tr>
 	
-	
+	<tr>
+		<td><?php echo smarty_modifier_helper("fields_field_name",'language','lang');?>
+：</td>
+		<td>
+			<input type="checkbox" name="f_media" value="1" <?php if ($_smarty_tpl->tpl_vars['main']->value['f_media']){?>checked<?php }?> onclick='$(this).next().val($(this).prop("checked")==true?1:0);'>
+			<input size="80" type="hidden" name="main[f_media]" id="main[f_media]" value="<?php echo $_smarty_tpl->tpl_vars['main']->value['f_media'];?>
+">
+			<?php echo form_error("main[f_media]");?>
+
+		</td>
+		<td></td>
+	</tr>
+
+
 	
 	<tr>
 		<td colspan="3" align="center">

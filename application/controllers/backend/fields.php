@@ -97,10 +97,14 @@ class Fields extends CI_Controller{
 	function action_list(){
 		$fields_types = $this->cor_cache->cache_fetch('fields_types');
 		$f_type = $this->input->get('f_type');
-		$this->db->select('*',false)->from('module_fields')->like('f_name',$this->input->get('f_name'))->order_by('f_id','desc');
+		$f_media = $this->input->get('f_media');
+		$this->db->select('*',false)->from('module_fields')->like('f_name',$this->input->get('f_name'));
 		if($f_type) $this->db->where('f_type',$f_type);
+		if($f_media) $this->db->where('f_media',$f_media-1);
+		$this->db->order_by('f_id','desc');
 		$data = $this->cor_db->fetch_all(15);
 		$data['fields_types'] = $fields_types;
+		$data['medias'] = array(2=>'是',1=>'否');
 		$this->cor_page->load_backend_view('fields_list',$data);
 	}
 

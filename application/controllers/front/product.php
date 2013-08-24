@@ -58,17 +58,19 @@ class Product extends CI_Controller {
 	function good_cart_list(){
 		$this->load->library('cart');			
 		$cart_arr =  $this->cart->contents();
-		
 		foreach($cart_arr as &$v){
 			$v['name'] = $v['name'];
 			$sort[$v['id']] = $v['id'];
-			$p_all[$v['id']] = $v['id'];
+			
 		}
-		$p_all && $imgs = $this->db->query("select SUBSTRING_INDEX(p_pic,',',1) as p_pic,p_id from ".$this->db->dbprefix."module_product where p_id in(".implode(',',$p_all).")")->result_array();
+		if($sort){
+			$p_all = $this->cor_form->array_re_index($this->db->query("select SUBSTRING_INDEX(p_pic,',',1) as p_pic,p_id from ".$this->db->dbprefix."module_product where p_id in(".implode(',',$sort).")")->result_array(),'p_id','p_pic');
+			$imgs = $this->db->query("select SUBSTRING_INDEX(i_url,',',1) as p_pic,i_uid from ".$this->db->dbprefix."module_images where i_uid in('".implode("','",$p_all)."')")->result_array();
+			$imgs_re = $this->cor_form->array_re_index($imgs,'i_uid','p_pic');
+			$cart_arr && array_multisort($sort,SORT_ASC,$cart_arr);
+			foreach($cart_arr as &$v) $v['p_pic'] = $imgs_re[$p_all[$v['id']]];
+		}
 
-		$imgs_re = $this->cor_form->array_re_index($imgs,'p_id','p_pic');
-		$cart_arr && array_multisort($sort,SORT_ASC,$cart_arr);
-		foreach($cart_arr as &$v) $v['p_pic'] = $imgs_re[$v['id']];
 		$this->cor_page->load_front_view("product_cart",array('list'=>$cart_arr));
 		
 	}
@@ -145,15 +147,17 @@ class Product extends CI_Controller {
 		foreach($cart_arr as &$v){
 			$v['name'] = $v['name'];
 			$sort[$v['id']] = $v['id'];
-			$p_all[$v['id']] = $v['id'];
+			
 		}
-		$p_all && $imgs = $this->db->select('p_pic,p_id',false)
-		->from($this->cor_db->table('module_product'))
-		->where_in('p_id',$p_all)
-		->get()->result_array();
-		$imgs_re = $this->cor_form->array_re_index($imgs,'p_id','p_pic');
-		$cart_arr && array_multisort($sort,SORT_ASC,$cart_arr);
-		foreach($cart_arr as &$v) $v['p_pic'] = $imgs_re[$v['id']];
+		if($sort){
+			$p_all = $this->cor_form->array_re_index($this->db->query("select SUBSTRING_INDEX(p_pic,',',1) as p_pic,p_id from ".$this->db->dbprefix."module_product where p_id in(".implode(',',$sort).")")->result_array(),'p_id','p_pic');
+			$imgs = $this->db->query("select SUBSTRING_INDEX(i_url,',',1) as p_pic,i_uid from ".$this->db->dbprefix."module_images where i_uid in('".implode("','",$p_all)."')")->result_array();
+			$imgs_re = $this->cor_form->array_re_index($imgs,'i_uid','p_pic');
+			$cart_arr && array_multisort($sort,SORT_ASC,$cart_arr);
+			foreach($cart_arr as &$v) $v['p_pic'] = $imgs_re[$p_all[$v['id']]];
+		}
+
+		//fetch member identity infomation
 		$member = get_cookie('member');	
 		if($member){
 			$member = $this->cor_page->my_encrypt($member,'DECODE');
@@ -198,7 +202,18 @@ class Product extends CI_Controller {
 		 	$this->form_validation->set_rules($this->im->validator_order());
 			if($this->form_validation->run()){
 				$this->cor_db->save($data,$this->im->db_config_order());
-				$this->cart->destroy();			
+				$this->cart->destroy();	
+
+				//fetch member identity infomation
+				$member = get_cookie('member');	
+				if($member){
+					$member = $this->cor_page->my_encrypt($member,'DECODE');
+					$updates =array('m_name'=>$main['contact'],'m_email'=>$main['email'],'m_address'=>$main['address'],'m_mobile'=>$main['mobile']);
+					$this->db->where('m_user',$member);
+					$this->db->update('module_member',$updates);
+				}
+
+
 				$this->cor_page->front_redirect("product",'订单提交成功');	
 			}else{
 				$this->load->library('cart');			

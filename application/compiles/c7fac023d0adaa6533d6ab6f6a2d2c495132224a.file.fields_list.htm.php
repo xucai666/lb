@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-22 15:05:17
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-24 10:00:59
          compiled from "application\templates\backend\blue\fields_list.htm" */ ?>
 <?php /*%%SmartyHeaderCode:18185521628ad44d1b3-92124386%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c7fac023d0adaa6533d6ab6f6a2d2c495132224a' => 
     array (
       0 => 'application\\templates\\backend\\blue\\fields_list.htm',
-      1 => 1376909921,
+      1 => 1377338441,
       2 => 'file',
     ),
   ),
@@ -15,19 +15,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_521628ad68cb97_47846118',
   'variables' => 
   array (
     'dir_backend' => 0,
     'img_url' => 0,
     'lang_type' => 0,
     'fields_types' => 0,
+    'medias' => 0,
     'list' => 0,
     'item' => 0,
     'page_link' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_521628ad68cb97_47846118',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_521628ad68cb97_47846118')) {function content_521628ad68cb97_47846118($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_options')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\function.html_options.php';
 ?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
@@ -44,7 +45,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ' method="get">
 			字段类型：
 			<select name="f_type">
+				<option value=''>请选择</option>
 				<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['fields_types']->value,'selected'=>$_GET['f_type']),$_smarty_tpl);?>
+
+			</select>
+			文件域：
+			<select name="f_media">
+				<option value=''>请选择</option>
+				<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['medias']->value,'selected'=>$_GET['f_media']),$_smarty_tpl);?>
 
 			</select>
 			字段名称：

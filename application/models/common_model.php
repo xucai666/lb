@@ -552,6 +552,22 @@ EOT;
 		return $_SESSION['IMGCODE'];
 	}
 
+	function fetch_images($uid){
+		$uid_convert = explode(',',$uid);
+		$rs = $this->db->select('group_concat(i_url) as images',false)->from('module_images')->where_in('i_uid',$uid_convert)->order_by('i_id','asc')->get()->first_row('array');
+		return $rs['images'];
+	}
+
+	function delete_images($uid){
+		$uid_convert = explode(',',$uid);
+		$ls = $this->db->select('i_url',false)->from('module_images')->where_in('i_uid',$uid_convert)->order_by('i_id','asc')->get()->first_row('array');
+		foreach($ls as $v){
+			@unlink(realpath(str_replace(base_url(), '', $v)));
+		}
+	}
+
+
+
 }
 //class end
 

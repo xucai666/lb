@@ -4,488 +4,28 @@
 		"selected_items":
 		[
 			[
-				"encrypt",
-				"mcrypt_encrypt"
-			],
-			[
-				"padd",
-				"padding-right"
-			],
-			[
-				"front_",
-				"front_load_view"
-			],
-			[
-				"tex",
-				"text-align"
-			],
-			[
-				"pad",
-				"padding"
-			],
-			[
-				"list-",
-				"list-style-type"
-			],
-			[
-				"form",
-				"form	Tag"
-			],
-			[
-				"base",
-				"base64_encode"
-			],
-			[
-				"function",
-				"create_function"
-			],
-			[
-				"margi",
-				"margin"
-			],
-			[
-				"padding",
-				"padding-top"
-			],
-			[
-				"inli",
-				"inline-table"
-			],
-			[
-				"mar",
-				"margin"
-			],
-			[
-				"v",
-				"vertical-align"
-			],
-			[
-				"static",
-				"static_cfg"
-			],
-			[
-				"static_",
-				"static_self	Default"
-			],
-			[
-				"back",
-				"background-color"
-			],
-			[
-				"file_e",
-				"file_extension"
-			],
-			[
-				"sp",
-				"sprintf"
-			],
-			[
-				"cart",
-				"cart_arr"
-			],
-			[
-				"limit",
-				"limit_from"
-			],
-			[
-				"liit",
-				"limit_from"
-			],
-			[
-				"html",
-				"html_type"
-			],
-			[
-				"mouse",
-				"mouseleave	mouseleave"
-			],
-			[
-				"get_includ",
-				"get_included_files"
-			],
-			[
-				"get_class",
-				"get_class_methods"
-			],
-			[
-				"STR",
-				"stringify()	JSON"
-			],
-			[
-				"js_",
-				"json_encode"
-			],
-			[
-				"json",
-				"json_encode"
-			],
-			[
-				"text",
-				"text-indent"
-			],
-			[
-				"tab",
-				"table-column"
-			],
-			[
-				"txt",
-				"text-align"
-			],
-			[
-				"filee",
-				"filename"
-			],
-			[
-				"last",
-				"lastIndexOf()	String"
-			],
-			[
-				"repla",
-				"replace_url_param	Default"
-			],
-			[
-				"num",
-				"num_pages"
-			],
-			[
-				"in",
-				"inline-block"
-			],
-			[
-				"margin",
-				"margin-bottom"
-			],
-			[
-				"to",
-				"toggle	.toggle()"
-			],
-			[
-				"paddin",
-				"padding"
-			],
-			[
-				"rep",
-				"background-repeat"
-			],
-			[
-				"no",
-				"nowrap"
-			],
-			[
-				"ar_red",
-				"array_re_index"
-			],
-			[
-				"first",
-				"first_row"
-			],
-			[
-				"module",
-				"Modules_model"
-			],
-			[
-				"sub",
-				"sub_table"
-			],
-			[
-				"primary",
-				"primary_id"
-			],
-			[
-				"free",
-				"free_result"
-			],
-			[
-				"htmsp",
-				"htmlspecialchars_decode"
-			],
-			[
-				"preg_match",
-				"preg_match_all"
-			],
-			[
-				"page",
-				"page_size"
-			],
-			[
-				"functon",
-				"function"
-			],
-			[
-				"pu",
-				"public"
-			],
-			[
-				"functio",
-				"function"
-			],
-			[
-				"them",
-				"theme_url"
-			],
-			[
-				"base64",
-				"base64_decode"
-			],
-			[
-				"php",
-				"phpdoc"
-			],
-			[
-				"functi",
-				"function"
-			],
-			[
-				"err",
-				"err_sql"
-			],
-			[
-				"import",
-				"importSql"
-			],
-			[
-				"error",
-				"error_reporting"
-			],
-			[
-				"var",
-				"var_dump"
-			],
-			[
-				"ajax",
-				"ajax	$.ajax()"
-			],
-			[
-				"pa",
-				"padding-top"
-			],
-			[
-				"al",
-				"vertical-align"
-			],
-			[
-				"tet",
-				"text-align"
-			],
-			[
-				"subst",
-				"substring()	String"
-			],
-			[
-				"setTi",
-				"setTimeout()	Window"
-			],
-			[
-				"setTime",
-				"setTimeout()	Frame"
-			],
-			[
-				"get",
-				"get	Get Elements"
-			],
-			[
-				"vis",
-				"visited  (pseudo-class)"
-			],
-			[
-				"font",
-				"font-size"
-			],
-			[
-				"paddi",
-				"padding"
-			],
-			[
-				"bo",
-				"border"
-			],
-			[
-				"param",
-				"parameter"
-			],
-			[
-				"func",
-				"function"
-			],
-			[
-				"htmls",
-				"htmlspecialchars_decode"
-			],
-			[
-				"t_htl",
-				"t_html_detail"
-			],
-			[
-				"menu",
-				"menu_rights"
-			],
-			[
-				"righ",
-				"rights_all"
-			],
-			[
-				"fields",
-				"fields_types"
-			],
-			[
-				"PARAM",
-				"parameter"
-			],
-			[
-				"post",
-				"post_main"
-			],
-			[
-				"chang",
-				"change_val  (variable)"
-			],
-			[
-				"chan",
-				"change_val"
-			],
-			[
-				"change",
-				"change_key  (argument)"
-			],
-			[
 				"str_rep",
 				"str_replace"
 			],
 			[
-				"size",
-				"background-size"
+				"media",
+				"media_fid"
 			],
 			[
-				"new",
-				"new_columns"
-			],
-			[
-				"diff",
-				"diff_key"
-			],
-			[
-				"fiel",
-				"fields_out"
-			],
-			[
-				"root",
-				"root_path_parent"
-			],
-			[
-				"root_pa",
-				"root_path_parent  (variable)"
-			],
-			[
-				"htmlsp",
-				"htmlspecialchars"
-			],
-			[
-				"htmlspa",
-				"htmlspecialchars_decode"
-			],
-			[
-				"str",
-				"stripcslashes"
-			],
-			[
-				"fil",
-				"fields_r"
-			],
-			[
-				"plu",
-				"plugin_type"
-			],
-			[
-				"get_class_",
-				"get_class_methods"
-			],
-			[
-				"doCompi",
-				"doCompile"
-			],
-			[
-				"htmlspecia",
-				"htmlspecialchars_decode"
-			],
-			[
-				"list",
-				"list-style-type"
-			],
-			[
-				"ri",
-				"rights_options"
-			],
-			[
-				"lis",
-				"list-style-type"
-			],
-			[
-				"blo",
-				"_block_content"
-			],
-			[
-				"_blo",
-				"_block_content"
-			],
-			[
-				"fetch",
-				"fetch_one"
-			],
-			[
-				"prima",
-				"primary_id"
-			],
-			[
-				"main",
-				"main_id"
-			],
-			[
-				"stri",
-				"stripslashes"
-			],
-			[
-				"mysql_res",
-				"mysql_real_escape_string"
-			],
-			[
-				"Comm",
-				"Common_model"
-			],
-			[
-				"css",
-				"css_root"
-			],
-			[
-				"bace",
-				"backend_theme"
-			],
-			[
-				"lang",
-				"lang_get"
-			],
-			[
-				"get_inc",
-				"get_included_files"
-			],
-			[
-				"get_cla",
-				"get_class_methods"
-			],
-			[
-				"get_vars",
-				"get_class_vars"
-			],
-			[
-				"op",
-				"option	Tag"
+				"str_re",
+				"str_replace"
 			],
 			[
 				"pri",
-				"pri	pri"
+				"print_r"
 			],
 			[
-				"sh",
-				"shuffle"
+				"cor_",
+				"cor_form"
+			],
+			[
+				"common",
+				"Common_model"
 			]
 		]
 	},
@@ -499,421 +39,110 @@
 		"selected_items":
 		[
 			[
+				"snippet:pri",
+				"Snippet: pri"
+			],
+			[
 				"snippet:smt",
 				"Snippet: smt"
 			],
 			[
-				"remoe",
-				"Package Control: Remove Package"
-			],
-			[
-				"remov",
-				"Package Control: Remove Package"
-			],
-			[
 				"install",
 				"Package Control: Install Package"
-			],
-			[
-				"instal",
-				"Package Control: Install Package"
-			],
-			[
-				"remove",
-				"Package Control: Remove Package"
-			],
-			[
-				"remo",
-				"Package Control: Remove Package"
-			],
-			[
-				"removep",
-				"Package Control: Remove Package"
-			],
-			[
-				"smarty",
-				"Set Syntax: Smarty"
-			],
-			[
-				"reove",
-				"Package Control: Remove Package"
-			],
-			[
-				"installp",
-				"Package Control: Install Package"
-			],
-			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
-				"instap",
-				"Package Control: Install Package"
-			],
-			[
-				"jquery",
-				"Snippet: jQuery.ajax"
-			],
-			[
-				"reov",
-				"Package Control: Remove Package"
-			],
-			[
-				"docblock",
-				"Snippet: Start Docblock"
-			],
-			[
-				"ctag",
-				"Package Control: List Packages"
-			],
-			[
-				"package",
-				"Preferences: Package Control Settings – User"
-			],
-			[
-				"Package Control: ",
-				"Package Control: Remove Package"
-			],
-			[
-				"cpackage",
-				"Package Control: Disable Package"
-			],
-			[
-				"packae",
-				"Package Control: Enable Package"
-			],
-			[
-				"pack",
-				"Package Control: List Packages"
-			],
-			[
-				"codeintel",
-				"SublimeCodeIntel: Reset"
-			],
-			[
-				"Package Control: create",
-				"Package Control: Create Package File"
-			],
-			[
-				"snipp",
-				"Snippet: pri"
-			],
-			[
-				"more",
-				"SublimeCodeIntel: Reset"
-			],
-			[
-				"Snippet: pri",
-				"Snippet: pri"
-			],
-			[
-				"Package Control: install",
-				"Package Control: Install Package→安装程序包"
-			],
-			[
-				"isntall",
-				"Package Control: Install Package→安装程序包"
-			],
-			[
-				"installpa",
-				"Package Control: Install Package→安装程序包"
-			],
-			[
-				"removepa",
-				"Package Control: Remove Package"
-			],
-			[
-				"remove pa",
-				"Package Control: Remove Package"
-			],
-			[
-				"pri",
-				"Snippet: pri"
 			]
 		],
-		"width": 512.0
+		"width": 400.0
 	},
 	"console":
 	{
-		"height": 279.0
+		"height": 0.0
 	},
 	"distraction_free":
 	{
 		"menu_visible": true,
-		"show_minimap": true,
+		"show_minimap": false,
 		"show_open_files": false,
-		"show_tabs": true,
-		"side_bar_visible": true,
-		"status_bar_visible": true
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
 	},
 	"file_history":
 	[
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/index.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/top.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/css/lb.css",
-		"/E/phpnow/htdocs/lb/application/controllers/front/member.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_login.htm",
-		"/E/phpnow/htdocs/lb/application/models/member_model.php",
-		"/E/phpnow/htdocs/lb/application/language/zh/item_front_member_lang.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_register.htm",
-		"/E/phpnow/htdocs/lb/application/language/zh/item_front_lang.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_center.htm",
-		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_order_pay.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_order.htm",
-		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_lang.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/core.js",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/images/lb.css",
+		"/E/phpnow/htdocs/lb/swfupload/upload.php",
+		"/E/phpnow/htdocs/lb/swfupload/loader.php",
+		"/E/phpnow/htdocs/lb/system/helpers/language_helper.php",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/mdata.php",
+		"/E/phpnow/htdocs/lb/application/libraries/cor_db.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/backend_style.css",
+		"/E/phpnow/htdocs/lb/system/core/Lang.php",
 		"/E/phpnow/htdocs/lb/application/libraries/cor_page.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/product.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/order_view.htm",
-		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/order_list.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/jqFancyTransitions.1.8.js",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_order_detail.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_order.htm",
-		"/E/phpnow/htdocs/lb/cache/zh/nation.php",
-		"/E/phpnow/htdocs/lb/cache/zh/order_status.php",
-		"/E/phpnow/htdocs/lb/application/libraries/cor_cache.php",
-		"/E/phpnow/htdocs/lb/cache/zh/eg_prop_select.php",
-		"/E/phpnow/htdocs/lb/cache/zh/edu_highest.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/product_order.htm",
+		"/E/phpnow/htdocs/lb/application/config/autoload.php",
+		"/E/phpnow/htdocs/lb/system/core/Loader.php",
+		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_lang.php",
+		"/E/phpnow/htdocs/lb/application/helpers/cor_lang_helper.php",
+		"/E/phpnow/htdocs/lb/application/language/zh/item_front_lang.php",
+		"/E/phpnow/htdocs/lb/application/language/en/item_front_lang.php",
+		"/E/phpnow/htdocs/lb/application/errors/error_db.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/core.js",
+		"/E/phpnow/htdocs/lb/application/models/modules_model.php",
+		"/E/phpnow/htdocs/lb/application/models/fields_model.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/mdata_list.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/product_list.htm",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/fields.php",
+		"/E/phpnow/htdocs/lb/system/database/DB_active_rec.php",
+		"/E/phpnow/htdocs/lb/application/models/logs_model.php",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/pri.sublime-snippet",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/smt.sublime-snippet",
+		"/E/phpnow/htdocs/lb/application/models/mdata_model.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/fields_list.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/fields_add.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/modules_add.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_register.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_center.htm",
+		"/E/phpnow/htdocs/lb/application/controllers/front/member.php",
 		"/E/phpnow/htdocs/lb/application/libraries/MY_Form_validation.php",
 		"/E/phpnow/htdocs/lb/system/libraries/Form_validation.php",
-		"/E/phpnow/htdocs/lb/application/libraries/MY_Pagination.php",
-		"/E/phpnow/htdocs/lb/application/libraries/cor_db.php",
-		"/E/phpnow/htdocs/lb/system/helpers/cookie_helper.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_cart.htm",
-		"/E/phpnow/htdocs/lb/application/index.html",
-		"/E/phpnow/htdocs/lb/system/database/DB_result.php",
-		"/E/phpnow/htdocs/lb/application/libraries/cor_form.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/left_member.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/left_product.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/product_cart.htm",
-		"/E/phpnow/htdocs/lb/application/core/MY_Input.php",
-		"/E/phpnow/htdocs/lb/application/helpers/cor_lang_helper.php",
-		"/E/phpnow/htdocs/lb/application/models/common_model.php",
-		"/E/phpnow/htdocs/lb/application/hooks/Langclass.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/My97DatePicker/lang/en.js",
-		"/E/phpnow/htdocs/lb/application/config/form_validation.php",
 		"/E/phpnow/htdocs/lb/fckeditor/fckconfig.js.dump",
-		"/E/phpnow/htdocs/lb/application/models/commission_model.php",
-		"/E/phpnow/htdocs/lb/system/helpers/form_helper.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/meber_login.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/about.htm",
-		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-		"/E/phpnow/htdocs/lb/application/controllers/test.php",
-		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/E/phpnow/htdocs/lb/application/controllers/front/message.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/login.php",
-		"/E/phpnow/htdocs/lb/application/models/advs_model.php",
-		"/E/phpnow/htdocs/lb/application/libraries/breadcrumb.php",
-		"/E/phpnow/htdocs/lb/system/core/Common.php",
-		"/E/phpnow/htdocs/lb/installed/libs/phpMyImporter.php",
-		"/E/phpnow/htdocs/lb/application/config/breadcrumb.php",
-		"/E/phpnow/htdocs/lb/application/models/archive_model.php",
-		"/E/phpnow/htdocs/lb/application/models/admins_model.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/dynamic.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/top.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/iwin.js",
-		"/E/phpnow/htdocs/lb/.tags_sorted_by_file",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/jqFancyTransitions.1.8.js",
-		"/E/phpnow/htdocs/lb/tools/test.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/jqFancyTransitions.1.8.min.js",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/core.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/core.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/table.css",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/css/iwin.css",
-		"/E/phpnow/htdocs/lb/application/libraries/Smarty-3.1.14/libs/plugins/shared.escape_special_chars.php",
+		"/E/phpnow/htdocs/lb/application/models/common_model.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_cart.htm",
+		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/js/core.js",
+		"/E/phpnow/htdocs/lb/swfupload/libs/mysql.class.php",
+		"/E/phpnow/htdocs/lb/application/controllers/front/common.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_view.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/iwin.css",
-		"/E/phpnow/htdocs/lb/fckeditor/_whatsnew_history.html.dump",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/iwin.js",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product.htm",
-		"/E/phpnow/htdocs/lb/swfupload/upload.php",
-		"/E/phpnow/htdocs/lb/application/language/en/item_backend_lang.php",
-		"/E/phpnow/htdocs/lb/application/config/routes.php",
-		"/E/phpnow/htdocs/lb/.htaccess",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/templates.php",
-		"/E/phpnow/htdocs/lb/application/compiles/1b14c21662570fb9fd828169a7dae18dca3782b2.file.product_order.htm.php",
-		"/E/phpnow/htdocs/lb/application/compiles/0c861152301e4212404f7cb5d0cd07a78a37f1f2.file.product_view.htm.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/My97DatePicker/My97DatePicker.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/mdata_list.htm",
-		"/E/phpnow/htdocs/lb/application/language/en/item_front_lang.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/backend_style.css",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/css/lb.css",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/search.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/message.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/dynamic_view.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/message.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/message_list.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/sales.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/message_list.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/sales.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/product.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/product_view.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/about_archives.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/about.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/contact.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/dynamic.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/dynamic_view.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/engage.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/engage_apply.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/engage_detail.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/engage_friend.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/search.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/contact.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/engage.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/engage_apply.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/engage_detail.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/engage_friend.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/dynamic.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/jquery_ui/i18n/jquery.ui.datepicker-hy.js.dump",
-		"/E/phpnow/htdocs/lb/system/core/Router.php",
-		"/E/phpnow/htdocs/lb/application/core/MY_Router.php",
-		"/E/phpnow/htdocs/lb/system/core/URI.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/search.php",
-		"/E/phpnow/htdocs/lb/application/models/search_model.php",
+		"/E/phpnow/htdocs/lb/application/config/database.php",
+		"/E/phpnow/htdocs/lb/system/core/Common.php",
 		"/E/phpnow/htdocs/lb/application/config/config.php",
-		"/E/phpnow/htdocs/lb/application/helpers/MY_url_helper.php",
-		"/E/phpnow/htdocs/lb/application/config/autoload.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/about.php"
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/PHP.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/dynamic.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/dynamic.htm",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/system_manage.php",
+		"/E/phpnow/htdocs/lb/application/models/trans_model.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/jqFancyTransitions.1.8.js",
+		"/E/phpnow/htdocs/lb/swfupload/index.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/jqFancyTransitions.1.8.js",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/js/jqFancyTransitions.1.8.js",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/admins.php",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/advs.php"
 	],
 	"find":
 	{
-		"height": 140.0
+		"height": 57.0
 	},
 	"find_in_files":
 	{
 		"height": 0.0,
 		"where_history":
 		[
-			"E:\\phpnow\\htdocs\\lb\\application",
-			"E:\\phpnow\\htdocs\\lb\\system",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates\\front",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates\\front\\blue",
-			"E:\\phpnow\\htdocs\\lb\\system",
-			"E:\\phpnow\\htdocs\\lb\\application",
-			"E:\\phpnow\\htdocs\\lb\\application\\",
-			"E:\\phpnow\\htdocs\\lb\\application\\controllers",
-			"E:\\phpnow\\htdocs\\lb\\application\\controllers\\front",
-			"E:\\phpnow\\htdocs\\lb\\application",
-			"E:\\phpnow\\htdocs\\lb\\system",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates",
-			"E:\\phpnow\\htdocs\\lb\\application",
 			"E:\\phpnow\\htdocs\\lb\\application\\libraries",
 			"E:\\phpnow\\htdocs\\lb\\application",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries",
-			"E:\\phpnow\\htdocs\\lb\\application\\controllers",
-			"E:\\phpnow\\htdocs\\lb\\application",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates\\backend,*.htm",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates\\backend",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates",
-			"E:\\phpnow\\htdocs\\lb\\application",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates,*.htm",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates,*.cs",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates",
-			"E:\\phpnow\\htdocs\\lb\\application",
-			"E:\\phpnow\\htdocs\\lb\\application\\language\\zh",
-			"E:\\phpnow\\htdocs\\lb\\application",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates\\backend",
-			"E:\\phpnow\\htdocs\\lb\\application",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates_c",
-			"E:\\phpnow\\htdocs\\lb\\application\\controllers",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates",
-			"E:\\phpnow\\htdocs\\lb\\application",
-			"E:\\phpnow\\htdocs\\lb\\application,*.htm",
-			"E:\\phpnow\\htdocs\\lb\\application",
-			"E:\\phpnow\\htdocs\\lb\\application,*.css",
-			"E:\\phpnow\\htdocs\\lb\\application",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates",
-			"E:\\phpnow\\htdocs\\lb\\application",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates",
-			"E:\\phpnow\\htdocs\\lb\\application",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries",
-			"E:\\phpnow\\htdocs\\lb\\application\\language\\zh",
-			"E:\\phpnow\\htdocs\\lb\\application",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates",
-			"E:\\phpnow\\htdocs\\lb\\application\\controllers",
-			"E:\\phpnow\\htdocs\\lb\\system",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries",
-			"E:\\phpnow\\htdocs\\lb\\application",
-			"E:\\phpnow\\htdocs\\lb\\system",
-			"E:\\phpnow\\htdocs\\lb\\application",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates\\front\\blue\\en",
-			"E:\\phpnow\\htdocs\\lb\\system",
-			"E:\\phpnow\\htdocs\\lb\\application",
-			"E:\\phpnow\\htdocs\\lb\\system\\database",
-			"E:\\phpnow\\htdocs\\lb\\system",
-			"E:\\phpnow\\htdocs\\lb\\system\\database",
-			"E:\\phpnow\\htdocs\\lb\\system",
-			"E:\\phpnow\\htdocs\\lb\\system\\database",
-			"E:\\phpnow\\htdocs\\lb\\application\\controllers",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates\\front\\blue\\zh",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates\\front",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates\\front\\blue\\zh",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates\\front\\blue\\",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates\\front",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates\\front\\blue\\zh",
-			"E:\\phpnow\\htdocs\\lb\\application\\controllers\\front",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates\\front\\blue\\zh",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates",
-			"E:\\phpnow\\htdocs\\lb\\system",
-			"E:\\phpnow\\htdocs\\lb\\syntaxhighlighter_3.0.83",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates\\,*.js",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates\\backend",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates\\front",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates\\front\\blue\\zh",
-			"E:\\phpnow\\htdocs\\lb\\system\\database",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates\\backend",
-			"E:\\phpnow\\htdocs\\lb\\application\\models",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries",
-			"E:\\phpnow\\htdocs\\lb\\application\\controllers",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates",
-			"E:\\phpnow\\htdocs\\lb\\system\\database",
-			"E:\\phpnow\\htdocs\\lb\\system\\database\\drivers",
-			"E:\\phpnow\\htdocs\\lb\\system\\database",
-			"E:\\phpnow\\htdocs\\lb\\application",
-			"E:\\phpnow\\htdocs\\lb\\system\\database",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates",
-			"E:\\phpnow\\htdocs\\lb\\application\\models",
-			"E:\\phpnow\\htdocs\\lb\\application\\controllers",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\sysplugins",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\sysplugins",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates",
-			"E:\\phpnow\\htdocs\\lb\\application\\models",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries",
-			"E:\\phpnow\\htdocs\\lb\\application\\controllers",
-			"E:\\phpnow\\htdocs\\lb\\application",
-			"E:\\phpnow\\htdocs\\lb\\system\\database",
-			"E:\\phpnow\\htdocs\\lb\\system\\database\\drivers",
-			"E:\\phpnow\\htdocs\\lb\\system\\database",
-			"E:\\phpnow\\htdocs\\lb\\system",
-			"E:\\phpnow\\htdocs\\lb\\system\\helpers",
-			"E:\\phpnow\\htdocs\\lb\\system\\database",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries",
-			"E:\\phpnow\\htdocs\\lb\\application\\models",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates\\backend",
-			"E:\\phpnow\\htdocs\\lb\\application\\models",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries",
-			"E:\\phpnow\\htdocs\\lb\\application\\controllers",
-			"E:\\phpnow\\htdocs\\lb\\application\\templates\\backend",
-			"E:\\phpnow\\htdocs\\lb\\system\\database",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\sysplugins",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries",
-			"E:\\phpnow\\htdocs\\lb\\application\\models",
-			"E:\\phpnow\\htdocs\\lb\\application\\controllers",
-			"E:\\phpnow\\htdocs\\lb\\application\\libraries"
+			"E:\\phpnow\\htdocs\\lb\\application\\templates"
 		]
 	},
 	"find_state":
@@ -921,134 +150,44 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"&nbsp;&nbsp;",
-			"*",
-			"red_font",
-			"order_s",
-			"action_order",
-			"$main.order_i",
-			"order_model",
-			"effect",
-			"setInterval",
-			"anima",
-			"，",
-			"action_order_view",
-			"Form_validation",
-			"m_name",
-			"$item.",
-			"th",
-			"order",
-			"min",
-			"action_register_save",
-			"auth_login",
-			"set_cookie",
-			"mysys_m_id",
-			"auth_login",
-			"&nbsp;",
-			"email",
-			"login_m_user",
-			"valid_m_name_exists",
-			"$kthis->load->",
-			"front_load_view",
-			"form_captchaation",
-			"m_name",
-			".htm",
-			"m_valid",
-			"valid|",
-			"valid",
-			"form_error",
-			"Unable to access an error message corresponding to your field name",
-			"backend_",
-			"Disallowed Key Characters.",
-			"members",
-			"load_backend_view",
-			"$this->load->cor_page",
-			"main",
-			"form_error",
-			"ansi",
-			"file",
-			"ansi",
-			"user_name_chec",
-			"user_name_check",
-			"m_valid",
-			"user_pass_check",
-			"callback_user_pass_check",
-			"dynamic",
-			"input[type",
-			"input",
-			"ul",
-			"top_right",
-			"top_right1",
-			"lang_change",
-			"zh",
+			"product",
+			"filename",
 			"language",
-			"attr('href",
+			"lang",
+			"item_backend_lang",
+			"success_delete",
+			"helper",
+			"success_delete",
+			"details",
+			"fetch_list",
+			"fetch_one",
+			"details",
+			"f_type",
+			"f_name",
+			"_error_prefix",
+			"form_error",
+			"main",
+			"cookie",
+			"fetch_images",
+			"order_create",
+			"product_cart",
+			"goods_casrt",
+			"prefix",
+			"$post",
 			"links",
-			"setInterval",
+			"$.strips",
+			"links",
+			"$.strips",
+			"$.trips",
 			"setinteval",
-			"stripInt",
-			"params",
-			"argument",
-			"setinterval",
-			"setin",
-			"close_trigger",
-			"http://www.ip138.com/",
-			"static_cfg",
-			"static_self",
-			"close_trigger",
-			"isFunctionDefined",
-			"close",
-			"dblclick",
-			"ft-prev",
-			"w",
-			"destroy",
-			"= new Array()",
-			"ft-titl",
-			"ft-buttons",
-			"destroy",
-			"return",
-			"ft-button-",
-			"titleOpacity",
-			"transition",
+			"links",
+			"$.strips",
+			"links",
 			"$.strips",
 			"strips",
-			"links",
-			"jqFancyTransitions",
-			"trans",
-			"next",
-			"set_uid",
-			"get_uid",
-			"$.include",
-			"load_files",
-			"transition",
-			"next",
-			"transition",
-			"next",
-			"setInterval",
-			"strips",
-			"trans",
-			"next",
-			"order[",
-			"j+1",
-			"orde",
-			"order",
-			"Transitions",
-			"33",
-			"next",
-			"img",
-			"imgInc",
-			"imgInc[el.id]",
-			"imgInc",
-			"transition",
-			"next",
-			"preventDefault",
-			"cover",
-			"contain",
-			"'contain'",
-			"order",
-			"right",
-			"order",
-			"random"
+			"slideshowHolder",
+			"strip",
+			"setintelval"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1056,126 +195,6 @@
 		"regex": false,
 		"replace_history":
 		[
-			"m_captcha",
-			"",
-			"$ci_uri.3",
-			"$CI->uri->segment(3)",
-			"$this->uri->segment(3)",
-			"application/front/templates",
-			"",
-			"<!--{$site_url}-->/",
-			"site_url(\"",
-			"site_url('",
-			"lang_get()",
-			"lang_get",
-			"cor_zip",
-			"cor_cache",
-			"cor_lang",
-			"cor_form",
-			"cor_page",
-			"cor_db",
-			"cor_auth",
-			"Cor",
-			"Cor_zip",
-			"Cor_lang",
-			"Cor_form",
-			"Cor_db",
-			"Cor_cache",
-			"Cor_auth",
-			"Cor_db",
-			"cor_zip",
-			"cor_page",
-			"cor_lang",
-			"cor_form",
-			"cor_db",
-			"cor_cache",
-			"cor_auth",
-			"$this->db",
-			"$this->ds",
-			"$this->db",
-			"$this->mydb",
-			"",
-			"http://localhost",
-			"$this->ds",
-			"zz_05.jpg",
-			"<?php\n/**\n  * start page for webaccess\n  *\n  * PHP version 5\n  *\n  * @category  PHP\n  * @package   Modle\n  * @author    yehua <150672834@.com>\n  * @copyright 2013 conqweal\n  * @license   http://opensource.org/licenses/gpl-2.0.php GNU General Public License\n  * @version   1.0$\n  * @link      http://phpsysinfo.sourceforge.net\n  */\n  ",
-			"\\g",
-			"<!--{create_button type=\"search\"}-->",
-			"cache_fetch('treeIds')",
-			"Tree_",
-			"load_backend_view(strtolower($this->act)",
-			"backend_redirect('",
-			"$this->uri->segment(4)",
-			"$m_id",
-			"$this->uri->segment(4)",
-			"mdata_",
-			"NULL",
-			"",
-			"background:",
-			"images",
-			"$from='view'",
-			"nav_title",
-			"\"",
-			"$template->tpl_vars",
-			"parent::__construct()",
-			"parent::__construct",
-			"extends CI_Controller",
-			"extends CI_Model",
-			"get_cache_id",
-			"page_size",
-			"$ds",
-			"$CI->",
-			"$ds",
-			"$this->ds",
-			"$ds->",
-			"$mydb->ds",
-			"$this->mydb2",
-			"$this->ds",
-			"$this->mydb2",
-			"$this->ds",
-			"$this->mydb2",
-			"$this->db\n$this->mydb2",
-			"$this->db\n$this->ds",
-			"$this->mydb2",
-			"$this->ds->",
-			"$this->ds",
-			"",
-			"$this->ds",
-			"$this->mydb2",
-			"$db",
-			"$this->mydb2",
-			"$this->ds",
-			"$ds->",
-			"$ds",
-			"$this->ds",
-			"$this->ds2",
-			"$this->ds",
-			"$ds->",
-			"$ds",
-			"$this->ds",
-			"$ds",
-			"$this->ds",
-			"$db",
-			"$db->",
-			"$this->get_db()->",
-			"$db",
-			"gid",
-			"w_close",
-			"w_body",
-			"w_cover",
-			"w_content",
-			"w_cover",
-			"w_content",
-			"w_title",
-			"w_body.",
-			".mmmmm",
-			".",
-			"obj_w",
-			"",
-			"front/",
-			"front/index",
-			"segments='en/front/",
-			"segments='zh/front/"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1197,7 +216,7 @@
 	},
 	"input":
 	{
-		"height": 53.0
+		"height": 0.0
 	},
 	"layout":
 	{
@@ -1222,13 +241,9 @@
 		]
 	},
 	"menu_visible": true,
-	"output.phpdocumentor":
-	{
-		"height": 136.0
-	},
 	"replace":
 	{
-		"height": 100.0
+		"height": 0.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1237,48 +252,104 @@
 		"selected_items":
 		[
 			[
-				"top.htm",
-				"application/templates/front/blue/zh/top.htm"
-			],
-			[
-				"item_fo",
-				"application/language/zh/item_front_member_lang.php"
-			],
-			[
-				"member_model",
-				"application/models/member_model.php"
-			],
-			[
-				"member.php",
-				"application/controllers/front/member.php"
-			],
-			[
-				"member_login",
-				"application/templates/front/blue/zh/member_login.htm"
-			],
-			[
 				"lb.css",
 				"application/templates/front/blue/zh/css/lb.css"
 			],
 			[
-				"templates/index",
-				"application/templates/front/blue/zh/index.htm"
+				"product.ht",
+				"application/templates/front/blue/zh/product.htm"
 			],
 			[
-				"member_regis",
-				"application/templates/front/blue/zh/member_register.htm"
+				"core.js",
+				"application/templates/front/blue/zh/js/core.js"
 			],
 			[
-				"item_fro",
-				"application/language/zh/item_front_member_lang.php"
+				"swfupload",
+				"swfupload/upload.php"
 			],
 			[
-				"item_font",
+				"swfuload",
+				"swfupload/loader.php"
+			],
+			[
+				"backend",
+				"application/templates/backend/blue/css/backend_style.css"
+			],
+			[
+				"cor_db.php",
+				"application/libraries/cor_db.php"
+			],
+			[
+				"cor_page.php",
+				"application/libraries/cor_page.php"
+			],
+			[
+				"item_back",
+				"application/language/zh/item_backend_lang.php"
+			],
+			[
+				"item_fron",
 				"application/language/zh/item_front_lang.php"
 			],
 			[
-				"member_mod",
-				"application/models/member_model.php"
+				"item_front",
+				"application/language/en/item_front_lang.php"
+			],
+			[
+				"mdata.php",
+				"application/controllers/backend/mdata.php"
+			],
+			[
+				"cor_db.ph",
+				"application/libraries/cor_db.php"
+			],
+			[
+				"core_db",
+				"application/errors/error_db.php"
+			],
+			[
+				"product.htm",
+				"application/templates/front/blue/zh/product.htm"
+			],
+			[
+				"mdata_list.htm",
+				"application/templates/backend/blue/mdata_list.htm"
+			],
+			[
+				"product_list",
+				"application/templates/backend/blue/product_list.htm"
+			],
+			[
+				"fields.php",
+				"application/controllers/backend/fields.php"
+			],
+			[
+				"fields_mo",
+				"application/models/fields_model.php"
+			],
+			[
+				"logs_mod",
+				"application/models/logs_model.php"
+			],
+			[
+				"cor_db",
+				"application/libraries/cor_db.php"
+			],
+			[
+				"module_model",
+				"application/models/modules_model.php"
+			],
+			[
+				"fields_model",
+				"application/models/fields_model.php"
+			],
+			[
+				"fields_list",
+				"application/templates/backend/blue/fields_list.htm"
+			],
+			[
+				"module_add.ht",
+				"application/templates/backend/blue/modules_add.htm"
 			],
 			[
 				"member_re",
@@ -1289,464 +360,80 @@
 				"application/templates/front/blue/zh/member_center.htm"
 			],
 			[
-				"product.php",
-				"application/controllers/front/product.php"
+				"my_form_validation",
+				"application/libraries/MY_Form_validation.php"
 			],
 			[
-				"member_pay",
-				"application/templates/front/blue/zh/member_order_pay.htm"
+				"member_register",
+				"application/templates/front/blue/zh/member_register.htm"
 			],
 			[
-				"product_order",
-				"application/templates/front/blue/zh/product_order.htm"
-			],
-			[
-				"item_back",
-				"application/language/zh/item_backend_lang.php"
-			],
-			[
-				"order_view.htm",
-				"application/templates/backend/blue/order_view.htm"
-			],
-			[
-				"cor_page",
-				"application/libraries/cor_page.php"
-			],
-			[
-				"order_list",
-				"application/templates/backend/blue/order_list.htm"
-			],
-			[
-				"procuct.php",
-				"application/controllers/backend/product.php"
-			],
-			[
-				"jqf",
-				"application/templates/front/blue/zh/js/jqFancyTransitions.1.8.js"
-			],
-			[
-				"member_order",
-				"application/templates/front/blue/zh/member_order_detail.htm"
-			],
-			[
-				"item_front",
-				"application/language/zh/item_front_lang.php"
-			],
-			[
-				"order_detail",
-				"application/templates/front/blue/zh/member_order_detail.htm"
-			],
-			[
-				"order_status",
-				"cache/zh/order_status.php"
-			],
-			[
-				"cor_cache",
-				"application/libraries/cor_cache.php"
-			],
-			[
-				"order_detail.t",
-				"application/templates/front/blue/zh/member_order_detail.htm"
-			],
-			[
-				"form",
-				"system/libraries/Form_validation.php"
-			],
-			[
-				"member_mo",
-				"application/models/member_model.php"
-			],
-			[
-				"member_cener",
-				"application/templates/front/blue/zh/member_center.htm"
-			],
-			[
-				"product_cart.htm",
-				"application/templates/front/blue/zh/product_cart.htm"
-			],
-			[
-				"tpl.php",
-				"application/libraries/tpl.php"
-			],
-			[
-				"cor_page.php",
-				"application/libraries/cor_page.php"
-			],
-			[
-				"templates/index.htm",
-				"application/templates/front/blue/zh/index.htm"
-			],
-			[
-				"application",
-				"application/index.html"
-			],
-			[
-				"left_member.ht",
-				"application/templates/front/blue/zh/left_member.htm"
-			],
-			[
-				"member_order.htm",
-				"application/templates/front/blue/zh/member_order.htm"
-			],
-			[
-				"member_center",
-				"application/templates/front/blue/zh/member_center.htm"
-			],
-			[
-				"product_ca",
-				"application/templates/front/blue/zh/product_cart.htm"
-			],
-			[
-				"left_pro",
-				"application/templates/front/blue/zh/left_product.htm"
-			],
-			[
-				"product_cart",
-				"application/templates/front/blue/zh/product_cart.htm"
-			],
-			[
-				"left_member",
-				"application/templates/front/blue/zh/left_member.htm"
-			],
-			[
-				"member_mode",
-				"application/models/member_model.php"
-			],
-			[
-				"common_mod",
-				"application/models/common_model.php"
-			],
-			[
-				"mypage",
-				"application/templates/backend/blue/js/My97DatePicker/lang/en.js"
-			],
-			[
-				"cor_db",
-				"application/libraries/cor_db.php"
-			],
-			[
-				"item_fron",
-				"application/language/zh/item_front_lang.php"
-			],
-			[
-				"member_cen",
-				"application/templates/front/blue/zh/member_center.htm"
-			],
-			[
-				"item_front_",
-				"application/language/zh/item_front_member_lang.php"
-			],
-			[
-				"form_va",
-				"system/libraries/Form_validation.php"
-			],
-			[
-				"form_v",
-				"application/config/form_validation.php"
-			],
-			[
-				"member_log",
-				"application/templates/front/blue/zh/member_login.htm"
-			],
-			[
-				"item_front_member",
-				"application/language/zh/item_front_member_lang.php"
-			],
-			[
-				"tpl.ph",
-				"application/libraries/tpl.php"
-			],
-			[
-				"tplphp",
-				"application/libraries/tpl.php"
-			],
-			[
-				"member.ph",
+				"member.hp",
 				"application/controllers/front/member.php"
 			],
 			[
-				"common_mode",
-				"application/models/common_model.php"
+				"fields_add",
+				"application/templates/backend/blue/fields_add.htm"
 			],
 			[
-				"login.php",
-				"application/controllers/backend/login.php"
+				"mdata_model",
+				"application/models/mdata_model.php"
+			],
+			[
+				"mdata",
+				"application/controllers/backend/mdata.php"
 			],
 			[
 				"common_model",
 				"application/models/common_model.php"
 			],
 			[
-				"membe.php",
-				"application/controllers/front/member.php"
-			],
-			[
-				"product.",
-				"application/controllers/front/product.php"
-			],
-			[
-				"breadcrumb",
-				"application/libraries/breadcrumb.php"
-			],
-			[
-				"breadcrumb.php",
-				"application/config/breadcrumb.php"
-			],
-			[
-				"index.htm",
-				"application/templates/front/blue/zh/index.htm"
-			],
-			[
-				"jqfan",
-				"application/templates/front/blue/zh/js/jqFancyTransitions.1.8.js"
-			],
-			[
-				"iwin.js",
-				"application/templates/front/blue/zh/js/iwin.js"
-			],
-			[
-				"jfan",
-				"application/templates/backend/blue/js/jqFancyTransitions.1.8.js"
-			],
-			[
-				"test.php",
-				"tools/test.php"
-			],
-			[
-				"core.js",
-				"application/templates/backend/blue/js/core.js"
-			],
-			[
-				"table.css",
-				"application/templates/backend/blue/css/table.css"
-			],
-			[
-				"iwin.css",
-				"application/templates/front/blue/zh/css/iwin.css"
-			],
-			[
-				"product_view.htm",
-				"application/templates/front/blue/zh/product_view.htm"
-			],
-			[
-				"iwinjs",
-				"application/templates/front/blue/zh/js/iwin.js"
-			],
-			[
-				"jqfa",
-				"application/templates/front/blue/zh/js/jqFancyTransitions.1.8.js"
-			],
-			[
-				"jqfancytransitions.js",
-				"application/templates/front/blue/zh/js/jqFancyTransitions.1.8.js"
-			],
-			[
-				"product_view",
-				"application/templates/front/blue/zh/product_view.htm"
-			],
-			[
-				"product_view.ht",
-				"application/templates/front/blue/zh/product_view.htm"
-			],
-			[
-				"product_view.",
-				"application/templates/front/blue/zh/product_view.htm"
-			],
-			[
-				"product.htm",
-				"application/templates/front/blue/zh/product.htm"
-			],
-			[
-				"ttest.php",
-				"tools/test.php"
-			],
-			[
-				"swfupload",
-				"swfupload/upload.php"
-			],
-			[
-				"item_backend",
-				"application/language/zh/item_backend_lang.php"
-			],
-			[
-				"order_view",
-				"application/templates/backend/blue/order_view.htm"
-			],
-			[
-				"router.php",
-				"application/compiles/1b14c21662570fb9fd828169a7dae18dca3782b2.file.product_order.htm.php"
-			],
-			[
-				".ht",
-				".htaccess"
-			],
-			[
-				"templates.php",
-				"application/controllers/backend/templates.php"
-			],
-			[
-				"product_r",
-				"application/templates/front/blue/zh/product_order.htm"
-			],
-			[
-				".hta",
-				".htaccess"
+				"comon_model",
+				"application/models/common_model.php"
 			],
 			[
 				"mdata_list.",
 				"application/templates/backend/blue/mdata_list.htm"
 			],
 			[
-				"backend_s",
-				"application/templates/backend/blue/css/backend_style.css"
+				"product.php",
+				"application/controllers/front/product.php"
 			],
 			[
-				"product_car",
+				"product_cart.htm",
 				"application/templates/front/blue/zh/product_cart.htm"
 			],
 			[
-				"product_",
-				"application/templates/front/blue/en/product_order.htm"
+				"product_view.htm",
+				"application/templates/front/blue/zh/product_view.htm"
 			],
 			[
-				"item_frnt",
-				"application/language/en/item_front_lang.php"
+				"common_mode",
+				"application/models/common_model.php"
 			],
 			[
-				"backend_",
-				"application/templates/backend/blue/css/backend_style.css"
+				"swf/upload",
+				"swfupload/upload.php"
 			],
 			[
-				"search.",
-				"application/templates/front/blue/zh/search.htm"
-			],
-			[
-				"message.htm",
-				"application/templates/front/blue/zh/message.htm"
-			],
-			[
-				"dynamic_view",
-				"application/templates/front/blue/zh/dynamic_view.htm"
-			],
-			[
-				"sale.htm",
-				"application/templates/front/blue/zh/sales.htm"
-			],
-			[
-				"dynamic.htm",
+				"dyn",
 				"application/templates/front/blue/zh/dynamic.htm"
 			],
 			[
-				"core_page.php",
-				"application/libraries/cor_page.php"
+				"dynamic",
+				"application/templates/front/blue/en/dynamic.htm"
 			],
 			[
-				"myro",
-				"application/core/MY_Router.php"
-			],
-			[
-				"uri",
-				"system/core/URI.php"
-			],
-			[
-				"dynamic.",
-				"application/controllers/front/dynamic.php"
-			],
-			[
-				"search.php",
-				"application/controllers/front/search.php"
-			],
-			[
-				"prouct.htm",
-				"application/templates/front/blue/zh/product.htm"
-			],
-			[
-				"config.php",
-				"application/config/config.php"
-			],
-			[
-				".htac",
-				".htaccess"
-			],
-			[
-				"dynami",
-				"application/controllers/front/dynamic.php"
-			],
-			[
-				"my",
-				"application/core/MY_Router.php"
-			],
-			[
-				"myur",
-				"application/helpers/MY_url_helper.php"
-			],
-			[
-				"myr",
-				"application/core/MY_Router.php"
-			],
-			[
-				"router",
-				"system/core/Router.php"
-			],
-			[
-				"dynaic.php",
-				"application/controllers/front/dynamic.php"
-			],
-			[
-				"myrou",
-				"application/core/MY_Router.php"
-			],
-			[
-				"tpl",
-				"application/libraries/tpl.php"
-			],
-			[
-				"dynami_vie",
-				"application/templates/front/blue/en/dynamic_view.htm"
-			],
-			[
-				"tpl.p",
-				"application/libraries/tpl.php"
-			],
-			[
-				"dynamic_view.ht",
-				"application/templates/front/blue/en/dynamic_view.htm"
-			],
-			[
-				"dynai",
-				"application/controllers/front/dynamic.php"
-			],
-			[
-				"about.php",
-				"application/controllers/front/about.php"
-			],
-			[
-				"left_about",
-				"application/templates/front/blue/en/left_about.htm"
-			],
-			[
-				"system_",
+				"sytemmange",
 				"application/controllers/backend/system_manage.php"
 			],
 			[
-				"lang",
-				"application/hooks/Langclass.php"
+				"jqf",
+				"application/templates/front/blue/zh/js/jqFancyTransitions.1.8.js"
 			],
 			[
-				"mdata_list.htm",
-				"application/templates/backend/blue/mdata_list.htm"
-			],
-			[
-				"mdata_list",
-				"application/templates/backend/blue/mdata_list.htm"
-			],
-			[
-				"backend_lang",
-				"application/language/zh/item_backend_lang.php"
-			],
-			[
-				"mdata.ph",
-				"application/controllers/backend/mdata.php"
+				"swfuplo",
+				"swfupload/index.php"
 			]
 		],
 		"width": 0.0
@@ -1763,6 +450,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 394.0,
+	"side_bar_width": 150.0,
 	"status_bar_visible": true
 }

@@ -57,6 +57,20 @@ class Fields_model extends CI_Model{
 	}
 
 
+	//detail
+	function fields_list($fields='*',$where=null){
+		$cf = array(
+				'table_name'=>'module_fields',
+				'where'=>$where,
+				'fields'=>$fields,
+				'key'=>'f_id',
+			);
+		return  $this->cor_db->fetch_list($cf);
+	}
+
+
+
+
 
 }
 

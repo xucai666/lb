@@ -10,7 +10,7 @@
   'select_all' => 'Select all',
   'select' => 'Select',
   'theme_list' => 'Log view',
-  'del_confirm' => 'Sure delete',
+  'del_confirm' => 'Sure you want to delete',
   'unselect' => 'Please select',
   'del_ok' => 'Delete completed',
 );

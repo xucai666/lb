@@ -164,11 +164,13 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  	
  	function main_delete($id,$save_config){ 
  		$CI = &get_instance();
+ 		
  		$main_temp = $CI->db->from($save_config['main']['table_name'])->where_in($save_config['main']['primary_key'],$id)->get()->result_array();
  		$CI->db->where_in($save_config['main']['primary_key'],$id);
  		$CI->db->delete($save_config['main']['table_name']);
  		$CI->db->close();
- 		return $main_temp[0];
+ 		
+ 		return $main_temp;
  		
  	}
  	
@@ -399,6 +401,25 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  		$rs = $rq->first_row('array');
  		$rs = $key?$rs[$key]:$rs;
  		return $rs;
+ 	}
+ 	
+ 	
+ 	/**
+ 	 * 提取单记录信息s
+ 	 */
+ 	
+ 	function fetch_list($array){
+ 		$CI = &get_instance();
+ 		if(empty($array)) return false; 
+ 		extract($array);
+ 		if(empty($fields)) $fields = '*';
+ 		$CI->db->select($fields,false)->from($table_name);
+ 		if($where) $CI->db->where($where);
+ 		$ls = $CI->db->get()->result_array();
+ 		if($key){
+ 			$ls = $CI->cor_form->array_re_index($ls,$key);
+ 		}
+ 		return $ls;
  	}
  	
  	

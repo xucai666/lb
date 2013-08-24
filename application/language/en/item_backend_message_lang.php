@@ -11,10 +11,10 @@
   'view' => 'View',
   'query' => 'Query',
   'delete_confirm' => 'Sure you want to delete?',
-  'valid_ok' => 'Audited by',
+  'valid_ok' => 'Approved by',
   'valid_fail' => 'Auditing does not pass',
   'theme_list' => 'Message feedback',
   'inp_reply' => 'Please enter a reply',
-  'inp_pass' => 'Select whether to adopt',
+  'inp_pass' => 'Please choose whether or not to adopt',
 );
 ?>

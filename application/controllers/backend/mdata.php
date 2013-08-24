@@ -21,6 +21,7 @@ class Mdata extends CI_Controller{
 		$this->load->model("Fields_model",'f');
 		$this->load->model("Mdata_model",'im');
 		$this->lang->load('item_backend_mdata',lang_get());
+		$this->lang->load('item_backend',lang_get());
 		
 		
 		
@@ -148,22 +149,50 @@ class Mdata extends CI_Controller{
 			$ids = $this->input->post($primary);
             $ids = $ids?$ids:$this->uri->segment(4);
 			if(empty($ids)) throw new Exception(lang('errro_parameter'));
+			
 			$rs = $this->cor_db->delete($ids,$this->im->save_config());
 
 			//insert log
-			$log_cf = $this->im->save_config();
 			$this->load->model('Logs_model');	
-	 		$this->Logs_model->log_insert(array(
-	 			'log_table'=>$log_cf['main']['table_name'],
-	 			'log_table_id'=>$rs[$log_cf['main']['primary_key']],
-	 			'log_user'=>$this->cor_auth->fetch_auth('user_name'),
-	 			'log_date'=>date("Y-m-d H:i:s"),
-	 			'log_sql'=>trim(implode("\n",(array)$this->db->sql_log)),
-	 			'log_type'=>'12',
-	 			'log_desc'=>sprintf('module %s,delete  %s success.',$this->m->main($this->im->get_mid(),'m_name'),$rs[$log_cf['main']['primary_key']]),
-	 		));
+			foreach($rs as $v):
+		 		$this->Logs_model->log_insert(array(
+		 			'log_table'=>$log_cf['main']['table_name'],
+		 			'log_table_id'=>$v[$log_cf['main']['primary_key']],
+		 			'log_user'=>$this->cor_auth->fetch_auth('user_name'),
+		 			'log_date'=>date("Y-m-d H:i:s"),
+		 			'log_sql'=>trim(implode("\n",(array)$this->db->sql_log)),
+		 			'log_type'=>'12',
+		 			'log_desc'=>sprintf('module %s,delete  %s success.',$this->m->main($this->im->get_mid(),'m_name'),$rs[$log_cf['main']['primary_key']]),
+		 		));
+	 		endforeach;
+	 		//删除图片等媒体文件
+	 		$media_fid = array_keys($this->f->fields_list('f_id',array('f_media'=>1)));
+	 		$media_fields = $this->m->details($this->im->get_mid(),'f_id in ('.implode(',',$media_fid).') ','r_id,r_name');
+	 		$media_fields = $this->cor_form->array_re_index($media_fields,'r_id','r_name');
 
 
+	 		foreach($rs as $k=>$v){
+	 			foreach($v as $k1=>$v1){
+	 				if(in_array($k1, $media_fields)){
+	 					if(strpos($v1, '.')!==false){
+	 						$f =  realpath(str_replace(base_url().'/', '', $v1));
+	 						if(file_exists($f)){
+								@unlink($f);
+							}
+	 					}
+	 					$ls = $this->db->select('i_url',false)->from('module_images')->where_in('i_uid',explode(',',$v1))->get()->result_array();
+	 					foreach($ls as $item){
+	 						$f =  realpath(str_replace(base_url().'/', '', $item['i_url']));
+							if(file_exists($f)){
+								@unlink($f);
+							}
+	 					}
+	 					//delete from img table 
+	 					$this->db->where_in('i_uid',explode(',',$v1));
+	 					$this->db->delete('module_images');
+	 				}
+	 			}
+	 		}
 			$this->cor_page->backend_redirect('mdata/action_list',lang('success_delete'));
 		}catch(EXCEPTION $e){
 			$this->cor_page->backend_redirect($_SERVER['HTTP_REFERER'],$e->getMessage());

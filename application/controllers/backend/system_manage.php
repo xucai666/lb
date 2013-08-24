@@ -264,7 +264,7 @@ class System_manage extends CI_Controller{
  			'0'=>'未翻译',
  		);
  		$data = array_merge($data,array('status'=>$status,'page_size'=>$page_size));
- 		
+ 		$this->load->model('Trans_model','it');
 		$this->cor_page->load_backend_view('lang_trans',$data);
  	}
  	

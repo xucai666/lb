@@ -8,8 +8,8 @@
   'operate' => 'Operation',
   'category' => 'Classification',
   'author' => 'Source',
-  'order' => 'Sort',
-  'visit' => 'Number of visits',
+  'order' => 'Sorting',
+  'visit' => 'The number of visits',
   'select' => 'Please select',
   'basic_property' => 'Basic properties',
   'external_property' => 'Extended properties',
@@ -18,7 +18,7 @@
   'modify' => 'Modify',
   'delete' => 'Delete',
   'confirm_delete' => 'Sure you want to delete?',
-  'product' => 'Owned products',
+  'product' => 'Belongs to the product',
   'file_size' => 'File size',
   'soft_language' => 'Software language',
   'soft_class' => 'Software categories',
@@ -29,6 +29,6 @@
   'inp_content' => 'Please enter content',
   'inp_category' => 'Please select a category',
   'log_add' => 'Adding%s',
-  'log_mod' => 'Modify the%s',
+  'log_mod' => 'To modify%s',
 );
 ?>

@@ -42,12 +42,17 @@ function detail($id,$ke=null){
  * **/
 function batch_trans($lang_id, $run) {
 		$this->single_trans($lang_id,$run);
-
-	
-		echo "next_trans();";
+		if($this->trans_left()){
+			echo "next_trans();";
+		}
 	
 }
 
+
+function trans_left(){
+	$this->db->where('is_trans','0');
+	return $this->db->count_all_results('lang');
+}
 
 /**
  * 

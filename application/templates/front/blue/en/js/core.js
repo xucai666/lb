@@ -456,6 +456,13 @@ $.extend({
 });
 
 
+ //不显示无图占位符
+function ImgError(source){
+	source.src = img_backend+"noimg.jpg";
+	source.onerror = "";
+	return true;
+}
+
 
 $(document).ready(function(){
 	//error span

@@ -2,11 +2,11 @@
  $lang = array (
   'role' => 'Roles',
   'role_name' => 'Role name',
-  'rights_config' => 'Permissions configuration',
+  'rights_config' => 'Configure permissions',
   'operate' => 'Operation',
   'submit' => 'Submit',
   'select_all' => 'Select all',
-  'theme_roles' => 'Role permissions configurations',
-  'log_mod' => 'Modify role%s',
+  'theme_roles' => 'Configure role permissions',
+  'log_mod' => 'Modifying role%s',
 );
 ?>
