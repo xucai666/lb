@@ -69,6 +69,7 @@
 	"file_history":
 	[
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/css/lb.css",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/top.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/core.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/images/lb.css",
@@ -251,6 +252,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"top.htm",
+				"application/templates/front/blue/zh/top.htm"
+			],
 			[
 				"lb.css",
 				"application/templates/front/blue/zh/css/lb.css"
