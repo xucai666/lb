@@ -204,7 +204,6 @@ class CI_Email {
 			}
 		}
 
-
 		$this->_set_header('From', $name.' <'.$from.'>');
 		$this->_set_header('Return-Path', '<'.$from.'>');
 
@@ -1535,7 +1534,6 @@ class CI_Email {
 	 */
 	protected function _send_with_mail()
 	{
-	
 		if ($this->_safe_mode == TRUE)
 		{
 			if ( ! mail($this->_recipients, $this->_subject, $this->_finalbody, $this->_header_str))
@@ -1791,7 +1789,6 @@ class CI_Email {
 	 */
 	protected function _smtp_authenticate()
 	{
-
 		if ( ! $this->_smtp_auth)
 		{
 			return TRUE;
@@ -1802,13 +1799,10 @@ class CI_Email {
 			$this->_set_error_message('lang:email_no_smtp_unpw');
 			return FALSE;
 		}
-		
-
 
 		$this->_send_data('AUTH LOGIN');
 
 		$reply = $this->_get_smtp_data();
-		
 
 		if (strncmp($reply, '334', 3) != 0)
 		{
@@ -1819,7 +1813,7 @@ class CI_Email {
 		$this->_send_data(base64_encode($this->smtp_user));
 
 		$reply = $this->_get_smtp_data();
-		
+
 		if (strncmp($reply, '334', 3) != 0)
 		{
 			$this->_set_error_message('lang:email_smtp_auth_un', $reply);

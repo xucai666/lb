@@ -27,7 +27,7 @@
                         
                    
             
-              <form id="form1" name="form1" method="post" action="<!--{func_site_url segments='search'}-->" >
+              <form id="form1" name="form1" method="get" action="<!--{func_site_url segments='search'}-->" >
          <ul class="index_top_right">
            
              <li>
@@ -36,8 +36,8 @@
           
          </li>
          <li class="top_search_li" > 
-            <input type="text" name="title" id="textfield"   class="input" /> 
-            <input type="image" src="<!--{$img_url}-->/sousuo_07.jpg"  border="0"/>
+            <input type="text" name="title" id="textfield"   class="input" value="<!--{$smarty.get.title}-->"/> 
+            <input type="submit"  class="top_search_button" value="" />
             </li>
 
             <li class="account_link">

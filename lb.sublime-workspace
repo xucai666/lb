@@ -31,11 +31,27 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "application/core/MY_Config.php",
+			"settings":
+			{
+				"buffer_size": 2016,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/config/config.php",
+			"settings":
+			{
+				"buffer_size": 13966,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 52.0,
+		"height": 32.0,
 		"selected_items":
 		[
 			[
@@ -68,8 +84,19 @@
 	},
 	"file_history":
 	[
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/css/lb.css",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/index.htm",
+		"/E/phpnow/htdocs/lb/system/core/Config.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/top.htm",
+		"/E/phpnow/htdocs/lb/application/core/MY_Input.php",
+		"/E/phpnow/htdocs/lb/application/core/MY_Router.php",
+		"/E/phpnow/htdocs/lb/application/libraries/MY_Pagination.php",
+		"/E/phpnow/htdocs/lb/application/libraries/MY_Form_validation.php",
+		"/E/phpnow/htdocs/lb/application/core/MY_Config.php",
+		"/E/phpnow/htdocs/lb/system/helpers/text_helper.php",
+		"/E/phpnow/htdocs/lb/index.php",
+		"/E/phpnow/htdocs/lb/readme.txt",
+		"/E/phpnow/htdocs/lb/application/models/common_model.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/css/lb.css",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/core.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/images/lb.css",
@@ -105,10 +132,8 @@
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_register.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_center.htm",
 		"/E/phpnow/htdocs/lb/application/controllers/front/member.php",
-		"/E/phpnow/htdocs/lb/application/libraries/MY_Form_validation.php",
 		"/E/phpnow/htdocs/lb/system/libraries/Form_validation.php",
 		"/E/phpnow/htdocs/lb/fckeditor/fckconfig.js.dump",
-		"/E/phpnow/htdocs/lb/application/models/common_model.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_cart.htm",
 		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/js/core.js",
@@ -138,7 +163,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
 			"E:\\phpnow\\htdocs\\lb\\application\\libraries",
@@ -151,6 +176,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"enabe",
+			"path_info",
+			"enable_query_strings",
+			"versioni",
+			"DIRECTORY",
 			"product",
 			"filename",
 			"language",
@@ -206,8 +236,64 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "application/core/MY_Config.php",
+					"settings":
+					{
+						"buffer_size": 2016,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1297,
+								1297
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 684.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "application/config/config.php",
+					"settings":
+					{
+						"buffer_size": 13966,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1819,
+								1819
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 792.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -255,6 +341,22 @@
 			[
 				"top.htm",
 				"application/templates/front/blue/zh/top.htm"
+			],
+			[
+				"config.php",
+				"application/config/config.php"
+			],
+			[
+				"my_config",
+				"application/core/MY_Config.php"
+			],
+			[
+				"text_helper.php",
+				"system/helpers/text_helper.php"
+			],
+			[
+				"common_model",
+				"application/models/common_model.php"
 			],
 			[
 				"lb.css",
@@ -389,10 +491,6 @@
 				"application/controllers/backend/mdata.php"
 			],
 			[
-				"common_model",
-				"application/models/common_model.php"
-			],
-			[
 				"comon_model",
 				"application/models/common_model.php"
 			],
@@ -455,6 +553,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 316.0,
 	"status_bar_visible": true
 }

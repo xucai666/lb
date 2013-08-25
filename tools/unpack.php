@@ -1,13 +1,13 @@
 <?php
-error_reporting(E_ALL^E_NOTICE);
-//éªŒè¯å¯†ç 
+
+//ÑéÖ¤ÃÜÂë
 $password = "888888";
-$php_self = empty($_REQUEST['PHP_SELF'])?'':$_REQUEST['PHP_SELF'];
+
 ?>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>åœ¨çº¿è§£å‹ZIPæ–‡ä»¶ç¨‹åº V1.0</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>ÔÚÏß½âÑ¹ZIPÎÄ¼ş³ÌĞò V1.0</title>
 <style type="text/css">
 <!--
 body,td{
@@ -27,15 +27,15 @@ text-decoration: underline;
 </head>
 
 <body>
-<form name="myform" method="post" action="<?=$php_self;?>" enctype="multipart/form-data" onSubmit="return check_uploadObject(this);">
+<form name="myform" method="post" action="<?=$_SERVER[PHP_SELF];?>" enctype="multipart/form-data" onSubmit="return check_uploadObject(this);">
 <?
-if(empty($_REQUEST["myaction"])):
+if(!$_REQUEST["myaction"]):
 ?>
 
 <script language="javascript">
 function check_uploadObject(form){
 if(form.password.value==''){
-   alert('è¯·è¾“å…¥å¯†ç .');
+   alert('ÇëÊäÈëÃÜÂë.');
    return false;
 }
 return true;
@@ -44,16 +44,16 @@ return true;
 
 <table width="100%" border="0" cellspacing="0" cellpadding="4">
     <tr>
-      <td height="40" colspan="2" style="color:#FF9900"><p><font color="#FF0000">åœ¨çº¿è§£å‹ZIPæ–‡ä»¶ç¨‹åº V1.0</font></p>
-      <p>ä½¿ç”¨æ–¹æ³•:æŠŠzipæ–‡ä»¶é€šè¿‡FTPä¸Šä¼ åˆ°æœ¬æ–‡ä»¶ç›¸åŒçš„ç›®å½•ä¸‹,é€‰æ‹©zipæ–‡ä»¶;æˆ–ç›´æ¥ç‚¹å‡»â€œæµè§ˆ...â€ä¸Šä¼ zipæ–‡ä»¶ã€‚</p>
-<p>æ”»ç•¥å ‚:http://bbs.edu.do</p>
-<p>è½¬è½½è¯·æ³¨æ˜ï¼šæœ¬ç¨‹åºç”± <a href="http://www.softpure.com/" target="_blank">çº¯ç²¹ç©ºé—´</a>æä¾›,ä½œè€…ï¼šfaisun</p>
+      <td height="40" colspan="2" style="color:#FF9900"><p><font color="#FF0000">ÔÚÏß½âÑ¹ZIPÎÄ¼ş³ÌĞò V1.0</font></p>
+      <p>Ê¹ÓÃ·½·¨:°ÑzipÎÄ¼şÍ¨¹ıFTPÉÏ´«µ½±¾ÎÄ¼şÏàÍ¬µÄÄ¿Â¼ÏÂ,Ñ¡ÔñzipÎÄ¼ş;»òÖ±½Óµã»÷¡°ä¯ÀÀ...¡±ÉÏ´«zipÎÄ¼ş¡£</p>
+<p>¹¥ÂÔÌÃ:http://bbs.edu.do</p>
+<p>×ªÔØÇë×¢Ã÷£º±¾³ÌĞòÓÉ <a href="http://www.softpure.com/" target="_blank">´¿´â¿Õ¼ä</a>Ìá¹©,×÷Õß£ºfaisun</p>
       <p>&nbsp;</p></td>
     </tr>
     <tr>
-      <td width="11%">é€‰æ‹©ZIPæ–‡ä»¶: </td>
+      <td width="11%">Ñ¡ÔñZIPÎÄ¼ş: </td>
       <td width="89%"><select name="zipfile">
-        <option value="" selected>- è¯·é€‰æ‹© -</option>
+        <option value="" selected>- ÇëÑ¡Ôñ -</option>
 <?
 $fdir = opendir('./');
 while($file=readdir($fdir)){
@@ -66,22 +66,22 @@ while($file=readdir($fdir)){
       </select></td>
     </tr>
     <tr>
-      <td width="11%" nowrap>æˆ–ä¸Šä¼ æ–‡ä»¶: </td>
+      <td width="11%" nowrap>»òÉÏ´«ÎÄ¼ş: </td>
       <td width="89%"><input name="upfile" type="file" id="upfile" size="20"></td>
     </tr>
 <tr>
-      <td>è§£å‹åˆ°ç›®å½•: </td>
+      <td>½âÑ¹µ½Ä¿Â¼: </td>
       <td><input name="todir" type="text" id="todir" value="__unzipfiles__" size="15"> 
-      (ç•™ç©ºä¸ºæœ¬ç›®å½•,å¿…é¡»æœ‰å†™å…¥æƒé™)</td>
+      (Áô¿ÕÎª±¾Ä¿Â¼,±ØĞëÓĞĞ´ÈëÈ¨ÏŞ)</td>
     </tr>
 <tr>
-      <td>éªŒè¯å¯†ç : </td>
+      <td>ÑéÖ¤ÃÜÂë: </td>
       <td><input name="password" type="password" id="password" size="15"> 
-        (æºæ–‡ä»¶ä¸­è®¾å®šçš„å¯†ç )</td>
+        (Ô´ÎÄ¼şÖĞÉè¶¨µÄÃÜÂë)</td>
     </tr> 
     <tr>
       <td><input name="myaction" type="hidden" id="myaction" value="dounzip"></td>
-      <td><input type="submit" name="Submit" value=" è§£ å‹ "></td>
+      <td><input type="submit" name="Submit" value=" ½â Ñ¹ "></td>
     </tr>
 </table>
 
@@ -224,7 +224,7 @@ for($i=0;$i<count($pth)-1;$i++){
    if((!is_dir($mydir) && @mkdir($mydir,0777)) || (($mydir==$to.$header['filename'] || ($mydir==$to && $this->total_folders==0)) && is_dir($mydir)) ){
     @chmod($mydir,0777);
     $this->total_folders ++;
-    echo "<input name='dfile[]' type='checkbox' value='$mydir' checked> <a href='$mydir' target='_blank'>ç›®å½•: $mydir</a><br>";
+    echo "<input name='dfile[]' type='checkbox' value='$mydir' checked> <a href='$mydir' target='_blank'>Ä¿Â¼: $mydir</a><br>";
    }
 }
 
@@ -265,7 +265,7 @@ if (!($header['external']==0x41FF0010)&&!($header['external']==16)){
     $binary_data = pack('VV', $header['crc'], $header['size']);
     fwrite($fp, $binary_data,8); fclose($fp);
 
-    $gzp = @gzopen($to.$header['filename'].'.gz','rb') or die("Cette archive est compressé–‘");
+    $gzp = @gzopen($to.$header['filename'].'.gz','rb') or die("Cette archive est compressée");
     if(!$gzp) return(-2);
     $fp = @fopen($to.$header['filename'],'wb');
     if(!$fp) return(-1);
@@ -287,7 +287,7 @@ if (!($header['external']==0x41FF0010)&&!($header['external']==16)){
 }
 
 $this->total_files ++;
-echo "<input name='dfile[]' type='checkbox' value='$to$header[filename]' checked> <a href='$to$header[filename]' target='_blank'>æ–‡ä»¶: $to$header[filename]</a><br>";
+echo "<input name='dfile[]' type='checkbox' value='$to$header[filename]' checked> <a href='$to$header[filename]' target='_blank'>ÎÄ¼ş: $to$header[filename]</a><br>";
 
 return true;
 }
@@ -297,45 +297,45 @@ return true;
 
 set_time_limit(0);
 
-if ($_POST['password'] != $password) die("è¾“å…¥çš„å¯†ç ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥ã€‚");
+if ($_POST['password'] != $password) die("ÊäÈëµÄÃÜÂë²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë¡£");
 if(!$_POST["todir"]) $_POST["todir"] = ".";
 $z = new Zip;
 $have_zip_file = 0;
 function start_unzip($tmp_name,$new_name,$checked){
    global $_POST,$z,$have_zip_file;
    $upfile = array("tmp_name"=>$tmp_name,"name"=>$new_name);
-   if(is_file($upfile['tmp_name'])){
+   if(is_file($upfile[tmp_name])){
     $have_zip_file = 1;
-    echo "<br>æ­£åœ¨è§£å‹: <input name='dfile[]' type='checkbox' value='".$upfile['name']."' ".($checked?"checked":"")."> ".$upfile['name']."<br><br>";
-    if(preg_match('/\.zip$/mis',$upfile['name'])){
-     $result=$z->Extract($upfile['tmp_name'],$_POST["todir"]);
+    echo "<br>ÕıÔÚ½âÑ¹: <input name='dfile[]' type='checkbox' value='$upfile[name]' ".($checked?"checked":"")."> $upfile[name]<br><br>";
+    if(preg_match('/\.zip$/mis',$upfile[name])){
+     $result=$z->Extract($upfile[tmp_name],$_POST["todir"]);
      if($result==-1){
-      echo "<br>æ–‡ä»¶ ".$upfile['name']." é”™è¯¯.<br>";
+      echo "<br>ÎÄ¼ş $upfile[name] ´íÎó.<br>";
      }
-     echo "<br>å®Œæˆ,å…±å»ºç«‹ $z->total_folders ä¸ªç›®å½•,$z->total_files ä¸ªæ–‡ä»¶.<br><br><br>";
+     echo "<br>Íê³É,¹²½¨Á¢ $z->total_folders ¸öÄ¿Â¼,$z->total_files ¸öÎÄ¼ş.<br><br><br>";
     }else{
-     echo "<br>".$upfile['name']." ä¸æ˜¯ zip æ–‡ä»¶.<br><br>";   
+     echo "<br>$upfile[name] ²»ÊÇ zip ÎÄ¼ş.<br><br>";   
     }
-    if(realpath($upfile['name'])!=realpath($upfile['tmp_name'])){
-     @unlink($upfile['name']);
-     rename($upfile['tmp_name'],$upfile['name']);
+    if(realpath($upfile[name])!=realpath($upfile[tmp_name])){
+     @unlink($upfile[name]);
+     rename($upfile[tmp_name],$upfile[name]);
     }
    }
 }
 clearstatcache();
 
 start_unzip($_POST["zipfile"],$_POST["zipfile"],0);
-start_unzip($_FILES["upfile"]['tmp_name'],$_FILES["upfile"]['name'],1);
+start_unzip($_FILES["upfile"][tmp_name],$_FILES["upfile"][name],1);
 
 if(!$have_zip_file){
-   echo "<br>è¯·é€‰æ‹©æˆ–ä¸Šä¼ æ–‡ä»¶.<br>";
+   echo "<br>ÇëÑ¡Ôñ»òÉÏ´«ÎÄ¼ş.<br>";
 }
 ?>
 <input name="password" type="hidden" id="password" value="<?=$_POST['password'];?>">
 <input name="myaction" type="hidden" id="myaction" value="dodelete">
-<input name="æŒ‰é’®" type="button" value="è¿”å›" onclick="window.location='<?=$php_self;?>';">
+<input name="°´Å¥" type="button" value="·µ»Ø" onclick="window.location='<?=$_SERVER[PHP_SELF];?>';">
 
-<input type='button' value='åé€‰' onclick='selrev();'> <input type='submit' onclick='return confirm("åˆ é™¤é€‰å®šæ–‡ä»¶?");' value='åˆ é™¤é€‰å®š'>
+<input type='button' value='·´Ñ¡' onclick='selrev();'> <input type='submit' onclick='return confirm("É¾³ıÑ¡¶¨ÎÄ¼ş?");' value='É¾³ıÑ¡¶¨'>
 
 <script language='javascript'>
 function selrev() {
@@ -346,36 +346,36 @@ with(document.myform) {
    }
 }
 }
-alert('å®Œæˆ.');
+alert('Íê³É.');
 </script>
 <?
 
 elseif($_REQUEST["myaction"]=="dodelete"):
 set_time_limit(0);
-if ($_POST['password'] != $password) die("è¾“å…¥çš„å¯†ç ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥ã€‚");
+if ($_POST['password'] != $password) die("ÊäÈëµÄÃÜÂë²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë¡£");
 
 $dfile = $_POST["dfile"]; 
-echo "æ­£åœ¨åˆ é™¤æ–‡ä»¶...<br><br>";
+echo "ÕıÔÚÉ¾³ıÎÄ¼ş...<br><br>";
 if(is_array($dfile)){
    for($i=count($dfile)-1;$i>=0;$i--){
     if(is_file($dfile[$i])){
      if(@unlink($dfile[$i])){
-      echo "å·²åˆ é™¤æ–‡ä»¶: $dfile[$i]<br>";
+      echo "ÒÑÉ¾³ıÎÄ¼ş: $dfile[$i]<br>";
      }else{
-      echo "åˆ é™¤æ–‡ä»¶å¤±è´¥: $dfile[$i]<br>";
+      echo "É¾³ıÎÄ¼şÊ§°Ü: $dfile[$i]<br>";
      }
     }else{
      if(@rmdir($dfile[$i])){
-      echo "å·²åˆ é™¤ç›®å½•: $dfile[$i]<br>";
+      echo "ÒÑÉ¾³ıÄ¿Â¼: $dfile[$i]<br>";
      }else{
-      echo "åˆ é™¤ç›®å½•å¤±è´¥: $dfile[$i]<br>";
+      echo "É¾³ıÄ¿Â¼Ê§°Ü: $dfile[$i]<br>";
      }    
     }
    
    }
 }
-echo "<br>å®Œæˆ.<br><br><input type='button' value='è¿”å›' onclick=\"window.location='$php_self';\"><br><br>
-   <script language='javascript'>('å®Œæˆ.');</script>";
+echo "<br>Íê³É.<br><br><input type='button' value='·µ»Ø' onclick=\"window.location='$_SERVER[PHP_SELF]';\"><br><br>
+   <script language='javascript'>('Íê³É.');</script>";
 
 endif;
 

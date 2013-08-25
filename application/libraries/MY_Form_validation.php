@@ -65,5 +65,18 @@ class MY_Form_validation extends CI_Form_validation {
 			return true;
 		}
 	}
+
+		/**
+	 * Numeric
+	 *
+	 * @access	public
+	 * @param	string
+	 * @return	bool
+	 */
+	public function pinteger($str)
+	{
+		return (bool)preg_match( '/^[0-9]*[1-9][0-9]*$/', $str);
+
+	}
 }	
 ?>

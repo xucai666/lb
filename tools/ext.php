@@ -2,13 +2,14 @@
 // create object
 $zip = new ZipArchive();   
 // open archive 
-if ($zip->open('dede.zip') !== TRUE) {
+$path = realpath(dirname(__file__),'/..');
+if ($zip->open($path.DIRECTORY_SEPARATOR.'lb.zip') !== TRUE) {
     die ("Could not open archive");
 }
 
 
 // extract contents to destination directory
-$zip->extractTo('/home/vol11/0fees.net/fees0_12560993/htdocs/dede/');
+$zip->extractTo($path);
 
 // close archive
 // print success message

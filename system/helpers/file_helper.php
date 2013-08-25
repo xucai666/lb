@@ -296,7 +296,7 @@ if ( ! function_exists('get_file_info'))
 			switch ($key)
 			{
 				case 'name':
-					$fileinfo['name'] = iconv("GB2312", "UTF-8", substr(strrchr($file, DIRECTORY_SEPARATOR), 1));
+					$fileinfo['name'] = substr(strrchr($file, DIRECTORY_SEPARATOR), 1);
 					break;
 				case 'server_path':
 					$fileinfo['server_path'] = $file;

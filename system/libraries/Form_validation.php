@@ -652,10 +652,8 @@ class CI_Form_validation {
 			{
 				if ( ! isset($this->_error_messages[$rule]))
 				{
-
 					if (FALSE === ($line = $this->CI->lang->line($rule)))
 					{
-				
 						$line = 'Unable to access an error message corresponding to your field name.';
 					}
 				}
@@ -1145,21 +1143,6 @@ class CI_Form_validation {
 		return (bool)preg_match( '/^[\-+]?[0-9]*\.?[0-9]+$/', $str);
 
 	}
-
-	/**
-	 * Numeric
-	 *
-	 * @access	public
-	 * @param	string
-	 * @return	bool
-	 */
-	public function pinteger($str)
-	{
-		return (bool)preg_match( '/^[0-9]*[1-9][0-9]*$/', $str);
-
-	}
-
-
 
 	// --------------------------------------------------------------------
 

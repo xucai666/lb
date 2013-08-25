@@ -26,7 +26,7 @@
  */
 class MY_Pagination extends CI_Pagination {
 
-	
+	var $page_query_string = true;
 	var $inputsearch = FALSE;     // Can input number to search
 	var $input_tag_open		= '<kbd>'; 
 	var $input_tag_close		= '</kbd>';

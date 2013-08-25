@@ -1,20 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-24 03:30:22
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-25 01:30:06
          compiled from "application\templates\front\blue\zh\search.htm" */ ?>
-<?php /*%%SmartyHeaderCode:22639521828ce5e20c4-26001943%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:103465218d561b40050-45013023%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '34d2b13f9b1ff82f3c54db4233a029f15e0420ea' => 
     array (
       0 => 'application\\templates\\front\\blue\\zh\\search.htm',
-      1 => 1377056287,
+      1 => 1377394205,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '22639521828ce5e20c4-26001943',
+  'nocache_hash' => '103465218d561b40050-45013023',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5218d561c9a8b0_84388440',
   'variables' => 
   array (
     'dir_front' => 0,
@@ -24,10 +26,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'page_link' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_521828ce7893b1_15936963',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_521828ce7893b1_15936963')) {function content_521828ce7893b1_15936963($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_front']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_5218d561c9a8b0_84388440')) {function content_5218d561c9a8b0_84388440($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_front']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
 <table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
@@ -57,12 +57,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <tr>
   <td width="691" colspan="3" class="bian1 search_list" valign="top">
        <div align="center">
-        <form method="get" action="<?php echo func_site_url(array('segments'=>'search'),$_smarty_tpl);?>
-">
-            请输入关键字：<input type="text" name="title" value="<?php echo $_GET['title'];?>
-">
-                <input type="submit" name="search" value="搜索">
-            </form> 
+       
             </div> 
 
         <ul >

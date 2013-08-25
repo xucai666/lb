@@ -139,7 +139,7 @@ class CI_Router {
 		}
 
 		$this->routes = ( ! isset($route) OR ! is_array($route)) ? array() : $route;
-		
+		unset($route);
 
 		// Set the default controller so we can display it in the event
 		// the URI doesn't correlated to a valid controller.

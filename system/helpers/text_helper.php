@@ -40,7 +40,7 @@
  */
 if ( ! function_exists('word_limiter'))
 {
-	function word_limiter($str, $limit = 100, $end_char = '…')
+	function word_limiter($str, $limit = 100, $end_char = '&#8230;')
 	{
 		if (trim($str) == '')
 		{
@@ -74,7 +74,7 @@ if ( ! function_exists('word_limiter'))
  */
 if ( ! function_exists('character_limiter'))
 {
-	function character_limiter($str, $n = 500, $end_char = '…')
+	function character_limiter($str, $n = 500, $end_char = '&#8230;')
 	{
 		if (strlen($str) < $n)
 		{
@@ -246,7 +246,7 @@ if ( ! function_exists('word_censor'))
 		$str = ' '.$str.' ';
 
 		// \w, \b and a few others do not match on a unicode character
-		// set for performance reasons. As a result words like 眉ber
+		// set for performance reasons. As a result words like über
 		// will not match on a word boundary. Instead, we'll assume that
 		// a bad word will be bookeneded by any of these characters.
 		$delim = '[-_\'\"`(){}<>\[\]|!?@#%&,.:;^~*+=\/ 0-9\n\r\t]';
