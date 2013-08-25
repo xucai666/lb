@@ -29,7 +29,7 @@ class Search_model  extends CI_Model{
 	 */
 	function get_url($m){
 		$ar = $this->url_define();
-		return site_url($ar[$m['tb']].$m['id']).'.htm';
+		return site_url($ar[$m['tb']].$m['id']);
 	}
 
 	/**

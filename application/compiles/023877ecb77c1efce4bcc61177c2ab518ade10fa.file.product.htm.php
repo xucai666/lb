@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-24 13:59:00
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-25 11:24:49
          compiled from "application\templates\front\blue\zh\product.htm" */ ?>
 <?php /*%%SmartyHeaderCode:179275218bc243ae000-83592250%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '023877ecb77c1efce4bcc61177c2ab518ade10fa' => 
     array (
       0 => 'application\\templates\\front\\blue\\zh\\product.htm',
-      1 => 1377097657,
+      1 => 1377429868,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5218bc2455b1c5_35619382',
   'variables' => 
   array (
     'dir_front' => 0,
@@ -22,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ci_uri' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5218bc2455b1c5_35619382',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5218bc2455b1c5_35619382')) {function content_5218bc2455b1c5_35619382($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_front']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -41,7 +41,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
        
         <td  style="background:url(<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /daohanhh_11.jpg) repeat-x; padding-left:20px; height:25px" class="hong" width="746">
-      <?php echo func_tag(array('t_id'=>49,'where'=>("id=").(((($tmp = @end(explode(",",base64_decode($_smarty_tpl->tpl_vars['ci_uri']->value[3]))))===null||$tmp==='' ? 2 : $tmp))),'html_type'=>'detail'),$_smarty_tpl);?>
+      <?php echo func_tag(array('t_id'=>49,'where'=>("id=").(((($tmp = @end(explode(",",func_my_encrypt($_smarty_tpl->tpl_vars['ci_uri']->value[3],'DECODE'))))===null||$tmp==='' ? 2 : $tmp))),'html_type'=>'detail'),$_smarty_tpl);?>
 
 
         </td>
@@ -52,7 +52,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <tr>
            <td  valign="top"  align="center"  class="product">
             <ul>
-	         	 <?php echo func_tag(array('t_id'=>40,'where'=>"p_pid like '".((string)base64_decode($_smarty_tpl->tpl_vars['ci_uri']->value[3]))."%' and p_name like '%".((string)$_REQUEST['p_name'])."%'"),$_smarty_tpl);?>
+	         	 <?php echo func_tag(array('t_id'=>40,'where'=>"p_pid like '".((string)func_my_encrypt($_smarty_tpl->tpl_vars['ci_uri']->value[3],'DECODE'))."%' and p_name like '%".((string)$_REQUEST['p_name'])."%'"),$_smarty_tpl);?>
 
             </ul>
 			  </td>
@@ -62,7 +62,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </table>
 		<div class="page" align="center">
 
- <?php echo func_tag_pager(array('t_id'=>40,'where'=>"p_pid like '".((string)base64_decode($_smarty_tpl->tpl_vars['ci_uri']->value[3]))."%' and p_name like '%".((string)$_REQUEST['p_name'])."%'"),$_smarty_tpl);?>
+ <?php echo func_tag_pager(array('t_id'=>40,'where'=>"p_pid like '".((string)func_my_encrypt($_smarty_tpl->tpl_vars['ci_uri']->value[3],'DECODE'))."%' and p_name like '%".((string)$_REQUEST['p_name'])."%'"),$_smarty_tpl);?>
 
 
     </div>		</td>

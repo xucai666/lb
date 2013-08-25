@@ -4,3 +4,8 @@
 3、数据文件:/database/lb_cn.sql,CI配置文件路径/application/config/config.php;
 4、管理员账号:admin2，密码a；
 5、本系统完全开源，如有商业需要，请联系QQ:150672834；
+6、更新核心文件：
+
+1). system\database\drivers\mysql\mysql_driver.php
+
+2). system\database\DB_active_rec.php

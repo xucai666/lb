@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"re",
+				"no-repeat"
+			],
+			[
 				"str_rep",
 				"str_replace"
 			],
@@ -32,18 +40,34 @@
 	"buffers":
 	[
 		{
-			"file": "application/core/MY_Config.php",
+			"file": "application/config/config.php",
 			"settings":
 			{
-				"buffer_size": 2016,
+				"buffer_size": 13968,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/config/config.php",
+			"file": "application/controllers/front/search.php",
 			"settings":
 			{
-				"buffer_size": 13966,
+				"buffer_size": 1419,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/models/common_model.php",
+			"settings":
+			{
+				"buffer_size": 16321,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/libraries/tpl.php",
+			"settings":
+			{
+				"buffer_size": 13953,
 				"line_ending": "Windows"
 			}
 		}
@@ -84,20 +108,41 @@
 	},
 	"file_history":
 	[
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/index.htm",
-		"/E/phpnow/htdocs/lb/system/core/Config.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/top.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/search.htm",
+		"/E/phpnow/htdocs/lb/application/models/search_model.php",
 		"/E/phpnow/htdocs/lb/application/core/MY_Input.php",
-		"/E/phpnow/htdocs/lb/application/core/MY_Router.php",
-		"/E/phpnow/htdocs/lb/application/libraries/MY_Pagination.php",
-		"/E/phpnow/htdocs/lb/application/libraries/MY_Form_validation.php",
 		"/E/phpnow/htdocs/lb/application/core/MY_Config.php",
+		"/E/phpnow/htdocs/lb/application/core/MY_Router.php",
+		"/E/phpnow/htdocs/lb/.htaccess",
+		"/E/phpnow/htdocs/lb/application/config/config.php",
+		"/E/phpnow/htdocs/lb/application/config/routes.php",
+		"/E/phpnow/htdocs/lb/application/libraries/cor_page.php",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/pri.sublime-snippet",
+		"/E/phpnow/htdocs/lb/application/libraries/curl.php",
+		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product.htm",
+		"/E/phpnow/htdocs/lb/application/config/config.default",
+		"/E/phpnow/htdocs/lb/application/config/constants.php",
+		"/E/phpnow/htdocs/lb/syntaxhighlighter_3.0.83/compass/config.rb",
+		"/E/phpnow/htdocs/lb/application/core/MY_DB_mysql_driver.php",
+		"/E/phpnow/htdocs/lb/application/core/MY_Loader.php",
+		"/E/phpnow/htdocs/lb/application/core/MY_mysql_driver.php",
+		"/E/phpnow/htdocs/lb/system/core/Common.php",
+		"/E/phpnow/htdocs/lb/application/controllers/front/search.php",
+		"/E/phpnow/htdocs/lb/application/models/mdata_model.php",
+		"/E/phpnow/htdocs/lb/application/models/common_model.php",
+		"/E/phpnow/htdocs/lb/system/database/DB_active_rec.php",
+		"/E/phpnow/htdocs/lb/application/system/database/drivers/mysql/mysql_driver.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/top.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/css/lb.css",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/index.htm",
+		"/E/phpnow/htdocs/lb/application/libraries/MY_Pagination.php",
+		"/E/phpnow/htdocs/lb/system/libraries/Pagination.php",
+		"/E/phpnow/htdocs/lb/system/core/Config.php",
+		"/E/phpnow/htdocs/lb/application/libraries/MY_Form_validation.php",
 		"/E/phpnow/htdocs/lb/system/helpers/text_helper.php",
 		"/E/phpnow/htdocs/lb/index.php",
 		"/E/phpnow/htdocs/lb/readme.txt",
-		"/E/phpnow/htdocs/lb/application/models/common_model.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/css/lb.css",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/core.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/images/lb.css",
 		"/E/phpnow/htdocs/lb/swfupload/upload.php",
@@ -107,7 +152,6 @@
 		"/E/phpnow/htdocs/lb/application/libraries/cor_db.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/backend_style.css",
 		"/E/phpnow/htdocs/lb/system/core/Lang.php",
-		"/E/phpnow/htdocs/lb/application/libraries/cor_page.php",
 		"/E/phpnow/htdocs/lb/application/config/autoload.php",
 		"/E/phpnow/htdocs/lb/system/core/Loader.php",
 		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_lang.php",
@@ -121,11 +165,8 @@
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/mdata_list.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/product_list.htm",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/fields.php",
-		"/E/phpnow/htdocs/lb/system/database/DB_active_rec.php",
 		"/E/phpnow/htdocs/lb/application/models/logs_model.php",
-		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/pri.sublime-snippet",
 		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/smt.sublime-snippet",
-		"/E/phpnow/htdocs/lb/application/models/mdata_model.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/fields_list.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/fields_add.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/modules_add.htm",
@@ -135,14 +176,11 @@
 		"/E/phpnow/htdocs/lb/system/libraries/Form_validation.php",
 		"/E/phpnow/htdocs/lb/fckeditor/fckconfig.js.dump",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_cart.htm",
-		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/js/core.js",
 		"/E/phpnow/htdocs/lb/swfupload/libs/mysql.class.php",
 		"/E/phpnow/htdocs/lb/application/controllers/front/common.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_view.htm",
 		"/E/phpnow/htdocs/lb/application/config/database.php",
-		"/E/phpnow/htdocs/lb/system/core/Common.php",
-		"/E/phpnow/htdocs/lb/application/config/config.php",
 		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
 		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/PHP.sublime-settings",
 		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
@@ -166,6 +204,8 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"E:\\phpnow\\htdocs\\lb\\application",
+			"E:\\phpnow\\htdocs\\lb\\system",
 			"E:\\phpnow\\htdocs\\lb\\application\\libraries",
 			"E:\\phpnow\\htdocs\\lb\\application",
 			"E:\\phpnow\\htdocs\\lb\\application\\templates"
@@ -176,6 +216,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"nav",
+			".htm",
+			"view",
+			".htm",
+			"enable",
+			"ar_where",
+			"fetch_all",
+			".search",
+			"y=",
+			"x=",
+			"enable",
+			"CI_Pagination",
+			"page_query_string",
+			"total",
 			"enabe",
 			"path_info",
 			"enable_query_strings",
@@ -236,51 +290,23 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "application/core/MY_Config.php",
-					"settings":
-					{
-						"buffer_size": 2016,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1297,
-								1297
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 684.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "application/config/config.php",
 					"settings":
 					{
-						"buffer_size": 13966,
+						"buffer_size": 13968,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1819,
-								1819
+								2038,
+								2038
 							]
 						],
 						"settings":
@@ -289,7 +315,86 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 792.0,
+						"translation.y": 846.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "application/controllers/front/search.php",
+					"settings":
+					{
+						"buffer_size": 1419,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1130,
+								1130
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 702.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "application/models/common_model.php",
+					"settings":
+					{
+						"buffer_size": 16321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12184,
+								12184
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 9090.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "application/libraries/tpl.php",
+					"settings":
+					{
+						"buffer_size": 13953,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4329,
+								4336
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4194.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -303,7 +408,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"layout":
 	{
@@ -339,12 +444,68 @@
 		"selected_items":
 		[
 			[
-				"top.htm",
-				"application/templates/front/blue/zh/top.htm"
+				"tpl.php",
+				"application/libraries/tpl.php"
+			],
+			[
+				"common_model",
+				"application/models/common_model.php"
+			],
+			[
+				"search.htm",
+				"application/templates/front/blue/zh/search.htm"
+			],
+			[
+				"search.php",
+				"application/controllers/front/search.php"
+			],
+			[
+				"search_mod",
+				"application/models/search_model.php"
+			],
+			[
+				"config.pp",
+				"application/config/config.php"
+			],
+			[
+				"cor_page.php",
+				"application/libraries/cor_page.php"
 			],
 			[
 				"config.php",
 				"application/config/config.php"
+			],
+			[
+				"product.htm",
+				"application/templates/front/blue/zh/product.htm"
+			],
+			[
+				"product.php",
+				"application/controllers/front/product.php"
+			],
+			[
+				"config.ph",
+				"application/config/config.php"
+			],
+			[
+				"config.",
+				"syntaxhighlighter_3.0.83/compass/config.rb"
+			],
+			[
+				"mdata_model.php",
+				"application/models/mdata_model.php"
+			],
+			[
+				"zh/index.htm",
+				"application/templates/front/blue/zh/index.htm"
+			],
+			[
+				"lb.css",
+				"application/templates/front/blue/zh/css/lb.css"
+			],
+			[
+				"top.htm",
+				"application/templates/front/blue/zh/top.htm"
 			],
 			[
 				"my_config",
@@ -353,14 +514,6 @@
 			[
 				"text_helper.php",
 				"system/helpers/text_helper.php"
-			],
-			[
-				"common_model",
-				"application/models/common_model.php"
-			],
-			[
-				"lb.css",
-				"application/templates/front/blue/zh/css/lb.css"
 			],
 			[
 				"product.ht",
@@ -387,10 +540,6 @@
 				"application/libraries/cor_db.php"
 			],
 			[
-				"cor_page.php",
-				"application/libraries/cor_page.php"
-			],
-			[
 				"item_back",
 				"application/language/zh/item_backend_lang.php"
 			],
@@ -413,10 +562,6 @@
 			[
 				"core_db",
 				"application/errors/error_db.php"
-			],
-			[
-				"product.htm",
-				"application/templates/front/blue/zh/product.htm"
 			],
 			[
 				"mdata_list.htm",
@@ -497,10 +642,6 @@
 			[
 				"mdata_list.",
 				"application/templates/backend/blue/mdata_list.htm"
-			],
-			[
-				"product.php",
-				"application/controllers/front/product.php"
 			],
 			[
 				"product_cart.htm",

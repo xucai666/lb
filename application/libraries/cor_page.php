@@ -366,8 +366,8 @@ class Cor_page{
 	
 	
 	 	
-	 function my_encrypt($string, $operation) { 
-	 	if(empty($string)) show_error('未传值');
+	 function my_encrypt($string=null, $operation) { 
+	 	if(empty($string)) return '';
 	 	if(empty($operation)) show_error('加密类型未设置');
 	 	$key  = $this->config['encryption_key'];	 	
 		$keylength = strlen($key);

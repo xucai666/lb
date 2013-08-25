@@ -252,9 +252,11 @@ function func_get_nav($parameter){
 	$where = $where?$where:"1=1";
 	$id = $id?$id:$CI->uri->segment(3);
 	$r =  $CI->Common_model->get_nav($tb,$id,$title_field,$where);
+
 	foreach($r as $k=>$v){
 		$rl[$k] = anchor(current($v),'['.$CI->lang->language[$k].']&nbsp;'.next($v));
 	}
+	
 
 	return str_replace(array('%Prev','%Next'),$rl,$html);
 }
@@ -357,7 +359,7 @@ function func_state($array){
 	return $state==1 ? 'yes':'no';
 }
 
-function func_my_encrypt($string,$direction){
+function func_my_encrypt($string=null,$direction){
 	$cor_page = &get_cor_page();
 	return $cor_page->my_encrypt($string,$direction);
 }

@@ -37,7 +37,7 @@ class MY_Input extends CI_Input {
 	// ------------------------------------------------------------------------
 
 	/**
-	* Set cookie
+	* Set cookie，立即生效
 	*
 	* Accepts six parameter, or you can submit an associative
 	* array in the first parameter containing all the values.
