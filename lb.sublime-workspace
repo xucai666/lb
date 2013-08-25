@@ -39,38 +39,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "application/config/config.php",
-			"settings":
-			{
-				"buffer_size": 13968,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/controllers/front/search.php",
-			"settings":
-			{
-				"buffer_size": 1419,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/models/common_model.php",
-			"settings":
-			{
-				"buffer_size": 16321,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/libraries/tpl.php",
-			"settings":
-			{
-				"buffer_size": 13953,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -108,19 +76,47 @@
 	},
 	"file_history":
 	[
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/search.htm",
-		"/E/phpnow/htdocs/lb/application/models/search_model.php",
-		"/E/phpnow/htdocs/lb/application/core/MY_Input.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_order.htm",
 		"/E/phpnow/htdocs/lb/application/core/MY_Config.php",
 		"/E/phpnow/htdocs/lb/application/core/MY_Router.php",
-		"/E/phpnow/htdocs/lb/.htaccess",
+		"/E/phpnow/htdocs/lb/application/controllers/front/member.php",
+		"/E/phpnow/htdocs/lb/application/controllers/front/alipay.php",
+		"/E/phpnow/htdocs/lb/application/views/alipay_from.php",
+		"/E/phpnow/htdocs/lb/application/helpers/MY_url_helper.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/top.htm",
+		"/E/phpnow/htdocs/lb/system/helpers/form_helper.php",
+		"/E/phpnow/htdocs/lb/system/core/Loader.php",
+		"/E/phpnow/htdocs/lb/application/models/member_model.php",
+		"/E/phpnow/htdocs/lb/tools/alipay/alipay.config.php",
+		"/E/phpnow/htdocs/lb/application/models/alipay_model.php",
+		"/E/phpnow/htdocs/ec/includes/modules/payment/alipay.php",
+		"/E/phpnow/htdocs/lb/tools/unpack.php.dump",
+		"/E/phpnow/htdocs/lb/application/controllers/front/common.php",
+		"/E/phpnow/htdocs/lb/application/controllers/admin.php",
+		"/E/phpnow/htdocs/lb/application/controllers/alipay.php",
+		"/E/phpnow/htdocs/lb/application/core/MY_Input.php",
+		"/E/phpnow/htdocs/lb/system/core/Router.php",
+		"/E/phpnow/htdocs/lb/application/libraries/MY_Pagination.php",
+		"/E/phpnow/htdocs/lb/application/libraries/MY_Form_validation.php",
+		"/E/phpnow/htdocs/lb/application/controllers/test.php",
 		"/E/phpnow/htdocs/lb/application/config/config.php",
-		"/E/phpnow/htdocs/lb/application/config/routes.php",
+		"/E/phpnow/htdocs/lb/docs/待完成.txt.dump",
+		"/E/phpnow/htdocs/lb/readme.txt",
+		"/E/phpnow/htdocs/lb/docs/待完成.txt",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/left_product.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product.htm",
+		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
 		"/E/phpnow/htdocs/lb/application/libraries/cor_page.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/product_list.htm",
+		"/E/phpnow/htdocs/lb/application/controllers/front/search.php",
+		"/E/phpnow/htdocs/lb/application/models/common_model.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/search.htm",
+		"/E/phpnow/htdocs/lb/application/models/search_model.php",
+		"/E/phpnow/htdocs/lb/.htaccess",
+		"/E/phpnow/htdocs/lb/application/config/routes.php",
 		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/pri.sublime-snippet",
 		"/E/phpnow/htdocs/lb/application/libraries/curl.php",
 		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product.htm",
 		"/E/phpnow/htdocs/lb/application/config/config.default",
 		"/E/phpnow/htdocs/lb/application/config/constants.php",
 		"/E/phpnow/htdocs/lb/syntaxhighlighter_3.0.83/compass/config.rb",
@@ -128,21 +124,15 @@
 		"/E/phpnow/htdocs/lb/application/core/MY_Loader.php",
 		"/E/phpnow/htdocs/lb/application/core/MY_mysql_driver.php",
 		"/E/phpnow/htdocs/lb/system/core/Common.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/search.php",
 		"/E/phpnow/htdocs/lb/application/models/mdata_model.php",
-		"/E/phpnow/htdocs/lb/application/models/common_model.php",
 		"/E/phpnow/htdocs/lb/system/database/DB_active_rec.php",
 		"/E/phpnow/htdocs/lb/application/system/database/drivers/mysql/mysql_driver.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/top.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/css/lb.css",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/index.htm",
-		"/E/phpnow/htdocs/lb/application/libraries/MY_Pagination.php",
 		"/E/phpnow/htdocs/lb/system/libraries/Pagination.php",
 		"/E/phpnow/htdocs/lb/system/core/Config.php",
-		"/E/phpnow/htdocs/lb/application/libraries/MY_Form_validation.php",
 		"/E/phpnow/htdocs/lb/system/helpers/text_helper.php",
 		"/E/phpnow/htdocs/lb/index.php",
-		"/E/phpnow/htdocs/lb/readme.txt",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/core.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/images/lb.css",
 		"/E/phpnow/htdocs/lb/swfupload/upload.php",
@@ -153,7 +143,6 @@
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/backend_style.css",
 		"/E/phpnow/htdocs/lb/system/core/Lang.php",
 		"/E/phpnow/htdocs/lb/application/config/autoload.php",
-		"/E/phpnow/htdocs/lb/system/core/Loader.php",
 		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_lang.php",
 		"/E/phpnow/htdocs/lb/application/helpers/cor_lang_helper.php",
 		"/E/phpnow/htdocs/lb/application/language/zh/item_front_lang.php",
@@ -163,7 +152,6 @@
 		"/E/phpnow/htdocs/lb/application/models/modules_model.php",
 		"/E/phpnow/htdocs/lb/application/models/fields_model.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/mdata_list.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/product_list.htm",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/fields.php",
 		"/E/phpnow/htdocs/lb/application/models/logs_model.php",
 		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/smt.sublime-snippet",
@@ -172,13 +160,11 @@
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/modules_add.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_register.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_center.htm",
-		"/E/phpnow/htdocs/lb/application/controllers/front/member.php",
 		"/E/phpnow/htdocs/lb/system/libraries/Form_validation.php",
 		"/E/phpnow/htdocs/lb/fckeditor/fckconfig.js.dump",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_cart.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/js/core.js",
 		"/E/phpnow/htdocs/lb/swfupload/libs/mysql.class.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/common.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_view.htm",
 		"/E/phpnow/htdocs/lb/application/config/database.php",
 		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
@@ -201,9 +187,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 96.0,
 		"where_history":
 		[
+			"E:\\phpnow\\htdocs\\lb\\system",
 			"E:\\phpnow\\htdocs\\lb\\application",
 			"E:\\phpnow\\htdocs\\lb\\system",
 			"E:\\phpnow\\htdocs\\lb\\application\\libraries",
@@ -216,6 +203,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"order",
+			"担保",
+			"alipay.com",
+			"/index.php",
+			"www.goocarlos.com",
+			"_validate_request",
+			"valid_re",
+			"DECODE",
+			"my_encrypt",
+			"routes",
 			"nav",
 			".htm",
 			"view",
@@ -290,115 +287,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "application/config/config.php",
-					"settings":
-					{
-						"buffer_size": 13968,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2038,
-								2038
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 846.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "application/controllers/front/search.php",
-					"settings":
-					{
-						"buffer_size": 1419,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1130,
-								1130
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 702.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "application/models/common_model.php",
-					"settings":
-					{
-						"buffer_size": 16321,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								12184,
-								12184
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 9090.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "application/libraries/tpl.php",
-					"settings":
-					{
-						"buffer_size": 13953,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4329,
-								4336
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 4194.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -443,6 +333,46 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"top.htm",
+				"application/templates/front/blue/zh/top.htm"
+			],
+			[
+				"member.php",
+				"application/controllers/front/member.php"
+			],
+			[
+				"pay.",
+				"application/views/alipay_from.php"
+			],
+			[
+				"member_order.",
+				"application/templates/front/blue/zh/member_order.htm"
+			],
+			[
+				"config/config",
+				"application/config/config.php"
+			],
+			[
+				"tpl.pp",
+				"application/libraries/tpl.php"
+			],
+			[
+				"cor_page.p",
+				"application/libraries/cor_page.php"
+			],
+			[
+				"product.ht",
+				"application/templates/front/blue/zh/product.htm"
+			],
+			[
+				"left_pro",
+				"application/templates/front/blue/zh/left_product.htm"
+			],
+			[
+				"product_",
+				"application/templates/backend/blue/product_list.htm"
+			],
 			[
 				"tpl.php",
 				"application/libraries/tpl.php"
@@ -504,20 +434,12 @@
 				"application/templates/front/blue/zh/css/lb.css"
 			],
 			[
-				"top.htm",
-				"application/templates/front/blue/zh/top.htm"
-			],
-			[
 				"my_config",
 				"application/core/MY_Config.php"
 			],
 			[
 				"text_helper.php",
 				"system/helpers/text_helper.php"
-			],
-			[
-				"product.ht",
-				"application/templates/front/blue/zh/product.htm"
 			],
 			[
 				"core.js",
