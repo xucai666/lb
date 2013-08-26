@@ -39,6 +39,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/E/phpnow/php-5.2.12-Win32/php-apache2handler.ini",
+			"settings":
+			{
+				"buffer_size": 50129,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -187,7 +195,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 96.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"E:\\phpnow\\htdocs\\lb\\system",
@@ -203,6 +211,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"error_report",
+			"errro_report",
 			"order",
 			"担保",
 			"alipay.com",
@@ -287,8 +297,35 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/E/phpnow/php-5.2.12-Win32/php-apache2handler.ini",
+					"settings":
+					{
+						"buffer_size": 50129,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16336,
+								16336
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 6563.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
