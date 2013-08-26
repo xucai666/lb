@@ -535,14 +535,14 @@
     ),
     38 => 
     array (
-      'r_id' => '114',
-      'r_title' => '会员注册',
+      'r_id' => '115',
+      'r_title' => '会员管理',
       'r_pid' => '78',
-      'r_name' => '会员注册',
+      'r_name' => '会员管理',
       'r_order' => '1',
       'r_display' => '1',
       'r_url' => 'backend/mdata/action_set_module/74',
-      'r_code' => '78,114',
+      'r_code' => '78,115',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => '1',

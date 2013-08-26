@@ -39,14 +39,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/E/phpnow/php-5.2.12-Win32/php-apache2handler.ini",
-			"settings":
-			{
-				"buffer_size": 50129,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -84,6 +76,9 @@
 	},
 	"file_history":
 	[
+		"/E/phpnow/htdocs/lb/tools/filemanager-2006-01-08/example.php",
+		"/E/phpnow/php-5.2.12-Win32/php-apache2handler.ini",
+		"/E/phpnow/htdocs/lb/tools/wfb-2008-09-09/browser.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/member_order.htm",
 		"/E/phpnow/htdocs/lb/application/core/MY_Config.php",
 		"/E/phpnow/htdocs/lb/application/core/MY_Router.php",
@@ -297,35 +292,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/E/phpnow/php-5.2.12-Win32/php-apache2handler.ini",
-					"settings":
-					{
-						"buffer_size": 50129,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								16336,
-								16336
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 6563.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
