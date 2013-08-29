@@ -76,6 +76,20 @@
 	},
 	"file_history":
 	[
+		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
+		"/E/phpnow/htdocs/lb/application/libraries/cor_auth.php",
+		"/E/phpnow/htdocs/lb/database/lb_cn.sql",
+		"/E/phpnow/htdocs/lb/installed/index.php",
+		"/E/phpnow/htdocs/lb/tools/test.php",
+		"/E/phpnow/htdocs/lb/installed/index_2.php",
+		"/E/phpnow/htdocs/lb/database/lb_en.sql",
+		"/E/phpnow/htdocs/lb/database/view.txt",
+		"/E/phpnow/htdocs/lb/installed/index_3.php",
+		"/E/phpnow/htdocs/lb/tools/unpack.php.dump",
+		"/E/phpnow/htdocs/lb/tools/rm.php",
+		"/E/phpnow/htdocs/lb/tools/zip.php",
+		"/E/phpnow/htdocs/lb/tools/ext.php",
+		"/E/phpnow/htdocs/lb/tools/unpack.php",
 		"/E/phpnow/htdocs/lb/tools/filemanager-2006-01-08/example.php",
 		"/E/phpnow/php-5.2.12-Win32/php-apache2handler.ini",
 		"/E/phpnow/htdocs/lb/tools/wfb-2008-09-09/browser.php",
@@ -93,7 +107,6 @@
 		"/E/phpnow/htdocs/lb/tools/alipay/alipay.config.php",
 		"/E/phpnow/htdocs/lb/application/models/alipay_model.php",
 		"/E/phpnow/htdocs/ec/includes/modules/payment/alipay.php",
-		"/E/phpnow/htdocs/lb/tools/unpack.php.dump",
 		"/E/phpnow/htdocs/lb/application/controllers/front/common.php",
 		"/E/phpnow/htdocs/lb/application/controllers/admin.php",
 		"/E/phpnow/htdocs/lb/application/controllers/alipay.php",
@@ -108,7 +121,6 @@
 		"/E/phpnow/htdocs/lb/docs/待完成.txt",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/left_product.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product.htm",
-		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
 		"/E/phpnow/htdocs/lb/application/libraries/cor_page.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/product_list.htm",
 		"/E/phpnow/htdocs/lb/application/controllers/front/search.php",
@@ -193,6 +205,7 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"E:\\phpnow\\htdocs\\lb\\installed",
 			"E:\\phpnow\\htdocs\\lb\\system",
 			"E:\\phpnow\\htdocs\\lb\\application",
 			"E:\\phpnow\\htdocs\\lb\\system",
@@ -206,6 +219,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"fetch_auth",
+			"drop",
 			"error_report",
 			"errro_report",
 			"order",
@@ -339,6 +354,14 @@
 		"selected_items":
 		[
 			[
+				"cor_auth",
+				"application/libraries/cor_auth.php"
+			],
+			[
+				"tpl.php",
+				"application/libraries/tpl.php"
+			],
+			[
 				"top.htm",
 				"application/templates/front/blue/zh/top.htm"
 			],
@@ -377,10 +400,6 @@
 			[
 				"product_",
 				"application/templates/backend/blue/product_list.htm"
-			],
-			[
-				"tpl.php",
-				"application/libraries/tpl.php"
 			],
 			[
 				"common_model",

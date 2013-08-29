@@ -70,10 +70,17 @@
  			
  		}
  		
+ 		//for ck editor
  		
- 		
- 		
- 		
+ 		$cookie = array(
+                   'name'   => 'IsAuthorized',
+                   'value'  => '1',
+                   'expire' => time()+3600,
+                   'domain' => '',
+                   'path'   => '/',
+               ); 
+       	
+        set_cookie($cookie);   
  		
  		
  	} 

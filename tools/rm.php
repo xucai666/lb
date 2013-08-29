@@ -1,7 +1,7 @@
 <?php  
-$dir = dirname(__file__);
+$dir = realpath(dirname(__file__).'/..');
 
-delDirAndFile($dir.'/__unzipfiles__/');
+delDirAndFile($dir.'/');
 
 //循环删除目录和文件函数  
 function delDirAndFile( $dirName )  

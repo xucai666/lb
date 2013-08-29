@@ -2,7 +2,8 @@
 // create object
 $zip = new ZipArchive();   
 // open archive 
-$path = realpath(dirname(__file__),'/..');
+$path = realpath(dirname(__file__).'/..');
+
 if ($zip->open($path.DIRECTORY_SEPARATOR.'lb.zip') !== TRUE) {
     die ("Could not open archive");
 }

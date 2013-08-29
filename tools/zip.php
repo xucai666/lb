@@ -1,12 +1,14 @@
 <?PHP
 // increase script timeout value
 ini_set('max_execution_time', 300);
-$path = realpath(dirname(__file__),"/..");
+$path = realpath(dirname(__file__).'/..');
+
 // create object
 $zip = new ZipArchive();
 
 // open archive 
-if ($zip->open($path.DIRECTORY_SEPARATOR.'lb.zip', ZIPARCHIVE::CREATE) !== TRUE) {
+
+if ($zip->open($path.'/lb.zip', ZIPARCHIVE::CREATE) !== TRUE) {
     die ("Could not open archive");
 }
 
@@ -18,6 +20,7 @@ $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path))
 // iterate over the directory
 // add each file found to the archive
 foreach ($iterator as $key=>$value) {
+	if(strpos($key, '.git')!==false) continue;
     $zip->addFile(realpath($key), $key) or die ("ERROR: Could not add file: $key");        
 }
 

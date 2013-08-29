@@ -476,17 +476,81 @@ class Common_model  extends CI_Model{
 	 * 编辑器
 	 */
 	function editor($v,$i='content',$tool_bar='Basic'){
+			return   $this->ckeditor($v,$i,$tool_bar);
+	}
+
+	function fckeditor($v,$i='content',$tool_bar='Basic'){
+
 		empty($this->fckeditor) && $this->load->library('FCKeditor');
-		$config = array(
-				'i'=>$i,
-	 			't'=>$tool_bar,
-	 			'v'=>$v,
-	 			'w'=>'600',
-	 			'h'=>'400',
-	 			'ToolbarStartExpanded'=>1,
-	 			'DefaultLanguage'=>lang_get()=='english'?'en':'zh-cn',
+			$config = array(
+					'i'=>$i,
+		 			't'=>$tool_bar,
+		 			'v'=>$v,
+		 			'w'=>'600',
+		 			'h'=>'400',
+		 			'ToolbarStartExpanded'=>1,
+		 			'DefaultLanguage'=>lang_get()=='english'?'en':'zh-cn',
+			);
+			return  $this->fckeditor->CreateHtml($config);
+	}
+
+
+	function ckeditor($v,$i='content',$tool_bar='Basic'){
+		if(!function_exists('display_ckeditor')){
+			$this->load->helper('ckeditor');
+		}
+
+		$cfg = array(
+		
+			//ID of the textarea that will be replaced
+			'id' 	=> 	$i,
+			'path'	=>	'js/ckeditor',
+			'value'	=>	$v,
+			
+						//Optionnal values
+			'config' => array(
+				'width' 	=> 	"800px",	//Setting a custom width
+				'height' 	=> 	'400px',	//Setting a custom height
+				'toolbar' 	=> 	$tool_bar,
+				"filebrowserBrowseUrl"=>base_url().'ckfinder/ckfinder.html',
+				"filebrowserImageBrowseUrl"=>base_url().'ckfinder/ckfinder.html?type=Images',
+				"filebrowserFlashBrowseUrl"=>base_url().'ckfinder/ckfinder.html?type=Flash',
+				"filebrowserUploadUrl"=>base_url().'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+				"filebrowserImageUploadUrl"=>base_url().'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+				"filebrowserFlashUploadUrl"=>base_url().'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash',
+				"filebrowserWindowWidth"=>'1000',
+			 	"filebrowserWindowHeight"=>'700',		
+			 	"skin"=>'kama',		
+			),
+			//Replacing styles from the "Styles tool"
+			/**'styles' => array(
+			
+				//Creating a new style named "style 1"
+				'style 1' => array (
+					'name' 		=> 	'Blue Title',
+					'element' 	=> 	'h2',
+					'styles' => array(
+						'color' 			=> 	'Blue',
+						'font-weight' 		=> 	'bold'
+					)
+				),
+				
+				//Creating a new style named "style 2"
+				'style 2' => array (
+					'name' 		=> 	'Red Title',
+					'element' 	=> 	'h2',
+					'styles' => array(
+						'color' 			=> 	'Red',
+						'font-weight' 		=> 	'bold',
+						'text-decoration'	=> 	'underline'
+					)
+				)				
+			),**/
+		
+			
 		);
-		return  $this->fckeditor->CreateHtml($config);
+	
+		return display_ckeditor($cfg);
 
 	}
 
@@ -566,6 +630,16 @@ EOT;
 		}
 	}
 
+	/**
+	 * 返回网站相对路径
+	 * @return [type] [description]
+	 */
+	function get_real_url(){
+		$r =  realpath($_SERVER['DOCUMENT_ROOT']);
+		$r = str_replace( $r,'',realpath(dirname(__file__)));
+		$r = str_replace(DIRECTORY_SEPARATOR,'/', $r).'/';
+		return  'http://'.$_SERVER['HTTP_HOST'].$r;
+	}
 
 
 }

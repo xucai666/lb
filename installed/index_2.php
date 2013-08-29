@@ -42,9 +42,9 @@ try{
 	update_config('base_url',$base_url,'string','config.php');
 	$connect = @mysql_connect(CFG_DB_HOST,CFG_DB_USER,CFG_DB_PASSWORD) or tri_err('connect error.');
 	$sql1 = "drop database if exists ".CFG_DB_NAME.";";
-	@mysql_query($sql1) or tri_err('drop error.');	
+	//@mysql_query($sql1) or tri_err('drop error.');	
 	$sql2 = "CREATE DATABASE `".CFG_DB_NAME."` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;";
-	@mysql_query($sql2) or tri_err('create db error.');	
+	//@mysql_query($sql2) or tri_err('create db error.');	
 	mysql_select_db(CFG_DB_NAME);
 	mysql_query("set names 'utf8' ");			
 	$query = mysql_query('show tables from '.CFG_DB_NAME,$connect); 

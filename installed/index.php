@@ -51,7 +51,7 @@ function setDb(v){
 <tr>
 <td align="right" bgcolor="#FFFFFF">访问URL：</td>
 <td align="left" bgcolor="#FFFFFF"><label>
-<input name="base_url" size="80" type="text" id="base_url"  value="<?php echo dirname('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);?>" />
+<input name="base_url" size="80" type="text" id="base_url"  value="<?php echo dirname(dirname('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']));?>" />
 </label>（如：http://localhost/lb/）</td>
 </tr><tr>
 <td align="right" bgcolor="#FFFFFF">数据库地址：</td>
