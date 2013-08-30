@@ -105,11 +105,20 @@ class Common extends CI_Controller{
 
 
  	//picture id
- 	//get invoke
  	function ajax_imgid_get(){
  		$rs = $this->db->get_where('module_images',"i_url like '%".urldecode($this->input->post('i_url'))."'")->first_row();
  		echo $rs->i_uid;
  		exit;	
+ 	}
+
+ 	function ajax_img_del(){
+ 		$url = urldecode($this->input->post('url'));
+	 	$this->db->from('module_images')->where('i_url',$url);
+	 	$this->db->delete();
+		$f =  realpath(str_replace(base_url().'/', '', $url));
+		@unlink($f);
+		echo 1;
+		exit;
  	}
 
 	

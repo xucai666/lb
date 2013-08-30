@@ -29,6 +29,7 @@
 
 		opts[el.id] = $.extend({}, $.fn.jqFancyTransitions.defaults, options);
 		img[el.id] = new Array(); // images array
+		
 		links[el.id] = new Array(); // links array
 		titles[el.id] = new Array(); // titles array
 		order[el.id] = new Array(); // strips order array
@@ -98,7 +99,7 @@
 			
 			//links background cover each other
 			if(params.links)	
-				$('#'+el.id).append("<a target='_blank' href='"+links[el.id][0]+"' class='ft-"+el.id+"' id='ft-"+el.id+j+"' style='width:"+tstripWidth+"px; height:"+params.height+"px; float: left; position: absolute;outline:none;'></a>");
+				$('#'+el.id).append("<a target='_blank' href='"+links[el.id][0]+"' class='ft-"+el.id+" ' id='ft-"+el.id+j+"' style='width:"+tstripWidth+"px; height:"+params.height+"px; float: left; position: absolute;outline:none;'></a>");
 			else
 				$('#'+el.id).append("<div class='ft-"+el.id+"' id='ft-"+el.id+j+"' style='width:"+tstripWidth+"px; height:"+params.height+"px; float: left; position: absolute;'></div>");
 							
@@ -155,6 +156,10 @@
 		$('#ft-title-'+el.id).remove();
 		$('#ft-next-'+el.id).remove();
 		$('#ft-prev-'+el.id).remove();
+	
+		clearInterval(imgInt[el.id]);
+		clearInterval(stripInt[el.id]);
+		 
 		
 
 	};
