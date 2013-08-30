@@ -36,7 +36,8 @@ class Fields extends CI_Controller{
 	}
 
 	function action_save(){
-		$data = array('main'=>$this->input->post('main'));
+		$fields_types = $this->cor_cache->cache_fetch('fields_types');
+		$data = array('main'=>$this->input->post('main'),'fields_types'=>$fields_types);
 		try{
 			$this->form_validation->set_rules($this->im->valid_config());
 			if($this->form_validation->run()){
@@ -55,7 +56,8 @@ class Fields extends CI_Controller{
 		 		));
 
 				$this->cor_page->backend_redirect('fields/action_list',lang('fields_save_ok'));
-			}else{				
+			}else{
+
 				$this->cor_page->load_backend_view('fields_add',$data);
 			}
 

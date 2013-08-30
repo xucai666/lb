@@ -479,6 +479,13 @@ class Common_model  extends CI_Model{
 			return   $this->ckeditor($v,$i,$tool_bar);
 	}
 
+	/**
+	 * fckeditor
+	 * @param  [type] $v        [description]
+	 * @param  string $i        [description]
+	 * @param  string $tool_bar [description]
+	 * @return [type]           [description]
+	 */
 	function fckeditor($v,$i='content',$tool_bar='Basic'){
 
 		empty($this->fckeditor) && $this->load->library('FCKeditor');
@@ -490,11 +497,18 @@ class Common_model  extends CI_Model{
 		 			'h'=>'400',
 		 			'ToolbarStartExpanded'=>1,
 		 			'DefaultLanguage'=>lang_get()=='english'?'en':'zh-cn',
+		 			
 			);
 			return  $this->fckeditor->CreateHtml($config);
 	}
 
-
+	/**
+	 * ckeditor
+	 * @param  [type] $v        [description]
+	 * @param  string $i        [description]
+	 * @param  string $tool_bar [description]
+	 * @return [type]           [description]
+	 */
 	function ckeditor($v,$i='content',$tool_bar='Basic'){
 		if(!function_exists('display_ckeditor')){
 			$this->load->helper('ckeditor');
@@ -509,18 +523,10 @@ class Common_model  extends CI_Model{
 			
 						//Optionnal values
 			'config' => array(
-				'width' 	=> 	"800px",	//Setting a custom width
+				'width' 	=> 	"740px",	//Setting a custom width
 				'height' 	=> 	'400px',	//Setting a custom height
 				'toolbar' 	=> 	$tool_bar,
-				"filebrowserBrowseUrl"=>base_url().'ckfinder/ckfinder.html',
-				"filebrowserImageBrowseUrl"=>base_url().'ckfinder/ckfinder.html?type=Images',
-				"filebrowserFlashBrowseUrl"=>base_url().'ckfinder/ckfinder.html?type=Flash',
-				"filebrowserUploadUrl"=>base_url().'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
-				"filebrowserImageUploadUrl"=>base_url().'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
-				"filebrowserFlashUploadUrl"=>base_url().'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash',
-				"filebrowserWindowWidth"=>'1000',
-			 	"filebrowserWindowHeight"=>'700',		
-			 	"skin"=>'kama',		
+			 	'skin'		=>	'kama',		
 			),
 			//Replacing styles from the "Styles tool"
 			/**'styles' => array(
@@ -549,10 +555,10 @@ class Common_model  extends CI_Model{
 		
 			
 		);
-	
 		return display_ckeditor($cfg);
 
 	}
+
 
 	function set_uid(){
 
@@ -618,8 +624,9 @@ EOT;
 
 	function fetch_images($uid){
 		$uid_convert = explode(',',$uid);
-		$rs = $this->db->select('group_concat(i_url) as images',false)->from('module_images')->where_in('i_uid',$uid_convert)->order_by('i_id','asc')->get()->first_row('array');
-		return $rs['images'];
+		$rs = $this->db->select('i_id,i_url',false)->from('module_images')->where_in('i_uid',$uid_convert)->order_by('i_id','asc')->get()->result_array();
+		$rs  = $this->cor_form->array_re_index($rs,'i_id','i_url');
+		return implode(',',$rs);
 	}
 
 	function delete_images($uid){

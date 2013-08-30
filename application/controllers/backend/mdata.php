@@ -145,19 +145,20 @@ class Mdata extends CI_Controller{
 
 	function action_del(){
 		try{
+		
 			$primary = $this->m->fetch_primary($this->im->get_mid(),'r_name');
 			$ids = $this->input->post($primary);
             $ids = $ids?$ids:$this->uri->segment(4);
 			if(empty($ids)) throw new Exception(lang('errro_parameter'));
-			
-			$rs = $this->cor_db->delete($ids,$this->im->save_config());
+			$cfg = $this->im->save_config();
+			$rs = $this->cor_db->delete($ids,$cfg);
 
 			//insert log
 			$this->load->model('Logs_model');	
 			foreach($rs as $v):
 		 		$this->Logs_model->log_insert(array(
-		 			'log_table'=>$log_cf['main']['table_name'],
-		 			'log_table_id'=>$v[$log_cf['main']['primary_key']],
+		 			'log_table'=>$cfg['main']['table_name'],
+		 			'log_table_id'=>$v[$cfg['main']['primary_key']],
 		 			'log_user'=>$this->cor_auth->fetch_auth('user_name'),
 		 			'log_date'=>date("Y-m-d H:i:s"),
 		 			'log_sql'=>trim(implode("\n",(array)$this->db->sql_log)),
@@ -169,7 +170,7 @@ class Mdata extends CI_Controller{
 	 		$media_fid = array_keys($this->f->fields_list('f_id',array('f_media'=>1)));
 	 		$media_fields = $this->m->details($this->im->get_mid(),'f_id in ('.implode(',',$media_fid).') ','r_id,r_name');
 	 		$media_fields = $this->cor_form->array_re_index($media_fields,'r_id','r_name');
-
+	 		
 
 	 		foreach($rs as $k=>$v){
 	 			foreach($v as $k1=>$v1){
@@ -180,16 +181,27 @@ class Mdata extends CI_Controller{
 								@unlink($f);
 							}
 	 					}
-	 					$ls = $this->db->select('i_url',false)->from('module_images')->where_in('i_uid',explode(',',$v1))->get()->result_array();
-	 					foreach($ls as $item){
-	 						$f =  realpath(str_replace(base_url().'/', '', $item['i_url']));
-							if(file_exists($f)){
-								@unlink($f);
-							}
-	 					}
-	 					//delete from img table 
-	 					$this->db->where_in('i_uid',explode(',',$v1));
-	 					$this->db->delete('module_images');
+
+	 					$uds = explode(',',$v1);
+	 					foreach($uds as $ud){
+	 						$ct = $this->db->like($k1,$ud)->from($cfg['main']['table_name'])->count_all_results();
+	 						
+	 						if(!$ct){
+	 							$ls = $this->db->select('i_id,i_url',false)->from('module_images')->where('i_uid',$ud)->get()->result_array();
+	 						
+	 							foreach($ls as $item){
+		 							$f =  realpath(str_replace(base_url().'/', '', $item['i_url']));
+									@unlink($f);
+	 							}
+	 							//delete from img table 
+			 					$this->db->where('i_uid',$ud);
+			 					$this->db->delete('module_images');
+ 							}
+	 					}	
+
+
+	 					
+	 					
 	 				}
 	 			}
 	 		}

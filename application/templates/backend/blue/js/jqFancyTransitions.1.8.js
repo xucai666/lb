@@ -163,7 +163,7 @@
 
 		if(opts[el.id].pause == true) return;
 
-		// stripInt[el.id] = setInterval(function() { $.strips(order[el.id][inc[el.id]], el)  },opts[el.id].stripDelay);
+		 stripInt[el.id] = setInterval(function() { $.strips(order[el.id][inc[el.id]], el)  },opts[el.id].stripDelay);
 		
 		
 		if(typeof(direction) == "undefined")
@@ -227,12 +227,12 @@
 		$('.ft-'+el.id).attr('href',links[el.id][imgInc[el.id]]);
 		$('.ft-'+el.id).attr('target','_blank');
 		if(opts[el.id].position == 'curtain'){
-			currWidth = $('#ft-'+el.id+itemId).width();
-			$('#ft-'+el.id+itemId).css({ width: 0, opacity: 0, 'background-image': 'url('+img[el.id][imgInc[el.id]]+')','background-repeat':'no-repeat','background-position':'center center' });
-			$('#ft-'+el.id+itemId).animate({ width: currWidth, opacity: 1 }, 1000);
+			//currWidth = $('#ft-'+el.id+itemId).width();
+			//$('#ft-'+el.id+itemId).css({ width: 0, opacity: 0, 'background-image': 'url('+img[el.id][imgInc[el.id]]+')','background-repeat':'no-repeat','background-position':'center center' });
+			//$('#ft-'+el.id+itemId).animate({ width: currWidth, opacity: 1 }, 1000);
 		} else {
-			$('#ft-'+el.id+itemId).css({ height: 0, opacity: 0, 'background-image': 'url('+img[el.id][imgInc[el.id]]+')','background-repeat':'no-repeat','background-position':'center center' });
-			$('#ft-'+el.id+itemId).animate({ height: opts[el.id].height, opacity: 1 }, 1000);
+			//$('#ft-'+el.id+itemId).css({ height: 0, opacity: 0, 'background-image': 'url('+img[el.id][imgInc[el.id]]+')','background-repeat':'no-repeat','background-position':'center center' });
+			//$('#ft-'+el.id+itemId).animate({ height: opts[el.id].height, opacity: 1 }, 1000);
 		}
 		
 		inc[el.id]++;

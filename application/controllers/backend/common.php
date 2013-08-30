@@ -102,6 +102,16 @@ class Common extends CI_Controller{
 		exit;
 	}
  	
+
+
+ 	//picture id
+ 	//get invoke
+ 	function ajax_imgid_get(){
+ 		$rs = $this->db->get_where('module_images',"i_url like '%".urldecode($this->input->post('i_url'))."'")->first_row();
+ 		echo $rs->i_uid;
+ 		exit;	
+ 	}
+
 	
  	
  	

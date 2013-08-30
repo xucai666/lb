@@ -75,6 +75,8 @@ Notes:
 	}
 
 // Settings
+    $uid = $_POST['uid'];
+    $table = $_POST['table'];
 	$post_path = $_POST['save_path'];
 	$save_path = $post_path? base64_decode($post_path).DIRECTORY_SEPARATOR:getcwd()."/uploads/"; // The path were we will save the file (getcwd() may not be reliable and should be tested in your environment)
 
@@ -130,8 +132,8 @@ Notes:
 	//new name
 	$dir = $save_path;
 	$arr = scandir($dir); 
-	$all = count($arr)-1;
-	$file_name = substr($file_name,0,strrpos($file_name,'.')).'____'.sprintf("%06d",$all).substr(strrchr($file_name,'.'),0);
+	$all = count(preg_grep("/^".$uid."/", $arr))+1;
+	$file_name = $uid.'____'.sprintf("%06d",$all).substr(strrchr($file_name,'.'),0);
 	$save_url = $_POST['save_url'];
 	if (strlen($file_name) == 0 || strlen($file_name) > $MAX_FILENAME_LENGTH) {
 		HandleError("Invalid file name");
@@ -188,8 +190,6 @@ if (!@move_uploaded_file($_FILES[$upload_name]["tmp_name"], $save_path.$file_nam
 	exit(0);
 }
 //save to db
-$uid = $_POST['uid'];
-$table = $_POST['table'];
 $data = array('i_url'=>$save_url.$file_name,'i_table'=>$cfg['dbprefix'].$_POST['table'],'i_uid'=>$uid);
 $loader->mysql->insert($data,$cfg['dbprefix'].'module_images');	
 // Return output to the browser (only supported by SWFUpload for Flash Player 9)

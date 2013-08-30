@@ -49,7 +49,7 @@ CKEDITOR.editorConfig = function( config ) {
  
 	config.toolbar_Basic =
 	[
-		['Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink','-','About']
+		['Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink','-','Image', 'ImageButton','About']
 	];
 
 
@@ -66,6 +66,19 @@ CKEDITOR.editorConfig = function( config ) {
 	config.removeDialogTabs = 'image:advanced;link:advanced';
 	//最小化工具条
 	config.toolbarCanCollapse = true;
-	config.toolbarStartupExpanded = true;
+	config.toolbarStartupExpanded = false;
+
+	config.filebrowserBrowseUrl = url_root +'ckfinder/ckfinder.html';
+	config.filebrowserImageBrowseUrl = url_root +'ckfinder/ckfinder.html?type=Images';
+	config.filebrowserFlashBrowseUrl = url_root +'ckfinder/ckfinder.html?type=Flash';
+	config.filebrowserUploadUrl = url_root +'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files';
+	config.filebrowserImageUploadUrl = url_root +'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images';
+	config.filebrowserFlashUploadUrl = url_root +'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash';
+	config.filebrowserWindowWidth = 1000;
+	config.filebrowserWindowHeight = 700;
+				
+
+
+	
 	
 };

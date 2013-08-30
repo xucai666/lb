@@ -116,6 +116,25 @@ FCKConfig.ToolbarSets["Default"] = [
 	['Style','FontFormat','FontName','FontSize']		
 ] ;
 
+
+
+FCKConfig.ToolbarSets["Full"] = [		
+	['Image','Flash','flvPlayer','Media','Table','Rule','Smiley','SpecialChar'],
+	['Link','Unlink','Anchor'],	
+	['Save','Preview','Templates','Print','-','Find','Replace'],	
+	['PageBreak','Source','FitWindow'],
+	'/',
+	['Bold','Italic','Underline','StrikeThrough','-','Subscript','Superscript'],
+	['TextColor','BGColor'],
+	['OrderedList','UnorderedList','-','Outdent','Indent'],
+	['JustifyLeft','JustifyCenter','JustifyRight','JustifyFull'],	
+	['SelectAll','RemoveFormat'],
+	'/',
+	['Style','FontFormat','FontName','FontSize']		
+] ;
+
+
+
 FCKConfig.ToolbarSets["Basic"] = [
 	['Table','TextColor','BGColor','ImageButton'],
 	['Undo','Redo','Rule'],
