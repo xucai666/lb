@@ -583,9 +583,9 @@ class Common_model  extends CI_Model{
 		$url = $this->uri->uri_string();
 		$url =  substr($url,0,strrpos($url,"/")+1);
 		$sq = <<<EOT
-	SELECT concat('$url',$primary,'.htm') as url,'Prev' as nav_title,`$title_field` FROM (SELECT *  FROM  $tb   WHERE  $where and  $primary<$id ORDER BY $primary DESC LIMIT 1) AS t1 
+	SELECT concat('$url',$primary) as url,'Prev' as nav_title,`$title_field` FROM (SELECT *  FROM  $tb   WHERE  $where and  $primary<$id ORDER BY $primary DESC LIMIT 1) AS t1 
 			UNION   ALL 
-		SELECT concat('$url',$primary,'.htm') as url,'Next' as nav_title,`$title_field` FROM (SELECT  *  FROM  $tb   WHERE   $where and  $primary>$id ORDER BY $primary ASC  LIMIT 1) AS t2
+		SELECT concat('$url',$primary) as url,'Next' as nav_title,`$title_field` FROM (SELECT  *  FROM  $tb   WHERE   $where and  $primary>$id ORDER BY $primary ASC  LIMIT 1) AS t2
 EOT;
 		return $this->cor_form->array_re_index($this->cor_db->fetch_values($sq),'nav_title',array('url',$title_field));
 	}
@@ -622,9 +622,10 @@ EOT;
 		return $_SESSION['IMGCODE'];
 	}
 
-	function fetch_images($uid){
+	function fetch_images($uid,$thumb=false){
 		$uid_convert = explode(',',$uid);
-		$rs = $this->db->select('i_id,i_url',false)->from('module_images')->where_in('i_uid',$uid_convert)->order_by('i_id','asc')->get()->result_array();
+		$img_field = $thumb?"REPLACE(i_url,'images','_thumbs/Images') as i_url ":'i_url';
+		$rs = $this->db->select("i_id,".$img_field,false)->from('module_images')->where_in('i_uid',$uid_convert)->order_by('i_id','asc')->get()->result_array();
 		$rs  = $this->cor_form->array_re_index($rs,'i_id','i_url');
 		return implode(',',$rs);
 	}

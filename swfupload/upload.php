@@ -38,6 +38,7 @@ Notes:
 */
 	header('content-type:text/html;charset=utf-8');
 	isset($_SERVER['HTTP_REFERER']) or exit(Header("HTTP/1.1 404 Not Found"));
+	define('BASEPATH', realpath(dirname(__file__).'/../system/'));
 	include_once('loader.php');
 	include_once(realpath(getcwd().'/../application/config/database.php'));
 	$lang = $_COOKIE['mysys_lang']?$_COOKIE['mysys_lang']:'zh';
@@ -193,7 +194,7 @@ if (!@move_uploaded_file($_FILES[$upload_name]["tmp_name"], $save_path.$file_nam
 $save_thumb  = str_replace('images', '_thumbs/Images', $save_path);
 make_dir($save_thumb);
 $loader->image_thumb->setBig($save_path.$file_name);
-$loader->image_thumb->getThumb($save_thumb.$file_name,100,100);
+$loader->image_thumb->getThumb($save_thumb.$file_name,160,140);
 
 //save to db
 $data = array('i_url'=>$save_url.$file_name,'i_table'=>$cfg['dbprefix'].$_POST['table'],'i_uid'=>$uid);

@@ -87,7 +87,7 @@ border:0;
 .content_nav{
 	list-style-type: none;
 }
-.content_nav li{width:50%;float:left;}
+.content_nav li{width:250px;float:left;}
 .content_nav li a{color:#999999;}
 .product_img_big{
 	padding:2px;

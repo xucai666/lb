@@ -192,6 +192,7 @@ class Mdata extends CI_Controller{
 	 							foreach($ls as $item){
 		 							$f =  realpath(str_replace(base_url().'/', '', $item['i_url']));
 									@unlink($f);
+									@unlink(str_replace('images', '_thumbs'.DIRECTORY_SEPARATOR.'Images', $f));
 	 							}
 	 							//delete from img table 
 			 					$this->db->where('i_uid',$ud);

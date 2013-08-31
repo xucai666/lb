@@ -117,7 +117,7 @@ class Common extends CI_Controller{
 	 	$this->db->delete();
 		$f =  realpath(str_replace(base_url().'/', '', $url));
 		@unlink($f);
-		echo 1;
+		@unlink(str_replace('images', '_thumbs'.DIRECTORY_SEPARATOR.'Images', $f));
 		exit;
  	}
 
