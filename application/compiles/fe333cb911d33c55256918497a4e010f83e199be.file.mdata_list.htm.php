@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-29 03:29:21
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-31 08:04:27
          compiled from "application\templates\backend\blue\mdata_list.htm" */ ?>
 <?php /*%%SmartyHeaderCode:19742521ec0116a8db5-43767603%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fe333cb911d33c55256918497a4e010f83e199be' => 
     array (
       0 => 'application\\templates\\backend\\blue\\mdata_list.htm',
-      1 => 1377333519,
+      1 => 1377936265,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_521ec0119a4488_28031088',
   'variables' => 
   array (
     'dir_backend' => 0,
@@ -32,8 +34,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'page_link' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_521ec0119a4488_28031088',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_521ec0119a4488_28031088')) {function content_521ec0119a4488_28031088($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -119,6 +119,10 @@ $_smarty_tpl->tpl_vars['f']->_loop = true;
 
 			<?php ob_start();?><?php echo lang("confirm_delete");?>
 <?php $_tmp1=ob_get_clean();?><?php echo ci_anchor(array('segment'=>"backend/mdata/action_del/".((string)$_smarty_tpl->tpl_vars['item']->value[$_smarty_tpl->tpl_vars['primary']->value]),'attrs'=>"class:link_del,onclick:return confirm('".$_tmp1."');"),$_smarty_tpl);?>
+
+
+			<?php echo ci_anchor(array('segment'=>"backend/mdata/action_view/".((string)$_smarty_tpl->tpl_vars['item']->value[$_smarty_tpl->tpl_vars['primary']->value]),'attrs'=>"class:link_view,target:_blank"),$_smarty_tpl);?>
+
 
 
 	</td>

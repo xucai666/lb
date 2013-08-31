@@ -82,6 +82,52 @@ class Mdata extends CI_Controller{
 		$this->cor_page->load_backend_view('mdata_add',$data);
 	}
 
+	function action_view(){
+		$id = $this->uri->segment(4);
+		$module_id = $this->im->get_mid();
+		//fetch fileds
+
+		$main = array();
+		if($id){
+			$main = $this->im->detail($id);
+			
+		}
+
+		$detail = $this->im->details($id);
+
+		//all fields
+		$fields = $this->m->details($module_id,array('r_primary'=>'0'));	
+
+	
+		
+		//primary key
+		$primary = $this->m->fetch_primary($module_id,'r_name');
+
+
+		
+
+		//fields html
+		$fields_html = $this->m->fetch_f_html();
+		
+
+		$data = array('ops'=>array(1=>1,2=>2,3=>3),'main'=>$main,'fields'=>$fields,'html'=>$fields_html,'primary'=>$primary);
+		$data = array_merge($data,array('theme'=>$this->m->main($module_id,'m_name')));
+
+		//detail
+		$dt_mid = $this->m->main($module_id,'m_sub');
+		$dt_fields = $this->m->details($dt_mid,array('r_primary'=>'0'));	
+
+		//detail primary key
+		$dt_primary = $this->m->fetch_primary($dt_mid,'r_name');
+
+		$data = array_merge($data,array('dt_fields'=>$dt_fields,'dt_primary'=>$dt_primary,'detail'=>$detail,'detail_total'=>count($detail),'dt_mid'=>$dt_mid));
+		
+		$this->cor_page->load_backend_view('mdata_view',$data);
+
+		$this->config->item('item name');
+		
+	}
+
 	function action_save(){
 		$main = $this->input->post('main');
 		$detail = $this->cor_form->post_to_set($this->input->post('detail'));
