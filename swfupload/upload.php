@@ -42,7 +42,7 @@ Notes:
 	include_once(realpath(getcwd().'/../application/config/database.php'));
 	$lang = $_COOKIE['mysys_lang']?$_COOKIE['mysys_lang']:'zh';
 	$cfg = $db[$lang];
-	$loader->load_class('mysql','db_access');
+	$loader->load_class(array('mysql','image_thumb'));
 	$config = array(
 			'hostname'=>$cfg['hostname'],
 			'database'=>$cfg['database'],
@@ -189,6 +189,12 @@ if (!@move_uploaded_file($_FILES[$upload_name]["tmp_name"], $save_path.$file_nam
 	HandleError("File could not be saved: ". $save_path.$file_name);
 	exit(0);
 }
+//makethumb
+$save_thumb  = str_replace('images', '_thumbs/Images', $save_path);
+make_dir($save_thumb);
+$loader->image_thumb->setBig($save_path.$file_name);
+$loader->image_thumb->getThumb($save_thumb.$file_name,100,100);
+
 //save to db
 $data = array('i_url'=>$save_url.$file_name,'i_table'=>$cfg['dbprefix'].$_POST['table'],'i_uid'=>$uid);
 $loader->mysql->insert($data,$cfg['dbprefix'].'module_images');	

@@ -6,9 +6,9 @@
  * Window - Preferences - PHPeclipse - PHP - Code Templates
  */
  //标签
- $lang['username']													= '用户名';
- $lang['password']													= '密&nbsp;&nbsp;码';
- $lang['login']													= '登&nbsp;&nbsp;陆';
+ $lang['username']													= '账号';
+ $lang['password']													= '密码';
+ $lang['login']													= '登陆';
  
  
  //验证

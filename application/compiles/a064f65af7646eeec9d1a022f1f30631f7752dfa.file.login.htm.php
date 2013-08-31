@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-29 13:49:40
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-31 00:56:34
          compiled from "application\templates\backend\blue\login.htm" */ ?>
 <?php /*%%SmartyHeaderCode:21116521f51748207c6-56941761%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a064f65af7646eeec9d1a022f1f30631f7752dfa' => 
     array (
       0 => 'application\\templates\\backend\\blue\\login.htm',
-      1 => 1376732926,
+      1 => 1377910593,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_521f517490d5b7_11182186',
   'variables' => 
   array (
     'item_lang' => 0,
@@ -26,8 +28,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dir_backend' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_521f517490d5b7_11182186',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_521f517490d5b7_11182186')) {function content_521f517490d5b7_11182186($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -75,15 +75,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <td height="45">
               <?php echo $_smarty_tpl->tpl_vars['lang_login']->value['username'];?>
 ：            </td>
-            <td height="45"><label>
-                <INPUT  id=txtUserName name="user_name" size="15">
+            <td height="45" align='left'><label>
+                <INPUT  id=txtUserName name="user_name" style="width:100px">
               </label><?php echo type_error(array('obj'=>"user_name"),$_smarty_tpl);?>
 </td>
           </tr>
           <tr>
             <td height="45"><?php echo $_smarty_tpl->tpl_vars['lang_login']->value['password'];?>
 ：</td>
-            <td height="45"> <INPUT  id=txtUserPassword type="password"  size="15"
+            <td height="45" align='left'> <INPUT  id=txtUserPassword type="password"  style="width:100px"
                 name="user_pass">
         <?php echo type_error(array('obj'=>"user_pass"),$_smarty_tpl);?>
 </td>
