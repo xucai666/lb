@@ -119,8 +119,8 @@
 			    $this->email->subject('你的朋友向您推荐职位'.$main['eg_pos']);
 			    $sys_config = $this->cor_cache->cache_fetch('sys_config','develop',lang_get());
 
-			    $tpl_dir = $config['template_dir'].''.$sys_config['template'].'/'.lang_get().'/';
-			 
+			    $tpl_dir = $this->config->item('template_dir').'/front/'.$sys_config['template'].'/'.lang_get().'/';
+			
 			    $email_temp = $this->tpl->fetch($tpl_dir.'email_template.htm');
 			  
 			  	$replace_flag = array(

@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"backg",
+				"background-image"
+			],
+			[
+				"strip",
+				"strip_tags"
+			],
+			[
+				"fuc",
+				"function_exists"
+			],
+			[
+				"thumb",
+				"thumb_path"
+			],
+			[
+				"get_clas",
+				"get_class_methods"
+			],
+			[
 				"back",
 				"backgroundImage	css"
 			],
@@ -84,33 +104,65 @@
 	},
 	"file_history":
 	[
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_view.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/js/iwin.js",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/iwin.js",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/iwin.js",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/jqFancyTransitions.1.8.js",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/center.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/frame_left.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/admin.js",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/common.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/mdata.php",
+		"/E/phpnow/htdocs/lb/application/models/common_model.php",
+		"/E/phpnow/htdocs/lb/swfupload/upload.php",
+		"/E/phpnow/htdocs/lb/application/helpers/msubstr_helper.php",
+		"/E/phpnow/htdocs/lb/application/libraries/Smarty-3.1.14/libs/plugins/modifier.truncate_cn.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/images/lb.css",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/dynamic_view.htm",
+		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
 		"/E/phpnow/htdocs/lb/tools/test.php",
+		"/E/phpnow/htdocs/lb/application/config/database.php",
+		"/E/phpnow/htdocs/lb/index.php",
+		"/E/phpnow/htdocs/lb/application/config/breadcrumb.php",
+		"/E/phpnow/htdocs/lb/application/config/config.php",
+		"/E/phpnow/htdocs/lb/swfupload/images/TestImageNoText_65x29.png",
+		"/E/phpnow/htdocs/lb/swfupload/js/handlers.js",
+		"/E/phpnow/htdocs/lb/swfupload/libs/image_thumb.class.php",
+		"/E/phpnow/htdocs/lb/swfupload/index.php",
+		"/E/phpnow/htdocs/lb/swfupload/test.php",
+		"/E/phpnow/htdocs/lb/swfupload/loader.php",
+		"/E/phpnow/htdocs/lb/application/helpers/image_helper.php",
+		"/E/phpnow/htdocs/lb/ckfinder/config.js",
+		"/E/phpnow/htdocs/lb/ckfinder/config.php.dump",
+		"/E/phpnow/htdocs/lb/application/helpers/ckeditor_helper.php",
+		"/E/phpnow/htdocs/lb/application/helpers/cor_lang_helper.php",
+		"/E/phpnow/htdocs/lb/application/helpers/debug.php",
+		"/E/phpnow/htdocs/lb/application/helpers/index.html",
+		"/E/phpnow/htdocs/lb/application/helpers/JSON.php",
+		"/E/phpnow/htdocs/lb/application/helpers/json_helper.php",
+		"/E/phpnow/htdocs/lb/application/helpers/MY_url_helper.php",
+		"/E/phpnow/htdocs/lb/application/helpers/timecount_helper.php",
+		"/E/phpnow/htdocs/lb/ckfinder/config.php",
+		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_login_lang.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/login.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/tooltipsy.min.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/jqFancyTransitions.1.8.js",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/images/post/nc_selcolor.htm.dump",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/core.js",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/js/iwin.js",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/cookies.js",
 		"/D/tools/k开发成果/个人开发/ec/admin/templates/goods_list.htm",
 		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_view.htm",
 		"/E/phpnow/htdocs/lb/application/controllers/front/dynamic.php",
 		"/E/phpnow/htdocs/lb/application/libraries/cor_db.php",
-		"/E/phpnow/htdocs/lb/swfupload/upload.php",
 		"/E/phpnow/htdocs/lb/system/database/DB_active_rec.php",
 		"/E/phpnow/htdocs/lb/application/models/modules_model.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/jqFancyTransitions.1.8.js",
-		"/E/phpnow/htdocs/lb/application/models/common_model.php",
 		"/E/phpnow/htdocs/lb/system/database/DB_result.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/invoke.js",
 		"/E/phpnow/htdocs/lb/ckfinder/core/connector/php/php5/Utils/FileSystem.php",
-		"/E/phpnow/htdocs/lb/ckfinder/config.php.dump",
 		"/E/phpnow/htdocs/lb/ckfinder/core/connector/php/connector.php",
-		"/E/phpnow/htdocs/lb/ckfinder/config.js",
 		"/E/phpnow/htdocs/lb/ckeditor/config.js",
-		"/E/phpnow/htdocs/lb/ckfinder/config.php",
 		"/E/phpnow/htdocs/lb/ckfinder/ckfinder.js",
 		"/E/phpnow/htdocs/lb/fckeditor/fckconfig.js.dump",
 		"/E/phpnow/htdocs/lb/fckeditor/fckconfig.js",
@@ -127,7 +179,6 @@
 		"/E/phpnow/htdocs/lb/application/controllers/backend/fields.php",
 		"/E/phpnow/htdocs/lb/ckeditor/styles.js",
 		"/E/phpnow/htdocs/lb/ckfinder/ckfinder.html",
-		"/E/phpnow/htdocs/lb/index.php",
 		"/E/phpnow/htdocs/lb/ckfinder/ckfinder.php",
 		"/E/phpnow/htdocs/lb/fckeditor/editor/filemanager/connectors/uploadtest.html",
 		"/E/phpnow/htdocs/lb/application/libraries/fckeditor.php",
@@ -148,16 +199,13 @@
 		"/E/phpnow/htdocs/lb/system/helpers/cookie_helper.php",
 		"/E/phpnow/htdocs/lb/application/core/MY_Input.php",
 		"/E/phpnow/htdocs/lb/ckeditor/upload.php",
-		"/E/phpnow/htdocs/lb/application/helpers/ckeditor_helper.php",
 		"/E/phpnow/htdocs/lb/readme.txt",
 		"/E/phpnow/htdocs/lb/ckeditor/LICENSE.md",
 		"/E/phpnow/htdocs/lb/fckeditor/editor/filemanager/browser/default/browser.html",
 		"/E/phpnow/htdocs/lb/ckeditor/contents.css",
 		"/E/phpnow/htdocs/lb/application/models/mdata_model.php",
 		"/E/phpnow/htdocs/lb/application/config/autoload.php",
-		"/E/phpnow/htdocs/lb/application/config/config.php",
 		"/E/phpnow/htdocs/lb/fckeditor/fckeditor_php5.php",
-		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
 		"/E/phpnow/htdocs/lb/database/lb_cn.sql",
 		"/E/phpnow/htdocs/lb/installed/index.php",
 		"/E/phpnow/htdocs/lb/installed/index_2.php",
@@ -177,41 +225,13 @@
 		"/E/phpnow/htdocs/lb/application/controllers/front/member.php",
 		"/E/phpnow/htdocs/lb/application/controllers/front/alipay.php",
 		"/E/phpnow/htdocs/lb/application/views/alipay_from.php",
-		"/E/phpnow/htdocs/lb/application/helpers/MY_url_helper.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/top.htm",
 		"/E/phpnow/htdocs/lb/system/helpers/form_helper.php",
 		"/E/phpnow/htdocs/lb/system/core/Loader.php",
 		"/E/phpnow/htdocs/lb/application/models/member_model.php",
 		"/E/phpnow/htdocs/lb/tools/alipay/alipay.config.php",
 		"/E/phpnow/htdocs/lb/application/models/alipay_model.php",
-		"/E/phpnow/htdocs/ec/includes/modules/payment/alipay.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/common.php",
-		"/E/phpnow/htdocs/lb/application/controllers/admin.php",
-		"/E/phpnow/htdocs/lb/application/controllers/alipay.php",
-		"/E/phpnow/htdocs/lb/system/core/Router.php",
-		"/E/phpnow/htdocs/lb/application/libraries/MY_Pagination.php",
-		"/E/phpnow/htdocs/lb/application/libraries/MY_Form_validation.php",
-		"/E/phpnow/htdocs/lb/application/controllers/test.php",
-		"/E/phpnow/htdocs/lb/docs/待完成.txt.dump",
-		"/E/phpnow/htdocs/lb/docs/待完成.txt",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/left_product.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product.htm",
-		"/E/phpnow/htdocs/lb/application/libraries/cor_page.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/product_list.htm",
-		"/E/phpnow/htdocs/lb/application/controllers/front/search.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/search.htm",
-		"/E/phpnow/htdocs/lb/application/models/search_model.php",
-		"/E/phpnow/htdocs/lb/.htaccess",
-		"/E/phpnow/htdocs/lb/application/config/routes.php",
-		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/pri.sublime-snippet",
-		"/E/phpnow/htdocs/lb/application/libraries/curl.php",
-		"/E/phpnow/htdocs/lb/application/config/config.default",
-		"/E/phpnow/htdocs/lb/application/config/constants.php",
-		"/E/phpnow/htdocs/lb/syntaxhighlighter_3.0.83/compass/config.rb",
-		"/E/phpnow/htdocs/lb/application/core/MY_DB_mysql_driver.php",
-		"/E/phpnow/htdocs/lb/application/core/MY_Loader.php",
-		"/E/phpnow/htdocs/lb/application/core/MY_mysql_driver.php",
-		"/E/phpnow/htdocs/lb/system/core/Common.php"
+		"/E/phpnow/htdocs/ec/includes/modules/payment/alipay.php"
 	],
 	"find":
 	{
@@ -219,9 +239,12 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 105.0,
 		"where_history":
 		[
+			"E:\\phpnow\\htdocs\\lb\\application\\templates\\backend",
+			"E:\\phpnow\\htdocs\\lb\\swfupload",
+			"E:\\phpnow\\htdocs\\lb\\ckfinder",
 			"E:\\phpnow\\htdocs\\lb\\application",
 			"E:\\phpnow\\htdocs\\lb\\ckeditor",
 			"E:\\phpnow\\htdocs\\lb\\fckeditor",
@@ -249,6 +272,54 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"dbl_flag",
+			"dblclick",
+			"static_cfg",
+			"static_self",
+			"dbl_flag",
+			"dblclick",
+			"resize",
+			"custom",
+			"trigger",
+			"img[el.id]",
+			"img",
+			"destroy",
+			"destro",
+			"clearinte",
+			"setInterval",
+			"dest",
+			"destroy",
+			"menubar",
+			"event.",
+			".hide",
+			"hide",
+			"toggle",
+			"<script",
+			".js",
+			"thumb",
+			"fetch_images",
+			"content_nav",
+			"msustr",
+			"truncate",
+			"nav",
+			"cancel",
+			"cancelButton",
+			"cancelButton.gif",
+			"cancelButton",
+			"cancelbutton",
+			"cancel_button",
+			"$thumb_path",
+			"make_dir",
+			"width",
+			"image_thumb",
+			"\\",
+			"loader",
+			"$save_path",
+			"tmp",
+			"upload",
+			"uploadd",
+			"move",
+			"Thumbnails",
 			"delete",
 			"destroy",
 			"new Array;",
@@ -328,55 +399,7 @@
 			"Image",
 			"image",
 			"\\",
-			"phpnow",
-			"SELF",
-			"resourceType",
-			"type",
-			"/upload",
-			"standard",
-			"toolbarStartupExpanded",
-			"toolbarCanCollapse",
-			"toolbarCanCollapse ",
-			"Expand()",
-			"ToolbarStartExpanded",
-			"templates_files",
-			"img",
-			"access",
-			"filebrowserBrowseUrl",
-			"list",
-			"ckeditor",
-			"fckeditor",
-			"ckeditor",
-			"base_url().'/",
-			"getdocument",
-			"xdebug.",
-			"baseUrl",
-			"resolveUrl",
-			"imagees",
-			"#xdebug",
-			"'/",
-			":",
-			"filebrowser",
-			"QuickUpload",
-			"ckeditor",
-			"IsAuthorized",
-			"center",
-			"'/",
-			"dUrl",
-			"Url =>",
-			"filebrowse",
-			"file",
-			":",
-			"'",
-			"ckeditor",
-			"img",
-			"file",
-			"config.",
-			"toolbar ",
-			"full",
-			"basic",
-			"full",
-			"basic"
+			"phpnow"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -442,24 +465,84 @@
 		"selected_items":
 		[
 			[
-				"common.php",
-				"application/controllers/backend/common.php"
+				"product_view",
+				"application/templates/front/blue/zh/product_view.htm"
 			],
 			[
-				"mdata.ph",
-				"application/controllers/backend/mdata.php"
+				"prouct.htm",
+				"application/templates/front/blue/zh/product.htm"
+			],
+			[
+				"iwin.js",
+				"application/templates/front/blue/en/js/iwin.js"
 			],
 			[
 				"jqf",
 				"application/templates/backend/blue/js/jqFancyTransitions.1.8.js"
 			],
 			[
+				"admin.js",
+				"application/templates/backend/blue/js/admin.js"
+			],
+			[
+				"center.htm",
+				"application/templates/backend/blue/center.htm"
+			],
+			[
+				"common",
+				"application/controllers/backend/common.php"
+			],
+			[
+				"mdata.php",
+				"application/controllers/backend/mdata.php"
+			],
+			[
+				"comon_o",
+				"application/models/common_model.php"
+			],
+			[
+				"product.htm",
+				"application/templates/front/blue/zh/product.htm"
+			],
+			[
+				"lb.css",
+				"application/templates/front/blue/en/images/lb.css"
+			],
+			[
+				"dya",
+				"application/templates/front/blue/en/dynamic_view.htm"
+			],
+			[
+				"dynamic",
+				"application/templates/front/blue/en/dynamic_view.htm"
+			],
+			[
 				"test.php",
 				"tools/test.php"
 			],
 			[
-				"iwin.js",
-				"application/templates/front/blue/en/js/iwin.js"
+				"tpl.php",
+				"application/libraries/tpl.php"
+			],
+			[
+				"common_model",
+				"application/models/common_model.php"
+			],
+			[
+				"swfuplad",
+				"swfupload/upload.php"
+			],
+			[
+				"login.htm",
+				"application/templates/backend/blue/login.htm"
+			],
+			[
+				"common.php",
+				"application/controllers/backend/common.php"
+			],
+			[
+				"mdata.ph",
+				"application/controllers/backend/mdata.php"
 			],
 			[
 				"core.js",
@@ -488,14 +571,6 @@
 			[
 				"cor_db",
 				"application/libraries/cor_db.php"
-			],
-			[
-				"mdata.php",
-				"application/controllers/backend/mdata.php"
-			],
-			[
-				"common_model",
-				"application/models/common_model.php"
 			],
 			[
 				"swfupload",
@@ -544,10 +619,6 @@
 			[
 				"cor_auth",
 				"application/libraries/cor_auth.php"
-			],
-			[
-				"tpl.php",
-				"application/libraries/tpl.php"
 			],
 			[
 				"top.htm",
@@ -614,10 +685,6 @@
 				"application/config/config.php"
 			],
 			[
-				"product.htm",
-				"application/templates/front/blue/zh/product.htm"
-			],
-			[
 				"config.ph",
 				"application/config/config.php"
 			],
@@ -632,10 +699,6 @@
 			[
 				"zh/index.htm",
 				"application/templates/front/blue/zh/index.htm"
-			],
-			[
-				"lb.css",
-				"application/templates/front/blue/zh/css/lb.css"
 			],
 			[
 				"my_config",
@@ -756,10 +819,6 @@
 			[
 				"dyn",
 				"application/templates/front/blue/zh/dynamic.htm"
-			],
-			[
-				"dynamic",
-				"application/templates/front/blue/en/dynamic.htm"
 			],
 			[
 				"sytemmange",
