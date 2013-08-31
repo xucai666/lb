@@ -252,7 +252,7 @@ $.fn.extend({
 		})
 		
 		//handle for keyboard event
-		$('#'+w_id).attr('tabindex', 1).keydown(function(e){
+		$('#'+w_id).attr('tabindex', 1).focus().keydown(function(e){
 			
 			var code = e.keyCode ? e.keyCode : e.which;
 			if (code == 27 || code == 96){
