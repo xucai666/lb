@@ -109,6 +109,7 @@ function displayError(id_expression){
 		$(this).bind('click',function(){
 			$(this).html('');
 		})
+		$('html, body').animate({ scrollTop: $(id_expression).siblings("input").last().offset().top }, 500);
 		setTimeout(function(){		
 			$(id_expression).html('');
 		},3000);
@@ -116,12 +117,6 @@ function displayError(id_expression){
 }
 
 
-$(document).ready(function(){
-	
-	displayError("[id='error_span']");
-
-
-})
 
 
 
@@ -447,12 +442,7 @@ function window_back(){
 }
 
 
-//document ready
-$(function($){
-	if($(".mytable").length>0){
-		overclass($('.mytable tr'));
-	}
-});
+
 
 //复选表单全选事件 form：表单名
 function CheckAll(form)  {
@@ -547,11 +537,7 @@ function art_dialog_open(url,title){
         callback: function () {
          	var iframe = this.iframe.contentWindow;
     		iframe.$('input:submit').trigger("click");
-            this           
-            .button({
-                name: '保存',
-                disabled: true
-            }).lock();
+            this.lock();
             return false;
         },
 
@@ -563,23 +549,35 @@ function art_dialog_open(url,title){
     lock:true,
     resize:true,
     opacity:"0.4"
+    
     });
 
 
 }
 
-function art_dialog_close(msg){
+function art_dialog_close(msg,callback){
 		var list = top.art.dialog.list;
 		for (var i in list) {
 		    list[i].close();
 		}
 		if(msg!="undefined"){
-			top.art.dialog.tips(msg);
+			top.art.dialog.tips(msg,3);
 		}
+		
+		(callback && typeof(callback) === "function") && callback();
 }
 	
 	
-	
+function frmright_reload(){
+	window.frmright.location.reload();
+}	
 
+//document ready
+$(function($){
+	if($(".mytable").length>0){
+		overclass($('.mytable tr'));
+	}
+	displayError("[id='error_span']");
 
+});
 

@@ -137,14 +137,13 @@ class Mdata extends CI_Controller{
 		try{
 			$rules = $this->im->valid_config($data);
 			$this->form_validation->set_rules($rules);
+			$module_id = $this->im->get_mid();
+			//all fields
+			$fields = $this->m->details($module_id,array('r_primary'=>'0'));
+			//primary key
+			$primary = $this->m->fetch_primary($module_id,'r_name');
 
 			if($this->form_validation->run()==false && $rules){
-				$module_id = $this->im->get_mid();
-				//all fields
-				$fields = $this->m->details($module_id,array('r_primary'=>'0'));
-				//primary key
-				$primary = $this->m->fetch_primary($module_id,'r_name');
-
 				//fields html
 				$fields_html = $this->m->fetch_f_html();
 				
@@ -178,7 +177,10 @@ class Mdata extends CI_Controller{
 		 			'log_type'=>'12',
 		 			'log_desc'=>sprintf('module %s,%s ID %s success',$this->m->main($this->im->get_mid(),'m_name'),$rs['sys_db_type'],$rs['main'][$log_cf['main']['primary_key']]),
 		 		));
-		 		echo "<script>top.art_dialog_close('保存完毕.');</script>";
+		 		if(empty($main[$primary])){
+   					$callback = ',top.frmright_reload()';
+		 		}
+		 		echo "<script>top.art_dialog_close('保存完毕.'".$callback.");</script>";
 		 		exit;
 			} 
 
@@ -252,7 +254,7 @@ class Mdata extends CI_Controller{
 	 				}
 	 			}
 	 		}
-			$this->cor_page->backend_redirect('mdata/action_list',lang('success_delete'));
+			$this->cor_page->backend_redirect('mdata/action_list');
 		}catch(EXCEPTION $e){
 			$this->cor_page->backend_redirect($_SERVER['HTTP_REFERER'],$e->getMessage());
 		}
@@ -260,7 +262,7 @@ class Mdata extends CI_Controller{
 
 	function action_list(){
 		$query  = $this->input->get();
-		$size = 15;
+		$size = 6;
 		$data = $this->im->fetch_list($size,$query);
 
 		$data = array_merge($data,array('theme'=>$this->m->main($this->im->get_mid(),'m_name')));

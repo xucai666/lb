@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 10:24:29
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 15:47:45
          compiled from "application\templates\backend\blue\mdata_list.htm" */ ?>
 <?php /*%%SmartyHeaderCode:1789252220db6553305-03397575%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fe333cb911d33c55256918497a4e010f83e199be' => 
     array (
       0 => 'application\\templates\\backend\\blue\\mdata_list.htm',
-      1 => 1378031059,
+      1 => 1378050452,
       2 => 'file',
     ),
   ),
@@ -45,7 +45,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
   <form id="form2" method="post" action="<?php echo func_site_url(array('segments'=>'/backend/mdata/action_del'),$_smarty_tpl);?>
 " onsubmit="return chkdel2();">   
-<table class='mytable'>
+<table class='mytable' >
 	<thead>
 <tr>
 	<th>
@@ -113,7 +113,7 @@ $_smarty_tpl->tpl_vars['f']->_loop = true;
 		<input type="checkbox" id="chkall"  value="1" onclick="CheckAll(this.form);">全选
 		<?php echo create_button(array('type'=>'delete','ext'=>''),$_smarty_tpl);?>
 	
-		<?php echo create_button(array('type'=>'add','url'=>'backend/mdata/action_add'),$_smarty_tpl);?>
+		<?php echo create_button(array('type'=>'add','url'=>"javascript:art_dialog_open('".((string)$_smarty_tpl->tpl_vars['site_url']->value)."backend/mdata/action_add','数据管理');"),$_smarty_tpl);?>
 	
 
 </form>

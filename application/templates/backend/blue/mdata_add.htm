@@ -1,17 +1,17 @@
 <!--{include file="`$dir_backend`/top.htm"}-->
 <div class="nav_title">模型数据&raquo;<!--{$theme}--></div>
 <form  name="form1" id="form1" method="post" action="<!--{func_site_url segments='backend/mdata/action_save'}-->">
-<table class="mytable">
+<table class="table_ctl" >
 	<!--{foreach from=$fields item=v}-->
 	 <tr>
-		<td ><!--{$v.r_alias}-->：</td>
+		<td  ><!--{$v.r_alias}-->：</td>
 		<td>
 			
 		<!--{func_vsprintf html =$html[$v.f_id] name="main[`$v.r_name`]" value=$main[$v.r_name]|default:$v.r_default|escape:"html"}-->
 		<!--{ci_form_error k="main[`$v.r_name`]"}-->
 			
 		</td>
-		<td></td>
+		
 	</tr>
 	<!--{/foreach}-->
 
@@ -59,11 +59,11 @@
 			</table>
 			<input type="hidden" id="total_detail" value="<!--{$detail_total}-->" />
 		</td>
-		<td></td>
+		
 	</tr>
 	<!--{/if}-->
 	<tr>
-		<td colspan="3" align="center">
+		<td colspan="2" align="center">
 		<!--{create_button type='save' ext='style="display:none"' }-->
 		
 		<input size="80" type="hidden" name="main[<!--{$primary}-->]" value="<!--{$main[$primary]}-->">

@@ -5,7 +5,7 @@
 
 
   <form id="form2" method="post" action="<!--{func_site_url segments='/backend/mdata/action_del'}-->" onsubmit="return chkdel2();">   
-<table class='mytable'>
+<table class='mytable' >
 	<thead>
 <tr>
 	<th>
@@ -49,7 +49,7 @@
 	
 		<input type="checkbox" id="chkall"  value="1" onclick="CheckAll(this.form);">全选
 		<!--{create_button type='delete' ext=''}-->	
-		<!--{create_button type='add' url='backend/mdata/action_add'}-->	
+		<!--{create_button type='add' url="javascript:art_dialog_open('`$site_url`backend/mdata/action_add','数据管理');"}-->	
 
 </form>
 

@@ -12,7 +12,6 @@
 	width:100%;
 	margin-top:10px;
 	
-	
 }
 
 .mytable td{
@@ -79,4 +78,14 @@ overflow: hidden;
 	white-space : nowrap;
 
 }
+
+
+
+.table_ctl{
+    table-layout:fixed;
+    word-wrap:break-word; 
+	word-break:break-all;
+	
+}
+.table_ctl td{text-overflow:ellipsis;overflow:hidden;white-space: nowrap;padding:2px}
 

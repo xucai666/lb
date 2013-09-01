@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 13:07:12
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 15:54:21
          compiled from "application\templates\backend\blue\mdata_add.htm" */ ?>
 <?php /*%%SmartyHeaderCode:2569452220de7d8c919-90416721%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '94d01c31beef93cc00a93018d55e76db2f96bc12' => 
     array (
       0 => 'application\\templates\\backend\\blue\\mdata_add.htm',
-      1 => 1378040829,
+      1 => 1378050858,
       2 => 'file',
     ),
   ),
@@ -42,14 +42,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </div>
 <form  name="form1" id="form1" method="post" action="<?php echo func_site_url(array('segments'=>'backend/mdata/action_save'),$_smarty_tpl);?>
 ">
-<table class="mytable">
+<table class="table_ctl" >
 	<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['fields']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
 $_smarty_tpl->tpl_vars['v']->_loop = true;
 ?>
 	 <tr>
-		<td ><?php echo $_smarty_tpl->tpl_vars['v']->value['r_alias'];?>
+		<td  ><?php echo $_smarty_tpl->tpl_vars['v']->value['r_alias'];?>
 ：</td>
 		<td>
 			
@@ -59,7 +59,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 
 			
 		</td>
-		<td></td>
+		
 	</tr>
 	<?php } ?>
 
@@ -132,11 +132,11 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 			<input type="hidden" id="total_detail" value="<?php echo $_smarty_tpl->tpl_vars['detail_total']->value;?>
 " />
 		</td>
-		<td></td>
+		
 	</tr>
 	<?php }?>
 	<tr>
-		<td colspan="3" align="center">
+		<td colspan="2" align="center">
 		<?php echo create_button(array('type'=>'save','ext'=>'style="display:none"'),$_smarty_tpl);?>
 
 		

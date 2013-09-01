@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"wor",
+				"word-break"
+			],
+			[
+				"add",
+				"addClass	addClass"
+			],
+			[
+				"function",
+				"function_exists"
+			],
+			[
 				"backg",
 				"background-image"
 			],
@@ -104,59 +116,93 @@
 	},
 	"file_history":
 	[
-		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_lang.php",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/mdata.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/core.js",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/mdata_add.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/table.css",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/mdata_list.htm",
-		"/E/phpnow/htdocs/lb/application/config/config.php",
+		"/E/phpnow/htdocs/lb/application/models/mdata_model.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/iwin.js",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/foot.htm",
+		"/E/phpnow/htdocs/lb/fckeditor/fckconfig.js.dump",
+		"/E/phpnow/htdocs/lb/application/models/common_model.php",
+		"/E/phpnow/htdocs/lb/application/helpers/ckeditor_helper.php",
 		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/page_redirect_dialog.htm",
+		"/E/phpnow/htdocs/lb/application/libraries/cor_page.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/page_redirect.htm",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/User/CTags.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 2/Packages/CTags/CTags.sublime-settings",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/center.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/style.css",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/product.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/page_redirects.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/admin.js",
+		"/D/tools/k开发成果/个人开发/lb/lb/application/templates/backend/blue/center.htm",
+		"/E/phpnow/htdocs/lb/application/libraries/Smarty-3.1.14/libs/plugins/modifier.escape.php.dump",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/login.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/frame_left.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/style_left.css",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/backend_style.css",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/top.htm",
+		"/E/phpnow/htdocs/lb/application/libraries/Smarty-3.1.14/libs/sysplugins/smarty_cacheresource_keyvaluestore.php.dump",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/artdialog/jquery.artDialog.js",
+		"/E/phpnow/htdocs/lb/tools/jQuery弹出层有9种效果/styles/core.css.dump",
+		"/E/phpnow/htdocs/lb/application/helpers/MY_url_helper.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/js/iwin.js",
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/top.htm",
+		"/E/phpnow/htdocs/lb/application/config/config.php",
+		"/E/phpnow/htdocs/lb/application/config/autoload.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/artdialog/skins/default.css",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/artdialog/jquery.artDialog.js",
+		"/E/phpnow/htdocs/lb/system/core/Output.php",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/templates.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/view_list.htm",
+		"/E/phpnow/htdocs/lb/application/helpers/auth_helper.php.dump",
+		"/E/phpnow/htdocs/lb/application/helpers/auth_helper.php",
+		"/E/phpnow/htdocs/lb/application/helpers/json_helper.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/view_add.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/templates_list.htm",
+		"/E/phpnow/htdocs/lb/ckfinder/core/connector/php/lang/pl.php.dump",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/admins.php",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/category.php",
+		"/E/phpnow/htdocs/lb/application/libraries/cor_auth.php",
+		"/E/phpnow/htdocs/lb/system/libraries/javascript/Jquery.php",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/roles.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/roles_add.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/admins_add.htm",
+		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_lang.php",
 		"/E/phpnow/htdocs/lb/application/language/zh/item_front_lang.php",
 		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_admins_lang.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/center.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/backend_style.css",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/style.css",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/images/lb.css",
 		"/E/phpnow/htdocs/lb/application/libraries/cor_cache.php",
-		"/E/phpnow/htdocs/lb/application/libraries/cor_auth.php",
 		"/E/phpnow/htdocs/lb/application/helpers/cor_lang_helper.php",
 		"/E/phpnow/htdocs/lb/system/core/Common.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/login.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/category.php",
 		"/E/phpnow/htdocs/lb/application/libraries/tpl.php.bak",
-		"/E/phpnow/htdocs/lb/application/models/common_model.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/system_manage.php",
 		"/E/phpnow/htdocs/lb/ckfinder/config.php.dump",
-		"/E/phpnow/htdocs/lb/application/helpers/MY_url_helper.php",
 		"/E/phpnow/htdocs/lb/application/libraries/cor_db.php",
 		"/E/phpnow/htdocs/lb/application/libraries/MY_Pagination.php",
 		"/E/phpnow/htdocs/lb/tools/test.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/archives.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/download.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/friendlink.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/mdata.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/product.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/templates.php",
 		"/E/phpnow/htdocs/lb/application/controllers/front/engage.php",
 		"/E/phpnow/htdocs/lb/application/controllers/front/index.php",
 		"/E/phpnow/htdocs/lb/application/models/advs_model.php",
 		"/E/phpnow/htdocs/lb/application/models/pictures_model.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/config_save.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/about_news22.htm",
-		"/E/phpnow/htdocs/lb/application/models/mdata_model.php",
-		"/E/phpnow/htdocs/lb/application/libraries/cor_page.php",
 		"/E/phpnow/htdocs/lb/system/core/Loader.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/mdata_view.htm",
 		"/E/phpnow/htdocs/lb/system/helpers/cookie_helper.php",
 		"/E/phpnow/htdocs/lb/application/libraries/Smarty-3.1.14/libs/sysplugins/smarty_resource.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/mdata_add.htm",
 		"/E/phpnow/htdocs/lb/application/config/email.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/engage.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_view.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/js/iwin.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/iwin.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/iwin.js",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/jqFancyTransitions.1.8.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/frame_left.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/admin.js",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/common.php",
 		"/E/phpnow/htdocs/lb/swfupload/upload.php",
 		"/E/phpnow/htdocs/lb/application/helpers/msubstr_helper.php",
@@ -173,18 +219,15 @@
 		"/E/phpnow/htdocs/lb/swfupload/loader.php",
 		"/E/phpnow/htdocs/lb/application/helpers/image_helper.php",
 		"/E/phpnow/htdocs/lb/ckfinder/config.js",
-		"/E/phpnow/htdocs/lb/application/helpers/ckeditor_helper.php",
 		"/E/phpnow/htdocs/lb/application/helpers/debug.php",
 		"/E/phpnow/htdocs/lb/application/helpers/index.html",
 		"/E/phpnow/htdocs/lb/application/helpers/JSON.php",
-		"/E/phpnow/htdocs/lb/application/helpers/json_helper.php",
 		"/E/phpnow/htdocs/lb/application/helpers/timecount_helper.php",
 		"/E/phpnow/htdocs/lb/ckfinder/config.php",
 		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_login_lang.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/login.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/tooltipsy.min.js",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/images/post/nc_selcolor.htm.dump",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/core.js",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/cookies.js",
 		"/D/tools/k开发成果/个人开发/ec/admin/templates/goods_list.htm",
 		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
@@ -198,50 +241,27 @@
 		"/E/phpnow/htdocs/lb/ckfinder/core/connector/php/connector.php",
 		"/E/phpnow/htdocs/lb/ckeditor/config.js",
 		"/E/phpnow/htdocs/lb/ckfinder/ckfinder.js",
-		"/E/phpnow/htdocs/lb/fckeditor/fckconfig.js.dump",
 		"/E/phpnow/htdocs/lb/fckeditor/fckconfig.js",
 		"/E/phpnow/htdocs/lb/fckeditor/fckeditor.js",
-		"/E/phpnow/htdocs/lb/fckeditor/editor/_source/internals/fckconfig.js",
-		"/E/phpnow/htdocs/lb/fckeditor/editor/filemanager/connectors/php/config.php",
-		"/E/phpnow/htdocs/lb/fckeditor/editor/filemanager/connectors/php/upload.php",
-		"/E/phpnow/htdocs/lb/fckeditor/editor/filemanager/connectors/php/commands.php",
-		"/E/phpnow/htdocs/lb/fckeditor/editor/filemanager/connectors/php/io.php",
-		"/E/phpnow/htdocs/lb/fckeditor/fckeditor.php",
-		"/E/phpnow/htdocs/lb/fckeditor/editor/filemanager/connectors/php/connector.php",
-		"/E/phpnow/htdocs/lb/fckeditor/editor/filemanager/browser/default/frmresourcetype.html",
-		"/E/phpnow/htdocs/lb/fckeditor/editor/filemanager/connectors/php/util.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/fields.php",
-		"/E/phpnow/htdocs/lb/ckeditor/styles.js",
-		"/E/phpnow/htdocs/lb/ckfinder/ckfinder.html",
-		"/E/phpnow/htdocs/lb/ckfinder/ckfinder.php",
-		"/E/phpnow/htdocs/lb/fckeditor/editor/filemanager/connectors/uploadtest.html",
-		"/E/phpnow/htdocs/lb/application/libraries/fckeditor.php",
-		"/E/phpnow/htdocs/lb/ckeditor/build-config.js",
-		"/D/downloads/ckeditor_4.2_standard/ckeditor/build-config.js",
-		"/D/downloads/ckeditor_4.2_standard/ckeditor/config.js",
-		"/E/phpnow/htdocs/lb/ckeditor/ckeditor.js",
-		"/E/phpnow/htdocs/lb/ckeditor/plugins/templates/templates/default.js",
-		"/E/phpnow/htdocs/lb/ckeditor/plugins/icons_hidpi.png",
-		"/E/phpnow/htdocs/lb/swfupload/uploads/006.jpg",
-		"/E/phpnow/htdocs/lb/ckfinder/install.txt",
-		"/E/phpnow/htdocs/lb/ckfinder/core/connector/php/constants.php",
-		"/E/phpnow/php-5.2.12-Win32/php-apache2handler.ini",
-		"/E/phpnow/htdocs/lb/tools/1.php",
-		"/E/phpnow/htdocs/lb/tools/2.php",
-		"/E/phpnow/htdocs/lb/application/core/MY_Input.php",
-		"/E/phpnow/htdocs/lb/ckeditor/upload.php",
-		"/E/phpnow/htdocs/lb/readme.txt",
-		"/E/phpnow/htdocs/lb/ckeditor/LICENSE.md"
+		"/E/phpnow/htdocs/lb/fckeditor/editor/_source/internals/fckconfig.js"
 	],
 	"find":
 	{
-		"height": 95.0
+		"height": 80.0
 	},
 	"find_in_files":
 	{
-		"height": 99.0,
+		"height": 0.0,
 		"where_history":
 		[
+			"E:\\phpnow\\htdocs\\lb\\application",
+			"E:\\phpnow\\htdocs\\lb\\application\\templates",
+			"E:\\phpnow\\htdocs\\lb\\application",
+			"E:\\phpnow\\htdocs\\lb\\application\\templates\\backend,*.css",
+			"E:\\phpnow\\htdocs\\lb\\application\\templates\\backend",
+			"E:\\phpnow\\htdocs\\lb\\application\\templates\\backend\\blue\\js",
+			"E:\\phpnow\\htdocs\\lb\\application\\templates\\backend\\blue",
+			"E:\\phpnow\\htdocs\\lb\\application\\controllers\\backend",
 			"E:\\phpnow\\htdocs\\lb\\application",
 			"E:\\phpnow\\htdocs\\lb\\application\\templates\\backend",
 			"E:\\phpnow\\htdocs\\lb\\swfupload",
@@ -273,134 +293,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"menu_div",
-			"menu_",
-			"menu",
-			"click",
-			"menu",
-			"link_edit",
-			"config_item",
-			"$config",
-			"config_item",
-			"$config",
-			"get_config",
-			"$config[",
-			"$CI->config",
-			"$CI->config->item",
-			"$CI->config",
-			"$config",
-			"config",
-			"$config",
-			"']",
-			"config_item(",
-			"$config['",
-			"$CI",
-			"ci_conf",
-			"get_config",
-			"ci_conf",
-			"get_config",
-			"$CI->config->item",
-			"$this->config->item",
-			"config->item",
-			"encode",
-			"config",
-			"fetch_list",
-			"theme_url",
-			"theme",
-			"dbl_flag",
-			"dblclick",
-			"static_cfg",
-			"static_self",
-			"dbl_flag",
-			"dblclick",
-			"resize",
-			"custom",
-			"trigger",
-			"img[el.id]",
-			"img",
-			"destroy",
-			"destro",
-			"clearinte",
-			"setInterval",
-			"dest",
-			"destroy",
-			"menubar",
-			"event.",
-			".hide",
-			"hide",
-			"toggle",
-			"<script",
-			".js",
-			"thumb",
-			"fetch_images",
-			"content_nav",
-			"msustr",
-			"truncate",
-			"nav",
-			"cancel",
-			"cancelButton",
-			"cancelButton.gif",
-			"cancelButton",
-			"cancelbutton",
-			"cancel_button",
-			"$thumb_path",
-			"make_dir",
 			"width",
-			"image_thumb",
-			"\\",
-			"loader",
-			"$save_path",
-			"tmp",
-			"upload",
-			"uploadd",
-			"move",
-			"Thumbnails",
-			"delete",
-			"destroy",
-			"new Array;",
-			"var",
-			"destroy",
-			"imgInt",
-			"pic_prev",
-			"ft-pic_prev",
-			"setInterval",
-			"setinteval",
-			"destroy",
-			"clearInterval",
-			"destroy",
-			"this",
-			"el.id",
-			"pic_prev_",
-			"destroy",
-			"conta",
-			"container_img",
-			"s",
-			"stop",
-			"show(",
-			"settings",
-			"show",
-			"var c",
-			"var $e1",
-			"show",
-			"i",
-			"aaa",
-			"tooltipsy",
-			"content",
-			"title",
-			"tooltipsy",
+			"word-wrap",
+			"art_dialog_open",
+			"action_save",
+			"$main",
+			"art_dialog",
+			"displayError",
+			"error_span",
+			"art_dialog",
+			"displayerror",
+			"GetObjPos",
+			"displayError",
+			"iwin",
+			"displayError",
+			"$(function",
+			"ready",
+			"displayError",
+			"<td></td>",
+			"editor",
+			"weditor",
+			"art_dialog_open",
+			"dia_open",
+			"dialog_close",
 			"tips",
-			".ti",
-			".tips",
+			"border",
+			"action_save",
+			"backendRedirects",
+			"$direct",
+			"front_redirect",
+			"backend_redirect",
+			"submit",
+			"<form",
+			"addclass(\"sele",
+			"addclass('select",
+			"addclass(\"select",
+			"$(function",
+			"$(functoin",
+			"addcss",
+			"addclaas",
+			"CheckSel",
+			"selected",
+			"frmright",
+			"show",
+			"top_table",
+			"frmright",
+			">",
+			"scroll",
+			"32",
+			"height:100%",
+			"iframe",
+			"32",
+			"3",
+			"main_iframe",
+			"submit",
+			"action_save",
+			"center",
+			"!important",
+			"link_mod",
+			"hide",
+			".detail",
+			"detail",
+			"category",
+			"click(function",
+			"menu li",
+			"addclass",
+			"selected",
+			"click",
+			"menu_childs",
+			"category.png",
+			"category",
+			"category.png",
+			"menubar",
+			"getleftbar",
+			"onclick",
+			"center",
+			"actoin_save",
+			"gosubmit",
+			"center",
+			"fetch",
+			".open",
+			"iframe",
+			"action_save",
+			"action_list",
+			"action_add",
+			"<table",
+			"top_table",
+			"frmleft",
+			"action_save",
+			"js",
+			"drag",
+			"D",
+			"drag",
+			".open",
+			"drag",
+			"iframe",
 			"content",
-			"link",
-			"titles",
-			"title",
-			"load_files",
-			"inlcude",
-			"showbigimg",
-			"showimg",
-			"$save_url",
-			"file_name"
+			".open",
+			".open(",
+			".open",
+			"open",
+			"iframe",
+			"iwin",
+			"initCss",
+			"iframe",
+			"_isIE6",
+			"iframe",
+			"submitTo",
+			"drag",
+			"body",
+			"hide",
+			"server_path",
+			"submitTo",
+			"editor",
+			"helper",
+			"auth",
+			"submitTo",
+			"function view",
+			"front_theme",
+			"front",
+			"function view",
+			"display",
+			"execute_auth",
+			"rights",
+			".css",
+			"fetch_css",
+			"fetch_auth",
+			"menu_div",
+			"menu_"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -408,6 +428,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"backend_redirects",
 			"config_item",
 			"'"
 		],
@@ -431,7 +452,7 @@
 	},
 	"input":
 	{
-		"height": 34.0
+		"height": 33.0
 	},
 	"layout":
 	{
@@ -467,11 +488,103 @@
 		"selected_items":
 		[
 			[
-				"mdata_list.t",
+				"table.css",
+				"application/templates/backend/blue/css/table.css"
+			],
+			[
+				"mdata_add",
+				"application/templates/backend/blue/mdata_add.htm"
+			],
+			[
+				"mdata.",
+				"application/controllers/backend/mdata.php"
+			],
+			[
+				"mdata_list",
 				"application/templates/backend/blue/mdata_list.htm"
 			],
 			[
-				"style.css",
+				"jwin.js",
+				"application/templates/backend/blue/js/iwin.js"
+			],
+			[
+				"ccore.js",
+				"application/templates/backend/blue/js/core.js"
+			],
+			[
+				"foot.htm",
+				"application/templates/backend/blue/foot.htm"
+			],
+			[
+				"core.js",
+				"application/templates/backend/blue/js/core.js"
+			],
+			[
+				"common_model",
+				"application/models/common_model.php"
+			],
+			[
+				"tpl.php",
+				"application/libraries/tpl.php"
+			],
+			[
+				"mdata_list.ht",
+				"application/templates/backend/blue/mdata_list.htm"
+			],
+			[
+				"mdata_add.ht",
+				"application/templates/backend/blue/mdata_add.htm"
+			],
+			[
+				"page_reci",
+				"application/templates/backend/blue/page_redirect_dialog.htm"
+			],
+			[
+				"page_redirect",
+				"application/templates/backend/blue/page_redirect.htm"
+			],
+			[
+				"page_re",
+				"application/templates/backend/blue/page_redirect.htm"
+			],
+			[
+				"mdata_add.htm",
+				"application/templates/backend/blue/mdata_add.htm"
+			],
+			[
+				"mdata.php",
+				"application/controllers/backend/mdata.php"
+			],
+			[
+				"page_redirects",
+				"application/templates/backend/blue/page_redirects.htm"
+			],
+			[
+				"center.htm",
+				"application/templates/backend/blue/center.htm"
+			],
+			[
+				"admin.js",
+				"application/templates/backend/blue/js/admin.js"
+			],
+			[
+				"style.c",
+				"application/templates/backend/blue/css/style.css"
+			],
+			[
+				"mdata_list.htm",
+				"application/templates/backend/blue/mdata_list.htm"
+			],
+			[
+				"login.php",
+				"application/controllers/backend/login.php"
+			],
+			[
+				"backend_st",
+				"application/templates/backend/blue/css/backend_style.css"
+			],
+			[
+				"stylecss",
 				"application/templates/backend/blue/css/style.css"
 			],
 			[
@@ -479,12 +592,96 @@
 				"application/templates/backend/blue/css/backend_style.css"
 			],
 			[
-				"center.htm",
+				"style.cs",
+				"application/templates/backend/blue/css/style.css"
+			],
+			[
+				"backend_style",
+				"application/templates/backend/blue/css/backend_style.css"
+			],
+			[
+				"top.htm",
+				"application/templates/backend/blue/top.htm"
+			],
+			[
+				"mcenter",
 				"application/templates/backend/blue/center.htm"
 			],
 			[
-				"mdata_list",
+				"mdata_add.",
+				"application/templates/backend/blue/mdata_add.htm"
+			],
+			[
+				"myurl",
+				"application/helpers/MY_url_helper.php"
+			],
+			[
+				"iwin.js",
+				"application/templates/front/blue/en/js/iwin.js"
+			],
+			[
+				"templates.php",
+				"application/controllers/backend/templates.php"
+			],
+			[
+				"view_lst",
+				"application/templates/backend/blue/view_list.htm"
+			],
+			[
+				"common_mde",
+				"application/models/common_model.php"
+			],
+			[
+				"template",
+				"application/controllers/backend/templates.php"
+			],
+			[
+				"cor_page",
+				"application/libraries/cor_page.php"
+			],
+			[
+				"view_list",
+				"application/templates/backend/blue/view_list.htm"
+			],
+			[
+				"view_add",
+				"application/templates/backend/blue/view_add.htm"
+			],
+			[
+				"templates_list",
+				"application/templates/backend/blue/templates_list.htm"
+			],
+			[
+				"template.php",
+				"application/controllers/backend/templates.php"
+			],
+			[
+				"admins.php",
+				"application/controllers/backend/admins.php"
+			],
+			[
+				"mdata.pp",
+				"application/controllers/backend/mdata.php"
+			],
+			[
+				"roles_add",
+				"application/templates/backend/blue/roles_add.htm"
+			],
+			[
+				"role.php",
+				"application/controllers/backend/roles.php"
+			],
+			[
+				"admin_add",
+				"application/templates/backend/blue/admins_add.htm"
+			],
+			[
+				"mdata_list.t",
 				"application/templates/backend/blue/mdata_list.htm"
+			],
+			[
+				"style.css",
+				"application/templates/backend/blue/css/style.css"
 			],
 			[
 				"backend_sty",
@@ -511,14 +708,6 @@
 				"application/models/mdata_model.php"
 			],
 			[
-				"mdata.php",
-				"application/controllers/backend/mdata.php"
-			],
-			[
-				"tpl.php",
-				"application/libraries/tpl.php"
-			],
-			[
 				"cor_page.",
 				"application/libraries/cor_page.php"
 			],
@@ -535,16 +724,8 @@
 				"application/templates/backend/blue/mdata_view.htm"
 			],
 			[
-				"mdata_add",
-				"application/templates/backend/blue/mdata_add.htm"
-			],
-			[
 				"mdata",
 				"application/controllers/backend/mdata.php"
-			],
-			[
-				"myurl",
-				"application/helpers/MY_url_helper.php"
 			],
 			[
 				"enage.php",
@@ -567,16 +748,8 @@
 				"application/templates/front/blue/zh/product.htm"
 			],
 			[
-				"iwin.js",
-				"application/templates/front/blue/en/js/iwin.js"
-			],
-			[
 				"jqf",
 				"application/templates/backend/blue/js/jqFancyTransitions.1.8.js"
-			],
-			[
-				"admin.js",
-				"application/templates/backend/blue/js/admin.js"
 			],
 			[
 				"common",
@@ -599,10 +772,6 @@
 				"application/templates/front/blue/en/dynamic_view.htm"
 			],
 			[
-				"common_model",
-				"application/models/common_model.php"
-			],
-			[
 				"swfuplad",
 				"swfupload/upload.php"
 			],
@@ -617,10 +786,6 @@
 			[
 				"mdata.ph",
 				"application/controllers/backend/mdata.php"
-			],
-			[
-				"core.js",
-				"application/templates/backend/blue/js/core.js"
 			],
 			[
 				"product_view.htm",
@@ -675,20 +840,12 @@
 				"ckfinder/core/connector/php/connector.php"
 			],
 			[
-				"login.php",
-				"application/controllers/backend/login.php"
-			],
-			[
 				"test.ph",
 				"tools/test.php"
 			],
 			[
 				"browser.html",
 				"fckeditor/editor/filemanager/browser/default/browser.html"
-			],
-			[
-				"top.htm",
-				"application/templates/front/blue/zh/top.htm"
 			],
 			[
 				"member.php",
@@ -803,10 +960,6 @@
 				"application/errors/error_db.php"
 			],
 			[
-				"mdata_list.htm",
-				"application/templates/backend/blue/mdata_list.htm"
-			],
-			[
 				"product_list",
 				"application/templates/backend/blue/product_list.htm"
 			],
@@ -845,46 +998,6 @@
 			[
 				"my_form_validation",
 				"application/libraries/MY_Form_validation.php"
-			],
-			[
-				"member_register",
-				"application/templates/front/blue/zh/member_register.htm"
-			],
-			[
-				"member.hp",
-				"application/controllers/front/member.php"
-			],
-			[
-				"fields_add",
-				"application/templates/backend/blue/fields_add.htm"
-			],
-			[
-				"mdata_list.",
-				"application/templates/backend/blue/mdata_list.htm"
-			],
-			[
-				"product_cart.htm",
-				"application/templates/front/blue/zh/product_cart.htm"
-			],
-			[
-				"common_mode",
-				"application/models/common_model.php"
-			],
-			[
-				"swf/upload",
-				"swfupload/upload.php"
-			],
-			[
-				"dyn",
-				"application/templates/front/blue/zh/dynamic.htm"
-			],
-			[
-				"sytemmange",
-				"application/controllers/backend/system_manage.php"
-			],
-			[
-				"swfuplo",
-				"swfupload/index.php"
 			]
 		],
 		"width": 0.0

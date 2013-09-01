@@ -474,8 +474,8 @@ class Common_model  extends CI_Model{
 	/**
 	 * 编辑器
 	 */
-	function editor($v,$i='content',$tool_bar='Basic'){
-			return   $this->ckeditor($v,$i,$tool_bar);
+	function editor($v,$i='content',$tool_bar='Basic',$w=600,$h=400){
+			return   $this->ckeditor($v,$i,$tool_bar,$w,$h);
 	}
 
 	/**
@@ -485,15 +485,15 @@ class Common_model  extends CI_Model{
 	 * @param  string $tool_bar [description]
 	 * @return [type]           [description]
 	 */
-	function fckeditor($v,$i='content',$tool_bar='Basic'){
+	function fckeditor($v,$i='content',$tool_bar='Basic',$w=600,$h=400){
 
 		empty($this->fckeditor) && $this->load->library('FCKeditor');
 			$config = array(
 					'i'=>$i,
 		 			't'=>$tool_bar,
 		 			'v'=>$v,
-		 			'w'=>'600',
-		 			'h'=>'400',
+		 			'w'=>$w,
+		 			'h'=>$h,
 		 			'ToolbarStartExpanded'=>1,
 		 			'DefaultLanguage'=>lang_get()=='english'?'en':'zh-cn',
 		 			
@@ -508,7 +508,7 @@ class Common_model  extends CI_Model{
 	 * @param  string $tool_bar [description]
 	 * @return [type]           [description]
 	 */
-	function ckeditor($v,$i='content',$tool_bar='Basic'){
+	function ckeditor($v,$i='content',$tool_bar='Basic',$w=600,$h=400){
 		if(!function_exists('display_ckeditor')){
 			$this->load->helper('ckeditor');
 		}
@@ -522,8 +522,8 @@ class Common_model  extends CI_Model{
 			
 						//Optionnal values
 			'config' => array(
-				'width' 	=> 	"600px",	//Setting a custom width
-				'height' 	=> 	'400px',	//Setting a custom height
+				'width' 	=> 	$w,	//Setting a custom width
+				'height' 	=> 	$h,	//Setting a custom height
 				'toolbar' 	=> 	$tool_bar,
 			 	'skin'		=>	'kama',		
 			),
