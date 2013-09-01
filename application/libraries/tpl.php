@@ -273,7 +273,7 @@ function create_button($array){
 			$html = '<a href="'.site_url($url).'" class="button_bg" id="'.$id.'">'.$title.'</a>';
 		}
 	}else{
-	 	 $html ='<input type="submit" class="button_bg no-border"  id="'.$id.'"  value="'.$title.'" '.$ext.'    />';
+	 	 $html ='<input type="submit" class="button_bg no-border"  id="'.$id.'"  value="'.$title.'"  '.$ext.'    />';
 	}
 	return $html;
 

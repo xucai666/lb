@@ -24,10 +24,10 @@ div.menu_childs ul li a { color:#135294; text-decoration: none; width:133px !imp
 .menuhr{border-top:1px solid #B5CFDE; height:4px;line-height:0px; font-size:0px; width:98%; float:left; margin:4px 0px 0px 0px;}
 
 .main_left_title{text-align:left; padding-left:15px; font-size:14px; font-weight:bold; color:#fff;}
-	.left_iframe{height: 100%; visibility: inherit;width: 180px; background:transparent;}
-	.main_iframe{height: 100%; visibility: inherit; width:100%; Z-INDEX: 1;}
-	table { font-size:12px; font-family : tahoma, 宋体, fantasy; }
-	td { font-size:12px; font-family : tahoma, 宋体, fantasy;}
-	body,html{height:100%}
+.left_iframe{height: 100%; visibility: inherit;width: 180px; background:transparent;}
+.main_iframe{height: 100%; visibility: inherit; width:100%; Z-INDEX: 1;}
+table { font-size:12px; font-family : tahoma, 宋体, fantasy; }
+td { font-size:12px; font-family : tahoma, 宋体, fantasy;}
+body,html{height:100%}
 
 

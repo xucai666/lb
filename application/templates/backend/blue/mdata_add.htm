@@ -1,11 +1,10 @@
 <!--{include file="`$dir_backend`/top.htm"}-->
-<fieldset>
-<legend><div class="nav_title">模型数据&raquo;<!--{$theme}--></div></legend>
+<div class="nav_title">模型数据&raquo;<!--{$theme}--></div>
 <form  name="form1" id="form1" method="post" action="<!--{func_site_url segments='backend/mdata/action_save'}-->">
-<table>
+<table class="mytable">
 	<!--{foreach from=$fields item=v}-->
 	 <tr>
-		<td><!--{$v.r_alias}-->：</td>
+		<td ><!--{$v.r_alias}-->：</td>
 		<td>
 			
 		<!--{func_vsprintf html =$html[$v.f_id] name="main[`$v.r_name`]" value=$main[$v.r_name]|default:$v.r_default|escape:"html"}-->
@@ -65,13 +64,12 @@
 	<!--{/if}-->
 	<tr>
 		<td colspan="3" align="center">
-		<!--{create_button type='save'}-->
+		<!--{create_button type='save' ext='style="display:none"' }-->
 		
 		<input size="80" type="hidden" name="main[<!--{$primary}-->]" value="<!--{$main[$primary]}-->">
 	</td></tr>
 
 </table>
 </form>	
-</fieldset>
 
 <!--{include file="`$dir_backend`/foot.htm"}-->

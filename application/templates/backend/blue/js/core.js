@@ -538,20 +538,45 @@ function ImgError(source){
 }
 
 
-function art_dialog_open(url){
+function art_dialog_open(url,title){
 	//str =window.showModalDialog(url,'',"dialogWidth=600px;dialogHeight=400px");
-	top.art.dialog.open(url, {title: '提示',width:600,height:400,lock:true});
+	var d_title =title?title:'对话框';
+	top.art.dialog.open(url,{
+	button: [{
+    	name: '保存',
+        callback: function () {
+         	var iframe = this.iframe.contentWindow;
+    		iframe.$('input:submit').trigger("click");
+            this           
+            .button({
+                name: '保存',
+                disabled: true
+            }).lock();
+            return false;
+        },
+
+        focus: true
+    }],
+    title: d_title,
+    width:600,
+    height:400,
+    lock:true,
+    resize:true,
+    opacity:"0.4"
+    });
 
 
 }
 
-function art_dialog_close(){
+function art_dialog_close(msg){
 		var list = top.art.dialog.list;
 		for (var i in list) {
-
 		    list[i].close();
-		};
-	}
+		}
+		if(msg!="undefined"){
+			top.art.dialog.tips(msg);
+		}
+}
 	
 	
 	

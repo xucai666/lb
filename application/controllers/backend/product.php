@@ -129,7 +129,7 @@ class Product extends CI_Controller{
 	 		$data_var = $this->cor_db->save($data,$db_config);	
  			$back_url = "product/action_add/?parent_class=".$parent_class."&pro_id=".$data_var['main']['pro_id'];
 	 		
-	 		$this->cor_page->backendRedirects(array($this->cor_page->fetchButton('j_edit')=>$back_url,$this->cor_page->fetchButton('j_add')=>'product/action_add?parent_class='.$parent_class,$this->cor_page->fetchButton('j_list')=>'product/action_list?parent_class='.$parent_class),'产品资料更新完毕.');
+	 		$this->cor_page->backend_redirects(array($this->cor_page->fetchButton('j_edit')=>$back_url,$this->cor_page->fetchButton('j_add')=>'product/action_add?parent_class='.$parent_class,$this->cor_page->fetchButton('j_list')=>'product/action_list?parent_class='.$parent_class),'产品资料更新完毕.');
 		 	}else{
 				$data['editor']  = $this->im->editor($main['pro_content']);
 		 		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);

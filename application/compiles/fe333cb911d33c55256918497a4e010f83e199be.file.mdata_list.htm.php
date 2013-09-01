@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 09:01:57
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 10:24:29
          compiled from "application\templates\backend\blue\mdata_list.htm" */ ?>
 <?php /*%%SmartyHeaderCode:1789252220db6553305-03397575%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fe333cb911d33c55256918497a4e010f83e199be' => 
     array (
       0 => 'application\\templates\\backend\\blue\\mdata_list.htm',
-      1 => 1378026109,
+      1 => 1378031059,
       2 => 'file',
     ),
   ),
@@ -98,7 +98,7 @@ $_smarty_tpl->tpl_vars['f']->_loop = true;
 
 			<a href="javascript:;" onclick="art_dialog_open('<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
 /backend/mdata/action_add/<?php echo $_smarty_tpl->tpl_vars['item']->value[$_smarty_tpl->tpl_vars['primary']->value];?>
-')" class="link_mod"></a>
+','数据管理')" class="link_mod"></a>
 	</td>
 </tr>
 <?php } ?>

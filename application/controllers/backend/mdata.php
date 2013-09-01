@@ -133,8 +133,6 @@ class Mdata extends CI_Controller{
 		
 		$main = $this->input->post('main');
 		$detail = $this->cor_form->post_to_set($this->input->post('detail'));
-
-		
 		$data = array('main'=>$main,'detail'=>$detail);
 		try{
 			$rules = $this->im->valid_config($data);
@@ -180,8 +178,8 @@ class Mdata extends CI_Controller{
 		 			'log_type'=>'12',
 		 			'log_desc'=>sprintf('module %s,%s ID %s success',$this->m->main($this->im->get_mid(),'m_name'),$rs['sys_db_type'],$rs['main'][$log_cf['main']['primary_key']]),
 		 		));
-
-				$this->cor_page->backend_redirect('javascript:art_dialog_close();',lang('success_save'));
+		 		echo "<script>top.art_dialog_close('保存完毕.');</script>";
+		 		exit;
 			} 
 
 		}catch(EXCEPTION $e){

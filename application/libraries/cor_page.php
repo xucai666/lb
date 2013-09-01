@@ -382,8 +382,8 @@ class Cor_page{
 	/**
 	 * 跳转
 	 */
-	function front_redirect($url,$msg=null,$direct=0){	
-		if(preg_match("/javascript/",$url)||$direct||preg_match("/http/",$url)){
+	function front_redirect($url,$msg=null){	
+		if(preg_match("/javascript/",$url)||preg_match("/http/",$url)){
 			$url_new = $url;
 			
 		}else{
@@ -406,9 +406,9 @@ class Cor_page{
 	/**
 	 * 跳转
 	 */
-	function backend_redirect($url,$msg=null,$direct=0){	
+	function backend_redirect($url,$msg=null,$view='page_redirect'){	
 
-		if(preg_match("/javascript/",$url)||$direct||preg_match("/http/",$url)){
+		if(preg_match("/javascript/",$url)||preg_match("/http/",$url)){
 			$url_new = $url;
 			
 		}else{
@@ -421,7 +421,7 @@ class Cor_page{
 		if(empty($msg)){
 			redirect($url);
 		} else{
-			$this->load_backend_view('page_redirect',$data);	
+			$this->load_backend_view($view,$data);	
 		}
 		
 		
@@ -432,9 +432,9 @@ class Cor_page{
 	/**
 	 * 跳转
 	 */
-	function backendRedirects($url_array,$msg=null){	
+	function backend_redirects($url_array,$msg=null){	
 		foreach($url_array as $k=>$url){
-			if(preg_match("/javascript/",$url)||$direct||preg_match("/http/",$url)){
+			if(preg_match("/javascript/",$url)||preg_match("/http/",$url)){
 				$url_new = $url;
 			}else{
 				if(!preg_match("/backend/",$url)){

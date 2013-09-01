@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 07:02:20
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 13:07:12
          compiled from "application\templates\backend\blue\mdata_add.htm" */ ?>
 <?php /*%%SmartyHeaderCode:2569452220de7d8c919-90416721%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '94d01c31beef93cc00a93018d55e76db2f96bc12' => 
     array (
       0 => 'application\\templates\\backend\\blue\\mdata_add.htm',
-      1 => 1378018922,
+      1 => 1378040829,
       2 => 'file',
     ),
   ),
@@ -38,19 +38,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52220de7f3d734_51875529')) {function content_52220de7f3d734_51875529($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
-<fieldset>
-<legend><div class="nav_title">模型数据&raquo;<?php echo $_smarty_tpl->tpl_vars['theme']->value;?>
-</div></legend>
+<div class="nav_title">模型数据&raquo;<?php echo $_smarty_tpl->tpl_vars['theme']->value;?>
+</div>
 <form  name="form1" id="form1" method="post" action="<?php echo func_site_url(array('segments'=>'backend/mdata/action_save'),$_smarty_tpl);?>
 ">
-<table>
+<table class="mytable">
 	<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['fields']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
 $_smarty_tpl->tpl_vars['v']->_loop = true;
 ?>
 	 <tr>
-		<td><?php echo $_smarty_tpl->tpl_vars['v']->value['r_alias'];?>
+		<td ><?php echo $_smarty_tpl->tpl_vars['v']->value['r_alias'];?>
 ：</td>
 		<td>
 			
@@ -138,7 +137,7 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 	<?php }?>
 	<tr>
 		<td colspan="3" align="center">
-		<?php echo create_button(array('type'=>'save'),$_smarty_tpl);?>
+		<?php echo create_button(array('type'=>'save','ext'=>'style="display:none"'),$_smarty_tpl);?>
 
 		
 		<input size="80" type="hidden" name="main[<?php echo $_smarty_tpl->tpl_vars['primary']->value;?>
@@ -148,7 +147,6 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 
 </table>
 </form>	
-</fieldset>
 
 <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/foot.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }} ?>
