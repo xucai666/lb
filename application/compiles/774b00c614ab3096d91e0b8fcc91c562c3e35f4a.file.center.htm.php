@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 09:52:57
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 10:20:51
          compiled from "application\templates\backend\blue\center.htm" */ ?>
 <?php /*%%SmartyHeaderCode:637452220db57aa019-90196776%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '774b00c614ab3096d91e0b8fcc91c562c3e35f4a' => 
     array (
       0 => 'application\\templates\\backend\\blue\\center.htm',
-      1 => 1378029175,
+      1 => 1378030850,
       2 => 'file',
     ),
   ),
@@ -61,6 +61,11 @@ $(window).load(function(){
 		
 	}); 
 
+	$("div.menu li").click(function(){
+		$("div.menu li").removeClass('selected');
+		$(this).addClass('selected');
+	})
+
 });
 </script>
 
@@ -68,13 +73,8 @@ $(window).load(function(){
 	.main_left {table-layout:auto; background:url(<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /left_bg.gif)}
 	.main_left_top{ background:url(<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
-/left_menu_bg.gif); padding-top:2px !important; padding-top:5px;}
-	.main_left_title{text-align:left; padding-left:15px; font-size:14px; font-weight:bold; color:#fff;}
-	.left_iframe{height: 100%; visibility: inherit;width: 180px; background:transparent;}
-	.main_iframe{height: 100%; visibility: inherit; width:100%; Z-INDEX: 1;}
-	table { font-size:12px; font-family : tahoma, 宋体, fantasy; }
-	td { font-size:12px; font-family : tahoma, 宋体, fantasy;}
-	body,html{height:100%}
+/left_menu_bg.gif); padding-top:2px ; padding-top:5px;}
+	
 	
 
 </style>

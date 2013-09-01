@@ -18,18 +18,18 @@ $(window).load(function(){
 		
 	}); 
 
+	$("div.menu li").click(function(){
+		$("div.menu li").removeClass('selected');
+		$(this).addClass('selected');
+	})
+
 });
 </script>
 <!--{/literal}-->
 <style>
 	.main_left {table-layout:auto; background:url(<!--{$img_url}-->/left_bg.gif)}
-	.main_left_top{ background:url(<!--{$img_url}-->/left_menu_bg.gif); padding-top:2px !important; padding-top:5px;}
-	.main_left_title{text-align:left; padding-left:15px; font-size:14px; font-weight:bold; color:#fff;}
-	.left_iframe{height: 100%; visibility: inherit;width: 180px; background:transparent;}
-	.main_iframe{height: 100%; visibility: inherit; width:100%; Z-INDEX: 1;}
-	table { font-size:12px; font-family : tahoma, 宋体, fantasy; }
-	td { font-size:12px; font-family : tahoma, 宋体, fantasy;}
-	body,html{height:100%}
+	.main_left_top{ background:url(<!--{$img_url}-->/left_menu_bg.gif); padding-top:2px ; padding-top:5px;}
+	
 	
 
 </style>
