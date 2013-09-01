@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-28 05:30:04
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 01:26:04
          compiled from "application\templates\front\blue\zh\foot.htm" */ ?>
-<?php /*%%SmartyHeaderCode:16374521d8adcdbedd2-95546354%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:23987522297acca2a87-13518382%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '16374521d8adcdbedd2-95546354',
+  'nocache_hash' => '23987522297acca2a87-13518382',
   'function' => 
   array (
   ),
@@ -21,9 +21,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_521d8adce19167_04310222',
+  'unifunc' => 'content_522297acd237d7_90435375',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_521d8adce19167_04310222')) {function content_521d8adce19167_04310222($_smarty_tpl) {?><table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
+<?php if ($_valid && !is_callable('content_522297acd237d7_90435375')) {function content_522297acd237d7_90435375($_smarty_tpl) {?><table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
     <td width="7"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /banquan_09.jpg" width="7" height="39" /></td>

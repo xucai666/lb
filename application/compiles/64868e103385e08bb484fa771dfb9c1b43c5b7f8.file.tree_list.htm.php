@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-31 07:53:30
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 02:44:17
          compiled from "application\templates\backend\blue\tree_list.htm" */ ?>
-<?php /*%%SmartyHeaderCode:157335221a0fa394e23-71248359%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:159135222aa012fdc32-85573874%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '157335221a0fa394e23-71248359',
+  'nocache_hash' => '159135222aa012fdc32-85573874',
   'function' => 
   array (
   ),
@@ -26,9 +26,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5221a0fa4cec25_67882763',
+  'unifunc' => 'content_5222aa01434ba5_46480680',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5221a0fa4cec25_67882763')) {function content_5221a0fa4cec25_67882763($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_5222aa01434ba5_46480680')) {function content_5222aa01434ba5_46480680($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <div class="nav_title">分类管理</div>
 <div  align="right"><a href="<?php echo func_site_url(array('segments'=>'/backend/tree/action_add'),$_smarty_tpl);?>

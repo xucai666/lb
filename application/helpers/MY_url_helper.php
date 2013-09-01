@@ -96,7 +96,7 @@
 	         $lang = $lang?$lang:lang_get();
 	         $c_f = $CI->cor_cache->cache_fetch('sys_config');
 	         $c_theme = $c_f['develop']['template'];
-	         $path = base_url($CI->config->item('template_dir').$type."/".$c_theme);
+	         $path = base_url(config_item('template_dir').$type."/".$c_theme);
 	         $path = ($type == 'front')? $path.'/'.$lang:$path;
 	         return $path . '/';
 	     }

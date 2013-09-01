@@ -138,7 +138,7 @@ $(function($){
 	<td><!--{$item.size}--></td>
 	<td align='center'>
 		
-		<!--{ci_anchor segment="backend/templates/view_add/`$item.server_path|base64_encode`" attrs="class:link_mod `$item.edit_able`"}-->
+		<!--{ci_anchor segment="backend/templates/view_add/`$item.server_path|my_encrypt:'ENCODE'`" attrs="class:link_mod `$item.edit_able`"}-->
 	</td>
 </tr>
 <!--{/foreach}-->

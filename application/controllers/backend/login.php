@@ -78,7 +78,8 @@ class Login extends CI_Controller {
 	 * 中心
 	 */
 	function center(){	
-			$this->cor_auth->execute_auth();	
+			$this->cor_auth->execute_auth();
+			$this->cor_page->fetch_js('artdialog/jquery.artDialog','view',getRootUrl('js','backend'));	
 			$this->lang->load("item_backend",lang_get());
 			$data['lang_sys']  = $this->lang->language;
 			$data['lang_all_options'] = $this->Common_model->lang_all();
@@ -93,7 +94,7 @@ class Login extends CI_Controller {
 			
 			$data['user_info'] = $this->cor_auth->db_user();
 
-			if($this->config->item('weather')):
+			if(config_item('weather')):
 				//ip and weather
 				$weather = null;
 				if($this->cor_cache->cache_exists('weather')){			
@@ -193,11 +194,8 @@ class Login extends CI_Controller {
  	
 	function left()
 	{
-
-		$this->cor_auth->execute_auth();	
-		
-		$config = &get_config();
-		$theme = $config['backend_theme'];
+		$this->cor_auth->execute_auth();		
+		$theme = config_item('backend_theme');
 		$this->cor_page->fetch_css('style_left',null,getRootUrl('css','backend'));
 		
 		//加载公共语言包
@@ -213,8 +211,8 @@ class Login extends CI_Controller {
 	
  	function right()
 	{
-		$config = &get_config();
-		$theme = $config['backend_theme'];
+		
+		$theme = config_item('backend_theme');
 		$this->cor_page->fetch_css('main',null,base_url().'templates/backend/'.$theme.'/css/');
 		$this->cor_page->fetch_js(array('Main'),null,base_url().'templates/backend/'.$theme.'/js/');
 		$this->cor_page->load_backend_view("frame_right");

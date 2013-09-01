@@ -81,7 +81,7 @@ class Cor_page{
 	/**
 	 * 后台view,load
 	 */
-	function load_backend_view($view,$data=null){	
+	function load_backend_view($view,$data=null,$return=0){	
 			global $OUT;
 			
 			$this->load_language('backend');
@@ -138,7 +138,11 @@ class Cor_page{
 				$OUT->append_output($content);	
 				
 			}
-
+			if($return==1){
+				return $OUT->get_output();
+			}
+			$OUT->_display($content); 
+			exit;
 					
 	}	
 
@@ -146,7 +150,7 @@ class Cor_page{
 		if (strpos($v, '.') === false) {
             $v .= '.htm';
         } 
-		return $type.'/'.$this->front_theme.'/'.$this->lang_type.'/'.$v;
+		return $type=='backend'?$type.'/'.$this->front_theme.'/'.$v:$type.'/'.$this->front_theme.'/'.$this->lang_type.'/'.$v;
 	}
 
 	//cache for single view
@@ -367,20 +371,7 @@ class Cor_page{
 	
 	 	
 	 function my_encrypt($string=null, $operation) { 
-	 	if(empty($string)) return '';
-	 	if(empty($operation)) show_error('加密类型未设置');
-	 	$key  = $this->config['encryption_key'];	 	
-		$keylength = strlen($key);
-		$string = $operation == 'DECODE' ? base64_decode($string) : $string;
-		$coded = '';		
-		for($i = 0; $i < strlen($string); $i += $keylength) {
-		
-			$coded .= substr($string, $i, $keylength) ^ $key;
-			//substr 类似于.net中substring
-		}	
-		
-		$coded = $operation == 'ENCODE' ? str_replace('=', '', base64_encode($coded)) : $coded;
-		return $coded;
+	 	return my_encrypt($string,$operation);
 	 		
 	}
 		

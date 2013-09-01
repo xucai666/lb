@@ -102,7 +102,7 @@ class Archives extends CI_Controller{
 		 	if($this->form_validation->run()==true){	
 		 		
 		 		 //图片上传 		 		
-			 	 $file_config = $this->config->item('info_files');
+			 	 $file_config = config_item('info_files');
 				 $file_upload_path = $file_config['upload_path'].'/'.date('Y-m-d')."/";
 				 $file_config['upload_path']	  =  $file_upload_path;	
 				 $this->Common_model->mkdirs($file_upload_path);

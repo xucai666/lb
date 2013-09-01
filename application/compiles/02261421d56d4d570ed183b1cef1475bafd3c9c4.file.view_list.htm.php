@@ -1,20 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-29 03:41:59
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 03:51:29
          compiled from "application\templates\backend\blue\view_list.htm" */ ?>
-<?php /*%%SmartyHeaderCode:23283521ec307971967-91617589%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:367152220fb29a5c28-57461840%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '02261421d56d4d570ed183b1cef1475bafd3c9c4' => 
     array (
       0 => 'application\\templates\\backend\\blue\\view_list.htm',
-      1 => 1376781966,
+      1 => 1378007487,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '23283521ec307971967-91617589',
+  'nocache_hash' => '367152220fb29a5c28-57461840',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52220fb2afd1b4_56706836',
   'variables' => 
   array (
     'dir_backend' => 0,
@@ -26,10 +28,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'page_link' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_521ec307bb9c95_15236779',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_521ec307bb9c95_15236779')) {function content_521ec307bb9c95_15236779($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_52220fb2afd1b4_56706836')) {function content_52220fb2afd1b4_56706836($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\modifier.date_format.php';
 ?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
@@ -187,7 +187,7 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 </td>
 	<td align='center'>
 		
-		<?php echo ci_anchor(array('segment'=>"backend/templates/view_add/".((string)base64_encode($_smarty_tpl->tpl_vars['item']->value['server_path'])),'attrs'=>"class:link_mod ".((string)$_smarty_tpl->tpl_vars['item']->value['edit_able'])),$_smarty_tpl);?>
+		<?php echo ci_anchor(array('segment'=>"backend/templates/view_add/".((string)my_encrypt($_smarty_tpl->tpl_vars['item']->value['server_path'],'ENCODE')),'attrs'=>"class:link_mod ".((string)$_smarty_tpl->tpl_vars['item']->value['edit_able'])),$_smarty_tpl);?>
 
 	</td>
 </tr>

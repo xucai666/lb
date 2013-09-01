@@ -109,7 +109,7 @@ class Advs_model extends CI_Model{
 	
 	
 	function do_upload($main){	
-		$config = $this->config->item('advs_files');
+		$config = config_item('advs_files');
 		$this->Common_model->mkdirs($config['upload_path']);
 		$this->load->library('upload');						
 		$detail = $this->input->post('detail');	

@@ -114,7 +114,7 @@ class System_manage extends CI_Controller{
 			write_file($backup_file, $backup); 	
 			$words_return[]='成功备份到目录&nbsp;'.$save_dir;		
 			//发往email			
-			if($this->config->item('backup_email')){		
+			if(config_item('backup_email')){		
 				$this->load->library('email');
 				$this->email->from('yehua365@163.com');		
 				$this->email->to('conqweal@163.com');		
@@ -127,7 +127,7 @@ class System_manage extends CI_Controller{
 			}			
 		
 			//直接下载
-			if($this->config->item('backup_to_download')){
+			if(config_item('backup_to_download')){
 				$this->load->helper('download');
 				force_download($file_name, $backup);
 			}			
@@ -163,7 +163,7 @@ class System_manage extends CI_Controller{
  	 */
  	function basic_config(){
  		$this->load->helper('directory'); 	
- 		$styles = directory_map($this->config->item('template_dir').DIRECTORY_SEPARATOR.'backend',1);
+ 		$styles = directory_map(config_item('template_dir').DIRECTORY_SEPARATOR.'backend',1);
  			
 		$data = $this->cor_cache->cache_fetch('sys_config');
 		
@@ -283,7 +283,7 @@ class System_manage extends CI_Controller{
  				$lang = null;
  				include_once($path.$v);
  				foreach((array)$lang as $k1=>$v1){
- 					foreach($this->config->item('support_language') as $v2){
+ 					foreach(config_item('support_language') as $v2){
  						$data = array('lang_type'=>$v2,'lang_file'=>$v,'lang_key'=>$k1,'lang_val'=>is_array($v1)?implode('|',$v1):$v1,'is_trans'=>$v2=='zh'?1:0); 
  						
  						$this->db->insert('lang',$data);

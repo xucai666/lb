@@ -226,7 +226,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  		$from = $_GET['per_page'];
  		$this->_lt = array(
  			'from'=>$from?$from:0,
- 			'to'=>$page_size?$page_size:$CI->config->item('per_page')
+ 			'to'=>$page_size?$page_size:config_item('per_page')
  		);
  		
  	}
@@ -345,7 +345,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  	 */
  	function ms_fetch_all($page_size=null,$pri_key=null){
  		$CI = &get_instance();	
- 		$page_size = $page_size?$page_size:$CI->config->item('per_page');
+ 		$page_size = $page_size?$page_size:config_item('per_page');
  		$limit_from = $_GET['per_page']; 
  		$limit_from = $limit_from?$limit_from:0;		
  		$link_str = $CI->cor_page->array_to_url($_GET);		

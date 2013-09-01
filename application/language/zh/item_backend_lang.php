@@ -77,9 +77,10 @@
 		//button
 		$lang['button_save']					 = '保存';
 		$lang['button_search']					 = '查询';
-		$lang['button_del']					 = '删除';
+		$lang['button_add']					 	 = '添加';
+		$lang['button_del']						 = '删除';
 		$lang['button_delete']					 = '删除';
-		$lang['button_ok']					 = '确定';
+		$lang['button_ok']					     = '确定';
 		$lang['button_reset']					 = '重置';
 		$lang['button_close']					 = '关闭';
 		$lang['button_back']					 = '返回';

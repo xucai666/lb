@@ -119,7 +119,7 @@ class Pictures_model extends CI_Model{
 		$this->db->join($this->cor_db->table('pictures as b'),'a.m_id=b.p_key','left');
 		$this->db->where('a.m_id',$m_id);
 		$top  = $this->db->get()->first_row('array');
-		$top = $this->config->item('base_url')."/swfupload/uploads/".$top['p_thumb'];
+		$top = config_item('base_url')."/swfupload/uploads/".$top['p_thumb'];
 		return $top;
 			
 	

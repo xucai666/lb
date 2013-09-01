@@ -19,7 +19,7 @@ function smarty_php_tag($params, $content, $template, &$repeat)
 function func_site_url($array){
 	extract($array);	
 	$CI = & get_instance();	
-    if($CI->config->item('lang_multiple') && !preg_match("/backend/", $segments)){
+    if(config_item('lang_multiple') && !preg_match("/backend/", $segments)){
     	$lang_type = lang_get();
     	$segments = $lang_type.'/'.$segments;
     
@@ -427,24 +427,22 @@ class tpl extends Smarty
     {    	
         parent::__construct();
         self::$instance = $this;
-        $config =& get_config();   
         $CI = & get_instance();	    
         
         // absolute path prevents "template not found" errors
-        $this->setTemplateDir($config['template_dir']);
-        $this->setCompileDir($config['compile_dir']);
-        $this->setCacheDir($config['cache_dir']);
+        $this->setTemplateDir(config_item('template_dir'));
+        $this->setCompileDir(config_item('compile_dir'));
+        $this->setCacheDir(config_item('cache_dir'));
 
 
         //是否需要启用缓存
-		$config = &get_config();
-		$config['view_caching']			&&	$this->caching = $config['view_caching'];
-		$config['view_cache_lifetime'] 	&&	$this->cache_lifetime=$config['view_cache_lifetime'];
+		config_item('view_caching')			&&	$this->caching = config_item('view_caching');
+		config_item('view_cache_lifetime') 	&&	$this->cache_lifetime=config_item('view_cache_lifetime');
 		
         
         //use CI's cache folder        
-        $this->left_delimiter = $config['left_delimiter'];
-		$this->right_delimiter = $config['right_delimiter'];
+        $this->left_delimiter = config_item('left_delimiter');
+		$this->right_delimiter = config_item('right_delimiter');
 		
 		//vars assign
         
@@ -457,8 +455,8 @@ class tpl extends Smarty
 
 		$sys_config = $CI->cor_cache->cache_fetch('sys_config','develop',lang_get());
 		if($sys_config['debug']) $CI->output->enable_profiler(true);			
-        $this->assign("dir_front", $config['template_dir'].'front/'.$sys_config['template'].'/'.$lang_type); // so we can get the full path to CI easily
-        $this->assign("dir_backend", $config['template_dir'].'backend/'.$sys_config['template'].'/'); // so we can get the full path to CI easily
+        $this->assign("dir_front", config_item('template_dir').'front/'.$sys_config['template'].'/'.$lang_type); // so we can get the full path to CI easily
+        $this->assign("dir_backend", config_item('template_dir').'backend/'.$sys_config['template'].'/'); // so we can get the full path to CI easily
         $this->assign('ci_config',$config);
         $this->assign('ci_uri',ci_uri());
       

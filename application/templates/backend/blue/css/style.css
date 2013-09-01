@@ -13,6 +13,7 @@ div.menu{ margin:0 auto; height:41px; text-align:left; padding-top:18px;overflow
 div.menu ul { padding:0; margin:0; list-style-type: none;display:inline; }
 div.menu ul li .menu_div { background:url("../images/menu01_right.gif"); height:23px; width:3px; font-size:10px; display:inline;overflow: hidden;}
 div.menu ul li {float:left; position:relative; width:auto; height:23px; line-height:20px; padding:0px 0px 0px 10px; background:url("../images/menu01.gif"); margin-left:1px; font-size:12px;overflow: hidden; }
+div.menu ul li.selected {background:url("../images/menu01_select.gif"); }
 div.menu_childs ul li{float: none;width:150px; line-height:15px; float:left; background:none; padding:0px; }
 div.menu_childs{ position:absolute; z-index :100; left:0px; top:22px; width:150px; white-space:nowrap; background:#F5FDFF; border:1px solid #185790; display:none;}
 div.menu ul li a:hover{ color:#ff7; text-decoration: none; }

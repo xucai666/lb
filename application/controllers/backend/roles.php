@@ -64,13 +64,13 @@
 					if($item['detail']){
 						$param_key =  $parent_key?$parent_key.'[detail]'.'['.$key.']':'['.$key.']';
 						$func_return = recursion_rights($item['detail'],$rights_have,$param_key);
-						$detail_string .= "<li class='fir'><em>".$item['r_title']."</em></li>".'<li class="fir"><ul class="sec">'.$func_return['detail_string'].'</ul></li>';
+						$detail_string .= "<li class='fir'><em>".$key.".".$item['r_title']."</em></li>".'<li class="fir"><ul class="sec">'.$func_return['detail_string'].'</ul></li>';
 					}else{
 						$input_key =  $parent_key .'[detail]'.'['.$key.']';
 						$var_str = 'isset($rights_have'.$input_key.')';
 						 eval("\$val = $var_str;");
 						$checked = $val ? "checked=checked":''; 
-						$detail_string .= "<li class='fir' ><input type='checkbox' ".$checked." id='rights' name='admin".$input_key."' value='1'>".$item['r_title']."</li>";
+						$detail_string .= "<li class='fir' ><input type='checkbox' ".$checked." id='rights' name='admin".$input_key."' value='1'>".$key.$item['r_title']."</li>";
 					} 
 				endforeach;
 				

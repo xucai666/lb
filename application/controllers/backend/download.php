@@ -111,7 +111,7 @@ class Download extends CI_Controller{
 		 		
 		 	//图片上传 
 		 		
-		 	 $file_config = $this->config->item('download_files');
+		 	 $file_config = config_item('download_files');
 			 $root_path = $file_config['upload_path'].'/';
 			 $file_upload_path_ext = date('Y-m-d')."/";
 			 $file_upload_path = $root_path.$file_upload_path_ext.'/';

@@ -397,9 +397,8 @@ function loadjs(file,id){
 
 function getJsPath(){
 	var scripts = document.getElementsByTagName('script');
-	var thisScript = scripts[scripts.length-1];
+	var thisScript = scripts[1];
 	var path = thisScript.src.replace(/\/script\.js$/, '/');
-
 	return path.substr(0,path.lastIndexOf("/"));
 
 }
@@ -537,3 +536,25 @@ function ImgError(source){
 	source.onerror = "";
 	return true;
 }
+
+
+function art_dialog_open(url){
+	//str =window.showModalDialog(url,'',"dialogWidth=600px;dialogHeight=400px");
+	top.art.dialog.open(url, {title: '提示',width:600,height:400,lock:true});
+
+
+}
+
+function art_dialog_close(){
+		var list = top.art.dialog.list;
+		for (var i in list) {
+
+		    list[i].close();
+		};
+	}
+	
+	
+	
+
+
+

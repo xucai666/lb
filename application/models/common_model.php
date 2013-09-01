@@ -307,7 +307,7 @@ class Common_model  extends CI_Model{
 		$limit_from  = $html_type=='detail'?0:$limit_from;	
 		
 		$params = array( 		
-			'limit_to'=>$page_size?$page_size:$CI->config->item('per_page'),
+			'limit_to'=>$page_size?$page_size:config_item('per_page'),
 			'limit_from'=>$limit_from,
 		); 	 		
 		$config['base_url'] = 		current_url().$link_str;
@@ -364,7 +364,6 @@ class Common_model  extends CI_Model{
 		$cor_db  =  &get_cor_db();	
 	 	$cor_page = &get_cor_page();
 	 	$ds = $cor_db->getDs();
-	 	$ci_conf = &get_config();
 	 	$CI = &get_instance();
 
 		extract($parameter);
@@ -405,7 +404,7 @@ class Common_model  extends CI_Model{
 		
 		//分页  
 		
-		$page_size = $page_size?$page_size:$ci_conf['per_page'];
+		$page_size = $page_size?$page_size:config_item('per_page');
 		
 		//排序
 
@@ -523,7 +522,7 @@ class Common_model  extends CI_Model{
 			
 						//Optionnal values
 			'config' => array(
-				'width' 	=> 	"740px",	//Setting a custom width
+				'width' 	=> 	"600px",	//Setting a custom width
 				'height' 	=> 	'400px',	//Setting a custom height
 				'toolbar' 	=> 	$tool_bar,
 			 	'skin'		=>	'kama',		

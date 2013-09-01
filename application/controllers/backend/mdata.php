@@ -40,6 +40,7 @@ class Mdata extends CI_Controller{
 
 
 	function action_add(){
+
 		$id = $this->uri->segment(4);
 		$module_id = $this->im->get_mid();
 		//fetch fileds
@@ -124,11 +125,12 @@ class Mdata extends CI_Controller{
 		
 		$this->cor_page->load_backend_view('mdata_view',$data);
 
-		$this->config->item('item name');
+		config_item('item name');
 		
 	}
 
 	function action_save(){
+		
 		$main = $this->input->post('main');
 		$detail = $this->cor_form->post_to_set($this->input->post('detail'));
 
@@ -179,8 +181,8 @@ class Mdata extends CI_Controller{
 		 			'log_desc'=>sprintf('module %s,%s ID %s success',$this->m->main($this->im->get_mid(),'m_name'),$rs['sys_db_type'],$rs['main'][$log_cf['main']['primary_key']]),
 		 		));
 
-				$this->cor_page->backend_redirect('mdata/action_list',lang('success_save'));
-			}
+				$this->cor_page->backend_redirect('javascript:art_dialog_close();',lang('success_save'));
+			} 
 
 		}catch(EXCEPTION $e){
 			$this->cor_page->backend_redirect($_SREVER['HTTP_REFERER'],$e->getMessage());

@@ -100,7 +100,7 @@ class Product extends CI_Controller{
 		 	if($this->form_validation->run()==true){	
 		 		//图片上传 
 		 		
-		 	 $file_config = $this->config->item('pro_files');
+		 	 $file_config = config_item('pro_files');
 		 	 
 			 $root_path = $file_config['upload_path'].'/';
 			 

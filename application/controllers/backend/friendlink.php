@@ -71,7 +71,7 @@ class Friendlink extends CI_Controller{
 		 	if($this->form_validation->run()==true){	
 		 		//图片上传 
 		 		
-		 	 $file_config = $this->config->item('link_files');
+		 	 $file_config = config_item('link_files');
 			 $root_path = $file_config['upload_path'].'/';
 			 $file_upload_path_ext = date('Y-m-d')."/";
 			 $file_upload_path = $root_path.$file_upload_path_ext.'/';

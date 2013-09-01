@@ -161,19 +161,19 @@ class Templates extends CI_Controller {
           $this->load->helper('file'); 
           //define root_path
           $develop = $this->cor_cache->cache_fetch('sys_config','develop',lang_get());
-          $init_path = $this->config->item('template_dir').'/front/'.$develop['template'].'/'.lang_get();
+          $init_path = config_item('template_dir').'/front/'.$develop['template'].'/'.lang_get();
           $t_name = $this->input->get('t_name');
 
-          $root_path = base64_decode($this->uri->segment(4));
+          $root_path = my_encrypt($this->uri->segment(4),'DECODE');
 
-          $root_path = $root_path ? $root_path:base64_decode($this->input->get('root_path'));
+          $root_path = $root_path ? $root_path:my_encrypt($this->input->get('root_path'),'DECODE');
           $root_path = $root_path ? $root_path:$init_path;
 
           $root_path = realpath($root_path); 
 
           //for back to history page
           $root_path_parent = substr($root_path,0, strrpos($root_path, "\\")) ;
-          $root_path_parent = strcmp($root_path_parent,realpath($init_path))>0 ? base64_encode($root_path_parent):'';
+          $root_path_parent = strcmp($root_path_parent,realpath($init_path))>0 ? my_encrypt($root_path_parent,'ENCODE'):'';
           //for url
           $root_real_path = str_replace(array(FCPATH,'\\'),array('','/'),$root_path);
           $root_url = base_url($root_real_path).'/';
@@ -197,20 +197,20 @@ class Templates extends CI_Controller {
                   $v['css_name'] = 'icon_file';
               }else{
                   $v['edit_able'] = 'hide';
-                  $v['href'] = "backend/templates/view_list/".base64_encode($v['server_path']);
+                  $v['href'] = "backend/templates/view_list/".my_encrypt($v['server_path'],'ENCODE');
                   $v['target'] = '_self';
                   $v['css_name'] = 'icon_forder';
               }
               $list[$k] = $v;
            }
-          $data  = array('list'=>$list,'root_path'=>base64_encode($root_path),'root_path_parent'=>$root_path_parent,'root_url'=>$root_url);
+          $data  = array('list'=>$list,'root_path'=>my_encrypt($root_path,'ENCODE'),'root_path_parent'=>$root_path_parent,'root_url'=>$root_url);
           $this->cor_page->load_backend_view('view_list',$data);
        }
 
 
        //view add or delete
        function view_add(){
-           $t_file = base64_decode($this->uri->segment(4));
+           $t_file = my_encrypt($this->uri->segment(4),'DECODE');
            $data = array('main'=>array('t_file'=>$t_file,'t_name'=>basename($t_file),'t_html'=>htmlspecialchars(file_get_contents($t_file)))); 
            $this->cor_page->load_backend_view('view_add',$data);
 
@@ -220,7 +220,7 @@ class Templates extends CI_Controller {
        function view_save(){
            $main = $this->input->post('main');
            file_put_contents($main[t_file],$main[t_html]);
-           $this->cor_page->backend_redirect('templates/view_list/'.base64_encode(dirname($main[t_file])),$data);
+           $this->cor_page->backend_redirect('templates/view_list/'.my_encrypt(dirname($main[t_file]),'ENCODE'),$data);
 
        }
 

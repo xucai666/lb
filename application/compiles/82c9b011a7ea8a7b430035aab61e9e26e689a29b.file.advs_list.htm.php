@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-29 23:37:46
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-31 15:37:39
          compiled from "application\templates\backend\blue\advs_list.htm" */ ?>
-<?php /*%%SmartyHeaderCode:23986521fdb4aa15db8-98323509%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:125152220dc32f65e5-78102641%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '23986521fdb4aa15db8-98323509',
+  'nocache_hash' => '125152220dc32f65e5-78102641',
   'function' => 
   array (
   ),
@@ -27,9 +27,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_521fdb4abf70d3_90700282',
+  'unifunc' => 'content_52220dc3432097_42509922',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_521fdb4abf70d3_90700282')) {function content_521fdb4abf70d3_90700282($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_52220dc3432097_42509922')) {function content_52220dc3432097_42509922($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
 <div class="nav_title" align="left" >广告列表</div>

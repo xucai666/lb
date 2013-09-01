@@ -37,7 +37,7 @@ class Index extends CI_Controller {
  		$this->load->model('Pictures_model'); 
 		$data['pics'] = $this->Pictures_model->list_index(); 
 		$this->load->model('Advs_model');
-		$langs = $this->config->item('support_language');
+		$langs = config_item('support_language');
 		;
 		function filter_same($v){
 			$CI = &get_instance();

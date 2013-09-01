@@ -37,7 +37,9 @@
 	 * [action_add description]
 	 * @return [type] [description]
 	 */
- 	function action_add(){ 		
+ 	function action_add(){ 	
+ 		//验证权限
+ 		$this->cor_auth->execute_auth('35,28,31');	
  		$main_id = $this->uri->segment(4); 	  		
  		if($main_id) { 		
  			$admin_select_config  = array(
@@ -190,7 +192,8 @@
  		try{
  			$this->load->model('Logs_model');	
  			//验证权限
- 			$this->cor_auth->execute_auth('28,34');
+ 			$this->cor_auth->execute_auth('35,28,34');
+
  			$rs = $this->cor_db->delete($this->uri->segment(4),$this->im->db_config());
 
  			//添加日志	

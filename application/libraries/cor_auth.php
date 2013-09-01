@@ -34,8 +34,7 @@
  			$uid = $this->fetch_auth('user_id');
  			$sql = "select a.rights,a.role_id from ".$CI->db->dbprefix."roles as a  inner join ".$CI->db->dbprefix."admins as b on a.role_id=b.group_id where b.admin_id=".$uid." ";
 		    $db_rights =  $CI->db->query($sql)->first_row("array");
-		    $config =  &get_config();
-		    if($db_rights['role_id'] == $config['admin_role_id']) return true;
+		    if($db_rights['role_id'] == config_item('admin_role_id')) return true;
 		    $righs = $this->fetch_auth('user_rights');
 		    if(strpos($auth,',')!==false){
 		    	$auth = '$righs['.str_replace(',','][detail][',$auth).']';
@@ -45,7 +44,8 @@
 		    }
  			eval("\$flag=$auth;");
 			if(!$flag){
-				throw new Exception('抱歉，无此权限');	
+				$CI->cor_page->backend_redirect('javascript:history.back(1);','抱歉，无此权限');	
+				
 			}
 		endif;
  	}	
@@ -143,8 +143,7 @@
  	 */
  	function fetch_rights_menus($role_id = null,$menu=false){
  		$CI = &get_instance();
- 		 $config =  &get_config();
- 		 if($role_id == $config['admin_role_id']) unset($role_id);
+ 		 if($role_id == config_item('admin_role_id')) unset($role_id);
  		 $rights_all = $this->get_rights_item();
  		 $have_rights = $this->fetch_auth('user_rights');
  		
@@ -153,7 +152,7 @@
 		 $db_rights =  $CI->db->query($sql)->first_row("array");
 				
 		//administrator
-		 if($db_rights['group_id'] == $config['admin_role_id']){
+		 if($db_rights['group_id'] == config_item('admin_role_id')){
 
 		 	foreach($rights_all['admin'] as $k=>&$v){ 
 		 		if(empty($v['detail'])) {

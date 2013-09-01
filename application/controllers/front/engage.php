@@ -113,13 +113,13 @@
 				$this->load->library('email');
 
 			    $this->email->clear();	
-			    $this->email->from($this->config->item('email_from'));
+			    $this->email->from(config_item('email_from'));
 			    $this->email->to($email);
 		
 			    $this->email->subject('你的朋友向您推荐职位'.$main['eg_pos']);
 			    $sys_config = $this->cor_cache->cache_fetch('sys_config','develop',lang_get());
 
-			    $tpl_dir = $this->config->item('template_dir').'/front/'.$sys_config['template'].'/'.lang_get().'/';
+			    $tpl_dir = config_item('template_dir').'/front/'.$sys_config['template'].'/'.lang_get().'/';
 			
 			    $email_temp = $this->tpl->fetch($tpl_dir.'email_template.htm');
 			  
@@ -244,7 +244,7 @@
 			
 			//图片上传 
 		 		
-		 	 $file_config = $this->config->item('eg_files');
+		 	 $file_config = config_item('eg_files');
 		 	
 			 $root_path = $file_config['upload_path'].'/';
 			 $file_upload_path_ext = date('Y-m-d')."/";

@@ -1,20 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-29 03:29:13
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 09:04:56
          compiled from "application\templates\backend\blue\center.htm" */ ?>
-<?php /*%%SmartyHeaderCode:20142521ec0090fca85-26198428%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:637452220db57aa019-90196776%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '774b00c614ab3096d91e0b8fcc91c562c3e35f4a' => 
     array (
       0 => 'application\\templates\\backend\\blue\\center.htm',
-      1 => 1376966172,
+      1 => 1378026295,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '20142521ec0090fca85-26198428',
+  'nocache_hash' => '637452220db57aa019-90196776',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52220db5a1be68_59947097',
   'variables' => 
   array (
     'item_lang' => 0,
@@ -33,13 +35,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'weather' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_521ec00ebea396_63459803',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_521ec00ebea396_63459803')) {function content_521ec00ebea396_63459803($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_output_true')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\modifier.output_true.php';
+<?php if ($_valid && !is_callable('content_52220db5a1be68_59947097')) {function content_52220db5a1be68_59947097($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_output_true')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\modifier.output_true.php';
 if (!is_callable('smarty_function_html_options')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\function.html_options.php';
-?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML xmlns="http://www.w3.org/1999/xhtml">
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
@@ -66,6 +66,7 @@ $(window).load(function(){
 	.main_iframe{height: 92%; visibility: inherit; width:100%; Z-INDEX: 1}
 	table { font-size:12px; font-family : tahoma, 宋体, fantasy; }
 	td { font-size:12px; font-family : tahoma, 宋体, fantasy;}
+	body,html{height:100%}
 </style>
 <script language="javascript">
 	var status = 1;
@@ -85,6 +86,8 @@ $(window).load(function(){
 	          document.all("frmTitle").style.display=""
 	     }
 	}
+
+	
 </SCRIPT>
 <body onload=show()>
 <!--导航部分-->
@@ -204,13 +207,7 @@ $_smarty_tpl->tpl_vars['item2']->_loop = true;
 	</table>
 	<iframe frameBorder=0 id=frmleft name=frmleft src="<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
 /backend/login/left" class="left_iframe" allowTransparency="true" ></iframe>
-	<table width="100%" border="0" cellspacing="0" cellpadding="0">
-	  <tr height="32">
-	    <td valign="top"></td>
-	    <td valign="bottom" align="center"></td>
-	    <td valign="top" align="right"></td>
-	  </tr>
-	</table>
+	
   </td>
   <TD bgColor=#337ABB style="width: 10px">
 	   <TABLE border=0 cellPadding=0 cellSpacing=0 height="100%">
@@ -250,16 +247,8 @@ $_smarty_tpl->tpl_vars['item2']->_loop = true;
 	    <td align="right" width="16" bgcolor="#337ABB"></td>
 	  </tr>
 	</table>
-	<iframe frameBorder=0 id=frmright name=frmright scrolling=yes src="" class="main_iframe"></iframe>
-	<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background:#C4D8ED;">
-	<tr>
-	<td><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
-/teble_bottom_left.gif" alt="" width="5" height="6" /></td>
-	<td align="right"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
-/teble_bottom_right.gif" alt="" width="5" height="6" /></td>
-	<td align="right" width="16" bgcolor="#337ABB"></td>
-	</tr>
-	</table>
+	<table width="100%" height="100%"><tr><td><iframe frameBorder=0 id=frmright name=frmright scrolling=yes src="" class="main_iframe"></iframe></td></tr></table>
+	
 </TD>
 </TR>
 </TBODY>

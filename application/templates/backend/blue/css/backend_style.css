@@ -20,7 +20,7 @@
 }
 .center{
 
-		text-align:center!important;
+		text-align:center;
 }
 .left{
 
@@ -28,7 +28,7 @@
 }
 .right{
 
-	text-align:right!important;
+	text-align:right;
 }
 .float_right{
 	float:right;
@@ -82,7 +82,7 @@ h1{
 
 
 .td_op{
-	text-align:left!important;padding-left:10px!important;
+	text-align:left;padding-left:10px;
 }
 
 .link_view{	
@@ -92,9 +92,9 @@ h1{
 	width: 16px;
 	height: 16px;
 	float: left;
-	border: none !important;
-	padding: 0px !important;
-	padding-bottom: 0px !important;
+	border: none ;
+	padding: 0px ;
+	padding-bottom: 0px ;
 	margin-left: 8px;
 	display: block;
 		
@@ -107,11 +107,11 @@ h1{
 	width: 16px;
 	height: 16px;
 	float: left;
-	border: none !important;
-	padding: 0px !important;
-	padding-bottom: 0px !important;
+	border: none ;
+	padding: 0px ;
+	padding-bottom: 0px ;
 	margin-left: 8px;
-	display: block;
+	
 	
 }
 
@@ -122,11 +122,11 @@ h1{
 	width: 16px;
 	height: 16px;
 	float: left;
-	border: none !important;
-	padding: 0px !important;
-	padding-bottom: 0px !important;
+	border: none ;
+	padding: 0px ;
+	padding-bottom: 0px ;
 	margin-left: 8px;
-	display: block;
+	
 }
 
 .link_copy{	
@@ -135,11 +135,11 @@ h1{
 	width: 16px;
 	height: 16px;
 	float: left;
-	border: none !important;
-	padding: 0px !important;
-	padding-bottom: 0px !important;
+	border: none ;
+	padding: 0px ;
+	padding-bottom: 0px;
 	margin-left: 8px;
-	display: block;
+	
 }
 
 .link_add{	
@@ -149,9 +149,9 @@ h1{
 	width: 16px;
 	height: 16px;
 	float: left;
-	border: none !important;
-	padding: 0px !important;
-	padding-bottom: 0px !important;
+	border: none ;
+	padding: 0px ;
+	padding-bottom: 0px ;
 	margin-left: 8px;
 	display: block;
 
@@ -660,7 +660,7 @@ color:#ffffff;
 }
 
 .no-border{
-	border: none!important;
+	border: none;
 }
 .inline{
 	display: inline;

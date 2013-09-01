@@ -1,27 +1,15 @@
 <!--{include file="`$dir_backend`/top.htm"}-->
 
 <div class="nav_title"><!--{"module_data"|lang}-->&raquo;<!--{$theme}--></div>
-<div  align="right"><a href="<!--{func_site_url segments='/backend/mdata/action_add'}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
-<!--{if $querys}-->
-<table class='search'>
-	<tr><td>
-		<form action='<!--{func_site_url segments="backend/mdata/action_list"}-->' method="get">
-			<!--{foreach from=$querys key=k item=v}-->
-				<!--{$v.name}-->:<!--{func_vsprintf html =$v.html name=$k value=','|implode:(array)$smarty.get.$k}-->
-			<!--{/foreach}-->
-			<!--{create_button type="search"}-->
-		</form>
-	</td></tr>
-</table>
-<!--{/if}-->
+
+
 
   <form id="form2" method="post" action="<!--{func_site_url segments='/backend/mdata/action_del'}-->" onsubmit="return chkdel2();">   
 <table class='mytable'>
 	<thead>
 <tr>
 	<th>
-		<!--{create_button type='delete' ext=''}-->		
-		<input type="checkbox" id="chkall"  value="1" onclick="CheckAll(this.form);">
+		选择
 	</th>
 	
 	<!--{foreach from=$fields item=f}-->	
@@ -43,21 +31,41 @@
 	<td><!--{$item[$f.r_name]}--></td>
 	<!--{/foreach}-->	
 	<td>
-			<!--{ci_anchor segment="backend/mdata/action_add/`$item[$primary]`" attrs="class:link_mod"}-->
+			 
 			<!--{ci_anchor segment="backend/mdata/action_del/`$item[$primary]`" attrs="class:link_del,onclick:return confirm('<!--{"confirm_delete"|lang}-->');"}-->
 
 			<!--{ci_anchor segment="backend/mdata/action_view/`$item[$primary]`" attrs="class:link_view,target:_blank"}-->
 
-
+			<a href="javascript:;" onclick="art_dialog_open('<!--{$site_url}-->/backend/mdata/action_add/<!--{$item[$primary]}-->')" class="link_mod"></a>
 	</td>
 </tr>
 <!--{/foreach}-->
 </tbody>	
 </table>
-</form>
 <div class="page_link">
 	<!--{$page_link}-->
 </div>
+
+	
+		<input type="checkbox" id="chkall"  value="1" onclick="CheckAll(this.form);">全选
+		<!--{create_button type='delete' ext=''}-->	
+		<!--{create_button type='add' url='backend/mdata/action_add'}-->	
+
+</form>
+
+<!--{if $querys}-->
+<table class='search'>
+	<tr><td>
+		<form action='<!--{func_site_url segments="backend/mdata/action_list"}-->' method="get">
+			<!--{foreach from=$querys key=k item=v}-->
+				<!--{$v.name}-->:<!--{func_vsprintf html =$v.html name=$k value=','|implode:(array)$smarty.get.$k}-->
+			<!--{/foreach}-->
+			<!--{create_button type="search"}-->
+		</form>
+	</td></tr>
+</table>
+<!--{/if}-->
+
 
 <script language="JavaScript">
 	//删除确认
