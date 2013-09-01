@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 09:04:56
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 09:42:04
          compiled from "application\templates\backend\blue\center.htm" */ ?>
 <?php /*%%SmartyHeaderCode:637452220db57aa019-90196776%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '774b00c614ab3096d91e0b8fcc91c562c3e35f4a' => 
     array (
       0 => 'application\\templates\\backend\\blue\\center.htm',
-      1 => 1378026295,
+      1 => 1378028521,
       2 => 'file',
     ),
   ),
@@ -53,6 +53,13 @@ if (!is_callable('smarty_function_html_options')) include 'E:\\phpnow\\htdocs\\l
 <script language="javascript">
 $(window).load(function(){
 	$('#menu_0 a:first').trigger('click');
+
+	$("#frmright").load(function(){ 
+		//$(this).height($(this).contents().height() ); 
+		
+		$(this).height($(window).height()-65);
+	}); 
+
 });
 </script>
 
@@ -62,11 +69,13 @@ $(window).load(function(){
 	.main_left_top{ background:url(<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /left_menu_bg.gif); padding-top:2px !important; padding-top:5px;}
 	.main_left_title{text-align:left; padding-left:15px; font-size:14px; font-weight:bold; color:#fff;}
-	.left_iframe{height: 92%; visibility: inherit;width: 180px; background:transparent;}
-	.main_iframe{height: 92%; visibility: inherit; width:100%; Z-INDEX: 1}
+	.left_iframe{height: 100%; visibility: inherit;width: 180px; background:transparent;}
+	.main_iframe{height: 100%; visibility: inherit; width:100%; Z-INDEX: 1;}
 	table { font-size:12px; font-family : tahoma, 宋体, fantasy; }
 	td { font-size:12px; font-family : tahoma, 宋体, fantasy;}
 	body,html{height:100%}
+	
+
 </style>
 <script language="javascript">
 	var status = 1;
@@ -89,7 +98,7 @@ $(window).load(function(){
 
 	
 </SCRIPT>
-<body onload=show()>
+<body onload="show()" scroll="no">
 <!--导航部分-->
 <div class="top_table">
 <div class="top_table_leftbg">
@@ -205,25 +214,25 @@ $_smarty_tpl->tpl_vars['item2']->_loop = true;
 	    <td valign="top" align="right"></td>
 	  </tr>
 	</table>
-	<iframe frameBorder=0 id=frmleft name=frmleft src="<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
-/backend/login/left" class="left_iframe" allowTransparency="true" ></iframe>
+	<table><tr><td><iframe frameBorder="0" id="frmleft" name="frmleft" src="<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
+/backend/login/left" class="left_iframe" allowTransparency="true" ></iframe></td></tr></table>
 	
   </td>
-  <TD bgColor=#337ABB style="width: 10px">
-	   <TABLE border=0 cellPadding=0 cellSpacing=0 height="100%">
+  <TD bgColor="#337ABB" width="10">
+	   <TABLE border=0 cellPadding=0 cellSpacing=0 >
 	    <TBODY>
 	    <TR>
-	     <TD onclick=switchSysBar() style="height: 100%">
-	     <SPAN class=navPoint id=switchPoint title="关闭/打开左栏"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
+	     <TD onclick=switchSysBar() >
+	     <SPAN class=navPoint id="switchPoint" title="关闭/打开左栏"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /right.gif"></SPAN>
 	     </TD>
 	    </TR>
 	    </TBODY>
 	   </TABLE>
      </TD>
-  <TD bgcolor="#ffffff" width="100%" vAlign=top>
+  <TD bgcolor="#ffffff" width="100%" vAlign="top" style="overflow:scrolling" >
 	<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#C4D8ED">
-	  <tr height="32">
+	  <tr height="32" >
 	    <td valign="top" width="10" background="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /bg2.gif"><img src="<?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
 /teble_top_left.gif" alt="" /></td>
@@ -247,7 +256,10 @@ $_smarty_tpl->tpl_vars['item2']->_loop = true;
 	    <td align="right" width="16" bgcolor="#337ABB"></td>
 	  </tr>
 	</table>
-	<table width="100%" height="100%"><tr><td><iframe frameBorder=0 id=frmright name=frmright scrolling=yes src="" class="main_iframe"></iframe></td></tr></table>
+	<table width="100%" height="100%" ><tr><td id="frmright_td">
+	
+	<iframe frameBorder="0" id="frmright" name="frmright" scrolling="yes" src="" class="main_iframe"></iframe>
+	</td></tr></table>
 	
 </TD>
 </TR>

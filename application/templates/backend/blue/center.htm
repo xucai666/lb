@@ -10,6 +10,13 @@
 <script language="javascript">
 $(window).load(function(){
 	$('#menu_0 a:first').trigger('click');
+
+	$("#frmright").load(function(){ 
+		//$(this).height($(this).contents().height() ); 
+		
+		$(this).height($(window).height()-65);
+	}); 
+
 });
 </script>
 <!--{/literal}-->
@@ -17,11 +24,13 @@ $(window).load(function(){
 	.main_left {table-layout:auto; background:url(<!--{$img_url}-->/left_bg.gif)}
 	.main_left_top{ background:url(<!--{$img_url}-->/left_menu_bg.gif); padding-top:2px !important; padding-top:5px;}
 	.main_left_title{text-align:left; padding-left:15px; font-size:14px; font-weight:bold; color:#fff;}
-	.left_iframe{height: 92%; visibility: inherit;width: 180px; background:transparent;}
-	.main_iframe{height: 92%; visibility: inherit; width:100%; Z-INDEX: 1}
+	.left_iframe{height: 100%; visibility: inherit;width: 180px; background:transparent;}
+	.main_iframe{height: 100%; visibility: inherit; width:100%; Z-INDEX: 1;}
 	table { font-size:12px; font-family : tahoma, 宋体, fantasy; }
 	td { font-size:12px; font-family : tahoma, 宋体, fantasy;}
 	body,html{height:100%}
+	
+
 </style>
 <script language="javascript">
 	var status = 1;
@@ -42,7 +51,7 @@ $(window).load(function(){
 
 	
 </SCRIPT>
-<body onload=show()>
+<body onload="show()" scroll="no">
 <!--导航部分-->
 <div class="top_table">
 <div class="top_table_leftbg">
@@ -114,23 +123,23 @@ $(window).load(function(){
 	    <td valign="top" align="right"></td>
 	  </tr>
 	</table>
-	<iframe frameBorder=0 id=frmleft name=frmleft src="<!--{$site_url}-->/backend/login/left" class="left_iframe" allowTransparency="true" ></iframe>
+	<table><tr><td><iframe frameBorder="0" id="frmleft" name="frmleft" src="<!--{$site_url}-->/backend/login/left" class="left_iframe" allowTransparency="true" ></iframe></td></tr></table>
 	
   </td>
-  <TD bgColor=#337ABB style="width: 10px">
-	   <TABLE border=0 cellPadding=0 cellSpacing=0 height="100%">
+  <TD bgColor="#337ABB" width="10">
+	   <TABLE border=0 cellPadding=0 cellSpacing=0 >
 	    <TBODY>
 	    <TR>
-	     <TD onclick=switchSysBar() style="height: 100%">
-	     <SPAN class=navPoint id=switchPoint title="关闭/打开左栏"><img src="<!--{$img_url}-->/right.gif"></SPAN>
+	     <TD onclick=switchSysBar() >
+	     <SPAN class=navPoint id="switchPoint" title="关闭/打开左栏"><img src="<!--{$img_url}-->/right.gif"></SPAN>
 	     </TD>
 	    </TR>
 	    </TBODY>
 	   </TABLE>
      </TD>
-  <TD bgcolor="#ffffff" width="100%" vAlign=top>
+  <TD bgcolor="#ffffff" width="100%" vAlign="top" style="overflow:scrolling" >
 	<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#C4D8ED">
-	  <tr height="32">
+	  <tr height="32" >
 	    <td valign="top" width="10" background="<!--{$img_url}-->/bg2.gif"><img src="<!--{$img_url}-->/teble_top_left.gif" alt="" /></td>
 	    <td background="<!--{$img_url}-->/bg2.gif"width="28" ><img src="<!--{$img_url}-->/arrow.gif" alt="" align="absmiddle" /></td>
 	    <td background="<!--{$img_url}-->/bg2.gif"><span style="float:left"></span><span style="float:left;width:500px;" id="dvbbsannounce"><span id=cc></span></span>
@@ -140,7 +149,10 @@ $(window).load(function(){
 	    <td align="right" width="16" bgcolor="#337ABB"></td>
 	  </tr>
 	</table>
-	<table width="100%" height="100%"><tr><td><iframe frameBorder=0 id=frmright name=frmright scrolling=yes src="" class="main_iframe"></iframe></td></tr></table>
+	<table width="100%" height="100%" ><tr><td id="frmright_td">
+	
+	<iframe frameBorder="0" id="frmright" name="frmright" scrolling="yes" src="" class="main_iframe"></iframe>
+	</td></tr></table>
 	
 </TD>
 </TR>
