@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 09:42:04
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 09:52:57
          compiled from "application\templates\backend\blue\center.htm" */ ?>
 <?php /*%%SmartyHeaderCode:637452220db57aa019-90196776%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '774b00c614ab3096d91e0b8fcc91c562c3e35f4a' => 
     array (
       0 => 'application\\templates\\backend\\blue\\center.htm',
-      1 => 1378028521,
+      1 => 1378029175,
       2 => 'file',
     ),
   ),
@@ -55,9 +55,10 @@ $(window).load(function(){
 	$('#menu_0 a:first').trigger('click');
 
 	$("#frmright").load(function(){ 
-		//$(this).height($(this).contents().height() ); 
+		var new_height = $(window).height()-65;	
+
+		$(this).height(new_height);
 		
-		$(this).height($(window).height()-65);
 	}); 
 
 });
@@ -256,9 +257,9 @@ $_smarty_tpl->tpl_vars['item2']->_loop = true;
 	    <td align="right" width="16" bgcolor="#337ABB"></td>
 	  </tr>
 	</table>
-	<table width="100%" height="100%" ><tr><td id="frmright_td">
+	<table width="100%" height="100%" ><tr><td >
 	
-	<iframe frameBorder="0" id="frmright" name="frmright" scrolling="yes" src="" class="main_iframe"></iframe>
+	<iframe frameBorder="0" id="frmright" name="frmright" scrolling="auto" src="" class="main_iframe"></iframe>
 	</td></tr></table>
 	
 </TD>
