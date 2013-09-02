@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-02 13:21:50
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-02 15:40:04
          compiled from "application\templates\backend\x6cms\mdata_list.htm" */ ?>
 <?php /*%%SmartyHeaderCode:5352522490ee358fd1-59686036%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4a39bc2942e5392d74f4601d6e017c1765abd566' => 
     array (
       0 => 'application\\templates\\backend\\x6cms\\mdata_list.htm',
-      1 => 1378050452,
+      1 => 1378136168,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_522490ee5c93c4_56771227',
   'variables' => 
   array (
     'dir_backend' => 0,
@@ -31,11 +33,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'k' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_522490ee5c93c4_56771227',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_522490ee5c93c4_56771227')) {function content_522490ee5c93c4_56771227($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
 
 <div class="nav_title"><?php echo lang("module_data");?>
 &raquo;<?php echo $_smarty_tpl->tpl_vars['theme']->value;?>
@@ -96,9 +95,9 @@ $_smarty_tpl->tpl_vars['f']->_loop = true;
 			<?php echo ci_anchor(array('segment'=>"backend/mdata/action_view/".((string)$_smarty_tpl->tpl_vars['item']->value[$_smarty_tpl->tpl_vars['primary']->value]),'attrs'=>"class:link_view,target:_blank"),$_smarty_tpl);?>
 
 
-			<a href="javascript:;" onclick="art_dialog_open('<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
+			<a href="javascript:art_dialog_open('<?php echo $_smarty_tpl->tpl_vars['site_url']->value;?>
 /backend/mdata/action_add/<?php echo $_smarty_tpl->tpl_vars['item']->value[$_smarty_tpl->tpl_vars['primary']->value];?>
-','数据管理')" class="link_mod"></a>
+','数据管理');" class="link_mod"></a>
 	</td>
 </tr>
 <?php } ?>

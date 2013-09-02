@@ -531,9 +531,11 @@ function ImgError(source){
 
 function art_dialog_open(url,title){
 
+
+
 	//str =window.showModalDialog(url,'',"dialogWidth=600px;dialogHeight=400px");
 	var d_title =title?title:'对话框';
-	art.dialog.open(url,{
+	top.art.dialog.open(url,{
 	button: [{
     	name: '保存',
         callback: function () {
@@ -564,7 +566,7 @@ function art_dialog_close(msg,callback){
 		    list[i].close();
 		}
 		if(msg!="undefined"){
-			art.dialog.tips(msg,3);
+			top.art.dialog.tips(msg,3);
 		}
 		
 		(callback && typeof(callback) === "function") && callback();
@@ -572,7 +574,7 @@ function art_dialog_close(msg,callback){
 	
 	
 function frmright_reload(){
-	parent.main.location.reload();
+	window.ifr_main.main.location.reload();
 }	
 
 //document ready

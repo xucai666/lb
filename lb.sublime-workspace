@@ -92,26 +92,50 @@
 	"buffers":
 	[
 		{
-			"file": "application/templates/backend/x6cms/main_left.htm",
+			"file": "application/templates/backend/x6cms/center.htm",
 			"settings":
 			{
-				"buffer_size": 2423,
+				"buffer_size": 958,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/templates/backend/blue/frame_left.htm",
+			"file": "application/controllers/backend/login.php",
 			"settings":
 			{
-				"buffer_size": 726,
+				"buffer_size": 7223,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/templates/backend/x6cms/css/style.css",
+			"file": "application/templates/backend/x6cms/main_index.htm",
 			"settings":
 			{
-				"buffer_size": 10671,
+				"buffer_size": 1128,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/templates/backend/x6cms/js/core.js",
+			"settings":
+			{
+				"buffer_size": 12515,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/config/config.php",
+			"settings":
+			{
+				"buffer_size": 13961,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/controllers/backend/mdata.php",
+			"settings":
+			{
+				"buffer_size": 7986,
 				"line_ending": "Windows"
 			}
 		}
@@ -164,9 +188,19 @@
 	},
 	"file_history":
 	[
+		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/main_top.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/js/admin.public.js",
+		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/mdata_list.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/center.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/css/style.css",
+		"/E/phpnow/htdocs/lb/application/config/config.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/js/core.js",
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/frame_left.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/main_left.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/main_center.htm",
+		"/E/phpnow/htdocs/x6cms/js/admin.public.js",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/style_left.css",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/admin.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/frame_left.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/center.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/top.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/style.css",
@@ -180,21 +214,14 @@
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/table.css",
 		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/css/backend_style.css",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/mdata_list.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/js/core.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/center.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/main_left.htm",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/logs.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/logs_list.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/logs_list.htm",
-		"/E/phpnow/htdocs/lb/application/config/config.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/main_top.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/main_right.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/main_center.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/js/artdialog/jquery.artDialog.js",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/mdata.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/core.js",
 		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/main_foot.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/mdata_list.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/top.htm",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/login.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/adminindex.htm",
@@ -288,10 +315,7 @@
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product_view.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/product.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/js/iwin.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/jqFancyTransitions.1.8.js",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/common.php",
-		"/E/phpnow/htdocs/lb/swfupload/upload.php",
-		"/E/phpnow/htdocs/lb/application/helpers/msubstr_helper.php"
+		"/E/phpnow/htdocs/lb/application/templates/backend/blue/js/jqFancyTransitions.1.8.js"
 	],
 	"find":
 	{
@@ -345,6 +369,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"top.",
+			"action_save",
+			".js",
+			"art_dia",
+			"http://localhost/x6cms/css/",
+			"http://localhost/x6cms/js/",
+			"edit",
+			"art_di",
 			"li",
 			"dot.gif",
 			"span",
@@ -464,15 +496,7 @@
 			"art_dialog_open",
 			"dia_open",
 			"dialog_close",
-			"tips",
-			"border",
-			"action_save",
-			"backendRedirects",
-			"$direct",
-			"front_redirect",
-			"backend_redirect",
-			"submit",
-			"<form"
+			"tips"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -494,50 +518,76 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "application/templates/backend/x6cms/main_left.htm",
+					"file": "application/templates/backend/x6cms/center.htm",
 					"settings":
 					{
-						"buffer_size": 2423,
+						"buffer_size": 958,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1377,
-								1383
+								924,
+								932
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 251.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "application/templates/backend/blue/frame_left.htm",
+					"file": "application/controllers/backend/login.php",
 					"settings":
 					{
-						"buffer_size": 726,
+						"buffer_size": 7223,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								258,
-								258
+								6360,
+								6360
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3911.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "application/templates/backend/x6cms/main_index.htm",
+					"settings":
+					{
+						"buffer_size": 1128,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								996,
+								1003
 							]
 						],
 						"settings":
@@ -552,28 +602,81 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "application/templates/backend/x6cms/css/style.css",
+					"buffer": 3,
+					"file": "application/templates/backend/x6cms/js/core.js",
 					"settings":
 					{
-						"buffer_size": 10671,
+						"buffer_size": 12515,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10665,
-								10665
+								12355,
+								12355
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 10069.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "application/config/config.php",
+					"settings":
+					{
+						"buffer_size": 13961,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11819,
+								11819
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2687.0,
+						"translation.y": 6095.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "application/controllers/backend/mdata.php",
+					"settings":
+					{
+						"buffer_size": 7986,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5101,
+								5116
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2855.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -623,6 +726,38 @@
 		"selected_items":
 		[
 			[
+				"mdata.php",
+				"application/controllers/backend/mdata.php"
+			],
+			[
+				"core.js",
+				"application/templates/backend/x6cms/js/core.js"
+			],
+			[
+				"login.php",
+				"application/controllers/backend/login.php"
+			],
+			[
+				"center.htm",
+				"application/templates/backend/x6cms/center.htm"
+			],
+			[
+				"main_top",
+				"application/templates/backend/x6cms/main_top.htm"
+			],
+			[
+				"adminpub",
+				"application/templates/backend/x6cms/js/admin.public.js"
+			],
+			[
+				"mdata_list",
+				"application/templates/backend/x6cms/mdata_list.htm"
+			],
+			[
+				"main_center.htm",
+				"application/templates/backend/x6cms/main_center.htm"
+			],
+			[
 				"style_left",
 				"application/templates/backend/blue/css/style_left.css"
 			],
@@ -637,10 +772,6 @@
 			[
 				"admin.js",
 				"application/templates/backend/blue/js/admin.js"
-			],
-			[
-				"center.htm",
-				"application/templates/backend/blue/center.htm"
 			],
 			[
 				"top.htm",
@@ -679,10 +810,6 @@
 				"application/templates/backend/x6cms/admins_change_password.htm"
 			],
 			[
-				"mdata_list",
-				"application/templates/backend/blue/mdata_list.htm"
-			],
-			[
 				"config_save",
 				"application/templates/backend/x6cms/config_save.htm"
 			],
@@ -703,16 +830,8 @@
 				"application/helpers/MY_url_helper.php"
 			],
 			[
-				"core.js",
-				"application/templates/backend/x6cms/js/core.js"
-			],
-			[
 				"center.ht",
 				"application/templates/backend/x6cms/center.htm"
-			],
-			[
-				"mdata.php",
-				"application/controllers/backend/mdata.php"
 			],
 			[
 				"main_right",
@@ -721,10 +840,6 @@
 			[
 				"main_center",
 				"application/templates/backend/x6cms/main_center.htm"
-			],
-			[
-				"main_top",
-				"application/templates/backend/x6cms/main_top.htm"
 			],
 			[
 				"main_left.htm",
@@ -757,10 +872,6 @@
 			[
 				"tpl.php",
 				"application/libraries/tpl.php"
-			],
-			[
-				"login.php",
-				"application/controllers/backend/login.php"
 			],
 			[
 				"frame_right",
@@ -1125,14 +1236,6 @@
 			[
 				"member.php",
 				"application/controllers/front/member.php"
-			],
-			[
-				"pay.",
-				"application/views/alipay_from.php"
-			],
-			[
-				"member_order.",
-				"application/templates/front/blue/zh/member_order.htm"
 			]
 		],
 		"width": 0.0

@@ -180,7 +180,7 @@ class Mdata extends CI_Controller{
 		 		if(empty($main[$primary])){
    					$callback = ',parent.frmright_reload()';
 		 		}
-		 		echo "<script>parent.art_dialog_close('保存完毕.'".$callback.");</script>";
+		 		echo "<script>top.art_dialog_close('保存完毕.'".$callback.");</script>";
 		 		exit;
 			} 
 

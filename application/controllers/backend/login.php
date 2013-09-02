@@ -225,6 +225,9 @@ class Login extends CI_Controller {
  		exit;
  	}
 
+ 	function main_index(){
+ 		$this->cor_page->load_backend_view("main_index",$data);
+ 	}
  	
  	function  main_top(){
  		$data['rights_options'] = $this->cor_auth->fetch_rights_menus($this->cor_auth->db_user('group_id'),true);

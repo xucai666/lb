@@ -133,13 +133,16 @@ function add(url){
 }
 
 function edit(url){
+
 	var throughBox = $.dialog.through;
 	var myDialog = throughBox({title:lang.edit,lock:true});
+	myDialog.content('xxx');
+	    		return false;
 	$.ajax({type: "POST",url:url,dataType: 'json',
 	    success: function (data) {
 	    	if(data.status==200){
-	    		var win = $.dialog.top;
-	    		myDialog.content(data.remsg);
+	    		//var win = $.dialog.top;
+	    		
 	    		win.$("#formview").validform();
 	    		var editors = setEditer(win);
 	    		setSubBtn(win,myDialog,'edit',editors);

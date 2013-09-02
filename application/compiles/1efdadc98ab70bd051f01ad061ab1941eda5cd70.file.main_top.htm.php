@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-02 13:21:17
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-02 15:40:02
          compiled from "application\templates\backend\x6cms\main_top.htm" */ ?>
 <?php /*%%SmartyHeaderCode:23002522490cd5745e3-09052416%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1efdadc98ab70bd051f01ad061ab1941eda5cd70' => 
     array (
       0 => 'application\\templates\\backend\\x6cms\\main_top.htm',
-      1 => 1378125972,
+      1 => 1378136189,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_522490cd663ac8_60373631',
   'variables' => 
   array (
     'css_url' => 0,
@@ -25,8 +27,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'item' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_522490cd663ac8_60373631',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_522490cd663ac8_60373631')) {function content_522490cd663ac8_60373631($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -96,4 +96,13 @@ $(function($){
 })
 
 </script>
+<script>
+//var throughBox = $.dialog.through;
+	//var myDialog = throughBox({title:'xx',lock:true});
+	//myDialog.content('zzzzzzz');
+
+	
+
+</script>
+
 </body></html><?php }} ?>

@@ -362,7 +362,7 @@ $config['backend_default_css'] = array('table','backend_style');
 
 //榛樿鍔犺浇js
 
-$config['backend_default_js'] = array('jquery-1.9.1.min','core','FormValid','My97DatePicker/WdatePicker','admin','artdialog/jquery.artDialog');
+$config['backend_default_js'] = array('jquery-1.9.1.min','core','FormValid','My97DatePicker/WdatePicker','admin');
  
  
  //榛樿鍔犺浇鏍峰紡
