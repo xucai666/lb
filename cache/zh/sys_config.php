@@ -15,7 +15,7 @@
   ),
   'develop' => 
   array (
-    'template' => 'blue',
+    'template' => 'x6cms',
     'time_page_redirect' => '2000',
   ),
 );?>

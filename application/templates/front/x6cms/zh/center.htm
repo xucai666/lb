@@ -1,0 +1,36 @@
+<div class="easyui-layout" style="width:100%;height:680px;margin:0;padding:0;overflow:hidden;" >
+<div region="north" title="在线报名系统" split="true" style="height:100px;padding-bottom:2px;padding-left:20px;overflow:hidden;">
+		
+		<h5 style="font-weight:lighter;font-size:14px;margin:0;padding:0;">
+		<image src="<!--{php}--> echo base_url();<!--{/php}-->/images/logo.gif"  style="float:left">
+		</h5>
+
+</div>
+
+
+	<div region="west" split="true" title="菜单" style="width:150px;">
+			<div class="easyui-accordion"   animated="easeslide"   fit="true" border="false">
+				
+				<!--{foreach from=$rights_options.admin item=item key=key}-->				
+				<div title="<!--{$item.title}-->"  icon="icon-<!--{$key}-->" style="padding:10px;">
+					<!--{foreach from=$item.detail key=key1 item=item1}-->
+						<!--{if $item1.url}-->
+							<p><!--{php}-->  echo anchor($this->_tpl_vars['item1']['url'], $this->_tpl_vars['item1']['title'], array('title' => $this->_tpl_vars['item1']['title'],'target'=>'__myframe',));<!--{/php}-->&nbsp;</p>
+						<!--{/if}-->
+					<!--{/foreach}-->
+					<!--{if $key=='system'}-->
+						<p><!--{php}-->  echo anchor('backend/system_manage/exit_system', '退出系统', array('title' => '退出系统','target'=>'_parent'));<!--{/php}-->&nbsp;</p>
+					<!--{/if}-->
+					
+				</div>
+				
+				<!--{/foreach}-->
+				
+			</div>
+		</div>
+		<div region="center"    title="主窗口" style="background:#ffffff;" border="false"  style="overflow-x:hidden;">
+				<iframe src="<!--{php}--> echo site_url("backend/members/member_list");<!--{/php}-->" name="__myframe" width="100%" height="640" frameborder="0" scrolling="auto" style="overflow-x:hidden;"></iframe>
+		
+		</div>
+
+</div>

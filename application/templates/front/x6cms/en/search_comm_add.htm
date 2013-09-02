@@ -1,0 +1,125 @@
+<!--{include file="`$dir_front`/top.htm"}-->
+<style type="text/css">
+<!--
+.redfont1 {
+	color: #F00;
+}
+-->
+</style>
+
+<table width="850" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:15px;">
+  <tr>
+    <td><!-- #BeginLibraryItem "/Library/Untitled.lbi" -->
+<div style="margin:0;padding:0;z-index:100" align="center" >
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="850" height="306">
+  <param name="movie" value="images/banner.swf" />
+  <param name="quality" value="high" />
+  
+ <param name="wmode" value="Opaque" />
+
+  <embed src="<!--{$img_url}-->/banner.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="850" height="306"></embed>
+</object>
+</div><!-- #EndLibraryItem --></td>
+  </tr>
+</table>
+<table width="850" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:15px;">
+  <tr>
+  
+  <td width="600" align="left" valign="top"><table width="560" border="0" cellspacing="0" cellpadding="0" style="background-color:#c70008;">
+      <tr>
+        <td width="16"><img src="<!--{$img_url}-->/index_25.jpg" width="16" height="27" alt="" /></td>
+        <td width="528" align="center" class="di_color chu">在线委托</td>
+        <td width="16"><img src="<!--{$img_url}-->/123.jpg" width="16" height="27" /></td>
+      </tr>
+    </table>
+      <table width="560" border="0" cellspacing="0" cellpadding="0" style="background-color:#f1f1f1;  margin-top:2px;">
+        <tr>
+          <td height="249" align="left" valign="top" class="content" style="padding:18px; "><form action="<!--{$site_url}-->/search/action_comm_save" method="post" onsubmit="return validator(this)">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="40" align="right">委托类别：</td>
+                <td height="40"><label>
+                  <select name="main[comm_class_sn]" id="main[comm_class_sn]">
+                  
+                  <!--{$class_select}-->
+                  </select>
+                </label></td>
+              </tr>
+              <tr>
+                <td width="28%" height="40" align="right">联系人：</td>
+                <td width="72%" height="40"><label>
+                  <input type="text" name="main[comm_contact]" id="main[comm_contact]" valid='required' errmsg='请输入您的姓名' />
+                  <span class="redfont1">*</span></label></td>
+              </tr>
+              <tr>
+                <td height="40" align="right">性别：</td>
+                <td height="40">
+                <!--{func_sex ass=1}-->
+                <!--{html_radios options=$pri_sex_select checked=1 name="main[sex]"}-->
+                &nbsp;</td>
+              </tr>
+              <tr>
+                <td height="40" align="right">手机：</td>
+                <td height="40"><label>
+                  <input name="main[mobile]" type="text" id="main[mobile]" maxlength="12" valid='required' errmsg='请输入手机 ' />
+                  <span class="redfont1">*</span></label></td>
+              </tr>
+              <tr>
+                <td height="40" align="right">电话：</td>
+                <td height="40"><input name="main[phone]" type="text" id="main[phone]" maxlength="12" /></td>
+              </tr>
+              <tr>
+                <td height="40" align="right">QQ/MSN:</td>
+                <td height="40"><input type="text" name="main[qq]" id="main[qq]" /></td>
+              </tr>
+              <tr>
+                <td height="40" align="right">E-mail：</td>
+                <td height="40"><input name="main[email]" type="text" id="main[email]" size="40" />
+                  <span class="redfont1">*</span></td>
+              </tr>
+              <tr>
+                <td height="40" align="right">房源描述：</td>
+                <td height="40">&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="40" align="right">&nbsp;</td>
+                <td height="40"><label>
+                  <textarea name="main[house_desc]" id="main[house_desc]" cols="45" rows="5" valid='required' errmsg='请输入房源描述'></textarea>
+                  <span class="redfont1">*</span></label></td>
+              </tr>
+              <tr>
+                <td height="40" align="right">备注：</td>
+                <td height="40">&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="40" align="right">&nbsp;</td>
+                <td height="40"><textarea name="main[remarks]" id="main[remarks]" cols="45" rows="5" ></textarea>
+                  <span class="redfont1">*</span></td>
+              </tr>
+              <tr>
+                <td height="40">&nbsp;</td>
+                <td height="40"><label>
+                  <input type="submit" name="button" id="button" value="提交" />
+                </label></td>
+              </tr>
+            </table>
+          </form>      
+          
+          
+         
+         
+         
+         </td>
+        </tr>
+      </table>
+      <table width="560" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--{$img_url}-->/44.jpg" width="560" height="18" /></td>
+        </tr>
+      </table></td>
+  
+    <td width="250" height="357" align="right" valign="top"><!--{include file="`$ci_config.template_dir`/`$lang_type`/search_left.htm"}--></td>
+    
+  </tr>
+</table>
+<!--{include file="`$dir_front`/foot.htm"}-->

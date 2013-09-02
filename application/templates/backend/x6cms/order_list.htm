@@ -1,0 +1,69 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<div class="nav_title" align="left" >订单管理</div>
+<div  align="right"></div>
+
+<div class="search">
+	<form action="<!--{$site_url}-->/backend/product/action_order/" method="get">
+    订单编号：
+      <input name="order_no" type="text" id="order_no" value="<!--{$smarty.get.order_no}-->" size="15" />
+联系人：
+<input name="contact" type="text" id="contact" value="<!--{$smarty.get.contact}-->" />
+    &nbsp;手机：
+    <label>
+      <input name="mobile" type="text" id="mobile" size="15"  value="<!--{$smarty.get.mobile}-->"/>
+    </label>
+   
+<!--{create_button type="search"}-->
+	</form>
+
+
+</div>
+
+<table class="mytable">
+  <thead>
+  <tr>
+    <th>订单编号</th>
+    <th>状态</th>
+   
+    <th>联系人</th>
+    
+    <th>手机</th>
+    <th>E-mail</th>
+    <th>订单日期</th>
+     <th>操作</th>
+  </tr>
+  </thead>
+
+  <!--{foreach from=$list item=item key=key}-->
+<tr  class="tr_center">
+       <td class="l1"><!--{$item.order_no}--></td>
+       <td class="l1"><!--{$status[$item.status]}--></td>
+       <td class="l2"><!--{$item.contact}--></td>
+    <td class="l3"><!--{$item.mobile}--></td>
+    <td class="l4"><!--{$item.email}--></td>
+     <td class="l5"><!--{$item.order_date}--></td>
+  
+   
+    <td class="l8"> 
+      
+      <a  title="查看订单"   href="<!--{$site_url}-->/backend/product/action_order_view/?order_id=<!--{$item.order_id}-->&parent_class=<!--{$smarty.get.parent_class}-->" > 
+      <img src="<!--{$img_url}-->/view.png" border="0" > </a> 
+      
+      <a  title="删除订单" href="<!--{$site_url}-->/backend/product/action_order_del/?order_id=<!--{$item.order_id}-->&parent_class=<!--{$smarty.get.parent_class}-->" onclick="return confirm('确定删除?');"> 
+      <img src="<!--{$img_url}-->/del1.gif" border="0" > </a> 
+      </td>
+  </tr>
+
+<!--{/foreach}-->
+
+
+
+</table>
+<div class="page_link">
+	<!--{$page_link}-->
+</div>
+<script language="JavaScript">
+	overclass($('.mytable tr'));
+</script>
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

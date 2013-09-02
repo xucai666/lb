@@ -1,0 +1,144 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<fieldset>
+<legend><div class="nav_title"><!--{ci_helper name="language" function="lang" param1="modules_manage"}--></div></legend>
+
+
+<form  name="form1" id="form1" method="post" action="<!--{func_site_url segments='backend/modules/action_save'}-->">
+<table>
+	
+
+	<tr>
+		<td><!--{ci_helper name="language" function="lang" param1="modules_input_name"}-->:</td>
+		<td>
+			<input size="80" type="text" name="main[m_name]" id="main[m_name]" value="<!--{$main.m_name}-->">
+			<!--{php}-->
+				echo form_error("main[m_name]","<span id='error_span'>","</span>");
+			<!--{/php}-->
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><!--{"modules_input_sub_module"|lang}-->:</td>
+		<td>
+			<select name="main[m_sub]">
+				<option value=""><!--{'modules_input_select'|lang}--></option>
+				<!--{html_options options=$subs selected=$main.m_sub}-->
+			</select>
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><!--{'modules_input_tb'|lang}-->：</td>
+		<td>
+			<textarea  name="main[m_tb]" ><!--{$main.m_tb}--></textarea>
+		<!--{php}-->
+				echo form_error("main[m_tb]","<span id='error_span'>","</span>");
+		<!--{/php}-->
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><!--{'modules_input_desc'|lang}-->:</td>
+		<td>
+			<input size="80" type="text" name="main[m_desc]" value="<!--{$main.m_desc}-->">
+			<!--{php}-->
+				echo form_error("main[m_desc]","<span id='error_span'>","</span>");
+			<!--{/php}-->
+		</td>
+		<td></td>
+	</tr>
+	
+	<tr>
+		<td><!--{'modules_input_related_fields'|lang}-->:</td>
+		<td>
+			<table class="mytable">
+				<thead>
+					<tr>
+						<th><!--{'modules_input_field_type'|lang}--></th>
+						<th><!--{'modules_input_field_name'|lang}--></th>
+						<th><!--{'modules_input_field_alias'|lang}--></th>
+						<th><!--{'modules_input_field_length'|lang}--></th>
+						<th><!--{'modules_input_field_input_value'|lang}--></th>
+						<th><!--{'modules_input_field_output_value'|lang}--></th>
+						<th><!--{'modules_input_field_primary'|lang}--></th>
+						<th><!--{'modules_input_field_query_able'|lang}--></th>
+						<th><!--{'modules_input_field_valid'|lang}--></th>
+						<th><!--{'modules_input_field_desc'|lang}--></th>					
+						<th><!--{'modules_input_field_opt'|lang}--></th>					
+					</tr>
+			    </thead>
+				<!--{foreach from=$detail item=v key=k}-->
+				<tr>
+					<td>
+						<select name="detail[f_id][<!--{$k}-->]">
+							<!--{html_options options=$f_ids selected=$v.f_id}-->
+						</select>
+						<!--{ci_form_error k="detail[f_id][$k]"}-->
+					</td>
+					<td><input type="text" name="detail[r_name][<!--{$k}-->]" value='<!--{$v.r_name}-->'>
+						<!--{ci_form_error k="detail[r_name][$k]"}-->
+					</td>	
+					<td><input type="text" name="detail[r_alias][<!--{$k}-->]" value='<!--{$v.r_alias}-->'>
+						<!--{ci_form_error k="detail[r_alias][$k]"}-->
+					</td>
+					<td><input type="text" size="5" onkeyup="value=this.value.replace(/\D+/g,'')"   name="detail[r_length][<!--{$k}-->]" maxlength="3" value='<!--{$v.r_length|default:150}-->'>
+						<!--{ci_form_error k="detail[r_length][$k]"}-->
+					</td>
+					<td>
+						<input type="text" size="5" name="detail[r_default][<!--{$k}-->]" value="<!--{$v.r_default|escape:'html'}-->">
+						
+					</td>
+					<td>
+						<input type="text" size="5" name="detail[r_output][<!--{$k}-->]" value="<!--{$v.r_output|default:""|escape:'html'}-->">
+						
+					</td>
+					<td>
+						<input type="checkbox" class="primary" <!--{if $v.r_primary }-->checked<!--{/if}-->   onclick="$(this).next().val($(this).prop('checked')==true?1:0);$('.primary').not(this).prop('checked',false).next().val(0);$('input.r_valid').not(this).show();$(this).parents('tr:first').find('.r_valid').css('display',$(this).prop('checked')?'none':'block');">	
+						<input type="hidden" name="detail[r_primary][<!--{$k}-->]"  value="<!--{$v.r_primary}-->">
+
+						
+					</td>
+					<td>
+						
+						<select name="detail[r_queryable][<!--{$k}-->]">
+						<!--{html_options options=$query_types selected=$v.r_queryable}-->
+						</select>
+					</td>
+					<td>
+
+					<input type="text" class="r_valid" size="5" name="detail[r_valid][<!--{$k}-->]" value="<!--{$v.r_valid}-->" style="display:<!--{if $v.r_primary }-->none<!--{/if}-->">
+						
+					</td>
+					<td><input type="text" name="detail[r_desc][<!--{$k}-->]" value="<!--{$v.r_desc}-->">
+						
+					</td>
+								
+					<td>
+					<input type="hidden" name="detail[r_id][<!--{$k}-->]" value="<!--{$v.r_id}-->" />
+					
+					<a href="javascript:;"  target="_self" onclick="core_copy($(this),'input','')" class="link_add">&nbsp;</a>
+					<a href="javascript:;"  id="delete_link"  class="link_del <!--{if $k==0}-->hide<!--{/if}-->"    target="_self" onclick="core_drop($(this))" >&nbsp;</a>
+
+					</td>					
+				</tr>
+		<!--{/foreach}-->
+
+			</table>
+		</td>
+		<td></td>
+	</tr>
+
+	
+	<tr>
+		<td colspan="3" align="center">
+		<!--{create_button type='save'}-->
+		<input size="80" type="hidden" name="main[m_id]" value="<!--{$main.m_id}-->">
+		<input type="hidden" id="total_detail" value="<!--{$detail_total}-->" />	
+
+	</td></tr>
+
+</table>
+</form>	
+</fieldset>
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

@@ -1,0 +1,85 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<div class="nav_title">模型管理</div>
+<div  align="right"><a href="<!--{func_site_url segments='/backend/modules/action_add'}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
+
+<div class='search'>
+	
+		<form action='<!--{func_site_url segments="backend/modules/action_list"}-->' method="get">
+			<li>
+			模块名称：
+			<input type="text" name="m_name" value="<!--{$smarty.get.m_name}-->">			
+			数据表：
+			<input type="text" name="m_tb" value="<!--{$smarty.get.m_tb}-->">
+			</li>
+			<li><!--{create_button type="search"}--></li>
+		</form>
+	
+</div>
+
+  <form id="form2" method="post" action="<!--{func_site_url segments='/backend/modules/action_del'}-->" onsubmit="return chkdel2();">   
+<table class='mytable'>
+	<thead>
+<tr>
+	<th class="float_left">
+		<input type="checkbox" id="chkall"  value="1" onclick="CheckAll(this.form);">
+		<!--{create_button type='delete' ext=''}-->
+	</th>
+	<th>编号</th>
+	<th>模型名称</th>
+	<th>数据表</th>
+	<th>模块介绍</th>
+	<th>锁定</th>
+	<th>操作</th>
+
+</tr>
+	</thead>
+<tbody>
+<!--{foreach from=$list item=item}-->	
+<tr>
+	<td>
+		<input type="checkbox" class="ids"  name="m_id[]" value="<!--{$item.m_id}-->">
+	</td>
+	<td><!--{$item.m_id}--></td>
+	<td><!--{$item.m_name}--></td>
+	<td><!--{$item.m_tb}--></td>
+	<td><!--{$item.m_desc}--></td>
+	<td>
+		<a href="javascript:;" class="<!--{func_state state=$item.m_lock|default:0}-->" onclick="$.when(ajax_change_state(this,'module','m_id','<!--{$item.m_id}-->','m_lock')).then(function(x){ajax_change_val('system_rights','r_title','<!--{$item.m_name}-->','r_display',x==1?0:1)}).done(function(){location.reload()});">&nbsp;</a>
+
+		
+
+
+</td>
+	<td align='center'>
+			<!--{if !$item.m_lock}-->
+			<!--{ci_anchor segment="backend/modules/action_add/`$item.m_id`" title="&nbsp;" attrs="class:link_mod"}-->
+			<!--{ci_anchor segment="backend/modules/action_del/`$item.m_id`" title="&nbsp;" attrs="class:link_del,onclick:return confirm('确定删除?');"}-->
+			<!--{/if}-->
+	</td>
+</tr>
+<!--{/foreach}-->
+</tbody>	
+</table>
+</form>
+<div class="page_link">
+	<!--{$page_link}-->
+</div>
+<!--{literal}-->
+<script language="JavaScript">
+	//删除确认
+	function chkdel2(){
+		if($('.ids:checked').size()>0){
+			if(confirm('确定删除?')){
+				return true;
+			}else{
+				return false;	
+			}
+			
+		}else{
+			alert('请选择');	
+			return false;
+		}
+	}
+</script>
+<!--{/literal}-->
+<!--{include file="`$dir_backend`/foot.htm"}-->

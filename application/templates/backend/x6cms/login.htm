@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<TITLE><!--{$item_lang.sys_backend}--></TITLE> 
+<META http-equiv=Content-Type content="text/html; charset=utf-8"> 
+<!--{insert_css file="backend_style" catalog="`$css_url`"}-->
+<!--{insert_js file="jquery-1.9.1.min,core" path="`$js_url`"}-->
+</head>
+
+<body>
+<form action="<!--{$site_url}-->/backend/login/chklogin" target="_parent" method="post"> 
+    
+  
+
+
+<table width="500" height="313" border="0" cellpadding="0" cellspacing="0" align="center">
+  <tr>
+    <td colspan="3"><img src="<!--{$img_url}-->/logins_r1_c6.png" width="184" height="60" /></td>
+  </tr>
+  <!-- fwtable fwsrc="未命名-1.png" fwbase="login_panel.png" fwstyle="Dreamweaver" fwdocid = "1613780109" fwnested="0" -->
+  <tr>
+    <td width="25" height="312"><img name="login_panel_r1_c1" src="<!--{$img_url}-->/login_panel_r1_c1.png" width="25" height="312" border="0" id="login_panel_r1_c1" alt="" /></td>
+    <td valign="top" background="<!--{$img_url}-->/login_panel_r1_c3.png"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="69" align="right" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td align="right"><img name="login_panel_r5_c6" src="<!--{$img_url}-->/login_panel_r5_c6.png" width="83" height="26" border="0" id="login_panel_r5_c6" alt="" /></td>
+            <td width="185" height="69" align="right" valign="top"><img name="login_panel_r1_c9" src="<!--{$img_url}-->/login_panel_r1_c9.png" width="185" height="69" border="0" id="login_panel_r1_c9" alt="" /></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td align="center"><table border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="45">
+              <!--{$lang_login.username}-->：            </td>
+            <td height="45" align='left'><label>
+                <INPUT  id=txtUserName name="user_name" style="width:100px">
+              </label><!--{type_error obj="user_name"}--></td>
+          </tr>
+          <tr>
+            <td height="45"><!--{$lang_login.password}-->：</td>
+            <td height="45" align='left'> <INPUT  id=txtUserPassword type="password"  style="width:100px"
+                name="user_pass">
+        <!--{type_error obj="user_pass"}--></td>
+          </tr>
+          <tr>
+            <td height="45">&nbsp;</td>
+            <td height="45"><input type="image" src="<!--{$img_url}-->/logins_r9_c7.png" width="126" height="40" /></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+    <td width="32" height="312">
+  
+  
+  <img name="login_panel_r1_c10" src="<!--{$img_url}-->/login_panel_r1_c10.png" width="22" height="312" border="0" id="login_panel_r1_c10" alt="" /></td>
+  </tr>
+</table>
+
+    
+     
+</form>
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

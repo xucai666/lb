@@ -1,0 +1,60 @@
+
+
+
+<!--{include file="`$dir_front`/top.htm"}-->
+
+
+<table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
+  <tr>
+    <td width="246" valign="top">
+    
+     <!--{include file="`$dir_front`/left_about.htm"}-->
+     <!--{include file="`$dir_front`/left_contact.htm"}-->
+    
+      
+    <td valign="top">
+  
+       <table width="100%" border="1" cellspacing="0" cellpadding="0">
+            
+              <tr>
+                <td height="24" colspan="7" align="left" bgcolor="#e8e8e8">    <strong><!--{$main.eg_pos}--></strong> [ 职位编号：<!--{$main.eg_id}--> ]</td>
+              </tr>
+            
+                        <tr>
+                          <td width="25%" height="40" align="right">电子邮箱：</td>
+                          <td width="75%" align="left">&nbsp;<!--{$main.eg_email}--></td>
+                        </tr>
+                        <tr>
+                          <td height="40" align="right">发布日期：</td>
+                          <td align="left">&nbsp;<!--{$main.eg_date}--></td>
+                        </tr>
+                        <tr>
+                          <td height="40" align="right">工作地点：</td>
+                          <td align="left">&nbsp;<!--{func_get_area_str id=$main.eg_area}--></td>
+                        </tr>
+                        <tr>
+                          <td height="40" align="right"> 招聘人数：</td>
+                          <td align="left">&nbsp;<!--{$main.eg_people}--></td>
+                        </tr>
+                        <tr>
+                          <td height="40" align="right">学    历：</td>
+                          <td align="left">&nbsp;<!--{$edu_level.eg_edu}--></td>
+                        </tr>
+                        <tr>
+                          <td height="40" align="right">工作年限：</td>
+                          <td align="left">&nbsp;<!--{$edu_level.eg_years}--></td>
+                        </tr>
+                        <tr>
+                          <td height="40" align="right">外语要求：</td>
+                          <td align="left">&nbsp;<!--{$edu_level.eg_eng}--></td>
+                        </tr>
+                        <tr>
+                          <td height="40" align="right"> 任职资格：</td>
+                          <td height="200" align="left">&nbsp;<!--{$edu_level.eg_content}--></td>
+                        </tr>
+                      </table>
+                        ［<a href="<!--{$site_url}-->/engage/action_apply/?eg_id=<!--{$smarty.get.eg_id}-->">申请此职位</a>］ ［<a href="<!--{$site_url}-->/engage/action_friend/?eg_id=<!--{$smarty.get.eg_id}-->">推荐给朋友</a>］
+  </td>
+  </tr>
+</table>
+<!--{include file="`$dir_front`/foot.htm"}-->

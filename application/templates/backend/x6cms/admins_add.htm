@@ -1,0 +1,84 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+
+<fieldset>
+<legend><!--{$lang_admins.theme_add}--></legend>
+<form method="post" action="<!--{$site_url}-->/backend/admins/action_save"   onsubmit="return validator(this);"/>
+
+<table class="center" width="80%">
+<tr>
+	<td class="right"><!--{$lang_admins.username}-->：</td><td class="left">
+	<input type="text" name="main[admin_user]" valid="required"  errmsg="<!--{$lang_admins.inp_username}-->" value="<!--{$main.admin_user}-->" 
+    <!--{if $main.admin_id}-->
+    	readonly="true" style="background-color:#cccccc;"
+    <!--{/if}--> 
+    >
+	  <!--{type_error obj='main[admin_user]'}-->
+	</td>
+</tr>
+
+
+
+<tr>
+	<td class="right"><!--{$lang_admins.role}-->：</td><td class="left">
+		<select name="main[group_id]" >
+				<!--{html_options options=$group_options selected=$main.group_id}-->
+		</select>		
+	
+	</td>
+</tr>
+
+<tr>
+	<td class="right"><!--{$lang_admins.name}-->：</td><td class="left">
+	<input type="text" name="main[name]" value="<!--{$main.name}-->">
+	
+	</td>
+</tr>
+
+
+
+<tr>
+	<td class="right"><!--{$lang_admins.tel}-->：</td><td class="left">
+	<input type="text" name="main[tel]" value="<!--{$main.tel}-->">
+	
+	</td>
+</tr>
+<tr>
+	<td class="right"><!--{$lang_admins.mobile}-->：</td><td class="left">
+	<input type="text" name="main[mobile]" value="<!--{$main.mobile}-->">
+	
+	</td>
+</tr>
+<tr>
+	<td class="right"><!--{$lang_admins.qq}-->：</td><td class="left">
+	<input type="text" name="main[qq]" value="<!--{$main.qq}-->">
+	
+	</td>
+</tr>
+<tr>
+	<td class="right"><!--{$lang_admins.email}-->：</td><td class="left">
+	<input type="text" name="main[email]" value="<!--{$main.email}-->">
+	
+	</td>
+</tr>
+<tr><td class="right"><!--{$lang_admins.password}-->：</td><td class="left"><input type="password" name="main[admin_pass]" id="admin_pass"  >
+<!--{php}--> echo form_error("main[admin_pass]","<div id='error_span' class='red_font'>","</div>");<!--{/php}-->
+</td></tr>
+<tr><td class="right"><!--{$lang_admins.password_confirm}-->：</td><td class="left"><input type="password" name="confirm_password" valid='equal' equalName="main[admin_pass]" errmsg="<!--{$lang_admins.inp_password_confirm_error}-->">
+<!--{php}--> echo form_error("confirm_password","<div id='error_span' class='red_font'>","</div>");<!--{/php}-->
+</td>
+
+</tr>
+</table>
+<center>
+
+<input type="hidden" name="main[admin_id]" value="<!--{$main.admin_id}-->">
+
+<!--{create_button type='save'}-->
+<!--{php}-->
+	
+
+	echo form_close();
+	echo form_fieldset_close();
+<!--{/php}-->
+</center>
+<!--{include file="`$dir_backend`/foot.htm"}-->

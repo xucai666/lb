@@ -1,0 +1,90 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+
+<div class="nav_title"><!--{"module_data"|lang}-->&raquo;<!--{$theme}--></div>
+
+
+
+  <form id="form2" method="post" action="<!--{func_site_url segments='/backend/mdata/action_del'}-->" onsubmit="return chkdel2();">   
+<table class='mytable' >
+	<thead>
+<tr>
+	<th>
+		选择
+	</th>
+	
+	<!--{foreach from=$fields item=f}-->	
+	<th><!--{$f.r_alias}--></th>
+	<!--{/foreach}-->	
+	
+	<th><!--{"opt"|lang}--></th>
+
+</tr>
+	</thead>
+<tbody>
+<!--{foreach from=$list item=item}-->	
+<tr>
+	<td>
+		<input type="checkbox" class="ids"  name="<!--{$primary}-->[]" value="<!--{$item[$primary]}-->">
+	</td>
+	
+	<!--{foreach from=$fields item=f}-->	
+	<td><!--{$item[$f.r_name]}--></td>
+	<!--{/foreach}-->	
+	<td>
+			 
+			<!--{ci_anchor segment="backend/mdata/action_del/`$item[$primary]`" attrs="class:link_del,onclick:return confirm('<!--{"confirm_delete"|lang}-->');"}-->
+
+			<!--{ci_anchor segment="backend/mdata/action_view/`$item[$primary]`" attrs="class:link_view,target:_blank"}-->
+
+			<a href="javascript:;" onclick="art_dialog_open('<!--{$site_url}-->/backend/mdata/action_add/<!--{$item[$primary]}-->','数据管理')" class="link_mod"></a>
+	</td>
+</tr>
+<!--{/foreach}-->
+</tbody>	
+</table>
+<div class="page_link">
+	<!--{$page_link}-->
+</div>
+
+	
+		<input type="checkbox" id="chkall"  value="1" onclick="CheckAll(this.form);">全选
+		<!--{create_button type='delete' ext=''}-->	
+		<!--{create_button type='add' url="javascript:art_dialog_open('`$site_url`backend/mdata/action_add','数据管理');"}-->	
+
+</form>
+
+<!--{if $querys}-->
+<table class='search'>
+	<tr><td>
+		<form action='<!--{func_site_url segments="backend/mdata/action_list"}-->' method="get">
+			<!--{foreach from=$querys key=k item=v}-->
+				<!--{$v.name}-->:<!--{func_vsprintf html =$v.html name=$k value=','|implode:(array)$smarty.get.$k}-->
+			<!--{/foreach}-->
+			<!--{create_button type="search"}-->
+		</form>
+	</td></tr>
+</table>
+<!--{/if}-->
+
+
+<script language="JavaScript">
+	//删除确认
+	function chkdel2(){
+		if($('.ids:checked').size()>0){
+			if(confirm('<!--{"confirm_delete"|lang}-->')){
+				return true;
+			}else{
+				return false;	
+			}
+			
+		}else{
+			alert('<!--{"inp_select"|lang}-->');	
+			return false;
+		}
+	}
+
+
+
+</script>
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

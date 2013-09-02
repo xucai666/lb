@@ -1,0 +1,32 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<div class="nav_title" align="left" >数据库备份</div>
+
+
+<div style='margin:20px 20px 20px 20px;'>&gt&gt<a href="<!--{$site_url}-->/backend/system_manage/db_backup">点此立即备份</a></div>
+
+
+<div style='width:500px;height:300px;overflow:auto'>
+
+  
+
+<table class="mytable">
+	<thead>
+	<tr>
+		<th>序号</th>
+		<th>文件名</th>
+		<th>大小</th>
+		<th>日期</th>
+	</tr>
+</thead>
+	<!--{foreach from=$files item=item key=key name=foo}-->
+	<tr>
+		<td align='center'><!--{$smarty.foreach.foo.index+1}--></td>
+		<td><!--{$key}--></td>
+		<td align='center'><!--{math equation="round(x,2)" x="`$item.size/1024/1024`"}--> M</td>
+		<td align='center'><!--{$item.date|date_format:"%Y-%m-%d"}--></td>
+	</tr>
+	<!--{/foreach}-->
+</table>
+</div>
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

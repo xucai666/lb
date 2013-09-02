@@ -1,0 +1,60 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<fieldset>
+<legend><div class="nav_title">分类增加/修改</div></legend>
+
+<form  name="form1" id="form1" method="post" action="<!--{func_site_url segments='backend/tree/action_save'}-->">
+<table>
+	<tr>
+		<td>上级分类：</td>
+		<td>
+			<select name="main[pid]">
+				<!--{html_options options=$pids selected=$main.pid}-->
+			</select>
+			<!--{php}-->
+				echo form_error("main[pid]","<span id='error_span'>","</span>");
+			<!--{/php}-->
+		</td>
+		<td></td>
+	</tr>
+
+	<tr>
+		<td>分类名称：</td>
+		<td>
+			<input size="80" type="text" name="main[name]" id="main[name]" value="<!--{$main.name}-->">
+			<!--{php}-->
+				echo form_error("main[name]","<span id='error_span'>","</span>");
+			<!--{/php}-->
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>编码：</td>
+		<td>
+				<input size="80" type="text" name="main[code]" id="main[code]" value="<!--{$main.code}-->">
+			<!--{php}-->
+				echo form_error("main[code]","<span id='error_span'>","</span>");
+			<!--{/php}-->
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>图片：</td>
+		<td>
+			<!--{tag_input_html f_id=21 name="main[pic]" value=$main.pic}-->
+		</td>
+		<td></td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td colspan="3" align="center">
+		<!--{create_button type='save'}-->
+		<input size="80" type="hidden" name="main[id]" value="<!--{$main.id}-->">
+	</td></tr>
+
+</table>
+</form>	
+</fieldset>
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

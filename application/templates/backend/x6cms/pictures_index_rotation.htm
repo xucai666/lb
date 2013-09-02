@@ -1,0 +1,246 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<div class="nav_title" align="left" >图片管理</div>
+<script type="text/javascript">
+	 <!--{foreach from=$list key=key item=item}-->
+		var upload_<!--{$key}-->;
+		 <!--{/foreach}-->	
+		 var upload_1000;
+		window.onload = function() {				
+		  <!--{foreach from=$list key=key item=item}-->
+		 	upload_<!--{$key}--> = new SWFUpload({
+				// Backend Settings
+				upload_url: "<!--{$base_url}-->/swfupload/upload.php",
+				post_params: {"p_type":"index_rotation","p_tb":"pictures_config",'p_key':'1'},
+				// File Upload Settings
+				file_size_limit : "1024",	// 100MB
+				file_types : "*.jpg;*.gif",
+				file_types_description : "*.jpg;*.gif",
+				file_upload_limit : "1",
+				file_queue_limit : "0",
+				// Event Handler Settings (all my handlers are in the Handler.js file)
+				file_dialog_start_handler : fileDialogStart,
+				file_queued_handler : fileQueued,
+				file_queue_error_handler : fileQueueError,
+				file_dialog_complete_handler : fileDialogComplete,
+				upload_start_handler : uploadStart,
+				upload_progress_handler : uploadProgress,
+				upload_error_handler : uploadError,
+				upload_success_handler : uploadSuccess,
+				upload_complete_handler : uploadComplete_<!--{$key}-->,
+				// Button Settings
+				button_image_url : "<!--{$base_url}-->/swfupload/images/TestImageNoText_65x29.png",
+				button_placeholder_id : "spanButtonPlaceholder_<!--{$key}-->",
+				
+				button_text: '上&nbsp;&nbsp;传',
+				button_width: 100,
+				button_height: 30,		
+				button_text_left_padding: 10,
+				button_text_top_padding: 3,					
+				// Flash Settings
+				flash_url : "<!--{$base_url}-->/swfupload/api/swfupload.swf",
+				custom_settings : {
+					progressTarget : "fsUploadProgress_<!--{$key}-->",
+					cancelButtonId : "btnCancel_<!--{$key}-->"
+					
+				
+				},
+				// Debug Settings
+				debug: false
+			});
+			function uploadComplete_<!--{$key}-->(file, serverData){
+				
+				$('#show_img_<!--{$key}-->').html('<img src="<!--{$base_url}-->/swfupload/uploads/'+file.name+'" width="100" />');
+			
+				
+				$.ajax({
+				   type: "POST",
+				   url: '<!--{$site_url}-->/backend/pictures/action_index_rotation_save',
+				   data: {"p_type":"index_rotation","p_tb":"pictures_config",'p_key':'1','p_id':$('#p_id_<!--{$key}-->').val(),'p_thumb':file.name},
+				   dataType:"json",
+				   success: function(msg){	
+				  
+				   		$('#p_id_<!--{$key}-->').val(msg.main.p_id);
+				   }
+				}); 
+			}
+					
+			<!--{/foreach}-->
+			
+			
+			upload_1000 = new SWFUpload({
+				// Backend Settings
+				upload_url: "<!--{$base_url}-->/swfupload/upload.php",
+				post_params: {"p_type":"index_rotation","p_tb":"pictures_config",'p_key':'1'},
+				// File Upload Settings
+				file_size_limit : "1024",	// 100MB
+				file_types : "*.jpg;*.gif",
+				file_types_description : "*.jpg;*.gif",
+				file_upload_limit : "15",
+				file_queue_limit : "0",
+				// Event Handler Settings (all my handlers are in the Handler.js file)
+				file_dialog_start_handler : fileDialogStart,
+				file_queued_handler : fileQueued,
+				file_queue_error_handler : fileQueueError,
+				file_dialog_complete_handler : fileDialogComplete,
+				upload_start_handler : uploadStart,
+				upload_progress_handler : uploadProgress,
+				upload_error_handler : uploadError,
+				upload_success_handler : uploadSuccess,
+				upload_complete_handler : uploadComplete_1000,
+				queue_complete_handler : queueComplete, 
+				
+				
+				// Button Settings
+				button_image_url : "<!--{$base_url}-->/swfupload/images/TestImageNoText_65x29.png",
+				button_placeholder_id : "spanButtonPlaceholder_1000",
+				button_text: '批量上传',
+				button_width: 120,
+				button_height: 30,		
+				button_text_left_padding: 10,
+				button_text_top_padding: 3,	
+				// Flash Settings
+				flash_url : "<!--{$base_url}-->/swfupload/api/swfupload.swf",
+				custom_settings : {
+					progressTarget : "fsUploadProgress_1000",
+					cancelButtonId : "btnCancel_1000"
+					
+				
+				},
+				// Debug Settings
+				debug: false
+			});
+			function uploadComplete_1000(file, serverData){
+			
+				$.ajax({
+				   type: "POST",
+				   url: '<!--{$site_url}-->/backend/pictures/action_index_rotation_save',
+				   data: {"p_type":"index_rotation","p_tb":"pictures_config",'p_key':'1','p_thumb':file.name},
+				   dataType:"json",
+				   success: function(msg){	
+				  	
+				   		
+				   }
+				}); 
+			}
+			
+			
+			
+			
+				
+		}
+		
+		
+		
+		 function queueComplete(){
+					//alert('图片全部上传完毕！');
+					self.location.reload();
+			}
+			
+			
+		 function save_sort(p_index){	
+		    var p_id = $('#p_id_'+p_index).val();
+			if(p_id>0){
+				$.ajax({
+				   type: "POST",
+				   url: '<!--{$site_url}-->/backend/pictures/action_sort_save',
+				   data: {"p_sort":$('#p_sort_'+p_index).val(),'p_id':p_id},
+				   dataType:"json",
+				   success: function(msg){					  
+				   		
+				   }
+				});
+			 
+				
+			}else{
+				return false;
+				}
+			 
+		}	 
+</script>
+
+
+
+
+<div class="search">
+        注意：图片请控制在986×543，这样不会变形,图片越大，排序越前，批量上传支持一次传多张图片
+          <div class="fieldset flash" id="fsUploadProgress_1000">
+            
+            
+            
+            </div>
+          
+          <div>
+            <span id="spanButtonPlaceholder_1000">
+              
+            </span>
+            <input type="hidden" id="p_id_1000" value="<!--{$item.p_id}-->">
+            <input id="btnCancel_1000" type="hidden" value="Cancel" onclick="cancelQueue(upload_1000);" disabled="disabled" style="margin-left: 2px; height: 22px; font-size: 8pt;" />
+          </div>
+  </div> 
+
+
+<form  method="post" enctype="multipart/form-data"  name="form1" id="form1">
+
+  <table width="600"  class="mytable">
+   <thead> <tr>
+      <th align="center">上传图片</th>
+      <th width="100" align="center">排序</th>
+      <th width="100" align="center">操作</th>
+    </tr></thead>
+    
+    <!--{foreach from=$list key=key item=item}-->
+    <tr>
+      <td align="center">  
+        
+        <div id='show_img_<!--{$key}-->'>
+        <!--{if $item.p_thumb}-->
+          <img src="<!--{$base_url}-->/swfupload/uploads/<!--{$item.p_thumb}-->" width="100" />
+           <!--{/if}-->
+          </div>
+       
+        
+        <div>
+          <div class="fieldset flash" id="fsUploadProgress_<!--{$key}-->">
+            
+            
+            
+            </div>
+          
+          <div>
+            <span id="spanButtonPlaceholder_<!--{$key}-->">
+              
+            </span>
+            <input type="hidden" id="p_id_<!--{$key}-->" value="<!--{$item.p_id}-->">
+            <input id="btnCancel_<!--{$key}-->" type="hidden" value="Cancel" onclick="cancelQueue(upload_<!--{$key}-->);" disabled="disabled" style="margin-left: 2px; height: 22px; font-size: 8pt;" />
+            </div>
+        </div>                    
+      </td>
+      <td align="center">
+      
+      <input type="text"  value="<!--{$item.p_sort|default:'0'}-->"  onchange="save_sort('<!--{$key}-->');" id="p_sort_<!--{$key}-->" size="6" maxlength="4" style="border:0px">
+      
+      &nbsp;</td>
+      <td align="center">
+      <!--{if $item.p_id}-->
+      <a href="<!--{$site_url}-->/backend/pictures/action_del_index_rotation/?p_id=<!--{$item.p_id}-->" onclick='return confirm("确定删除?");'> <img src="<!--{$img_url}-->/del.png"></a>
+      <!--{/if}-->
+      &nbsp;</td>
+    </tr>
+    <!--{/foreach}-->
+
+    </table>
+    
+    
+    
+    
+     
+      
+        
+        
+    
+    
+ 
+</form>		
+      
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

@@ -1,0 +1,200 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<div class="nav_title">多语言翻译</div>
+<div  align="right">
+
+	<a href="<!--{func_site_url segments='/backend/system_manage/action_lang_import'}-->" onclick="return confirm('重新载入将清空已翻译数据？');"><img src="<!--{$img_url}-->/import_lang.png"  /></a>
+
+	<a href="<!--{func_site_url segments='/backend/system_manage/action_lang_export'}-->" onclick="return confirm('确定导出？');"><img src="<!--{$img_url}-->/export_lang.png"  /></a>
+
+
+</div>
+
+<table class='search'>
+	<tr><td>
+		<form action='<!--{func_site_url segments="backend/system_manage/action_lang_trans"}-->' method="get">
+			关键字：
+		
+			<input type="text" name="lang_val" value="<!--{$smarty.get.lang_val}-->">
+			语种：
+		
+			<select name="lang_type">
+				<option value=''>请选择</option>
+				<!--{html_options values=$ci_config.support_language output=$ci_config.support_language selected=$smarty.get.lang_type}-->
+			</select>
+
+			状态:
+			<select name="status">
+				<option value='-1'>请选择</option>
+				<!--{html_options options=$status  selected=$smarty.get.status}-->
+			</select>
+			<!--{create_button type="search"}-->
+			<!--{create_button type="trans" url="javascript:run=0;next_trans();;"}-->
+		</form>
+	</td></tr>
+</table>
+
+  <form id="form2" method="post" action="<!--{func_site_url segments='/backend/system_manage/action_del'}-->" onsubmit="return chkdel2();">   
+<table class='mytable'>
+	<thead>
+<tr>
+	
+	<th>编号</th>
+	<th>下标</th>
+	<th>值</th>
+	<th>来源</th>
+	<th>类型</th>
+	<th >操作</th>
+
+</tr>
+	</thead>
+<tbody>
+<!--{foreach from=$list item=item key=key}-->	
+<tr>
+	
+	<td><!--{$item.lang_id}--></td>
+	<td><!--{$item.lang_key}--></td>
+	<td><!--{$item.lang_val}--></td>
+	<td><!--{$item.lang_file}--></td>
+	<td><!--{$item.lang_type}--></td>
+	<td >
+		
+			<span id="trans_status_<!--{$key}-->">
+				<!--{if $item.is_trans}--><img src="<!--{$img_url}-->/yes.gif" /><!--{else}--><a class="a_trans" href="javascript:;" onclick="single_trans('<!--{$key}-->');return false;"><img src="<!--{$img_url}-->/no.gif" border="0" /></a><!--{/if}-->
+				
+			</span>	&nbsp;
+			<script  id="js_<!--{$key}-->" type="text/javascript"  translink="<!--{func_site_url segments="backend/system_manage/action_trans"}-->?type=auto&lang_id=<!--{$item.lang_id}-->&run=<!--{$key}-->" ></script>
+			<script language="javascript" type="text/javascript">var js_id_<!--{$key}--> = "<!--{$item.lang_id}-->";</script>
+
+	</td>
+</tr>
+<!--{/foreach}-->
+</tbody>	
+</table>
+</form>
+<div class="page_link">
+	<!--{$page_link}-->
+</div>
+<!--{literal}-->
+<script language="JavaScript">
+	//删除确认
+	function chkdel2(){
+		if($('.ids:checked').size()>0){
+			if(confirm('确定删除?')){
+				return true;
+			}else{
+				return false;	
+			}
+			
+		}else{
+			alert('请选择');	
+			return false;
+		}
+	}
+</script>
+<!--{/literal}-->
+
+
+
+<script type="text/javascript">
+	var run=0;	
+	var page_size = +("<!--{$page_size}-->");
+	var next_page = (+getquerystring('per_page'))+page_size;
+	var total_page = +("<!--{$count}-->");
+	
+	function next_trans(){	
+		var obj = document.getElementById('js_'+run);
+		if(run==page_size ||  obj==undefined){
+			if(next_page>total_page) next_page = 0;
+			var lnk = location.href;
+			 lnk = replace_url_param(lnk,"per_page",next_page);
+			
+			 lnk = replace_url_param(lnk,"auto",1);
+			
+			
+			 location.href = lnk;
+			 return false;
+		}		
+		var ps = jQuery('#trans_status_'+run).position();
+		document.body.scrollTop = parseInt(ps.top)-180;		
+						
+		if(obj!=undefined) {	
+			document.getElementById('trans_status_'+run).innerHTML='<img src="<!--{$img_url}-->/loader.gif" />';		
+			obj.src  = obj.getAttribute('translink')+'&rnd='+Math.random();		
+					
+		}	
+
+
+		run++;
+
+
+
+		
+	}
+	
+
+	function resetrun(){
+		run = 0;
+		clearTimeout(setTimeout(function(){next_trans();},1000)-1);		
+	}
+	
+	
+	function single_trans(run_key){
+		try{
+			
+			document.getElementById('trans_status_'+run_key).innerHTML='<img src="<!--{$img_url}-->/loader.gif" />';		
+			var obj = document.getElementById('js_'+run_key);	
+			var url  = obj.getAttribute('translink').replace('type=auto','type=once');
+			obj.src = url+'&rnd='+Math.random();					
+		}catch(e){
+			alert(e.description);
+		}		
+		
+	}
+
+
+ function replace_url_param(url,name,val){
+ 
+	var s ;
+	var reg = new RegExp(name+"=([^&]*)(&|$)","ig");
+	var h = reg.exec(url);
+	if(!h){
+
+		if(url.substr(-1, 1)=='&'){
+			url = url.substr(0, url.length-1);
+		}
+			
+		s = (url.indexOf("?")=="-1")?'?'+name+"="+val:"&"+name+"="+val;
+		s = url+s;
+		
+		
+	}else{
+		s = url.replace(h[0],name+'='+val+h[2])
+	}
+
+	return s;
+  }
+
+
+
+function getquerystring(name1) {
+var reg = new RegExp("(^|&)" + name1 + "=([^&]*)(&|$)"); 
+
+
+
+var r = window.location.search.substr(1).match(reg);
+
+
+if (r!=null) return unescape(r[2]); return null;
+}
+
+
+jQuery(document).ready(function($) {
+	if(location.href.indexOf("auto=1",0)!="-1"){
+		resetrun();
+	}
+});
+
+</script>
+
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

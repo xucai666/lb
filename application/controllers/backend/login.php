@@ -224,6 +224,37 @@ class Login extends CI_Controller {
  		phpinfo();
  		exit;
  	}
+
+ 	
+ 	function  main_top(){
+ 		$data['rights_options'] = $this->cor_auth->fetch_rights_menus($this->cor_auth->db_user('group_id'),true);
+ 		$this->cor_page->load_backend_view("main_top",$data);
+ 	}
+
+	function  main_left(){
+		$data['rights_options'] = $this->cor_auth->fetch_rights_menus($this->cor_auth->db_user('group_id'),true);
+		$this->cor_page->load_backend_view("main_left",$data);
+
+ 	}
+
+ 	function  main_right(){
+ 		$this->cor_page->load_backend_view("main_right",$data);
+ 	}
+
+
+ 	function  main_foot(){
+ 		$this->cor_page->load_backend_view("main_foot",$data);
+ 	}
+
+ 	function adminindex(){
+ 		$this->cor_page->load_backend_view("adminindex",$data);
+ 	}
+ 	
+	function main_center(){
+ 		$this->cor_page->load_backend_view("main_center",$data);
+ 	}
+
+
 	
 }
 

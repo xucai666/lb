@@ -1,0 +1,103 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<div class="nav_title" align="left" ><!--{$class_info.class_theme}--></div>
+<div  align="right"><a href="<!--{$site_url}-->/backend/archives/action_add/?parent_class=<!--{$smarty.get.parent_class}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
+
+<table class="search" >
+<tr>
+<td>
+	<form action="<!--{$site_url}-->/backend/archives/action_list/" method="get">
+    <!--{$lang_archives.category}-->：
+    <select name="search_class">
+    <!--{$class_info.class_select}-->
+    </select>
+    
+     <!--{$lang_archives.title}-->： 
+    <input type="text" name="info_title" value="<!--{$smarty.get.info_title}-->" />
+	<input type="hidden" name="parent_class" value="<!--{$smarty.get.parent_class}-->">
+	<input type="submit" name="submit" value=" <!--{$lang_archives.query}-->" />
+	</form>
+
+</td>
+</tr>
+</table>
+
+<div id='archives'>
+  <form id="form2" method="post" action="<!--{$site_url}-->/backend/archives/action_del/?parent_class=<!--{$smarty.get.parent_class}-->">   
+  
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="mytable">
+  <tr >
+    <th align="center">
+		
+		
+		<!--{create_button type='delete' ext='onclick="return chkdel2();"'}-->
+		
+		
+		<input type="checkbox" id="chkall"  value="1" onclick="CheckAll(this.form);">
+    </th>
+    <th align="center"><!--{$lang_archives.title}-->&nbsp;</th>
+    <th align="center"><!--{$lang_archives.category}-->&nbsp;</th>
+    <th align="center"><!--{$lang_archives.visit}-->&nbsp;</th>
+    <th align="center"><!--{$lang_archives.date}-->&nbsp;</th>
+    
+    <th align="center"><!--{$lang_archives.order}-->&nbsp;</th>
+    <th align="center"><!--{$lang_archives.operate}-->&nbsp;</th>
+
+
+
+
+  </tr>
+  <!--{foreach from=$list item=item key=key}-->
+    <tr>
+      <td align="center">  <input type="checkbox" class="info_ids"  name="info_id[]" value="<!--{$item.info_id}-->">&nbsp;</td>
+    <td align="left"><!--{$item.info_title}-->&nbsp;</td>
+    <td align="center"> <!--{$item.c_title}-->    &nbsp;</td>
+    <td align="center"><!--{$item.info_view}-->&nbsp;</td>
+    <td align="center"><!--{$item.info_date}-->&nbsp;</td>
+    <td align="center"><!--{$item.info_order}-->&nbsp;</td>
+    <td align="center"> 
+                
+                 <a  title=" <!--{$lang_archives.view}-->"   href="<!--{$site_url}-->/backend/archives/action_add/?info_id=<!--{$item.info_id}-->&parent_class=<!--{$smarty.get.parent_class}-->" > 
+                  <img src="<!--{$img_url}-->/mod1.gif" border="0" > </a> 
+                  
+                  <a  title=" <!--{$lang_archives.delete}-->" href="<!--{$site_url}-->/backend/archives/action_del/?info_id=<!--{$item.info_id}-->&parent_class=<!--{$smarty.get.parent_class}-->" onclick="return confirm(' <!--{$lang_archives.confirm_delete}-->');"> 
+                  <img src="<!--{$img_url}-->/del1.gif" border="0" > </a> 
+    
+    </td>
+  </tr>
+  <!--{/foreach}-->
+  
+  
+</table>
+
+  
+  </form>
+
+
+
+
+
+
+</div>
+<div class="page_link">
+	<!--{$page_link}-->
+</div>
+<script language="JavaScript">
+	overclass($('#archives ul'));
+	
+	//删除确认
+	function chkdel2(){
+		if($('.info_ids:checked').size()>0){
+			if(confirm('确定删除?')){
+				return true;
+			}else{
+				return false;	
+			}
+			
+		}else{
+			alert('请选择');	
+			return false;
+		}
+	}
+</script>
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

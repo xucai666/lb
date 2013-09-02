@@ -1,0 +1,38 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<form action="<!--{$site_url}-->/backend/joinus/action_002_001_save" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr> 
+      <td height="24"  colspan="2" align="left" class="nav_title"> 添加/修改问题 </td>
+    </tr>
+    <tr> 
+      <td width="82" height="40" align="right">问题：</td>
+      <td width="373" height="40" align="left"> <label> 
+        <input name="main[ask_title]" type="text" id="main[ask_title]" size="50" value="<!--{$main.ask_title}-->"  />
+        </label> 
+        <!--{type_error obj="main[ask_title]"}-->
+      </td>
+    </tr>
+    <tr> 
+      <td height="40" align="right">选项：</td>
+      <td height="40" align="left"> 
+       <!--{$radios}-->
+      </td>
+    </tr>
+    <tr> 
+      <td height="40" align="right">排序编号：</td>
+      <td height="40" align="left"><input name="main[ask_order]" type="text" id="main[ask_order]" size="4" value="<!--{$main.ask_order}-->">
+	   <!--{type_error obj="main[ask_order]"}-->
+	  
+	  </td>
+    </tr>
+    <tr> 
+      <td height="40" align="right">&nbsp;</td>
+      <td height="40" align="right"><label> 
+        <input name="main[ask_id]" type="hidden"  value="<!--{$main.ask_id}-->" />
+        <input type="submit" name="button" id="button" value="提交" />
+        </label></td>
+    </tr>
+  </table>
+</form>
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

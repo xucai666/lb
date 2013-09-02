@@ -30,10 +30,7 @@
 	//日志列表
 	function action_list(){	
 		
-		//css	
-		$this->cor_page->fetch_css(array('backend_logs'));
-		
-		//js
+	
 		
 		$this->db->select("a.*",false)->from($this->cor_db->table('log').' as a ')	
 		->like('a.log_user',$this->input->get('log_user'))		

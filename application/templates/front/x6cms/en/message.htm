@@ -1,0 +1,95 @@
+<!--{include file="`$dir_front`/top.htm"}-->
+
+<table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
+  <tr>
+    <td width="246" valign="top">
+     	    <!--{include file="`$dir_front`/left_message.htm"}-->
+ 
+	        <!--{include file="`$dir_front`/left_contact.htm"}-->
+
+	  
+	  
+    <td valign="top"><table width="742" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="3"><img src="<!--{$img_url}-->/daohanhh_09.jpg" width="3" height="28" /></td>
+        <td width="685" style="background:url(<!--{$img_url}-->/daohanhh_11.jpg) repeat-x; padding-left:20px; " class="hong">我要留言</td>
+        <td width="3"><img src="<!--{$img_url}-->/daohanhh_13.jpg" width="3" height="28" /></td>
+      </tr>
+      <tr>
+  <td width="691" colspan="3" ></td>
+      </tr>
+    </table>
+      <table width="742" border="0" cellspacing="0" cellpadding="0" class="bian1">
+        <tr>
+          <td><form id="form1" name="form1" method="post" action="<!--{$site_url}-->/message/save" onsubmit="return validator(this)">
+            <table width="500" border="0" cellspacing="0" cellpadding="0" style="margin-left:43px">
+              <tr>
+                <td width="91" height="40">您的姓名：</td>
+                <td colspan="2"><input name="main[ms_name]" type="text" id="main[ms_name]"  valid="required" errmsg="请输入尊称" style="width:188; height:20px; border:solid 1px #c8c8c8; line-height:20px;"/></td>
+              </tr>
+              <tr>
+                <td height="40">电子邮件：</td>
+                <td colspan="2"><input type="text" name="main[ms_email]" id="email" valid="required|isEmail" errmsg="请输入电子邮件，方便联系|电子邮件地址格式不正确"  /></td>
+              </tr>
+              <tr>
+                <td height="40">留言标题：</td>
+                <td colspan="2"><input type="text" name="main[ms_title]" id="ms_title"  style="width:188; height:20px; border:solid 1px #c8c8c8;line-height:20px;"/></td>
+              </tr>
+              <tr>
+                <td height="40">留言内容：</td>
+                <td colspan="2"><textarea name="main[ms_content]" id="main[ms_content]" cols="45" rows="5" valid="required" errmsg="请输入留言内容"></textarea></td>
+              </tr>
+              <tr>
+                <td height="40">验证码：</td>
+				
+              
+            <td width="125" valign="top">
+			
+			
+	
+             
+				 
+				 
+				 <table cellspacing="0" cellpadding="0">
+                   <tr>
+                     <td><input name="captcha" type="text" id="captcha"   size="10" valid='required' errmsg='请输入验证码'/></td>
+                     <td>&nbsp;</td>
+                     <td>
+					 
+					   <a href="javascript:;"  >
+           		 <img id='captcha1' src='<!--{func_site_url segments="message/show_captcha"}-->'/>            </a>
+            <script language="javascript">
+			$('#captcha1').bind('click',function(){
+				
+				$(this).attr('src','<!--{func_site_url segments="message/show_captcha"}-->/?rnd='+Math.random());
+				
+				
+				})
+				</script>	
+					 </td>
+                   </tr>
+</table>
+				 
+							</td>	
+              </tr>
+              <tr>
+                <td height="44" colspan="3" ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td align="right" width="250"><input type="submit" name="1" id="1" value="提交" style="margin-right:20px;" /></td>
+                            <td><input type="submit" name="2" id="2" value="重置" /></td>
+                          </tr>
+                      </table></td>
+                    </tr>
+                </table></td>
+              </tr>
+            </table>
+                    </form>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--{include file="`$dir_front`/foot.htm"}-->

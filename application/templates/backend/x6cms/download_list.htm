@@ -1,0 +1,115 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<div class="nav_title" align="left" ><!--{$class_info.class_theme}--></div>
+<div  align="right"><a href="<!--{$site_url}-->/backend/download/action_add/?parent_class=<!--{$smarty.get.parent_class}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
+
+<table class="search" >
+<tr>
+<td>
+	<form action="<!--{$site_url}-->/backend/download/action_list/" method="get">
+ 
+ 
+ 
+    <!--{$lang_download.product}-->：
+    <select name="pro_id">
+    <option value=""><!--{$lang_download.select}--></option>
+    <!--{html_options options=$product_options selected=$product_select}-->
+    </select>
+    
+     <!--{$lang_download.title}-->： 
+    <input type="text" name="info_title" value="<!--{$smarty.get.info_title}-->" />
+	<input type="hidden" name="parent_class" value="<!--{$smarty.get.parent_class}-->">
+	<input type="submit" name="submit" value=" <!--{$lang_download.query}-->" />
+	</form>
+
+</td>
+</tr>
+</table>
+
+<div id='download'>
+  <form id="form2" method="post" action="<!--{$site_url}-->/backend/download/action_del/?parent_class=<!--{$smarty.get.parent_class}-->">   
+  
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="mytable">
+  <thead>
+  <tr>
+    <th align="center"><input name="submit" value="<!--{$lang_download.delete}-->" type="submit" onclick="return chkdel2();" />
+    
+    <input type="checkbox" id="chkall"  value="1" onclick="chkall2(this);">
+    </th>
+    <th align="center"><!--{$lang_download.title}-->&nbsp;</th>
+    <th align="center"><!--{$lang_download.product}-->&nbsp;</th>
+    <th align="center"><!--{$lang_download.category}-->&nbsp;</th>
+    <th align="center"><!--{$lang_download.visit}-->&nbsp;</th>
+    
+    <th align="center"><!--{$lang_download.date}-->&nbsp;</th>
+    <th align="center"><!--{$lang_download.operate}-->&nbsp;</th>
+
+
+
+
+  </tr>
+</thead>
+  <!--{foreach from=$list item=item key=key}-->
+    <tr>
+      <td align="center">  <input type="checkbox" class="info_ids"  name="info_id[]" value="<!--{$item.info_id}-->">&nbsp;</td>
+    <td align="left"><!--{$item.info_title}-->&nbsp;</td>
+    <td align="center"> <!--{$item.pro_name}-->    &nbsp;</td>
+    <td align="center"><!--{$item.c_title}-->&nbsp;</td>
+    <td align="center"><!--{$item.info_view}-->&nbsp;</td>
+    <td align="center"><!--{$item.info_date}-->&nbsp;</td>
+
+    <td align="center"> 
+                
+            <a  title=" <!--{$lang_download.view}-->"   href="<!--{$site_url}-->/backend/download/action_add/?info_id=<!--{$item.info_id}-->&parent_class=<!--{$smarty.get.parent_class}-->" > 
+          <img src="<!--{$img_url}-->/mod1.gif" border="0" > </a> 
+          
+          <a  title=" <!--{$lang_download.delete}-->" href="<!--{$site_url}-->/backend/download/action_del/?info_id=<!--{$item.info_id}-->&parent_class=<!--{$smarty.get.parent_class}-->" onclick="return confirm(' <!--{$lang_download.confirm_delete}-->');"> 
+          <img src="<!--{$img_url}-->/del1.gif" border="0" > </a> 
+    
+    </td>
+  </tr>
+  <!--{/foreach}-->
+  
+  
+</table>
+
+  
+  </form>
+
+
+
+
+
+</div>
+<div class="page_link">
+	<!--{$page_link}-->
+</div>
+<script language="JavaScript">
+	overclass($('#download ul'));
+	//全选动作
+	function chkall2(obj){			
+		
+		if($(obj).attr('checked')==true){
+			$('.info_ids').attr('checked',true);			
+		}else{
+			$('.info_ids').attr('checked',false);
+		}
+	
+	}
+	
+	//删除确认
+	function chkdel2(){
+		if($('.info_ids:checked').size()>0){
+			if(confirm('确定删除?')){
+				return true;
+			}else{
+				return false;	
+			}
+			
+		}else{
+			alert('请选择');	
+			return false;
+		}
+	}	
+</script>
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

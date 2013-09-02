@@ -1,0 +1,90 @@
+﻿.mytable {
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-left-style: double;
+	border-top-color: #bad6ec;
+	border-left-color: #bad6ec;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-collapse:collapse;
+	border-spacing:0px;
+	width:100%;
+	margin-top:10px;
+	 table-layout:fixed;
+    word-wrap:break-word; 
+	word-break:break-all;
+	
+}
+
+.mytable td{
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: #ddeffb;
+	border-bottom-color: #ddeffb;
+
+	color:#333333;
+	line-height:25px;
+	
+	vertical-align:middle;
+	height:30px;
+	font-size:14px;
+
+text-overflow:ellipsis;overflow:hidden;white-space: nowrap;padding:2px
+	
+	
+	
+}
+
+.mytable th{
+
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: #ddeffb;
+	border-bottom-color: #ddeffb;
+	color:#333333;
+	line-height:150%;
+	font-size:14px;
+	text-align:center;
+	vertical-align: middle;
+}
+
+.mytable thead{
+background: #fafafa url(../images/fhbg.gif) repeat-x bottom;
+position: relative;
+border: 1px solid #ccc;
+border-bottom: 0px;
+overflow: hidden;
+
+}
+
+.mytable .tr_center td{
+	text-align:center;
+	vertical-align:middle;
+	font-size:14px;
+}
+
+.mytable .tr_center .td_left{
+	text-align:left;
+	vertical-align:middle;
+	font-size:14px;
+}
+
+.mytable .tr_hover{ background-color:#EEF3FD!important;}
+.mytable .tr_over{ background-color:#E8F0FD!important; }
+
+
+
+
+.table_ctl{
+    table-layout:fixed;
+    word-wrap:break-word; 
+	word-break:break-all;
+	
+}
+.table_ctl td{text-overflow:ellipsis;overflow:hidden;white-space: nowrap;padding:2px}
+

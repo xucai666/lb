@@ -119,3 +119,28 @@
 		}
 
 	 }
+
+
+	 if ( ! function_exists('realUrl'))
+	 {
+
+		/**
+		 * url根路径
+		 * @param  string $key  类型，img=>图片,css->样式,js=>脚本,theme=>模板
+		 * @param  string $type front=>前台,backend=>后台
+		 * @return string       
+		 */
+	 	function realUrl($url){
+			if(preg_match("/javascript/",$url)||preg_match("/http/",$url)){
+				$url_new = $url;
+				
+			}elseif(preg_match("/event/",$url)){
+				$url_new = "javascript:;";
+			}else{
+				$url_new = site_url().$url;
+			}
+			return $url_new;
+		}
+
+
+	 }

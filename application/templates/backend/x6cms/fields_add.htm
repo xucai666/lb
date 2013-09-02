@@ -1,0 +1,63 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<fieldset>
+<legend><div class="nav_title"><!--{"fields_fields_manage"|helper:'language':'lang'}--></div></legend>
+
+<form  name="form1" id="form1" method="post" action="<!--{func_site_url segments='backend/fields/action_save'}-->">
+<table>
+	<tr>
+		<td><!--{"fields_field_type"|helper:'language':'lang'}-->：</td>
+		<td>
+			<select name="main[f_type]">
+				<!--{html_options options=$fields_types selected=$main.f_type}-->
+			</select>
+			<!--{php}-->
+				echo form_error("main[f_type]","<span id='error_span'>","</span>");
+			<!--{/php}-->
+		</td>
+		<td></td>
+	</tr>
+
+	<tr>
+		<td><!--{"fields_field_name"|helper:'language':'lang'}-->：</td>
+		<td>
+			<input size="80" type="text" name="main[f_name]" id="main[f_name]" value="<!--{$main.f_name}-->">
+			<!--{php}-->
+				echo form_error("main[f_name]","<span id='error_span'>","</span>");
+			<!--{/php}-->
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><!--{"field_html"|helper:'language':'lang'}-->：</td>
+		<td>
+			<textarea  name="main[f_html]" style="width:800px;height:400px"><!--{$main.f_html|escape:"html"}--></textarea>
+		<!--{php}-->
+				echo form_error("main[f_html]","<span id='error_span'>","</span>");
+		<!--{/php}-->
+		</td>
+		<td></td>
+	</tr>
+	
+	<tr>
+		<td><!--{"fields_field_name"|helper:'language':'lang'}-->：</td>
+		<td>
+			<input type="checkbox" name="f_media" value="1" <!--{if $main.f_media}-->checked<!--{/if}--> onclick='$(this).next().val($(this).prop("checked")==true?1:0);'>
+			<input size="80" type="hidden" name="main[f_media]" id="main[f_media]" value="<!--{$main.f_media}-->">
+			<!--{"main[f_media]"|form_error}-->
+		</td>
+		<td></td>
+	</tr>
+
+
+	
+	<tr>
+		<td colspan="3" align="center">
+		<!--{create_button type='save'}-->
+		<input size="80" type="hidden" name="main[f_id]" value="<!--{$main.f_id}-->">
+	</td></tr>
+
+</table>
+</form>	
+</fieldset>
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

@@ -1,0 +1,79 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<form action="<!--{$site_url}-->/backend/product/action_save" method="post" enctype="multipart/form-data" name="form1" id="form1" onsubmit="return validator(this);">
+  <table border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td  colspan="2" align="left" class="nav_title"><!--{$class_info.class_theme}--></td>
+    </tr>
+    <tr>
+      <td height="40" align="right">
+      <!--{$lang_products.category}-->
+      
+      ：</td>
+      <td height="40">   
+      <select name="main[pro_class_sn]">   
+      <!--{$class_info.class_select}-->
+      </select>
+      &nbsp;</td>
+    </tr>
+    <tr>
+      <td height="40" align="right"> <!--{$lang_products.title}-->：</td>
+      <td height="40"><label>
+        <input name="main[pro_title]" type="text" id="main[pro_title]" size="50" value="<!--{$main.pro_title}-->"  valid='required' errmsg='<!--{$lang_products.inp_title}-->' />
+        <!--{php}-->echo form_error("main[pro_title]"); <!--{/php}-->
+      </label></td>
+    </tr>
+    <tr>
+      <td height="40" align="right"><!--{$lang_products.goods_pic}-->：</td>
+      <td height="40" align="left"><label>
+        <input type="file" name="file1" id="file1" />
+        <input type="hidden" name="main[pro_pic]" id="main[pro_pic]" value="<!--{$main.pro_pic}-->" />
+        
+        
+        
+          </label><br />
+(600px×832px)
+          
+          <!--{if $main.pro_pic}-->
+         <div class="clear"> <img src="<!--{$base_url}-->/<!--{$main.pro_pic}-->" width="120" height="80" /> </div>
+          <!--{/if}-->
+           </td>
+    </tr>
+    <tr>
+      <td height="40" align="right"><!--{$lang_products.order}-->：</td>
+      <td height="40"><label>
+        <input name="main[pro_order]" type="text" id="main[pro_order]" size="12"  value="<!--{$main.pro_order}-->" />
+      </label>
+      <!--{php}-->echo form_error("main[pro_date]"); <!--{/php}-->
+      
+      </td>
+    </tr>
+    
+    
+    <tr>
+      <td height="40" align="right" valign='top'><!--{$lang_products.p_intr}-->：</td>
+      <td height="300" valign='top'>
+        <textarea name="main[pro_content]"  cols="45" rows="5"   errmsg="<!--{$lang_products.inp_content}-->" id="content"   valid="custom" custom="getContentValue"     style="display:none" ><!--{$main.pro_content}--></textarea>
+        <!--{php}-->echo form_error("main[pro_content]"); <!--{/php}-->    
+        <!--{$editor}-->
+          </td>
+    </tr>
+    
+    <tr>
+      <td height="20" align="right">&nbsp;</td>
+      <td height="20" align="right">
+         <input name="main[pro_date]" readonly="readonly" type="hidden" id="main[pro_date]" size="12"  value="<!--{$smarty.now|date_format:"%Y-%m-%d"}-->" class="Wdate" onfocus="WdatePicker();"/>
+        
+        
+        <input name="parent_class" type="hidden" id="parent_class" value="<!--{$class_info.parent_class}-->" />
+        
+        
+        
+        
+        <input name="main[pro_id]" type="hidden"  value="<!--{$main.pro_id}-->" />
+        <input type="hidden" name="op_from" value="<!--{$smarty.get.op_from}-->">
+        <!--{create_button type='save'}-->
+     </td>
+    </tr>
+  </table>
+</form>
+<!--{include file="`$dir_backend`/foot.htm"}-->
