@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 10:21:40
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-02 06:36:59
          compiled from "application\templates\backend\blue\center.htm" */ ?>
-<?php /*%%SmartyHeaderCode:637452220db57aa019-90196776%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:270015224320b3df076-65713270%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '774b00c614ab3096d91e0b8fcc91c562c3e35f4a' => 
     array (
       0 => 'application\\templates\\backend\\blue\\center.htm',
-      1 => 1378030896,
+      1 => 1378081854,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '637452220db57aa019-90196776',
+  'nocache_hash' => '270015224320b3df076-65713270',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52220db5a1be68_59947097',
   'variables' => 
   array (
     'item_lang' => 0,
@@ -35,8 +33,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'weather' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5224320b670e26_82654596',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52220db5a1be68_59947097')) {function content_52220db5a1be68_59947097($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_output_true')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\modifier.output_true.php';
+<?php if ($_valid && !is_callable('content_5224320b670e26_82654596')) {function content_5224320b670e26_82654596($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_output_true')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\modifier.output_true.php';
 if (!is_callable('smarty_function_html_options')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\function.html_options.php';
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <HTML>
@@ -54,7 +54,7 @@ if (!is_callable('smarty_function_html_options')) include 'E:\\phpnow\\htdocs\\l
 $(window).load(function(){
 	$('#menu_0 a:first').trigger('click');
 
-	$("#frmright").load(function(){ 
+	$("#frmleft,#frmright").load(function(){ 
 		var new_height = $(window).height()-65;	
 
 		$(this).height(new_height);

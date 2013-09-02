@@ -446,6 +446,7 @@ function window_back(){
 
 //复选表单全选事件 form：表单名
 function CheckAll(form)  {
+
 	for (var i=0;i<form.elements.length;i++)
 	{
 		var e = form.elements[i];

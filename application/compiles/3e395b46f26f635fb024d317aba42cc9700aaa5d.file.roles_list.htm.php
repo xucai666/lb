@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 00:09:21
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-02 06:37:05
          compiled from "application\templates\backend\blue\roles_list.htm" */ ?>
-<?php /*%%SmartyHeaderCode:17239522285b1bf7d07-01218241%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:926952243211ca2190-30701747%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3e395b46f26f635fb024d317aba42cc9700aaa5d' => 
     array (
       0 => 'application\\templates\\backend\\blue\\roles_list.htm',
-      1 => 1376725642,
+      1 => 1378101686,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '17239522285b1bf7d07-01218241',
+  'nocache_hash' => '926952243211ca2190-30701747',
   'function' => 
   array (
   ),
@@ -25,13 +25,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'list' => 0,
     'v' => 0,
     'key' => 0,
-    'ci_config' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_522285b1eb6f49_44535390',
+  'unifunc' => 'content_52243211da3e90_06556885',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_522285b1eb6f49_44535390')) {function content_522285b1eb6f49_44535390($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_52243211da3e90_06556885')) {function content_52243211da3e90_06556885($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <div class="nav_title" align="left" ><?php echo $_smarty_tpl->tpl_vars['lang_roles']->value['rights_config'];?>
 </div>
@@ -61,8 +60,9 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 		<td ><?php echo $_smarty_tpl->tpl_vars['v']->value['role_name'];?>
 </td>	
 		<td>
-		<?php if ($_smarty_tpl->tpl_vars['key']->value!=$_smarty_tpl->tpl_vars['ci_config']->value['admin_role_id']){?>
 		
+		<?php if ($_smarty_tpl->tpl_vars['key']->value!=config_item("admin_role_id")){?>
+
 			<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
  
 			

@@ -142,8 +142,7 @@ if ( ! function_exists('anchor'))
 {
 	function anchor($uri = '', $title = '', $attributes = '')
 	{
-		$title = (string) $title;
-
+		
 		if ( ! is_array($uri))
 		{
 			$site_url = ( ! preg_match('!^\w+://! i', $uri)) ? site_url($uri) : $uri;

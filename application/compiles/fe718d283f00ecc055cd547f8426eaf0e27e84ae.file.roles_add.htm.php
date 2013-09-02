@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 00:19:01
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-02 07:00:01
          compiled from "application\templates\backend\blue\roles_add.htm" */ ?>
-<?php /*%%SmartyHeaderCode:24132522285b3962000-31142525%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1658652243213d09207-96980499%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'fe718d283f00ecc055cd547f8426eaf0e27e84ae' => 
     array (
       0 => 'application\\templates\\backend\\blue\\roles_add.htm',
-      1 => 1377994731,
+      1 => 1378105199,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '24132522285b3962000-31142525',
+  'nocache_hash' => '1658652243213d09207-96980499',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_522285b3ca56f5_21416608',
+  'unifunc' => 'content_52243213dc3807_92865079',
   'variables' => 
   array (
     'dir_backend' => 0,
@@ -27,7 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_522285b3ca56f5_21416608')) {function content_522285b3ca56f5_21416608($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_52243213dc3807_92865079')) {function content_52243213dc3807_92865079($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
 <fieldset>
@@ -59,7 +59,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </tr>
 <tr><td width="94" align="left"></td><td class="td_left">
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="check_all" id="check_all" onclick="checkAll();" ><?php echo $_smarty_tpl->tpl_vars['lang_roles']->value['select_all'];?>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="chkall" id="chkall" onclick="CheckAll(this.form);" ><?php echo $_smarty_tpl->tpl_vars['lang_roles']->value['select_all'];?>
 </td></tr>
 
 

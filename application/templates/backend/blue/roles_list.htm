@@ -14,8 +14,9 @@
 	<tr class="tr_center">
 		<td ><!--{$v.role_name}--></td>	
 		<td>
-		<!--{if $key!=$ci_config.admin_role_id }-->
 		
+		<!--{if $key!=config_item("admin_role_id") }-->
+
 			<!--{php}--> 
 			
 			\$attrs  = array(

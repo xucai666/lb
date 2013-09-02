@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-01 00:09:27
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-02 07:00:08
          compiled from "application\templates\backend\blue\admins_list.htm" */ ?>
-<?php /*%%SmartyHeaderCode:19071522285b7a87b84-09647129%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2557452243778adf114-78304703%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0ce86143f271a0c47f89b1f194d8300707ce1642' => 
     array (
       0 => 'application\\templates\\backend\\blue\\admins_list.htm',
-      1 => 1376725480,
+      1 => 1378102845,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '19071522285b7a87b84-09647129',
+  'nocache_hash' => '2557452243778adf114-78304703',
   'function' => 
   array (
   ),
@@ -30,11 +30,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_522285b7da0f88_86311061',
+  'unifunc' => 'content_52243778cbeca7_42911330',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_522285b7da0f88_86311061')) {function content_522285b7da0f88_86311061($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_52243778cbeca7_42911330')) {function content_52243778cbeca7_42911330($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
-<div class="mytheme1" align="left" ><?php echo $_smarty_tpl->tpl_vars['lang_admins']->value['theme_manage'];?>
+<div class="nav_title" align="left" ><?php echo $_smarty_tpl->tpl_vars['lang_admins']->value['theme_manage'];?>
 </div>
 
 <?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>

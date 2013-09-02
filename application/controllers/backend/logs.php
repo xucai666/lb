@@ -40,7 +40,7 @@
 		->like('a.log_type',$this->input->get('log_type'))		
 		->order_by("log_id","desc");
 		$this->input->get('log_date') && $this->db->like('a.log_date',$this->input->get('log_date'),'after');
-		$data = $this->cor_db->fetch_all();	
+		$data = $this->cor_db->fetch_all(100);	
 		$cache_log_types = $this->cor_cache->cache_fetch("log_types");
 		foreach($data['list'] as &$v){
 			$v['log_type_str'] = $cache_log_types[$v['log_type']];
@@ -65,7 +65,7 @@
 			}
 			$this->db->where_in("log_id",$ids);
 			$this->db->delete($this->cor_db->table('log'));
-			$this->cor_page->backend_redirect('logs/action_list',$this->m_lang['del_ok']);
+			$this->cor_page->backend_redirect('logs/action_list');
 			
 		}catch(Exception $e){
 	 		$this->cor_page->backend_redirect('logs/action_list',$e->getMessage());

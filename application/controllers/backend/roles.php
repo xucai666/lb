@@ -18,7 +18,6 @@
  		parent::__construct();
  		//验证登陆
 		$this->cor_auth->execute_auth();
- 		$this->cor_page->fetch_js('roles_add','loadview',$this->cor_page->getRes('js','backend').'/item/');
  		$this->cor_page->fetch_css('rights','loadview',$this->cor_page->getRes('css','backend'));
  		$this->load->model('Roles_model');
  		$this->im = $this->Roles_model;
@@ -41,9 +40,10 @@
  	function action_add(){ 
  		try{
  			
-	 		
 	 		$main_id = $this->uri->segment(4); 	  		
-	 		if($main_id) { 		
+	 		if($main_id) { 
+		 		//验证权限
+		 		$this->cor_auth->execute_auth(array('35,28,29,118')) ;
 	 			$role_select_config  = array(
 		 			'primary_id'=>'role_id',
 		 			'primary_val'=>$main_id,
@@ -53,6 +53,8 @@
 	 			$this->ds->_reset_select();
 	 			$rights_have = unserialize($main_info['rights']);	
 	 		}else{
+	 			//验证权限
+		 		$this->cor_auth->execute_auth(array('35,28,29,117')) ;
 	 			//添加
 				$main_info = array(
 					'group_id'=>3,				
@@ -64,13 +66,13 @@
 					if($item['detail']){
 						$param_key =  $parent_key?$parent_key.'[detail]'.'['.$key.']':'['.$key.']';
 						$func_return = recursion_rights($item['detail'],$rights_have,$param_key);
-						$detail_string .= "<li class='fir'><em>".$key.".".$item['r_title']."</em></li>".'<li class="fir"><ul class="sec">'.$func_return['detail_string'].'</ul></li>';
+						$detail_string .= "<li class='fir'><em>".$item['r_title']."</em></li>".'<li class="fir"><ul class="sec">'.$func_return['detail_string'].'</ul></li>';
 					}else{
 						$input_key =  $parent_key .'[detail]'.'['.$key.']';
 						$var_str = 'isset($rights_have'.$input_key.')';
 						 eval("\$val = $var_str;");
 						$checked = $val ? "checked=checked":''; 
-						$detail_string .= "<li class='fir' ><input type='checkbox' ".$checked." id='rights' name='admin".$input_key."' value='1'>".$key.$item['r_title']."</li>";
+						$detail_string .= "<li class='fir'  ><input type='checkbox' ".$checked." id='rights_".$key."' name='admin".$input_key."' value='1'  ><label for='rights_".$key."' rel='".str_replace(array('[detail]','[',']'), array(',',''), $parent_key.','.$key)."'>".$item['r_title']."</label></li>";
 					} 
 				endforeach;
 				
@@ -99,6 +101,7 @@
  	function action_save(){
  		try{ 			
 	 		$main = $this->input->post('main'); 
+
 	 		$main['rights'] = serialize($this->input->post('admin'));
 	 		$db_config = array('main'=>array('primary_key'=>'role_id','table_name'=>$this->cor_db->table('roles')));			
  			
@@ -148,6 +151,8 @@
  	 */
  	function action_del(){
  		try{
+ 			//验证权限
+		 	$this->cor_auth->execute_auth(array('35,28,29,119')) ;
  			$rs = $this->cor_db->delete($this->uri->segment(4),$this->im->db_config());
  			//-------------添加日志
  			$cf = $this->im->db_config();

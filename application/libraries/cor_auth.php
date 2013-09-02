@@ -36,17 +36,25 @@
 		    $db_rights =  $CI->db->query($sql)->first_row("array");
 		    if($db_rights['role_id'] == config_item('admin_role_id')) return true;
 		    $righs = $this->fetch_auth('user_rights');
-		    if(strpos($auth,',')!==false){
-		    	$auth = '$righs['.str_replace(',','][detail][',$auth).']';
+	   		$flag = false;
+	   		foreach((array)$auth as $a){
+	   			 if(strpos($a,',')!==false){
+	    				$r = '$righs['.str_replace(',','][detail][',$a).']';
 		    	
-		    }else{
-		    	$auth = '$righs['.$auth.']';
-		    }
- 			eval("\$flag=$auth;");
-			if(!$flag){
-				$CI->cor_page->backend_redirect('javascript:history.back(1);','抱歉，无此权限');	
-				
+				    }else{
+				    	$r = '$righs['.$a.']';
+				    }
+
+
+				 
+		 			eval("\$flag=isset($r)?$r:0;");
+		 		
+					
+	   		}
+	   		if(!$flag){
+						$CI->cor_page->backend_redirect('javascript:history.back(1);','抱歉，无此权限');	
 			}
+
 		endif;
  	}	
  	
@@ -109,7 +117,6 @@
  	 	$auth_info =  array(
  			'user_name'=>get_cookie('user_name'),
  			'user_id'=>$uid,
- 			//'user_rights'=>unserialize(get_cookie('user_rights')), //cookie获取权限
  			'user_rights'=>unserialize($db_rights['rights']), //数据库获取权限
  			
  		); 
@@ -145,12 +152,13 @@
  		$CI = &get_instance();
  		 if($role_id == config_item('admin_role_id')) unset($role_id);
  		 $rights_all = $this->get_rights_item();
+ 		 
  		 $have_rights = $this->fetch_auth('user_rights');
  		
  		 $uid = $this->fetch_auth('user_id');
  		 $sql = "select b.group_id from   ".$CI->db->dbprefix."admins  as b where b.admin_id=".$uid." ";
 		 $db_rights =  $CI->db->query($sql)->first_row("array");
-				
+		
 		//administrator
 		 if($db_rights['group_id'] == config_item('admin_role_id')){
 
@@ -205,8 +213,56 @@
  			
  			
  		}
+	   //other users
+		$admins = $rights_all['admin'];
 
- 		array_multisort($sort,SORT_ASC,$r);
+		
+
+		foreach($have_rights as $k=>$v){
+		    $rs = $admins[$k];
+		    $sort[$k] = $rs['r_order'];
+		    unset($rs['detail']);
+			$r[$k] = $rs;
+
+			$sort1 = array();
+			foreach((array)$v['detail'] as $k1=>$v1){
+				 $rs = $admins[$k]['detail'][$k1];
+				 if(empty($rs)) continue;
+				 $sort1[$k1] = $rs['r_order'];
+			     unset($rs['detail']);
+				 $r[$k]['detail'][$k1] = $rs;
+
+				 $sort2 = array();
+				 foreach((array)$v1['detail'] as $k2=>$v2){
+					 $rs = $admins[$k]['detail'][$k1]['detail'][$k2];
+					 if(empty($rs)) continue;
+					 $sort2[$k2] = $rs['r_order'];
+				     unset($rs['detail']);
+				     $r[$k]['detail'][$k1]['detail'][$k2] = $rs;
+
+				     $sort3 = array();
+				     foreach((array)$v2['detail'] as $k3=>$v3){
+						 $rs = $admins[$k]['detail'][$k1]['detail'][$k2]['detail'][$k3];
+						 if(empty($rs)) continue;
+						 $sort3[$k3] = $rs['r_order'];
+
+					     unset($rs['detail']);
+
+					     $r[$k]['detail'][$k1]['detail'][$k2]['detail'][$k3] = $rs;
+					 }
+					 $sort3 &&  array_multisort($sort3,SORT_ASC,$r[$k]['detail'][$k1]['detail'][$k2]['detail']);
+				 }
+				
+				$sort2 &&  array_multisort($sort2,SORT_ASC,$r[$k]['detail'][$k1]['detail']);
+
+			}
+			
+			array_multisort($sort1,SORT_ASC,$r[$k]['detail']);
+			
+		}
+		
+	
+		array_multisort($sort,SORT_ASC,$r);
 		return $r;
  	}
 
@@ -283,7 +339,8 @@
  			$CI->db->select('*')->from('system_rights')->order_by('r_code','asc')->order_by('r_order','asc');
 
 	   		$data = $CI->cor_db->fetch_all(250);
-
+	   		$ls = $CI->cor_form->array_re_index($data['list'],'r_id');
+	   		$data['list'] = $ls;
 	   		$CI->cor_cache->cache_create($data,'admin_rights_config');
  		}
 

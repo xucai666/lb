@@ -60,6 +60,7 @@
 
 			$main['checked'] = "checked=checked";
 			$main['r_pid'] =  $this->input->get('pid');
+			
 		}
 		//parent menu	
  		$db_menus = $this->cor_auth->getAuthMenu();

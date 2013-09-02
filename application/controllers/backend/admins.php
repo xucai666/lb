@@ -38,10 +38,10 @@
 	 * @return [type] [description]
 	 */
  	function action_add(){ 	
- 		//验证权限
- 		$this->cor_auth->execute_auth('35,28,31');	
  		$main_id = $this->uri->segment(4); 	  		
  		if($main_id) { 		
+	 		//验证权限
+	 		$this->cor_auth->execute_auth(array('35,28,32,121')) ;	
  			$admin_select_config  = array(
 	 			'primary_id'=>'admin_id',
 	 			'primary_val'=>$main_id,
@@ -49,6 +49,8 @@
  			);
  			$main_info = $this->cor_db->fetch_one($admin_select_config); 	
  		}else{
+	 		//验证权限
+	 		$this->cor_auth->execute_auth(array('35,28,32,120')) ;	
  			//添加
 			$main_info = array(
 				'group_id'=>3,				
@@ -192,7 +194,7 @@
  		try{
  			$this->load->model('Logs_model');	
  			//验证权限
- 			$this->cor_auth->execute_auth('35,28,34');
+	 		$this->cor_auth->execute_auth(array('35,28,32,122')) ;	
 
  			$rs = $this->cor_db->delete($this->uri->segment(4),$this->im->db_config());
 
