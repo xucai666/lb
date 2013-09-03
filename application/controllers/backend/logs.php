@@ -69,5 +69,27 @@
 	 	}	
 		
 	}
+
+	function action_login_log(){
+			$this->db->select('*',false)->from('log_login')->like('login_user',$this->input->get('login_user'))->like('login_time',$this->input->get('login_time'))->order_by('login_id','desc');
+			$data = $this->cor_db->fetch_all(15);
+			$this->cor_page->load_backend_view("logs_login_list",$data);
+	}
+
+	function action_login_del(){
+		try{
+			$ids = $this->input->post('login_ids');
+			if(empty($ids)){				
+				throw new Exception($this->m_lang['unselect']);
+			}
+			$this->db->where_in("login_id",$ids);
+			$this->db->delete($this->cor_db->table('log_login'));
+			$this->cor_page->backend_redirect('logs/action_login_log');
+			
+		}catch(Exception $e){
+	 		$this->cor_page->backend_redirect('logs/action_login_log',$e->getMessage());
+	 	}	
+
+	}
 }
 ?>

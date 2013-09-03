@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-03 03:57:57
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-03 15:50:40
          compiled from "application\templates\backend\corcms\top.htm" */ ?>
-<?php /*%%SmartyHeaderCode:1705252255e45186a09-42035663%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:884852260550a79cf9-07408228%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1705252255e45186a09-42035663',
+  'nocache_hash' => '884852260550a79cf9-07408228',
   'function' => 
   array (
   ),
@@ -23,9 +23,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52255e4519ef31_11713359',
+  'unifunc' => 'content_52260550a92892_24245488',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52255e4519ef31_11713359')) {function content_52255e4519ef31_11713359($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_52260550a92892_24245488')) {function content_52260550a92892_24245488($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 

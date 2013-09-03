@@ -349,6 +349,12 @@ class Modules_model extends CI_Model{
 			$this->db->query("ALTER TABLE  `".$this->db->dbprefix.$sub_table."` ADD  `".$primary."` INT ");
 		}
 	}
+
+
+	function stat(){
+
+		//$this->db->select();
+	}
 }
 
 

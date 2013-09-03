@@ -68,6 +68,13 @@
 		
 		
 	}
+
+
+	function last_login(){
+		$stat = $this->db->from('log_login')->where('login_user',$this->cor_auth->fetch_auth('user_name'))->count_all_results();
+		$last = $this->db->select('*',false)->from('log_login')->where('login_user',$this->cor_auth->fetch_auth('user_name'))->order_by('login_id','desc')->limit(1,1)->get()->first_row('array');
+		return array('last'=>$last,'stat'=>$stat);
+	}
 	
 	
 	

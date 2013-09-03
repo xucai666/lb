@@ -73,9 +73,8 @@
                    'path'   => '/',
                ); 
        	
-           set_cookie($cookie);   
-          
- 			
+            set_cookie($cookie);  
+            
  		}
  		
  		//for ck editor
@@ -89,8 +88,16 @@
                ); 
        	
         set_cookie($cookie);   
- 		
- 		
+
+        //add login log
+    	$CI = &get_instance();
+		    $data = array(
+ 		   	'login_ip'=>$CI->input->ip_address(),
+ 		   	'login_client'=>$CI->input->user_agent(),
+ 		   	'login_user'=>$session_data['user_name'],
+ 		   	'login_time'=>date('Y-m-d H:i:s'),
+		    );
+	    $CI->db->insert('log_login',$data);
  	} 
  	
  	/**

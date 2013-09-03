@@ -1,0 +1,78 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+<div class="nav_title" align="left" >&nbsp;<!--{$lang_log.theme_list}--></div>
+
+<table class="search"   style="width:100%">
+<tr><td>
+	<form action="<!--{$site_url}-->/backend/logs/action_login_log/" method="get">   
+    <!--{$lang_log.operator}-->：
+        <input type="text" name="login_user" value="<!--{$smarty.get.login_user}-->" />
+
+    <!--{$lang_log.module_name}-->：
+    
+    
+  
+    <!--{$lang_log.date}-->：
+        <input type="text" name="login_time" size="10" readonly="readonly" onclick="WdatePicker()" class="Wdate" value="<!--{$smarty.get.login_time}-->" />      
+        
+
+        <!--{create_button type='search'}-->
+	</form>
+
+</td>
+</tr>
+</table>
+<br />
+
+
+<form id="form1" name="form1" method="post" action="<!--{$site_url}-->/backend/logs/action_login_del">
+
+
+<table width="100%" class="mytable" >
+  <thead>
+<tr>
+ 
+  <th>
+    <input type="checkbox" onclick="$('.login_ids').prop('checked',$(this).prop('checked'));" />
+    <!--{create_button type='delete'}--></th>
+   <th>编号</th>
+  <th><!--{$lang_log.operator}--></th>
+  <th>登陆时间</th>
+  <th>浏览器</th>
+  <th>IP</th>
+  </tr>
+</thead>
+   
+  <!--{foreach from=$list item=item key=key}-->
+  <tr>
+     
+    <td align="center"><label>
+      <input name="login_ids[]" type="checkbox" id="login_ids" class="login_ids" value="<!--{$item.login_id}-->" />
+    </label></td>
+    <td align="center"><!--{$item.login_id}-->&nbsp;</td>
+    <td align="center"><!--{$item.login_user}-->&nbsp;</td>
+    <td align="center"><!--{$item.login_time}-->&nbsp;</td>
+    <td align="left"><!--{$item.login_client}-->&nbsp;</td>
+    <td align="center"><!--{$item.login_ip}-->&nbsp;</td>
+  </tr>
+
+
+
+<!--{/foreach}-->
+</table>
+
+<div align="center">
+  <label>
+  
+
+  </label>
+</div>
+
+</form>
+<div class="page_link">
+	<!--{$page_link}-->
+</div>
+<script language="JavaScript">
+	overclass($('#archives ul'));
+</script>
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

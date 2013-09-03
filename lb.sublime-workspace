@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"se",
+				"session_data"
+			],
+			[
 				"base",
 				"base64_encode"
 			],
@@ -103,7 +107,7 @@
 			"file": "application/templates/backend/corcms/adminindex.htm",
 			"settings":
 			{
-				"buffer_size": 1895,
+				"buffer_size": 2003,
 				"line_ending": "Windows"
 			}
 		},
@@ -111,15 +115,23 @@
 			"file": "application/controllers/backend/login.php",
 			"settings":
 			{
-				"buffer_size": 6660,
+				"buffer_size": 6755,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/templates/backend/corcms/main_top.htm",
+			"file": "application/models/mdata_model.php",
 			"settings":
 			{
-				"buffer_size": 2536,
+				"buffer_size": 4890,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/models/modules_model.php",
+			"settings":
+			{
+				"buffer_size": 9425,
 				"line_ending": "Windows"
 			}
 		}
@@ -127,7 +139,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 52.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
@@ -172,11 +184,20 @@
 	},
 	"file_history":
 	[
+		"/E/phpnow/htdocs/lb/application/controllers/backend/login.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/main_top.htm",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/logs.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/logs_login_list.htm",
+		"/E/phpnow/htdocs/lb/application/models/logs_model.php",
 		"/E/phpnow/htdocs/lb/application/helpers/auth_helper.php.dump",
+		"/E/phpnow/htdocs/lb/system/database/DB_active_rec.php",
+		"/E/phpnow/htdocs/lb/application/libraries/cor_auth.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/logs_list.htm",
+		"/E/phpnow/htdocs/lb/application/libraries/cor_db.php",
+		"/E/phpnow/htdocs/lb/system/core/Input.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/main_index.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/main_center.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/main_foot.htm",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/login.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/adminindex.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/css/backend_style.css",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/mdata.php",
@@ -207,7 +228,6 @@
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/table.css",
 		"/E/phpnow/htdocs/lb/application/config/config.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/core.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/main_top.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/mdata_add.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/mdata_add.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/center.htm",
@@ -291,15 +311,7 @@
 		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/about_news.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/about_news22.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/business_archives.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/business_left_menu.html",
-		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/detail.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/download.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/download_list.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/download_view.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/engage_apply2.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/jiamen.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/jiamen_archives.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/jiamen_ask.htm"
+		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/business_left_menu.html"
 	],
 	"find":
 	{
@@ -307,7 +319,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"E:\\phpnow\\htdocs\\lb\\application\\templates,*.htm",
@@ -362,6 +374,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"stat",
+			"最后",
+			"process_login",
+			"log_",
+			"log_date",
+			"log_user",
+			"$this",
+			"center",
 			"?>",
 			"<?=",
 			"help",
@@ -481,15 +501,7 @@
 			"backend_view",
 			"http://localhost/x6cms/images/",
 			"http://localhost/x6cms/css/",
-			"http://localhost/x6cms/js/",
-			"http://localhost/x6cms/images/",
-			"http://localhost/x6cms/",
-			"http://localhost/x6cms/css/",
-			"http://localhost/x6cms/js/",
-			"front_view",
-			"js_url",
-			"site_url",
-			"js_url"
+			"http://localhost/x6cms/js/"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -513,7 +525,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -521,15 +533,15 @@
 					"file": "application/templates/backend/corcms/adminindex.htm",
 					"settings":
 					{
-						"buffer_size": 1895,
+						"buffer_size": 2003,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								881,
-								881
+								1688,
+								1689
 							]
 						],
 						"settings":
@@ -537,7 +549,7 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 216.0,
+						"translation.y": 378.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -547,15 +559,15 @@
 					"file": "application/controllers/backend/login.php",
 					"settings":
 					{
-						"buffer_size": 6660,
+						"buffer_size": 6755,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6289,
-								6289
+								6755,
+								6755
 							]
 						],
 						"settings":
@@ -564,34 +576,61 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3750.0,
+						"translation.y": 3973.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "application/templates/backend/corcms/main_top.htm",
+					"file": "application/models/mdata_model.php",
 					"settings":
 					{
-						"buffer_size": 2536,
+						"buffer_size": 4890,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								998,
-								1027
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 34.0,
+						"translation.y": 810.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "application/models/modules_model.php",
+					"settings":
+					{
+						"buffer_size": 9425,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9416,
+								9416
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6061.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -641,12 +680,40 @@
 		"selected_items":
 		[
 			[
-				"main_top",
-				"application/templates/backend/corcms/main_top.htm"
+				"module_mode",
+				"application/models/modules_model.php"
+			],
+			[
+				"mdata_mode",
+				"application/models/mdata_model.php"
 			],
 			[
 				"login.php",
 				"application/controllers/backend/login.php"
+			],
+			[
+				"adminindex",
+				"application/templates/backend/corcms/adminindex.htm"
+			],
+			[
+				"logs_mod",
+				"application/models/logs_model.php"
+			],
+			[
+				"logs_login_list",
+				"application/templates/backend/corcms/logs_login_list.htm"
+			],
+			[
+				"log_list",
+				"application/templates/backend/corcms/logs_list.htm"
+			],
+			[
+				"log.",
+				"application/controllers/backend/logs.php"
+			],
+			[
+				"main_top",
+				"application/templates/backend/corcms/main_top.htm"
 			],
 			[
 				"main_inde",
@@ -1123,34 +1190,6 @@
 			[
 				"mdata_model",
 				"application/models/mdata_model.php"
-			],
-			[
-				"mdata_mode",
-				"application/models/mdata_model.php"
-			],
-			[
-				"mdata_view",
-				"application/templates/backend/blue/mdata_view.htm"
-			],
-			[
-				"enage.php",
-				"application/controllers/front/engage.php"
-			],
-			[
-				"engage.htm",
-				"application/templates/front/blue/zh/engage.htm"
-			],
-			[
-				"enage",
-				"application/templates/front/blue/zh/engage.htm"
-			],
-			[
-				"product_view",
-				"application/templates/front/blue/zh/product_view.htm"
-			],
-			[
-				"prouct.htm",
-				"application/templates/front/blue/zh/product.htm"
 			]
 		],
 		"width": 0.0
