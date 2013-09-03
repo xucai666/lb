@@ -99,6 +99,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "application/templates/backend/corcms/adminindex.htm",
+			"settings":
+			{
+				"buffer_size": 1895,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/controllers/backend/login.php",
+			"settings":
+			{
+				"buffer_size": 6660,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/templates/backend/corcms/main_top.htm",
+			"settings":
+			{
+				"buffer_size": 2536,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -148,6 +172,16 @@
 	},
 	"file_history":
 	[
+		"/E/phpnow/htdocs/lb/application/helpers/auth_helper.php.dump",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/main_index.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/main_center.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/main_foot.htm",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/login.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/adminindex.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/css/backend_style.css",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/mdata.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/mdata_list.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jquery.fixheadertable.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/dynamic.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/product.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/dynamic.htm",
@@ -155,7 +189,6 @@
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/dynamic.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/dynamic.htm",
 		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
-		"/E/phpnow/htdocs/lb/application/helpers/auth_helper.php.dump",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/left_archive.htm",
 		"/E/phpnow/htdocs/lb/application/helpers/auth_helper.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/dynamic_view.htm",
@@ -165,7 +198,6 @@
 		"/E/phpnow/htdocs/lb/application/controllers/front/about.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/about.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/templates_add.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/css/backend_style.css",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/css/templates.css",
 		"/E/phpnow/htdocs/lb/ckeditor/plugins/templates/dialogs/templates.css",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/templates.php",
@@ -176,11 +208,9 @@
 		"/E/phpnow/htdocs/lb/application/config/config.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/core.js",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/main_top.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/mdata_list.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/mdata_add.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/mdata_add.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/center.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/main_index.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/roles_add.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/roles_add.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/main_foot.htm",
@@ -188,7 +218,6 @@
 		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/main_index.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/main_top.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/center.htm",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/login.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/x6cms/frame_right.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/frame_left.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/blue/frame_right.htm",
@@ -270,12 +299,7 @@
 		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/engage_apply2.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/jiamen.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/jiamen_archives.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/jiamen_ask.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/jiamen_ask_zone.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/logs.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/search_comm_add.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/search_comm_detail.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/search_ecman.htm"
+		"/E/phpnow/htdocs/lb/application/templates/front/x6cms/zh/jiamen_ask.htm"
 	],
 	"find":
 	{
@@ -286,6 +310,10 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"E:\\phpnow\\htdocs\\lb\\application\\templates,*.htm",
+			"E:\\phpnow\\htdocs\\lb\\application\\templates",
+			"E:\\phpnow\\htdocs\\lb\\application\\templates,*.htm",
+			"E:\\phpnow\\htdocs\\lb\\application\\templates",
 			"E:\\phpnow\\htdocs\\lb\\application\\templates,*.htm",
 			"E:\\phpnow\\htdocs\\lb\\application\\templates",
 			"E:\\phpnow\\htdocs\\lb\\application\\templates,*.htm",
@@ -334,6 +362,24 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"?>",
+			"<?=",
+			"help",
+			"_bdhmProtocol",
+			"<title>Cor.CMS - Conqweal</title>",
+			"h.js",
+			".css",
+			".js",
+			"http://localhost/x6cms/images/",
+			".js",
+			"zh_cn.js",
+			"baidu",
+			"h.js",
+			"http://localhost/x6cms/css/",
+			"http://localhost/x6cms/js/",
+			"js",
+			"action_list",
+			"search",
 			"base64_decode",
 			"base64_encode",
 			"cor_base64_encode",
@@ -443,25 +489,7 @@
 			"front_view",
 			"js_url",
 			"site_url",
-			"js_url",
-			"//",
-			"http://localhost/x6cms/index.php?/admin/main",
-			"site_url",
-			"frmright",
-			"frmleft",
-			"iframe",
-			"frmleft",
-			"theme",
-			"lb",
-			"zh",
-			"recursion_rights",
-			"rights_options",
-			"action_list",
-			"CheckAll",
-			"chheckall",
-			"checkAll();",
-			"checkAll",
-			"rights_options"
+			"js_url"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -485,8 +513,89 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "application/templates/backend/corcms/adminindex.htm",
+					"settings":
+					{
+						"buffer_size": 1895,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								881,
+								881
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 216.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "application/controllers/backend/login.php",
+					"settings":
+					{
+						"buffer_size": 6660,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6289,
+								6289
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3750.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "application/templates/backend/corcms/main_top.htm",
+					"settings":
+					{
+						"buffer_size": 2536,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								998,
+								1027
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 34.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -531,6 +640,46 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"main_top",
+				"application/templates/backend/corcms/main_top.htm"
+			],
+			[
+				"login.php",
+				"application/controllers/backend/login.php"
+			],
+			[
+				"main_inde",
+				"application/templates/backend/corcms/main_index.htm"
+			],
+			[
+				"main",
+				"application/templates/backend/corcms/main_center.htm"
+			],
+			[
+				"main_index",
+				"application/templates/backend/corcms/main_index.htm"
+			],
+			[
+				"adminindex.htm",
+				"application/templates/backend/corcms/adminindex.htm"
+			],
+			[
+				"mdata.php",
+				"application/controllers/backend/mdata.php"
+			],
+			[
+				"backend_ty",
+				"application/templates/backend/corcms/css/backend_style.css"
+			],
+			[
+				"mdata_list",
+				"application/templates/backend/corcms/mdata_list.htm"
+			],
+			[
+				"backend_style",
+				"application/templates/backend/corcms/css/backend_style.css"
+			],
 			[
 				"left_archive",
 				"application/templates/front/corcms/zh/left_archive.htm"
@@ -588,10 +737,6 @@
 				"application/templates/backend/corcms/templates_add.htm"
 			],
 			[
-				"backend_style",
-				"application/templates/backend/corcms/css/backend_style.css"
-			],
-			[
 				"backend_st",
 				"application/templates/backend/corcms/css/backend_style.css"
 			],
@@ -636,14 +781,6 @@
 				"application/templates/backend/corcms/js/core.js"
 			],
 			[
-				"main_top",
-				"application/templates/backend/corcms/main_top.htm"
-			],
-			[
-				"mdata_list",
-				"application/templates/backend/corcms/mdata_list.htm"
-			],
-			[
 				"mdataadd",
 				"application/templates/backend/corcms/mdata_add.htm"
 			],
@@ -654,10 +791,6 @@
 			[
 				"center.ht",
 				"application/templates/backend/corcms/center.htm"
-			],
-			[
-				"main_index",
-				"application/templates/backend/corcms/main_index.htm"
 			],
 			[
 				"role_add",
@@ -672,10 +805,6 @@
 				"application/templates/backend/x6cms/main_foot.htm"
 			],
 			[
-				"main_inde",
-				"application/templates/backend/x6cms/main_index.htm"
-			],
-			[
 				"frame",
 				"application/templates/backend/x6cms/frame_right.htm"
 			],
@@ -688,10 +817,6 @@
 				"application/templates/backend/blue/frame_right.htm"
 			],
 			[
-				"login.php",
-				"application/controllers/backend/login.php"
-			],
-			[
 				"cor_page",
 				"application/libraries/cor_page.php"
 			],
@@ -702,10 +827,6 @@
 			[
 				"main_lef",
 				"application/templates/backend/x6cms/main_left.htm"
-			],
-			[
-				"mdata.php",
-				"application/controllers/backend/mdata.php"
 			],
 			[
 				"adminpub",
@@ -1030,18 +1151,6 @@
 			[
 				"prouct.htm",
 				"application/templates/front/blue/zh/product.htm"
-			],
-			[
-				"jqf",
-				"application/templates/backend/blue/js/jqFancyTransitions.1.8.js"
-			],
-			[
-				"common",
-				"application/controllers/backend/common.php"
-			],
-			[
-				"comon_o",
-				"application/models/common_model.php"
 			]
 		],
 		"width": 0.0

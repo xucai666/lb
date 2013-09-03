@@ -229,6 +229,7 @@ class Login extends CI_Controller {
  	}
 
  	function adminindex(){
+ 		$data['user_info'] = $this->cor_auth->db_user();
  		$this->cor_page->load_backend_view("adminindex",$data);
  	}
  	
