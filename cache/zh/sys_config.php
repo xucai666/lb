@@ -15,7 +15,7 @@
   ),
   'develop' => 
   array (
-    'template' => 'x6cms',
+    'template' => 'corcms',
     'time_page_redirect' => '2000',
   ),
 );?>

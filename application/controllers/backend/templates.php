@@ -120,12 +120,12 @@ class Templates extends CI_Controller {
        * @return [type] [description]
        */
        function action_view(){
-         $this->cor_page->fetch_css('shCoreDefault','view',base_url("syntaxhighlighter_3.0.83/styles/"));
-          $this->cor_page->fetch_js('shCore','view',base_url("syntaxhighlighter_3.0.83/scripts/"));
-          $this->cor_page->fetch_js('shBrushPhp','view',base_url("syntaxhighlighter_3.0.83/scripts/"));
+         $this->cor_page->fetch_css('syntaxhighlighter_3.0.83/styles/shCoreDefault','view',base_url());
+         $this->cor_page->fetch_js('syntaxhighlighter_3.0.83/scripts/shCore','view',base_url());
+         $this->cor_page->fetch_js('syntaxhighlighter_3.0.83/scripts/shBrushPhp','view',base_url());
 
-         $this->cor_page->fetch_css('templates','view',$this->cor_page->getRes('css','backend','item/'));
-         $this->cor_page->fetch_js('templates','view',$this->cor_page->getRes('js','backend','item/'));
+         $this->cor_page->fetch_css('item/templates','view',getRootUrl('css','backend'));
+         $this->cor_page->fetch_js('item/templates','view',getRootUrl('js','backend'));
          $main_id = $this->uri->segment(4);
           $fetch_config  = array(
             'primary_id'=>'t_id',

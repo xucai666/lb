@@ -267,10 +267,12 @@ function create_button($array){
 	$CI = & get_instance();
 	$title = lang('button_'.$type);
 	if($url){
-		if(strpos($url, 'javascript')!==false || strpos($url, 'http:')!==false){
-			$html = '<a href="'.$url.'" class="button_bg" id="'.$id.'" >'.$title.'</a>';
+		if(strpos($url, 'javascript')!==false){
+			$html = '<input type="button" onclick="'.$url.'" class="button_bg" id="'.$id.'" value="'.$title.'" />';
+		}elseif(strpos($url, 'http:')!==false){
+			$html = '<input type="button" onclick="self.location.href=\''.$url.'\'" class="button_bg" id="'.$id.'" value="'.$title.'" />';
 		}else{
-			$html = '<a href="'.site_url($url).'" class="button_bg" id="'.$id.'">'.$title.'</a>';
+			$html = '<input type="button" onclick="'.site_url($url).'"  class="button_bg" id="'.$id.'" value="'.$title.'" />';
 		}
 	}else{
 	 	 $html ='<input type="submit" class="button_bg no-border"  id="'.$id.'"  value="'.$title.'"  '.$ext.'    />';
@@ -457,7 +459,8 @@ class tpl extends Smarty
 		if($sys_config['debug']) $CI->output->enable_profiler(true);			
         $this->assign("dir_front", config_item('template_dir').'front/'.$sys_config['template'].'/'.$lang_type); // so we can get the full path to CI easily
         $this->assign("dir_backend", config_item('template_dir').'backend/'.$sys_config['template'].'/'); // so we can get the full path to CI easily
-        $this->assign('ci_config',$config);
+        $ci_config  = &get_config();
+        $this->assign('ci_config',$ci_config);
         $this->assign('ci_uri',ci_uri());
       
         //function registerpri

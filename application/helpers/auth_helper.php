@@ -44,4 +44,19 @@ if(!function_exists('my_encrypt')){
 	}
 }
 
+
+if(!function_exists('cor_base64_encode')){
+	 function cor_base64_encode($string) { 
+		 	return my_encrypt($string, 'ENCODE');
+		 		
+	}
+}
+
+if(!function_exists('cor_base64_decode')){
+	 function cor_base64_decode($string) { 
+		 	return my_encrypt($string, 'DECODE');
+		 		
+	}
+}
+
 ?>

@@ -228,9 +228,9 @@
     44 => 
     array (
       'r_id' => '44',
-      'r_title' => '菜单管理',
+      'r_title' => '权限菜单',
       'r_pid' => '35',
-      'r_name' => '菜单管理',
+      'r_name' => '权限菜单',
       'r_order' => '127',
       'r_display' => '1',
       'r_url' => 'backend/menu/action_list',
@@ -508,7 +508,7 @@
     74 => 
     array (
       'r_id' => '74',
-      'r_title' => '浏览模板目录',
+      'r_title' => '模板文件',
       'r_pid' => '67',
       'r_name' => NULL,
       'r_order' => '1',

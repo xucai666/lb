@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>X6CMS2.2(20130305) - 小六网络科技</title>
+<meta name="author" content="小六网络科技" />
+<link rel="stylesheet" type="text/css" href="<!--{$css_url}-->backend_style.css" />
+<link rel="stylesheet" type="text/css" href="<!--{$css_url}-->style.css" />
+<link rel="shortcut icon" href="<!--{$img_url}-->images/favicon.ico" />
+<script type="text/javascript" src="<!--{$js_url}-->jquery.min.js"></script>
+<script type="text/javascript">
+var baseurl = "<!--{$img_url}-->";
+var siteaurl = "<!--{$img_url}-->index.php?/admin";
+var siteurl = "<!--{$img_url}-->index.php?";
+</script>
+</head><body><style>
+body{background:#F7FBFC;overflow-x:hidden;overflow-y:auto;}
+
+
+
+</style>
+		
+		 <!--{foreach from=$rights_options item=item key=key}-->
+
+			<table  class="left_menu" cellpadding=0 cellspacing=0 id="purview_<!--{$key}-->">
+	<tr><td><b class="mtop"><!--{$item.r_title}--></b></td></tr>
+<!--{foreach from=$item.detail key=key1 item=item1}--> 	
+		<tr><td onclick="seton(this,'<!--{realUrl($item1.r_url)}-->');" class="category">
+		<span><a href="javascript:void(0)"  <!--{if count($item1.detail)>0}-->style="font-weight:bold;"<!--{/if}-->><!--{$item1.r_title}--></a></span>
+
+
+		<!--{if $item1.detail}-->	
+				<ul class="hide detail" >
+					<!--{foreach from=$item1.detail key=key2 item=item2}--> 
+							<!--{if $item2.r_url}-->
+								<li >
+									<a href="<!--{realUrl($item2.r_url)}-->" target="main" style="color:#666666"><!--{$item2.r_title}--></a>	
+								</li> 															
+							<!--{/if}-->								
+					<!--{/foreach}-->
+				</ul>
+															
+		<!--{/if}-->	
+
+
+
+
+		</td></tr>
+		
+
+		<!--{/foreach}-->
+
+		</table>
+
+		<!--{/foreach}-->
+			
+<script type="text/javascript">
+	function setTab(tid){
+		$("#purview_"+tid).find('td').each(function(){
+			$(this).removeClass("on");
+		});
+		$("table").hide();
+		$("#purview_"+tid).show();
+	}
+	function seton(t,url) {
+		$(t).parent().parent().find('td').each(function(){
+			$(this).removeClass("on");
+		});
+		$(t).addClass("on");
+		parent.main.location.href=url;
+	}
+
+	
+	$(function($){
+
+		//stop bubble first
+		$(".category").children("ul").on('click', "li", function(e) {
+			   e.stopPropagation();
+		});
+	
+		$(".category").click(function(e){
+
+			$(this).children("ul").toggle();
+		});
+
+
+	})
+
+	
+
+	setTab("0");
+</script>
+</body></html>

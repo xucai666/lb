@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cor.CMS - Conqweal</title>
+<meta name="author" content="conqweal" />
+<link rel="stylesheet" type="text/css" href="<!--{$css_url}-->style.css" />
+<link rel="shortcut icon" href="<!--{$img_url}-->favicon.ico" />
+<script type="text/javascript" src="<!--{$js_url}-->jquery.min.js"></script>
+
+
+</head><body><style>body{height:100%;background:#E2E9EA;}</style>
+<div id="main_top">
+<div id="header" class="header" >
+<table width="100%" height="80" border="0" cellpadding="0" cellspacing="1">
+	<tr><td rowspan="2" width="150"><div class="logo"><a href="<!--{site_url()}-->" target="_blank"><img src="<!--{$img_url}-->x6cms.gif" width=150></a></div></td>
+	<td height="40"><div class="nav">&nbsp;&nbsp;&nbsp;&nbsp;欢迎您！<!--{$user_info.admin_user}--><i>|</i> [<!--{$user_info.role_name}-->]  <i>|</i> [<a href="<!--{site_url('/backend/system_manage/exit_system')}-->" target="_top"><!--{"exit"|lang}--></a>]</div></td>
+	<td align="right"><div class="nav">
+<a href="<!--{site_url()}-->" target="_blank">浏览站点</a>
+<i>|</i>
+
+
+<a href="<!--{base_url('user_guide/index.html')}-->" target="_blank">在线手册</a>
+ &nbsp;&nbsp;</div></td>
+	</tr>
+	<tr>
+		<td valign="bottom"><div class="topmenu"><ul>
+
+
+	 <!--{foreach from=$rights_options item=item key=key}-->	
+<li onClick="setLeft(<!--{$key}-->);return false;"><span class="topmenufunc" id="topmenufunc_<!--{$key}-->"><b><!--{$item.r_title}--></b></span></li>
+<!--{/foreach}-->
+
+</ul></div></td>
+		<td align="right"><div class="nav">当前编辑:
+
+
+		 <!--{if config_item('lang_multiple')}-->
+
+					<select onChange="parent.location.href='<!--{$site_url}-->/backend/common/lang_set/?lang='+this.value+'&url=<!--{$site_url}-->/backend/login/center/';" >
+					<!--{html_options options=$lang_all_options selected=$lang_type}-->
+					</select>
+		
+		  <!--{/if}-->		
+
+		  &nbsp;&nbsp;</div></td>
+	</tr>
+</table>
+</div>
+</div>
+<script type="text/javascript">
+function setLeft(tid){
+	parent.menu.setTab(tid);
+	$(".topmenufunc").removeClass('current');
+	$("#topmenufunc_"+tid).addClass('current');
+}
+
+$(function($){
+	$(".topmenufunc").removeClass('current');
+	$("#topmenufunc_0").addClass('current');
+})
+
+</script>
+<script>
+//var throughBox = $.dialog.through;
+	//var myDialog = throughBox({title:'xx',lock:true});
+	//myDialog.content('zzzzzzz');
+
+	
+
+</script>
+
+</body></html>

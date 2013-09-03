@@ -257,6 +257,7 @@ class Common_model  extends CI_Model{
 		$template = $template?$template:$rs[$html_field];
 
 		//convert to db_parameter
+
 		$db_ar = array(
 			'from'=>$from?$from:$rs['t_db_name'],
 			'select'=>$select?$select:$rs['t_db_fields'],
@@ -577,14 +578,16 @@ class Common_model  extends CI_Model{
 	 * @return [type]              [description]
 	 */
 	function get_nav($tb,$id,$title_field,$where='1=1'){
+
+		if(!is_numeric($id)) return false;
 		$tb = $this->cor_db->table($tb);
 		$primary = $this->cor_db->primary($tb);
 		$url = $this->uri->uri_string();
 		$url =  substr($url,0,strrpos($url,"/")+1);
 		$sq = <<<EOT
-	SELECT concat('$url',$primary) as url,'Prev' as nav_title,`$title_field` FROM (SELECT *  FROM  $tb   WHERE  $where and  $primary<$id ORDER BY $primary DESC LIMIT 1) AS t1 
+	SELECT concat('$url',$primary) as url,'Prev' as nav_title,`$title_field` FROM (SELECT *  FROM  $tb   WHERE  $where and  $primary>$id ORDER BY $primary asc LIMIT 1) AS t1 
 			UNION   ALL 
-		SELECT concat('$url',$primary) as url,'Next' as nav_title,`$title_field` FROM (SELECT  *  FROM  $tb   WHERE   $where and  $primary>$id ORDER BY $primary ASC  LIMIT 1) AS t2
+		SELECT concat('$url',$primary) as url,'Next' as nav_title,`$title_field` FROM (SELECT  *  FROM  $tb   WHERE   $where and  $primary<$id ORDER BY $primary desc  LIMIT 1) AS t2
 EOT;
 		return $this->cor_form->array_re_index($this->cor_db->fetch_values($sq),'nav_title',array('url',$title_field));
 	}

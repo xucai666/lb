@@ -177,19 +177,6 @@ class Login extends CI_Controller {
  	}
  
  
- 	function top()
-	{
-	
-		$this->cor_auth->execute_auth();		
-		$data['user_info'] = $this->cor_auth->db_user();	
-		$this->lang->load("item_backend",lang_get());
-		$data['lang_sys']  = $this->lang->language;
-		$data['lang_all_options'] = $this->Common_model->lang_all();
-
-		$this->cor_page->load_backend_view("frame_top",$data);
-		
-		
-	}	
  	
  	
 	function left()
@@ -209,15 +196,6 @@ class Login extends CI_Controller {
 	
 	
 	
- 	function right()
-	{
-		
-		$theme = config_item('backend_theme');
-		$this->cor_page->fetch_css('main',null,base_url().'templates/backend/'.$theme.'/css/');
-		$this->cor_page->fetch_js(array('Main'),null,base_url().'templates/backend/'.$theme.'/js/');
-		$this->cor_page->load_backend_view("frame_right");
-		
-	}	
  
  
  	function test(){
@@ -230,7 +208,11 @@ class Login extends CI_Controller {
  	}
  	
  	function  main_top(){
+ 		$data['lang_all_options'] = $this->Common_model->lang_all();
  		$data['rights_options'] = $this->cor_auth->fetch_rights_menus($this->cor_auth->db_user('group_id'),true);
+ 		
+		$data['user_info'] = $this->cor_auth->db_user();
+
  		$this->cor_page->load_backend_view("main_top",$data);
  	}
 
@@ -240,10 +222,7 @@ class Login extends CI_Controller {
 
  	}
 
- 	function  main_right(){
- 		$this->cor_page->load_backend_view("main_right",$data);
- 	}
-
+ 
 
  	function  main_foot(){
  		$this->cor_page->load_backend_view("main_foot",$data);
