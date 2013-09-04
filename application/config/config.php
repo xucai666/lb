@@ -457,7 +457,6 @@ $config['eg_files'] = array(
 $config['email_from'] = 'yehua365@163.com';
 
 //澶氳瑷€妯″紡,1琛ㄧず寮€鍚?
-$config['multiple_language'] = '1';
 
 //灏嗗浠芥枃浠跺彂閫佸埌閭
 $config['backup_email'] = '0';

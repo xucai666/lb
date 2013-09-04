@@ -32,11 +32,10 @@
 <!--{/foreach}-->
 
 </ul></div></td>
-		<td align="right"><div class="nav">当前编辑:
+		<td align="right"><div class="nav">
 
-
-		 <!--{if config_item('lang_multiple')}-->
-
+			 <!--{if config_item('lang_multiple')}-->
+					当前编辑:
 					<select onChange="parent.location.href='<!--{$site_url}-->/backend/common/lang_set/?lang='+this.value+'&url=<!--{$site_url}-->/backend/login/center/';" >
 					<!--{html_options options=$lang_all_options selected=$lang_type}-->
 					</select>

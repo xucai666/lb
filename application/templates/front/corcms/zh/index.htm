@@ -25,7 +25,8 @@
          <form id="form1" name="form1" method="get" action="<!--{func_site_url segments='search'}-->" >
          <ul class="index_top_right">
            
-             <li>
+          <li <!--{if !config_item('lang_multiple')}--> class="hide" <!--{/if}-->>
+       
              <a href="<!--{$site_url|cat:$next_lang}-->"><img src="<!--{$img_url}-->/lang_change.gif">&nbsp;<!--{$lang_type}--></a>
             
           
