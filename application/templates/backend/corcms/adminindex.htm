@@ -18,11 +18,22 @@
 <tr><td width="15%">用户组</td><td width="35%"><!--{$user_info.role_name}--></td><td width="15%">运行环境</td><td width="35%"><!--{php}-->echo $_SERVER['SERVER_SOFTWARE'];<!--{/php}--></td></tr>
 <tr><td width="15%">上次登录时间</td><td width="35%"><!--{$last_login.last.login_time}--></td><td width="15%">上传许可</td><td width="35%"><!--{php}-->echo ini_get('upload_max_filesize');<!--{/php}--></td></tr>
 <tr><td width="15%">上次登录ip</td><td width="35%"><!--{$last_login.last.login_ip}-->&lt<!--{$last_login.last.login_client}-->&gt</td><td width="15%">MYSQL版本</td><td width="35%"><!--{php}-->echo mysql_get_server_info();<!--{/php}--></td></tr>
-<tr><td width="15%">登录次数</td><td width="35%"><!--{$last_login.stat}--></td><td width="15%">剩余空间</td><td width="35%"><!--{php}--> echo round((@disk_free_space(".")/(1024*1024)),2).'M';<!--{/php}--></td></tr>
+<tr><td width="15%">登录次数</td><td width="35%"><!--{$last_login.stat}--></td><td width="15%">剩余空间</td><td width="35%"><!--{php}--> echo display_size(@disk_free_space("."));<!--{/php}--></td></tr>
 <tr><th width="50%" align="left" colspan="4">网站统计</th>
 	</tr>
 
-<tr><td width="15%">下载模型</td><td width="35%">4</td><td width="50%"  style="padding:0;" colspan="4" rowspan="6"></td></tr>
+<tr>
+<!--{foreach $stat as $item}-->
+<td><!--{$item.name}--></td>
+<td><!--{$item.stat}--></td>
+	
+<!--{if ($item@iteration is div by 2) && ($item@iteration!=$item@total) }-->
+	<!--{"</tr><tr>"}-->
+<!--{/if}-->
+
+<!--{/foreach}-->
+
+</tr>
 
 
 </table>

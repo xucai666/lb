@@ -51,7 +51,7 @@ $autoload['libraries'] = array('session','form_validation','pagination','cor_for
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url','form','cookie','language','cor_lang','auth');
+$autoload['helper'] = array('url','form','cookie','language','cor_lang','auth','common');
 
 
 /*

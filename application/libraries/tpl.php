@@ -248,7 +248,6 @@ function func_tag_pager($parameter){
 
 function func_get_nav($parameter){
 	$CI = &get_instance();
-	$CI->load->helper('msubstr');
 	extract($parameter);
 	$where = $where?$where:"1=1";
 	$id = $id?$id:$CI->uri->segment(3);

@@ -13,17 +13,6 @@
  * @filesource
  */
  
-// ------------------------------------------------------------------------
-
-/**
- * Code Igniter JSON Helpers
- *
- * @package		CodeIgniter
- * @subpackage	Helpers
- * @category	Helpers
- * @author		Evan Baliatico
- * @link		http://www.codeigniter.com/wiki/
- */
 if(!function_exists('my_encrypt')){
 	 function my_encrypt($string=null, $operation) { 
 		 	if(empty($string)) return '';

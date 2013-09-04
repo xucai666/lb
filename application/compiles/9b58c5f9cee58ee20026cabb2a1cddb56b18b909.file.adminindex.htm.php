@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-03 16:21:47
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-04 01:04:41
          compiled from "application\templates\backend\corcms\adminindex.htm" */ ?>
 <?php /*%%SmartyHeaderCode:1742452260552391ae9-53389661%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9b58c5f9cee58ee20026cabb2a1cddb56b18b909' => 
     array (
       0 => 'application\\templates\\backend\\corcms\\adminindex.htm',
-      1 => 1378225305,
+      1 => 1378256665,
       2 => 'file',
     ),
   ),
@@ -23,6 +23,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'js_url' => 0,
     'user_info' => 0,
     'last_login' => 0,
+    'stat' => 0,
+    'item' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -61,12 +63,33 @@ echo mysql_get_server_info();<?php $_block_content = ob_get_clean(); $_block_rep
 </td></tr>
 <tr><td width="15%">登录次数</td><td width="35%"><?php echo $_smarty_tpl->tpl_vars['last_login']->value['stat'];?>
 </td><td width="15%">剩余空间</td><td width="35%"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
- echo round((@disk_free_space(".")/(1024*1024)),2).'M';<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>
+ echo display_size(@disk_free_space("."));<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>
 </td></tr>
 <tr><th width="50%" align="left" colspan="4">网站统计</th>
 	</tr>
 
-<tr><td width="15%">下载模型</td><td width="35%">4</td><td width="50%"  style="padding:0;" colspan="4" rowspan="6"></td></tr>
+<tr>
+<?php  $_smarty_tpl->tpl_vars['item'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['item']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['stat']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_smarty_tpl->tpl_vars['item']->total= $_smarty_tpl->_count($_from);
+ $_smarty_tpl->tpl_vars['item']->iteration=0;
+foreach ($_from as $_smarty_tpl->tpl_vars['item']->key => $_smarty_tpl->tpl_vars['item']->value){
+$_smarty_tpl->tpl_vars['item']->_loop = true;
+ $_smarty_tpl->tpl_vars['item']->iteration++;
+?>
+<td><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+</td>
+<td><?php echo $_smarty_tpl->tpl_vars['item']->value['stat'];?>
+</td>
+	
+<?php if ((!($_smarty_tpl->tpl_vars['item']->iteration % 2))&&($_smarty_tpl->tpl_vars['item']->iteration!=$_smarty_tpl->tpl_vars['item']->total)){?>
+	<?php echo "</tr><tr>";?>
+
+<?php }?>
+
+<?php } ?>
+
+</tr>
 
 
 </table>

@@ -352,8 +352,13 @@ class Modules_model extends CI_Model{
 
 
 	function stat(){
-
-		//$this->db->select();
+		$ls = $this->db->select('m_tb,m_name',false)->from('module')->get()->result_array();
+		$stat = array();
+		foreach($ls as $v){
+			$stat[$v['m_tb']]= array('name'=>$v['m_name'],'stat'=>$this->db->from($v['m_tb'])->count_all_results());
+		}
+		
+		return $stat;
 	}
 }
 

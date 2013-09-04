@@ -232,6 +232,8 @@ class Login extends CI_Controller {
  		$data['user_info'] = $this->cor_auth->db_user();
  		$this->load->model('Logs_model');
  		$data['last_login'] = $this->Logs_model->last_login();
+ 		$this->load->model('Modules_model','mm');
+ 		$data['stat'] = $this->mm->stat();
  		$this->cor_page->load_backend_view("adminindex",$data);
  	}
  	
