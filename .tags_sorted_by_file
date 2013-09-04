@@ -1,159 +1,57 @@
-_from	application\compiles\02261421d56d4d570ed183b1cef1475bafd3c9c4.file.view_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\02261421d56d4d570ed183b1cef1475bafd3c9c4.file.view_list.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-queueComplete	application\compiles\02261421d56d4d570ed183b1cef1475bafd3c9c4.file.view_list.htm.php	/^ function queueComplete(){$/;"	f	language:PHP
-uploadComplete_view	application\compiles\02261421d56d4d570ed183b1cef1475bafd3c9c4.file.view_list.htm.php	/^			function uploadComplete_view(file, serverData){$/;"	f	language:PHP
-_valid	application\compiles\023877ecb77c1efce4bcc61177c2ab518ade10fa.file.product.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	application\compiles\0343ba211c3ecce9193cf2dd1f83cd539be7f991.file.config_save.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	application\compiles\06ca12fe274efe0f709f42728f0fe40938d24c24.file.left_message.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_block_content	application\compiles\07ea99aa69f94bc0450ca1dd9c7c8ad83e302327.file.admins_add.htm.php	/^ echo form_error("confirm_password","<div id='error_span' class='red_font'>","<\/div>");<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_content	application\compiles\07ea99aa69f94bc0450ca1dd9c7c8ad83e302327.file.admins_add.htm.php	/^ echo form_error("main[admin_pass]","<div id='error_span' class='red_font'>","<\/div>");<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_content	application\compiles\07ea99aa69f94bc0450ca1dd9c7c8ad83e302327.file.admins_add.htm.php	/^<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_repeat	application\compiles\07ea99aa69f94bc0450ca1dd9c7c8ad83e302327.file.admins_add.htm.php	/^<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_valid	application\compiles\07ea99aa69f94bc0450ca1dd9c7c8ad83e302327.file.admins_add.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_block_content	application\compiles\0ad4759ca9c3c93d145247421418a9ee35a53d42.file.view_add.htm.php	/^		<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_repeat	application\compiles\0ad4759ca9c3c93d145247421418a9ee35a53d42.file.view_add.htm.php	/^		<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_valid	application\compiles\0ad4759ca9c3c93d145247421418a9ee35a53d42.file.view_add.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_block_content	application\compiles\0ce86143f271a0c47f89b1f194d8300707ce1642.file.admins_list.htm.php	/^				<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_content	application\compiles\0ce86143f271a0c47f89b1f194d8300707ce1642.file.admins_list.htm.php	/^			 <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_content	application\compiles\0ce86143f271a0c47f89b1f194d8300707ce1642.file.admins_list.htm.php	/^ echo set_value(null,$_GET['admin_user']); <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_content	application\compiles\0ce86143f271a0c47f89b1f194d8300707ce1642.file.admins_list.htm.php	/^ echo set_value(null,$_GET['mobile']); <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_content	application\compiles\0ce86143f271a0c47f89b1f194d8300707ce1642.file.admins_list.htm.php	/^ echo set_value(null,$_GET['name']); <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_content	application\compiles\0ce86143f271a0c47f89b1f194d8300707ce1642.file.admins_list.htm.php	/^<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_repeat	application\compiles\0ce86143f271a0c47f89b1f194d8300707ce1642.file.admins_list.htm.php	/^				<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_block_repeat	application\compiles\0ce86143f271a0c47f89b1f194d8300707ce1642.file.admins_list.htm.php	/^			<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_block_repeat	application\compiles\0ce86143f271a0c47f89b1f194d8300707ce1642.file.admins_list.htm.php	/^		<input type="text" name="admin_user"  value="<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_block_repeat	application\compiles\0ce86143f271a0c47f89b1f194d8300707ce1642.file.admins_list.htm.php	/^	<input type="text" name="mobile" value="<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_block_repeat	application\compiles\0ce86143f271a0c47f89b1f194d8300707ce1642.file.admins_list.htm.php	/^	<input type="text" name="name"  value="<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_block_repeat	application\compiles\0ce86143f271a0c47f89b1f194d8300707ce1642.file.admins_list.htm.php	/^<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_from	application\compiles\0ce86143f271a0c47f89b1f194d8300707ce1642.file.admins_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\0ce86143f271a0c47f89b1f194d8300707ce1642.file.admins_list.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-attr	application\compiles\0ce86143f271a0c47f89b1f194d8300707ce1642.file.admins_list.htm.php	/^	$attr  = array('method'=>'get');$/;"	v	language:PHP
-_valid	application\compiles\12004ae96bee0ec0ddb85be1fd58c4316b40583e.file.foot.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	application\compiles\141c291a2c1471790040513a8978846059254d93.file.about.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_block_content	application\compiles\1dfebbf4bc915478c1aa5f4b920ecfb9bb3ecbe8.file.admins_change_password.htm.php	/^ echo form_error("main[confirm_password]","<div id='error_span' class='red_font'>","<\/div>");<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_content	application\compiles\1dfebbf4bc915478c1aa5f4b920ecfb9bb3ecbe8.file.admins_change_password.htm.php	/^ echo form_error("main[new_password]","<div id='error_span' class='red_font'>","<\/div>");<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_content	application\compiles\1dfebbf4bc915478c1aa5f4b920ecfb9bb3ecbe8.file.admins_change_password.htm.php	/^ echo form_error("main[old_password]","<div id='error_span' class='red_font'>","<\/div>");<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_content	application\compiles\1dfebbf4bc915478c1aa5f4b920ecfb9bb3ecbe8.file.admins_change_password.htm.php	/^<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_repeat	application\compiles\1dfebbf4bc915478c1aa5f4b920ecfb9bb3ecbe8.file.admins_change_password.htm.php	/^<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_valid	application\compiles\1dfebbf4bc915478c1aa5f4b920ecfb9bb3ecbe8.file.admins_change_password.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_from	application\compiles\27069bb56e29505facff5153c01436807ea9ec22.file.index.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['pics']->value['list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\27069bb56e29505facff5153c01436807ea9ec22.file.index.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-change_img	application\compiles\27069bb56e29505facff5153c01436807ea9ec22.file.index.htm.php	/^            function change_img() $/;"	f	language:PHP
-changeimg	application\compiles\27069bb56e29505facff5153c01436807ea9ec22.file.index.htm.php	/^            function changeimg(n){nn=n;window.clearInterval(tt);change_img();} $/;"	f	language:PHP
-selectTag	application\compiles\27069bb56e29505facff5153c01436807ea9ec22.file.index.htm.php	/^function selectTag(showContent,selfObj,str){$/;"	f	language:PHP
-_block_content	application\compiles\3e395b46f26f635fb024d317aba42cc9700aaa5d.file.roles_list.htm.php	/^			 <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_content	application\compiles\3e395b46f26f635fb024d317aba42cc9700aaa5d.file.roles_list.htm.php	/^ echo $page_link;<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_repeat	application\compiles\3e395b46f26f635fb024d317aba42cc9700aaa5d.file.roles_list.htm.php	/^			<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_block_repeat	application\compiles\3e395b46f26f635fb024d317aba42cc9700aaa5d.file.roles_list.htm.php	/^	<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_from	application\compiles\3e395b46f26f635fb024d317aba42cc9700aaa5d.file.roles_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\3e395b46f26f635fb024d317aba42cc9700aaa5d.file.roles_list.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_block_content	application\compiles\44df3b944a2e8a143ed6643366f14f1e5ec5ae6f.file.modules_add.htm.php	/^			<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_content	application\compiles\44df3b944a2e8a143ed6643366f14f1e5ec5ae6f.file.modules_add.htm.php	/^		<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_repeat	application\compiles\44df3b944a2e8a143ed6643366f14f1e5ec5ae6f.file.modules_add.htm.php	/^			<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_block_repeat	application\compiles\44df3b944a2e8a143ed6643366f14f1e5ec5ae6f.file.modules_add.htm.php	/^		<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_from	application\compiles\44df3b944a2e8a143ed6643366f14f1e5ec5ae6f.file.modules_add.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['detail']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\44df3b944a2e8a143ed6643366f14f1e5ec5ae6f.file.modules_add.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	application\compiles\51081bef9ea905166dc25696bd6f364c8306db75.file.left_archive.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_block_content	application\compiles\53453e037bbd4b6450f7e89c25f83c2ccb52dc88.file.fields_add.htm.php	/^			<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_content	application\compiles\53453e037bbd4b6450f7e89c25f83c2ccb52dc88.file.fields_add.htm.php	/^		<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_repeat	application\compiles\53453e037bbd4b6450f7e89c25f83c2ccb52dc88.file.fields_add.htm.php	/^			<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_block_repeat	application\compiles\53453e037bbd4b6450f7e89c25f83c2ccb52dc88.file.fields_add.htm.php	/^		<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_valid	application\compiles\53453e037bbd4b6450f7e89c25f83c2ccb52dc88.file.fields_add.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-CPos	application\compiles\55f58d6bed7064e7a997e32450f671f417c3ebd4.file.message_list.htm.php	/^	function CPos(x, y)$/;"	f	language:PHP
-GetObjPos	application\compiles\55f58d6bed7064e7a997e32450f671f417c3ebd4.file.message_list.htm.php	/^	function GetObjPos(ATarget)$/;"	f	language:PHP
-_from	application\compiles\55f58d6bed7064e7a997e32450f671f417c3ebd4.file.message_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\55f58d6bed7064e7a997e32450f671f417c3ebd4.file.message_list.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-showimg	application\compiles\55f58d6bed7064e7a997e32450f671f417c3ebd4.file.message_list.htm.php	/^	function showimg(event_obj){$/;"	f	language:PHP
-_from	application\compiles\5610127ff4da341e4f7b6ea3595ce6013e7a408e.file.advs_add.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['detail']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\5610127ff4da341e4f7b6ea3595ce6013e7a408e.file.advs_add.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-copy_ext	application\compiles\5610127ff4da341e4f7b6ea3595ce6013e7a408e.file.advs_add.htm.php	/^	function copy_ext(obj){$/;"	f	language:PHP
-show_upload	application\compiles\5610127ff4da341e4f7b6ea3595ce6013e7a408e.file.advs_add.htm.php	/^	function show_upload(adv_type){$/;"	f	language:PHP
-_valid	application\compiles\5fd1276595fa8a446fd37f44a26934351ad5899c.file.frame_left.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-trigger_menu	application\compiles\5fd1276595fa8a446fd37f44a26934351ad5899c.file.frame_left.htm.php	/^	function trigger_menu(){$/;"	f	language:PHP
-_block_content	application\compiles\64868e103385e08bb484fa771dfb9c1b43c5b7f8.file.tree_list.htm.php	/^			<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_repeat	application\compiles\64868e103385e08bb484fa771dfb9c1b43c5b7f8.file.tree_list.htm.php	/^		<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_from	application\compiles\64868e103385e08bb484fa771dfb9c1b43c5b7f8.file.tree_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\64868e103385e08bb484fa771dfb9c1b43c5b7f8.file.tree_list.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-chkdel2	application\compiles\64868e103385e08bb484fa771dfb9c1b43c5b7f8.file.tree_list.htm.php	/^	function chkdel2(){$/;"	f	language:PHP
-_valid	application\compiles\655212df7baa163b1a52cad84881ad3aa38fbe10.file.left_sales.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	application\compiles\71f047dcf6182257cbce821a6a845f841f704a28.file.top.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_from	application\compiles\774b00c614ab3096d91e0b8fcc91c562c3e35f4a.file.center.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['item']->value['detail']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_from	application\compiles\774b00c614ab3096d91e0b8fcc91c562c3e35f4a.file.center.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['item1']->value['detail']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_from	application\compiles\774b00c614ab3096d91e0b8fcc91c562c3e35f4a.file.center.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['rights_options']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\774b00c614ab3096d91e0b8fcc91c562c3e35f4a.file.center.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-show	application\compiles\774b00c614ab3096d91e0b8fcc91c562c3e35f4a.file.center.htm.php	/^	function show(){$/;"	f	language:PHP
-switchSysBar	application\compiles\774b00c614ab3096d91e0b8fcc91c562c3e35f4a.file.center.htm.php	/^	function switchSysBar(){$/;"	f	language:PHP
-_from	application\compiles\79ed871eccdf9b191024b335b54e9516f2ee54b5.file.engage.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\79ed871eccdf9b191024b335b54e9516f2ee54b5.file.engage.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_from	application\compiles\82c9b011a7ea8a7b430035aab61e9e26e689a29b.file.advs_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\82c9b011a7ea8a7b430035aab61e9e26e689a29b.file.advs_list.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	application\compiles\855b662c27f98243eb630f1ef085de78cb5833ea.file.product_view.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_block_content	application\compiles\8a87ad11695fec2c322a2e70809b6a9b1c700271.file.templates_add.htm.php	/^			<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_content	application\compiles\8a87ad11695fec2c322a2e70809b6a9b1c700271.file.templates_add.htm.php	/^		<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_repeat	application\compiles\8a87ad11695fec2c322a2e70809b6a9b1c700271.file.templates_add.htm.php	/^			<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_block_repeat	application\compiles\8a87ad11695fec2c322a2e70809b6a9b1c700271.file.templates_add.htm.php	/^		<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_valid	application\compiles\8a87ad11695fec2c322a2e70809b6a9b1c700271.file.templates_add.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_block_content	application\compiles\8d8c8a83fda6330edbfed5cfe750c18beb11da75.file.foot.htm.php	/^echo base_url();<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_repeat	application\compiles\8d8c8a83fda6330edbfed5cfe750c18beb11da75.file.foot.htm.php	/^<div id="sys_base_url" class="hide"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_valid	application\compiles\8d8c8a83fda6330edbfed5cfe750c18beb11da75.file.foot.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	application\compiles\924ed22b8fb161b4fd48e375a1d5f9cf1174fe96.file.top.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-JumpUrl	application\compiles\926c21d0586ad8183cf0cf42f8c1aa662847750f.file.page_redirect.htm.php	/^      function JumpUrl(){$/;"	f	language:PHP
-_valid	application\compiles\926c21d0586ad8183cf0cf42f8c1aa662847750f.file.page_redirect.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_from	application\compiles\94d01c31beef93cc00a93018d55e76db2f96bc12.file.mdata_add.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['detail']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_from	application\compiles\94d01c31beef93cc00a93018d55e76db2f96bc12.file.mdata_add.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['dt_fields']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_from	application\compiles\94d01c31beef93cc00a93018d55e76db2f96bc12.file.mdata_add.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['fields']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\94d01c31beef93cc00a93018d55e76db2f96bc12.file.mdata_add.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_from	application\compiles\979d89052a6cd29ba4409bf1f38d607de4da32e0.file.pictures_index_rotation.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\979d89052a6cd29ba4409bf1f38d607de4da32e0.file.pictures_index_rotation.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-onload	application\compiles\979d89052a6cd29ba4409bf1f38d607de4da32e0.file.pictures_index_rotation.htm.php	/^		window.onload = function() {				$/;"	j	language:PHP
-queueComplete	application\compiles\979d89052a6cd29ba4409bf1f38d607de4da32e0.file.pictures_index_rotation.htm.php	/^		 function queueComplete(){$/;"	f	language:PHP
-save_sort	application\compiles\979d89052a6cd29ba4409bf1f38d607de4da32e0.file.pictures_index_rotation.htm.php	/^		 function save_sort(p_index){	$/;"	f	language:PHP
-success	application\compiles\979d89052a6cd29ba4409bf1f38d607de4da32e0.file.pictures_index_rotation.htm.php	/^				   success: function(msg){					  $/;"	j	language:PHP
-success	application\compiles\979d89052a6cd29ba4409bf1f38d607de4da32e0.file.pictures_index_rotation.htm.php	/^				   success: function(msg){	$/;"	j	language:PHP
-uploadComplete_	application\compiles\979d89052a6cd29ba4409bf1f38d607de4da32e0.file.pictures_index_rotation.htm.php	/^			function uploadComplete_<?php echo $_smarty_tpl->tpl_vars['key']->value;?>$/;"	f	language:PHP
-uploadComplete_1000	application\compiles\979d89052a6cd29ba4409bf1f38d607de4da32e0.file.pictures_index_rotation.htm.php	/^			function uploadComplete_1000(file, serverData){$/;"	f	language:PHP
-window.onload	application\compiles\979d89052a6cd29ba4409bf1f38d607de4da32e0.file.pictures_index_rotation.htm.php	/^		window.onload = function() {				$/;"	j	language:PHP
-_valid	application\compiles\a064f65af7646eeec9d1a022f1f30631f7752dfa.file.login.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_from	application\compiles\a3c6de95e2d213dbaf8d811d4fdaaefcc11bef18.file.friendlink_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\a3c6de95e2d213dbaf8d811d4fdaaefcc11bef18.file.friendlink_list.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	application\compiles\b03228735b0ec806b178ef642f16bfc354da5d03.file.contact.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	application\compiles\b444ecea854357b5fbda5aad0ba2a166900cc10f.file.dynamic.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_from	application\compiles\bdc16de88d3adbda40fb4c572cacd5be33867bbc.file.tree_select.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['treeIds']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\bdc16de88d3adbda40fb4c572cacd5be33867bbc.file.tree_select.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_from	application\compiles\c77d3a3ce10ca52ae0010454fdc10006d39e86a3.file.modules_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\c77d3a3ce10ca52ae0010454fdc10006d39e86a3.file.modules_list.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-chkdel2	application\compiles\c77d3a3ce10ca52ae0010454fdc10006d39e86a3.file.modules_list.htm.php	/^	function chkdel2(){$/;"	f	language:PHP
-_block_content	application\compiles\c7fac023d0adaa6533d6ab6f6a2d2c495132224a.file.fields_list.htm.php	/^			<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_repeat	application\compiles\c7fac023d0adaa6533d6ab6f6a2d2c495132224a.file.fields_list.htm.php	/^		<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_from	application\compiles\c7fac023d0adaa6533d6ab6f6a2d2c495132224a.file.fields_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\c7fac023d0adaa6533d6ab6f6a2d2c495132224a.file.fields_list.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-chkdel2	application\compiles\c7fac023d0adaa6533d6ab6f6a2d2c495132224a.file.fields_list.htm.php	/^	function chkdel2(){$/;"	f	language:PHP
-_valid	application\compiles\caa43419dfa44041e5be1d194228fbf8550d2b9f.file.sales.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	application\compiles\d1722a81ed772567b0c0bc9b1c8698f0db641d48.file.message.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_from	application\compiles\db8cd18dd115170f9ed5281e640b24b66bf274c1.file.mdata_select.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\db8cd18dd115170f9ed5281e640b24b66bf274c1.file.mdata_select.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	application\compiles\dce5e537e008105053d3ed50ebd8d840e88310c4.file.left_about.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_block_content	application\compiles\e60bcf59e69d115b26c4b5d08a772351bb5ab0d1.file.templates_list.htm.php	/^			<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_repeat	application\compiles\e60bcf59e69d115b26c4b5d08a772351bb5ab0d1.file.templates_list.htm.php	/^		<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_from	application\compiles\e60bcf59e69d115b26c4b5d08a772351bb5ab0d1.file.templates_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\e60bcf59e69d115b26c4b5d08a772351bb5ab0d1.file.templates_list.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-chkdel2	application\compiles\e60bcf59e69d115b26c4b5d08a772351bb5ab0d1.file.templates_list.htm.php	/^	function chkdel2(){$/;"	f	language:PHP
-_block_content	application\compiles\e7b535d999ca7382c929ff6581a27d26516a8e5b.file.tree_add.htm.php	/^			<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_repeat	application\compiles\e7b535d999ca7382c929ff6581a27d26516a8e5b.file.tree_add.htm.php	/^			<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_valid	application\compiles\e7b535d999ca7382c929ff6581a27d26516a8e5b.file.tree_add.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_from	application\compiles\ea58de11d094e62ba9df16f4786c09284fcec11e.file.mdata_view.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['detail']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_from	application\compiles\ea58de11d094e62ba9df16f4786c09284fcec11e.file.mdata_view.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['dt_fields']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_from	application\compiles\ea58de11d094e62ba9df16f4786c09284fcec11e.file.mdata_view.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['fields']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\ea58de11d094e62ba9df16f4786c09284fcec11e.file.mdata_view.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	application\compiles\f285fcd8157060f57be9d683f129662e84017bde.file.left_product.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	application\compiles\fbc35455be3c9d5da5835cd6914badd68871386e.file.left_contact.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_from	application\compiles\fe333cb911d33c55256918497a4e010f83e199be.file.mdata_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['fields']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_from	application\compiles\fe333cb911d33c55256918497a4e010f83e199be.file.mdata_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_from	application\compiles\fe333cb911d33c55256918497a4e010f83e199be.file.mdata_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['querys']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_tmp1	application\compiles\fe333cb911d33c55256918497a4e010f83e199be.file.mdata_list.htm.php	/^<?php $_tmp1=ob_get_clean();?><?php echo ci_anchor(array('segment'=>"backend\/mdata\/action_del\/".((string)$_smarty_tpl->tpl_vars['item']->value[$_smarty_tpl->tpl_vars['primary']->value]),'attrs'=>"class:link_del,onclick:return confirm('".$_tmp1."');"),$_smarty_tpl);?>$/;"	v	language:PHP
-_valid	application\compiles\fe333cb911d33c55256918497a4e010f83e199be.file.mdata_list.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-chkdel2	application\compiles\fe333cb911d33c55256918497a4e010f83e199be.file.mdata_list.htm.php	/^	function chkdel2(){$/;"	f	language:PHP
-_valid	application\compiles\fe718d283f00ecc055cd547f8426eaf0e27e84ae.file.roles_add.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	application\compiles\001e4619afaa8bbbd78f9aeed6760e234b077bd1.file.product.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_block_content	application\compiles\08e5a137d313ace64256eb31229d25deba9b3247.file.foot.htm.php	/^echo base_url();<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
+_block_repeat	application\compiles\08e5a137d313ace64256eb31229d25deba9b3247.file.foot.htm.php	/^<div id="sys_base_url" class="hide"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
+_valid	application\compiles\08e5a137d313ace64256eb31229d25deba9b3247.file.foot.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	application\compiles\090fca48abdcc9955687f2ca28fbdccf222355c0.file.center.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	application\compiles\16006fbb4ce0057b59d86b3d9f4d741a94023cf9.file.sales.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_from	application\compiles\19cee10738f6e20ddb60d5bcd1bb55c62c5ae560.file.engage.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_valid	application\compiles\19cee10738f6e20ddb60d5bcd1bb55c62c5ae560.file.engage.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_from	application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['item']->value['detail']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_from	application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['item1']->value['detail']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_from	application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['rights_options']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_valid	application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+setTab	application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^	function setTab(tid){$/;"	f	language:PHP
+seton	application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^	function seton(t,url) {$/;"	f	language:PHP
+_valid	application\compiles\3a715f905da6e089cb10c68205e5329c232117b8.file.left_contact.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	application\compiles\5058bd06fae55f725b6716266e32d490ab562e54.file.top.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	application\compiles\5666bfb2573f6235e99a796c3fe9166da62d8fc6.file.main_foot.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	application\compiles\57bca995376f3e9a04397d23c80716afd9138e67.file.main_index.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	application\compiles\5976364c4fdb452526bb49788952050225b5d93d.file.left_sales.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_from	application\compiles\675c08882697db4ca46f3cc80b047ed52f00b775.file.index.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['pics']->value['list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_valid	application\compiles\675c08882697db4ca46f3cc80b047ed52f00b775.file.index.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+change_img	application\compiles\675c08882697db4ca46f3cc80b047ed52f00b775.file.index.htm.php	/^            function change_img() $/;"	f	language:PHP
+changeimg	application\compiles\675c08882697db4ca46f3cc80b047ed52f00b775.file.index.htm.php	/^            function changeimg(n){nn=n;window.clearInterval(tt);change_img();} $/;"	f	language:PHP
+selectTag	application\compiles\675c08882697db4ca46f3cc80b047ed52f00b775.file.index.htm.php	/^function selectTag(showContent,selfObj,str){$/;"	f	language:PHP
+_from	application\compiles\69164d1440cda3085cad42aa7f3faaff147ae8ac.file.main_top.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['rights_options']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_valid	application\compiles\69164d1440cda3085cad42aa7f3faaff147ae8ac.file.main_top.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+setLeft	application\compiles\69164d1440cda3085cad42aa7f3faaff147ae8ac.file.main_top.htm.php	/^function setLeft(tid){$/;"	f	language:PHP
+_valid	application\compiles\8b2ccbca6cd952602225ef14328668bf65dbf08a.file.top.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_block_content	application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^ echo display_size(@disk_free_space("."));<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
+_block_content	application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^echo $_SERVER['SERVER_SOFTWARE'];<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
+_block_content	application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^echo ini_get('upload_max_filesize');<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
+_block_content	application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^echo mysql_get_server_info();<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
+_block_repeat	application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^&gt<\/td><td width="15%">MYSQL版本<\/td><td width="35%"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
+_block_repeat	application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^<\/td><td width="15%">上传许可<\/td><td width="35%"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
+_block_repeat	application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^<\/td><td width="15%">剩余空间<\/td><td width="35%"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
+_block_repeat	application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^<\/td><td width="15%">运行环境<\/td><td width="35%"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
+_from	application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['stat']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_valid	application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	application\compiles\a49ee88a2669b51fd0fab361d9cacfe05aa5875b.file.left_product.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	application\compiles\ae0446f50b5c68d1a71cae5d127e6988ad63b43f.file.foot.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+JumpUrl	application\compiles\c11fef5b2930592637bdc3ac6ddb20a2a4983741.file.page_redirect.htm.php	/^      function JumpUrl(){$/;"	f	language:PHP
+_valid	application\compiles\c11fef5b2930592637bdc3ac6ddb20a2a4983741.file.page_redirect.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	application\compiles\d895bd2a09dcb6b07dc8f45d67c845708fc00204.file.left_archive.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+Utils.fixEvent	application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^Utils.fixEvent = function(e)$/;"	j	language:PHP
+_valid	application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+document.onmousedown	application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^document.onmousedown = function(e)$/;"	j	language:PHP
+document.onmouseup	application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^document.onmouseup = function(e)$/;"	j	language:PHP
+fixEvent	application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^Utils.fixEvent = function(e)$/;"	j	language:PHP
+onmousedown	application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^document.onmousedown = function(e)$/;"	j	language:PHP
+onmouseup	application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^document.onmouseup = function(e)$/;"	j	language:PHP
+toggleMenu	application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^function toggleMenu()$/;"	f	language:PHP
+_valid	application\compiles\f32b781624383bf9a74aea8a15fd4bce38251991.file.left_about.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	application\compiles\f409ac6f8838eb070b3a2c94338ec74dd431ea54.file.dynamic.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	application\compiles\fae418237c19d8abed9fd57487288bf1166d3aba.file.contact.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 or	application\config\config.php	/^| If you use the Encryption class or the Sessions class with encryption$/;"	c	language:PHP
 will	application\config\config.php	/^| the output class will test whether your server supports Gzip.$/;"	c	language:PHP
 DIR_READ_MODE	application\config\constants.php	/^define('DIR_READ_MODE', 0755);$/;"	d	language:PHP
@@ -463,6 +361,7 @@ table	application\controllers\backend\friendlink.php	/^		$this->table = $this->c
 Login	application\controllers\backend\login.php	/^class Login extends CI_Controller {$/;"	c	language:PHP
 __construct	application\controllers\backend\login.php	/^	function __construct()$/;"	f	language:PHP
 admin_pass	application\controllers\backend\login.php	/^		$admin_pass = $db_temp[0]['admin_pass'];$/;"	v	language:PHP
+adminindex	application\controllers\backend\login.php	/^ 	function adminindex(){$/;"	f	language:PHP
 center	application\controllers\backend\login.php	/^	function center(){	$/;"	f	language:PHP
 chklogin	application\controllers\backend\login.php	/^	function chklogin(){	$/;"	f	language:PHP
 config	application\controllers\backend\login.php	/^			$config = &get_config();$/;"	v	language:PHP
@@ -479,13 +378,16 @@ left	application\controllers\backend\login.php	/^	function left()$/;"	f	language
 login_info	application\controllers\backend\login.php	/^			  		$login_info = $login_info_temp[0];$/;"	v	language:PHP
 login_info_temp	application\controllers\backend\login.php	/^			  		$login_info_temp = $this->db->select('a.*,b.rights',false)->from($this->cor_db->table('admins').' as a')->join($this->cor_db->table('roles').' as b','a.group_id=b.role_id','`')$/;"	v	language:PHP
 m_lang	application\controllers\backend\login.php	/^		$this->m_lang = (object)$cur_lang;$/;"	v	language:PHP
-right	application\controllers\backend\login.php	/^ 	function right()$/;"	f	language:PHP
+main_center	application\controllers\backend\login.php	/^	function main_center(){$/;"	f	language:PHP
+main_foot	application\controllers\backend\login.php	/^ 	function  main_foot(){$/;"	f	language:PHP
+main_index	application\controllers\backend\login.php	/^ 	function main_index(){$/;"	f	language:PHP
+main_left	application\controllers\backend\login.php	/^	function  main_left(){$/;"	f	language:PHP
+main_top	application\controllers\backend\login.php	/^ 	function  main_top(){$/;"	f	language:PHP
 select_config	application\controllers\backend\login.php	/^				  	$select_config  = array($/;"	v	language:PHP
 sys_valid_code_check	application\controllers\backend\login.php	/^ 	function sys_valid_code_check(){ 	$/;"	f	language:PHP
 test	application\controllers\backend\login.php	/^ 	function test(){$/;"	f	language:PHP
 theme	application\controllers\backend\login.php	/^			$theme = $this->cor_page->backend_theme;$/;"	v	language:PHP
 theme	application\controllers\backend\login.php	/^		$theme = config_item('backend_theme');$/;"	v	language:PHP
-top	application\controllers\backend\login.php	/^ 	function top()$/;"	f	language:PHP
 tpl_name	application\controllers\backend\login.php	/^			  	$tpl_name = 'login';$/;"	v	language:PHP
 user_flag	application\controllers\backend\login.php	/^		$user_flag = $this->db->select('count(1) as user_flag',false)->from($this->cor_db->table('admins'))->where('admin_user',$str)$/;"	v	language:PHP
 user_name_check	application\controllers\backend\login.php	/^	function user_name_check($str)$/;"	f	language:PHP
@@ -498,10 +400,14 @@ Logs	application\controllers\backend\logs.php	/^ class Logs extends CI_Controlle
 __construct	application\controllers\backend\logs.php	/^	function __construct(){$/;"	f	language:PHP
 action_del	application\controllers\backend\logs.php	/^	function action_del(){$/;"	f	language:PHP
 action_list	application\controllers\backend\logs.php	/^	function action_list(){	$/;"	f	language:PHP
+action_login_del	application\controllers\backend\logs.php	/^	function action_login_del(){$/;"	f	language:PHP
+action_login_log	application\controllers\backend\logs.php	/^	function action_login_log(){$/;"	f	language:PHP
 cache_log_types	application\controllers\backend\logs.php	/^		$cache_log_types = $this->cor_cache->cache_fetch("log_types");$/;"	v	language:PHP
-data	application\controllers\backend\logs.php	/^		$data = $this->cor_db->fetch_all();	$/;"	v	language:PHP
+data	application\controllers\backend\logs.php	/^			$data = $this->cor_db->fetch_all(15);$/;"	v	language:PHP
+data	application\controllers\backend\logs.php	/^		$data = $this->cor_db->fetch_all(100);	$/;"	v	language:PHP
 data	application\controllers\backend\logs.php	/^		$data = array_merge($data,array($/;"	v	language:PHP
 ids	application\controllers\backend\logs.php	/^			$ids = $this->input->post('log_ids');$/;"	v	language:PHP
+ids	application\controllers\backend\logs.php	/^			$ids = $this->input->post('login_ids');$/;"	v	language:PHP
 m_lang	application\controllers\backend\logs.php	/^		$this->m_lang = $this->lang->language;$/;"	v	language:PHP
 Mdata	application\controllers\backend\mdata.php	/^class Mdata extends CI_Controller{$/;"	c	language:PHP
 __construct	application\controllers\backend\mdata.php	/^	function __construct(){$/;"	f	language:PHP
@@ -511,6 +417,7 @@ action_list	application\controllers\backend\mdata.php	/^	function action_list(){
 action_save	application\controllers\backend\mdata.php	/^	function action_save(){$/;"	f	language:PHP
 action_set_module	application\controllers\backend\mdata.php	/^	function action_set_module(){$/;"	f	language:PHP
 action_view	application\controllers\backend\mdata.php	/^	function action_view(){$/;"	f	language:PHP
+callback	application\controllers\backend\mdata.php	/^   					$callback = ',parent.frmright_reload()';$/;"	v	language:PHP
 cfg	application\controllers\backend\mdata.php	/^			$cfg = $this->im->save_config();$/;"	v	language:PHP
 ct	application\controllers\backend\mdata.php	/^	 						$ct = $this->db->like($k1,$ud)->from($cfg['main']['table_name'])->count_all_results();$/;"	v	language:PHP
 data	application\controllers\backend\mdata.php	/^				$data = array('main'=>$main,'fields'=>$fields,'html'=>$fields_html,'primary'=>$primary);$/;"	v	language:PHP
@@ -532,7 +439,7 @@ dt_primary	application\controllers\backend\mdata.php	/^				$dt_primary = $this->
 dt_primary	application\controllers\backend\mdata.php	/^		$dt_primary = $this->m->fetch_primary($dt_mid,'r_name');$/;"	v	language:PHP
 f	application\controllers\backend\mdata.php	/^		 							$f =  realpath(str_replace(base_url().'\/', '', $item['i_url']));$/;"	v	language:PHP
 f	application\controllers\backend\mdata.php	/^	 						$f =  realpath(str_replace(base_url().'\/', '', $v1));$/;"	v	language:PHP
-fields	application\controllers\backend\mdata.php	/^				$fields = $this->m->details($module_id,array('r_primary'=>'0'));$/;"	v	language:PHP
+fields	application\controllers\backend\mdata.php	/^			$fields = $this->m->details($module_id,array('r_primary'=>'0'));$/;"	v	language:PHP
 fields	application\controllers\backend\mdata.php	/^		$fields = $this->m->details($module_id,array('r_primary'=>'0'));	$/;"	v	language:PHP
 fields_html	application\controllers\backend\mdata.php	/^				$fields_html = $this->m->fetch_f_html();$/;"	v	language:PHP
 fields_html	application\controllers\backend\mdata.php	/^		$fields_html = $this->m->fetch_f_html();$/;"	v	language:PHP
@@ -550,16 +457,16 @@ main	application\controllers\backend\mdata.php	/^		$main = array();$/;"	v	langua
 media_fid	application\controllers\backend\mdata.php	/^	 		$media_fid = array_keys($this->f->fields_list('f_id',array('f_media'=>1)));$/;"	v	language:PHP
 media_fields	application\controllers\backend\mdata.php	/^	 		$media_fields = $this->cor_form->array_re_index($media_fields,'r_id','r_name');$/;"	v	language:PHP
 media_fields	application\controllers\backend\mdata.php	/^	 		$media_fields = $this->m->details($this->im->get_mid(),'f_id in ('.implode(',',$media_fid).') ','r_id,r_name');$/;"	v	language:PHP
-module_id	application\controllers\backend\mdata.php	/^				$module_id = $this->im->get_mid();$/;"	v	language:PHP
+module_id	application\controllers\backend\mdata.php	/^			$module_id = $this->im->get_mid();$/;"	v	language:PHP
 module_id	application\controllers\backend\mdata.php	/^		$module_id = $this->im->get_mid();$/;"	v	language:PHP
-primary	application\controllers\backend\mdata.php	/^				$primary = $this->m->fetch_primary($module_id,'r_name');$/;"	v	language:PHP
+primary	application\controllers\backend\mdata.php	/^			$primary = $this->m->fetch_primary($module_id,'r_name');$/;"	v	language:PHP
 primary	application\controllers\backend\mdata.php	/^			$primary = $this->m->fetch_primary($this->im->get_mid(),'r_name');$/;"	v	language:PHP
 primary	application\controllers\backend\mdata.php	/^		$primary = $this->m->fetch_primary($module_id,'r_name');$/;"	v	language:PHP
 query	application\controllers\backend\mdata.php	/^		$query  = $this->input->get();$/;"	v	language:PHP
 rs	application\controllers\backend\mdata.php	/^				$rs = $this->cor_db->save($data,$this->im->save_config());$/;"	v	language:PHP
 rs	application\controllers\backend\mdata.php	/^			$rs = $this->cor_db->delete($ids,$cfg);$/;"	v	language:PHP
 rules	application\controllers\backend\mdata.php	/^			$rules = $this->im->valid_config($data);$/;"	v	language:PHP
-size	application\controllers\backend\mdata.php	/^		$size = 15;$/;"	v	language:PHP
+size	application\controllers\backend\mdata.php	/^		$size = 6;$/;"	v	language:PHP
 uds	application\controllers\backend\mdata.php	/^	 					$uds = explode(',',$v1);$/;"	v	language:PHP
 Menu	application\controllers\backend\menu.php	/^ class Menu extends CI_Controller{$/;"	c	language:PHP
 __construct	application\controllers\backend\menu.php	/^ 	function __construct(){$/;"	f	language:PHP
@@ -1133,7 +1040,6 @@ MY_Config	application\core\MY_Config.php	/^class MY_Config  extends CI_Config {$
 contains	application\core\MY_Config.php	/^ * This class contains functions that enable config files to be managed$/;"	c	language:PHP
 site_url	application\core\MY_Config.php	/^    function site_url($uri = '')$/;"	f	language:PHP
 suffix	application\core\MY_Config.php	/^            $suffix = ($this->item('url_suffix') == FALSE) ? '' : $this->item('url_suffix');$/;"	v	language:PHP
-suffix	application\core\MY_Config.php	/^          \/\/ $suffix = ($this->item('url_suffix') == FALSE) ? '' : $this->item('url_suffix');$/;"	v	language:PHP
 MY_Input	application\core\MY_Input.php	/^class MY_Input extends CI_Input {$/;"	c	language:PHP
 __construct	application\core\MY_Input.php	/^	public function __construct()$/;"	f	language:PHP
 domain	application\core\MY_Input.php	/^			$domain = config_item('cookie_domain');$/;"	v	language:PHP
@@ -1245,13 +1151,19 @@ js_url	application\helpers\MY_url_helper.php	/^	     function js_url($uri=null,$
 lang	application\helpers\MY_url_helper.php	/^	         $lang = $lang?$lang:lang_get();$/;"	v	language:PHP
 path	application\helpers\MY_url_helper.php	/^	         $path = ($type == 'front')? $path.'\/'.$lang:$path;$/;"	v	language:PHP
 path	application\helpers\MY_url_helper.php	/^	         $path = base_url(config_item('template_dir').$type."\/".$c_theme);$/;"	v	language:PHP
+realUrl	application\helpers\MY_url_helper.php	/^	 	function realUrl($url){$/;"	f	language:PHP
 str	application\helpers\MY_url_helper.php	/^	          	$str = "<script type='text\/javascript' src='".$catalog.$uri.".js' ><\/script>";$/;"	v	language:PHP
 str	application\helpers\MY_url_helper.php	/^	         $str = '';$/;"	v	language:PHP
 str	application\helpers\MY_url_helper.php	/^	         $str= "<img src='".$catalog.$uri."' \/>";$/;"	v	language:PHP
 str	application\helpers\MY_url_helper.php	/^	         $str= "<link rel='stylesheet' type='text\/css' href='".$catalog.$uri.".css' media='all'>";$/;"	v	language:PHP
 theme_url	application\helpers\MY_url_helper.php	/^	     function theme_url($type='front',$lang=null)$/;"	f	language:PHP
+url_new	application\helpers\MY_url_helper.php	/^				$url_new = "javascript:;";$/;"	v	language:PHP
+url_new	application\helpers\MY_url_helper.php	/^				$url_new = $url;$/;"	v	language:PHP
+url_new	application\helpers\MY_url_helper.php	/^				$url_new = site_url().$url;$/;"	v	language:PHP
 coded	application\helpers\auth_helper.php	/^			$coded = $operation == 'ENCODE' ? str_replace('=', '', base64_encode($coded)) : $coded;$/;"	v	language:PHP
 coded	application\helpers\auth_helper.php	/^			$coded = '';		$/;"	v	language:PHP
+cor_base64_decode	application\helpers\auth_helper.php	/^	 function cor_base64_decode($string) { $/;"	f	language:PHP
+cor_base64_encode	application\helpers\auth_helper.php	/^	 function cor_base64_encode($string) { $/;"	f	language:PHP
 key	application\helpers\auth_helper.php	/^		 	$key  = config_item('encryption_key');	$/;"	v	language:PHP
 keylength	application\helpers\auth_helper.php	/^			$keylength = strlen($key);$/;"	v	language:PHP
 my_encrypt	application\helpers\auth_helper.php	/^	 function my_encrypt($string=null, $operation) { $/;"	f	language:PHP
@@ -1272,6 +1184,47 @@ return	application\helpers\ckeditor_helper.php	/^		$return =  '<script type="tex
 return	application\helpers\ckeditor_helper.php	/^	$return = '';$/;"	v	language:PHP
 return	application\helpers\ckeditor_helper.php	/^	$return = cke_initialize($data);$/;"	v	language:PHP
 return	application\helpers\ckeditor_helper.php	/^    $return = "<script type=\\"text\/javascript\\">$/;"	v	language:PHP
+CI	application\helpers\common_helper.php	/^		$CI = &get_instance();$/;"	v	language:PHP
+CI	application\helpers\common_helper.php	/^	$CI  =  &get_instance();$/;"	v	language:PHP
+a	application\helpers\common_helper.php	/^		$a = $CI->db->select( "region_id, region_name, parent_id")->from("ecs_region")->where("region_id",$id)->get()->result_array();$/;"	v	language:PHP
+a	application\helpers\common_helper.php	/^		$a = $cor_db->fetch_one($sql_arr);			$/;"	v	language:PHP
+a	application\helpers\common_helper.php	/^		$a = array_pop($a);		$/;"	v	language:PHP
+a	application\helpers\common_helper.php	/^	$a = $CI->db->select( "region_id, region_name, parent_id",false)->from("ecs_region")->where ("parent_id",$pid)->get()->result_array();$/;"	v	language:PHP
+aa	application\helpers\common_helper.php	/^		$aa = $area[$i]['region_name'] .($i ? '&nbsp;' : '').$aa;$/;"	v	language:PHP
+aa	application\helpers\common_helper.php	/^	$aa = '';$/;"	v	language:PHP
+area	application\helpers\common_helper.php	/^	$area = array();$/;"	v	language:PHP
+area	application\helpers\common_helper.php	/^	$area = get_area_show( $id );	$/;"	v	language:PHP
+category_options	application\helpers\common_helper.php	/^	function category_options($id=0,$index=0,$m=0){		$/;"	f	language:PHP
+cor_db	application\helpers\common_helper.php	/^	$cor_db  =  &get_cor_db();$/;"	v	language:PHP
+display_size	application\helpers\common_helper.php	/^	function display_size($file_size){ $/;"	f	language:PHP
+ed	application\helpers\common_helper.php	/^		$ed = 0;$/;"	v	language:PHP
+file_size	application\helpers\common_helper.php	/^		$file_size = $file_size . "B"; $/;"	v	language:PHP
+file_size	application\helpers\common_helper.php	/^		$file_size = round($file_size \/ 1024 * 100) \/ 100 . "K"; $/;"	v	language:PHP
+file_size	application\helpers\common_helper.php	/^		$file_size = round($file_size \/ 1048576 * 100) \/ 100 . "M"; $/;"	v	language:PHP
+file_size	application\helpers\common_helper.php	/^		$file_size = round($file_size \/ 1073741824 * 100) \/ 100 . "G"; $/;"	v	language:PHP
+get_area	application\helpers\common_helper.php	/^function get_area($id) {$/;"	f	language:PHP
+get_area_help	application\helpers\common_helper.php	/^function get_area_help( $pid, $id ,$select_name='area[]') {$/;"	f	language:PHP
+get_area_show	application\helpers\common_helper.php	/^function get_area_show( $id ) {$/;"	f	language:PHP
+get_area_str	application\helpers\common_helper.php	/^function get_area_str( $id ) {$/;"	f	language:PHP
+html	application\helpers\common_helper.php	/^		$html = get_area_help( $a['parent_id'], $id ) ."<span>&nbsp;" .$html."<\/span>";$/;"	v	language:PHP
+html	application\helpers\common_helper.php	/^	$html = "";$/;"	v	language:PHP
+i	application\helpers\common_helper.php	/^	$i = 0;$/;"	v	language:PHP
+id	application\helpers\common_helper.php	/^		$id = $a['parent_id'];		$/;"	v	language:PHP
+id	application\helpers\common_helper.php	/^		$id = $a['parent_id'];$/;"	v	language:PHP
+k	application\helpers\common_helper.php	/^		foreach($tree_db as $k=>$v){$/;"	v	language:PHP
+len	application\helpers\common_helper.php	/^		$len = strlen($string);$/;"	v	language:PHP
+loop	application\helpers\common_helper.php	/^		$loop = 0;$/;"	v	language:PHP
+msubstr	application\helpers\common_helper.php	/^	function msubstr($string, $start, $end,$tail='...') {$/;"	f	language:PHP
+n	application\helpers\common_helper.php	/^		$n = str_pad('',$m,'-',STR_PAD_RIGHT);$/;"	v	language:PHP
+n	application\helpers\common_helper.php	/^		$n = str_replace("-","&nbsp;&nbsp;",$n);$/;"	v	language:PHP
+options	application\helpers\common_helper.php	/^		static $options;$/;"	v	language:PHP
+s	application\helpers\common_helper.php	/^			$s = $id == $aa['region_id'] ? ' selected' : '';$/;"	v	language:PHP
+spac	application\helpers\common_helper.php	/^		$spac = mb_detect_encoding($string) == 'UTF-8' ? 3 : 2;$/;"	v	language:PHP
+sql_arr	application\helpers\common_helper.php	/^		$sql_arr = array($/;"	v	language:PHP
+st	application\helpers\common_helper.php	/^		$st = 0;$/;"	v	language:PHP
+str	application\helpers\common_helper.php	/^		$str = substr($string, $st, $ed);$/;"	v	language:PHP
+tree_db	application\helpers\common_helper.php	/^ 		$tree_db = $CI->db->select('cc_id,cc_title,cc_parent_id',false)->from($cor_db->mytable('class_category'),false)->order_by('cc_id','asc')->order_by('sort','asc')->get()->result_array();$/;"	v	language:PHP
+tree_options_deal	application\helpers\common_helper.php	/^	function tree_options_deal($class_arr,$id,$index,$m)$/;"	f	language:PHP
 cookie	application\helpers\cor_lang_helper.php	/^		$cookie = array($/;"	v	language:PHP
 lang	application\helpers\cor_lang_helper.php	/^		$lang = $lang?$lang:config_item('language');$/;"	v	language:PHP
 lang	application\helpers\cor_lang_helper.php	/^		$lang = $lang_get?$lang_get:$lang;	$/;"	v	language:PHP
@@ -1337,13 +1290,6 @@ width	application\helpers\imgcode_helper.php	/^$width = $fontWidth * strlen($cod
 json	application\helpers\json_helper.php	/^  	 $json = new Services_JSON();$/;"	v	language:PHP
 json_decode	application\helpers\json_helper.php	/^  function json_decode($data = null)$/;"	f	language:PHP
 json_encode	application\helpers\json_helper.php	/^  function json_encode($data = null)$/;"	f	language:PHP
-ed	application\helpers\msubstr_helper.php	/^		$ed = 0;$/;"	v	language:PHP
-len	application\helpers\msubstr_helper.php	/^		$len = strlen($string);$/;"	v	language:PHP
-loop	application\helpers\msubstr_helper.php	/^		$loop = 0;$/;"	v	language:PHP
-msubstr	application\helpers\msubstr_helper.php	/^	function msubstr($string, $start, $end,$tail='...') {$/;"	f	language:PHP
-spac	application\helpers\msubstr_helper.php	/^		$spac = mb_detect_encoding($string) == 'UTF-8' ? 3 : 2;$/;"	v	language:PHP
-st	application\helpers\msubstr_helper.php	/^		$st = 0;$/;"	v	language:PHP
-str	application\helpers\msubstr_helper.php	/^		$str = substr($string, $st, $ed);$/;"	v	language:PHP
 __construct	application\helpers\timecount_helper.php	/^	public function __construct(){$/;"	f	language:PHP
 __destruct	application\helpers\timecount_helper.php	/^	public function __destruct(){$/;"	f	language:PHP
 executeTime	application\helpers\timecount_helper.php	/^class executeTime{$/;"	c	language:PHP
@@ -5038,14 +4984,15 @@ output	application\libraries\breadcrumb.php	/^	function output()$/;"	f	language:
 prepend_crumb	application\libraries\breadcrumb.php	/^	function prepend_crumb($title, $href)$/;"	f	language:PHP
 tpl	application\libraries\breadcrumb.php	/^			$tpl  = &get_tpl();$/;"	v	language:PHP
 CI	application\libraries\cor_auth.php	/^ 		$CI = &get_instance();$/;"	v	language:PHP
+CI	application\libraries\cor_auth.php	/^    	$CI = &get_instance();$/;"	v	language:PHP
 CI	application\libraries\cor_auth.php	/^        $CI = &get_instance();$/;"	v	language:PHP
 Cor_auth	application\libraries\cor_auth.php	/^ class Cor_auth{$/;"	c	language:PHP
 __construct	application\libraries\cor_auth.php	/^ 	function __construct(){$/;"	f	language:PHP
-auth	application\libraries\cor_auth.php	/^		    	$auth = '$righs['.$auth.']';$/;"	v	language:PHP
-auth	application\libraries\cor_auth.php	/^		    	$auth = '$righs['.str_replace(',','][detail][',$auth).']';$/;"	v	language:PHP
+admins	application\libraries\cor_auth.php	/^		$admins = $rights_all['admin'];$/;"	v	language:PHP
 auth_info	application\libraries\cor_auth.php	/^ 	 	$auth_info =  array($/;"	v	language:PHP
 cookie	application\libraries\cor_auth.php	/^ 			$cookie = array($/;"	v	language:PHP
 cookie	application\libraries\cor_auth.php	/^ 		$cookie = array($/;"	v	language:PHP
+data	application\libraries\cor_auth.php	/^		    $data = array($/;"	v	language:PHP
 data	application\libraries\cor_auth.php	/^	   		$data = $CI->cor_db->fetch_all(250);$/;"	v	language:PHP
 data	application\libraries\cor_auth.php	/^ 			$data = $CI->cor_cache->cache_fetch('admin_rights_config',null,lang_get());$/;"	v	language:PHP
 data	application\libraries\cor_auth.php	/^ 		$data   = $this->getAuthMenu();$/;"	v	language:PHP
@@ -5056,6 +5003,7 @@ db_user	application\libraries\cor_auth.php	/^ 	function db_user($field=null){$/;
 execute_auth	application\libraries\cor_auth.php	/^ 	function execute_auth($auth=null){$/;"	f	language:PHP
 fetch_auth	application\libraries\cor_auth.php	/^ 	function fetch_auth($type=null){$/;"	f	language:PHP
 fetch_rights_menus	application\libraries\cor_auth.php	/^ 	function fetch_rights_menus($role_id = null,$menu=false){$/;"	f	language:PHP
+flag	application\libraries\cor_auth.php	/^	   		$flag = false;$/;"	v	language:PHP
 getAuthMenu	application\libraries\cor_auth.php	/^ 	function getAuthMenu(){$/;"	f	language:PHP
 get_rights_item	application\libraries\cor_auth.php	/^ 	function get_rights_item(){$/;"	f	language:PHP
 group	application\libraries\cor_auth.php	/^ 				$group = $CI->Roles_model->fetch_roles_list();$/;"	v	language:PHP
@@ -5064,15 +5012,22 @@ hdt	application\libraries\cor_auth.php	/^ 			$hdt = $have_rights[$k];$/;"	v	lang
 hdt1	application\libraries\cor_auth.php	/^ 				 $hdt1  = $hdt[detail][$k1];$/;"	v	language:PHP
 id	application\libraries\cor_auth.php	/^ 		$id = $this->fetch_auth('user_id');$/;"	v	language:PHP
 k	application\libraries\cor_auth.php	/^		 	foreach($rights_all['admin'] as $k=>&$v){ $/;"	v	language:PHP
+k	application\libraries\cor_auth.php	/^		foreach($have_rights as $k=>$v){$/;"	v	language:PHP
 k	application\libraries\cor_auth.php	/^	   	foreach($data['list'] as $k=>$v){$/;"	v	language:PHP
 k	application\libraries\cor_auth.php	/^ 		foreach($rights_all[admin] as $k=>$v){$/;"	v	language:PHP
 k	application\libraries\cor_auth.php	/^ 		foreach($session_data as $k=>$v){$/;"	v	language:PHP
 k	application\libraries\cor_auth.php	/^ 		foreach((array)$menu_rights[detail] as $k=>$v){$/;"	v	language:PHP
+k1	application\libraries\cor_auth.php	/^			foreach((array)$v['detail'] as $k1=>$v1){$/;"	v	language:PHP
 k1	application\libraries\cor_auth.php	/^		 		foreach($v['detail'] as $k1=>&$v1){$/;"	v	language:PHP
 k1	application\libraries\cor_auth.php	/^ 			foreach($v[detail] as $k1=>$v1){$/;"	v	language:PHP
+k2	application\libraries\cor_auth.php	/^				 foreach((array)$v1['detail'] as $k2=>$v2){$/;"	v	language:PHP
+k3	application\libraries\cor_auth.php	/^				     foreach((array)$v2['detail'] as $k3=>$v3){$/;"	v	language:PHP
+ls	application\libraries\cor_auth.php	/^	   		$ls = $CI->cor_form->array_re_index($data['list'],'r_id');$/;"	v	language:PHP
 menu_rights	application\libraries\cor_auth.php	/^ 			$menu_rights = null;$/;"	v	language:PHP
 process_login	application\libraries\cor_auth.php	/^ 	function process_login($session_data){$/;"	f	language:PHP
 process_logout	application\libraries\cor_auth.php	/^ 	function process_logout($session_data,$url="."){ $/;"	f	language:PHP
+r	application\libraries\cor_auth.php	/^				    	$r = '$righs['.$a.']';$/;"	v	language:PHP
+r	application\libraries\cor_auth.php	/^	    				$r = '$righs['.str_replace(',','][detail][',$a).']';$/;"	v	language:PHP
 r_code	application\libraries\cor_auth.php	/^	   			$r_code =  '['.$r_code.']';$/;"	v	language:PHP
 r_code	application\libraries\cor_auth.php	/^	   			$r_code =  '['.str_replace(',','][detail][',$v['r_code']).']';$/;"	v	language:PHP
 r_code	application\libraries\cor_auth.php	/^	   		$r_code = $v['r_code'];$/;"	v	language:PHP
@@ -5080,7 +5035,14 @@ r_code	application\libraries\cor_auth.php	/^	   		$r_code = '$rights[admin]'.$r_
 righs	application\libraries\cor_auth.php	/^		    $righs = $this->fetch_auth('user_rights');$/;"	v	language:PHP
 rights_all	application\libraries\cor_auth.php	/^ 		 $rights_all = $this->get_rights_item();$/;"	v	language:PHP
 rights_deal	application\libraries\cor_auth.php	/^ 	function rights_deal($menu_rights,$have_rights){$/;"	f	language:PHP
+rs	application\libraries\cor_auth.php	/^						 $rs = $admins[$k]['detail'][$k1]['detail'][$k2]['detail'][$k3];$/;"	v	language:PHP
+rs	application\libraries\cor_auth.php	/^					 $rs = $admins[$k]['detail'][$k1]['detail'][$k2];$/;"	v	language:PHP
+rs	application\libraries\cor_auth.php	/^				 $rs = $admins[$k]['detail'][$k1];$/;"	v	language:PHP
+rs	application\libraries\cor_auth.php	/^		    $rs = $admins[$k];$/;"	v	language:PHP
+sort1	application\libraries\cor_auth.php	/^			$sort1 = array();$/;"	v	language:PHP
 sort1	application\libraries\cor_auth.php	/^		 		$sort1 = null;$/;"	v	language:PHP
+sort2	application\libraries\cor_auth.php	/^				 $sort2 = array();$/;"	v	language:PHP
+sort3	application\libraries\cor_auth.php	/^				     $sort3 = array();$/;"	v	language:PHP
 sql	application\libraries\cor_auth.php	/^				$sql = "select a.* from ".$CI->db->dbprefix."admins as a  where a.admin_id=".$id." ";$/;"	v	language:PHP
 sql	application\libraries\cor_auth.php	/^ 			$sql = "select a.rights,a.role_id from ".$CI->db->dbprefix."roles as a  inner join ".$CI->db->dbprefix."admins as b on a.role_id=b.group_id where b.admin_id=".$uid." ";$/;"	v	language:PHP
 sql	application\libraries\cor_auth.php	/^ 		 $sql = "select b.group_id from   ".$CI->db->dbprefix."admins  as b where b.admin_id=".$uid." ";$/;"	v	language:PHP
@@ -5261,7 +5223,7 @@ MakeHtmlFile	application\libraries\cor_page.php	/^	function MakeHtmlFile($file_n
 __construct	application\libraries\cor_page.php	/^	public function __construct()$/;"	f	language:PHP
 act_current	application\libraries\cor_page.php	/^		$act_current = $CI->router->fetch_method();$/;"	v	language:PHP
 array_to_url	application\libraries\cor_page.php	/^	function array_to_url($array){			$/;"	f	language:PHP
-backend_redirect	application\libraries\cor_page.php	/^	function backend_redirect($url,$msg=null){	$/;"	f	language:PHP
+backend_redirect	application\libraries\cor_page.php	/^	function backend_redirect($url,$msg=null,$view='page_redirect'){	$/;"	f	language:PHP
 backend_redirects	application\libraries\cor_page.php	/^	function backend_redirects($url_array,$msg=null){	$/;"	f	language:PHP
 backend_theme	application\libraries\cor_page.php	/^		$this->backend_theme = $sys_config['template'];$/;"	v	language:PHP
 cache	application\libraries\cor_page.php	/^			$cache = &get_cor_cache();$/;"	v	language:PHP
@@ -5456,59 +5418,6 @@ url	application\libraries\curl.php	/^	protected $url;                 \/\/ URL o
 username	application\libraries\curl.php	/^	public function simple_ftp_get($url, $file_path, $username = '', $password = '')$/;"	v	language:PHP
 verb	application\libraries\curl.php	/^			$verb = str_replace('simple_', '', $method);$/;"	v	language:PHP
 verify_host	application\libraries\curl.php	/^	public function ssl($verify_peer = TRUE, $verify_host = 2, $path_to_cert = NULL)$/;"	v	language:PHP
-BasePath	application\libraries\fckeditor.php	/^		$this->BasePath		= base_url().'\/fckeditor\/' ;$/;"	v	language:PHP
-BasePath	application\libraries\fckeditor.php	/^	public $BasePath ;$/;"	v	language:PHP
-Config	application\libraries\fckeditor.php	/^		$this->Config		= array_slice($config,5) ;				$/;"	v	language:PHP
-Config	application\libraries\fckeditor.php	/^	public $Config ;$/;"	v	language:PHP
-Create	application\libraries\fckeditor.php	/^	public function Create()	{$/;"	f	language:PHP
-CreateHtml	application\libraries\fckeditor.php	/^	public function CreateHtml($config=null)$/;"	f	language:PHP
-EncodeConfig	application\libraries\fckeditor.php	/^	public function EncodeConfig( $valueToEncode )$/;"	f	language:PHP
-FCKeditor	application\libraries\fckeditor.php	/^class FCKeditor$/;"	c	language:PHP
-FCKeditor_IsCompatibleBrowser	application\libraries\fckeditor.php	/^function FCKeditor_IsCompatibleBrowser()$/;"	f	language:PHP
-File	application\libraries\fckeditor.php	/^				$File = 'fckeditor.html' ;$/;"	v	language:PHP
-File	application\libraries\fckeditor.php	/^				$File = 'fckeditor.original.html' ;$/;"	v	language:PHP
-GetConfigFieldString	application\libraries\fckeditor.php	/^	public function GetConfigFieldString()$/;"	f	language:PHP
-Height	application\libraries\fckeditor.php	/^			$this->Height				=  $config['h'] ;$/;"	v	language:PHP
-Height	application\libraries\fckeditor.php	/^			$this->Height				= '200' ;$/;"	v	language:PHP
-Height	application\libraries\fckeditor.php	/^	public $Height ;$/;"	v	language:PHP
-HeightCSS	application\libraries\fckeditor.php	/^				$HeightCSS = $this->Height . 'px' ;$/;"	v	language:PHP
-HeightCSS	application\libraries\fckeditor.php	/^				$HeightCSS = $this->Height ;$/;"	v	language:PHP
-Html	application\libraries\fckeditor.php	/^		$Html = '' ;$/;"	v	language:PHP
-HtmlValue	application\libraries\fckeditor.php	/^		$HtmlValue = htmlspecialchars( $this->Value ) ;$/;"	v	language:PHP
-InstanceName	application\libraries\fckeditor.php	/^			$this->InstanceName			= 'instance_name' ;$/;"	v	language:PHP
-InstanceName	application\libraries\fckeditor.php	/^			$this->InstanceName			= empty($config['i'])?"Default":$config['i'] ;$/;"	v	language:PHP
-InstanceName	application\libraries\fckeditor.php	/^	public $InstanceName ;$/;"	v	language:PHP
-IsCompatible	application\libraries\fckeditor.php	/^	public function IsCompatible()$/;"	f	language:PHP
-Link	application\libraries\fckeditor.php	/^			$Link = "{$this->BasePath}editor\/{$File}?InstanceName={$this->InstanceName}" ;$/;"	v	language:PHP
-ToolbarCanCollapse	application\libraries\fckeditor.php	/^			$this->ToolbarCanCollapse 	= t1;$/;"	v	language:PHP
-ToolbarSet	application\libraries\fckeditor.php	/^			$this->ToolbarSet			= 'Basic' ;$/;"	v	language:PHP
-ToolbarSet	application\libraries\fckeditor.php	/^			$this->ToolbarSet			= empty($config['t'])?"Basic":$config['t'] ;$/;"	v	language:PHP
-ToolbarSet	application\libraries\fckeditor.php	/^	public $ToolbarSet ;$/;"	v	language:PHP
-Value	application\libraries\fckeditor.php	/^			$this->Value				= $config['v'] ;$/;"	v	language:PHP
-Value	application\libraries\fckeditor.php	/^			$this->Value				= '' ;	$/;"	v	language:PHP
-Value	application\libraries\fckeditor.php	/^	public $Value ;$/;"	v	language:PHP
-Width	application\libraries\fckeditor.php	/^			$this->Width				= $config['w'] ;$/;"	v	language:PHP
-Width	application\libraries\fckeditor.php	/^			$this->Width				= '100%' ;$/;"	v	language:PHP
-Width	application\libraries\fckeditor.php	/^	public $Width ;$/;"	v	language:PHP
-WidthCSS	application\libraries\fckeditor.php	/^				$WidthCSS = $this->Width . 'px' ;$/;"	v	language:PHP
-WidthCSS	application\libraries\fckeditor.php	/^				$WidthCSS = $this->Width ;$/;"	v	language:PHP
-__construct	application\libraries\fckeditor.php	/^	public function __construct(  )$/;"	f	language:PHP
-bFirst	application\libraries\fckeditor.php	/^				$bFirst = false ;$/;"	v	language:PHP
-bFirst	application\libraries\fckeditor.php	/^			if ( $bFirst == false )$/;"	v	language:PHP
-bFirst	application\libraries\fckeditor.php	/^		$bFirst = true ;$/;"	v	language:PHP
-chars	application\libraries\fckeditor.php	/^		$chars = array($/;"	v	language:PHP
-fVersion	application\libraries\fckeditor.php	/^		$fVersion = (float)substr($sAgent, strpos($sAgent, 'Opera\/') + 6, 4) ;$/;"	v	language:PHP
-iVersion	application\libraries\fckeditor.php	/^		$iVersion = $matches[1] ;$/;"	v	language:PHP
-iVersion	application\libraries\fckeditor.php	/^		$iVersion = (float)substr($sAgent, strpos($sAgent, 'MSIE') + 5, 3) ;$/;"	v	language:PHP
-iVersion	application\libraries\fckeditor.php	/^		$iVersion = (int)substr($sAgent, strpos($sAgent, 'Gecko\/') + 6, 8) ;$/;"	v	language:PHP
-sAgent	application\libraries\fckeditor.php	/^			$sAgent = $HTTP_SERVER_VARS['HTTP_USER_AGENT'] ;$/;"	v	language:PHP
-sAgent	application\libraries\fckeditor.php	/^			$sAgent = $HTTP_USER_AGENT ;$/;"	v	language:PHP
-sAgent	application\libraries\fckeditor.php	/^		$sAgent = $_SERVER['HTTP_USER_AGENT'] ;$/;"	v	language:PHP
-sKey	application\libraries\fckeditor.php	/^		foreach ( $this->Config as $sKey => $sValue )$/;"	v	language:PHP
-sParams	application\libraries\fckeditor.php	/^		$sParams = '' ;$/;"	v	language:PHP
-sValue	application\libraries\fckeditor.php	/^			else if ( $sValue === false )$/;"	v	language:PHP
-sValue	application\libraries\fckeditor.php	/^			if ( $sValue === true )$/;"	v	language:PHP
-that	application\libraries\fckeditor.php	/^ * It defines the FCKeditor class that can be used to create editor$/;"	c	language:PHP
 CI	application\libraries\invoke.php	/^ 		$CI = &get_instance();$/;"	v	language:PHP
 Invoke	application\libraries\invoke.php	/^ class Invoke {$/;"	c	language:PHP
 __construct	application\libraries\invoke.php	/^ 	function __construct($db_conn=null){$/;"	f	language:PHP
@@ -5536,6 +5445,7 @@ caching	application\libraries\tpl.php	/^		config_item('view_caching')			&&	$this
 ci	application\libraries\tpl.php	/^	$ci = &get_instance();	$/;"	v	language:PHP
 ci	application\libraries\tpl.php	/^	$ci = &get_instance();$/;"	v	language:PHP
 ci_anchor	application\libraries\tpl.php	/^function ci_anchor($array){$/;"	f	language:PHP
+ci_config	application\libraries\tpl.php	/^        $ci_config  = &get_config();$/;"	v	language:PHP
 ci_form_error	application\libraries\tpl.php	/^function ci_form_error($array){$/;"	f	language:PHP
 ci_router	application\libraries\tpl.php	/^function ci_router($key=''){	$/;"	f	language:PHP
 ci_uri	application\libraries\tpl.php	/^function ci_uri($array=null){$/;"	f	language:PHP
@@ -5570,8 +5480,9 @@ func_vsprintf	application\libraries\tpl.php	/^function func_vsprintf($array){$/;
 func_work_year	application\libraries\tpl.php	/^function func_work_year($array){$/;"	f	language:PHP
 get_tpl	application\libraries\tpl.php	/^	public static function &get_tpl(){ 	$/;"	f	language:PHP
 get_tpl	application\libraries\tpl.php	/^function &get_tpl(){	$/;"	f	language:PHP
-html	application\libraries\tpl.php	/^			$html = '<a href="'.$url.'" class="button_bg" id="'.$id.'" >'.$title.'<\/a>';$/;"	v	language:PHP
-html	application\libraries\tpl.php	/^			$html = '<a href="'.site_url($url).'" class="button_bg" id="'.$id.'">'.$title.'<\/a>';$/;"	v	language:PHP
+html	application\libraries\tpl.php	/^			$html = '<input type="button" onclick="'.$url.'" class="button_bg" id="'.$id.'" value="'.$title.'" \/>';$/;"	v	language:PHP
+html	application\libraries\tpl.php	/^			$html = '<input type="button" onclick="self.location.href=\\''.$url.'\\'" class="button_bg" id="'.$id.'" value="'.$title.'" \/>';$/;"	v	language:PHP
+html	application\libraries\tpl.php	/^			$html = '<input type="button" onclick="self.location.href=\\''.site_url($url).'\\'"  class="button_bg" id="'.$id.'" value="'.$title.'" \/>';$/;"	v	language:PHP
 html	application\libraries\tpl.php	/^			$html = preg_replace("\/value=\\"".$v."\\" \/", "value=\\"$v\\" checked=\\"checked\\"", $html);$/;"	v	language:PHP
 html	application\libraries\tpl.php	/^		$html = get_area_help( $a['parent_id'], $id ) ."<span>&nbsp;" .$html."<\/span>";$/;"	v	language:PHP
 html	application\libraries\tpl.php	/^		$html = preg_replace("\/value=\\"".$array[value]."\\" \/", "value=\\"$array[value]\\" checked=\\"checked\\"", $html);$/;"	v	language:PHP
@@ -5846,36 +5757,23 @@ db_config	application\models\commission_model.php	/^	function db_config(){$/;"	f
 editor	application\models\commission_model.php	/^	function editor($v,$i='content'){$/;"	f	language:PHP
 validator	application\models\commission_model.php	/^	function validator(){	 $/;"	f	language:PHP
 CI	application\models\common_model.php	/^		$CI  =  &get_instance();	$/;"	v	language:PHP
-CI	application\models\common_model.php	/^		$CI = &get_instance();$/;"	v	language:PHP
 CI	application\models\common_model.php	/^	 	$CI = &get_instance();$/;"	v	language:PHP
-CI	application\models\common_model.php	/^	$CI  =  &get_instance();$/;"	v	language:PHP
 Common_model	application\models\common_model.php	/^class Common_model  extends CI_Model{$/;"	c	language:PHP
 DateAdd	application\models\common_model.php	/^	function DateAdd($part, $number, $date){$/;"	f	language:PHP
 DateDiff	application\models\common_model.php	/^	function DateDiff($part, $begin, $end){$/;"	f	language:PHP
 __construct	application\models\common_model.php	/^	function __construct(){	$/;"	f	language:PHP
-a	application\models\common_model.php	/^		$a = $CI->db->select( "region_id, region_name, parent_id")->from("ecs_region")->where("region_id",$id)->get()->result_array();$/;"	v	language:PHP
 a	application\models\common_model.php	/^		$a = $CI->db->select( "region_id, region_name, parent_id",false)->from("ecs_region")->where ("parent_id",1)->get()->result_array();$/;"	v	language:PHP
-a	application\models\common_model.php	/^		$a = $cor_db->fetch_one($sql_arr);			$/;"	v	language:PHP
-a	application\models\common_model.php	/^		$a = array_pop($a);		$/;"	v	language:PHP
-a	application\models\common_model.php	/^	$a = $CI->db->select( "region_id, region_name, parent_id",false)->from("ecs_region")->where ("parent_id",$pid)->get()->result_array();$/;"	v	language:PHP
-aa	application\models\common_model.php	/^		$aa = $area[$i]['region_name'] .($i ? '&nbsp;' : '').$aa;$/;"	v	language:PHP
-aa	application\models\common_model.php	/^	$aa = '';$/;"	v	language:PHP
 ajax_invoke_save	application\models\common_model.php	/^	function ajax_invoke_save($data){$/;"	f	language:PHP
 ar	application\models\common_model.php	/^		$ar = $this->cor_form->indexArrayByKey($list,'region_id','region_name');		$/;"	v	language:PHP
 ar	application\models\common_model.php	/^		static $ar;$/;"	v	language:PHP
-area	application\models\common_model.php	/^	$area = array();$/;"	v	language:PHP
-area	application\models\common_model.php	/^	$area = get_area_show( $id );	$/;"	v	language:PHP
 area2	application\models\common_model.php	/^		$area2 = array_pop($area);$/;"	v	language:PHP
 bcdiv2	application\models\common_model.php	/^	 function bcdiv2( $first, $second, $scale = 0 )$/;"	f	language:PHP
-category_options	application\models\common_model.php	/^	function category_options($id=0,$index=0,$m=0){		$/;"	f	language:PHP
 cfg	application\models\common_model.php	/^		$cfg = array($/;"	v	language:PHP
-ckeditor	application\models\common_model.php	/^	function ckeditor($v,$i='content',$tool_bar='Basic'){$/;"	f	language:PHP
+ckeditor	application\models\common_model.php	/^	function ckeditor($v,$i='content',$tool_bar='Basic',$w=600,$h=400){$/;"	f	language:PHP
 class_rs	application\models\common_model.php	/^		$class_rs= $this->db->select("cc_id")->from($this->cor_db->mytable('class_category'))$/;"	v	language:PHP
-config	application\models\common_model.php	/^			$config = array($/;"	v	language:PHP
 config	application\models\common_model.php	/^		$config = array($/;"	v	language:PHP
 cor_db	application\models\common_model.php	/^		$cor_db  =  &get_cor_db();	$/;"	v	language:PHP
 cor_db	application\models\common_model.php	/^	 	$cor_db  =  &get_cor_db();	$/;"	v	language:PHP
-cor_db	application\models\common_model.php	/^	$cor_db  =  &get_cor_db();$/;"	v	language:PHP
 cor_page	application\models\common_model.php	/^	 	$cor_page = &get_cor_page();$/;"	v	language:PHP
 count	application\models\common_model.php	/^		$count = $dsq->first_row('array');$/;"	v	language:PHP
 date_array	application\models\common_model.php	/^		$date_array = getdate(strtotime($date));$/;"	v	language:PHP
@@ -5888,11 +5786,10 @@ diff	application\models\common_model.php	/^		$diff = strtotime($end) - strtotime
 download	application\models\common_model.php	/^	function download($file_path){	$/;"	f	language:PHP
 ds	application\models\common_model.php	/^	 	$ds = $cor_db->getDs();$/;"	v	language:PHP
 dsq	application\models\common_model.php	/^		$dsq= $ds->query("select count(1) as total from ($sql_count) as t ");$/;"	v	language:PHP
-editor	application\models\common_model.php	/^	function editor($v,$i='content',$tool_bar='Basic'){$/;"	f	language:PHP
+editor	application\models\common_model.php	/^	function editor($v,$i='content',$tool_bar='Basic',$w=600,$h=400){$/;"	f	language:PHP
 encoded_filename	application\models\common_model.php	/^		$encoded_filename =  basename($file_path);$/;"	v	language:PHP
 encoded_filename	application\models\common_model.php	/^		$encoded_filename = str_replace("+", "%20", $encoded_filename);$/;"	v	language:PHP
 encoded_filename	application\models\common_model.php	/^		$encoded_filename = urlencode($encoded_filename);$/;"	v	language:PHP
-fckeditor	application\models\common_model.php	/^	function fckeditor($v,$i='content',$tool_bar='Basic'){$/;"	f	language:PHP
 fetchClass	application\models\common_model.php	/^	function fetchClass($class_id){$/;"	f	language:PHP
 fetchPostArrea	application\models\common_model.php	/^	function fetchPostArrea($area){$/;"	f	language:PHP
 fetch_images	application\models\common_model.php	/^	function fetch_images($uid,$thumb=false){$/;"	f	language:PHP
@@ -5905,27 +5802,17 @@ func_get_province	application\models\common_model.php	/^	function func_get_provi
 getArea	application\models\common_model.php	/^	function getArea($p_id){		$/;"	f	language:PHP
 getBackendSession	application\models\common_model.php	/^	function getBackendSession(){		$/;"	f	language:PHP
 get_Captcha	application\models\common_model.php	/^	function get_Captcha(){$/;"	f	language:PHP
-get_area	application\models\common_model.php	/^function get_area($id) {$/;"	f	language:PHP
-get_area_help	application\models\common_model.php	/^function get_area_help( $pid, $id ,$select_name='area[]') {$/;"	f	language:PHP
-get_area_show	application\models\common_model.php	/^function get_area_show( $id ) {$/;"	f	language:PHP
-get_area_str	application\models\common_model.php	/^function get_area_str( $id ) {$/;"	f	language:PHP
 get_nav	application\models\common_model.php	/^	function get_nav($tb,$id,$title_field,$where='1=1'){$/;"	f	language:PHP
 get_real_url	application\models\common_model.php	/^	function get_real_url(){$/;"	f	language:PHP
 get_uid	application\models\common_model.php	/^	function get_uid(){$/;"	f	language:PHP
 h	application\models\common_model.php	/^		$h =fopen(FCPATH.'\/debug\/debug.txt',$mode);$/;"	v	language:PHP
 hor	application\models\common_model.php	/^		$hor = $date_array["hours"];$/;"	v	language:PHP
-html	application\models\common_model.php	/^		$html = get_area_help( $a['parent_id'], $id ) ."<span>&nbsp;" .$html."<\/span>";$/;"	v	language:PHP
-html	application\models\common_model.php	/^	$html = "";$/;"	v	language:PHP
 html_field	application\models\common_model.php	/^		$html_field = (empty($html_type) || $html_type=='list')?'t_html':'t_html_'.$html_type;		$/;"	v	language:PHP
-i	application\models\common_model.php	/^	$i = 0;$/;"	v	language:PHP
-id	application\models\common_model.php	/^		$id = $a['parent_id'];		$/;"	v	language:PHP
-id	application\models\common_model.php	/^		$id = $a['parent_id'];$/;"	v	language:PHP
 img_field	application\models\common_model.php	/^		$img_field = $thumb?"REPLACE(i_url,'images','_thumbs\/Images') as i_url ":'i_url';$/;"	v	language:PHP
 imgcode	application\models\common_model.php	/^		$imgcode=new imgcode();$/;"	v	language:PHP
 j	application\models\common_model.php	/^		$j=count($matches[1]);$/;"	v	language:PHP
 join_ar	application\models\common_model.php	/^			$join_ar = explode(';',$join);$/;"	v	language:PHP
 k	application\models\common_model.php	/^		foreach($ls as $k=>$item):$/;"	v	language:PHP
-k	application\models\common_model.php	/^		foreach($tree_db as $k=>$v){$/;"	v	language:PHP
 lang_all	application\models\common_model.php	/^	function lang_all(){$/;"	f	language:PHP
 lang_current	application\models\common_model.php	/^		$lang_current = lang_get();$/;"	v	language:PHP
 lang_get_link	application\models\common_model.php	/^	function lang_get_link(){$/;"	f	language:PHP
@@ -5940,9 +5827,6 @@ ls	application\models\common_model.php	/^		$ls = $this->db->select('i_url',false
 min	application\models\common_model.php	/^		$min = $date_array["minutes"];$/;"	v	language:PHP
 mkdirs	application\models\common_model.php	/^	function mkdirs($dir){  $/;"	f	language:PHP
 mon	application\models\common_model.php	/^		$mon = $date_array["mon"];$/;"	v	language:PHP
-n	application\models\common_model.php	/^		$n = str_pad('',$m,'-',STR_PAD_RIGHT);$/;"	v	language:PHP
-n	application\models\common_model.php	/^		$n = str_replace("-","&nbsp;&nbsp;",$n);$/;"	v	language:PHP
-options	application\models\common_model.php	/^		static $options;$/;"	v	language:PHP
 page_size	application\models\common_model.php	/^		$page_size = $page_size?$page_size:config_item('per_page');$/;"	v	language:PHP
 pager	application\models\common_model.php	/^			$pager  = $CI->pagination->create_links(); $/;"	v	language:PHP
 pager	application\models\common_model.php	/^			$pager = $CI->pagination->create_ajax_links();$/;"	v	language:PHP
@@ -5965,7 +5849,6 @@ reval	application\models\common_model.php	/^ 		$reval = array();$/;"	v	language:
 rs	application\models\common_model.php	/^		$rs  = $this->cor_form->array_re_index($rs,'i_id','i_url');$/;"	v	language:PHP
 rs	application\models\common_model.php	/^		$rs = $cor_db->fetch_one($config);$/;"	v	language:PHP
 rs	application\models\common_model.php	/^		$rs = $this->db->select("i_id,".$img_field,false)->from('module_images')->where_in('i_uid',$uid_convert)->order_by('i_id','asc')->get()->result_array();$/;"	v	language:PHP
-s	application\models\common_model.php	/^			$s = $id == $aa['region_id'] ? ' selected' : '';$/;"	v	language:PHP
 scale	application\models\common_model.php	/^	 function bcdiv2( $first, $second, $scale = 0 )$/;"	v	language:PHP
 sec	application\models\common_model.php	/^		$sec = $date_array["seconds"];$/;"	v	language:PHP
 select	application\models\common_model.php	/^		$select = $select?$select:implode(',',$cor_db->getDs()->list_fields($rs['t_db_name']));$/;"	v	language:PHP
@@ -5977,7 +5860,6 @@ size_stat	application\models\common_model.php	/^			$size_stat = $size;$/;"	v	lan
 size_stat	application\models\common_model.php	/^			$size_stat = ceil($size\/1024).'K';			$/;"	v	language:PHP
 size_stat	application\models\common_model.php	/^			$size_stat = ceil($size\/1024\/1024).'M';			$/;"	v	language:PHP
 sq	application\models\common_model.php	/^		$sq = <<<EOT$/;"	v	language:PHP
-sql_arr	application\models\common_model.php	/^		$sql_arr = array($/;"	v	language:PHP
 sql_count	application\models\common_model.php	/^		$sql_count =  $ds->_compile_select();$/;"	v	language:PHP
 str	application\models\common_model.php	/^			$str = str_replace($matches[0][$i], eval(stripcslashes($t)), $str);$/;"	v	language:PHP
 str_r	application\models\common_model.php	/^			$str_r = preg_replace("\/<\\?php(.*?)\\?>\/ies","eval(stripcslashes('\\\\1'))",$str_r);$/;"	v	language:PHP
@@ -5989,8 +5871,6 @@ tag	application\models\common_model.php	/^	function tag($parameter){$/;"	f	langu
 tag_pager	application\models\common_model.php	/^	function tag_pager($parameter){$/;"	f	language:PHP
 tb	application\models\common_model.php	/^		$tb = $this->cor_db->table($tb);$/;"	v	language:PHP
 template	application\models\common_model.php	/^		$template = $template?$template:$rs[$html_field];$/;"	v	language:PHP
-tree_db	application\models\common_model.php	/^ 		$tree_db = $CI->db->select('cc_id,cc_title,cc_parent_id',false)->from($cor_db->mytable('class_category'),false)->order_by('cc_id','asc')->order_by('sort','asc')->get()->result_array();$/;"	v	language:PHP
-tree_options_deal	application\models\common_model.php	/^	function tree_options_deal($class_arr,$id,$index,$m)$/;"	f	language:PHP
 ua	application\models\common_model.php	/^		$ua = $_SERVER["HTTP_USER_AGENT"];$/;"	v	language:PHP
 uid	application\models\common_model.php	/^		$this->uid = uniqid();$/;"	v	language:PHP
 uid_convert	application\models\common_model.php	/^		$uid_convert = explode(',',$uid);$/;"	v	language:PHP
@@ -6038,10 +5918,13 @@ validator	application\models\friendlink_model.php	/^	function validator(){	 $/;"
 Logs_model	application\models\logs_model.php	/^ class Logs_model extends CI_Model{$/;"	c	language:PHP
 __construct	application\models\logs_model.php	/^	function __construct(){$/;"	f	language:PHP
 db_config	application\models\logs_model.php	/^	function db_config(){		$/;"	f	language:PHP
+last	application\models\logs_model.php	/^		$last = $this->db->select('*',false)->from('log_login')->where('login_user',$this->cor_auth->fetch_auth('user_name'))->order_by('login_id','desc')->limit(1,1)->get()->first_row('array');$/;"	v	language:PHP
+last_login	application\models\logs_model.php	/^	function last_login(){$/;"	f	language:PHP
 list	application\models\logs_model.php	/^		$list = $this->db->get()->result_array();			$/;"	v	language:PHP
 log_clear	application\models\logs_model.php	/^	function log_clear(){$/;"	f	language:PHP
 log_insert	application\models\logs_model.php	/^	function log_insert($array){	$/;"	f	language:PHP
 log_list	application\models\logs_model.php	/^	function log_list(){	$/;"	f	language:PHP
+stat	application\models\logs_model.php	/^		$stat = $this->db->from('log_login')->where('login_user',$this->cor_auth->fetch_auth('user_name'))->count_all_results();$/;"	v	language:PHP
 Mdata_model	application\models\mdata_model.php	/^class Mdata_model extends CI_Model{$/;"	c	language:PHP
 __construct	application\models\mdata_model.php	/^	function __construct(){$/;"	f	language:PHP
 cf	application\models\mdata_model.php	/^		$cf = array($/;"	v	language:PHP
@@ -6156,6 +6039,7 @@ k	application\models\modules_model.php	/^		foreach($subs_tmp as $k=>$v){$/;"	v	l
 k	application\models\modules_model.php	/^ 		foreach($info['detail'] as $k=>$v){ 			$/;"	v	language:PHP
 keep	application\models\modules_model.php	/^					$keep  = $this->fetch_primary($pm->m_id,'r_name');$/;"	v	language:PHP
 key	application\models\modules_model.php	/^				foreach ((array)$diff as $key => $value) {$/;"	v	language:PHP
+ls	application\models\modules_model.php	/^		$ls = $this->db->select('m_tb,m_name',false)->from('module')->get()->result_array();$/;"	v	language:PHP
 m_sub	application\models\modules_model.php	/^		$m_sub = $this->cor_form->array_re_index($this->all(array("m_sub > "=>0)),'m_sub','m_sub');$/;"	v	language:PHP
 main	application\models\modules_model.php	/^	function main($m_id,$key=null){$/;"	f	language:PHP
 new_id	application\models\modules_model.php	/^			$new_id = $this->db->insert_id();$/;"	v	language:PHP
@@ -6170,6 +6054,8 @@ root_id	application\models\modules_model.php	/^		$root_id = $r_t['r_id'];$/;"	v	
 save_config	application\models\modules_model.php	/^	function  save_config(){$/;"	f	language:PHP
 sq	application\models\modules_model.php	/^		$sq = array();$/;"	v	language:PHP
 sql	application\models\modules_model.php	/^		$sql = "select m_tb from ".$this->db->dbprefix."module where m_id in(".implode(',',$m_id).")";$/;"	v	language:PHP
+stat	application\models\modules_model.php	/^		$stat = array();$/;"	v	language:PHP
+stat	application\models\modules_model.php	/^	function stat(){$/;"	f	language:PHP
 sub_table	application\models\modules_model.php	/^		$sub_table = $this->main($r['main']['m_sub'],'m_tb');$/;"	v	language:PHP
 subs	application\models\modules_model.php	/^	function subs($exclud){$/;"	f	language:PHP
 subs_tmp	application\models\modules_model.php	/^		$subs_tmp = $this->all();$/;"	v	language:PHP
@@ -6266,23 +6152,151 @@ updates	application\models\trans_model.php	/^		$updates = array_merge(array_comb
 url	application\models\trans_model.php	/^    $url = "http:\/\/api.microsofttranslator.com\/V1\/Http.svc\/Translate?appId=$key&from=$from&to=$to&contentType=text%2Fhtml";$/;"	v	language:PHP
 Tree_model	application\models\tree_model.php	/^class Tree_model extends CI_Model{$/;"	c	language:PHP
 __construct	application\models\tree_model.php	/^	function __construct(){$/;"	f	language:PHP
+add_tree_node	application\models\tree_model.php	/^	function add_tree_node($pid,$code,$name){$/;"	f	language:PHP
+add_tree_root_node	application\models\tree_model.php	/^	function add_tree_root_node($tree_id,$code,$name){$/;"	f	language:PHP
+af	application\models\tree_model.php	/^			$af = 0; $/;"	v	language:PHP
+af	application\models\tree_model.php	/^			$af = 0;$/;"	v	language:PHP
+aff	application\models\tree_model.php	/^			$aff = $this->db->affected_rows();$/;"	v	language:PHP
+aff	application\models\tree_model.php	/^			$aff = 0;$/;"	v	language:PHP
+aff	application\models\tree_model.php	/^    		$aff = $this->db->affected_rows();$/;"	v	language:PHP
+aff	application\models\tree_model.php	/^        	$aff = $this->db->affected_rows();$/;"	v	language:PHP
 cf	application\models\tree_model.php	/^		$cf = array($/;"	v	language:PHP
 cookie	application\models\tree_model.php	/^		$cookie = array($/;"	v	language:PHP
+delete_tree_node	application\models\tree_model.php	/^	function delete_tree_node($node_id){$/;"	f	language:PHP
 detail	application\models\tree_model.php	/^	function detail($id,$key=null){$/;"	f	language:PHP
 ds	application\models\tree_model.php	/^			$ds = $this->db->select("group_concat(id) as ids",false)->from('tree_node')->where('treeId',$treeId)->where('leftId <= '.$v[leftId].' and rightId >= '.$v[rightId])->get()->first_row('array');$/;"	v	language:PHP
 ds	application\models\tree_model.php	/^		$ds = $this->cor_db->fetch_one($cf);$/;"	v	language:PHP
 ds	application\models\tree_model.php	/^		$ds = $this->detail($id);$/;"	v	language:PHP
+edit_tree_node	application\models\tree_model.php	/^	function edit_tree_node($node_id,$pid,$code,$name){$/;"	f	language:PHP
 fetch_belong_ids	application\models\tree_model.php	/^	function fetch_belong_ids($id){$/;"	f	language:PHP
 fetch_select	application\models\tree_model.php	/^	function fetch_select($treeId=null,$v_field='name'){$/;"	f	language:PHP
 fetch_select_query	application\models\tree_model.php	/^	function fetch_select_query($treeId=null){$/;"	f	language:PHP
 get_root	application\models\tree_model.php	/^	function get_root(){$/;"	f	language:PHP
+insert_id	application\models\tree_model.php	/^    		$insert_id = $this->db->insert_id();$/;"	v	language:PHP
 ls	application\models\tree_model.php	/^		$ls =  $this->cor_form->array_re_index($this->db->select("id,name as init_name,leftId,rightId",false)->select('LEVEL,CONCAT(REPEAT("|-",LEVEL),NAME) as name',false)->from('tree_node')->where('treeId',$treeId)->order_by('leftId','asc')->get()->result_array(),'id');$/;"	v	language:PHP
 ls_new	application\models\tree_model.php	/^		$ls_new = array();$/;"	v	language:PHP
+move_tree_node	application\models\tree_model.php	/^	function move_tree_node($node_id,$target_id){$/;"	f	language:PHP
+query	application\models\tree_model.php	/^			$query = $this->db->query($sql);$/;"	v	language:PHP
+query	application\models\tree_model.php	/^    		$query = $this->db->query($sql);$/;"	v	language:PHP
 r	application\models\tree_model.php	/^		$r = $this->db->select("group_concat(id) as ids",false)->from('tree_node')->where('treeId',$ds[treeId])->where('leftId <= '.$ds[leftId].' and rightId >= '.$ds[rightId])->get()->first_row('array');$/;"	v	language:PHP
+r	application\models\tree_model.php	/^		$r = $this->move_tree_node($node_id,$pid);$/;"	v	language:PHP
 save_config	application\models\tree_model.php	/^	function  save_config(){$/;"	f	language:PHP
 set_root	application\models\tree_model.php	/^	function set_root($id){$/;"	f	language:PHP
+sql	application\models\tree_model.php	/^			       $sql = " UPDATE ".$this->db->dbprefix."tree_node SET leftId=leftId -$vDiff, rightId=rightId - $vDiff, level = level + $vLevelDiff WHERE treeId = $v[vTreeId] AND leftId BETWEEN $v[vLeftId] AND $v[vRightId]";$/;"	v	language:PHP
+sql	application\models\tree_model.php	/^			       $sql = "UPDATE ".$this->db->dbprefix."tree_node SET leftId=leftId+ $vDiff WHERE treeId = $v[vTreeId] AND leftId>$vt[vTargetRightId] AND leftId< $v[vRightId] AND NOT FIND_IN_SET(CAST(id AS CHAR),'$vg[vGroupIdStr]')";$/;"	v	language:PHP
+sql	application\models\tree_model.php	/^			       $sql = "UPDATE ".$this->db->dbprefix."tree_node SET pid = $target_id WHERE id= $node_id";$/;"	v	language:PHP
+sql	application\models\tree_model.php	/^			       $sql = "UPDATE ".$this->db->dbprefix."tree_node SET rightId=rightId+ $vDiff WHERE treeId = $v[vTreeId] AND rightId>=$vt[vTargetRightId] AND rightId< $v[vRightId] AND NOT FIND_IN_SET(CAST(id AS CHAR),'$vg[vGroupIdStr]')";$/;"	v	language:PHP
+sql	application\models\tree_model.php	/^			 $sql = " SELECT leftId as vTargetLeftId,rightId as vTargetRightId,level as vTargetLevel  FROM ".$this->db->dbprefix."tree_node  WHERE treeId = $v[vTreeId] AND id= $target_id ";$/;"	v	language:PHP
+sql	application\models\tree_model.php	/^			 $sql = "SELECT leftId as vLeftId,rightId as vRightId,treeId as vTreeId,pid as vPid,level as vLevel  FROM ".$this->db->dbprefix."tree_node     WHERE id= $node_id";$/;"	v	language:PHP
+sql	application\models\tree_model.php	/^			$sql = "  SELECT leftId as vLeftId,rightId as vRightId,treeId as vTreeId,level as vLevel     FROM ".$this->db->dbprefix."tree_node WHERE id= $node_id ";$/;"	v	language:PHP
+sql	application\models\tree_model.php	/^			$sql = "  SELECT rightId as vRightId,treeId as vTreeId,level as vLevel     FROM ".$this->db->dbprefix."tree_node WHERE id= $pid ";$/;"	v	language:PHP
+sql	application\models\tree_model.php	/^			$sql = " DELETE  FROM ".$this->db->dbprefix."tree_node   WHERE treeId = $v[vTreeId]    AND leftId BETWEEN $v[vLeftId] AND $v[vRightId] ";$/;"	v	language:PHP
+sql	application\models\tree_model.php	/^			$sql = " INSERT INTO ".$this->db->dbprefix."tree_node(code,name,pid,leftId,rightId,level,treeId) VALUES ('$code','$name',$pid,$v[vRightId],".($v[vRightId]+1).",".($v[vLevel]+1).",$v[vTreeId])";$/;"	v	language:PHP
+sql	application\models\tree_model.php	/^			$sql = "INSERT INTO ".$this->db->dbprefix."tree_node(code,name,pid,leftId,rightId,level,treeId) VALUES ('$code','$name',0,1,2,0,$tree_id)";$/;"	v	language:PHP
+sql	application\models\tree_model.php	/^			$sql = "SELECT leftId as vLeftId  FROM ".$this->db->dbprefix."tree_node WHERE treeId= $tree_id AND pid = 0";$/;"	v	language:PHP
+sql	application\models\tree_model.php	/^			$sql = "UPDATE ".$this->db->dbprefix."tree_node     SET leftId=leftId+2     WHERE treeId = ".$v['vTreeId']." AND leftId >".$v["vRightId"]." ";$/;"	v	language:PHP
+sql	application\models\tree_model.php	/^			$sql = "UPDATE ".$this->db->dbprefix."tree_node   SET rightId=rightId+2     WHERE treeId = ".$v['vTreeId']." AND rightId >= ".$v['vRightId']." ";$/;"	v	language:PHP
+sql	application\models\tree_model.php	/^			$sql = "UPDATE ".$this->db->dbprefix."tree_node SET code = '$code',name = '$name' WHERE id= $node_id";$/;"	v	language:PHP
+sql	application\models\tree_model.php	/^	        	   $sql = " UPDATE ".$this->db->dbprefix."tree_node SET rightId=rightId- $vDiff WHERE treeId = $v[vTreeId] AND rightId>$v[vRightId] AND rightId< $vt[vTargetRightId] AND NOT FIND_IN_SET(CAST(id AS CHAR),'$vg[vGroupIdStr]')";$/;"	v	language:PHP
+sql	application\models\tree_model.php	/^	        	   $sql = "UPDATE ".$this->db->dbprefix."tree_node  SET pid = $target_id WHERE id= $node_id; ";$/;"	v	language:PHP
+sql	application\models\tree_model.php	/^	        	   $sql =" UPDATE ".$this->db->dbprefix."tree_node SET leftId=leftId- $vDiff WHERE treeId = $v[vTreeId] AND leftId>$v[vRightId] AND leftId< $vt[vTargetRightId] AND NOT FIND_IN_SET(CAST(id AS CHAR),'$vg[vGroupIdStr]')";$/;"	v	language:PHP
+sql	application\models\tree_model.php	/^	               $sql = "UPDATE ".$this->db->dbprefix."tree_node   SET leftId=leftId +$vDiff,rightId=rightId + $vDiff,level = level + $vLevelDiff WHERE treeId = $v[vTreeId]  AND leftId BETWEEN $v[vLeftId] AND $v[vRightId]";$/;"	v	language:PHP
+sql	application\models\tree_model.php	/^        	$sql = " UPDATE ".$this->db->dbprefix."tree_node    SET leftId=leftId-($v[vRightId]-$v[vLeftId]+1)     WHERE treeId = $v[vTreeId] AND leftId>$v[vLeftId] ";$/;"	v	language:PHP
+sql	application\models\tree_model.php	/^        	$sql = " UPDATE ".$this->db->dbprefix."tree_node    SET rightId=rightId-($v[vRightId]-$v[vLeftId]+1)     WHERE treeId = $v[vTreeId] AND rightId>$v[vLeftId] ";$/;"	v	language:PHP
 treeId	application\models\tree_model.php	/^		$treeId = $treeId?$treeId:$this->get_root();$/;"	v	language:PHP
+v	application\models\tree_model.php	/^			 $v = $this->db->query($sql)->first_row('array');$/;"	v	language:PHP
+v	application\models\tree_model.php	/^			$v = $this->db->query($sql)->first_row('array');$/;"	v	language:PHP
+vDiff	application\models\tree_model.php	/^				   $vDiff = $v[vLeftId] - $vt[vTargetRightId]; \/*左右值的差值*\/$/;"	v	language:PHP
+vDiff	application\models\tree_model.php	/^			 	   $vDiff = $vt[vTargetRightId] - 1 - $v[vRightId]; \/*左右值的差值*\/$/;"	v	language:PHP
+vDiff	application\models\tree_model.php	/^			       $vDiff = $v[vRightId]-$v[vLeftId]+1;$/;"	v	language:PHP
+vDiff	application\models\tree_model.php	/^	        	   $vDiff = $v[vRightId]-$v[vLeftId]+1;$/;"	v	language:PHP
+vLevelDiff	application\models\tree_model.php	/^			       $vLevelDiff = $vt[vTargetLevel] + 1 - $v[vLevel]; \/*Level的差值*\/$/;"	v	language:PHP
+vLevelDiff	application\models\tree_model.php	/^	   			   $vLevelDiff = $vt[vTargetLevel] + 1 - $v[vLevel]; \/*Level的差值*\/$/;"	v	language:PHP
 valid_config	application\models\tree_model.php	/^	function valid_config(){$/;"	f	language:PHP
+vg	application\models\tree_model.php	/^			 $vg = $this->db->query(" SELECT treeId as vGroupTreeId, GROUP_CONCAT(CAST(id AS CHAR)) as vGroupIdStr   FROM ".$this->db->dbprefix."tree_node  WHERE treeId = $v[vTreeId] AND leftId BETWEEN $v[vLeftId] AND $v[vRightId]  GROUP BY treeId ")->first_row('array');$/;"	v	language:PHP
+vt	application\models\tree_model.php	/^			 $vt = $this->db->query($sql)->first_row('array');$/;"	v	language:PHP
+SERVICES_JSON_IN_ARR	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^define('SERVICES_JSON_IN_ARR',  3);$/;"	d	language:PHP
+SERVICES_JSON_IN_CMT	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^define('SERVICES_JSON_IN_CMT', 5);$/;"	d	language:PHP
+SERVICES_JSON_IN_OBJ	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^define('SERVICES_JSON_IN_OBJ',  4);$/;"	d	language:PHP
+SERVICES_JSON_IN_STR	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^define('SERVICES_JSON_IN_STR',  2);$/;"	d	language:PHP
+SERVICES_JSON_LOOSE_TYPE	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^define('SERVICES_JSON_LOOSE_TYPE', 16);$/;"	d	language:PHP
+SERVICES_JSON_SLICE	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^define('SERVICES_JSON_SLICE',   1);$/;"	d	language:PHP
+SERVICES_JSON_SUPPRESS_ERRORS	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^define('SERVICES_JSON_SUPPRESS_ERRORS', 32);$/;"	d	language:PHP
+Services_JSON	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^    function Services_JSON($use = 0)$/;"	f	language:PHP
+Services_JSON	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^class Services_JSON$/;"	c	language:PHP
+Services_JSON_Error	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^        function Services_JSON_Error($message = 'unknown error', $code = null,$/;"	f	language:PHP
+Services_JSON_Error	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^    class Services_JSON_Error extends PEAR_Error$/;"	c	language:PHP
+Services_JSON_Error	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^    class Services_JSON_Error$/;"	c	language:PHP
+arr	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                        $arr = array();$/;"	v	language:PHP
+ascii	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                $ascii = '';$/;"	v	language:PHP
+bytes	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^        $bytes = (ord($utf16{0}) << 8) | ord($utf16{1});$/;"	v	language:PHP
+char	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                            $char = pack('C*', $ord_var_c, ord($var{$c + 1}));$/;"	v	language:PHP
+char	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                            $char = pack('C*', $ord_var_c,$/;"	v	language:PHP
+chrs	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                                $chrs = substr_replace($chrs, ' ', $i, 1);$/;"	v	language:PHP
+chrs	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                    $chrs = $this->reduce_string($chrs);$/;"	v	language:PHP
+chrs	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                    $chrs = substr($str, 1, -1);$/;"	v	language:PHP
+code	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^        function Services_JSON_Error($message = 'unknown error', $code = null,$/;"	v	language:PHP
+code	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^    function isError($data, $code = null)$/;"	v	language:PHP
+decode	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^    function decode($str)$/;"	f	language:PHP
+delim	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                    $delim = substr($str, 0, 1);$/;"	v	language:PHP
+elements	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                $elements = array_map(array($this, 'encode'), $var);$/;"	v	language:PHP
+encode	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^    function encode($var)$/;"	f	language:PHP
+encoded_value	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^        $encoded_value = $this->encode($value);$/;"	v	language:PHP
+for	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^    * array-walking function for use in generating JSON-formatted name-value pairs$/;"	f	language:PHP
+input	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^ * $input = file_get_contents('php:\/\/input', 1000000);$/;"	v	language:PHP
+isError	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^    function isError($data, $code = null)$/;"	f	language:PHP
+json	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^ * $json = new Services_JSON();$/;"	v	language:PHP
+key	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                                    $key = $parts[1];$/;"	v	language:PHP
+key	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                                    $key = $this->decode($parts[1]);$/;"	v	language:PHP
+m	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                $m = array();$/;"	v	language:PHP
+mode	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                                     $mode = null, $options = null, $userinfo = null)$/;"	v	language:PHP
+name_value	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^    function name_value($name, $value)$/;"	f	language:PHP
+obj	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                            $obj = array();$/;"	v	language:PHP
+obj	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                            $obj = new stdClass();$/;"	v	language:PHP
+ord_chrs_c	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                        $ord_chrs_c = ord($chrs{$c});$/;"	v	language:PHP
+ord_var_c	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                        case $ord_var_c == 0x08:$/;"	v	language:PHP
+ord_var_c	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                        case $ord_var_c == 0x09:$/;"	v	language:PHP
+ord_var_c	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                        case $ord_var_c == 0x0A:$/;"	v	language:PHP
+ord_var_c	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                        case $ord_var_c == 0x0C:$/;"	v	language:PHP
+ord_var_c	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                        case $ord_var_c == 0x0D:$/;"	v	language:PHP
+ord_var_c	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                        case $ord_var_c == 0x22:$/;"	v	language:PHP
+ord_var_c	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                        case $ord_var_c == 0x2F:$/;"	v	language:PHP
+ord_var_c	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                        case $ord_var_c == 0x5C:$/;"	v	language:PHP
+ord_var_c	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                    $ord_var_c = ord($var{$c});$/;"	v	language:PHP
+output	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^ * $output = $json->encode($value);$/;"	v	language:PHP
+parts	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                                $parts = array();$/;"	v	language:PHP
+properties	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                    $properties = array_map(array($this, 'name_value'),$/;"	v	language:PHP
+properties	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                $properties = array_map(array($this, 'name_value'),$/;"	v	language:PHP
+reduce_string	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^    function reduce_string($str)$/;"	f	language:PHP
+shall	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^     * @todo Ultimately, this class shall be descended from PEAR_Error$/;"	c	language:PHP
+slice	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                            $slice = substr($chrs, $top['where'], ($c - $top['where']));$/;"	v	language:PHP
+stk	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                            $stk = array(SERVICES_JSON_IN_OBJ);$/;"	v	language:PHP
+stk	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                        $stk = array(SERVICES_JSON_IN_ARR);$/;"	v	language:PHP
+str	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^        $str = $this->reduce_string($str);$/;"	v	language:PHP
+str	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^        $str = preg_replace(array($/;"	v	language:PHP
+strlen_chrs	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                    $strlen_chrs = strlen($chrs);$/;"	v	language:PHP
+strlen_var	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                $strlen_var = strlen($var);$/;"	v	language:PHP
+substr_chrs_c_2	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                            case $substr_chrs_c_2 == '\\\\"':$/;"	v	language:PHP
+substr_chrs_c_2	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                            case $substr_chrs_c_2 == '\\\\\/':$/;"	v	language:PHP
+substr_chrs_c_2	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                            case $substr_chrs_c_2 == '\\\\\\'':$/;"	v	language:PHP
+substr_chrs_c_2	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                            case $substr_chrs_c_2 == '\\\\\\\\':$/;"	v	language:PHP
+substr_chrs_c_2	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                            case $substr_chrs_c_2 == '\\b':$/;"	v	language:PHP
+substr_chrs_c_2	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                            case $substr_chrs_c_2 == '\\f':$/;"	v	language:PHP
+substr_chrs_c_2	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                            case $substr_chrs_c_2 == '\\n':$/;"	v	language:PHP
+substr_chrs_c_2	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                            case $substr_chrs_c_2 == '\\r':$/;"	v	language:PHP
+substr_chrs_c_2	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                            case $substr_chrs_c_2 == '\\t':$/;"	v	language:PHP
+substr_chrs_c_2	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                        $substr_chrs_c_2 = substr($chrs, $c, 2);$/;"	v	language:PHP
+top	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                        $top = end($stk);$/;"	v	language:PHP
+use	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^        $this->use = $use;$/;"	v	language:PHP
+utf16	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                                $utf16 = chr(hexdec(substr($chrs, ($c + 2), 2)))$/;"	v	language:PHP
+utf16	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                            $utf16 = $this->utf82utf16($char);$/;"	v	language:PHP
+utf162utf8	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^    function utf162utf8($utf16)$/;"	f	language:PHP
+utf8	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                    $utf8 = '';$/;"	v	language:PHP
+utf82utf16	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^    function utf82utf16($utf8)$/;"	f	language:PHP
+val	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                                    $val = $this->decode($parts[2]);$/;"	v	language:PHP
+value	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^ * $value = $json->decode($input);$/;"	v	language:PHP
+value	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^ * $value = array('foo', 'bar', array(1, 2, 'baz'), array(3, array(4)));$/;"	v	language:PHP
+vars	application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                $vars = get_object_vars($var);$/;"	v	language:PHP
 EXPORTHANDLER	charts\ExportHandlers\PHP\FCExporter.php	/^define ( "EXPORTHANDLER", "FCExporter_" );$/;"	d	language:PHP
 EXTENSIONS	charts\ExportHandlers\PHP\FCExporter.php	/^ *		   e.g. define("EXTENSIONS","jpg=jpg;jpeg=jpg;png=png;gif=gif"); $/;"	d	language:PHP
 FILESUFFIXFORMAT	charts\ExportHandlers\PHP\FCExporter.php	/^define ( "FILESUFFIXFORMAT", "TIMESTAMP" ) ;\/\/ value can be either 'TIMESTAMP' or 'RANDOM'$/;"	d	language:PHP
@@ -8963,295 +8977,6 @@ zip_filename	ckfinder\plugins\zip\plugin.php	/^        $zip_filename = CKFinder_
 zip_filename	ckfinder\plugins\zip\plugin.php	/^        $zip_filename = CKFinder_Connector_Utils_FileSystem::convertToFilesystemEncoding($_POST['zipName']);$/;"	v	language:PHP
 zip_filename	ckfinder\plugins\zip\plugin.php	/^      $zip_filename = CKFinder_Connector_Utils_FileSystem::convertToAscii($zip_filename);$/;"	v	language:PHP
 zip_filename	ckfinder\plugins\zip\plugin.php	/^    $zip_filename = substr(md5(serialize($files)), 0, 16).$resourceTypeInfo->getHash().'.zip';$/;"	v	language:PHP
-aspell_err	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^				$aspell_err = "Error executing `$cmd`\\\\n$aspell_err";$/;"	v	language:PHP
-aspell_err	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^	$aspell_err = "";$/;"	v	language:PHP
-aspell_opts	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^$aspell_opts	= "-a --lang=$lang --encoding=utf-8 -H --rem-sgml-check=alt";		\/\/ by FredCK$/;"	v	language:PHP
-aspell_prog	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^$aspell_prog	= '"C:\\Program Files\\Aspell\\bin\\aspell.exe"';	\/\/ by FredCK (for Windows)$/;"	v	language:PHP
-aspellret	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^		if( $aspellret = shell_exec( $cmd )) {$/;"	v	language:PHP
-chardesc	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^				$chardesc = substr( $val, 0, 1 );$/;"	v	language:PHP
-chardesc	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^				if( $chardesc == '&' || $chardesc == '#' ) {$/;"	v	language:PHP
-chardesc	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^				} elseif( $chardesc == '*' ) {$/;"	v	language:PHP
-cmd	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^		$cmd = "$aspell_prog $aspell_opts < $tempfile 2>&1";$/;"	v	language:PHP
-error_handler	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^function error_handler( $err ) {$/;"	f	language:PHP
-escape_quote	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^function escape_quote( $str ) {$/;"	f	language:PHP
-fh	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^	if( $fh = fopen( $tempfile, 'w' )) {$/;"	v	language:PHP
-i	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^		for( $i = 0; $i < count( $textinputs ); $i++ ) {$/;"	v	language:PHP
-in	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^		\/\/ call the init_spell() function in the parent frameset$/;"	f	language:PHP
-index	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^					$index = 0;$/;"	v	language:PHP
-index	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^			$index = 0;$/;"	v	language:PHP
-init_spell	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^function init_spell() {$/;"	f	language:PHP
-input_separator	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^$input_separator = "A";$/;"	v	language:PHP
-key	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^			foreach( $lines as $key=>$value ) {$/;"	v	language:PHP
-key	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^			foreach( $linesout as $key=>$val ) {$/;"	v	language:PHP
-key	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^	foreach( $suggs as $key=>$val ) {$/;"	v	language:PHP
-key	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^	foreach( $textinputs as $key=>$val ) {$/;"	v	language:PHP
-lang	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^$lang			= 'en_US';$/;"	v	language:PHP
-line	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^					$line = explode( " ", $val, 5 );$/;"	v	language:PHP
-lines	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^			$lines = explode( "\\n", $text );$/;"	v	language:PHP
-linesout	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^			$linesout = explode( "\\n", $aspellret );$/;"	v	language:PHP
-print_checker_results	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^function print_checker_results() {$/;"	f	language:PHP
-print_suggs_elem	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^function print_suggs_elem( $suggs, $index, $text_input_idx ) {$/;"	f	language:PHP
-print_textindex_decl	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^function print_textindex_decl( $text_input_idx ) {$/;"	f	language:PHP
-print_textinputs_var	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^function print_textinputs_var() {$/;"	f	language:PHP
-print_words_elem	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^function print_words_elem( $word, $index, $text_input_idx ) {$/;"	f	language:PHP
-spellercss	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^$spellercss		= '..\/spellerStyle.css';						\/\/ by FredCK$/;"	v	language:PHP
-suggs	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^						$suggs = array();$/;"	v	language:PHP
-suggs	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^						$suggs = explode( ", ", $line[4] );$/;"	v	language:PHP
-tempfile	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^	$tempfile = tempnam( $tempfiledir, 'aspell_data_' );$/;"	v	language:PHP
-tempfiledir	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^$tempfiledir	= ".\/";$/;"	v	language:PHP
-text	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^			$text = preg_replace( "\/<[^>]+>\/", " ", $text ) ;$/;"	v	language:PHP
-text	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^			$text = urldecode( $textinputs[$i] );$/;"	v	language:PHP
-text_input_index	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^			$text_input_index = -1;$/;"	v	language:PHP
-textinputs	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^$textinputs		= $_POST['textinputs']; # array$/;"	v	language:PHP
-val	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^		# $val = str_replace( "'", "%27", $val );$/;"	v	language:PHP
-word_win_src	fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php	/^$word_win_src	= '..\/wordWindow.js';							\/\/ by FredCK$/;"	v	language:PHP
-CreateXmlFooter	fckeditor\editor\filemanager\connectors\php\basexml.php	/^function CreateXmlFooter()$/;"	f	language:PHP
-CreateXmlHeader	fckeditor\editor\filemanager\connectors\php\basexml.php	/^function CreateXmlHeader( $command, $resourceType, $currentFolder )$/;"	f	language:PHP
-SendError	fckeditor\editor\filemanager\connectors\php\basexml.php	/^function SendError( $number, $text )$/;"	f	language:PHP
-SendErrorNode	fckeditor\editor\filemanager\connectors\php\basexml.php	/^function SendErrorNode(  $number, $text )$/;"	f	language:PHP
-SetXmlHeaders	fckeditor\editor\filemanager\connectors\php\basexml.php	/^function SetXmlHeaders()$/;"	f	language:PHP
-CreateFolder	fckeditor\editor\filemanager\connectors\php\commands.php	/^function CreateFolder( $resourceType, $currentFolder )$/;"	f	language:PHP
-FileUpload	fckeditor\editor\filemanager\connectors\php\commands.php	/^function FileUpload( $resourceType, $currentFolder, $sCommand )$/;"	f	language:PHP
-GetFolders	fckeditor\editor\filemanager\connectors\php\commands.php	/^function GetFolders( $resourceType, $currentFolder )$/;"	f	language:PHP
-GetFoldersAndFiles	fckeditor\editor\filemanager\connectors\php\commands.php	/^function GetFoldersAndFiles( $resourceType, $currentFolder )$/;"	f	language:PHP
-aFiles	fckeditor\editor\filemanager\connectors\php\commands.php	/^	$aFiles		= array() ;$/;"	v	language:PHP
-aFolders	fckeditor\editor\filemanager\connectors\php\commands.php	/^	$aFolders	= array() ;$/;"	v	language:PHP
-detectHtml	fckeditor\editor\filemanager\connectors\php\commands.php	/^				( $detectHtml = DetectHtml( $oFile['tmp_name'] ) ) === true )$/;"	v	language:PHP
-detectHtml	fckeditor\editor\filemanager\connectors\php\commands.php	/^				else if ( isset( $detectHtml ) && $detectHtml === -1 && DetectHtml( $sFilePath ) === true )$/;"	v	language:PHP
-iCounter	fckeditor\editor\filemanager\connectors\php\commands.php	/^			$iCounter = 0 ;$/;"	v	language:PHP
-iFileSize	fckeditor\editor\filemanager\connectors\php\commands.php	/^					$iFileSize = 0 ;$/;"	v	language:PHP
-iFileSize	fckeditor\editor\filemanager\connectors\php\commands.php	/^					$iFileSize = round( $iFileSize \/ 1024 ) ;$/;"	v	language:PHP
-iFileSize	fckeditor\editor\filemanager\connectors\php\commands.php	/^					if ( $iFileSize < 1 ) $iFileSize = 1 ;$/;"	v	language:PHP
-iFileSize	fckeditor\editor\filemanager\connectors\php\commands.php	/^				$iFileSize = @filesize( $sServerDir . $sFile ) ;$/;"	v	language:PHP
-isImageValid	fckeditor\editor\filemanager\connectors\php\commands.php	/^				if ( isset( $isImageValid ) && $isImageValid === -1 && IsImageValid( $sFilePath, $sExtension ) === false )$/;"	v	language:PHP
-isImageValid	fckeditor\editor\filemanager\connectors\php\commands.php	/^			if ( ( $isImageValid = IsImageValid( $oFile['tmp_name'], $sExtension ) ) === false )$/;"	v	language:PHP
-oCurrentFolder	fckeditor\editor\filemanager\connectors\php\commands.php	/^	$oCurrentFolder = opendir( $sServerDir ) ;$/;"	v	language:PHP
-oFile	fckeditor\editor\filemanager\connectors\php\commands.php	/^		$oFile = $_FILES['NewFile'] ;$/;"	v	language:PHP
-oldumask	fckeditor\editor\filemanager\connectors\php\commands.php	/^						$oldumask = umask(0) ;$/;"	v	language:PHP
-permissions	fckeditor\editor\filemanager\connectors\php\commands.php	/^							$permissions = $Config['ChmodOnUpload'] ;$/;"	v	language:PHP
-permissions	fckeditor\editor\filemanager\connectors\php\commands.php	/^						$permissions = 0777;$/;"	v	language:PHP
-sErrorMsg	fckeditor\editor\filemanager\connectors\php\commands.php	/^				$sErrorMsg = CreateServerFolder( $sServerDir ) ;$/;"	v	language:PHP
-sErrorMsg	fckeditor\editor\filemanager\connectors\php\commands.php	/^	$sErrorMsg		= '' ;$/;"	v	language:PHP
-sErrorNumber	fckeditor\editor\filemanager\connectors\php\commands.php	/^						$sErrorNumber = '0' ;$/;"	v	language:PHP
-sErrorNumber	fckeditor\editor\filemanager\connectors\php\commands.php	/^						$sErrorNumber = '102' ;		\/\/ Path too long.$/;"	v	language:PHP
-sErrorNumber	fckeditor\editor\filemanager\connectors\php\commands.php	/^						$sErrorNumber = '110' ;$/;"	v	language:PHP
-sErrorNumber	fckeditor\editor\filemanager\connectors\php\commands.php	/^					$sErrorNumber = '201' ;$/;"	v	language:PHP
-sErrorNumber	fckeditor\editor\filemanager\connectors\php\commands.php	/^					$sErrorNumber = '202' ;$/;"	v	language:PHP
-sErrorNumber	fckeditor\editor\filemanager\connectors\php\commands.php	/^				$sErrorNumber = '103' ;$/;"	v	language:PHP
-sErrorNumber	fckeditor\editor\filemanager\connectors\php\commands.php	/^				$sErrorNumber = '202' ;$/;"	v	language:PHP
-sErrorNumber	fckeditor\editor\filemanager\connectors\php\commands.php	/^			$sErrorNumber = '102' ;		\/\/ Invalid folder name.$/;"	v	language:PHP
-sErrorNumber	fckeditor\editor\filemanager\connectors\php\commands.php	/^			$sErrorNumber = '202' ;$/;"	v	language:PHP
-sErrorNumber	fckeditor\editor\filemanager\connectors\php\commands.php	/^		$sErrorNumber = '102' ;$/;"	v	language:PHP
-sErrorNumber	fckeditor\editor\filemanager\connectors\php\commands.php	/^		$sErrorNumber = '202' ;$/;"	v	language:PHP
-sErrorNumber	fckeditor\editor\filemanager\connectors\php\commands.php	/^	$sErrorNumber	= '0' ;$/;"	v	language:PHP
-sErrorNumber	fckeditor\editor\filemanager\connectors\php\commands.php	/^	$sErrorNumber = '0' ;$/;"	v	language:PHP
-sExtension	fckeditor\editor\filemanager\connectors\php\commands.php	/^		$sExtension = strtolower( $sExtension ) ;$/;"	v	language:PHP
-sExtension	fckeditor\editor\filemanager\connectors\php\commands.php	/^		$sExtension = substr( $sFileName, ( strrpos($sFileName, '.') + 1 ) ) ;$/;"	v	language:PHP
-sFile	fckeditor\editor\filemanager\connectors\php\commands.php	/^	while ( $sFile = readdir( $oCurrentFolder ) )$/;"	v	language:PHP
-sFileName	fckeditor\editor\filemanager\connectors\php\commands.php	/^					$sFileName = RemoveExtension( $sOriginalFileName ) . '(' . $iCounter . ').' . $sExtension ;$/;"	v	language:PHP
-sFileName	fckeditor\editor\filemanager\connectors\php\commands.php	/^		$sFileName = $oFile['name'] ;$/;"	v	language:PHP
-sFileName	fckeditor\editor\filemanager\connectors\php\commands.php	/^		$sFileName = SanitizeFileName( $sFileName ) ;$/;"	v	language:PHP
-sFileName	fckeditor\editor\filemanager\connectors\php\commands.php	/^		$sFileName=date("Ymd_His_").rand(100,200).".".$sExtension;$/;"	v	language:PHP
-sFileName	fckeditor\editor\filemanager\connectors\php\commands.php	/^	$sFileName = '' ;$/;"	v	language:PHP
-sFilePath	fckeditor\editor\filemanager\connectors\php\commands.php	/^				$sFilePath = $sServerDir . $sFileName ;$/;"	v	language:PHP
-sFileUrl	fckeditor\editor\filemanager\connectors\php\commands.php	/^	$sFileUrl = CombinePaths( $sFileUrl, $sFileName ) ;$/;"	v	language:PHP
-sFileUrl	fckeditor\editor\filemanager\connectors\php\commands.php	/^	$sFileUrl = CombinePaths( GetResourceTypePath( $resourceType, $sCommand ) , $currentFolder ) ;$/;"	v	language:PHP
-sNewFolderName	fckeditor\editor\filemanager\connectors\php\commands.php	/^		$sNewFolderName = $_GET['NewFolderName'] ;$/;"	v	language:PHP
-sNewFolderName	fckeditor\editor\filemanager\connectors\php\commands.php	/^		$sNewFolderName = SanitizeFolderName( $sNewFolderName ) ;$/;"	v	language:PHP
-sOriginalFileName	fckeditor\editor\filemanager\connectors\php\commands.php	/^		$sOriginalFileName = $sFileName ;$/;"	v	language:PHP
-sServerDir	fckeditor\editor\filemanager\connectors\php\commands.php	/^			$sServerDir = ServerMapFolder( $resourceType, $currentFolder, 'CreateFolder' ) ;$/;"	v	language:PHP
-sServerDir	fckeditor\editor\filemanager\connectors\php\commands.php	/^		$sServerDir = ServerMapFolder( $resourceType, $currentFolder, $sCommand ) ;$/;"	v	language:PHP
-sServerDir	fckeditor\editor\filemanager\connectors\php\commands.php	/^	$sServerDir = ServerMapFolder( $resourceType, $currentFolder, 'GetFolders' ) ;$/;"	v	language:PHP
-sServerDir	fckeditor\editor\filemanager\connectors\php\commands.php	/^	$sServerDir = ServerMapFolder( $resourceType, $currentFolder, 'GetFoldersAndFiles' ) ;$/;"	v	language:PHP
-get_real_path	fckeditor\editor\filemanager\connectors\php\config.php	/^function get_real_path(){$/;"	f	language:PHP
-r	fckeditor\editor\filemanager\connectors\php\config.php	/^	$r =  realpath($_SERVER['DOCUMENT_ROOT']);$/;"	v	language:PHP
-r	fckeditor\editor\filemanager\connectors\php\config.php	/^	$r = str_replace( $r,'',realpath(dirname(dirname(__file__)).'\/..\/..\/..\/..'));$/;"	v	language:PHP
-r	fckeditor\editor\filemanager\connectors\php\config.php	/^	$r = str_replace(DIRECTORY_SEPARATOR,'\/', $r).'\/';$/;"	v	language:PHP
-DoResponse	fckeditor\editor\filemanager\connectors\php\connector.php	/^function DoResponse()$/;"	f	language:PHP
-sCommand	fckeditor\editor\filemanager\connectors\php\connector.php	/^	$sCommand		= $_GET['Command'] ;$/;"	v	language:PHP
-sCommand	fckeditor\editor\filemanager\connectors\php\connector.php	/^	if ( $sCommand == 'FileUpload' )$/;"	v	language:PHP
-sCurrentFolder	fckeditor\editor\filemanager\connectors\php\connector.php	/^	$sCurrentFolder	= GetCurrentFolder() ;$/;"	v	language:PHP
-sResourceType	fckeditor\editor\filemanager\connectors\php\connector.php	/^	$sResourceType	= $_GET['Type'] ;$/;"	v	language:PHP
-CombinePaths	fckeditor\editor\filemanager\connectors\php\io.php	/^function CombinePaths( $sBasePath, $sFolder )$/;"	f	language:PHP
-CreateServerFolder	fckeditor\editor\filemanager\connectors\php\io.php	/^function CreateServerFolder( $folderPath, $lastFolder = null )$/;"	f	language:PHP
-GetCurrentFolder	fckeditor\editor\filemanager\connectors\php\io.php	/^function GetCurrentFolder()$/;"	f	language:PHP
-GetParentFolder	fckeditor\editor\filemanager\connectors\php\io.php	/^function GetParentFolder( $folderPath )$/;"	f	language:PHP
-GetResourceTypeDirectory	fckeditor\editor\filemanager\connectors\php\io.php	/^function GetResourceTypeDirectory( $resourceType, $sCommand )$/;"	f	language:PHP
-GetResourceTypePath	fckeditor\editor\filemanager\connectors\php\io.php	/^function GetResourceTypePath( $resourceType, $sCommand )$/;"	f	language:PHP
-GetRootPath	fckeditor\editor\filemanager\connectors\php\io.php	/^function GetRootPath()$/;"	f	language:PHP
-GetUrlFromPath	fckeditor\editor\filemanager\connectors\php\io.php	/^function GetUrlFromPath( $resourceType, $folderPath, $sCommand )$/;"	f	language:PHP
-IsAllowedCommand	fckeditor\editor\filemanager\connectors\php\io.php	/^function IsAllowedCommand( $sCommand )$/;"	f	language:PHP
-IsAllowedExt	fckeditor\editor\filemanager\connectors\php\io.php	/^function IsAllowedExt( $sExtension, $resourceType )$/;"	f	language:PHP
-IsAllowedType	fckeditor\editor\filemanager\connectors\php\io.php	/^function IsAllowedType( $resourceType )$/;"	f	language:PHP
-RemoveExtension	fckeditor\editor\filemanager\connectors\php\io.php	/^function RemoveExtension( $fileName )$/;"	f	language:PHP
-SanitizeFileName	fckeditor\editor\filemanager\connectors\php\io.php	/^function SanitizeFileName( $sNewFileName )$/;"	f	language:PHP
-SanitizeFolderName	fckeditor\editor\filemanager\connectors\php\io.php	/^function SanitizeFolderName( $sNewFolderName )$/;"	f	language:PHP
-SendUploadResults	fckeditor\editor\filemanager\connectors\php\io.php	/^function SendUploadResults( $errorNumber, $fileUrl = '', $fileName = '', $customMsg = '' )$/;"	f	language:PHP
-ServerMapFolder	fckeditor\editor\filemanager\connectors\php\io.php	/^function ServerMapFolder( $resourceType, $folderPath, $sCommand )$/;"	f	language:PHP
-Server_MapPath	fckeditor\editor\filemanager\connectors\php\io.php	/^function Server_MapPath( $path )$/;"	f	language:PHP
-arAllowed	fckeditor\editor\filemanager\connectors\php\io.php	/^	$arAllowed	= $Config['AllowedExtensions'][$resourceType] ;$/;"	v	language:PHP
-arDenied	fckeditor\editor\filemanager\connectors\php\io.php	/^	$arDenied	= $Config['DeniedExtensions'][$resourceType] ;$/;"	v	language:PHP
-fileUrl	fckeditor\editor\filemanager\connectors\php\io.php	/^function SendUploadResults( $errorNumber, $fileUrl = '', $fileName = '', $customMsg = '' )$/;"	v	language:PHP
-folderPath	fckeditor\editor\filemanager\connectors\php\io.php	/^		$folderPath = str_replace( '\/\/', '\/', $folderPath ) ;$/;"	v	language:PHP
-info	fckeditor\editor\filemanager\connectors\php\io.php	/^		$info = apache_lookup_uri( $path ) ;$/;"	v	language:PHP
-is	fckeditor\editor\filemanager\connectors\php\io.php	/^	\/\/ This function is available only for Apache$/;"	f	language:PHP
-lastFolder	fckeditor\editor\filemanager\connectors\php\io.php	/^		if ( !is_null( $lastFolder ) && $lastFolder === $sParent) {$/;"	v	language:PHP
-lastFolder	fckeditor\editor\filemanager\connectors\php\io.php	/^function CreateServerFolder( $folderPath, $lastFolder = null )$/;"	v	language:PHP
-oldumask	fckeditor\editor\filemanager\connectors\php\io.php	/^			$oldumask = umask(0) ;$/;"	v	language:PHP
-permissions	fckeditor\editor\filemanager\connectors\php\io.php	/^				$permissions = $Config['ChmodOnFolderCreate'] ;$/;"	v	language:PHP
-permissions	fckeditor\editor\filemanager\connectors\php\io.php	/^			$permissions = 0777 ;$/;"	v	language:PHP
-php_errormsg	fckeditor\editor\filemanager\connectors\php\io.php	/^		$php_errormsg = '' ;$/;"	v	language:PHP
-position	fckeditor\editor\filemanager\connectors\php\io.php	/^	$position = strpos( $sRealPath, $sSelfPath ) ;$/;"	v	language:PHP
-position	fckeditor\editor\filemanager\connectors\php\io.php	/^	if ( $position === false || $position <> strlen( $sRealPath ) - strlen( $sSelfPath ) )$/;"	v	language:PHP
-rpl	fckeditor\editor\filemanager\connectors\php\io.php	/^	$rpl = array( '\\\\' => '\\\\\\\\', '"' => '\\\\"' ) ;$/;"	v	language:PHP
-sCommand	fckeditor\editor\filemanager\connectors\php\io.php	/^	if ( $sCommand == "QuickUpload")$/;"	v	language:PHP
-sCurrentFolder	fckeditor\editor\filemanager\connectors\php\io.php	/^		$sCurrentFolder = '\/' . $sCurrentFolder ;$/;"	v	language:PHP
-sCurrentFolder	fckeditor\editor\filemanager\connectors\php\io.php	/^		$sCurrentFolder = str_replace ('\/\/', '\/', $sCurrentFolder) ;$/;"	v	language:PHP
-sCurrentFolder	fckeditor\editor\filemanager\connectors\php\io.php	/^	$sCurrentFolder	= isset( $_GET['CurrentFolder'] ) ? $_GET['CurrentFolder'] : '\/' ;$/;"	v	language:PHP
-sErrorMsg	fckeditor\editor\filemanager\connectors\php\io.php	/^		$sErrorMsg = $php_errormsg ;$/;"	v	language:PHP
-sErrorMsg	fckeditor\editor\filemanager\connectors\php\io.php	/^		$sErrorMsg = CreateServerFolder( $sParent, $folderPath ) ;$/;"	v	language:PHP
-sErrorMsg	fckeditor\editor\filemanager\connectors\php\io.php	/^	$sErrorMsg = CreateServerFolder( $sResourceTypePath ) ;$/;"	v	language:PHP
-sNewFileName	fckeditor\editor\filemanager\connectors\php\io.php	/^		$sNewFileName = preg_replace( '\/\\\\.(?![^.]*$)\/', '_', $sNewFileName ) ;$/;"	v	language:PHP
-sNewFileName	fckeditor\editor\filemanager\connectors\php\io.php	/^	$sNewFileName = preg_replace( '\/\\\\\\\\|\\\\\/|\\\\||\\\\:|\\\\?|\\\\*|"|<|>|[[:cntrl:]]\/', '_', $sNewFileName ) ;$/;"	v	language:PHP
-sNewFileName	fckeditor\editor\filemanager\connectors\php\io.php	/^	$sNewFileName = stripslashes( $sNewFileName ) ;$/;"	v	language:PHP
-sNewFolderName	fckeditor\editor\filemanager\connectors\php\io.php	/^	$sNewFolderName = preg_replace( '\/\\\\.|\\\\\\\\|\\\\\/|\\\\||\\\\:|\\\\?|\\\\*|"|<|>|[[:cntrl:]]\/', '_', $sNewFolderName ) ;$/;"	v	language:PHP
-sNewFolderName	fckeditor\editor\filemanager\connectors\php\io.php	/^	$sNewFolderName = stripslashes( $sNewFolderName ) ;$/;"	v	language:PHP
-sParent	fckeditor\editor\filemanager\connectors\php\io.php	/^	$sParent = GetParentFolder( $folderPath ) ;$/;"	v	language:PHP
-sPattern	fckeditor\editor\filemanager\connectors\php\io.php	/^	$sPattern = "-[\/\\\\\\\\][^\/\\\\\\\\]+[\/\\\\\\\\]?$-" ;$/;"	v	language:PHP
-sRealPath	fckeditor\editor\filemanager\connectors\php\io.php	/^	$sRealPath = realpath( '.\/' ) ;$/;"	v	language:PHP
-sRealPath	fckeditor\editor\filemanager\connectors\php\io.php	/^	$sRealPath = rtrim($sRealPath,"\\\\\/");$/;"	v	language:PHP
-sResourceTypePath	fckeditor\editor\filemanager\connectors\php\io.php	/^	$sResourceTypePath = GetResourceTypeDirectory( $resourceType, $sCommand ) ;$/;"	v	language:PHP
-sSelfPath	fckeditor\editor\filemanager\connectors\php\io.php	/^	$sSelfPath = $_SERVER['PHP_SELF'] ;$/;"	v	language:PHP
-sSelfPath	fckeditor\editor\filemanager\connectors\php\io.php	/^	$sSelfPath = str_replace( '\/', DIRECTORY_SEPARATOR, $sSelfPath ) ;$/;"	v	language:PHP
-sSelfPath	fckeditor\editor\filemanager\connectors\php\io.php	/^	$sSelfPath = substr( $sSelfPath, 0, strrpos( $sSelfPath, '\/' ) ) ;$/;"	v	language:PHP
-that	fckeditor\editor\filemanager\connectors\php\io.php	/^\/\/ This is the function that sends the results of the uploading process.$/;"	f	language:PHP
-DIRECTORY_SEPARATOR	fckeditor\editor\filemanager\connectors\php\phpcompat.php	/^    define( 'DIRECTORY_SEPARATOR',$/;"	d	language:PHP
-_FILES	fckeditor\editor\filemanager\connectors\php\phpcompat.php	/^    $_FILES = $HTTP_POST_FILES ;$/;"	v	language:PHP
-_GET	fckeditor\editor\filemanager\connectors\php\phpcompat.php	/^    $_GET = $HTTP_GET_VARS ;$/;"	v	language:PHP
-_SERVER	fckeditor\editor\filemanager\connectors\php\phpcompat.php	/^    $_SERVER = $HTTP_SERVER_VARS ;$/;"	v	language:PHP
-SendError	fckeditor\editor\filemanager\connectors\php\upload.php	/^function SendError( $number, $text )$/;"	f	language:PHP
-sCommand	fckeditor\editor\filemanager\connectors\php\upload.php	/^$sCommand = 'QuickUpload' ;$/;"	v	language:PHP
-sCurrentFolder	fckeditor\editor\filemanager\connectors\php\upload.php	/^$sCurrentFolder	= GetCurrentFolder() ;$/;"	v	language:PHP
-sType	fckeditor\editor\filemanager\connectors\php\upload.php	/^$sType = isset( $_GET['Type'] ) ? $_GET['Type'] : 'File' ;$/;"	v	language:PHP
-ConvertToXmlAttribute	fckeditor\editor\filemanager\connectors\php\util.php	/^function ConvertToXmlAttribute( $value )$/;"	f	language:PHP
-DetectHtml	fckeditor\editor\filemanager\connectors\php\util.php	/^function DetectHtml( $filePath )$/;"	f	language:PHP
-FindBadUtf8	fckeditor\editor\filemanager\connectors\php\util.php	/^function FindBadUtf8( $string )$/;"	f	language:PHP
-IsHtmlExtension	fckeditor\editor\filemanager\connectors\php\util.php	/^function IsHtmlExtension( $ext, $htmlExtensions )$/;"	f	language:PHP
-IsImageValid	fckeditor\editor\filemanager\connectors\php\util.php	/^function IsImageValid( $filePath, $extension )$/;"	f	language:PHP
-RemoveFromEnd	fckeditor\editor\filemanager\connectors\php\util.php	/^function RemoveFromEnd( $sourceString, $charToRemove )$/;"	f	language:PHP
-RemoveFromStart	fckeditor\editor\filemanager\connectors\php\util.php	/^function RemoveFromStart( $sourceString, $charToRemove )$/;"	f	language:PHP
-chunk	fckeditor\editor\filemanager\connectors\php\util.php	/^	$chunk = fread( $fp, 1024 ) ;$/;"	v	language:PHP
-chunk	fckeditor\editor\filemanager\connectors\php\util.php	/^	$chunk = strtolower( $chunk ) ;$/;"	v	language:PHP
-chunk	fckeditor\editor\filemanager\connectors\php\util.php	/^	$chunk = trim( $chunk ) ;$/;"	v	language:PHP
-fp	fckeditor\editor\filemanager\connectors\php\util.php	/^	$fp = @fopen( $filePath, 'rb' ) ;$/;"	v	language:PHP
-fp	fckeditor\editor\filemanager\connectors\php\util.php	/^	if ( $fp === false || !flock( $fp, LOCK_SH ) )$/;"	v	language:PHP
-imageCheckExtensions	fckeditor\editor\filemanager\connectors\php\util.php	/^	$imageCheckExtensions = array('gif', 'jpeg', 'jpg', 'png', 'swf', 'psd', 'bmp', 'iff');$/;"	v	language:PHP
-key	fckeditor\editor\filemanager\connectors\php\util.php	/^	foreach ( $htmlExtensions as $key => $val )$/;"	v	language:PHP
-lcaseHtmlExtensions	fckeditor\editor\filemanager\connectors\php\util.php	/^	$lcaseHtmlExtensions = array() ;$/;"	v	language:PHP
-os	fckeditor\editor\filemanager\connectors\php\util.php	/^		$os = PHP_OS ;$/;"	v	language:PHP
-os	fckeditor\editor\filemanager\connectors\php\util.php	/^		$os = php_uname() ;$/;"	v	language:PHP
-regex	fckeditor\editor\filemanager\connectors\php\util.php	/^	$regex =$/;"	v	language:PHP
-sCurrentVersion	fckeditor\editor\filemanager\connectors\php\util.php	/^		$sCurrentVersion = phpversion();$/;"	v	language:PHP
-sPattern	fckeditor\editor\filemanager\connectors\php\util.php	/^	$sPattern = '|' . $charToRemove . '+$|' ;$/;"	v	language:PHP
-sPattern	fckeditor\editor\filemanager\connectors\php\util.php	/^	$sPattern = '|^' . $charToRemove . '+|' ;$/;"	v	language:PHP
-string	fckeditor\editor\filemanager\connectors\php\util.php	/^		$string = substr($string, strlen($matches[0]));$/;"	v	language:PHP
-tags	fckeditor\editor\filemanager\connectors\php\util.php	/^	$tags = array( '<body', '<head', '<html', '<img', '<pre', '<script', '<table', '<title' ) ;$/;"	v	language:PHP
-validates	fckeditor\editor\filemanager\connectors\php\util.php	/^ * Currently this function validates only image files.$/;"	f	language:PHP
-BasePath	fckeditor\fckeditor_php4.php	/^		$this->BasePath		= '\/fckeditor\/' ;$/;"	v	language:PHP
-BasePath	fckeditor\fckeditor_php4.php	/^	var $BasePath ;$/;"	v	language:PHP
-Config	fckeditor\fckeditor_php4.php	/^		$this->Config		= array() ;$/;"	v	language:PHP
-Config	fckeditor\fckeditor_php4.php	/^	var $Config ;$/;"	v	language:PHP
-Create	fckeditor\fckeditor_php4.php	/^	function Create()$/;"	f	language:PHP
-CreateHtml	fckeditor\fckeditor_php4.php	/^	function CreateHtml()$/;"	f	language:PHP
-EncodeConfig	fckeditor\fckeditor_php4.php	/^	function EncodeConfig( $valueToEncode )$/;"	f	language:PHP
-FCKeditor	fckeditor\fckeditor_php4.php	/^	function FCKeditor( $instanceName )$/;"	f	language:PHP
-FCKeditor	fckeditor\fckeditor_php4.php	/^class FCKeditor$/;"	c	language:PHP
-FCKeditor_IsCompatibleBrowser	fckeditor\fckeditor_php4.php	/^function FCKeditor_IsCompatibleBrowser()$/;"	f	language:PHP
-File	fckeditor\fckeditor_php4.php	/^				$File = 'fckeditor.html' ;$/;"	v	language:PHP
-File	fckeditor\fckeditor_php4.php	/^				$File = 'fckeditor.original.html' ;$/;"	v	language:PHP
-GetConfigFieldString	fckeditor\fckeditor_php4.php	/^	function GetConfigFieldString()$/;"	f	language:PHP
-Height	fckeditor\fckeditor_php4.php	/^		$this->Height		= '200' ;$/;"	v	language:PHP
-Height	fckeditor\fckeditor_php4.php	/^	var $Height ;$/;"	v	language:PHP
-HeightCSS	fckeditor\fckeditor_php4.php	/^				$HeightCSS = $this->Height . 'px' ;$/;"	v	language:PHP
-HeightCSS	fckeditor\fckeditor_php4.php	/^				$HeightCSS = $this->Height ;$/;"	v	language:PHP
-Html	fckeditor\fckeditor_php4.php	/^		$Html = '' ;$/;"	v	language:PHP
-HtmlValue	fckeditor\fckeditor_php4.php	/^		$HtmlValue = htmlspecialchars( $this->Value ) ;$/;"	v	language:PHP
-InstanceName	fckeditor\fckeditor_php4.php	/^		$this->InstanceName	= $instanceName ;$/;"	v	language:PHP
-InstanceName	fckeditor\fckeditor_php4.php	/^	var $InstanceName ;$/;"	v	language:PHP
-IsCompatible	fckeditor\fckeditor_php4.php	/^	function IsCompatible()$/;"	f	language:PHP
-Link	fckeditor\fckeditor_php4.php	/^			$Link = "{$this->BasePath}editor\/{$File}?InstanceName={$this->InstanceName}" ;$/;"	v	language:PHP
-ToolbarSet	fckeditor\fckeditor_php4.php	/^		$this->ToolbarSet	= 'Default' ;$/;"	v	language:PHP
-ToolbarSet	fckeditor\fckeditor_php4.php	/^	var $ToolbarSet ;$/;"	v	language:PHP
-Value	fckeditor\fckeditor_php4.php	/^		$this->Value		= '' ;$/;"	v	language:PHP
-Value	fckeditor\fckeditor_php4.php	/^	var $Value ;$/;"	v	language:PHP
-Width	fckeditor\fckeditor_php4.php	/^		$this->Width		= '100%' ;$/;"	v	language:PHP
-Width	fckeditor\fckeditor_php4.php	/^	var $Width ;$/;"	v	language:PHP
-WidthCSS	fckeditor\fckeditor_php4.php	/^				$WidthCSS = $this->Width . 'px' ;$/;"	v	language:PHP
-WidthCSS	fckeditor\fckeditor_php4.php	/^				$WidthCSS = $this->Width ;$/;"	v	language:PHP
-_GET	fckeditor\fckeditor_php4.php	/^			$_GET = $HTTP_GET_VARS ;$/;"	v	language:PHP
-bFirst	fckeditor\fckeditor_php4.php	/^				$bFirst = false ;$/;"	v	language:PHP
-bFirst	fckeditor\fckeditor_php4.php	/^			if ( $bFirst == false )$/;"	v	language:PHP
-bFirst	fckeditor\fckeditor_php4.php	/^		$bFirst = true ;$/;"	v	language:PHP
-chars	fckeditor\fckeditor_php4.php	/^		$chars = array($/;"	v	language:PHP
-fVersion	fckeditor\fckeditor_php4.php	/^		$fVersion = (float)substr($sAgent, strpos($sAgent, 'Opera\/') + 6, 4) ;$/;"	v	language:PHP
-iVersion	fckeditor\fckeditor_php4.php	/^		$iVersion = $matches[1] ;$/;"	v	language:PHP
-iVersion	fckeditor\fckeditor_php4.php	/^		$iVersion = (float)substr($sAgent, strpos($sAgent, 'MSIE') + 5, 3) ;$/;"	v	language:PHP
-iVersion	fckeditor\fckeditor_php4.php	/^		$iVersion = (int)substr($sAgent, strpos($sAgent, 'Gecko\/') + 6, 8) ;$/;"	v	language:PHP
-sAgent	fckeditor\fckeditor_php4.php	/^			$sAgent = $HTTP_SERVER_VARS['HTTP_USER_AGENT'] ;$/;"	v	language:PHP
-sAgent	fckeditor\fckeditor_php4.php	/^			$sAgent = $HTTP_USER_AGENT ;$/;"	v	language:PHP
-sAgent	fckeditor\fckeditor_php4.php	/^		$sAgent = $_SERVER['HTTP_USER_AGENT'] ;$/;"	v	language:PHP
-sKey	fckeditor\fckeditor_php4.php	/^		foreach ( $this->Config as $sKey => $sValue )$/;"	v	language:PHP
-sParams	fckeditor\fckeditor_php4.php	/^		$sParams = '' ;$/;"	v	language:PHP
-sValue	fckeditor\fckeditor_php4.php	/^			else if ( $sValue === false )$/;"	v	language:PHP
-sValue	fckeditor\fckeditor_php4.php	/^			if ( $sValue === true )$/;"	v	language:PHP
-that	fckeditor\fckeditor_php4.php	/^ * It defines the FCKeditor class that can be used to create editor$/;"	c	language:PHP
-BasePath	fckeditor\fckeditor_php5.php	/^		$this->BasePath		= '\/fckeditor\/' ;$/;"	v	language:PHP
-BasePath	fckeditor\fckeditor_php5.php	/^	public $BasePath ;$/;"	v	language:PHP
-Config	fckeditor\fckeditor_php5.php	/^		$this->Config		= array() ;$/;"	v	language:PHP
-Config	fckeditor\fckeditor_php5.php	/^	public $Config ;$/;"	v	language:PHP
-Create	fckeditor\fckeditor_php5.php	/^	public function Create()$/;"	f	language:PHP
-CreateHtml	fckeditor\fckeditor_php5.php	/^	public function CreateHtml()$/;"	f	language:PHP
-EncodeConfig	fckeditor\fckeditor_php5.php	/^	public function EncodeConfig( $valueToEncode )$/;"	f	language:PHP
-FCKeditor	fckeditor\fckeditor_php5.php	/^class FCKeditor$/;"	c	language:PHP
-FCKeditor_IsCompatibleBrowser	fckeditor\fckeditor_php5.php	/^function FCKeditor_IsCompatibleBrowser()$/;"	f	language:PHP
-File	fckeditor\fckeditor_php5.php	/^				$File = 'fckeditor.html' ;$/;"	v	language:PHP
-File	fckeditor\fckeditor_php5.php	/^				$File = 'fckeditor.original.html' ;$/;"	v	language:PHP
-GetConfigFieldString	fckeditor\fckeditor_php5.php	/^	public function GetConfigFieldString()$/;"	f	language:PHP
-Height	fckeditor\fckeditor_php5.php	/^		$this->Height		= '200' ;$/;"	v	language:PHP
-Height	fckeditor\fckeditor_php5.php	/^	public $Height ;$/;"	v	language:PHP
-HeightCSS	fckeditor\fckeditor_php5.php	/^				$HeightCSS = $this->Height . 'px' ;$/;"	v	language:PHP
-HeightCSS	fckeditor\fckeditor_php5.php	/^				$HeightCSS = $this->Height ;$/;"	v	language:PHP
-Html	fckeditor\fckeditor_php5.php	/^		$Html = '' ;$/;"	v	language:PHP
-HtmlValue	fckeditor\fckeditor_php5.php	/^		$HtmlValue = htmlspecialchars( $this->Value ) ;$/;"	v	language:PHP
-InstanceName	fckeditor\fckeditor_php5.php	/^		$this->InstanceName	= $instanceName ;$/;"	v	language:PHP
-InstanceName	fckeditor\fckeditor_php5.php	/^	public $InstanceName ;$/;"	v	language:PHP
-IsCompatible	fckeditor\fckeditor_php5.php	/^	public function IsCompatible()$/;"	f	language:PHP
-Link	fckeditor\fckeditor_php5.php	/^			$Link = "{$this->BasePath}editor\/{$File}?InstanceName={$this->InstanceName}" ;$/;"	v	language:PHP
-ToolbarSet	fckeditor\fckeditor_php5.php	/^		$this->ToolbarSet	= 'Default' ;$/;"	v	language:PHP
-ToolbarSet	fckeditor\fckeditor_php5.php	/^	public $ToolbarSet ;$/;"	v	language:PHP
-Value	fckeditor\fckeditor_php5.php	/^		$this->Value		= '' ;$/;"	v	language:PHP
-Value	fckeditor\fckeditor_php5.php	/^	public $Value ;$/;"	v	language:PHP
-Width	fckeditor\fckeditor_php5.php	/^		$this->Width		= '100%' ;$/;"	v	language:PHP
-Width	fckeditor\fckeditor_php5.php	/^	public $Width ;$/;"	v	language:PHP
-WidthCSS	fckeditor\fckeditor_php5.php	/^				$WidthCSS = $this->Width . 'px' ;$/;"	v	language:PHP
-WidthCSS	fckeditor\fckeditor_php5.php	/^				$WidthCSS = $this->Width ;$/;"	v	language:PHP
-__construct	fckeditor\fckeditor_php5.php	/^	public function __construct( $instanceName )$/;"	f	language:PHP
-bFirst	fckeditor\fckeditor_php5.php	/^				$bFirst = false ;$/;"	v	language:PHP
-bFirst	fckeditor\fckeditor_php5.php	/^			if ( $bFirst == false )$/;"	v	language:PHP
-bFirst	fckeditor\fckeditor_php5.php	/^		$bFirst = true ;$/;"	v	language:PHP
-chars	fckeditor\fckeditor_php5.php	/^		$chars = array($/;"	v	language:PHP
-fVersion	fckeditor\fckeditor_php5.php	/^		$fVersion = (float)substr($sAgent, strpos($sAgent, 'Opera\/') + 6, 4) ;$/;"	v	language:PHP
-iVersion	fckeditor\fckeditor_php5.php	/^		$iVersion = $matches[1] ;$/;"	v	language:PHP
-iVersion	fckeditor\fckeditor_php5.php	/^		$iVersion = (float)substr($sAgent, strpos($sAgent, 'MSIE') + 5, 3) ;$/;"	v	language:PHP
-iVersion	fckeditor\fckeditor_php5.php	/^		$iVersion = (int)substr($sAgent, strpos($sAgent, 'Gecko\/') + 6, 8) ;$/;"	v	language:PHP
-sAgent	fckeditor\fckeditor_php5.php	/^			$sAgent = $HTTP_SERVER_VARS['HTTP_USER_AGENT'] ;$/;"	v	language:PHP
-sAgent	fckeditor\fckeditor_php5.php	/^			$sAgent = $HTTP_USER_AGENT ;$/;"	v	language:PHP
-sAgent	fckeditor\fckeditor_php5.php	/^		$sAgent = $_SERVER['HTTP_USER_AGENT'] ;$/;"	v	language:PHP
-sKey	fckeditor\fckeditor_php5.php	/^		foreach ( $this->Config as $sKey => $sValue )$/;"	v	language:PHP
-sParams	fckeditor\fckeditor_php5.php	/^		$sParams = '' ;$/;"	v	language:PHP
-sValue	fckeditor\fckeditor_php5.php	/^			else if ( $sValue === false )$/;"	v	language:PHP
-sValue	fckeditor\fckeditor_php5.php	/^			if ( $sValue === true )$/;"	v	language:PHP
-that	fckeditor\fckeditor_php5.php	/^ * It defines the FCKeditor class that can be used to create editor$/;"	c	language:PHP
 APPPATH	index.php	/^		define('APPPATH', $application_folder.'\/');$/;"	d	language:PHP
 APPPATH	index.php	/^		define('APPPATH', BASEPATH.$application_folder.'\/');$/;"	d	language:PHP
 BASEPATH	index.php	/^	define('BASEPATH', str_replace("\\\\", "\/", $system_path));$/;"	d	language:PHP
@@ -9266,99 +8991,101 @@ name	index.php	/^ * specific controller.  Leave the function name blank if you n
 system_path	index.php	/^		$system_path = realpath($system_path).'\/';$/;"	v	language:PHP
 system_path	index.php	/^	$system_path = 'system';$/;"	v	language:PHP
 system_path	index.php	/^	$system_path = rtrim($system_path, '\/').'\/';$/;"	v	language:PHP
+url	index.php	/^	$url = "http:\/\/".$_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME'];$/;"	v	language:PHP
+url	index.php	/^	$url = substr($url,0,-9);$/;"	v	language:PHP
 when	index.php	/^ * config class when initialized. This allows you to set custom config$/;"	c	language:PHP
 you	index.php	/^	\/\/ The controller function you wish to be called.$/;"	f	language:PHP
-directory_depth	installed\index.php	/^function directory_map($source_dir, $directory_depth = 0, $hidden = FALSE)$/;"	v	language:PHP
-directory_map	installed\index.php	/^function directory_map($source_dir, $directory_depth = 0, $hidden = FALSE)$/;"	f	language:PHP
-dirs	installed\index.php	/^		$dirs = directory_map(dirname(dirname(__file__)).DIRECTORY_SEPARATOR.'database',1);$/;"	v	language:PHP
-filedata	installed\index.php	/^			$filedata	= array();$/;"	v	language:PHP
-new_depth	installed\index.php	/^			$new_depth	= $directory_depth - 1;$/;"	v	language:PHP
-select	installed\index.php	/^			$select =$v == 'lb_cn.sql' ? 'selected=true':'';$/;"	v	language:PHP
-setDb	installed\index.php	/^function setDb(v){$/;"	f	language:PHP
-source_dir	installed\index.php	/^			$source_dir	= rtrim($source_dir, DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR;$/;"	v	language:PHP
-CFG_DB_ADAPTER	installed\index_2.php	/^define('CFG_DB_ADAPTER','mysql');    			$/;"	d	language:PHP
-CFG_DB_HOST	installed\index_2.php	/^define('CFG_DB_HOST',$db_host);				$/;"	d	language:PHP
-CFG_DB_NAME	installed\index_2.php	/^define('CFG_DB_NAME',$db_name);	$/;"	d	language:PHP
-CFG_DB_PASSWORD	installed\index_2.php	/^define('CFG_DB_PASSWORD',$db_password);  			$/;"	d	language:PHP
-CFG_DB_PREFIX	installed\index_2.php	/^define('CFG_DB_PREFIX',$db_prefix);	$/;"	d	language:PHP
-CFG_DB_USER	installed\index_2.php	/^define('CFG_DB_USER',$db_user);        			$/;"	d	language:PHP
-DB_FILE	installed\index_2.php	/^define('DB_FILE',$base_dir.'database'.$dl.$db_file);$/;"	d	language:PHP
-base_dir	installed\index_2.php	/^$base_dir = dirname($dir).$dl;$/;"	v	language:PHP
-config_dir	installed\index_2.php	/^$config_dir = $base_dir.$dl.'application'.$dl.'config'.$dl;$/;"	v	language:PHP
-connect	installed\index_2.php	/^	$connect = @mysql_connect(CFG_DB_HOST,CFG_DB_USER,CFG_DB_PASSWORD) or tri_err('connect error.');$/;"	v	language:PHP
-dir	installed\index_2.php	/^$dir  = dirname(__file__).$dl ;$/;"	v	language:PHP
-dl	installed\index_2.php	/^$dl = DIRECTORY_SEPARATOR;$/;"	v	language:PHP
-dlr	installed\index_2.php	/^	$dlr = file_get_contents($config_dir.$file); $/;"	v	language:PHP
-dlr2	installed\index_2.php	/^		$dlr2 = preg_replace("\/".preg_quote($ini)."']\\s*=.*;\/", $ini."'] = ".$value.";",$dlr); $/;"	v	language:PHP
-dlr2	installed\index_2.php	/^		$dlr2 = preg_replace("\/".preg_quote($ini)."']\\s*=.*;\/",$ini."'] = \\"".$value."\\";",$dlr); $/;"	v	language:PHP
-dlr2	installed\index_2.php	/^	$dlr2=""; $/;"	v	language:PHP
-dump	installed\index_2.php	/^	$dump = new phpMyImporter(CFG_DB_NAME,$connect,DB_FILE,false);$/;"	v	language:PHP
-log_error	installed\index_2.php	/^function log_error($txt){$/;"	f	language:PHP
-query	installed\index_2.php	/^	$query = mysql_query('show tables from '.CFG_DB_NAME,$connect); $/;"	v	language:PHP
-sql1	installed\index_2.php	/^	$sql1 = "drop database if exists ".CFG_DB_NAME.";";$/;"	v	language:PHP
-sql2	installed\index_2.php	/^	$sql2 = "CREATE DATABASE `".CFG_DB_NAME."` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;";$/;"	v	language:PHP
-tri_err	installed\index_2.php	/^function tri_err($msg){$/;"	f	language:PHP
-update_config	installed\index_2.php	/^function update_config($ini, $value,$type="string",$file='database.php'){ $/;"	f	language:PHP
-CFG_DB_ADAPTER	installed\index_3.php	/^define('CFG_DB_ADAPTER','mysql');    			$/;"	d	language:PHP
-CFG_DB_HOST	installed\index_3.php	/^define('CFG_DB_HOST',$db_host);				$/;"	d	language:PHP
-CFG_DB_NAME	installed\index_3.php	/^define('CFG_DB_NAME',$db_name);	$/;"	d	language:PHP
-CFG_DB_PASSWORD	installed\index_3.php	/^define('CFG_DB_PASSWORD',$db_password);  			$/;"	d	language:PHP
-CFG_DB_PREFIX	installed\index_3.php	/^define('CFG_DB_PREFIX',$db_prefix);	$/;"	d	language:PHP
-CFG_DB_USER	installed\index_3.php	/^define('CFG_DB_USER',$db_user);        			$/;"	d	language:PHP
-DB_FILE	installed\index_3.php	/^define('DB_FILE',$base_dir.'database'.$dl.$db_file);$/;"	d	language:PHP
-base_dir	installed\index_3.php	/^$base_dir = dirname($dir).$dl;$/;"	v	language:PHP
-config_file	installed\index_3.php	/^$config_file = $base_dir.$dl.'application'.$dl.'config'.$dl.'database.php';$/;"	v	language:PHP
-connect	installed\index_3.php	/^$connect = mysql_connect(CFG_DB_HOST,CFG_DB_USER,CFG_DB_PASSWORD) or die(mysql_error())	;$/;"	v	language:PHP
-dir	installed\index_3.php	/^$dir  = dirname(__file__).$dl ;$/;"	v	language:PHP
-dl	installed\index_3.php	/^$dl = DIRECTORY_SEPARATOR;$/;"	v	language:PHP
-dlr	installed\index_3.php	/^	$dlr = file_get_contents($config_dir.$file); $/;"	v	language:PHP
-dlr2	installed\index_3.php	/^		$dlr2 = preg_replace("\/".preg_quote($ini)."']\\s*=.*;\/", $ini."'] = ".$value.";",$dlr); $/;"	v	language:PHP
-dlr2	installed\index_3.php	/^		$dlr2 = preg_replace("\/".preg_quote($ini)."']\\s*=.*;\/",$ini."'] = \\"".$value."\\";",$dlr); $/;"	v	language:PHP
-dlr2	installed\index_3.php	/^	$dlr2=""; $/;"	v	language:PHP
-mysqli	installed\index_3.php	/^$mysqli = new mysqli(CFG_DB_HOST, CFG_DB_USER, CFG_DB_PASSWORD, CFG_DB_NAME);$/;"	v	language:PHP
-query	installed\index_3.php	/^$query  = file_get_contents(DB_FILE);$/;"	v	language:PHP
-query	installed\index_3.php	/^$query  = preg_replace("\/mysys_\/",CFG_DB_PREFIX,$query);	$/;"	v	language:PHP
-sql1	installed\index_3.php	/^$sql1 = "drop database if exists ".CFG_DB_NAME.";";$/;"	v	language:PHP
-sql2	installed\index_3.php	/^$sql2 = "CREATE DATABASE `".CFG_DB_NAME."` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;";		$/;"	v	language:PHP
-update_config	installed\index_3.php	/^function update_config($ini, $value,$type="string",$file='database.php'){ $/;"	f	language:PHP
-compress	installed\libs\phpMyImporter.php	/^		$this->compress = $compress;$/;"	v	language:PHP
-compress	installed\libs\phpMyImporter.php	/^	var $compress = null;$/;"	v	language:PHP
-connection	installed\libs\phpMyImporter.php	/^		$this->connection = $connection;$/;"	v	language:PHP
-connection	installed\libs\phpMyImporter.php	/^	function phpMyImporter($db=null, $connection=null, $filepath='dump.sql', $compress=false) {$/;"	v	language:PHP
-connection	installed\libs\phpMyImporter.php	/^	var $connection = null;$/;"	v	language:PHP
-database	installed\libs\phpMyImporter.php	/^		$this->database = $db;$/;"	v	language:PHP
-database	installed\libs\phpMyImporter.php	/^	var $database = null;$/;"	v	language:PHP
-db_prefix	installed\libs\phpMyImporter.php	/^		$this->db_prefix = $db_prefix;$/;"	v	language:PHP
-db_prefix	installed\libs\phpMyImporter.php	/^	private  $db_prefix;$/;"	v	language:PHP
-doImport	installed\libs\phpMyImporter.php	/^	function doImport() {		$/;"	f	language:PHP
-encoding	installed\libs\phpMyImporter.php	/^			$encoding = @mysql_query("SET NAMES 'utf8'", $this->connection);$/;"	v	language:PHP
-flush_buffers	installed\libs\phpMyImporter.php	/^	function flush_buffers(){ $/;"	f	language:PHP
-getDbPrefix	installed\libs\phpMyImporter.php	/^	function getDbPrefix()$/;"	f	language:PHP
-import	installed\libs\phpMyImporter.php	/^			$import = $this->importSql($this->importFilename);$/;"	v	language:PHP
-importFilename	installed\libs\phpMyImporter.php	/^		$this->importFilename = $filepath;$/;"	v	language:PHP
-importFilename	installed\libs\phpMyImporter.php	/^	var $importFilename = null;$/;"	v	language:PHP
-importSql	installed\libs\phpMyImporter.php	/^				$importSql = "";$/;"	v	language:PHP
-importSql	installed\libs\phpMyImporter.php	/^		$importSql = "";$/;"	v	language:PHP
-importSql	installed\libs\phpMyImporter.php	/^	function importSql($file) {$/;"	f	language:PHP
-lines	installed\libs\phpMyImporter.php	/^			$lines = file($file);$/;"	v	language:PHP
-lines	installed\libs\phpMyImporter.php	/^			$lines = gzfile($file);$/;"	v	language:PHP
-lines	installed\libs\phpMyImporter.php	/^		if($this->getDbPrefix()) $lines = preg_replace("\/mysys_\/",$this->getDbPrefix(),$lines);	$/;"	v	language:PHP
-numOfLines	installed\libs\phpMyImporter.php	/^			$numOfLines = count($lines);$/;"	v	language:PHP
-output	installed\libs\phpMyImporter.php	/^	function output($msg){$/;"	f	language:PHP
-phpMyImporter	installed\libs\phpMyImporter.php	/^	function phpMyImporter($db=null, $connection=null, $filepath='dump.sql', $compress=false) {$/;"	f	language:PHP
-phpMyImporter	installed\libs\phpMyImporter.php	/^class phpMyImporter {$/;"	c	language:PHP
-procent	installed\libs\phpMyImporter.php	/^		$procent = 0;$/;"	v	language:PHP
-query	installed\libs\phpMyImporter.php	/^				$query = @mysql_query($importSql, $this->connection);$/;"	v	language:PHP
-setDatabase	installed\libs\phpMyImporter.php	/^	function setDatabase($db){$/;"	f	language:PHP
-setDbPrefix	installed\libs\phpMyImporter.php	/^	function setDbPrefix($db_prefix)$/;"	f	language:PHP
-showPercent	installed\libs\phpMyImporter.php	/^	function showPercent($percent){$/;"	f	language:PHP
-stats	installed\libs\phpMyImporter.php	/^		$stats = count($lines);$/;"	v	language:PHP
-str	installed\libs\phpMyImporter.php	/^				else $str= ".";$/;"	v	language:PHP
-str	installed\libs\phpMyImporter.php	/^			else $str= " DONE!\\n";$/;"	v	language:PHP
-str	installed\libs\phpMyImporter.php	/^			if (!$import) $str= "\\n".mysql_error($this->connection)."\\n";$/;"	v	language:PHP
-utf8	installed\libs\phpMyImporter.php	/^		$this->utf8 = true;$/;"	v	language:PHP
-utf8	installed\libs\phpMyImporter.php	/^	var $utf8 = null;$/;"	v	language:PHP
-x	installed\libs\phpMyImporter.php	/^		$x = 0;$/;"	v	language:PHP
+directory_depth	install\index.php	/^function directory_map($source_dir, $directory_depth = 0, $hidden = FALSE)$/;"	v	language:PHP
+directory_map	install\index.php	/^function directory_map($source_dir, $directory_depth = 0, $hidden = FALSE)$/;"	f	language:PHP
+dirs	install\index.php	/^		$dirs = directory_map(dirname(dirname(__file__)).DIRECTORY_SEPARATOR.'database',1);$/;"	v	language:PHP
+filedata	install\index.php	/^			$filedata	= array();$/;"	v	language:PHP
+new_depth	install\index.php	/^			$new_depth	= $directory_depth - 1;$/;"	v	language:PHP
+select	install\index.php	/^			$select =$v == 'lb_cn.sql' ? 'selected=true':'';$/;"	v	language:PHP
+setDb	install\index.php	/^function setDb(v){$/;"	f	language:PHP
+source_dir	install\index.php	/^			$source_dir	= rtrim($source_dir, DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR;$/;"	v	language:PHP
+url	install\index.php	/^	$url = "http:\/\/".$_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME'];$/;"	v	language:PHP
+url	install\index.php	/^	$url = substr($url,0,-9);$/;"	v	language:PHP
+CFG_DB_ADAPTER	install\index_2.php	/^define('CFG_DB_ADAPTER','mysql');    			$/;"	d	language:PHP
+CFG_DB_HOST	install\index_2.php	/^define('CFG_DB_HOST',$db_host);				$/;"	d	language:PHP
+CFG_DB_NAME	install\index_2.php	/^define('CFG_DB_NAME',$db_name);	$/;"	d	language:PHP
+CFG_DB_PASSWORD	install\index_2.php	/^define('CFG_DB_PASSWORD',$db_password);  			$/;"	d	language:PHP
+CFG_DB_PREFIX	install\index_2.php	/^define('CFG_DB_PREFIX',$db_prefix);	$/;"	d	language:PHP
+CFG_DB_USER	install\index_2.php	/^define('CFG_DB_USER',$db_user);        			$/;"	d	language:PHP
+DB_FILE	install\index_2.php	/^define('DB_FILE',$base_dir.'database'.$dl.$db_file);$/;"	d	language:PHP
+base_dir	install\index_2.php	/^$base_dir = dirname($dir).$dl;$/;"	v	language:PHP
+config_dir	install\index_2.php	/^$config_dir = $base_dir.$dl.'application'.$dl.'config'.$dl;$/;"	v	language:PHP
+connect	install\index_2.php	/^	$connect = @mysql_connect(CFG_DB_HOST,CFG_DB_USER,CFG_DB_PASSWORD) or tri_err('connect error.');$/;"	v	language:PHP
+dir	install\index_2.php	/^$dir  = dirname(__file__).$dl ;$/;"	v	language:PHP
+dl	install\index_2.php	/^$dl = DIRECTORY_SEPARATOR;$/;"	v	language:PHP
+dlr	install\index_2.php	/^	$dlr = file_get_contents($config_dir.$file); $/;"	v	language:PHP
+dlr2	install\index_2.php	/^		$dlr2 = preg_replace("\/".preg_quote($ini)."']\\s*=.*;\/", $ini."'] = ".$value.";",$dlr); $/;"	v	language:PHP
+dlr2	install\index_2.php	/^		$dlr2 = preg_replace("\/".preg_quote($ini)."']\\s*=.*;\/",$ini."'] = \\"".$value."\\";",$dlr); $/;"	v	language:PHP
+dlr2	install\index_2.php	/^	$dlr2=""; $/;"	v	language:PHP
+dump	install\index_2.php	/^	$dump = new phpMyImporter(CFG_DB_NAME,$connect,DB_FILE,false);$/;"	v	language:PHP
+log_error	install\index_2.php	/^function log_error($txt){$/;"	f	language:PHP
+query	install\index_2.php	/^	$query = mysql_query('show tables from '.CFG_DB_NAME,$connect); $/;"	v	language:PHP
+sql2	install\index_2.php	/^	$sql2 = "CREATE DATABASE if not exists  `".CFG_DB_NAME."` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;";$/;"	v	language:PHP
+tri_err	install\index_2.php	/^function tri_err($msg){$/;"	f	language:PHP
+update_config	install\index_2.php	/^function update_config($ini, $value,$type="string",$file='database.php'){ $/;"	f	language:PHP
+CFG_DB_ADAPTER	install\index_3.php	/^define('CFG_DB_ADAPTER','mysql');    			$/;"	d	language:PHP
+CFG_DB_HOST	install\index_3.php	/^define('CFG_DB_HOST',$db_host);				$/;"	d	language:PHP
+CFG_DB_NAME	install\index_3.php	/^define('CFG_DB_NAME',$db_name);	$/;"	d	language:PHP
+CFG_DB_PASSWORD	install\index_3.php	/^define('CFG_DB_PASSWORD',$db_password);  			$/;"	d	language:PHP
+CFG_DB_PREFIX	install\index_3.php	/^define('CFG_DB_PREFIX',$db_prefix);	$/;"	d	language:PHP
+CFG_DB_USER	install\index_3.php	/^define('CFG_DB_USER',$db_user);        			$/;"	d	language:PHP
+DB_FILE	install\index_3.php	/^define('DB_FILE',$base_dir.'database'.$dl.$db_file);$/;"	d	language:PHP
+base_dir	install\index_3.php	/^$base_dir = dirname($dir).$dl;$/;"	v	language:PHP
+config_file	install\index_3.php	/^$config_file = $base_dir.$dl.'application'.$dl.'config'.$dl.'database.php';$/;"	v	language:PHP
+connect	install\index_3.php	/^$connect = mysql_connect(CFG_DB_HOST,CFG_DB_USER,CFG_DB_PASSWORD) or die(mysql_error())	;$/;"	v	language:PHP
+dir	install\index_3.php	/^$dir  = dirname(__file__).$dl ;$/;"	v	language:PHP
+dl	install\index_3.php	/^$dl = DIRECTORY_SEPARATOR;$/;"	v	language:PHP
+dlr	install\index_3.php	/^	$dlr = file_get_contents($config_dir.$file); $/;"	v	language:PHP
+dlr2	install\index_3.php	/^		$dlr2 = preg_replace("\/".preg_quote($ini)."']\\s*=.*;\/", $ini."'] = ".$value.";",$dlr); $/;"	v	language:PHP
+dlr2	install\index_3.php	/^		$dlr2 = preg_replace("\/".preg_quote($ini)."']\\s*=.*;\/",$ini."'] = \\"".$value."\\";",$dlr); $/;"	v	language:PHP
+dlr2	install\index_3.php	/^	$dlr2=""; $/;"	v	language:PHP
+mysqli	install\index_3.php	/^$mysqli = new mysqli(CFG_DB_HOST, CFG_DB_USER, CFG_DB_PASSWORD, CFG_DB_NAME);$/;"	v	language:PHP
+query	install\index_3.php	/^$query  = file_get_contents(DB_FILE);$/;"	v	language:PHP
+query	install\index_3.php	/^$query  = preg_replace("\/mysys_\/",CFG_DB_PREFIX,$query);	$/;"	v	language:PHP
+sql2	install\index_3.php	/^$sql2 = "CREATE DATABASE if not exists `".CFG_DB_NAME."` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;";		$/;"	v	language:PHP
+update_config	install\index_3.php	/^function update_config($ini, $value,$type="string",$file='database.php'){ $/;"	f	language:PHP
+compress	install\libs\phpMyImporter.php	/^		$this->compress = $compress;$/;"	v	language:PHP
+compress	install\libs\phpMyImporter.php	/^	var $compress = null;$/;"	v	language:PHP
+connection	install\libs\phpMyImporter.php	/^		$this->connection = $connection;$/;"	v	language:PHP
+connection	install\libs\phpMyImporter.php	/^	function phpMyImporter($db=null, $connection=null, $filepath='dump.sql', $compress=false) {$/;"	v	language:PHP
+connection	install\libs\phpMyImporter.php	/^	var $connection = null;$/;"	v	language:PHP
+database	install\libs\phpMyImporter.php	/^		$this->database = $db;$/;"	v	language:PHP
+database	install\libs\phpMyImporter.php	/^	var $database = null;$/;"	v	language:PHP
+db_prefix	install\libs\phpMyImporter.php	/^		$this->db_prefix = $db_prefix;$/;"	v	language:PHP
+db_prefix	install\libs\phpMyImporter.php	/^	private  $db_prefix;$/;"	v	language:PHP
+doImport	install\libs\phpMyImporter.php	/^	function doImport() {		$/;"	f	language:PHP
+encoding	install\libs\phpMyImporter.php	/^			$encoding = @mysql_query("SET NAMES 'utf8'", $this->connection);$/;"	v	language:PHP
+flush_buffers	install\libs\phpMyImporter.php	/^	function flush_buffers(){ $/;"	f	language:PHP
+getDbPrefix	install\libs\phpMyImporter.php	/^	function getDbPrefix()$/;"	f	language:PHP
+import	install\libs\phpMyImporter.php	/^			$import = $this->importSql($this->importFilename);$/;"	v	language:PHP
+importFilename	install\libs\phpMyImporter.php	/^		$this->importFilename = $filepath;$/;"	v	language:PHP
+importFilename	install\libs\phpMyImporter.php	/^	var $importFilename = null;$/;"	v	language:PHP
+importSql	install\libs\phpMyImporter.php	/^				$importSql = "";$/;"	v	language:PHP
+importSql	install\libs\phpMyImporter.php	/^		$importSql = "";$/;"	v	language:PHP
+importSql	install\libs\phpMyImporter.php	/^	function importSql($file) {$/;"	f	language:PHP
+lines	install\libs\phpMyImporter.php	/^			$lines = file($file);$/;"	v	language:PHP
+lines	install\libs\phpMyImporter.php	/^			$lines = gzfile($file);$/;"	v	language:PHP
+lines	install\libs\phpMyImporter.php	/^		if($this->getDbPrefix()) $lines = preg_replace("\/mysys_\/",$this->getDbPrefix(),$lines);	$/;"	v	language:PHP
+numOfLines	install\libs\phpMyImporter.php	/^			$numOfLines = count($lines);$/;"	v	language:PHP
+output	install\libs\phpMyImporter.php	/^	function output($msg){$/;"	f	language:PHP
+phpMyImporter	install\libs\phpMyImporter.php	/^	function phpMyImporter($db=null, $connection=null, $filepath='dump.sql', $compress=false) {$/;"	f	language:PHP
+phpMyImporter	install\libs\phpMyImporter.php	/^class phpMyImporter {$/;"	c	language:PHP
+procent	install\libs\phpMyImporter.php	/^		$procent = 0;$/;"	v	language:PHP
+query	install\libs\phpMyImporter.php	/^				$query = @mysql_query($importSql, $this->connection);$/;"	v	language:PHP
+setDatabase	install\libs\phpMyImporter.php	/^	function setDatabase($db){$/;"	f	language:PHP
+setDbPrefix	install\libs\phpMyImporter.php	/^	function setDbPrefix($db_prefix)$/;"	f	language:PHP
+showPercent	install\libs\phpMyImporter.php	/^	function showPercent($percent){$/;"	f	language:PHP
+stats	install\libs\phpMyImporter.php	/^		$stats = count($lines);$/;"	v	language:PHP
+str	install\libs\phpMyImporter.php	/^				else $str= ".";$/;"	v	language:PHP
+str	install\libs\phpMyImporter.php	/^			else $str= " DONE!\\n";$/;"	v	language:PHP
+str	install\libs\phpMyImporter.php	/^			if (!$import) $str= "\\n".mysql_error($this->connection)."\\n";$/;"	v	language:PHP
+utf8	install\libs\phpMyImporter.php	/^		$this->utf8 = true;$/;"	v	language:PHP
+utf8	install\libs\phpMyImporter.php	/^	var $utf8 = null;$/;"	v	language:PHP
+x	install\libs\phpMyImporter.php	/^		$x = 0;$/;"	v	language:PHP
 onload	swfupload\index.php	/^		window.onload = function() {$/;"	j	language:PHP
 swfupload_loaded_function	swfupload\index.php	/^function swfupload_loaded_function(){$/;"	f	language:PHP
 uploadSuccess	swfupload\index.php	/^			function uploadSuccess(){$/;"	f	language:PHP

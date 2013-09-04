@@ -58,7 +58,7 @@ class Product extends CI_Controller{
 	
 		$data = array(
 			'main'=>$main,
-			'editor'=>$this->im->editor($main['pro_content'],'content'),
+			'editor'=>$this->Common_model->editor($main['pro_content'],'content'),
 			'class_info'=>$class_info,
 		);
 		
@@ -131,7 +131,7 @@ class Product extends CI_Controller{
 	 		
 	 		$this->cor_page->backend_redirects(array($this->cor_page->fetchButton('j_edit')=>$back_url,$this->cor_page->fetchButton('j_add')=>'product/action_add?parent_class='.$parent_class,$this->cor_page->fetchButton('j_list')=>'product/action_list?parent_class='.$parent_class),'产品资料更新完毕.');
 		 	}else{
-				$data['editor']  = $this->im->editor($main['pro_content']);
+				$data['editor']  = $this->Common_model->editor($main['pro_content']);
 		 		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);
 		 	}
 	 		

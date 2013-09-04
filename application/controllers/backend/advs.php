@@ -52,7 +52,7 @@ class Advs extends CI_Controller{
 			'main'=>$main,
 			'detail'=>$detail,
 			'total_size'=>count($detail),
-			'editor'=> $this->im->editor($main['info_content']),
+			'editor'=> $this->Common_model->editor($main['info_content']),
 			'adv_show'=> $adv_show,
 		);
 		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);		
@@ -78,7 +78,7 @@ class Advs extends CI_Controller{
 		 		$this->cor_page->pop_redirect('已保存',site_url('backend/advs/action_list/?parent_cat='.$main['info_class_sn']));
 		 	}else{
 		 		;
-				$data['editor']  = $this->im->editor($main['info_content']);
+				$data['editor']  = $this->Common_model->editor($main['info_content']);
 		 		$this->cor_page->load_backend_view('advs_add',$data);
 		 	}
 		

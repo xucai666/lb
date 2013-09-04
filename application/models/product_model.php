@@ -50,22 +50,7 @@ class Product_model extends CI_Model{
 	
 	
 	
-	/**
-	 * 编辑器
-	 */
-	function editor($v,$i='content'){
-		empty($this->fckeditor) && $this->load->library('FCKeditor');
-		$config = array(
-				'i'=>$i,
-	 			't'=>'Default',
-	 			'v'=>$v,
-	 			'w'=>'600',
-	 			'h'=>'250',
-	 			'ToolbarStartExpanded'=>1,
-		);
-		return  $this->fckeditor->CreateHtml($config);
 
-	}
 		
 
 	

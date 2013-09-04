@@ -46,23 +46,7 @@ class Pictures_model extends CI_Model{
 	}
 	
 	
-	/**
-	 * 编辑器
-	 */
-	function editor($v,$i='content'){
-		empty($this->fckeditor) && $this->load->library('FCKeditor');
-		$config = array(
-				'i'=>$i,
-	 			't'=>'Default',
-	 			'v'=>$v,
-	 			'w'=>'600',
-	 			'h'=>'400',
-	 			'ToolbarStartExpanded'=>1,
-	 			'DefaultLanguage'=>lang_get()=='english'?'en':'zh-cn',
-		);
-		return  $this->fckeditor->CreateHtml($config);
 
-	}
 	
 	
 	/**

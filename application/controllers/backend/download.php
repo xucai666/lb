@@ -71,7 +71,7 @@ class Download extends CI_Controller{
 		
 		$data = array(
 			'main'=>$main,
-			'editor'=>$data['editor']  = $this->im->editor($main['info_content']),
+			'editor'=>$data['editor']  = $this->Common_model->editor($main['info_content']),
 			'class_info'=>$class_info,
 			'pro_options'=>$pro_options,
 			'pro_select'=>explode(',',$main['pro_id']),
@@ -135,7 +135,7 @@ class Download extends CI_Controller{
 		 		$data_var = $this->cor_db->save($data,$db_config);
 		 		$this->cor_page->pop_redirect('已保存',site_url('backend/'.$this->act.'/action_list/?parent_class='.$parent_class));
 		 	}else{
-				$data['editor']  = $this->im->editor($main['info_content']);
+				$data['editor']  = $this->Common_model->editor($main['info_content']);
 		 		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);
 		 	}
 	 		

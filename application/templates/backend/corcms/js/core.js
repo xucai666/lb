@@ -320,13 +320,6 @@ function getTeachersContact(teacher_id){
 
 }
 
-//取编辑器内容
-function getContentValue(e,f) { 	
-	var oEditor = FCKeditorAPI.GetInstance($(e).attr("id")) ; 
-	var acontent=oEditor.GetXHTML();
-	if(!acontent) return false;
-	return true;
-}
 
 
 //分页输入跳转
@@ -541,7 +534,17 @@ function art_dialog_open(url,title){
         callback: function () {
          	var iframe = this.iframe.contentWindow;
     		iframe.$('input:submit').trigger("click");
-            this.lock();
+            this.button({
+                name: '保存',
+                disabled: true
+            }).lock();
+            var th = this;
+            setTimeout(function(){
+	             th.button({
+	                name: '保存',
+	                disabled: false
+	            });
+            },3000);
             return false;
         },
 

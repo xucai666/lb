@@ -32,26 +32,7 @@ class Commission_model extends CI_Model{
 	}
 	
 	
-	
-	/**
-	 * 编辑器
-	 * @param  [type] $v 表单字段名称
-	 * @param  string $i 实例名称
-	 * @return [type]
-	 */
-	function editor($v,$i='content'){
-		empty($this->fckeditor) && $this->load->library('FCKeditor');
-		$config = array(
-				'i'=>$i,
-	 			't'=>'Default',
-	 			'v'=>$v,
-	 			'w'=>'600',
-	 			'h'=>'300',
-	 			'ToolbarStartExpanded'=>1,
-		);
-		return  $this->fckeditor->CreateHtml($config);
 
-	}
 		
 
 	

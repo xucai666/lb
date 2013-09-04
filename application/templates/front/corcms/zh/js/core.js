@@ -216,13 +216,7 @@ function getTeachersContact(teacher_id){
 
 }
 
-//取编辑器内容
-function getContentValue(e,f) { 	
-	var oEditor = FCKeditorAPI.GetInstance($(e).attr("id")) ; 
-	var acontent=oEditor.GetXHTML();
-	if(!acontent) return false;
-	return true;
-}
+
 
 
 //分页输入跳转

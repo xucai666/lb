@@ -63,7 +63,7 @@ class Archives extends CI_Controller{
 		
 		$data = array(
 			'main'=>$main,
-			'editor'=>$data['editor']  = $this->im->editor($main['info_content']),
+			'editor'=>$data['editor']  = $this->Common_model->editor($main['info_content']),
 			'class_info'=>$class_info,
 			'options_slide'=>$this->cor_cache->cache_fetch('select_slide'),
 			'options_slide_select'=>$main['info_slide'],
@@ -126,7 +126,7 @@ class Archives extends CI_Controller{
 		 		
 		 		$this->cor_page->pop_redirect('已保存',site_url('backend/archives/action_list/?parent_class='.$parent_class));
 		 	}else{
-				$data['editor']  = $this->im->editor($main['info_content']);
+				$data['editor']  = $this->Common_model->editor($main['info_content']);
 		 		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);
 		 	}
 	 		

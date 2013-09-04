@@ -43,21 +43,7 @@
 	
 	
 	
-	 /* 编辑器
-	 */
-	function editor($v,$i='content'){
-		empty($this->fckeditor) && $this->load->library('FCKeditor');
-		$config = array(
-				'i'=>$i,
-	 			't'=>'Basic',
-	 			'v'=>$v,
-	 			'w'=>'600',
-	 			'h'=>'400',
-	 			'ToolbarStartExpanded'=>0,
-		);
-		return  $this->fckeditor->CreateHtml($config);
 
-	}
 		
 }
 ?>

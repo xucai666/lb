@@ -43,22 +43,7 @@
 		
  		$area_id = $main['eg_area']>0?$main['eg_area']:518;		
  		$area = get_area($area_id); 
-
- 		 //编辑器
- 		 $this->load->library('FCKeditor');	 		
- 		 $ed_config  = array(
- 			'eg'=>array(
- 				'i'=>'eg_content',
-	 			't'=>'Basic',
-	 			'w'=>'600',
-	 			'h'=>'250',
-	 			'v'=>$main['eg_content'],
-	 			'ToolbarStartExpanded'=>0,
-	 			'DefaultLanguage'=>lang_get()=='en'?'en':'zh-cn',
- 			
- 			),
- 			
- 		); 			
+ 		 	
  		
  		$data = array(		
 			'area'=>$area, 	
@@ -66,7 +51,7 @@
 			'edu_options'=>$this->cor_cache->cache_fetch('edu_level'),				
 			'class_select'=>$class_select,				
 			'editor'=>array(
-				'eg_content'=>$this->fckeditor->CreateHtml($ed_config['eg']),
+				'eg_content'=>$this->Common_model->editor($main['eg_content'],'eg_content'),
 			),
  		
  		); 		

@@ -47,7 +47,7 @@ class Friendlink extends CI_Controller{
 		
 		$data = array(
 			'main'=>$main,
-			'editor'=>$data['editor']  = $this->im->editor($main['link_content']),
+			'editor'=>$data['editor']  = $this->Common_model->editor($main['link_content']),
 		);
 		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);		
 	}
@@ -91,7 +91,7 @@ class Friendlink extends CI_Controller{
 	 		$this->cor_db->save($data,$this->im->db_config());
 	 		$this->cor_page->pop_redirect('已保存',site_url('backend/'.$this->act.'/action_list/'));
 		 	}else{
-				$data['editor']  = $this->im->editor($main['link_content']);
+				$data['editor']  = $this->Common_model->editor($main['link_content']);
 		 		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);
 		 	}
 	 		

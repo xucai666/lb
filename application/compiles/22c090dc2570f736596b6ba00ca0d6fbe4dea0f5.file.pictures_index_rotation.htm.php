@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-04 01:29:25
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-04 22:58:43
          compiled from "application\templates\backend\corcms\pictures_index_rotation.htm" */ ?>
-<?php /*%%SmartyHeaderCode:1354952268cf556c4e4-88043445%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:943752274aa30a4cf9-03596409%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1354952268cf556c4e4-88043445',
+  'nocache_hash' => '943752274aa30a4cf9-03596409',
   'function' => 
   array (
   ),
@@ -27,9 +27,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52268cf57b54a4_36767868',
+  'unifunc' => 'content_52274aa320b3d7_54031982',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52268cf57b54a4_36767868')) {function content_52268cf57b54a4_36767868($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_52274aa320b3d7_54031982')) {function content_52274aa320b3d7_54031982($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <div class="nav_title" align="left" >图片管理</div>
 <script type="text/javascript">

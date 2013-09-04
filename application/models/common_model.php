@@ -479,29 +479,7 @@ class Common_model  extends CI_Model{
 			return   $this->ckeditor($v,$i,$tool_bar,$w,$h);
 	}
 
-	/**
-	 * fckeditor
-	 * @param  [type] $v        [description]
-	 * @param  string $i        [description]
-	 * @param  string $tool_bar [description]
-	 * @return [type]           [description]
-	 */
-	function fckeditor($v,$i='content',$tool_bar='Basic',$w=600,$h=400){
-
-		empty($this->fckeditor) && $this->load->library('FCKeditor');
-			$config = array(
-					'i'=>$i,
-		 			't'=>$tool_bar,
-		 			'v'=>$v,
-		 			'w'=>$w,
-		 			'h'=>$h,
-		 			'ToolbarStartExpanded'=>1,
-		 			'DefaultLanguage'=>lang_get()=='english'?'en':'zh-cn',
-		 			
-			);
-			return  $this->fckeditor->CreateHtml($config);
-	}
-
+	
 	/**
 	 * ckeditor
 	 * @param  [type] $v        [description]
