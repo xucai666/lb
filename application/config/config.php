@@ -71,7 +71,7 @@ $config['url_suffix'] = ".htm";
 */
 $config['language']	= "zh";
 $config['support_language']	=array('en','zh');
-$config['lang_multiple']	= true;
+$config['lang_multiple']	= false;
 
 /*
 |--------------------------------------------------------------------------
