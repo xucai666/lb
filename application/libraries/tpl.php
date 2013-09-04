@@ -271,7 +271,7 @@ function create_button($array){
 		}elseif(strpos($url, 'http:')!==false){
 			$html = '<input type="button" onclick="self.location.href=\''.$url.'\'" class="button_bg" id="'.$id.'" value="'.$title.'" />';
 		}else{
-			$html = '<input type="button" onclick="'.site_url($url).'"  class="button_bg" id="'.$id.'" value="'.$title.'" />';
+			$html = '<input type="button" onclick="self.location.href=\''.site_url($url).'\'"  class="button_bg" id="'.$id.'" value="'.$title.'" />';
 		}
 	}else{
 	 	 $html ='<input type="submit" class="button_bg no-border"  id="'.$id.'"  value="'.$title.'"  '.$ext.'    />';

@@ -192,6 +192,15 @@ if (defined('ENVIRONMENT'))
 		define('APPPATH', BASEPATH.$application_folder.'/');
 	}
 
+
+if(!file_exists(FCPATH.'install/install.lock')){
+	$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME'];
+	$url = substr($url,0,-9);
+	$url .= 'install/index.php';
+	header("location:".$url);exit;
+}
+
+
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE

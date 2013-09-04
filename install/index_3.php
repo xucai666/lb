@@ -28,9 +28,7 @@ update_config('dbprefix',CFG_DB_PREFIX,'string');
 update_config('base_url',$base_url,'string','config.php');
 
 $connect = mysql_connect(CFG_DB_HOST,CFG_DB_USER,CFG_DB_PASSWORD) or die(mysql_error())	;
-$sql1 = "drop database if exists ".CFG_DB_NAME.";";
-mysql_query($sql1) or die(mysql_error());	
-$sql2 = "CREATE DATABASE `".CFG_DB_NAME."` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;";		
+$sql2 = "CREATE DATABASE if not exists `".CFG_DB_NAME."` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;";		
 mysql_query($sql2) or die(mysql_error());	
 
 if (!function_exists('mysqli_connect')) {
@@ -48,14 +46,16 @@ if (mysqli_connect_errno()) {
 //替换表前缀
 $query  = file_get_contents(DB_FILE);
 $query  = preg_replace("/mysys_/",CFG_DB_PREFIX,$query);	
-
 /* execute multi query */
+echo multiQuery($query);exit;
 if ($mysqli->multi_query($query)) {
     echo '数据导入完成！';
+}else{
+	echo '数据导入异常！';
 }
+@fopen("install.lock", 'w');
 sleep(2);
 //安装完成，跳转
-copy($base_dir.'index.ci', $base_dir.'index.php'); 
 echo "<script>location.href='".$base_url."'</script>";
 @header("location:".$base_url);
 /* close connection */

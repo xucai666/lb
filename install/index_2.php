@@ -41,10 +41,8 @@ try{
 
 	update_config('base_url',$base_url,'string','config.php');
 	$connect = @mysql_connect(CFG_DB_HOST,CFG_DB_USER,CFG_DB_PASSWORD) or tri_err('connect error.');
-	$sql1 = "drop database if exists ".CFG_DB_NAME.";";
-	//@mysql_query($sql1) or tri_err('drop error.');	
-	$sql2 = "CREATE DATABASE `".CFG_DB_NAME."` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;";
-	//@mysql_query($sql2) or tri_err('create db error.');	
+	$sql2 = "CREATE DATABASE if not exists  `".CFG_DB_NAME."` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;";
+	@mysql_query($sql2) or tri_err('create db error.');	
 	mysql_select_db(CFG_DB_NAME);
 	mysql_query("set names 'utf8' ");			
 	$query = mysql_query('show tables from '.CFG_DB_NAME,$connect); 
@@ -57,9 +55,7 @@ try{
 	$dump->utf8 = true; // Uses UTF8 connection with MySQL server, default: true
 	$dump->setDbPrefix(CFG_DB_PREFIX);
 	$dump->doImport();
-	if(is_dir($base_dir.$dl."install"))  rename($base_dir.$dl."install",$base_dir.$dl."installed");
-	//安装完成，跳转
-	copy($base_dir.'index.ci', $base_dir.'index.php'); 
+	@fopen("install.lock", 'w');
 	echo "<script>location.href='".$base_url."'</script>";
 }catch (Exception $e){
     echo($e->getMessage()),'&nbsp;&nbsp;<a href="javascript:history.back(1);">&laquo;&nbsp;Back</a>';

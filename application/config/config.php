@@ -57,7 +57,7 @@ $config['uri_protocol']	= "AUTO";
 | http://codeigniter.com/user_guide/general/urls.html
 */
 
-$config['url_suffix'] = ".do";
+$config['url_suffix'] = ".htm";
 
 /*
 |--------------------------------------------------------------------------
@@ -474,3 +474,4 @@ $config['weather'] = '';
 //config get
 $config['allow_get_array'] = true;
 
+$config['time_zone']=date_default_timezone_set('Asia/shanghai');

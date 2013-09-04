@@ -1,6 +1,0 @@
-<?php
-$D = dirname(__file__);
-$dt = DIRECTORY_SEPARATOR;
-if(is_dir($D.$dt.'install')){
-	header("location:./install");
-}

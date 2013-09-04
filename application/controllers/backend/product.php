@@ -231,8 +231,9 @@ class Product extends CI_Controller{
 		$this->db->select("a.*",false)->from($this->cor_db->table('order_main').' as a ')
 		->like('a.order_no',$this->input->get('order_no'))
 		->like('a.contact',$this->input->get('contact'))
-		->like('a.mobile',$this->input->get('mobile'))
-		->order_by("order_id","desc");
+		->like('a.mobile',$this->input->get('mobile'));
+		$this->input->get('status') && $this->db->where('status',$this->input->get('status'));
+		$this->db->order_by("order_id","desc");
 		$data = $this->cor_db->fetch_all();	
 		
 		$data = array_merge($data,
@@ -273,8 +274,8 @@ class Product extends CI_Controller{
 	
 	//订单查看
 	function action_order_view(){
-		$this->cor_page->fetch_css(array('backend_order'),'view',$this->cor_page->getRes('css','backend').'item/');
-		$this->cor_page->fetch_css(array('table'));
+		$this->cor_page->fetch_css(array('backend_order'),'view',getRootUrl('css','backend').'/item/');
+		$this->cor_page->fetch_css(array('table'),'view',getRootUrl('css','backend'));
 		$order_id = $this->input->get("order_id");
 		$sql_arr = array(
 			'table_name'=>$this->cor_db->table('order_main'),

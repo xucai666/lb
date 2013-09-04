@@ -53,11 +53,10 @@ class Tree extends CI_Controller{
 			if($this->form_validation->run()){
 				if($main['id']){
 					//edit
-					$this->db->query("CALL editTreeNode(".$main[id].",".$main[pid].",'".$main[code]."','".$main[name]."',@resultCode,@resultMsg)");	
+					$this->im->edit_tree_node($main[id],$main[pid],$main[code],$main[name]);
 				}else{
 					//add
-					$this->db->query("CALL addTreeNode(".$main[pid].",'".$main[code]."','".$main[name]."',@resultCode,@resultMsg)");	
-					$main['id'] = $this->db->insert_id();
+					$main['id'] = $this->im->add_tree_node($main[pid],$main[code],$main[name]);
 				}
 				$this->db->where('id',$main['id']);
 				$this->db->update('tree_node',$main);
@@ -69,7 +68,7 @@ class Tree extends CI_Controller{
 			}
 
 		}catch(EXCEPTION $e){
-			$this->cor_page->backend_redirect($_SREVER['HTTP_REFERER'],$e->getMessage());
+			$this->cor_page->backend_redirect('tree/action_list',$e->getMessage());
 		}
 
 	}
@@ -81,7 +80,7 @@ class Tree extends CI_Controller{
             $id = $id?$id:$this->uri->segment(4);
 			if(empty($id)) throw new Exception('参数错误');
 			foreach((array)$id as $item){
-				$this->db->query("CALL deleteTreeNode(".$item.",@resultCode,@resultMsg)");
+				$this->im->delete_tree_node($item);
 			}
 			
 			$this->cor_page->backend_redirect('tree/action_list','删除成功');

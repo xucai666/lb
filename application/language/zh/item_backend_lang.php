@@ -93,7 +93,8 @@
 		$lang['button_print']					 = '打印';
 		$lang['button_payed']					 = '已付款';
 		$lang['button_shipped']					 = '已发货';
-		$lang['button_complete']					 = '已完成';
+		$lang['button_complete']				 = '已完成';
+		$lang['button_receipt']					 = '已收货';
 
 		//save
 		$lang['success_save']					 = '保存成功';

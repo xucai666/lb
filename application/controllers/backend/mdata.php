@@ -264,6 +264,7 @@ class Mdata extends CI_Controller{
 		$query  = $this->input->get();
 		$size = 6;
 		$data = $this->im->fetch_list($size,$query);
+		
 
 		$data = array_merge($data,array('theme'=>$this->m->main($this->im->get_mid(),'m_name')));
 		
