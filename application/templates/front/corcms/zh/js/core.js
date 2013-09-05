@@ -456,6 +456,26 @@ function ImgError(source){
 	return true;
 }
 
+/**
+ * close art dialog
+ * @param  {[type]}   msg      [description]
+ * @param  {Function} callback [description]
+ * @return {[type]}            [description]
+ */
+function art_dialog_close(msg,callback){
+
+		var list = art.dialog.list;
+		for (var i in list) {
+		    list[i].close();
+		}
+		if(msg!="undefined" && typeof(msg)!="undefined"){
+			top.art.dialog.tips(msg);
+		}
+		
+		(callback && typeof(callback) === "function") && callback();
+}
+	
+
 
 
 $(document).ready(function(){
@@ -497,5 +517,6 @@ $(document).ready(function(){
 	});
 
 })
+
 
 

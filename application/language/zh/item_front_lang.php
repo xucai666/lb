@@ -73,9 +73,13 @@
 		$lang['button_update']					     = '更新';
 		$lang['button_view']					     = '查看';
 		$lang['button_delete']					     = '删除';
-		$lang['button_add']					     = '添加';
+		$lang['button_add']					    	 = '添加';
 		$lang['button_back']					     = '返回';
-		$lang['button_pay']					     = '付款';
+		$lang['button_pay']					     	 = '付款';
+		$lang['button_submit']					     = '提交';
+		$lang['button_close']					     = '关闭';
+		$lang['button_vote']					     = '投票';
+		$lang['button_result']					     = '查看结果';
 		
 		
 	

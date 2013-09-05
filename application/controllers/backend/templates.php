@@ -88,6 +88,8 @@ class Templates extends CI_Controller {
 	       			$main = $this->cor_db->save(array('main'=>$main),$this->IM->db_config());
 	       			$this->cor_page->pop_redirect('保存成功',site_url('backend/templates/action_list'));
 	       		}else{
+              $this->cor_page->fetch_css('templates','view',$this->cor_page->getRes('css','backend','item/'));
+              $this->cor_page->fetch_js('templates','view',$this->cor_page->getRes('js','backend','item/'));
 	       			$t_types = $this->cor_cache->cache_fetch('template_types');
 	       			$this->cor_page->load_backend_view('templates_add',array('main'=>$main,'template_types'=>$t_types));
 	       		}

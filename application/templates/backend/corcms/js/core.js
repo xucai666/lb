@@ -568,7 +568,7 @@ function art_dialog_close(msg,callback){
 		for (var i in list) {
 		    list[i].close();
 		}
-		if(msg!="undefined"){
+		if(msg!="undefined" && typeof(msg)!="undefined"){
 			top.art.dialog.tips(msg);
 		}
 		
