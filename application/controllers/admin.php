@@ -24,7 +24,6 @@
 	 * @return [type] [description]
 	 */
 	function index(){	
-		
 		redirect("backend/login/index");
 	}
 	

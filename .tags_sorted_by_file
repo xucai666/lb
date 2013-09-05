@@ -1,22 +1,13 @@
 _valid	application\compiles\001e4619afaa8bbbd78f9aeed6760e234b077bd1.file.product.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_block_content	application\compiles\08e5a137d313ace64256eb31229d25deba9b3247.file.foot.htm.php	/^echo base_url();<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_repeat	application\compiles\08e5a137d313ace64256eb31229d25deba9b3247.file.foot.htm.php	/^<div id="sys_base_url" class="hide"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_valid	application\compiles\08e5a137d313ace64256eb31229d25deba9b3247.file.foot.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	application\compiles\090fca48abdcc9955687f2ca28fbdccf222355c0.file.center.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	application\compiles\16006fbb4ce0057b59d86b3d9f4d741a94023cf9.file.sales.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_from	application\compiles\19cee10738f6e20ddb60d5bcd1bb55c62c5ae560.file.engage.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_valid	application\compiles\19cee10738f6e20ddb60d5bcd1bb55c62c5ae560.file.engage.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _from	application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['item']->value['detail']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
 _from	application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['item1']->value['detail']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
 _from	application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['rights_options']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
 _valid	application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 setTab	application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^	function setTab(tid){$/;"	f	language:PHP
 seton	application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^	function seton(t,url) {$/;"	f	language:PHP
-_valid	application\compiles\3a715f905da6e089cb10c68205e5329c232117b8.file.left_contact.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	application\compiles\5058bd06fae55f725b6716266e32d490ab562e54.file.top.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	application\compiles\5666bfb2573f6235e99a796c3fe9166da62d8fc6.file.main_foot.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	application\compiles\57bca995376f3e9a04397d23c80716afd9138e67.file.main_index.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	application\compiles\5976364c4fdb452526bb49788952050225b5d93d.file.left_sales.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _from	application\compiles\675c08882697db4ca46f3cc80b047ed52f00b775.file.index.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['pics']->value['list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
 _valid	application\compiles\675c08882697db4ca46f3cc80b047ed52f00b775.file.index.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 change_img	application\compiles\675c08882697db4ca46f3cc80b047ed52f00b775.file.index.htm.php	/^            function change_img() $/;"	f	language:PHP
@@ -38,9 +29,6 @@ _from	application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminin
 _valid	application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	application\compiles\a49ee88a2669b51fd0fab361d9cacfe05aa5875b.file.left_product.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	application\compiles\ae0446f50b5c68d1a71cae5d127e6988ad63b43f.file.foot.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-JumpUrl	application\compiles\c11fef5b2930592637bdc3ac6ddb20a2a4983741.file.page_redirect.htm.php	/^      function JumpUrl(){$/;"	f	language:PHP
-_valid	application\compiles\c11fef5b2930592637bdc3ac6ddb20a2a4983741.file.page_redirect.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	application\compiles\d895bd2a09dcb6b07dc8f45d67c845708fc00204.file.left_archive.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 Utils.fixEvent	application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^Utils.fixEvent = function(e)$/;"	j	language:PHP
 _valid	application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 document.onmousedown	application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^document.onmousedown = function(e)$/;"	j	language:PHP
@@ -49,9 +37,6 @@ fixEvent	application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main
 onmousedown	application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^document.onmousedown = function(e)$/;"	j	language:PHP
 onmouseup	application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^document.onmouseup = function(e)$/;"	j	language:PHP
 toggleMenu	application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^function toggleMenu()$/;"	f	language:PHP
-_valid	application\compiles\f32b781624383bf9a74aea8a15fd4bce38251991.file.left_about.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	application\compiles\f409ac6f8838eb070b3a2c94338ec74dd431ea54.file.dynamic.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	application\compiles\fae418237c19d8abed9fd57487288bf1166d3aba.file.contact.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 or	application\config\config.php	/^| If you use the Encryption class or the Sessions class with encryption$/;"	c	language:PHP
 will	application\config\config.php	/^| the output class will test whether your server supports Gzip.$/;"	c	language:PHP
 DIR_READ_MODE	application\config\constants.php	/^define('DIR_READ_MODE', 0755);$/;"	d	language:PHP
@@ -302,7 +287,6 @@ class_select	application\controllers\backend\engage.php	/^		$class_select =  $th
 data	application\controllers\backend\engage.php	/^		$data = $this->cor_db->fetch_all();	$/;"	v	language:PHP
 data	application\controllers\backend\engage.php	/^		$data = array_merge($data,$/;"	v	language:PHP
 data	application\controllers\backend\engage.php	/^ 		$data = array(		$/;"	v	language:PHP
-ed_config	application\controllers\backend\engage.php	/^ 		 $ed_config  = array($/;"	v	language:PHP
 engage	application\controllers\backend\engage.php	/^				$engage = $this->cor_db->fetch_one($sql_arr);$/;"	v	language:PHP
 form_array	application\controllers\backend\engage.php	/^			$form_array = $this->input->post('main');	$/;"	v	language:PHP
 id	application\controllers\backend\engage.php	/^			$id  = $this->input->get("apply_id");			$/;"	v	language:PHP
@@ -1032,10 +1016,14 @@ module_slt	application\controllers\front\search.php	/^		$module_slt = $this->uri
 modules	application\controllers\front\search.php	/^		$modules = array($/;"	v	language:PHP
 page_link	application\controllers\front\search.php	/^		$page_link  = $this->cor_db->get_page_link();$/;"	v	language:PHP
 page_size	application\controllers\front\search.php	/^		$page_size = 15;$/;"	v	language:PHP
-query	application\controllers\front\search.php	/^		$query = $this->db->query("CALL  proc_all('".$this->input->get("title")."','".$module_slt."','".$this->input->get('per_page')."',".$page_size.")");  $/;"	v	language:PHP
+query	application\controllers\front\search.php	/^		$query = $this->db->query("CALL  proc_all('".$this->input->get("title")."','".$module_slt."','".(int)$this->input->get('per_page')."',".$page_size.")");  $/;"	v	language:PHP
 Welcome	application\controllers\front\welcome.php	/^ class Welcome extends CI_Controller{$/;"	c	language:PHP
 __construct	application\controllers\front\welcome.php	/^	function __construct(){$/;"	f	language:PHP
 index	application\controllers\front\welcome.php	/^	function index(){$/;"	f	language:PHP
+Test	application\controllers\test.php	/^ class Test extends CI_Controller{$/;"	c	language:PHP
+__construct	application\controllers\test.php	/^	function __construct(){$/;"	f	language:PHP
+index	application\controllers\test.php	/^	function index(){	$/;"	f	language:PHP
+phpinfo	application\controllers\test.php	/^	function phpinfo(){	$/;"	f	language:PHP
 MY_Config	application\core\MY_Config.php	/^class MY_Config  extends CI_Config {$/;"	c	language:PHP
 contains	application\core\MY_Config.php	/^ * This class contains functions that enable config files to be managed$/;"	c	language:PHP
 site_url	application\core\MY_Config.php	/^    function site_url($uri = '')$/;"	f	language:PHP
@@ -1290,6 +1278,14 @@ width	application\helpers\imgcode_helper.php	/^$width = $fontWidth * strlen($cod
 json	application\helpers\json_helper.php	/^  	 $json = new Services_JSON();$/;"	v	language:PHP
 json_decode	application\helpers\json_helper.php	/^  function json_decode($data = null)$/;"	f	language:PHP
 json_encode	application\helpers\json_helper.php	/^  function json_encode($data = null)$/;"	f	language:PHP
+GetPinyin	application\helpers\pinyin_helper.php	/^    function GetPinyin($str,$ishead = FALSE,$ucfirst = FALSE)$/;"	f	language:PHP
+c	application\helpers\pinyin_helper.php	/^                $c = $str[$i].$str[$i+1];$/;"	v	language:PHP
+fp	application\helpers\pinyin_helper.php	/^            $fp = fopen(APPPATH.'\/resources\/pinyin.dat','r');$/;"	v	language:PHP
+line	application\helpers\pinyin_helper.php	/^                $line = trim(fgets($fp));$/;"	v	language:PHP
+pinyins	application\helpers\pinyin_helper.php	/^        $pinyins = array();$/;"	v	language:PHP
+restr	application\helpers\pinyin_helper.php	/^        $restr = '';$/;"	v	language:PHP
+slen	application\helpers\pinyin_helper.php	/^        $slen = strlen($str);$/;"	v	language:PHP
+str	application\helpers\pinyin_helper.php	/^        $str = trim(iconv('UTF-8','GB2312',$str));$/;"	v	language:PHP
 __construct	application\helpers\timecount_helper.php	/^	public function __construct(){$/;"	f	language:PHP
 __destruct	application\helpers\timecount_helper.php	/^	public function __destruct(){$/;"	f	language:PHP
 executeTime	application\helpers\timecount_helper.php	/^class executeTime{$/;"	c	language:PHP
@@ -1327,6 +1323,37 @@ lang	application\language\en\item_backend_roles_lang.php	/^ $lang = array ($/;"	
 lang	application\language\en\item_backend_slide_lang.php	/^ $lang = array ($/;"	v	language:PHP
 lang	application\language\en\item_front_lang.php	/^ $lang = array ($/;"	v	language:PHP
 lang	application\language\en\item_front_member_lang.php	/^ $lang = array ($/;"	v	language:PHP
+File_util	application\libraries\File_util.php	/^class File_util {$/;"	c	language:PHP
+aimDir	application\libraries\File_util.php	/^        $aimDir = '';$/;"	v	language:PHP
+aimDir	application\libraries\File_util.php	/^        $aimDir = dirname($aimUrl);$/;"	v	language:PHP
+aimDir	application\libraries\File_util.php	/^        $aimDir = str_replace('', '\/', $aimDir);$/;"	v	language:PHP
+aimDir	application\libraries\File_util.php	/^        $aimDir = substr($aimDir, -1) == '\/' ? $aimDir : $aimDir . '\/';$/;"	v	language:PHP
+aimDir	application\libraries\File_util.php	/^        $aimDir = substr($aimDir, -1) == '\/' ? $aimDir : $aimDir.'\/';$/;"	v	language:PHP
+aimUrl	application\libraries\File_util.php	/^        $aimUrl = str_replace('', '\/', $aimUrl);$/;"	v	language:PHP
+arr	application\libraries\File_util.php	/^        $arr = explode('\/', $aimUrl);$/;"	v	language:PHP
+copyDir	application\libraries\File_util.php	/^    function copyDir($oldDir, $aimDir, $overWrite = false) {$/;"	f	language:PHP
+copyFile	application\libraries\File_util.php	/^    function copyFile($fileUrl, $aimUrl, $overWrite = false) {$/;"	f	language:PHP
+createDir	application\libraries\File_util.php	/^    function createDir($aimUrl) {$/;"	f	language:PHP
+createFile	application\libraries\File_util.php	/^    function createFile($aimUrl, $overWrite = false) {$/;"	f	language:PHP
+dirHandle	application\libraries\File_util.php	/^        $dirHandle = opendir($aimDir);$/;"	v	language:PHP
+dirHandle	application\libraries\File_util.php	/^        $dirHandle = opendir($oldDir);$/;"	v	language:PHP
+file	application\libraries\File_util.php	/^            if ($file == '.' || $file == '..') {$/;"	v	language:PHP
+moveDir	application\libraries\File_util.php	/^    function moveDir($oldDir, $aimDir, $overWrite = false) {$/;"	f	language:PHP
+moveFile	application\libraries\File_util.php	/^    function moveFile($fileUrl, $aimUrl, $overWrite = false) {$/;"	f	language:PHP
+oldDir	application\libraries\File_util.php	/^        $oldDir = str_replace('', '\/', $oldDir);$/;"	v	language:PHP
+oldDir	application\libraries\File_util.php	/^        $oldDir = substr($oldDir, -1) == '\/' ? $oldDir : $oldDir . '\/';$/;"	v	language:PHP
+oldDir	application\libraries\File_util.php	/^        $oldDir = substr($oldDir, -1) == '\/' ? $oldDir : $oldDir.'\/';$/;"	v	language:PHP
+overWrite	application\libraries\File_util.php	/^        if (file_exists($aimUrl) && $overWrite = false) {$/;"	v	language:PHP
+overWrite	application\libraries\File_util.php	/^        if (file_exists($aimUrl) && $overWrite == false) {$/;"	v	language:PHP
+overWrite	application\libraries\File_util.php	/^        } elseif (file_exists($aimUrl) && $overWrite = true) {$/;"	v	language:PHP
+overWrite	application\libraries\File_util.php	/^        } elseif (file_exists($aimUrl) && $overWrite == true) {$/;"	v	language:PHP
+overWrite	application\libraries\File_util.php	/^    function copyDir($oldDir, $aimDir, $overWrite = false) {$/;"	v	language:PHP
+overWrite	application\libraries\File_util.php	/^    function copyFile($fileUrl, $aimUrl, $overWrite = false) {$/;"	v	language:PHP
+overWrite	application\libraries\File_util.php	/^    function createFile($aimUrl, $overWrite = false) {$/;"	v	language:PHP
+overWrite	application\libraries\File_util.php	/^    function moveDir($oldDir, $aimDir, $overWrite = false) {$/;"	v	language:PHP
+overWrite	application\libraries\File_util.php	/^    function moveFile($fileUrl, $aimUrl, $overWrite = false) {$/;"	v	language:PHP
+unlinkDir	application\libraries\File_util.php	/^    function unlinkDir($aimDir) {$/;"	f	language:PHP
+unlinkFile	application\libraries\File_util.php	/^    function unlinkFile($aimUrl) {$/;"	f	language:PHP
 MY_Form_validation	application\libraries\MY_Form_validation.php	/^class MY_Form_validation extends CI_Form_validation {$/;"	c	language:PHP
 __construct	application\libraries\MY_Form_validation.php	/^   function __construct() {$/;"	f	language:PHP
 _error_prefix	application\libraries\MY_Form_validation.php	/^		$this->_error_prefix    = '<span id="error_span">';$/;"	v	language:PHP
@@ -4967,6 +4994,43 @@ streams	application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_security.php	
 streams	application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_security.php	/^    public $streams = array('file');$/;"	v	language:PHP
 trusted_dir	application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_security.php	/^    public $trusted_dir = array();$/;"	v	language:PHP
 trusted_uri	application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_security.php	/^    public $trusted_uri = array();$/;"	v	language:PHP
+Alipay	application\libraries\alipay.php	/^class Alipay$/;"	c	language:PHP
+__construct	application\libraries\alipay.php	/^	function __construct($aliapy_config){$/;"	f	language:PHP
+aliapy_config	application\libraries\alipay.php	/^		$this->aliapy_config=$aliapy_config;$/;"	v	language:PHP
+aliapy_config	application\libraries\alipay.php	/^	var $aliapy_config;$/;"	v	language:PHP
+alipay_gateway_new	application\libraries\alipay.php	/^	var $alipay_gateway_new='https:\/\/mapi.alipay.com\/gateway.do?';$/;"	v	language:PHP
+direct_pay_url	application\libraries\alipay.php	/^	function direct_pay_url($para_temp){$/;"	f	language:PHP
+getMysign	application\libraries\alipay.php	/^	function getMysign($param){$/;"	f	language:PHP
+getResponse	application\libraries\alipay.php	/^	function getResponse($notify_id){$/;"	f	language:PHP
+http_verify_url	application\libraries\alipay.php	/^	var $http_verify_url='http:\/\/notify.alipay.com\/trade\/notify_query.do?';$/;"	v	language:PHP
+https_verify_url	application\libraries\alipay.php	/^	var $https_verify_url='https:\/\/www.alipay.com\/cooperate\/gateway.do?service=notify_verify&';$/;"	v	language:PHP
+input_charset	application\libraries\alipay.php	/^	var $input_charset='utf-8';$/;"	v	language:PHP
+k	application\libraries\alipay.php	/^			if($k=='sign' || $k=='sign_type' || $v==''){$/;"	v	language:PHP
+k	application\libraries\alipay.php	/^		foreach($para_temp as $k=>$v){$/;"	v	language:PHP
+k	application\libraries\alipay.php	/^		foreach($param as $k=>$v)$prestr.=$k.'='.$v.'&';$/;"	v	language:PHP
+mysign	application\libraries\alipay.php	/^			$mysign=$this->getMysign($param);$/;"	v	language:PHP
+mysign	application\libraries\alipay.php	/^			if(preg_match("\/true$\/i",$responseTxt) && $mysign==$_GET['sign']){$/;"	v	language:PHP
+mysign	application\libraries\alipay.php	/^			if(preg_match("\/true$\/i",$responseTxt) && $mysign==$_POST['sign']){$/;"	v	language:PHP
+mysign	application\libraries\alipay.php	/^		$mysign=$this->getMysign($param);$/;"	v	language:PHP
+paraFilter	application\libraries\alipay.php	/^	function paraFilter($para_temp) {$/;"	f	language:PHP
+param	application\libraries\alipay.php	/^			$param=$this->paraFilter($_GET);$/;"	v	language:PHP
+param	application\libraries\alipay.php	/^			$param=$this->paraFilter($_POST);$/;"	v	language:PHP
+param	application\libraries\alipay.php	/^		$param=$this->paraFilter($para_temp);$/;"	v	language:PHP
+param	application\libraries\alipay.php	/^		$param=array();$/;"	v	language:PHP
+partner	application\libraries\alipay.php	/^		$partner=trim($this->aliapy_config['partner']);$/;"	v	language:PHP
+prestr	application\libraries\alipay.php	/^		$prestr='';$/;"	v	language:PHP
+prestr	application\libraries\alipay.php	/^		$prestr=substr($prestr, 0, count($prestr)-2);$/;"	v	language:PHP
+responseTxt	application\libraries\alipay.php	/^			$responseTxt='true';$/;"	v	language:PHP
+responseTxt	application\libraries\alipay.php	/^		$responseTxt=@file_get_contents($veryfy_url);$/;"	v	language:PHP
+sign_type	application\libraries\alipay.php	/^	var $sign_type='MD5';$/;"	v	language:PHP
+transport	application\libraries\alipay.php	/^		$transport=strtolower(trim($this->transport));$/;"	v	language:PHP
+transport	application\libraries\alipay.php	/^	var $transport='http';$/;"	v	language:PHP
+verifyNotify	application\libraries\alipay.php	/^	function verifyNotify(){$/;"	f	language:PHP
+verifyReturn	application\libraries\alipay.php	/^	function verifyReturn(){$/;"	f	language:PHP
+veryfy_url	application\libraries\alipay.php	/^			$veryfy_url=$this->http_verify_url;$/;"	v	language:PHP
+veryfy_url	application\libraries\alipay.php	/^			$veryfy_url=$this->https_verify_url;$/;"	v	language:PHP
+veryfy_url	application\libraries\alipay.php	/^		$veryfy_url=$veryfy_url.'partner='.$partner.'&notify_id='.$notify_id;$/;"	v	language:PHP
+veryfy_url	application\libraries\alipay.php	/^		$veryfy_url='';$/;"	v	language:PHP
 Breadcrumb	application\libraries\breadcrumb.php	/^class Breadcrumb {$/;"	c	language:PHP
 __construct	application\libraries\breadcrumb.php	/^	public function __construct($params = array())$/;"	f	language:PHP
 _divider	application\libraries\breadcrumb.php	/^	private $_divider 		= ' &nbsp;&#8250;&nbsp; ';$/;"	v	language:PHP
@@ -5545,14 +5609,12 @@ validator_user	application\models\admins_model.php	/^	function validator_user(){
 Advs_model	application\models\advs_model.php	/^class Advs_model extends CI_Model{$/;"	c	language:PHP
 _FILES	application\models\advs_model.php	/^		$_FILES = $file_s_new;	$/;"	v	language:PHP
 __construct	application\models\advs_model.php	/^	function __construct(){$/;"	f	language:PHP
-config	application\models\advs_model.php	/^		$config = array($/;"	v	language:PHP
 config	application\models\advs_model.php	/^		$config = config_item('advs_files');$/;"	v	language:PHP
 db_config	application\models\advs_model.php	/^	function db_config(){$/;"	f	language:PHP
 detail	application\models\advs_model.php	/^		$detail = $this->db->query( "SELECT * from ".$this->cor_db->table("adv_detail")." where adv_type=1 and adv_id='".$id."'" )->result_array();$/;"	v	language:PHP
 detail	application\models\advs_model.php	/^		$detail = $this->db->query( "SELECT * from ".$this->cor_db->table("adv_detail")." where adv_type=2 and   adv_id='".$id."'" )->first_row("array");$/;"	v	language:PHP
 detail	application\models\advs_model.php	/^		$detail = $this->input->post('detail');	$/;"	v	language:PHP
 do_upload	application\models\advs_model.php	/^	function do_upload($main){	$/;"	f	language:PHP
-editor	application\models\advs_model.php	/^	function editor($v,$i='content'){$/;"	f	language:PHP
 error	application\models\advs_model.php	/^				$error = $this->upload->display_errors();		$/;"	v	language:PHP
 fetch_list	application\models\advs_model.php	/^	function fetch_list(){	$/;"	f	language:PHP
 file_s	application\models\advs_model.php	/^		$file_s = $_FILES;	$/;"	v	language:PHP
@@ -5660,12 +5722,10 @@ __construct	application\models\archives_model.php	/^	function __construct(){$/;"
 archive_class_left	application\models\archives_model.php	/^	function archive_class_left(){$/;"	f	language:PHP
 archive_content_nav	application\models\archives_model.php	/^	function archive_content_nav($id){$/;"	f	language:PHP
 c_sn	application\models\archives_model.php	/^		$this->c_sn = '0101';$/;"	v	language:PHP
-config	application\models\archives_model.php	/^		$config = array($/;"	v	language:PHP
 db_config	application\models\archives_model.php	/^		$db_config = $this->db_config();	$/;"	v	language:PHP
 db_config	application\models\archives_model.php	/^	function db_config(){$/;"	f	language:PHP
 db_config	application\models\archives_model.php	/^   		$db_config = $this->db_config();	$/;"	v	language:PHP
 db_list	application\models\archives_model.php	/^ 		$db_list = $this->db->get()->result_array(); $/;"	v	language:PHP
-editor	application\models\archives_model.php	/^	function editor($v,$i='content'){$/;"	f	language:PHP
 list	application\models\archives_model.php	/^		$list = $this->db->query($sql)->result_array();$/;"	v	language:PHP
 p_sn	application\models\archives_model.php	/^		$p_sn = $this->cor_db->fetch_value($sq,'parent_sn');$/;"	v	language:PHP
 read	application\models\archives_model.php	/^	function read($primary_val,$select='*'){$/;"	f	language:PHP
@@ -5752,9 +5812,7 @@ valid_del	application\models\category_model.php	/^	function valid_del(){$/;"	f	l
 validator	application\models\category_model.php	/^	 function validator(){$/;"	f	language:PHP
 Commission_model	application\models\commission_model.php	/^class Commission_model extends CI_Model{$/;"	c	language:PHP
 __construct	application\models\commission_model.php	/^	function __construct(){$/;"	f	language:PHP
-config	application\models\commission_model.php	/^		$config = array($/;"	v	language:PHP
 db_config	application\models\commission_model.php	/^	function db_config(){$/;"	f	language:PHP
-editor	application\models\commission_model.php	/^	function editor($v,$i='content'){$/;"	f	language:PHP
 validator	application\models\commission_model.php	/^	function validator(){	 $/;"	f	language:PHP
 CI	application\models\common_model.php	/^		$CI  =  &get_instance();	$/;"	v	language:PHP
 CI	application\models\common_model.php	/^	 	$CI = &get_instance();$/;"	v	language:PHP
@@ -5885,20 +5943,16 @@ where	application\models\common_model.php	/^		$where = stripslashes($where);$/;"
 yar	application\models\common_model.php	/^		$yar = $date_array["year"];$/;"	v	language:PHP
 Download_model	application\models\download_model.php	/^class Download_model extends CI_Model{$/;"	c	language:PHP
 __construct	application\models\download_model.php	/^	function __construct(){$/;"	f	language:PHP
-config	application\models\download_model.php	/^		$config = array($/;"	v	language:PHP
 db_config	application\models\download_model.php	/^	function db_config(){$/;"	f	language:PHP
 download_for_product	application\models\download_model.php	/^	function download_for_product($pro_id){$/;"	f	language:PHP
 download_left	application\models\download_model.php	/^	 function download_left(){$/;"	f	language:PHP
-editor	application\models\download_model.php	/^	function editor($v,$i='content'){$/;"	f	language:PHP
 list	application\models\download_model.php	/^		$list = $this->db->query("select * from ".$this->cor_db->table("infos")." where pro_id REGEXP '".$pro_id."' ")->result_array();$/;"	v	language:PHP
 list	application\models\download_model.php	/^		$list = $this->db->query($sql)->result_array();$/;"	v	language:PHP
 sql	application\models\download_model.php	/^	 	$sql  = "select * from ".$this->cor_db->table("category")." where c_sn like '0105_%' and c_sn<>'010505' order by c_sn asc,c_id asc";$/;"	v	language:PHP
 validator	application\models\download_model.php	/^	function validator(){	 $/;"	f	language:PHP
 Engage_model	application\models\engage_model.php	/^ class Engage_model extends CI_Model{$/;"	c	language:PHP
 __construct	application\models\engage_model.php	/^	function __construct(){$/;"	f	language:PHP
-config	application\models\engage_model.php	/^		$config = array($/;"	v	language:PHP
 db_config_apply	application\models\engage_model.php	/^	function db_config_apply(){$/;"	f	language:PHP
-editor	application\models\engage_model.php	/^	function editor($v,$i='content'){$/;"	f	language:PHP
 save_config	application\models\engage_model.php	/^	function save_config(){$/;"	f	language:PHP
 Fields_model	application\models\fields_model.php	/^class Fields_model extends CI_Model{$/;"	c	language:PHP
 __construct	application\models\fields_model.php	/^	function __construct(){$/;"	f	language:PHP
@@ -5910,9 +5964,7 @@ fields_list	application\models\fields_model.php	/^	function fields_list($fields=
 save_config	application\models\fields_model.php	/^	function  save_config(){$/;"	f	language:PHP
 valid_config	application\models\fields_model.php	/^	function valid_config(){$/;"	f	language:PHP
 __construct	application\models\friendlink_model.php	/^	function __construct(){$/;"	f	language:PHP
-config	application\models\friendlink_model.php	/^		$config = array($/;"	v	language:PHP
 db_config	application\models\friendlink_model.php	/^	function db_config(){$/;"	f	language:PHP
-editor	application\models\friendlink_model.php	/^	function editor($v,$i='content'){$/;"	f	language:PHP
 friendlink_model	application\models\friendlink_model.php	/^class friendlink_model extends CI_Model{$/;"	c	language:PHP
 validator	application\models\friendlink_model.php	/^	function validator(){	 $/;"	f	language:PHP
 Logs_model	application\models\logs_model.php	/^ class Logs_model extends CI_Model{$/;"	c	language:PHP
@@ -5991,9 +6043,7 @@ validator_rights	application\models\menu_model.php	/^	function validator_rights(
 validator_user	application\models\menu_model.php	/^	function validator_user(){$/;"	f	language:PHP
 Message_model	application\models\message_model.php	/^ class Message_model extends CI_Model{$/;"	c	language:PHP
 __construct	application\models\message_model.php	/^	function __construct(){$/;"	f	language:PHP
-config	application\models\message_model.php	/^		$config = array($/;"	v	language:PHP
 db_config	application\models\message_model.php	/^	function db_config(){		$/;"	f	language:PHP
-editor	application\models\message_model.php	/^	function editor($v,$i='content'){$/;"	f	language:PHP
 validator	application\models\message_model.php	/^	function validator(){	 $/;"	f	language:PHP
 Modules_model	application\models\modules_model.php	/^class Modules_model extends CI_Model{$/;"	c	language:PHP
 __construct	application\models\modules_model.php	/^	function __construct(){$/;"	f	language:PHP
@@ -6072,10 +6122,8 @@ valid_config	application\models\modules_model.php	/^	function valid_config($info
 vs	application\models\modules_model.php	/^		$vs = $this->cor_db->fetch_values($sql);$/;"	v	language:PHP
 Pictures_model	application\models\pictures_model.php	/^class Pictures_model extends CI_Model{$/;"	c	language:PHP
 __construct	application\models\pictures_model.php	/^	function __construct(){$/;"	f	language:PHP
-config	application\models\pictures_model.php	/^		$config = array($/;"	v	language:PHP
 db_config	application\models\pictures_model.php	/^	function db_config(){$/;"	f	language:PHP
 db_pictures_model_config	application\models\pictures_model.php	/^	function db_pictures_model_config(){$/;"	f	language:PHP
-editor	application\models\pictures_model.php	/^	function editor($v,$i='content'){$/;"	f	language:PHP
 find_top	application\models\pictures_model.php	/^	function find_top($m_id){$/;"	f	language:PHP
 list	application\models\pictures_model.php	/^		$list = $this->db->get()->result_array();$/;"	v	language:PHP
 list_head	application\models\pictures_model.php	/^	function list_head(){$/;"	f	language:PHP
@@ -6086,11 +6134,9 @@ top	application\models\pictures_model.php	/^		$top = config_item('base_url')."\/
 Product_model	application\models\product_model.php	/^class Product_model extends CI_Model{$/;"	c	language:PHP
 __construct	application\models\product_model.php	/^	function __construct(){$/;"	f	language:PHP
 c_sn	application\models\product_model.php	/^		$this->c_sn = '0102'; \/\/产品基类$/;"	v	language:PHP
-config	application\models\product_model.php	/^		$config = array($/;"	v	language:PHP
 db_config	application\models\product_model.php	/^		$db_config = $this->db_config();	$/;"	v	language:PHP
 db_config	application\models\product_model.php	/^	function db_config(){$/;"	f	language:PHP
 db_config_order	application\models\product_model.php	/^	function db_config_order(){$/;"	f	language:PHP
-editor	application\models\product_model.php	/^	function editor($v,$i='content'){$/;"	f	language:PHP
 list	application\models\product_model.php	/^		$list = $this->cor_form->array_re_index($list,'pro_id','pro_title');$/;"	v	language:PHP
 list	application\models\product_model.php	/^		$list = $this->db->query($sql)->result_array();$/;"	v	language:PHP
 product_class_left	application\models\product_model.php	/^	function product_class_left(){$/;"	f	language:PHP

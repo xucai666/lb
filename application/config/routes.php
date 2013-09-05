@@ -54,7 +54,7 @@ $route['zh|en']     = 'front/index';
 //short route
 //$route['(?!admin|backend|front)(.+(?<!\.htm))(\.htm)?$']     = 'front/$1';
 
-$route['(?!admin|backend|front)(.+)']     = 'front/$1';
+$route['(?!admin|backend|front|test)(.+)']     = 'front/$1';
 
 /* End of file routes.php */
 /* Location: ./system/application/config/routes.php */

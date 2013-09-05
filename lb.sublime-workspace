@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"get_class",
+				"get_class_methods"
+			],
+			[
 				"aff",
 				"affected_rows"
 			],
@@ -160,6 +164,28 @@
 	},
 	"file_history":
 	[
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/mdata_view.htm",
+		"/E/phpnow/htdocs/lb/application/models/common_model.php",
+		"/E/phpnow/htdocs/lb/application/controllers/test.php",
+		"/E/phpnow/htdocs/lb/application/libraries/MY_Pagination.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/view_list.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/templates_list.htm",
+		"/E/phpnow/htdocs/lb/application/libraries/File_util.php",
+		"/E/phpnow/htdocs/lb/application/libraries/cor_cache.php",
+		"/E/phpnow/htdocs/lb/application/config/routes.php",
+		"/E/phpnow/htdocs/lb/application/config/profiler.php",
+		"/E/phpnow/htdocs/lb/.htaccess",
+		"/E/phpnow/htdocs/lb/application/controllers/admin.php",
+		"/E/phpnow/htdocs/lb/application/controllers/cortest.php",
+		"/E/phpnow/htdocs/lb/application/controllers/test2.php",
+		"/E/phpnow/htdocs/lb/application/helpers/pinyin_helper.php",
+		"/E/phpnow/htdocs/lb/application/models/alipay_model.php",
+		"/E/phpnow/htdocs/lb/application/helpers/py_helper.php.dump",
+		"/E/phpnow/htdocs/lb/application/libraries/cor_lang.php",
+		"/E/phpnow/htdocs/lb/application/helpers/py_helper.php",
+		"/E/phpnow/htdocs/lb/application/helpers/auth_helper.php.dump",
+		"/E/phpnow/htdocs/lbtest/application/controllers/test.php",
+		"/E/phpnow/htdocs/lbtest/application/config/config.php",
 		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_fields_lang.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/fields_add.htm",
 		"/E/phpnow/htdocs/lb/application/models/modules_model.php",
@@ -169,7 +195,6 @@
 		"/E/phpnow/htdocs/lb/application/controllers/backend/common.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/modules_list.htm",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/mdata.php",
-		"/E/phpnow/htdocs/lb/application/models/common_model.php",
 		"/E/phpnow/htdocs/lb/application/helpers/ckeditor_helper.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/product.htm",
 		"/E/phpnow/htdocs/lb/application/models/mdata_model.php",
@@ -177,7 +202,6 @@
 		"/E/phpnow/htdocs/lb/tools/jQuery弹出层有9种效果/styles/core.css.dump",
 		"/E/phpnow/htdocs/lb/application/libraries/cor_page.php",
 		"/E/phpnow/htdocs/lb/application/libraries/cor_db.php",
-		"/E/phpnow/htdocs/lb/application/libraries/MY_Pagination.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/lang_trans.htm",
 		"/E/phpnow/htdocs/lb/application/controllers/front/search.php",
 		"/E/phpnow/htdocs/lb/application/compiles/5058bd06fae55f725b6716266e32d490ab562e54.file.top.htm.php",
@@ -208,7 +232,6 @@
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/js/core.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/core.js",
 		"/E/phpnow/htdocs/lb/application/config/autoload.php",
-		"/E/phpnow/htdocs/lb/.htaccess",
 		"/E/phpnow/htdocs/lb/application/config/config.default",
 		"/E/phpnow/htdocs/lb/cache/zh/sys_config.php",
 		"/E/phpnow/htdocs/lb/cache/en/sys_config.php",
@@ -219,7 +242,6 @@
 		"/E/phpnow/htdocs/lb/application/models/tree_model.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/tree.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/adminindex.htm",
-		"/E/phpnow/htdocs/lb/application/helpers/auth_helper.php.dump",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/system_manage.php",
 		"/E/phpnow/htdocs/lb/system/database/drivers/cubrid/cubrid_driver.php",
 		"/E/phpnow/htdocs/lb/system/database/DB_driver.php",
@@ -269,25 +291,7 @@
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/main_foot.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jquery.fixheadertable.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/dynamic.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/product.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/dynamic.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/product.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/dynamic.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/dynamic.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/left_archive.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/blue/zh/dynamic_view.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/templates_view.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/about.htm",
-		"/E/phpnow/htdocs/lb/application/controllers/front/about.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/about.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/templates_add.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/css/templates.css",
-		"/E/phpnow/htdocs/lb/ckeditor/plugins/templates/dialogs/templates.css",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/templates.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/backend_style.css",
-		"/E/phpnow/htdocs/lb/application/helpers/MY_url_helper.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/blue/css/table.css",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/mdata_add.htm"
+		"/E/phpnow/htdocs/lb/application/templates/front/blue/en/product.htm"
 	],
 	"find":
 	{
@@ -298,6 +302,7 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"E:\\phpnow\\htdocs\\lb\\application",
 			"E:\\phpnow\\htdocs\\lb\\application\\language",
 			"E:\\phpnow\\htdocs\\lb\\application\\templates",
 			"E:\\phpnow\\htdocs\\lb\\application",
@@ -365,6 +370,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"where",
+			"$this->",
+			"$CI",
+			"$ci",
+			"$this->db",
+			"tag",
+			"last_link",
+			"last",
+			"mkdir",
+			"cor_db",
+			"$this",
+			"eregi",
+			"alipay",
 			"fields_field_name",
 			"DROP PRIMARY",
 			"IF EXISTS",
@@ -479,20 +497,7 @@
 			"/[0-9].*?/",
 			"/\\d{2}/",
 			"\\d{2}",
-			"create",
-			"$base_url",
-			"dbprefix",
-			"directory_map",
-			"checkbox",
-			"index.php",
-			"install",
-			"time_zone",
-			"order_list",
-			"fetch_css",
-			"table",
-			"fetch_cs",
-			"table",
-			"location"
+			"create"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -565,6 +570,26 @@
 		"selected_items":
 		[
 			[
+				"common_model",
+				"application/models/common_model.php"
+			],
+			[
+				"mdata_view",
+				"application/templates/backend/corcms/mdata_view.htm"
+			],
+			[
+				"view_list",
+				"application/templates/backend/corcms/view_list.htm"
+			],
+			[
+				"templates_list",
+				"application/templates/backend/corcms/templates_list.htm"
+			],
+			[
+				"cor_ca",
+				"application/libraries/cor_cache.php"
+			],
+			[
 				"field_ad",
 				"application/templates/backend/corcms/fields_add.htm"
 			],
@@ -591,10 +616,6 @@
 			[
 				"mdata",
 				"application/controllers/backend/mdata.php"
-			],
-			[
-				"common_model",
-				"application/models/common_model.php"
 			],
 			[
 				"mdata.php",
@@ -1059,22 +1080,6 @@
 			[
 				"jwin.js",
 				"application/templates/backend/blue/js/iwin.js"
-			],
-			[
-				"ccore.js",
-				"application/templates/backend/blue/js/core.js"
-			],
-			[
-				"mdata_list.ht",
-				"application/templates/backend/blue/mdata_list.htm"
-			],
-			[
-				"mdata_add.ht",
-				"application/templates/backend/blue/mdata_add.htm"
-			],
-			[
-				"page_reci",
-				"application/templates/backend/blue/page_redirect_dialog.htm"
 			]
 		],
 		"width": 0.0

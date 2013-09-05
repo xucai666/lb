@@ -27,7 +27,7 @@
 						<th><!--{$item.r_alias}--></th>
 						<!--{/foreach}-->
 										
-						<th>操作</th>					
+									
 					</tr>
 			    </thead>
 				
@@ -45,14 +45,7 @@
 					<!--{/foreach}-->
 					
 								
-					<td>
-
-					<input type="hidden" name="detail[<!--{$dt_primary}-->][<!--{$k}-->]" value="<!--{$v[$dt_primary]}-->" />
-					
-					<a href="javascript:;"  target="_self" onclick="core_copy($(this),'input','')" class="link_add">&nbsp;</a>
-					<a href="javascript:;"  id="delete_link"  class="link_del <!--{if $k==0}-->hide<!--{/if}-->"    target="_self" onclick="core_drop($(this))" >&nbsp;</a>
-
-					</td>					
+						
 				</tr>
 		<!--{/foreach}-->
 

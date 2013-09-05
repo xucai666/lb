@@ -1,0 +1,41 @@
+$this->load->library('alipay');
+			$out_trade_no=md5(time()); //设置一个唯一的交易id，回调页面要根据这个id匹配交易记录
+
+			$alipay_config['partner']='2088002085673643'; //支付宝合作者身份id，请到支付宝申请
+			$alipay_config['key']='pqn64w9u77f2i4l0qtubf32oke6o4qa3'; //支付宝安全检验码，请到支付宝申请
+			$this->load->library('alipay', $alipay_config);
+			$param=array(
+			        'service'=>'create_direct_pay_by_user',
+			        'payment_type'=>'1',
+			        'partner'=>trim($alipay_config['partner']),
+			        '_input_charset'=>'utf-8',
+			        'seller_email'=>'', //支付宝账号
+			        'return_url'=>'http://yoururl/index.php/alipay/return/', //返回页面网址
+			        'notify_url'=>'http://yoururl/index.php/alipay/notify/', //回调页面网址
+			        'out_trade_no'=>$out_trade_no,
+			        'subject'=>'交易标题', //交易标题
+			        'body'=>'交易详情', //交易详情
+			        'total_fee'=>100, //交易金额，单位：元
+			        'show_url'=>'http://yoururl/' //交易展示页面
+			);
+			$url=$this->alipay->direct_pay_url($param); //生成支付交易网址
+			redirect($url); //转向支付宝交易页面
+
+			$alipay_config['partner']=''; //支付宝合作者身份id，请到支付宝申请
+			$alipay_config['key']=''; //支付宝安全检验码，请到支付宝申请
+			$this->load->library('alipay', $alipay_config);
+			if($this->alipay->verifyNotify()){
+			        $post=$this->input->post(NULL, TRUE);
+			        $out_trade_no=$post['out_trade_no']; //提交交易时生成的交易id，请从数据库中匹配出相应的交易记录
+			        $trade_no=$post['trade_no']; //支付宝的交易id，可以在支付宝交易记录中使用
+			        $total_fee=$post['total_fee']; //实际支付费用
+			        $trade_status=$post['trade_status']; //交易状态，TRADE_SUCCESS为交易成功
+			 
+			        /**
+			        添加自己的程序
+			        **/
+			 
+			        echo 'success';
+			}else{
+			        echo 'fail';
+			}

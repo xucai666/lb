@@ -14,6 +14,7 @@ Admins_model	.\application\models\admins_model.php	/^class Admins_model extends 
 Advs	.\application\controllers\backend\advs.php	/^class Advs extends CI_Controller{$/;"	c	language:PHP
 Advs_model	.\application\models\advs_model.php	/^class Advs_model extends CI_Model{$/;"	c	language:PHP
 Alipay	.\application\controllers\front\alipay.php	/^class Alipay extends CI_Controller {$/;"	c	language:PHP
+Alipay	.\application\libraries\alipay.php	/^class Alipay$/;"	c	language:PHP
 AlipayNotify	.\tools\alipay\lib\alipay_notify.class.php	/^    function AlipayNotify($alipay_config) {$/;"	f	language:PHP
 AlipayNotify	.\tools\alipay\lib\alipay_notify.class.php	/^class AlipayNotify {$/;"	c	language:PHP
 AlipaySubmit	.\tools\alipay\lib\alipay_submit.class.php	/^    function AlipaySubmit($alipay_config) {$/;"	f	language:PHP
@@ -529,10 +530,12 @@ FOPEN_WRITE_CREATE_STRICT	.\application\config\constants.php	/^define('FOPEN_WRI
 Feel	.\application\controllers\front\feel.php	/^class Feel extends CI_Controller {$/;"	c	language:PHP
 Fields	.\application\controllers\backend\fields.php	/^class Fields extends CI_Controller{$/;"	c	language:PHP
 Fields_model	.\application\models\fields_model.php	/^class Fields_model extends CI_Model{$/;"	c	language:PHP
+File_util	.\application\libraries\File_util.php	/^class File_util {$/;"	c	language:PHP
 Friendlink	.\application\controllers\backend\friendlink.php	/^class Friendlink extends CI_Controller{$/;"	c	language:PHP
 G1	.\system\libraries\Image_lib.php	/^		$G1 = hexdec(substr($this->wm_font_color, 2, 2));$/;"	v	language:PHP
 G2	.\system\libraries\Image_lib.php	/^		$G2 = hexdec(substr($this->wm_shadow_color, 2, 2));$/;"	v	language:PHP
 GetCurUrl	.\application\libraries\cor_page.php	/^	function GetCurUrl() $/;"	f	language:PHP
+GetPinyin	.\application\helpers\pinyin_helper.php	/^    function GetPinyin($str,$ishead = FALSE,$ucfirst = FALSE)$/;"	f	language:PHP
 HANDLERASSOCIATIONS	.\charts\ExportHandlers\PHP\FCExporter.php	/^define ( "HANDLERASSOCIATIONS", "PDF=PDF;JPEG=IMG;JPG=IMG;PNG=IMG;GIF=IMG" );$/;"	d	language:PHP
 HOOK	.\system\core\Hooks.php	/^			$HOOK = new $class;$/;"	v	language:PHP
 HTTP_URI	.\charts\ExportHandlers\PHP\FCExporter.php	/^define ( "HTTP_URI", "ExportedImages\/" );$/;"	d	language:PHP
@@ -555,7 +558,6 @@ Id	.\ckfinder\core\ckfinder_php5.php	/^	public $Id = '' ;$/;"	v	language:PHP
 Index	.\application\controllers\front\index.php	/^class Index extends CI_Controller {$/;"	c	language:PHP
 Invoke	.\application\libraries\invoke.php	/^ class Invoke {$/;"	c	language:PHP
 ItemVarName	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_compile_foreach.php	/^        $ItemVarName = '$' . trim($item, '\\'"') . '@';$/;"	v	language:PHP
-JumpUrl	.\application\compiles\c11fef5b2930592637bdc3ac6ddb20a2a4983741.file.page_redirect.htm.php	/^      function JumpUrl(){$/;"	f	language:PHP
 K64	.\ckeditor\ckfinder\core\connector\php\php5\Utils\Misc.php	/^        $K64 = 65536;    \/\/ number of bytes in 64K$/;"	v	language:PHP
 K64	.\ckfinder\core\connector\php\php5\Utils\Misc.php	/^        $K64 = 65536;    \/\/ number of bytes in 64K$/;"	v	language:PHP
 LANG	.\system\core\CodeIgniter.php	/^	$LANG =& load_class('Lang', 'core');$/;"	v	language:PHP
@@ -805,6 +807,7 @@ TWEAKFACTOR	.\ckeditor\ckfinder\core\connector\php\php5\Utils\Misc.php	/^       
 TWEAKFACTOR	.\ckfinder\core\connector\php\php5\Utils\Misc.php	/^        $TWEAKFACTOR = 2.4;  \/\/ Or whatever works for you$/;"	v	language:PHP
 Templates	.\application\controllers\backend\templates.php	/^class Templates extends CI_Controller {$/;"	c	language:PHP
 Templates_model	.\application\models\templates_model.php	/^class Templates_model extends CI_Model{$/;"	c	language:PHP
+Test	.\application\controllers\test.php	/^ class Test extends CI_Controller{$/;"	c	language:PHP
 Trace	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_configfileparser.php	/^    static function Trace($TraceFILE, $zTracePrompt)$/;"	f	language:PHP
 Trace	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_templateparser.php	/^    static function Trace($TraceFILE, $zTracePrompt)$/;"	f	language:PHP
 TraceFILE	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_configfileparser.php	/^            $TraceFILE = 0;$/;"	v	language:PHP
@@ -931,6 +934,7 @@ __construct	.\application\controllers\front\rand_code.php	/^ 	function __constru
 __construct	.\application\controllers\front\sales.php	/^	function __construct()$/;"	f	language:PHP
 __construct	.\application\controllers\front\search.php	/^	function __construct()$/;"	f	language:PHP
 __construct	.\application\controllers\front\welcome.php	/^	function __construct(){$/;"	f	language:PHP
+__construct	.\application\controllers\test.php	/^	function __construct(){$/;"	f	language:PHP
 __construct	.\application\core\MY_Input.php	/^	public function __construct()$/;"	f	language:PHP
 __construct	.\application\helpers\timecount_helper.php	/^	public function __construct(){$/;"	f	language:PHP
 __construct	.\application\libraries\MY_Form_validation.php	/^   function __construct() {$/;"	f	language:PHP
@@ -961,6 +965,7 @@ __construct	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_interna
 __construct	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_resource.php	/^    public function __construct(Smarty_Resource $handler, Smarty $smarty, $resource, $type, $name, $unique_resource)$/;"	f	language:PHP
 __construct	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_resource.php	/^    public function __construct(Smarty_Template_Source $source)$/;"	f	language:PHP
 __construct	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_security.php	/^    public function __construct($smarty)$/;"	f	language:PHP
+__construct	.\application\libraries\alipay.php	/^	function __construct($aliapy_config){$/;"	f	language:PHP
 __construct	.\application\libraries\breadcrumb.php	/^	public function __construct($params = array())$/;"	f	language:PHP
 __construct	.\application\libraries\cor_auth.php	/^ 	function __construct(){$/;"	f	language:PHP
 __construct	.\application\libraries\cor_cache.php	/^ 	function __construct(){$/;"	f	language:PHP
@@ -1243,14 +1248,12 @@ _bcc_array	.\system\libraries\Email.php	/^		$this->_bcc_array	= array();$/;"	v	l
 _bcc_array	.\system\libraries\Email.php	/^	var	$_bcc_array		= array();$/;"	v	language:PHP
 _bind_params	.\system\database\drivers\oci8\oci8_driver.php	/^	private function _bind_params($params)$/;"	f	language:PHP
 _bit_depths	.\system\libraries\Email.php	/^	var	$_bit_depths	= array('7bit', '8bit');$/;"	v	language:PHP
-_block_content	.\application\compiles\08e5a137d313ace64256eb31229d25deba9b3247.file.foot.htm.php	/^echo base_url();<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
 _block_content	.\application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^ echo display_size(@disk_free_space("."));<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
 _block_content	.\application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^echo $_SERVER['SERVER_SOFTWARE'];<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
 _block_content	.\application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^echo ini_get('upload_max_filesize');<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
 _block_content	.\application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^echo mysql_get_server_info();<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
 _block_content	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_compile_extends.php	/^            $_block_content = str_replace($compiler->smarty->left_delimiter . '$smarty.block.parent' . $compiler->smarty->right_delimiter, '%%%%SMARTY_PARENT%%%%',$/;"	v	language:PHP
 _block_content	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_resource_extends.php	/^                    $_block_content = str_replace($source->smarty->left_delimiter . '$smarty.block.parent' . $source->smarty->right_delimiter, '%%%%SMARTY_PARENT%%%%',$/;"	v	language:PHP
-_block_repeat	.\application\compiles\08e5a137d313ace64256eb31229d25deba9b3247.file.foot.htm.php	/^<div id="sys_base_url" class="hide"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
 _block_repeat	.\application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^&gt<\/td><td width="15%">MYSQL版本<\/td><td width="35%"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
 _block_repeat	.\application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^<\/td><td width="15%">上传许可<\/td><td width="35%"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
 _block_repeat	.\application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^<\/td><td width="15%">剩余空间<\/td><td width="35%"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
@@ -1943,7 +1946,6 @@ _forceAscii	.\ckeditor\ckfinder\core\connector\php\php5\Core\Config.php	/^    pr
 _forceAscii	.\ckfinder\core\connector\php\php5\Core\Config.php	/^            $this->_forceAscii = CKFinder_Connector_Utils_Misc::booleanValue($GLOBALS['config']['ForceAscii']);$/;"	v	language:PHP
 _forceAscii	.\ckfinder\core\connector\php\php5\Core\Config.php	/^    private $_forceAscii = false;$/;"	v	language:PHP
 _format_newlines	.\system\libraries\Typography.php	/^	function _format_newlines($str)$/;"	f	language:PHP
-_from	.\application\compiles\19cee10738f6e20ddb60d5bcd1bb55c62c5ae560.file.engage.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
 _from	.\application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['item']->value['detail']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
 _from	.\application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['item1']->value['detail']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
 _from	.\application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['rights_options']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
@@ -3240,28 +3242,17 @@ _val	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_radios.php
 _val	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_select_date.php	/^            $_val = sprintf('%02d', $i);$/;"	v	language:PHP
 _val	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_select_time.php	/^            $_val = sprintf('%02d', $i);$/;"	v	language:PHP
 _valid	.\application\compiles\001e4619afaa8bbbd78f9aeed6760e234b077bd1.file.product.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\08e5a137d313ace64256eb31229d25deba9b3247.file.foot.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\090fca48abdcc9955687f2ca28fbdccf222355c0.file.center.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\16006fbb4ce0057b59d86b3d9f4d741a94023cf9.file.sales.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\19cee10738f6e20ddb60d5bcd1bb55c62c5ae560.file.engage.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\3a715f905da6e089cb10c68205e5329c232117b8.file.left_contact.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\5058bd06fae55f725b6716266e32d490ab562e54.file.top.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\5666bfb2573f6235e99a796c3fe9166da62d8fc6.file.main_foot.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\57bca995376f3e9a04397d23c80716afd9138e67.file.main_index.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\5976364c4fdb452526bb49788952050225b5d93d.file.left_sales.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\675c08882697db4ca46f3cc80b047ed52f00b775.file.index.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\69164d1440cda3085cad42aa7f3faaff147ae8ac.file.main_top.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\8b2ccbca6cd952602225ef14328668bf65dbf08a.file.top.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\a49ee88a2669b51fd0fab361d9cacfe05aa5875b.file.left_product.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\ae0446f50b5c68d1a71cae5d127e6988ad63b43f.file.foot.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\c11fef5b2930592637bdc3ac6ddb20a2a4983741.file.page_redirect.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\d895bd2a09dcb6b07dc8f45d67c845708fc00204.file.left_archive.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\f32b781624383bf9a74aea8a15fd4bce38251991.file.left_about.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\f409ac6f8838eb070b3a2c94338ec74dd431ea54.file.dynamic.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\fae418237c19d8abed9fd57487288bf1166d3aba.file.contact.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid_ipv4	.\system\core\Input.php	/^	protected function _valid_ipv4($ip)$/;"	f	language:PHP
 _valid_ipv6	.\system\core\Input.php	/^	protected function _valid_ipv6($str)$/;"	f	language:PHP
 _validate_entities	.\system\core\Security.php	/^	protected function _validate_entities($str)$/;"	f	language:PHP
@@ -3612,6 +3603,12 @@ agent	.\application\libraries\Smarty-3.1.14\libs\plugins\function.fetch.php	/^  
 agent	.\system\libraries\User_agent.php	/^			$this->agent = trim($_SERVER['HTTP_USER_AGENT']);$/;"	v	language:PHP
 agent	.\system\libraries\User_agent.php	/^	var $agent		= NULL;$/;"	v	language:PHP
 agent_string	.\system\libraries\User_agent.php	/^	public function agent_string()$/;"	f	language:PHP
+aimDir	.\application\libraries\File_util.php	/^        $aimDir = '';$/;"	v	language:PHP
+aimDir	.\application\libraries\File_util.php	/^        $aimDir = dirname($aimUrl);$/;"	v	language:PHP
+aimDir	.\application\libraries\File_util.php	/^        $aimDir = str_replace('', '\/', $aimDir);$/;"	v	language:PHP
+aimDir	.\application\libraries\File_util.php	/^        $aimDir = substr($aimDir, -1) == '\/' ? $aimDir : $aimDir . '\/';$/;"	v	language:PHP
+aimDir	.\application\libraries\File_util.php	/^        $aimDir = substr($aimDir, -1) == '\/' ? $aimDir : $aimDir.'\/';$/;"	v	language:PHP
+aimUrl	.\application\libraries\File_util.php	/^        $aimUrl = str_replace('', '\/', $aimUrl);$/;"	v	language:PHP
 ajax_change_state	.\application\controllers\backend\common.php	/^ 	function ajax_change_state(){$/;"	f	language:PHP
 ajax_img_del	.\application\controllers\backend\common.php	/^ 	function ajax_img_del(){$/;"	f	language:PHP
 ajax_imgid_get	.\application\controllers\backend\common.php	/^ 	function ajax_imgid_get(){$/;"	f	language:PHP
@@ -3625,6 +3622,8 @@ al	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_compile
 al	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_resource_extends.php	/^            $al = '';$/;"	v	language:PHP
 al	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_resource_extends.php	/^            $al = '\\s*';$/;"	v	language:PHP
 algorithms	.\system\libraries\Encrypt.php	/^	 * Takes an encoded string from the original Encryption class algorithms and$/;"	c	language:PHP
+aliapy_config	.\application\libraries\alipay.php	/^		$this->aliapy_config=$aliapy_config;$/;"	v	language:PHP
+aliapy_config	.\application\libraries\alipay.php	/^	var $aliapy_config;$/;"	v	language:PHP
 alias	.\system\database\DB_active_rec.php	/^			$alias = $this->_create_alias_from_table(trim($select));$/;"	v	language:PHP
 alias	.\system\database\DB_active_rec.php	/^	protected function _max_min_avg_sum($select = '', $alias = '', $type = 'MAX')$/;"	v	language:PHP
 alias	.\system\database\DB_active_rec.php	/^	public function select_avg($select = '', $alias = '')$/;"	v	language:PHP
@@ -3642,6 +3641,7 @@ alipay_config	.\tools\alipay\lib\alipay_notify.class.php	/^		$this->alipay_confi
 alipay_config	.\tools\alipay\lib\alipay_notify.class.php	/^	var $alipay_config;$/;"	v	language:PHP
 alipay_config	.\tools\alipay\lib\alipay_submit.class.php	/^		$this->alipay_config = $alipay_config;$/;"	v	language:PHP
 alipay_config	.\tools\alipay\lib\alipay_submit.class.php	/^	var $alipay_config;$/;"	v	language:PHP
+alipay_gateway_new	.\application\libraries\alipay.php	/^	var $alipay_gateway_new='https:\/\/mapi.alipay.com\/gateway.do?';$/;"	v	language:PHP
 alipay_gateway_new	.\tools\alipay\lib\alipay_submit.class.php	/^	var $alipay_gateway_new = 'https:\/\/mapi.alipay.com\/gateway.do?';$/;"	v	language:PHP
 all	.\application\models\modules_model.php	/^	function all($where=null){$/;"	f	language:PHP
 all	.\swfupload\upload.php	/^	$all = count(preg_grep("\/^".$uid."\/", $arr))+1;$/;"	v	language:PHP
@@ -3818,6 +3818,7 @@ args	.\system\libraries\Driver.php	/^	public function __call($method, $args = ar
 args	.\system\libraries\Table.php	/^		$args = func_get_args();$/;"	v	language:PHP
 arr	.\application\controllers\backend\system_manage.php	/^		$arr = array($/;"	v	language:PHP
 arr	.\application\helpers\JSON.php	/^                        $arr = array();$/;"	v	language:PHP
+arr	.\application\libraries\File_util.php	/^        $arr = explode('\/', $aimUrl);$/;"	v	language:PHP
 arr	.\application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                        $arr = array();$/;"	v	language:PHP
 arr	.\swfupload\upload.php	/^	$arr = scandir($dir); $/;"	v	language:PHP
 arr	.\system\database\drivers\sqlite\sqlite_result.php	/^			$arr = sqlite_fetch_array($this->result_id, SQLITE_ASSOC);$/;"	v	language:PHP
@@ -4186,6 +4187,7 @@ bytes	.\application\helpers\JSON.php	/^        $bytes = (ord($utf16{0}) << 8) | 
 bytes	.\application\libraries\cor_zip.php	/^   if ($bytes == 0x504b0506 or $bytes == 0x2e706870504b0506){ $pos++;break;} $pos++;$/;"	v	language:PHP
 bytes	.\application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^        $bytes = (ord($utf16{0}) << 8) | ord($utf16{1});$/;"	v	language:PHP
 bytes	.\tools\unpack.php	/^   if ($bytes == 0x504b0506 or $bytes == 0x2e706870504b0506){ $pos++;break;} $pos++;$/;"	v	language:PHP
+c	.\application\helpers\pinyin_helper.php	/^                $c = $str[$i].$str[$i+1];$/;"	v	language:PHP
 c	.\charts\ExportHandlers\PHP\Resources\FCExporter_IMG.php	/^				$c = $thispix[0];$/;"	v	language:PHP
 c	.\charts\ExportHandlers\PHP\Resources\FCExporter_PDF.php	/^						$c = str_pad($c, 6, '0', STR_PAD_LEFT);$/;"	v	language:PHP
 c	.\charts\ExportHandlers\PHP\Resources\FCExporter_PDF.php	/^						$c=$this->arrExportData[$id]["bgcolor"];$/;"	v	language:PHP
@@ -4888,24 +4890,15 @@ config	.\application\libraries\cor_page.php	/^			$config =& get_config(); $/;"	v
 config	.\application\libraries\cor_page.php	/^		$config = &get_config();		$/;"	v	language:PHP
 config	.\application\libraries\cor_page.php	/^		$this->config = $config;$/;"	v	language:PHP
 config	.\application\models\admins_model.php	/^		$config = array($/;"	v	language:PHP
-config	.\application\models\advs_model.php	/^		$config = array($/;"	v	language:PHP
 config	.\application\models\advs_model.php	/^		$config = config_item('advs_files');$/;"	v	language:PHP
-config	.\application\models\archives_model.php	/^		$config = array($/;"	v	language:PHP
 config	.\application\models\category_model.php	/^		$config = array($/;"	v	language:PHP
-config	.\application\models\commission_model.php	/^		$config = array($/;"	v	language:PHP
 config	.\application\models\common_model.php	/^		$config = array($/;"	v	language:PHP
-config	.\application\models\download_model.php	/^		$config = array($/;"	v	language:PHP
-config	.\application\models\engage_model.php	/^		$config = array($/;"	v	language:PHP
-config	.\application\models\friendlink_model.php	/^		$config = array($/;"	v	language:PHP
 config	.\application\models\mdata_model.php	/^			$config =array_merge($config,array('detail'=>array($/;"	v	language:PHP
 config	.\application\models\mdata_model.php	/^		$config = array('main'=>array($/;"	v	language:PHP
 config	.\application\models\mdata_model.php	/^		$config = array();$/;"	v	language:PHP
 config	.\application\models\member_model.php	/^      $config = array($/;"	v	language:PHP
 config	.\application\models\menu_model.php	/^		$config = array($/;"	v	language:PHP
-config	.\application\models\message_model.php	/^		$config = array($/;"	v	language:PHP
 config	.\application\models\modules_model.php	/^		$config = array();$/;"	v	language:PHP
-config	.\application\models\pictures_model.php	/^		$config = array($/;"	v	language:PHP
-config	.\application\models\product_model.php	/^		$config = array($/;"	v	language:PHP
 config	.\application\models\roles_model.php	/^		$config = array($/;"	v	language:PHP
 config	.\application\models\templates_model.php	/^		$config = array($/;"	v	language:PHP
 config	.\ckeditor\ckfinder\core\connector\php\connector.php	/^$config = array();$/;"	v	language:PHP
@@ -5084,6 +5077,8 @@ copiedAll	.\ckfinder\core\connector\php\php5\CommandHandler\CopyFiles.php	/^    
 copiedAll	.\ckfinder\core\connector\php\php5\CommandHandler\CopyFiles.php	/^        $copiedAll = 0;$/;"	v	language:PHP
 copy	.\system\libraries\Image_lib.php	/^			$copy	= 'imagecopyresampled';$/;"	v	language:PHP
 copy	.\system\libraries\Image_lib.php	/^			$copy	= 'imagecopyresized';$/;"	v	language:PHP
+copyDir	.\application\libraries\File_util.php	/^    function copyDir($oldDir, $aimDir, $overWrite = false) {$/;"	f	language:PHP
+copyFile	.\application\libraries\File_util.php	/^    function copyFile($fileUrl, $aimUrl, $overWrite = false) {$/;"	f	language:PHP
 copy_fnc	.\system\libraries\Image_lib.php	/^	var $copy_fnc			= 'imagecopyresampled';$/;"	v	language:PHP
 cor_base64_decode	.\application\helpers\auth_helper.php	/^	 function cor_base64_decode($string) { $/;"	f	language:PHP
 cor_base64_encode	.\application\helpers\auth_helper.php	/^	 function cor_base64_encode($string) { $/;"	f	language:PHP
@@ -5149,8 +5144,10 @@ create	.\tools\faisunsql_v40_utf8\index.php	/^		function create($table,$sql){$/;
 create	.\tools\faisunsql_v40_utf8\index\index.php	/^		function create($table,$sql){$/;"	f	language:PHP
 createBmp	.\swfupload\libs\image_thumb.class.php	/^    function createBmp()$/;"	f	language:PHP
 createData	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_templatebase.php	/^    public function createData($parent = null)$/;"	f	language:PHP
+createDir	.\application\libraries\File_util.php	/^    function createDir($aimUrl) {$/;"	f	language:PHP
 createDirectoryRecursively	.\ckeditor\ckfinder\core\connector\php\php5\Utils\FileSystem.php	/^    public static function createDirectoryRecursively($dir)$/;"	f	language:PHP
 createDirectoryRecursively	.\ckfinder\core\connector\php\php5\Utils\FileSystem.php	/^    public static function createDirectoryRecursively($dir)$/;"	f	language:PHP
+createFile	.\application\libraries\File_util.php	/^    function createFile($aimUrl, $overWrite = false) {$/;"	f	language:PHP
 createGif	.\swfupload\libs\image_thumb.class.php	/^    function createGif()$/;"	f	language:PHP
 createJpeg	.\swfupload\libs\image_thumb.class.php	/^    function createJpeg()$/;"	f	language:PHP
 createLinkstring	.\tools\alipay\lib\alipay_core.function.php	/^function createLinkstring($para) {$/;"	f	language:PHP
@@ -5855,10 +5852,13 @@ dir	.\system\libraries\Zip.php	/^		$dir = str_replace("\\\\", "\/", $dir);$/;"	v
 dir	.\tools\rm.php	/^$dir = realpath(dirname(__file__).'\/..');$/;"	v	language:PHP
 dirExists	.\ckeditor\ckfinder\plugins\zip\plugin.php	/^      $dirExists = new CKFinder_Connector_Utils_XmlNode("FolderExists");$/;"	v	language:PHP
 dirExists	.\ckfinder\plugins\zip\plugin.php	/^      $dirExists = new CKFinder_Connector_Utils_XmlNode("FolderExists");$/;"	v	language:PHP
+dirHandle	.\application\libraries\File_util.php	/^        $dirHandle = opendir($aimDir);$/;"	v	language:PHP
+dirHandle	.\application\libraries\File_util.php	/^        $dirHandle = opendir($oldDir);$/;"	v	language:PHP
 dirWritable	.\charts\ExportHandlers\PHP\FCExporter.php	/^	$dirWritable = is_writable ( realpath( $path ) ) ;  	$/;"	v	language:PHP
 dir_path	.\system\database\DB_cache.php	/^		$dir_path = $this->db->cachedir.$segment_one.'+'.$segment_two.'\/';$/;"	v	language:PHP
 dir_time	.\system\libraries\Zip.php	/^			$dir_time = $this->_get_mod_time($dir);$/;"	v	language:PHP
 direct_access_security	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^    public $direct_access_security = true;$/;"	v	language:PHP
+direct_pay_url	.\application\libraries\alipay.php	/^	function direct_pay_url($para_temp){$/;"	f	language:PHP
 direction	.\system\database\DB_active_rec.php	/^			$direction = $this->_random_keyword;$/;"	v	language:PHP
 direction	.\system\database\DB_active_rec.php	/^			$direction = (in_array(strtoupper(trim($direction)), array('ASC', 'DESC'), TRUE)) ? ' '.$direction : ' ASC';$/;"	v	language:PHP
 direction	.\system\database\DB_active_rec.php	/^	public function order_by($orderby, $direction = '')$/;"	v	language:PHP
@@ -6037,18 +6037,8 @@ early	.\system\core\URI.php	/^	 * loads the Router class early on so it's not av
 echo_string	.\tools\faisunsql_v40_utf8\index.php	/^		$echo_string = '<?	error_reporting(1);	@set_time_limit(0); '.requestValues().' ?'.'>$/;"	v	language:PHP
 echo_string	.\tools\faisunsql_v40_utf8\index.php	/^		if($extension){ $echo_string = gzencode($echo_string); }$/;"	v	language:PHP
 ed	.\application\helpers\common_helper.php	/^		$ed = 0;$/;"	v	language:PHP
-ed_config	.\application\controllers\backend\engage.php	/^ 		 $ed_config  = array($/;"	v	language:PHP
 edit_tree_node	.\application\models\tree_model.php	/^	function edit_tree_node($node_id,$pid,$code,$name){$/;"	f	language:PHP
-editor	.\application\models\advs_model.php	/^	function editor($v,$i='content'){$/;"	f	language:PHP
-editor	.\application\models\archives_model.php	/^	function editor($v,$i='content'){$/;"	f	language:PHP
-editor	.\application\models\commission_model.php	/^	function editor($v,$i='content'){$/;"	f	language:PHP
 editor	.\application\models\common_model.php	/^	function editor($v,$i='content',$tool_bar='Basic',$w=600,$h=400){$/;"	f	language:PHP
-editor	.\application\models\download_model.php	/^	function editor($v,$i='content'){$/;"	f	language:PHP
-editor	.\application\models\engage_model.php	/^	function editor($v,$i='content'){$/;"	f	language:PHP
-editor	.\application\models\friendlink_model.php	/^	function editor($v,$i='content'){$/;"	f	language:PHP
-editor	.\application\models\message_model.php	/^	function editor($v,$i='content'){$/;"	f	language:PHP
-editor	.\application\models\pictures_model.php	/^	function editor($v,$i='content'){$/;"	f	language:PHP
-editor	.\application\models\product_model.php	/^	function editor($v,$i='content'){$/;"	f	language:PHP
 edu_level	.\application\controllers\front\engage.php	/^				$edu_level = $this->cor_cache->cache_fetch('edu_level');$/;"	v	language:PHP
 effect	.\system\libraries\javascript\Jquery.php	/^	function effect($src, $relative = FALSE)$/;"	f	language:PHP
 eg_id	.\application\controllers\front\engage.php	/^			$eg_id = $this->input->get('eg_id');$/;"	v	language:PHP
@@ -6680,6 +6670,7 @@ fields_types	.\application\models\modules_model.php	/^			$fields_types =  $this-
 fields_types_c	.\application\models\modules_model.php	/^		$fields_types_c = $this->cor_cache->cache_fetch('fields_types');$/;"	v	language:PHP
 fieldset	.\system\helpers\form_helper.php	/^		$fieldset = "<fieldset";$/;"	v	language:PHP
 file	.\application\controllers\backend\system_manage.php	/^ 			$file = $path.$v['lang_type'].'\/'.$v['lang_file'];$/;"	v	language:PHP
+file	.\application\libraries\File_util.php	/^            if ($file == '.' || $file == '..') {$/;"	v	language:PHP
 file	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^                        $file = Smarty_Internal_Get_Include_Path::getIncludePath($file);$/;"	v	language:PHP
 file	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^                        $file = stream_resolve_include_path($file);$/;"	v	language:PHP
 file	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^                $file = realpath($key);$/;"	v	language:PHP
@@ -7083,6 +7074,7 @@ found	.\system\core\Config.php	/^					$found = TRUE;$/;"	v	language:PHP
 found	.\system\core\Config.php	/^		$found = FALSE;$/;"	v	language:PHP
 found	.\system\core\Lang.php	/^					$found = TRUE;$/;"	v	language:PHP
 found	.\system\core\Lang.php	/^			$found = FALSE;$/;"	v	language:PHP
+fp	.\application\helpers\pinyin_helper.php	/^            $fp = fopen(APPPATH.'\/resources\/pinyin.dat','r');$/;"	v	language:PHP
 fp	.\application\libraries\Smarty-3.1.14\libs\plugins\function.fetch.php	/^                $fp = fsockopen($proxy_host,$proxy_port,$errno,$errstr,$timeout);$/;"	v	language:PHP
 fp	.\application\libraries\Smarty-3.1.14\libs\plugins\function.fetch.php	/^                $fp = fsockopen($server_name,$port,$errno,$errstr,$timeout);$/;"	v	language:PHP
 fp	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_data.php	/^        $fp = fopen($variable, 'r+');$/;"	v	language:PHP
@@ -7396,6 +7388,7 @@ getMaxWidth	.\ckeditor\ckfinder\core\connector\php\php5\Core\ThumbnailsConfig.ph
 getMaxWidth	.\ckfinder\core\connector\php\php5\Core\ImagesConfig.php	/^    public function getMaxWidth()$/;"	f	language:PHP
 getMaxWidth	.\ckfinder\core\connector\php\php5\Core\ThumbnailsConfig.php	/^    public function getMaxWidth()$/;"	f	language:PHP
 getMetaTimestamp	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_cacheresource_keyvaluestore.php	/^    protected function getMetaTimestamp(&$content)$/;"	f	language:PHP
+getMysign	.\application\libraries\alipay.php	/^	function getMysign($param){$/;"	f	language:PHP
 getName	.\ckeditor\ckfinder\core\connector\php\php5\Core\ResourceTypeConfig.php	/^    public function getName()$/;"	f	language:PHP
 getName	.\ckfinder\core\connector\php\php5\Core\ResourceTypeConfig.php	/^    public function getName()$/;"	f	language:PHP
 getNextPage	.\application\libraries\MY_Pagination.php	/^	function getNextPage(){$/;"	f	language:PHP
@@ -7418,6 +7411,7 @@ getResourceTypeName	.\ckeditor\ckfinder\core\connector\php\php5\Core\FolderHandl
 getResourceTypeName	.\ckfinder\core\connector\php\php5\Core\FolderHandler.php	/^    public function getResourceTypeName()$/;"	f	language:PHP
 getResourceTypeNames	.\ckeditor\ckfinder\core\connector\php\php5\Core\Config.php	/^    public function getResourceTypeNames()$/;"	f	language:PHP
 getResourceTypeNames	.\ckfinder\core\connector\php\php5\Core\Config.php	/^    public function getResourceTypeNames()$/;"	f	language:PHP
+getResponse	.\application\libraries\alipay.php	/^	function getResponse($notify_id){$/;"	f	language:PHP
 getResponse	.\tools\alipay\lib\alipay_notify.class.php	/^	function getResponse($notify_id) {$/;"	f	language:PHP
 getRidOfMagicQuotes	.\ckeditor\ckfinder\core\connector\php\php5\Utils\Security.php	/^    public function getRidOfMagicQuotes()$/;"	f	language:PHP
 getRidOfMagicQuotes	.\ckfinder\core\connector\php\php5\Utils\Security.php	/^    public function getRidOfMagicQuotes()$/;"	f	language:PHP
@@ -7747,7 +7741,9 @@ html_text	.\tools\alipay\alipayapi.php	/^$html_text = $alipaySubmit->buildReques
 http_header	.\application\libraries\curl.php	/^	public function http_header($header, $content = NULL)$/;"	f	language:PHP
 http_login	.\application\libraries\curl.php	/^	public function http_login($username = '', $password = '', $type = 'any')$/;"	f	language:PHP
 http_method	.\application\libraries\curl.php	/^	public function http_method($method)$/;"	f	language:PHP
+http_verify_url	.\application\libraries\alipay.php	/^	var $http_verify_url='http:\/\/notify.alipay.com\/trade\/notify_query.do?';$/;"	v	language:PHP
 http_verify_url	.\tools\alipay\lib\alipay_notify.class.php	/^	var $http_verify_url = 'http:\/\/notify.alipay.com\/trade\/notify_query.do?';$/;"	v	language:PHP
+https_verify_url	.\application\libraries\alipay.php	/^	var $https_verify_url='https:\/\/www.alipay.com\/cooperate\/gateway.do?service=notify_verify&';$/;"	v	language:PHP
 https_verify_url	.\tools\alipay\lib\alipay_notify.class.php	/^	var $https_verify_url = 'https:\/\/mapi.alipay.com\/gateway.do?service=notify_verify&';$/;"	v	language:PHP
 human_to_unix	.\system\helpers\date_helper.php	/^	function human_to_unix($datestr = '')$/;"	f	language:PHP
 humanize	.\system\helpers\inflector_helper.php	/^	function humanize($str)$/;"	f	language:PHP
@@ -8017,6 +8013,7 @@ index	.\application\controllers\front\product.php	/^	function index(){	$/;"	f	la
 index	.\application\controllers\front\sales.php	/^	function index()$/;"	f	language:PHP
 index	.\application\controllers\front\search.php	/^	function index()$/;"	f	language:PHP
 index	.\application\controllers\front\welcome.php	/^	function index(){$/;"	f	language:PHP
+index	.\application\controllers\test.php	/^	function index(){	$/;"	f	language:PHP
 index	.\application\libraries\cor_zip.php	/^   if(!is_array($index)){ $index = array($index); }$/;"	v	language:PHP
 index	.\application\libraries\cor_zip.php	/^function Extract ( $zn, $to, $index = Array(-1) )$/;"	v	language:PHP
 index	.\application\models\advs_model.php	/^			$index = $key;$/;"	v	language:PHP
@@ -8078,6 +8075,7 @@ input	.\application\helpers\JSON.php	/^ * $input = file_get_contents('php:\/\/in
 input	.\application\models\alipay_model.php	/^        if ($_input_charset == $_output_charset || $input == null) {$/;"	v	language:PHP
 input	.\application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^ * $input = file_get_contents('php:\/\/input', 1000000);$/;"	v	language:PHP
 input	.\tools\alipay\lib\alipay_core.function.php	/^	if($_input_charset == $_output_charset || $input ==null ) {$/;"	v	language:PHP
+input_charset	.\application\libraries\alipay.php	/^	var $input_charset='utf-8';$/;"	v	language:PHP
 input_charset	.\tools\alipay\lib\alipay_core.function.php	/^function getHttpResponsePOST($url, $cacert_url, $para, $input_charset = '') {$/;"	v	language:PHP
 input_key	.\application\controllers\backend\roles.php	/^						$input_key =  $parent_key .'[detail]'.'['.$key.']';$/;"	v	language:PHP
 input_tag_close	.\application\libraries\MY_Pagination.php	/^	var $input_tag_close		= '<\/kbd>';$/;"	v	language:PHP
@@ -8414,6 +8412,9 @@ k	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^            fore
 k	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^        foreach ((array) $config_dir as $k => $v) {$/;"	v	language:PHP
 k	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^        foreach ((array) $template_dir as $k => $v) {$/;"	v	language:PHP
 k	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^        foreach ((array)$plugins_dir as $k => $v) {$/;"	v	language:PHP
+k	.\application\libraries\alipay.php	/^			if($k=='sign' || $k=='sign_type' || $v==''){$/;"	v	language:PHP
+k	.\application\libraries\alipay.php	/^		foreach($para_temp as $k=>$v){$/;"	v	language:PHP
+k	.\application\libraries\alipay.php	/^		foreach($param as $k=>$v)$prestr.=$k.'='.$v.'&';$/;"	v	language:PHP
 k	.\application\libraries\cor_auth.php	/^		 	foreach($rights_all['admin'] as $k=>&$v){ $/;"	v	language:PHP
 k	.\application\libraries\cor_auth.php	/^		foreach($have_rights as $k=>$v){$/;"	v	language:PHP
 k	.\application\libraries\cor_auth.php	/^	   	foreach($data['list'] as $k=>$v){$/;"	v	language:PHP
@@ -8941,6 +8942,7 @@ limit_used	.\system\database\DB_driver.php	/^	var $limit_used;$/;"	v	language:PH
 limit_used	.\system\database\drivers\oci8\oci8_driver.php	/^		$this->limit_used = TRUE;$/;"	v	language:PHP
 limit_used	.\system\database\drivers\oci8\oci8_driver.php	/^	var $limit_used;$/;"	v	language:PHP
 limit_used	.\system\database\drivers\oci8\oci8_result.php	/^	public $limit_used;$/;"	v	language:PHP
+line	.\application\helpers\pinyin_helper.php	/^                $line = trim(fgets($fp));$/;"	v	language:PHP
 line	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_config_file_compiler.php	/^        $line = $this->lex->line;$/;"	v	language:PHP
 line	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_configfilelexer.php	/^        $this->line = 1;$/;"	v	language:PHP
 line	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_configfilelexer.php	/^    public $line;$/;"	v	language:PHP
@@ -9559,6 +9561,8 @@ mouseover	.\system\libraries\Javascript.php	/^	function mouseover($element = 'th
 mouseup	.\system\libraries\Javascript.php	/^	function mouseup($element = 'this', $js = '')$/;"	f	language:PHP
 move	.\system\libraries\Ftp.php	/^	function move($old_file, $new_file)$/;"	f	language:PHP
 move	.\system\libraries\Ftp.php	/^	function rename($old_file, $new_file, $move = FALSE)$/;"	v	language:PHP
+moveDir	.\application\libraries\File_util.php	/^    function moveDir($oldDir, $aimDir, $overWrite = false) {$/;"	f	language:PHP
+moveFile	.\application\libraries\File_util.php	/^    function moveFile($fileUrl, $aimUrl, $overWrite = false) {$/;"	f	language:PHP
 move_tree_node	.\application\models\tree_model.php	/^	function move_tree_node($node_id,$target_id){$/;"	f	language:PHP
 moved	.\ckeditor\ckfinder\core\connector\php\php5\CommandHandler\MoveFiles.php	/^        $moved = 0;$/;"	v	language:PHP
 moved	.\ckfinder\core\connector\php\php5\CommandHandler\MoveFiles.php	/^        $moved = 0;$/;"	v	language:PHP
@@ -9629,6 +9633,10 @@ mydir	.\tools\unpack.php	/^$mydir = '';$/;"	v	language:PHP
 mypathdir	.\tools\faisunsql_v40_utf8\faisunsql_files\zipclass.php	/^		$mypathdir=array();$/;"	v	language:PHP
 mysgin	.\application\models\alipay_model.php	/^        $mysgin = $this->sign($prestr, $sign_type); \/\/把最终的字符串加密，获得签名结果$/;"	v	language:PHP
 mysgin	.\tools\alipay\lib\alipay_md5.function.php	/^	$mysgin = md5($prestr);$/;"	v	language:PHP
+mysign	.\application\libraries\alipay.php	/^			$mysign=$this->getMysign($param);$/;"	v	language:PHP
+mysign	.\application\libraries\alipay.php	/^			if(preg_match("\/true$\/i",$responseTxt) && $mysign==$_GET['sign']){$/;"	v	language:PHP
+mysign	.\application\libraries\alipay.php	/^			if(preg_match("\/true$\/i",$responseTxt) && $mysign==$_POST['sign']){$/;"	v	language:PHP
+mysign	.\application\libraries\alipay.php	/^		$mysign=$this->getMysign($param);$/;"	v	language:PHP
 mysign	.\application\models\alipay_model.php	/^            $this->mysign = $this->build_mysign($sort_get, $this->security_code, $this->sign_type);    \/\/生成签名结果$/;"	v	language:PHP
 mysign	.\application\models\alipay_model.php	/^            $this->mysign = $this->build_mysign($sort_post, $this->security_code, $this->sign_type); \/\/生成签名结果$/;"	v	language:PHP
 mysign	.\application\models\alipay_model.php	/^        $this->mysign = $this->build_mysign($sort_array, $this->security_code, $this->sign_type);$/;"	v	language:PHP
@@ -10108,6 +10116,9 @@ offsetUnset	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_interna
 ok	.\application\libraries\cor_zip.php	/^   $ok = 0; $zip = @fopen($zn,'rb');$/;"	v	language:PHP
 ok	.\tools\unpack.php	/^   $ok = 0; $zip = @fopen($zn,'rb');$/;"	v	language:PHP
 ol	.\system\helpers\html_helper.php	/^	function ol($list, $attributes = '')$/;"	f	language:PHP
+oldDir	.\application\libraries\File_util.php	/^        $oldDir = str_replace('', '\/', $oldDir);$/;"	v	language:PHP
+oldDir	.\application\libraries\File_util.php	/^        $oldDir = substr($oldDir, -1) == '\/' ? $oldDir : $oldDir . '\/';$/;"	v	language:PHP
+oldDir	.\application\libraries\File_util.php	/^        $oldDir = substr($oldDir, -1) == '\/' ? $oldDir : $oldDir.'\/';$/;"	v	language:PHP
 oldFolderPath	.\ckeditor\ckfinder\core\connector\php\php5\CommandHandler\RenameFolder.php	/^        $oldFolderPath = $this->_currentFolder->getServerPath();$/;"	v	language:PHP
 oldFolderPath	.\ckfinder\core\connector\php\php5\CommandHandler\RenameFolder.php	/^        $oldFolderPath = $this->_currentFolder->getServerPath();$/;"	v	language:PHP
 oldUmask	.\ckeditor\ckfinder\core\connector\php\php5\CommandHandler\CreateFolder.php	/^            $oldUmask = umask(0);$/;"	v	language:PHP
@@ -10427,6 +10438,15 @@ output	.\tools\xcurl.php	/^    $output = curl_exec($ch);$/;"	v	language:PHP
 outputExportObject	.\charts\ExportHandlers\PHP\FCExporter.php	/^function outputExportObject ( $exportObj, $exportParams ) $/;"	f	language:PHP
 output_parameters	.\system\libraries\Xmlrpc.php	/^	function output_parameters($array=FALSE)$/;"	f	language:PHP
 outputs	.\application\models\trans_model.php	/^		$outputs  = explode($tag,str_replace($tag_close,'',$out_string));$/;"	v	language:PHP
+overWrite	.\application\libraries\File_util.php	/^        if (file_exists($aimUrl) && $overWrite = false) {$/;"	v	language:PHP
+overWrite	.\application\libraries\File_util.php	/^        if (file_exists($aimUrl) && $overWrite == false) {$/;"	v	language:PHP
+overWrite	.\application\libraries\File_util.php	/^        } elseif (file_exists($aimUrl) && $overWrite = true) {$/;"	v	language:PHP
+overWrite	.\application\libraries\File_util.php	/^        } elseif (file_exists($aimUrl) && $overWrite == true) {$/;"	v	language:PHP
+overWrite	.\application\libraries\File_util.php	/^    function copyDir($oldDir, $aimDir, $overWrite = false) {$/;"	v	language:PHP
+overWrite	.\application\libraries\File_util.php	/^    function copyFile($fileUrl, $aimUrl, $overWrite = false) {$/;"	v	language:PHP
+overWrite	.\application\libraries\File_util.php	/^    function createFile($aimUrl, $overWrite = false) {$/;"	v	language:PHP
+overWrite	.\application\libraries\File_util.php	/^    function moveDir($oldDir, $aimDir, $overWrite = false) {$/;"	v	language:PHP
+overWrite	.\application\libraries\File_util.php	/^    function moveFile($fileUrl, $aimUrl, $overWrite = false) {$/;"	v	language:PHP
 overlay_watermark	.\system\libraries\Image_lib.php	/^	function overlay_watermark()$/;"	f	language:PHP
 overloading	.\system\core\Utf8.php	/^			AND ini_get('mbstring.func_overload') != 1		\/\/ Multibyte string function overloading cannot be enabled$/;"	f	language:PHP
 overwrite	.\system\libraries\Upload.php	/^	public $overwrite				= FALSE;$/;"	v	language:PHP
@@ -10462,6 +10482,7 @@ pagesize	.\swfupload\libs\db_access.class.php	/^	function limit($rs, $offset, $p
 par	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_templateparser.php	/^                $par = implode(',',$this->yystack[$this->yyidx + -1]->minor);$/;"	v	language:PHP
 para	.\application\models\alipay_model.php	/^        $para = array();$/;"	v	language:PHP
 para	.\tools\alipay\lib\alipay_submit.class.php	/^		$para = $this->buildRequestPara($para_temp);$/;"	v	language:PHP
+paraFilter	.\application\libraries\alipay.php	/^	function paraFilter($para_temp) {$/;"	f	language:PHP
 paraFilter	.\tools\alipay\lib\alipay_core.function.php	/^function paraFilter($para) {$/;"	f	language:PHP
 para_filter	.\application\models\alipay_model.php	/^    function para_filter($parameter) {$/;"	f	language:PHP
 para_filter	.\tools\alipay\lib\alipay_core.function.php	/^	$para_filter = array();$/;"	v	language:PHP
@@ -10470,6 +10491,10 @@ para_filter	.\tools\alipay\lib\alipay_submit.class.php	/^		$para_filter = paraFi
 para_sort	.\tools\alipay\lib\alipay_notify.class.php	/^		$para_sort = argSort($para_filter);$/;"	v	language:PHP
 para_sort	.\tools\alipay\lib\alipay_submit.class.php	/^		$para_sort = argSort($para_filter);$/;"	v	language:PHP
 paragraph	.\system\libraries\Typography.php	/^		$paragraph = FALSE;$/;"	v	language:PHP
+param	.\application\libraries\alipay.php	/^			$param=$this->paraFilter($_GET);$/;"	v	language:PHP
+param	.\application\libraries\alipay.php	/^			$param=$this->paraFilter($_POST);$/;"	v	language:PHP
+param	.\application\libraries\alipay.php	/^		$param=$this->paraFilter($para_temp);$/;"	v	language:PHP
+param	.\application\libraries\alipay.php	/^		$param=array();$/;"	v	language:PHP
 param	.\system\libraries\Cache\Cache.php	/^				$param = '_'.$key;$/;"	v	language:PHP
 param	.\system\libraries\Form_validation.php	/^					$param = $this->_translate_fieldname($this->_field_data[$param]['label']);$/;"	v	language:PHP
 param	.\system\libraries\Form_validation.php	/^				$param	= $match[2];$/;"	v	language:PHP
@@ -10584,6 +10609,7 @@ part	.\system\database\DB_active_rec.php	/^					$part = $this->_protect_identifi
 part	.\system\database\DB_active_rec.php	/^				$part = trim($part);$/;"	v	language:PHP
 part	.\tools\faisunsql_v40_utf8\index.php	/^		if($tableid>=intval($_POST[nextcreate]) or $part==0){$/;"	v	language:PHP
 partner	.\application\controllers\front\alipay.php	/^        $partner = $this->Alipay_Model->partner;$/;"	v	language:PHP
+partner	.\application\libraries\alipay.php	/^		$partner=trim($this->aliapy_config['partner']);$/;"	v	language:PHP
 partner	.\application\models\alipay_model.php	/^        $this->partner = '2088002085673643'; \/\/合作身份者ID$/;"	v	language:PHP
 partner	.\application\models\alipay_model.php	/^    var $partner;$/;"	v	language:PHP
 partner	.\tools\alipay\lib\alipay_notify.class.php	/^		$partner = trim($this->alipay_config['partner']);$/;"	v	language:PHP
@@ -10720,6 +10746,7 @@ php_handling	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_intern
 php_handling	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_templateparser.php	/^            $this->php_handling = $this->smarty->security_policy->php_handling;$/;"	v	language:PHP
 php_handling	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_security.php	/^    public $php_handling = Smarty::PHP_PASSTHRU;$/;"	v	language:PHP
 php_modifiers	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_security.php	/^    public $php_modifiers = array($/;"	v	language:PHP
+phpinfo	.\application\controllers\test.php	/^	function phpinfo(){	$/;"	f	language:PHP
 pic	.\application\controllers\front\common.php	/^    $pic = $array['p_pic'];$/;"	v	language:PHP
 pid	.\application\controllers\front\common.php	/^    $pid = $pid?$pid:0;$/;"	v	language:PHP
 pid	.\application\controllers\front\common.php	/^    $pid = $this->input->get("pid");$/;"	v	language:PHP
@@ -10727,6 +10754,7 @@ pids	.\application\controllers\backend\tree.php	/^		$pids = $this->im->fetch_sel
 pieces	.\ckeditor\ckfinder\core\connector\php\php5\Core\ResourceTypeConfig.php	/^            $pieces = explode('.', $fileName);$/;"	v	language:PHP
 pieces	.\ckfinder\core\connector\php\php5\Core\ResourceTypeConfig.php	/^            $pieces = explode('.', $fileName);$/;"	v	language:PHP
 pinteger	.\application\libraries\MY_Form_validation.php	/^	public function pinteger($str)$/;"	f	language:PHP
+pinyins	.\application\helpers\pinyin_helper.php	/^        $pinyins = array();$/;"	v	language:PHP
 pixels	.\charts\ExportHandlers\PHP\Resources\FCExporter_IMG.php	/^			$pixels = explode(",", $rows[$i]);$/;"	v	language:PHP
 pixels	.\charts\ExportHandlers\PHP\Resources\FCExporter_PDF.php	/^			$pixels = explode(",", $rows[$i]);$/;"	v	language:PHP
 platform	.\system\database\DB_driver.php	/^	function platform()$/;"	f	language:PHP
@@ -10897,6 +10925,8 @@ prepped_fields	.\system\helpers\form_helper.php	/^		static $prepped_fields = arr
 preps	.\system\core\Loader.php	/^	 * This function preps the name of various items to make loading them more reliable.$/;"	f	language:PHP
 preserve_filepath	.\system\libraries\Zip.php	/^	function read_dir($path, $preserve_filepath = TRUE, $root_path = NULL)$/;"	v	language:PHP
 preserve_filepath	.\system\libraries\Zip.php	/^	function read_file($path, $preserve_filepath = FALSE)$/;"	v	language:PHP
+prestr	.\application\libraries\alipay.php	/^		$prestr='';$/;"	v	language:PHP
+prestr	.\application\libraries\alipay.php	/^		$prestr=substr($prestr, 0, count($prestr)-2);$/;"	v	language:PHP
 prestr	.\application\models\alipay_model.php	/^        $prestr = $prestr . $security_code; \/\/把拼接后的字符串再与安全校验码直接连接起来$/;"	v	language:PHP
 prestr	.\application\models\alipay_model.php	/^        $prestr = $this->create_linkstring($sort_array); \/\/把数组所有元素，按照“参数=参数值”的模式用“&”字符拼接成字符串$/;"	v	language:PHP
 prestr	.\tools\alipay\lib\alipay_md5.function.php	/^	$prestr = $prestr . $key;$/;"	v	language:PHP
@@ -11050,7 +11080,7 @@ quality	.\system\libraries\Image_lib.php	/^	var $quality			= '90';$/;"	v	languag
 queries	.\system\database\DB_driver.php	/^	var $queries		= array();$/;"	v	language:PHP
 query	.\application\controllers\backend\mdata.php	/^		$query  = $this->input->get();$/;"	v	language:PHP
 query	.\application\controllers\backend\system_manage.php	/^ 		$query = $this->db->query($sql);$/;"	v	language:PHP
-query	.\application\controllers\front\search.php	/^		$query = $this->db->query("CALL  proc_all('".$this->input->get("title")."','".$module_slt."','".$this->input->get('per_page')."',".$page_size.")");  $/;"	v	language:PHP
+query	.\application\controllers\front\search.php	/^		$query = $this->db->query("CALL  proc_all('".$this->input->get("title")."','".$module_slt."','".(int)$this->input->get('per_page')."',".$page_size.")");  $/;"	v	language:PHP
 query	.\application\models\tree_model.php	/^			$query = $this->db->query($sql);$/;"	v	language:PHP
 query	.\application\models\tree_model.php	/^    		$query = $this->db->query($sql);$/;"	v	language:PHP
 query	.\install\index_2.php	/^	$query = mysql_query('show tables from '.CFG_DB_NAME,$connect); $/;"	v	language:PHP
@@ -11398,8 +11428,11 @@ response	.\system\libraries\Xmlrpc.php	/^		$response = $this->values_parsing($re
 response	.\system\libraries\Xmlrpc.php	/^		$this->response = $this->result->decode();$/;"	v	language:PHP
 response	.\system\libraries\Xmlrpc.php	/^	var $response			= array();  \/\/ Response from remote server$/;"	v	language:PHP
 responseText	.\tools\alipay\lib\alipay_core.function.php	/^	$responseText = curl_exec($curl);$/;"	v	language:PHP
+responseTxt	.\application\libraries\alipay.php	/^			$responseTxt='true';$/;"	v	language:PHP
+responseTxt	.\application\libraries\alipay.php	/^		$responseTxt=@file_get_contents($veryfy_url);$/;"	v	language:PHP
 responseTxt	.\tools\alipay\lib\alipay_notify.class.php	/^			$responseTxt = 'true';$/;"	v	language:PHP
 responseTxt	.\tools\alipay\lib\alipay_notify.class.php	/^		$responseTxt = getHttpResponseGET($veryfy_url, $this->alipay_config['cacert']);$/;"	v	language:PHP
+restr	.\application\helpers\pinyin_helper.php	/^        $restr = '';$/;"	v	language:PHP
 result	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^        $result = $tpl->source->exists;$/;"	v	language:PHP
 result	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_compile_private_print_expression.php	/^                        $result = $this->compile_output_filter($compiler, $name, $output);$/;"	v	language:PHP
 result	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_templatecompilerbase.php	/^        $result = call_user_func_array($/;"	v	language:PHP
@@ -12273,6 +12306,7 @@ sign	.\application\models\alipay_model.php	/^            $sign = md5($prestr);$/
 sign	.\application\models\alipay_model.php	/^        $sign = '';$/;"	v	language:PHP
 sign	.\application\models\alipay_model.php	/^    function sign($prestr, $sign_type) {$/;"	f	language:PHP
 sign_type	.\application\controllers\front\alipay.php	/^        $sign_type = $this->Alipay_Model->sign_type;$/;"	v	language:PHP
+sign_type	.\application\libraries\alipay.php	/^	var $sign_type='MD5';$/;"	v	language:PHP
 sign_type	.\application\models\alipay_model.php	/^        $this->sign_type = "MD5"; \/\/加密方式 不需修改$/;"	v	language:PHP
 sign_type	.\application\models\alipay_model.php	/^    function build_mysign($sort_array, $security_code, $sign_type = "MD5") {$/;"	v	language:PHP
 sign_type	.\application\models\alipay_model.php	/^    var $sign_type;$/;"	v	language:PHP
@@ -12326,6 +12360,7 @@ skippedFilesNode	.\ckfinder\plugins\zip\plugin.php	/^  protected $skippedFilesNo
 slash_item	.\system\core\Config.php	/^	function slash_item($item)$/;"	f	language:PHP
 slash_rsegment	.\system\core\URI.php	/^	function slash_rsegment($n, $where = 'trailing')$/;"	f	language:PHP
 slash_segment	.\system\core\URI.php	/^	function slash_segment($n, $where = 'trailing')$/;"	f	language:PHP
+slen	.\application\helpers\pinyin_helper.php	/^        $slen = strlen($str);$/;"	v	language:PHP
 slice	.\application\helpers\JSON.php	/^                            $slice = substr($chrs, $top['where'], ($c - $top['where']));$/;"	v	language:PHP
 slice	.\application\templates\backend\corcms\js\kindeditor\php\JSON.php	/^                            $slice = substr($chrs, $top['where'], ($c - $top['where']));$/;"	v	language:PHP
 slideDown	.\system\libraries\Javascript.php	/^	function slideDown($element = 'this', $speed = '', $callback = '')$/;"	f	language:PHP
@@ -12809,6 +12844,7 @@ str	.\application\helpers\MY_url_helper.php	/^	         $str = '';$/;"	v	languag
 str	.\application\helpers\MY_url_helper.php	/^	         $str= "<img src='".$catalog.$uri."' \/>";$/;"	v	language:PHP
 str	.\application\helpers\MY_url_helper.php	/^	         $str= "<link rel='stylesheet' type='text\/css' href='".$catalog.$uri.".css' media='all'>";$/;"	v	language:PHP
 str	.\application\helpers\common_helper.php	/^		$str = substr($string, $st, $ed);$/;"	v	language:PHP
+str	.\application\helpers\pinyin_helper.php	/^        $str = trim(iconv('UTF-8','GB2312',$str));$/;"	v	language:PHP
 str	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_configfileparser.php	/^        $str = "";$/;"	v	language:PHP
 str	.\application\libraries\cor_db.php	/^		$str=str_replace("\\n","",$str);$/;"	v	language:PHP
 str	.\application\libraries\cor_db.php	/^		$str=str_replace("\\r","",$str);$/;"	v	language:PHP
@@ -13921,6 +13957,8 @@ trans_strict	.\system\database\DB_driver.php	/^		$this->trans_strict = is_bool($
 trans_strict	.\system\database\DB_driver.php	/^	function trans_strict($mode = TRUE)$/;"	f	language:PHP
 trans_strict	.\system\database\DB_driver.php	/^	var $trans_strict	= TRUE;$/;"	v	language:PHP
 transport	.\application\controllers\front\alipay.php	/^        $transport = $this->Alipay_Model->transport;$/;"	v	language:PHP
+transport	.\application\libraries\alipay.php	/^		$transport=strtolower(trim($this->transport));$/;"	v	language:PHP
+transport	.\application\libraries\alipay.php	/^	var $transport='http';$/;"	v	language:PHP
 transport	.\application\models\alipay_model.php	/^        $this->transport = "http";$/;"	v	language:PHP
 transport	.\application\models\alipay_model.php	/^    var $transport;$/;"	v	language:PHP
 transport	.\tools\alipay\lib\alipay_notify.class.php	/^		$transport = strtolower(trim($this->alipay_config['transport']));$/;"	v	language:PHP
@@ -14036,6 +14074,8 @@ unlink	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_uti
 unlink	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_utility.php	/^                $unlink = false;$/;"	v	language:PHP
 unlink	.\ckeditor\ckfinder\core\connector\php\php5\Utils\FileSystem.php	/^    public static function unlink($path)$/;"	f	language:PHP
 unlink	.\ckfinder\core\connector\php\php5\Utils\FileSystem.php	/^    public static function unlink($path)$/;"	f	language:PHP
+unlinkDir	.\application\libraries\File_util.php	/^    function unlinkDir($aimDir) {$/;"	f	language:PHP
+unlinkFile	.\application\libraries\File_util.php	/^    function unlinkFile($aimUrl) {$/;"	f	language:PHP
 unload	.\system\libraries\Javascript.php	/^	function unload($element = 'this', $js = '')$/;"	f	language:PHP
 unloadFilter	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_templatebase.php	/^    public function unloadFilter($type, $name)$/;"	f	language:PHP
 unmuteExpectedErrors	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^    public static function unmuteExpectedErrors()$/;"	f	language:PHP
@@ -14498,7 +14538,9 @@ vcode	.\application\models\captcha_model.php	/^public $vcode  = NULL; \/\/验证
 vdir	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_table.php	/^    $vdir = 'down';$/;"	v	language:PHP
 ver	.\system\database\drivers\mssql\mssql_driver.php	/^		$ver = self::_parse_major_version($this->version());$/;"	v	language:PHP
 verb	.\application\libraries\curl.php	/^			$verb = str_replace('simple_', '', $method);$/;"	v	language:PHP
+verifyNotify	.\application\libraries\alipay.php	/^	function verifyNotify(){$/;"	f	language:PHP
 verifyNotify	.\tools\alipay\lib\alipay_notify.class.php	/^	function verifyNotify(){$/;"	f	language:PHP
+verifyReturn	.\application\libraries\alipay.php	/^	function verifyReturn(){$/;"	f	language:PHP
 verifyReturn	.\tools\alipay\lib\alipay_notify.class.php	/^	function verifyReturn(){$/;"	f	language:PHP
 verify_host	.\application\libraries\curl.php	/^	public function ssl($verify_peer = TRUE, $verify_host = 2, $path_to_cert = NULL)$/;"	v	language:PHP
 verify_result	.\application\controllers\front\alipay.php	/^        $verify_result = $this->Alipay_Model->notify_verify();$/;"	v	language:PHP
@@ -14513,6 +14555,10 @@ version	.\system\libraries\Migration.php	/^	public function version($target_vers
 version	.\system\libraries\User_agent.php	/^					$this->version = $match[1];$/;"	v	language:PHP
 version	.\system\libraries\User_agent.php	/^	public function version()$/;"	f	language:PHP
 version	.\system\libraries\User_agent.php	/^	var $version	= '';$/;"	v	language:PHP
+veryfy_url	.\application\libraries\alipay.php	/^			$veryfy_url=$this->http_verify_url;$/;"	v	language:PHP
+veryfy_url	.\application\libraries\alipay.php	/^			$veryfy_url=$this->https_verify_url;$/;"	v	language:PHP
+veryfy_url	.\application\libraries\alipay.php	/^		$veryfy_url=$veryfy_url.'partner='.$partner.'&notify_id='.$notify_id;$/;"	v	language:PHP
+veryfy_url	.\application\libraries\alipay.php	/^		$veryfy_url='';$/;"	v	language:PHP
 veryfy_url	.\tools\alipay\lib\alipay_notify.class.php	/^			$veryfy_url = $this->http_verify_url;$/;"	v	language:PHP
 veryfy_url	.\tools\alipay\lib\alipay_notify.class.php	/^			$veryfy_url = $this->https_verify_url;$/;"	v	language:PHP
 veryfy_url	.\tools\alipay\lib\alipay_notify.class.php	/^		$veryfy_url = $veryfy_url."partner=" . $partner . "&notify_id=" . $notify_id;$/;"	v	language:PHP
