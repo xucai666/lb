@@ -21,7 +21,7 @@
           <tr>
            <td  valign="top"  align="center"  class="product">
             <ul>
-	         	 <!--{tag t_id=40 where="p_pid like '`$ci_uri.3|func_my_encrypt:DECODE`%' and p_name like '%`$smarty.request.p_name`%'"}-->
+	         	 <!--{tag t_id=40 where="p_state>0  and p_pid like '`$ci_uri.3|func_my_encrypt:DECODE`%' and p_name like '%`$smarty.request.p_name`%'"}-->
             </ul>
 			  </td>
 			  
@@ -30,7 +30,7 @@
         </table>
 		<div class="page" align="center">
 
- <!--{tag_pager t_id=40 where="p_pid like '`$ci_uri.3|func_my_encrypt:DECODE`%' and p_name like '%`$smarty.request.p_name`%'"}-->
+ <!--{tag_pager t_id=40 where="p_state>0 and p_pid like '`$ci_uri.3|func_my_encrypt:DECODE`%' and p_name like '%`$smarty.request.p_name`%'"}-->
 
     </div>		</td>
       </tr>

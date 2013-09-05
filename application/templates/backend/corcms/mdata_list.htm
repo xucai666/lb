@@ -24,7 +24,7 @@
 	</th>
 	
 	<!--{foreach from=$fields item=f}-->	
-	<th><!--{$f.r_alias}--></th>
+	<th title="<!--{$f.r_name}-->" class="mdata_head"><!--{$f.r_alias}--></th>
 	<!--{/foreach}-->	
 	
 	<th><!--{"opt"|lang}--></th>
@@ -83,6 +83,17 @@
 			return false;
 		}
 	}
+
+	$(function($){
+		//排序
+		$('.mdata_head').click(function(){
+			var link = self.location.href;
+			link =  replace_url_param(link,"mdata_sort",$(this).attr('title'));
+			link =  replace_url_param(link,"per_page",0);
+			self.location.href =  replace_url_param(link,"mdata_sort_direction",getquerystring('mdata_sort_direction')=='asc'?'desc':'asc');
+
+		})
+	})
 
 </script>
 

@@ -254,7 +254,7 @@ class Mdata extends CI_Controller{
 	 				}
 	 			}
 	 		}
-			$this->cor_page->backend_redirect('mdata/action_list');
+			$this->cor_page->backend_redirect($_SERVER['HTTP_REFERER']);
 		}catch(EXCEPTION $e){
 			$this->cor_page->backend_redirect($_SERVER['HTTP_REFERER'],$e->getMessage());
 		}

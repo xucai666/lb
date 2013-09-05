@@ -40,7 +40,7 @@ class Search extends CI_Controller {
 		$module_slt = $this->uri->segment(3)?$this->uri->segment(3):implode(',',array_keys($modules));
 
 	
-		$query = $this->db->query("CALL  proc_all('".$this->input->get("title")."','".$module_slt."','".$this->input->get('per_page')."',".$page_size.")");  
+		$query = $this->db->query("CALL  proc_all('".$this->input->get("title")."','".$module_slt."','".(int)$this->input->get('per_page')."',".$page_size.")");  
 		$ls = $query->result_array();
 		$ct = $ls[0]['rt'];
 

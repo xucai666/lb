@@ -152,40 +152,7 @@
 	}
 
 
- function replace_url_param(url,name,val){
  
-	var s ;
-	var reg = new RegExp(name+"=([^&]*)(&|$)","ig");
-	var h = reg.exec(url);
-	if(!h){
-
-		if(url.substr(-1, 1)=='&'){
-			url = url.substr(0, url.length-1);
-		}
-			
-		s = (url.indexOf("?")=="-1")?'?'+name+"="+val:"&"+name+"="+val;
-		s = url+s;
-		
-		
-	}else{
-		s = url.replace(h[0],name+'='+val+h[2])
-	}
-
-	return s;
-  }
-
-
-
-function getquerystring(name1) {
-var reg = new RegExp("(^|&)" + name1 + "=([^&]*)(&|$)"); 
-
-
-
-var r = window.location.search.substr(1).match(reg);
-
-
-if (r!=null) return unescape(r[2]); return null;
-}
 
 
 jQuery(document).ready(function($) {

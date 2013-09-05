@@ -603,6 +603,7 @@ EOT;
 	}
 
 	function fetch_images($uid,$thumb=false){
+		if(strpos($uid, '.')!==false && strpos($uid, ',')===false) return $uid;
 		$uid_convert = explode(',',$uid);
 		$img_field = $thumb?"REPLACE(i_url,'images','_thumbs/Images') as i_url ":'i_url';
 		$rs = $this->db->select("i_id,".$img_field,false)->from('module_images')->where_in('i_uid',$uid_convert)->order_by('i_id','asc')->get()->result_array();

@@ -1,4 +1,4 @@
-1、开发环境：CODEIGNITER.2.1.4+JQUERY1.9.1+smarty-3.1.14;
+﻿1、开发环境：CODEIGNITER.2.1.4+JQUERY1.9.1+smarty-3.1.14+swfupload+3dcharts+cfkeditor;
 2、系统特性：支持多语言切换，smarty静态缓存（ci配置文件中设置）；
 2、本程序自行提示安装，如遇到错误，请手动导入数据文件，并修改ci配置文件；
 3、数据文件:/database/lb_cn.sql,CI配置文件路径/application/config/config.php;
@@ -9,3 +9,15 @@
 1). system\database\drivers\mysql\mysql_driver.php
 
 2). system\database\DB_active_rec.php
+
+投票
+
+
+排序
+
+高级属性
+
+评论
+
+
+MID直接调用数据

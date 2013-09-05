@@ -569,7 +569,7 @@ function art_dialog_close(msg,callback){
 		    list[i].close();
 		}
 		if(msg!="undefined"){
-			top.art.dialog.tips(msg,3);
+			top.art.dialog.tips(msg);
 		}
 		
 		(callback && typeof(callback) === "function") && callback();
@@ -579,6 +579,45 @@ function art_dialog_close(msg,callback){
 function frmright_reload(){
 	window.ifr_main.main.location.reload();
 }	
+
+//url参数追加或者替换
+function replace_url_param(url,name,val){
+
+
+	var s ;
+	var reg = new RegExp(name+"=([^&]*)(&|$)","ig");
+	var h = reg.exec(url);
+	if(!h){
+
+		if(url.substr(-1, 1)=='&'){
+			url = url.substr(0, url.length-1);
+		}
+			
+		s = (url.indexOf("?")=="-1")?'?'+name+"="+val:"&"+name+"="+val;
+		s = url+s;
+		
+		
+	}else{
+	
+		s = url.replace(h[0],name+'='+val+h[2])
+	}
+
+	return s;
+ }
+
+//url参数取值
+
+function getquerystring(name1) {
+	var reg = new RegExp("(^|&)" + name1 + "=([^&]*)(&|$)"); 
+
+
+
+	var r = window.location.search.substr(1).match(reg);
+
+
+	if (r!=null) return unescape(r[2]); return null;
+}
+
 
 //document ready
 $(function($){

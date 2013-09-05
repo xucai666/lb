@@ -160,6 +160,7 @@
 	},
 	"file_history":
 	[
+		"/E/phpnow/htdocs/lb/application/controllers/front/search.php",
 		"/E/phpnow/htdocs/lb/application/compiles/5058bd06fae55f725b6716266e32d490ab562e54.file.top.htm.php",
 		"/E/phpnow/htdocs/lb/application/config/config.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/index.htm",
@@ -198,7 +199,6 @@
 		"/E/phpnow/htdocs/lb/cache/zh/select_language_soft.php",
 		"/E/phpnow/htdocs/lb/cache/zh/select_slide.php",
 		"/E/phpnow/htdocs/lb/cache/zh/template_types.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/search.php",
 		"/E/phpnow/htdocs/lb/application/models/tree_model.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/tree.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/adminindex.htm",
@@ -295,7 +295,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"E:\\phpnow\\htdocs\\lb\\application",
@@ -361,6 +361,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"proc_all",
 			".hide",
 			"lang_multiple",
 			"multiple_language",
@@ -487,8 +488,7 @@
 			"zh_cn.js",
 			"baidu",
 			"h.js",
-			"http://localhost/x6cms/css/",
-			"http://localhost/x6cms/js/"
+			"http://localhost/x6cms/css/"
 		],
 		"highlight": true,
 		"in_selection": false,

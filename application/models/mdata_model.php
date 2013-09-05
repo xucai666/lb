@@ -128,8 +128,9 @@ class Mdata_model extends CI_Model{
 			if(empty($v['r_output'])) unset($fields_r[$k]);
 		}
 		$fields_out = $this->cor_form->array_re_index($fields_r,'r_name','r_output');
-		$this->db->select(implode(',',array_keys($fields_out)),false)->from($tb)->order_by($primary.' desc');
-
+		$this->db->select(implode(',',array_keys($fields_out)),false)->from($tb);
+		if($query['mdata_sort']) $this->db->order_by($query['mdata_sort'],$query['mdata_sort_direction']);
+		$this->db->order_by($primary,'desc');
 		$ls = $this->cor_db->fetch_all($size);
 
 		

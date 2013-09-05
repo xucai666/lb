@@ -68,7 +68,7 @@ class Modules_model extends CI_Model{
 	 		 			
  			);
  			//add valid fields
- 			if(in_array(strtoupper($f_types[$v['f_id']]),array('VARCHAR','INT'))){
+ 			if(in_array(strtoupper($f_types[$v['f_id']]),array('VARCHAR'))){
 
 				array_push($config,
 		 			array(
@@ -175,7 +175,7 @@ class Modules_model extends CI_Model{
 				$changes = array();
 				foreach($info[detail] as $v):
 					$new_columns[] = $v[r_name];
-					if(in_array(strtoupper($fields_types[$v[f_id]]),array('VARCHAR','INT'))){
+					if(in_array(strtoupper($fields_types[$v[f_id]]),array('VARCHAR'))){
 							$ext_len = " ( ".$v[r_length]." )";	
 						}else{
 							$ext_len = "";
@@ -240,7 +240,7 @@ class Modules_model extends CI_Model{
 					}else{
 						$ext_pri ='';
 					}
-					if(in_array(strtoupper($fields_types[$v[f_id]]),array('VARCHAR','INT'))){
+					if(in_array(strtoupper($fields_types[$v[f_id]]),array('VARCHAR'))){
 						$ext_len = " ( ".$v[r_length]." )";	
 					}else{
 						$ext_len = "";
