@@ -1,8 +1,8 @@
 <?php return array (
   'optimize' => 
   array (
-    'title' => 'Cor.Cms v1.0',
-    'meta' => 'Cor.Cms v1.0',
+    'title' => 'Cor.Cms',
+    'meta' => 'Cor.Cms',
     'description' => 'Codeigniter CMS',
   ),
   'smtp' => false,

@@ -1,20 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-05 08:39:42
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-05 12:22:59
          compiled from "application\templates\backend\corcms\fields_add.htm" */ ?>
-<?php /*%%SmartyHeaderCode:127885227d2ce25e1f7-22802039%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:14804522806bfe97e26-70642436%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7fffac6ff9382aeda3d4e92e420aec9760601ec6' => 
     array (
       0 => 'application\\templates\\backend\\corcms\\fields_add.htm',
-      1 => 1377338272,
+      1 => 1378354976,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '127885227d2ce25e1f7-22802039',
+  'nocache_hash' => '14804522806bfe97e26-70642436',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_522806c000c927_07684880',
   'variables' => 
   array (
     'dir_backend' => 0,
@@ -22,10 +24,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'main' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5227d2ce46a8e7_06005074',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5227d2ce46a8e7_06005074')) {function content_5227d2ce46a8e7_06005074($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_helper')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\modifier.helper.php';
+<?php if ($_valid && !is_callable('content_522806c000c927_07684880')) {function content_522806c000c927_07684880($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_helper')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\modifier.helper.php';
 if (!is_callable('smarty_function_html_options')) include 'E:\\phpnow\\htdocs\\lb\\application\\libraries\\Smarty-3.1.14\\libs\\plugins\\function.html_options.php';
 ?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['dir_backend']->value)."/top.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -83,7 +83,7 @@ if (!is_callable('smarty_function_html_options')) include 'E:\\phpnow\\htdocs\\l
 	</tr>
 	
 	<tr>
-		<td><?php echo smarty_modifier_helper("fields_field_name",'language','lang');?>
+		<td><?php echo smarty_modifier_helper("field_media",'language','lang');?>
 ：</td>
 		<td>
 			<input type="checkbox" name="f_media" value="1" <?php if ($_smarty_tpl->tpl_vars['main']->value['f_media']){?>checked<?php }?> onclick='$(this).next().val($(this).prop("checked")==true?1:0);'>

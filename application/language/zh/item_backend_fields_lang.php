@@ -13,5 +13,6 @@
  $lang['fields_field_type']													= '字段类型';
  $lang['fields_field_name']													= '字段名称';
  $lang['field_html']													= 'Html调用代码';
+ $lang['field_media']													= '多媒体';
 
 ?>

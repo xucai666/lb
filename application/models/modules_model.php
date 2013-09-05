@@ -184,7 +184,7 @@ class Modules_model extends CI_Model{
 						//modify first
 						
 						if($v['r_primary'] && ($primary!=$v[r_name])){
-							if($primary) $changes[] = " DROP  PRIMARY KEY ";
+							if($primary) $changes[] = " DROP PRIMARY KEY ";
 							$ext_pri = 'AUTO_INCREMENT PRIMARY KEY';
 							$changes[] =" CHANGE   `$v[r_name]` `$v[r_name]`  ".strtoupper($fields_types[$v[f_id]]).$ext_len."  NOT NULL ".$ext_pri." COMMENT  '".$v[r_desc]."' ";
 						}elseif($v['r_primary']){
@@ -200,7 +200,7 @@ class Modules_model extends CI_Model{
 						
 						//add new
 						if($v['r_primary']){
-							if($primary) $changes[] = ' DROP PRIMARY KEY IF EXISTS ';
+							if($primary) $changes[] = ' DROP PRIMARY KEY  ';
 							$ext_pri = 'AUTO_INCREMENT PRIMARY KEY';
 						}else{
 							$ext_pri ='';
