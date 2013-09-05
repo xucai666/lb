@@ -1120,7 +1120,7 @@ CREATE TABLE `mysys_module_vote_detail` (
 
 LOCK TABLES `mysys_module_vote_detail` WRITE;
 /*!40000 ALTER TABLE `mysys_module_vote_detail` DISABLE KEYS */;
-INSERT INTO `mysys_module_vote_detail` VALUES (1,'不喜欢',1,4),(2,'还好',1,1020),(3,'喜欢',1,8),(4,'很贵',2,3),(5,'能够接受',2,13),(6,'太贵了',2,4);
+INSERT INTO `mysys_module_vote_detail` VALUES (1,'不喜欢',1,4),(2,'还好',1,1020),(3,'喜欢',1,8),(4,'很贵',2,7),(5,'能够接受',2,15),(6,'太贵了',2,4);
 /*!40000 ALTER TABLE `mysys_module_vote_detail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1643,4 +1643,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-09-06  0:02:38
+-- Dump completed on 2013-09-06  0:16:49

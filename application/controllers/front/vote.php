@@ -58,11 +58,27 @@ class Vote extends CI_Controller {
 	
 	//新闻列表
 	function action_save(){	
+		if(!($this->input->post('vd_item'))){
+			echo "<script>top.art_dialog_close();</script>";
+	 		exit;
+		}
 		$this->db->where('vd_id',$this->input->post('vd_item'));
 		$this->db->set('vd_stat', 'vd_stat+1', FALSE);
 		$this->db->update('module_vote_detail');
-		$this->cor_page->front_redirect('front/vote/view');
-		
+		if(get_cookie('voted')){
+			echo "<script>top.art_dialog_close('你已经投过票了.');</script>";
+	 		exit;
+		}
+		$cookie = array(
+                   'name'   => 'voted',
+                   'value'  => '1',
+                   'expire' => time()+3600,
+                   'domain' => '',
+                   'path'   => '/',
+               ); 
+       	
+        set_cookie($cookie);  
+		$this->cor_page->front_redirect('vote/view');
 	}	
 
 	
