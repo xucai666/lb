@@ -693,7 +693,7 @@ DROP TABLE IF EXISTS `mysys_log_login`;
 CREATE TABLE `mysys_log_login` (
   `login_id` int(11) NOT NULL AUTO_INCREMENT,
   `login_time` datetime DEFAULT NULL,
-  `login_client` varbinary(100) DEFAULT NULL,
+  `login_client` varbinary(250) DEFAULT NULL,
   `login_ip` varchar(20) DEFAULT NULL,
   `login_user` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`login_id`)
@@ -1644,4 +1644,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-09-06 19:12:13
+-- Dump completed on 2013-09-06 19:48:55
