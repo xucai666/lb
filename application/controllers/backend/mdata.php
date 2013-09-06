@@ -123,6 +123,11 @@ class Mdata extends CI_Controller{
 
 		$data = array_merge($data,array('dt_fields'=>$dt_fields,'dt_primary'=>$dt_primary,'detail'=>$detail,'detail_total'=>count($detail),'dt_mid'=>$dt_mid));
 		
+		//tid		
+		$this->load->model('Templates_model');	
+		$t_id = $this->Templates_model->detail_by_mid($module_id,'t_id');
+		$data = array_merge($data,array('t_id'=>$t_id));
+
 		$this->cor_page->load_backend_view('mdata_view',$data);
 
 		
