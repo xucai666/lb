@@ -1,6 +1,7 @@
 .mmmmm_title{
 
 	border-collapse:collapse;display:block;padding-left:10px;line-height:30px;height:30px;overflow:hidden;font-size: 12px; background-color: #0797D9;  border-bottom:2px solid #f1f1f1;color:#fff;
+	background: url(../images/mmmmm_header.gif);
 }
 
 
@@ -25,3 +26,4 @@
 #mmmmm_cover{
 	display:none;width:100%;height:100%;background-color:#999999;position:absolute;top:0px;left:0px;
 }
+*:focus { outline: none; }

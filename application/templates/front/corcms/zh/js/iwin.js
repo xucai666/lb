@@ -121,7 +121,7 @@ $.fn.extend({
 			"width": cfg.w,
 			"height": cfg.h,
 			"position": "absolute",
-			"border":"1px solid #A2C8F4",
+			"border":"1px solid #336699",
 			"padding": "1px",
 			"display":"none",
 			"z-index":"3000"

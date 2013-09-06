@@ -24,7 +24,6 @@ class Login extends CI_Controller {
 		$this->tpl->assign('lang_login',$cur_lang);
 		$this->m_lang = (object)$cur_lang;
 		
-		
 	}
 	
 	function index()
