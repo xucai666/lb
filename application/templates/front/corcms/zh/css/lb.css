@@ -3,7 +3,7 @@
 body{ margin:0; padding:0; background-color:#FFF; color:#000;}
 a{text-decoration:none;}
 span,td,tr,li,ul,input,div,form,a{
-	 font-family:"宋体"; font-size:12px;
+	 font-family:"宋体"; font-size:12px;color:#333333;
 }
 .input{ background:url(../images/sousuo_06.jpg) no-repeat;width:155px; }
 
