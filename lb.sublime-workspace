@@ -165,8 +165,11 @@
 	"file_history":
 	[
 		"/E/phpnow/htdocs/lb/application/controllers/backend/mdata.php",
-		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_lang.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/mdata_view.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/mdata_view_front.htm",
+		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/product_view.htm",
+		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_lang.php",
 		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/fields_list.htm",
 		"/E/phpnow/htdocs/lb/application/models/mdata_model.php",
@@ -288,10 +291,7 @@
 		"/E/phpnow/htdocs/lb/install/index.php",
 		"/E/phpnow/htdocs/x6cms/index.php",
 		"/E/phpnow/htdocs/lb/installed/index.php",
-		"/E/phpnow/htdocs/lb/installed/index_2.php",
-		"/E/phpnow/htdocs/lb/installed/index_3.php",
-		"/E/phpnow/htdocs/lb/index.ci",
-		"/E/phpnow/htdocs/lb/index.install"
+		"/E/phpnow/htdocs/lb/installed/index_2.php"
 	],
 	"find":
 	{
@@ -574,6 +574,26 @@
 		"selected_items":
 		[
 			[
+				"mdata",
+				"application/controllers/backend/mdata.php"
+			],
+			[
+				"mdata_view.",
+				"application/templates/backend/corcms/mdata_view.htm"
+			],
+			[
+				"mdata_view_front",
+				"application/templates/backend/corcms/mdata_view_front.htm"
+			],
+			[
+				"product_view",
+				"application/templates/front/corcms/zh/product_view.htm"
+			],
+			[
+				"product.php",
+				"application/controllers/front/product.php"
+			],
+			[
 				"tpl.php",
 				"application/libraries/tpl.php"
 			],
@@ -710,10 +730,6 @@
 				"application/controllers/backend/common.php"
 			],
 			[
-				"mdata",
-				"application/controllers/backend/mdata.php"
-			],
-			[
 				"mdata_lst",
 				"application/templates/backend/corcms/mdata_list.htm"
 			],
@@ -804,10 +820,6 @@
 			[
 				"order_view",
 				"application/templates/backend/corcms/order_view.htm"
-			],
-			[
-				"product.php",
-				"application/controllers/backend/product.php"
 			],
 			[
 				"order_list",
@@ -1072,18 +1084,6 @@
 			[
 				"sytem_mange",
 				"application/controllers/backend/system_manage.php"
-			],
-			[
-				"roles.php",
-				"application/controllers/backend/roles.php"
-			],
-			[
-				"roles_add",
-				"application/templates/backend/blue/roles_add.htm"
-			],
-			[
-				"log.php",
-				"application/controllers/backend/logs.php"
 			]
 		],
 		"width": 0.0
