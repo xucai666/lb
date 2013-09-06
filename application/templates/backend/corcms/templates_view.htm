@@ -1,44 +1,43 @@
 <!--{include file="`$dir_backend`/top.htm"}-->
-<script type="text/javascript">SyntaxHighlighter.all();</script>
-<center>
 <div class="nav_title" style="text-align:left;">万能标签效果预览</div>
-<table class="table_ctl"  >
-	<tr>
-		<td>标签编号：</td>
-		<td>
+<div style="width:800px;">
+
+	<ul id="head">	
+		<li>标签编号：</li>
+		<li>
 			
 			<!--{$main.t_id}-->
-		</td>
+		</li>
 		
-	</tr>
-<tr>
-		<td>标签名称：</td>
-		<td>
+	
+
+		<li>标签名称：</li>
+		<li>
 			
 			<!--{$main.t_name}-->
-		</td>
+		</li>
 		
-	</tr>
+	
 
-	<tr>
-		<td>类型：</td>
-		<td>
-			<!--{$templates_type[$main.t_type]}-->
-		</td>
+	
+		<li>类型：</li>
+		<li>
+	
+			<!--{$template_types[$main.t_type]}-->
+		</li>
 		
-	</tr>
-	<tr>
-		<td >数据表：</td>
-		<td >
+	
+	
+		<li >数据表：</li>
+		<li >
 				<!--{$main.t_db_name}-->
 		
-		</td>
+		</li>
 		
-	</tr>
-	<tr>
-		<td style="width:150px">效果：</td>
-		<td style="height:350px;">
+	
+	</ul>
 		
+
 
 
 		 <div id="tab_area">
@@ -53,44 +52,61 @@
 	            <li><a href="javascript:;" title="content_6" class="tab">样式4</a></li>
 	        </ul>
         
-	        <div id="content_1" class="codebox content content_show ">
+	        <div id="content_1" class="  content content_show ">
 	     
-				<pre class="brush:php;toolbar:false;" >
-					      <!--{tag t_id=$main.t_id html_type="list" escape=true}-->
+				<pre class="htmlCode    brush:php;toolbar:false;" >
+				
+				<!--{tag escape=ulue t_id=$main.t_id html_type="list" escape=ulue}-->
+				
+				
 				</pre>
 	        	
 	        </div>
-	        <div id="content_2" class="codebox content content_show ">
-	        	<pre class="brush:php;toolbar:false;"><!--{tag t_id=$main.t_id html_type="detail" }--></pre>
+	        <div id="content_2" class="  content content_show ">
+	        	<pre class="htmlCode    brush:php;toolbar:false;" >
+	        	
+	        	<!--{tag escape=ulue t_id=$main.t_id html_type="detail" }-->
+	        	</block>
+	        	</pre>
 	        </div>
-	        <div id="content_3" class="codebox content content_show ">
-	        	<pre class="brush:php;toolbar:false;"><!--{tag t_id=$main.t_id html_type="style1"}--></pre>
+	        <div id="content_3" class="  content content_show ">
+	        	<pre class="htmlCode    brush:php;toolbar:false;" >
+	        	
+	        	<!--{tag escape=ulue t_id=$main.t_id html_type="style1"}-->
+	        	
+	        	</pre>
 	        </div>
-	        <div id="content_4" class="codebox content content_show ">
-	        	<pre class="brush:php;toolbar:false;"><!--{tag t_id=$main.t_id html_type="style2"}--></pre>
+	        <div id="content_4" class="  content content_show ">
+	        	<pre class="htmlCode    brush:php;toolbar:false;" >
+	        	
+	        	<!--{tag escape=ulue t_id=$main.t_id html_type="style2"}-->
+	        	
+	        	</pre>
 	        </div>
-	        <div id="content_5" class="codebox content content_show ">
-	        	<pre class="brush:php;toolbar:false;"><!--{tag t_id=$main.t_id html_type="style3"}--></pre>
+	        <div id="content_5" class="  content content_show ">
+	        	<pre class="htmlCode    brush:php;toolbar:false;" >
+	        	
+	        	<!--{tag escape=ulue t_id=$main.t_id html_type="style3"}-->
+	        	
+	        	</pre>
 	        </div>
-	        <div id="content_6" class="codebox content content_show ">
-	        	<pre class="brush:php;toolbar:false;"><!--{tag t_id=$main.t_id html_type="style4"}--></pre>
+	        <div id="content_6" class="  content content_show ">
+	        	<pre class="htmlCode    brush:php;toolbar:false;" >
+	        	
+	        	<!--{tag escape=ulue t_id=$main.t_id html_type="style4"}-->
+	        	
+	        	</pre>
 	        </div>
+	    </div> 
 
 
-		</td>
 		
-	</tr>
 	
-	<tr>
-		<td colspan="3" align="center">
-		<!--{create_button type='close' url="javascript:window_close();"}-->
-		
-	</td></tr>
 	
 
-</table>
-</center>
+<div align="right"><!--{create_button type='close' url="javascript:window_close();"}--></div>
 
+</div>
 
 
 <!--{include file="`$dir_backend`/foot.htm"}-->

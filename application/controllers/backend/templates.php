@@ -41,8 +41,9 @@ class Templates extends CI_Controller {
 		*添加/修改
        **/ 
       function action_add(){
-          $this->cor_page->fetch_css('templates','view',$this->cor_page->getRes('css','backend','item/'));
-          $this->cor_page->fetch_js('templates','view',$this->cor_page->getRes('js','backend','item/'));
+         $this->cor_page->fetch_css('item/templates','view',getRootUrl('css','backend'));
+         $this->cor_page->fetch_js('item/templates','view',getRootUrl('js','backend'));
+         //snippet
       		$main_id = $this->uri->segment(4);
       		if($main_id){
       			$fetch_config  = array(
@@ -122,16 +123,18 @@ class Templates extends CI_Controller {
        * @return [type] [description]
        */
        function action_view(){
-         $this->cor_page->fetch_css('syntaxhighlighter_3.0.83/styles/shCoreDefault','view',base_url());
-         $this->cor_page->fetch_js('syntaxhighlighter_3.0.83/scripts/shCore','view',base_url());
-         $this->cor_page->fetch_js('syntaxhighlighter_3.0.83/scripts/shBrushPhp','view',base_url());
 
          $this->cor_page->fetch_css('item/templates','view',getRootUrl('css','backend'));
          $this->cor_page->fetch_js('item/templates','view',getRootUrl('js','backend'));
+         //snippet
+         $this->cor_page->fetch_css('jquery.snippet','view',getRootUrl('css','backend'));
+         $this->cor_page->fetch_js('jquery.snippet','view',getRootUrl('js','backend'));
+
          $main_id = $this->uri->segment(4);
          $main = $this->im->detail($main_id);
         
          $t_types = $this->cor_cache->cache_fetch('template_types');
+        
          $this->cor_page->load_backend_view('templates_view',array('main'=>$main,'template_types'=>$t_types));
        }
 

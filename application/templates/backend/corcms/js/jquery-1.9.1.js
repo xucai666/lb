@@ -9595,3 +9595,10 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 }
 
 })( window );
+
+//对browser支持
+$.browser ={};
+$.browser.mozilla = /firefox/.test(navigator.userAgent.toLowerCase());
+$.browser.webkit = /webkit/.test(navigator.userAgent.toLowerCase());
+$.browser.opera = /opera/.test(navigator.userAgent.toLowerCase());
+$.browser.msie = /msie/.test(navigator.userAgent.toLowerCase());

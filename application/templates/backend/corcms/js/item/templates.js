@@ -12,12 +12,16 @@
 			$(this).addClass("active");
 			
 			// slide all content up
-			$(".content").slideUp();
+			$(".content").slideUp('fast');
 			
 			// slide this content up
 			var content_show = $(this).attr("title");
-			$("#"+content_show).slideDown();
+			$("#"+content_show).slideDown('fast');
 		  
 		});
-	
+
+		$("pre.htmlCode").snippet("html");
+		//$("pre.htmlCode").snippet("css",{style:"ide-msvcpp"});
+		$("pre.htmlCode").snippet("javascript",{style:"vim-dark",transparent:false,showNum:true}); 
+		
 	  });
