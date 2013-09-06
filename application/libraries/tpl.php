@@ -252,12 +252,14 @@ function func_get_nav($parameter){
 	$where = $where?$where:"1=1";
 	$id = $id?$id:$CI->uri->segment(3);
 	$r =  $CI->Common_model->get_nav($tb,$id,$title_field,$where);
-	foreach($r as $k=>$v){
-		$rl[$k] = anchor(current($v),'['.$CI->lang->language[$k].']&nbsp;'.msubstr(strip_tags(next($v)),0,20,''),"title='".strip_tags(current($v))."'");
-	}
+	if($r){
+		foreach($r as $k=>$v){
+			$rl[$k] = anchor(current($v),'['.$CI->lang->language[$k].']&nbsp;'.msubstr(strip_tags(next($v)),0,20,''),"title='".strip_tags(current($v))."'");
+		}
+		
+		return str_replace(array('%Prev','%Next'),$rl,$html);
 	
-
-	return str_replace(array('%Prev','%Next'),$rl,$html);
+	}
 }
 
 //button

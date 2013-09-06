@@ -89,10 +89,10 @@ class Mdata extends CI_Controller{
 		//fetch fileds
 
 		$main = array();
-		if($id){
-			$main = $this->im->detail($id);
+		
+		$main = $this->im->detail($id);
 			
-		}
+		
 
 		$detail = $this->im->details($id);
 
@@ -111,7 +111,7 @@ class Mdata extends CI_Controller{
 		$fields_html = $this->m->fetch_f_html();
 		
 
-		$data = array('ops'=>array(1=>1,2=>2,3=>3),'main'=>$main,'fields'=>$fields,'html'=>$fields_html,'primary'=>$primary);
+		$data = array('ops'=>array(1=>1,2=>2,3=>3),'id'=>$id,'main'=>$main,'fields'=>$fields,'html'=>$fields_html,'primary'=>$primary);
 		$data = array_merge($data,array('theme'=>$this->m->main($module_id,'m_name')));
 
 		//detail
@@ -128,7 +128,7 @@ class Mdata extends CI_Controller{
 		
 	}
 
-	function action_view2(){
+	function action_view_front(){
 		$id = $this->uri->segment(4);
 		$module_id = $this->im->get_mid();
 		//primary key
@@ -139,7 +139,7 @@ class Mdata extends CI_Controller{
 		$t_id = $this->Templates_model->detail_by_mid($module_id,'t_id');
 		
 		$data = array('id'=>$id,'t_id'=>$t_id,'primary'=>$primary);
-		$this->cor_page->load_backend_view('mdata_view',$data);
+		$this->cor_page->load_backend_view('mdata_view_front',$data);
 
 	}
 
