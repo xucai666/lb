@@ -1,8 +1,3 @@
-var load_files  = [];
-load_files.push('/jquery-ui-1.10.2.custom.min.js');
-
-$.include(load_files);
-
 $(function($){
 	
 	$.ajax({
@@ -16,7 +11,6 @@ $(function($){
 			   }
 	});
 
-	//$("#invoke").iwin({title:'调用代码',w:400,h:100,align:'right',valign:'bottom'});
 	
 	$("#invoke").on({
 		
@@ -41,7 +35,7 @@ $(function($){
 		}
 	});
 
-//right layer
+	//right layer
 	$("#floatShow").bind("click",function(){
 	
 		$("#onlineService").animate({width:"show", opacity:"show"}, "normal" ,function(){
