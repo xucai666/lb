@@ -27,13 +27,8 @@ class Vote extends CI_Controller {
 	function index()
 	{
 
-	
-
 		$this->cor_page->load_front_view('vote_list',$data);
 	}	
-	
-	
-	
 	
 	
 	
@@ -41,32 +36,27 @@ class Vote extends CI_Controller {
 	 * 投票
 	 */
 	function view()
-	{
-
-	
-
-		$this->cor_page->load_front_view('vote_view',$data);
-	}	
-	
-	
-	
+	{	
 		
-	
-	
+		$this->cor_page->load_front_view('vote_view');
+	}	
 	
 	
 	
 	//新闻列表
 	function action_save(){	
-		if(!($this->input->post('vd_item'))){
+		$posts = $this->input->post('vd_item');
+		if(!($posts)){
+			@header("content-type:text/html;charset=utf-8");
 			echo "<script>top.art_dialog_close();</script>";
 	 		exit;
 		}
-		$this->db->where('vd_id',$this->input->post('vd_item'));
+		$this->db->where_in('vd_id',$posts);
 		$this->db->set('vd_stat', 'vd_stat+1', FALSE);
 		$this->db->update('module_vote_detail');
 		if(get_cookie('voted')){
-			echo "<script>top.art_dialog_close('你已经投过票了.');</script>";
+			@header("content-type:text/html;charset=utf-8");
+			echo "<script type='text/javascript' charset='UTF-8'>top.art_dialog_close('你已经投过票了.');</script>";
 	 		exit;
 		}
 		$cookie = array(

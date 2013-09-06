@@ -349,7 +349,7 @@ class Common_model  extends CI_Model{
 			$str_r = preg_replace("/<\?php(.*?)\?>/ies","eval(stripcslashes('\\1'))",$str_r);
 
 
-			//$str_r = $this->replace_php_tags($str_r);
+			
 
 			
 

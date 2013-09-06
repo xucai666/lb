@@ -618,6 +618,22 @@ function getquerystring(name1) {
 	if (r!=null) return unescape(r[2]); return null;
 }
 
+//unicode转换
+//alert(toUN.on("\"请输\""));
+//alert(toUN.un("\\u0022\\u8BF7\\u8F93\\u0022"));
+var toUN = {
+    on: function(str) {
+        var a = [],
+        i = 0;
+        for (; i < str.length;) a[i] = ("00" + str.charCodeAt(i++).toString(16)).slice( - 4);
+        return "\\u" + a.join("\\u")
+    },
+    un: function(str) {
+        return unescape(str.replace(/\\/g, "%"))
+    }
+};
+
+
 
 //document ready
 $(function($){
@@ -625,6 +641,7 @@ $(function($){
 		overclass($('.mytable tr'));
 	}
 	displayError("[id='error_span']");
+	
 
 });
 

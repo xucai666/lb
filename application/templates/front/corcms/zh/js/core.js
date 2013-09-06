@@ -475,6 +475,21 @@ function art_dialog_close(msg,callback){
 		(callback && typeof(callback) === "function") && callback();
 }
 	
+//unicode转换
+//alert(toUN.on("\"请输\""));
+//alert(toUN.un("\\u0022\\u8BF7\\u8F93\\u0022"));
+var toUN = {
+    on: function(str) {
+        var a = [],
+        i = 0;
+        for (; i < str.length;) a[i] = ("00" + str.charCodeAt(i++).toString(16)).slice( - 4);
+        return "\\u" + a.join("\\u")
+    },
+    un: function(str) {
+        return unescape(str.replace(/\\/g, "%"))
+    }
+};
+
 
 
 
@@ -515,6 +530,8 @@ $(document).ready(function(){
 	}, function() {
 		/* Stuff to do when the mouse leaves the element */
 	});
+
+	
 
 })
 

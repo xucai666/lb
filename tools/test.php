@@ -5,6 +5,7 @@
 
 </script>
 <?php
-phpinfo();
+$str = '<input type="radio" name="vd_item" value="5">';
 
+echo preg_replace("/type=\"radio\" name=\"(.*?)\"/", 'type="checkbox" name="\\1[]"', $str);
 

@@ -219,7 +219,7 @@ class Cor_page{
 			//预加载配置信息
 			$sys_config = $cache->cache_fetch('sys_config');	
 			
-			$data = array_merge($data,$sys_config);
+			$data && $data = array_merge($data,$sys_config);
 			
 			$tpl->assign("lang_type",$this->lang_type);	
 			
