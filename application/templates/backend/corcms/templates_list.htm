@@ -31,6 +31,7 @@
 	<th>名称</th>
 	<th>分类</th>
 	<th>数据表</th>
+	<th>激活</th>
 	<th>操作</th>
 
 </tr>
@@ -45,6 +46,7 @@
 	<td><!--{$item.t_name}--></td>
 	<td><!--{$template_types[$item.t_type]}--></td>
 	<td><!--{$item.t_db_name}--></td>
+	<td><a href="javascript:;" class="<!--{func_state state=$item.t_enable}-->" onclick="ajax_change_state(this,'templates','t_id','<!--{$item.t_id}-->','t_enable');"></a></td>
 	<td align='center'>
 		<!--{ci_anchor segment="backend/templates/action_copy/`$item.t_id`" attrs="class:link_copy" title="&nbsp;"}-->
 		<!--{php}-->		

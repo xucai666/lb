@@ -19,7 +19,7 @@ class Templates extends CI_Controller {
             parent::__construct();
             //auth login
             $this->cor_auth->execute_auth();
-            $this->load->model('Templates_Model','IM');
+            $this->load->model('Templates_Model','im');
             
        }
 
@@ -83,9 +83,9 @@ class Templates extends CI_Controller {
        		try{
        			$main = $this->input->post('main');
        			
-	       		$this->form_validation->set_rules($this->IM->validator_save());
+	       		$this->form_validation->set_rules($this->im->validator_save());
 	       		if($this->form_validation->run()==true){
-	       			$main = $this->cor_db->save(array('main'=>$main),$this->IM->db_config());
+	       			$main = $this->cor_db->save(array('main'=>$main),$this->im->db_config());
 	       			$this->cor_page->pop_redirect('保存成功',site_url('backend/templates/action_list'));
 	       		}else{
               $this->cor_page->fetch_css('templates','view',$this->cor_page->getRes('css','backend','item/'));
@@ -109,7 +109,7 @@ class Templates extends CI_Controller {
             $ids = $ids?$ids:$this->uri->segment(4);
            
 
-        		$this->cor_db->delete($ids,$this->IM->db_config());		
+        		$this->cor_db->delete($ids,$this->im->db_config());		
         		$this->cor_page->pop_redirect('删除成功',site_url("backend/templates/action_list"));		
         	}catch(Excpetion $e){
         		$this->cor_page->pop_redirect($e->getMessage(),site_url("backend/templates/action_list"));		
@@ -129,13 +129,9 @@ class Templates extends CI_Controller {
          $this->cor_page->fetch_css('item/templates','view',getRootUrl('css','backend'));
          $this->cor_page->fetch_js('item/templates','view',getRootUrl('js','backend'));
          $main_id = $this->uri->segment(4);
-          $fetch_config  = array(
-            'primary_id'=>'t_id',
-            'primary_val'=>$main_id,
-            'table_name'=>'templates',
-          );
-          $main = $this->cor_db->fetch_one($fetch_config);
-          $t_types = $this->cor_cache->cache_fetch('template_types');
+         $main = $this->im->detail($main_id);
+        
+         $t_types = $this->cor_cache->cache_fetch('template_types');
          $this->cor_page->load_backend_view('templates_view',array('main'=>$main,'template_types'=>$t_types));
        }
 

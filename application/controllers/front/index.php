@@ -46,7 +46,7 @@ class Index extends CI_Controller {
 
 
 		$data =  array_merge($data,array('next_lang'=>$next_lang));
-		$this->cor_page->fetch_js('artdialog/jquery.artDialog','view',getRootUrl('js','front'));
+		
 		$this->cor_page->load_front_view("index",$data);
 	}	
 	

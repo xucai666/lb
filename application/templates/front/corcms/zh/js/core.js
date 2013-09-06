@@ -418,14 +418,23 @@ function load_autocomplete(_auto_obj){
 }
 
 
+function loadjs(file,id){
+	
+	$("<scri"+"pt>"+"</scr"+"ipt>").attr({src:file,type:'text/javascript',id:id}).appendTo($('head').remove(id));
+
+}
+
 
 function getJsPath(){
 	var scripts = document.getElementsByTagName('script');
-	var thisScript = scripts[scripts.length-1];
-	var path = thisScript.src.replace(/\/script\.js$/, '/'); 
+	var thisScript = scripts[1];
+	var path = thisScript.src.replace(/\/script\.js$/, '/');
 	return path.substr(0,path.lastIndexOf("/"));
 
 }
+
+
+
 
 
 

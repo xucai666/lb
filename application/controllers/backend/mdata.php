@@ -125,8 +125,22 @@ class Mdata extends CI_Controller{
 		
 		$this->cor_page->load_backend_view('mdata_view',$data);
 
-		config_item('item name');
 		
+	}
+
+	function action_view2(){
+		$id = $this->uri->segment(4);
+		$module_id = $this->im->get_mid();
+		//primary key
+		$primary = $this->m->fetch_primary($module_id,'r_name');
+		
+
+		$this->load->model('Templates_model');	
+		$t_id = $this->Templates_model->detail_by_mid($module_id,'t_id');
+		
+		$data = array('id'=>$id,'t_id'=>$t_id,'primary'=>$primary);
+		$this->cor_page->load_backend_view('mdata_view',$data);
+
 	}
 
 	function action_save(){

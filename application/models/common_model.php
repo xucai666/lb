@@ -250,6 +250,9 @@ class Common_model  extends CI_Model{
 			);
 
 		$rs = $cor_db->fetch_one($config);
+		if(!$rs['t_enable']){
+			return false;
+		}
 
 		
 		//template html
@@ -377,8 +380,9 @@ class Common_model  extends CI_Model{
 				'primary_val'=>$t_id,
 			);
 		$rs = $cor_db->fetch_one($config);
-				
-		
+		if(!$rs['t_enable']){
+			return false;
+		}
 		
 		//convert to db_parameter
 		$db_ar = array(

@@ -48,7 +48,7 @@ class Vote extends CI_Controller {
 		$posts = $this->input->post('vd_item');
 		if(!($posts)){
 			@header("content-type:text/html;charset=utf-8");
-			echo "<script>top.art_dialog_close();</script>";
+			echo "<script>top.art.dialog.tips('您还没有选择');setTimeout(function(){history.back(1)},1000);</script>";
 	 		exit;
 		}
 		$this->db->where_in('vd_id',$posts);

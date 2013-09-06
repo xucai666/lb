@@ -50,9 +50,23 @@ class Templates_model extends CI_Model{
 		);
 		return $config;
 	}
+
+
+	function detail($t_id){
+		$fetch_config  = array(
+            'primary_id'=>'t_id',
+            'primary_val'=>$t_id,
+            'table_name'=>'templates',
+        );
+        return  $this->cor_db->fetch_one($fetch_config);
+	}
 	
 	
 	
+    function detail_by_mid($mid,$field=null){
+    	$rs = $this->db->select('*')->from('templates')->where('t_mid',$mid)->get()->first_row('array');
+    	return $field ? $rs[$field]:$rs;
+    }
 	
 	
 }
