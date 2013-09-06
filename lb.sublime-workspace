@@ -164,10 +164,16 @@
 	},
 	"file_history":
 	[
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/contact.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/css/lb.css",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/iwin.js",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/engage.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/engage_add.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jscript.js",
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/jscript.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/about_news22.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/jquery-1.10.2.min.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/iwin.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/iwin.js",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/invoke.js",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/core.js",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jquery-ui-1.10.2.custom.min.js",
@@ -183,7 +189,6 @@
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/vote_list.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/vote_list_single.htm",
 		"/E/phpnow/htdocs/lb/application/controllers/front/vote.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/css/lb.css",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/vote_view.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/item/templates.js",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/templates.php",
@@ -267,7 +272,6 @@
 		"/E/phpnow/htdocs/lb/application/compiles/5058bd06fae55f725b6716266e32d490ab562e54.file.top.htm.php",
 		"/E/phpnow/htdocs/lb/application/config/config.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/main_top.htm",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/engage.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/advs.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/archives.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/download.php",
@@ -287,11 +291,7 @@
 		"/E/phpnow/htdocs/lb/application/models/product_model.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/js/core.js",
 		"/E/phpnow/htdocs/lb/application/config/autoload.php",
-		"/E/phpnow/htdocs/lb/application/config/config.default",
-		"/E/phpnow/htdocs/lb/cache/zh/sys_config.php",
-		"/E/phpnow/htdocs/lb/cache/en/sys_config.php",
-		"/E/phpnow/htdocs/lb/cache/zh/question.php",
-		"/E/phpnow/htdocs/lb/cache/zh/select_language_soft.php"
+		"/E/phpnow/htdocs/lb/application/config/config.default"
 	],
 	"find":
 	{
@@ -377,6 +377,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"width",
+			"script",
+			"makeArray",
+			"jscript",
+			"ui/",
+			"ui-lightness",
+			"ui-light",
+			"themes",
+			"jquery_ui",
+			"jquery-1.7",
+			"jquery-1.8",
+			"jquery-1.3",
+			"jquery-1.4",
+			"jquery.13",
 			"jquery-ui-1.10.2",
 			"load_autocomplete",
 			"iwin",
@@ -490,21 +504,7 @@
 			"substr",
 			"replace_url_param",
 			"title",
-			"replace_url_param",
-			"getquerystring",
-			"replace_url_param",
-			"replaceUrlParams",
-			"ajaxLoadList",
-			"jump",
-			"href",
-			"ajax",
-			"fetch_list",
-			"action_list",
-			"int",
-			"proc_all",
-			".hide",
-			"lang_multiple",
-			"multiple_language"
+			"replace_url_param"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -578,12 +578,24 @@
 		"selected_items":
 		[
 			[
-				"core.js",
-				"application/templates/backend/corcms/js/core.js"
+				"conta",
+				"application/templates/front/corcms/zh/contact.htm"
 			],
 			[
 				"lb.css",
 				"application/templates/front/corcms/zh/css/lb.css"
+			],
+			[
+				"engage_add",
+				"application/templates/backend/corcms/engage_add.htm"
+			],
+			[
+				"iwin.js",
+				"application/templates/backend/corcms/js/iwin.js"
+			],
+			[
+				"core.js",
+				"application/templates/backend/corcms/js/core.js"
 			],
 			[
 				"vote_view.htm",
@@ -720,10 +732,6 @@
 			[
 				"vote_vie",
 				"application/templates/front/corcms/zh/vote_view.htm"
-			],
-			[
-				"iwin.js",
-				"application/templates/backend/corcms/js/iwin.js"
 			],
 			[
 				"common_mode",
@@ -1080,14 +1088,6 @@
 			[
 				"config_save",
 				"application/templates/backend/x6cms/config_save.htm"
-			],
-			[
-				"system",
-				"application/controllers/backend/system_manage.php"
-			],
-			[
-				"logs_list",
-				"application/templates/backend/x6cms/logs_list.htm"
 			]
 		],
 		"width": 0.0
