@@ -30,6 +30,20 @@ class Vote extends CI_Controller {
 		$this->cor_page->load_front_view('vote_list',$data);
 	}	
 	
+
+	/**
+	 * 普通用户登录
+	 */
+	function single()
+	{
+		$v_id = $this->uri->segment(4);
+
+		$data =array('v_id'=>$v_id);
+		$this->cor_page->load_front_view('vote_list_single',$data);
+	}	
+	
+
+
 	
 	
 	/**
@@ -37,8 +51,9 @@ class Vote extends CI_Controller {
 	 */
 	function view()
 	{	
-		
-		$this->cor_page->load_front_view('vote_view');
+		$v_id = $this->uri->segment(4);
+		$data =array('v_id'=>$v_id);
+		$this->cor_page->load_front_view('vote_view',$data);
 	}	
 	
 	
