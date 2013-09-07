@@ -30,7 +30,8 @@ class Message extends CI_Controller {
 	function index()
 	{
 		
- 		
+ 		$this->db->select('*',false)->from('message')->where('ms_valid',1)->order_by('ms_id','desc');
+ 		$data = $this->cor_db->fetch_all(5);
 		$this->cor_page->load_front_view("message",$data);
 		
 	}	

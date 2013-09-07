@@ -29,6 +29,20 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
+    128 => 
+    array (
+      'r_id' => '128',
+      'r_title' => '正则测试',
+      'r_pid' => '35',
+      'r_name' => NULL,
+      'r_order' => '100',
+      'r_display' => '1',
+      'r_url' => 'backend/system_manage/action_regexp_test',
+      'r_code' => '35,128',
+      'r_level' => '2',
+      'r_js_action' => NULL,
+      'r_type' => NULL,
+    ),
     28 => 
     array (
       'r_id' => '28',
@@ -814,6 +828,6 @@
       'r_type' => NULL,
     ),
   ),
-  'count' => '58',
+  'count' => '59',
   'page_link' => '',
 );?>

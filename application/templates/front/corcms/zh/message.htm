@@ -7,89 +7,158 @@
  
 	        <!--{include file="`$dir_front`/left_contact.htm"}-->
 
+	  </td>
 	  
-	  
-    <td valign="top"><table width="742" border="0" cellspacing="0" cellpadding="0">
+    <td valign="top">
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td width="3"><img src="<!--{$img_url}-->/daohanhh_09.jpg" width="3" height="28" /></td>
-        <td width="685" style="background:url(<!--{$img_url}-->/daohanhh_11.jpg) repeat-x; padding-left:20px; " class="hong">我要留言</td>
+        <td  style="background:url(<!--{$img_url}-->/daohanhh_11.jpg) repeat-x; padding-left:20px; " class="hong"></td>
         <td width="3"><img src="<!--{$img_url}-->/daohanhh_13.jpg" width="3" height="28" /></td>
       </tr>
+   
+    </table>
+      
+<center>
+
+ <table width="754" height="88px;" border="0" cellspacing="0" cellpadding="0" style="border-bottom:2px solid #DDD;margin-bottom:5px;" valign="top">
+    <tbody><tr>
+        <td align="left" valign="top" style="background:url(<!--{$img_url}-->/guestbook/toplogo.gif) left 30px no-repeat;font-size:16px;  font-weight:bold;letter-spacing:2px;padding-left:200px;padding-bottom:3px;">   </td>
+        <td align="right" valign="bottom" style="padding-bottom:10px;padding-right:10px;">
+        <a href="#write">[签写留言]</a>   </td>
+    </tr>
+</tbody></table>
+
+
+
+<!--{foreach from=$list item=item}-->
+<table width='754' border='0' cellpadding='3' cellspacing='1' bgcolor='#CCCCCC'>
+  <tr>
+    <td width='160' rowspan='3' valign='top' bgcolor='#FFFFFF'>
+    <table border='0' cellPadding='4' cellSpacing='0' width='100%'>
       <tr>
-  <td width="691" colspan="3" ></td>
+        <td align=center width='17%'>
+          <img src='<!--{$img_url}-->/guestbook/<!--{sprintf("%02d",$item.ms_img)}-->.gif' border=0>
+       
+        </td>
       </tr>
     </table>
-      <table width="742" border="0" cellspacing="0" cellpadding="0" class="bian1">
-        <tr>
-          <td><form id="form1" name="form1" method="post" action="<!--{$site_url}-->/message/save" onsubmit="return validator(this)">
-            <table width="500" border="0" cellspacing="0" cellpadding="0" style="margin-left:43px">
-              <tr>
-                <td width="91" height="40">您的姓名：</td>
-                <td colspan="2"><input name="main[ms_name]" type="text" id="main[ms_name]"  valid="required" errmsg="请输入尊称" style="width:188; height:20px; border:solid 1px #c8c8c8; line-height:20px;"/></td>
-              </tr>
-              <tr>
-                <td height="40">电子邮件：</td>
-                <td colspan="2"><input type="text" name="main[ms_email]" id="email" valid="required|isEmail" errmsg="请输入电子邮件，方便联系|电子邮件地址格式不正确"  /></td>
-              </tr>
-              <tr>
-                <td height="40">留言标题：</td>
-                <td colspan="2"><input type="text" name="main[ms_title]" id="ms_title"  style="width:188; height:20px; border:solid 1px #c8c8c8;line-height:20px;"/></td>
-              </tr>
-              <tr>
-                <td height="40">留言内容：</td>
-                <td colspan="2"><textarea name="main[ms_content]" id="main[ms_content]" cols="45" rows="5" valid="required" errmsg="请输入留言内容"></textarea></td>
-              </tr>
-              <tr>
-                <td height="40">验证码：</td>
-				
-              
-            <td width="125" valign="top">
-			
-			
-	
-             
-				 
-				 
-				 <table cellspacing="0" cellpadding="0">
-                   <tr>
-                     <td><input name="captcha" type="text" id="captcha"   size="10" valid='required' errmsg='请输入验证码'/></td>
-                     <td>&nbsp;</td>
-                     <td>
-					 
-					   <a href="javascript:;"  >
-           		 <img id='captcha1' src='<!--{func_site_url segments="message/show_captcha"}-->'/>            </a>
-            <script language="javascript">
-			$('#captcha1').bind('click',function(){
-				
-				$(this).attr('src','<!--{func_site_url segments="message/show_captcha"}-->/?rnd='+Math.random());
-				
-				
-				})
-				</script>	
-					 </td>
-                   </tr>
+   <P> 
+   &nbsp;姓名： <!--{$item.ms_name}--><br>
+   &nbsp;来自：<!--{$item.ms_ip}--><br>
+   &nbsp;QQ：<!--{$item.ms_qq}--><br>
+  </P>
+  </td>
+    <td width='600' bgcolor='#FFFFFF'><img height='16' src='<!--{$img_url}-->guestbook/time.gif' width='16'> 发表时间: <!--{$item.ms_date}--> </td>
+  </tr>
+  <tr>
+    <td height='100' bgcolor='#FFFFFF' style='word-break: break-all'>
+   <!--{$item.ms_content}-->
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor='#FFFFFF'>
+    <a href='mailto:<!--{$item.ms_email}-->'><img src='<!--{$img_url}-->guestbook/mail.gif' border=0 width='16' height='16'>[邮件]</a> 
+    <a href='<!--{$item.ms_homepage}-->' target='_blank'><img src='<!--{$img_url}-->guestbook/home.gif' border=0 width='16' height='16'>[主页]</a>  
+   
+    </td>
+  </tr>
 </table>
-				 
-							</td>	
-              </tr>
-              <tr>
-                <td height="44" colspan="3" ><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                      <td ><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                          <tr>
-                            <td align="right" width="250"><input type="submit" name="1" id="1" value="提交" style="margin-right:20px;" /></td>
-                            <td><input type="submit" name="2" id="2" value="重置" /></td>
-                          </tr>
-                      </table></td>
-                    </tr>
-                </table></td>
-              </tr>
-            </table>
-                    </form>
+<table width='754'><td height='2'></td></table>
+<!--{/foreach}-->
+<table border='0' cellpadding='4' cellspacing='0' width='754' align='center'>
+  <tr>
+  <td align="right">
+     <div class="page"> <!--{$page_link}--></div>
+  </td>
+  </tr>
+  <tr><td></td></tr>
+</table>
+
+
+
+  <a name="write"></a>
+  <table width="754" border="0" cellspacing="1" cellpadding="4" align="center" bgcolor="#CCCCCC">
+    <form id="form1" name="form1" method="post" action="<!--{$site_url}-->/message/save" onsubmit="return validator(this)">
+      <tr bgcolor="#ffffff"> 
+        <td width="10%" align="center" nowrap><font color="#FF0000">*</font>你的姓名：</td>
+        <td width="40%"><input type="text" maxlength="10" name="main[ms_name]" size="36" class="input" id="main[ms_name]"  valid="required" errmsg="请输入尊称"></td>
+        <td width="10%" align="center" nowrap>OICQ号码：</td>
+        <td width="40%"><input maxlength="20" type="text" name="main[ms_qq]" size="46" class="input"></td>
+      </tr>
+      <tr bgcolor="#ffffff"> 
+        <td align="center" nowrap>&nbsp;电子邮件：</td>
+        <td><input maxlength="80" type="text" name="main[ms_email]" size="36" class="input" id="email" valid="required|isEmail" errmsg="请输入电子邮件，方便联系|电子邮件地址格式不正确" ></td>
+        <td align="center" nowrap height="12">个人主页：</td>
+        <td height="12"><input maxlength="80" type="text" name="main[ms_homepage]" size="46" class="input"></td>
+      </tr>
+      <tr bgcolor="#ffffff"> 
+        <td align="center" nowrap width="10%">验 证 码：</td>
+        <td height="12" colspan="3"> <table width="200" border="0" cellspacing="0" cellpadding="0">
+            <tr> 
+              <td width="84"><input name="captcha" type="text" id="captcha"   size="10" valid='required' errmsg='请输入验证码'/></td>
+              <td width="116"> <a href="javascript:;"  >
+               <img id='captcha1' src='<!--{func_site_url segments="message/show_captcha"}-->'/>            </a>
+            <script language="javascript">
+      $('#captcha1').bind('click',function(){
+        
+        $(this).attr('src','<!--{func_site_url segments="message/show_captcha"}-->/?rnd='+Math.random());
+        
+        
+        })
+        </script> </td>
+            </tr>
+          </table></td>
+      </tr>
+      <tr bgcolor="#ffffff"> 
+        <td align="center" nowrap width="10%"> <font color="#FF0000">*</font>留言内容：<br>
+          (1000字内) </td>
+        <td align="left" width="40%"><textarea name="main[ms_content]" cols="36" rows="8" class="textarea"  id="main[ms_content]" valid="required" errmsg="请输入留言内容"></textarea></td>
+        <td align="center" nowrap height="2" width="10%">选择头像：</td>
+        <td nowrap height="2" width="40%"> 
+         <input type="radio" name="main[ms_img]" value="01" checked> 
+          <img src="<!--{$img_url}-->/guestbook/01.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="02"> 
+          <img src="<!--{$img_url}-->/guestbook/02.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="03"> 
+          <img src="<!--{$img_url}-->/guestbook/03.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="04"> 
+          <img src="<!--{$img_url}-->/guestbook/04.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="05"> 
+          <img src="<!--{$img_url}-->/guestbook/05.gif" width="25" height="25"> <br> <input type="radio" name="main[ms_img]" value="06"> 
+          <img src="<!--{$img_url}-->/guestbook/06.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="07"> 
+          <img src="<!--{$img_url}-->/guestbook/07.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="08"> 
+          <img src="<!--{$img_url}-->/guestbook/08.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="09"> 
+          <img src="<!--{$img_url}-->/guestbook/09.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="10"> 
+          <img src="<!--{$img_url}-->/guestbook/10.gif" width="25" height="25"> <br><input type="radio" name="main[ms_img]" value="11"> 
+          <img src="<!--{$img_url}-->/guestbook/11.gif" width="25" height="25">  <input type="radio" name="main[ms_img]" value="12"> 
+          <img src="<!--{$img_url}-->/guestbook/12.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="13"> 
+          <img src="<!--{$img_url}-->/guestbook/13.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="14"> 
+          <img src="<!--{$img_url}-->/guestbook/14.gif" width="25" height="25">   <input type="radio" name="main[ms_img]" value="15"> 
+          <img src="<!--{$img_url}-->/guestbook/15.gif" width="25" height="25"> <br><input type="radio" name="main[ms_img]" value="16"> 
+          <img src="<!--{$img_url}-->/guestbook/16.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="17"> 
+          <img src="<!--{$img_url}-->/guestbook/17.gif" width="25" height="25"><input type="radio" name="main[ms_img]" value="18"> 
+          <img src="<!--{$img_url}-->/guestbook/18.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="19"> 
+          <img src="<!--{$img_url}-->/guestbook/19.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="20"> 
+          <img src="<!--{$img_url}-->/guestbook/20.gif" width="25" height="25"> <br><input type="radio" name="main[ms_img]" value="21"> 
+          <img src="<!--{$img_url}-->/guestbook/21.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="22"> 
+          <img src="<!--{$img_url}-->/guestbook/22.gif" width="25" height="25">  <input type="radio" name="main[ms_img]" value="23"> 
+          <img src="<!--{$img_url}-->/guestbook/23.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="24"> 
+          <img src="<!--{$img_url}-->/guestbook/24.gif" width="25" height="25"> </td>
+      </tr>
+      <tr bgcolor="#ffffff"> 
+        <td align="center" nowrap colspan="4"> <input maxlength="1000" type="submit" name="Submit" value="提 交" class="btn"> 
+          &nbsp;&nbsp; <input type="reset" name="Submit2" value="取 消" class="btn"> 
+        </td>
+      </tr>
+    </form>
+  </table>
+
+
+</center>
           </td>
         </tr>
       </table>
     </td>
   </tr>
 </table>
+
+
 <!--{include file="`$dir_front`/foot.htm"}-->

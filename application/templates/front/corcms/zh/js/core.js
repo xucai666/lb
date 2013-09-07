@@ -419,7 +419,7 @@ function load_autocomplete(_auto_obj){
 
 
 function loadjs(file,id){
-	
+	alert(file)
 	$("<scri"+"pt>"+"</scr"+"ipt>").attr({src:file,type:'text/javascript',id:id}).appendTo($('head').remove(id));
 
 }

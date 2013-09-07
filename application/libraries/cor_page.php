@@ -141,7 +141,7 @@ class Cor_page{
 			if($return==1){
 				return $OUT->get_output();
 			}
-			$OUT->_display($content); 
+			$OUT->_display(); 
 			exit;
 					
 	}	
@@ -233,15 +233,37 @@ class Cor_page{
 
 
 			$data['header_html'] = $this->header_html;	
+			/*
+			 *
 			if(is_array($view)){
 				foreach($view as $v){
 					 $tpl->view($this->get_view_path($v,'front'),$data);
 					
 			    }
-		   }else{
+		    }else{
 				     $tpl->view($this->get_view_path($view,'front'),$data);
 				
-		   }
+		    }
+			 * 
+		     */
+		    if(is_array($view)){
+				foreach($view as $v){
+					
+					$content = $tpl->fetch_page_content($this->get_view_path($v,'front'),$data);
+					if($sys_config['optimize']['gather']) $content = RndString($content);
+					$OUT->append_output($content);
+				}
+			}else{
+
+				$content = $tpl->fetch_page_content($this->get_view_path($view,'front'),$data);
+				if($sys_config['optimize']['gather']) $content = RndString($content);
+				$OUT->append_output($content);	
+				
+			}
+
+			$OUT->_display(); 
+			exit;
+					
 	}	
 	
 	

@@ -343,6 +343,36 @@ class System_manage extends CI_Controller{
  	}
 
 
+   function action_regexp_test(){
+	    $post = $this->input->post();
+	    if($post){
+			$isMagic = @ini_get("magic_quotes_gpc");
+			if($isMagic) foreach($post AS $key => $value) $$key = stripslashes($value);
+			else foreach($post AS $key => $value) $$key = $value;
+			if($reggo==0){
+			   $rs = preg_replace("/$testrule/$testmode",$rpvalue,$testtext);
+			   echo "<xmp>[".$rs."]</xmp>";
+		    }else{
+			  	 $backarr = array();
+			  	 preg_match_all("/$testrule/$testmode",$testtext,$backarr);
+			  	 echo "<xmp>";
+			  	 foreach($backarr as $k=>$v){
+			  	 	  echo "$k";
+			  	 	  if(!is_array($v)) echo " - $v \r\n";
+			  	 	  else{
+			  	 	  	 echo " Array \r\n";
+			  	 	  	 foreach($v as $kk=>$vv){ echo "----$kk - $vv \r\n"; }
+			  	 	  }
+			 }
+		  	echo "</xmp>";
+	    }
+			exit();
+	    }
+
+
+   		$this->cor_page->load_backend_view("regexp_test");
+   }
+
 
 
  	

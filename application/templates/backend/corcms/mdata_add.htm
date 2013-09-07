@@ -7,7 +7,7 @@
 		<td  ><!--{$v.r_alias}-->：</td>
 		<td>
 			
-		<!--{func_vsprintf html =$html[$v.f_id] name="main[`$v.r_name`]" value=$main[$v.r_name]|default:$v.r_default|escape:"html"}-->
+		<!--{func_vsprintf html =$html[$v.f_id] name="main[`$v.r_name`]"  value=$main[$v.r_name]|default:$v.r_default|escape:"html"}-->
 		<!--{ci_form_error k="main[`$v.r_name`]"}-->
 			
 		</td>

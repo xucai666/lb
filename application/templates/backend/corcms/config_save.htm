@@ -10,6 +10,7 @@
       <td height="40" align="right">开启调试模式：</td>
       <td height="40"><input name="develop[debug]" type="checkbox" id="develop[debug]" value="1" <!--{if $develop.debug}-->checked="true" <!--{/if}--> /></td>
     </tr>
+   
 
      <tr>
       <td height="40" align="right">选择模板</td>
@@ -41,6 +42,11 @@
     <tr>
       <td height="40" align="right"><!--{$lang_sys.opt_des}-->：</td>
       <td height="40"><textarea name="optimize[description]" cols="50" rows="4" id="optimize[description]"><!--{$optimize.description}--></textarea></td>
+    </tr>
+
+     <tr>
+      <td height="40" align="right">防采集：</td>
+      <td height="40"><input name="optimize[gather]" type="checkbox" id="optimize[gather]" value="1" <!--{if $optimize.gather}-->checked="true" <!--{/if}--> /></td>
     </tr>
     
     

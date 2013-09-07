@@ -302,25 +302,28 @@ function func_tag_input_html($parameter){
  * @return [type]        [description]
  */
 function func_vsprintf($array){
+	$r_name = $array['name'];
+	$r_value = $array['value'];
+	
 	
 	$html = array_shift($array);
 
 	$html = htmlspecialchars_decode($html);
 	
-	$html = str_replace("%name",$array[name],$html);
-	$html = str_replace("%value",$array[value],$html);
-	$html = str_replace("%id",str_replace(array('[',']'), array('_','_'), $array[name]),$html);
+	$html = str_replace("%name",$r_name,$html);
+	$html = str_replace("%value",$r_value,$html);
+	$html = str_replace("%id",str_replace(array('[',']'), array('_','_'), $r_name),$html);
 	
 	$html = preg_replace("/<\?php(.*?)\?>/ies","eval(stripcslashes('\\1'))",$html);
 
 	//select options 
 	if(preg_match("/<select/", $html)){
-		$html = preg_replace("/value=\"".$array[value]."\"/", "value=\"$array[value]\" selected=\"selected\"", $html);
+		$html = preg_replace("/value=\"".$r_value."\"/", "value=\"$r_value\" selected=\"selected\"", $html);
 	}
 
 	//radio
 	if(preg_match("/<input type=\"radio\"/", $html)){
-		$html = preg_replace("/value=\"".$array[value]."\" /", "value=\"$array[value]\" checked=\"checked\"", $html);
+		$html = preg_replace("/value=\"".$r_value."\" /", "value=\"$r_value\" checked=\"checked\"", $html);
 		
 	}
 
@@ -346,8 +349,8 @@ function func_vsprintf($array){
 	endforeach;
 	
 	
-	//$html = str_replace("%name",$array[name],$html);
-	//$html = str_replace("%value",$array[value],$html);
+	//$html = str_replace("%name",$r_name,$html);
+	//$html = str_replace("%value",$r_value,$html);
 	
 	return $html;	
 }
