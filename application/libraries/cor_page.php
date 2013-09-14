@@ -549,6 +549,7 @@ class Cor_page{
  * javascript alert
  */
 function myalert($msg){
+	@header("content-type:text/html;charset=utf-8");
 	echo "<script language='javascript'>alert('".$msg."');</script>";
 	exit();
 }
