@@ -164,6 +164,7 @@
 	},
 	"file_history":
 	[
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/core.js",
 		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_lang.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/message_list.htm",
 		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
@@ -210,7 +211,6 @@
 		"/E/phpnow/htdocs/lb/application/controllers/backend/mdata.php",
 		"/E/phpnow/htdocs/lb/application/models/mdata_model.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/mdata_view.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/core.js",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jquery.Slider.js.dump",
 		"/E/phpnow/htdocs/lb/tools/jQuery弹出层有9种效果/styles/core.css.dump",
 		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
@@ -299,7 +299,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"E:\\phpnow\\htdocs\\lb\\application",
@@ -580,6 +580,10 @@
 		"selected_items":
 		[
 			[
+				"core.js",
+				"application/templates/front/corcms/zh/js/core.js"
+			],
+			[
 				"mess",
 				"application/templates/backend/corcms/message_list.htm"
 			],
@@ -666,10 +670,6 @@
 			[
 				"mdata_model",
 				"application/models/mdata_model.php"
-			],
-			[
-				"core.js",
-				"application/templates/front/corcms/zh/js/core.js"
 			],
 			[
 				"product.php",
