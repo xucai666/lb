@@ -1,19 +1,24 @@
 <!--{include file="`$dir_backend`/top.htm"}-->
-<div class="nav_title"><!--{"module_data"|lang}-->&raquo;<!--{$theme}--></div>
 
-<!--{if $querys}-->
-<table class='search main_head'>
-	<tr><td>
-		<form action='<!--{func_site_url segments="backend/mdata/action_list"}-->' method="get">
-			<!--{foreach from=$querys key=k item=v}-->
-				<!--{$v.name}-->:<!--{func_vsprintf html =$v.html name=$k value=','|implode:(array)$smarty.get.$k}-->
-			<!--{/foreach}-->
-			<!--{create_button type="search"}-->
-		</form>
-	</td></tr>
-</table>
-<!--{/if}-->
-<div style="margin-top:40px;" >
+<div class="main_head">
+	<div class="nav_title"><!--{"module_data"|lang}-->&raquo;<!--{$theme}--></div>
+
+	<!--{if $querys}-->
+	<table class='search '>
+		<tr><td>
+			<form action='<!--{func_site_url segments="backend/mdata/action_list"}-->' method="get">
+				<!--{foreach from=$querys key=k item=v}-->
+					<!--{$v.name}-->:<!--{func_vsprintf html =$v.html name=$k value=','|implode:(array)$smarty.get.$k}-->
+				<!--{/foreach}-->
+				<!--{create_button type="search"}-->
+			</form>
+		</td></tr>
+	</table>
+	<!--{/if}-->
+
+</div>
+
+<div style="margin-top:67px;" >
   <form id="form2" method="post" action="<!--{func_site_url segments='/backend/mdata/action_del'}-->" onsubmit="return chkdel2();">   
 
 <table class='mytable' >
@@ -54,16 +59,18 @@
 <!--{/foreach}-->
 </tbody>	
 </table>
-<div class="page_link">
+
+
+	<div class="main_foot">
+	<div class="page_link">
 	<!--{$page_link}-->
-</div>
-
-	
-<input type="checkbox" id="chkall"  value="1" onclick="CheckAll(this.form);">全选
-<!--{create_button type='delete' ext=''}-->	
-<!--{create_button type='add' url="javascript:art_dialog_open('`$site_url`backend/mdata/action_add','数据管理');"}-->		
-
+</div>		
+		<input type="checkbox" id="chkall"  value="1" onclick="CheckAll(this.form);">全选
+		<!--{create_button type='delete' ext=''}-->	
+		<!--{create_button type='add' url="javascript:art_dialog_open('`$site_url`backend/mdata/action_add','数据管理');"}-->		
+	</div>
 </form>
+
 </div>
 
 
@@ -87,6 +94,7 @@
 	$(function($){
 		//排序
 		$('.mdata_head').click(function(){
+			alert(1);
 			var link = self.location.href;
 			link =  replace_url_param(link,"mdata_sort",$(this).attr('title'));
 			link =  replace_url_param(link,"per_page",0);

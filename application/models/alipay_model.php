@@ -37,12 +37,12 @@ class Alipay_Model extends CI_Model {
         $this->_input_charset = "utf-8"; //字符编码格式 目前支持 GBK 或 utf-8
 
 
-        $this->notify_url = "http://localhost/lb/alipay/notify_page/"; //交易过程中服务器通知的页面，即异步通知，请实际服务器环境中，要用 http://格式的完整路径，不得含有参数
-        $this->return_url = "http://localhost/lb/alipay/return_page/"; //交易过程中服务器通知的页面，即异步通知，请实际服务器环境中，要用 http://格式的完整路径，不得含有参数
-        $this->show_url = "http://localhost/lb"; //网站商品的展示地址，不允许加 ?id=123 这类自定义参数
+        $this->notify_url = "http://www.derui88.com/corcms/alipay/notify_page/"; //交易过程中服务器通知的页面，即异步通知，请实际服务器环境中，要用 http://格式的完整路径，不得含有参数
+        $this->return_url = "http://www.derui88.com/corcms/alipay/return_page/"; //交易过程中服务器通知的页面，即异步通知，请实际服务器环境中，要用 http://格式的完整路径，不得含有参数
+        $this->show_url = "http://www.derui88.com/corcms/"; //网站商品的展示地址，不允许加 ?id=123 这类自定义参数
 
         $this->sign_type = "MD5"; //加密方式 不需修改
-        $this->mainname = "GooCarlos"; //收款方名称，如：公司名称、网站名称、收款人姓名等
+        $this->mainname = "叶华"; //收款方名称，如：公司名称、网站名称、收款人姓名等
 
         $this->transport = "http";
         $this->gateway = "https://mapi.alipay.com/gateway.do?"; // 网关地址

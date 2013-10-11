@@ -7,7 +7,76 @@ iframe { width:100%; height:100%; border:none 0; }
 </style><title>Cor.CMS后台管理中心 - Powered by Cor.CMS v1.0(20130901)</title>
 <link rel="stylesheet" type="text/css" href="<!--{$css_url}-->style.css" />
 <script type="text/javascript" src="<!--{$js_url}-->jquery.min.js"></script>
+<script type="text/javascript" src="<!--{$js_url}-->hotkeys.js"></script>
 <script type="text/javascript" src="<!--{$js_url}-->core.js"></script>
 <script type="text/javascript" src="<!--{$js_url}-->/artdialog/jquery.artDialog.js?skin=default"></script>
 </head><body>
-<iframe src="<!--{$site_url}-->/backend/login/main_index" name="ifr_main"></iframe></body></html>
+<iframe src="<!--{$site_url}-->/backend/login/main_index" name="ifr_main"></iframe>
+
+
+<div id="dvLockScreen" class="ScreenLock" style="display:none">
+
+    <div id="dvLockScreenWin" class="inputpwd">
+
+    <h5><b class="ico ico-info"></b><span id="lock_tips">锁屏状态，请输入密码解锁</span></h5>
+
+    <div class="input">
+
+    	<label class="lb">密码：</label><input type="password" id="lock_password" class="input-text" size="24">
+
+        <input type="submit" class="submit" value="&nbsp;" name="dosubmit" onclick="check_screenlock();return false;">
+
+    </div></div>
+
+</div>
+<script language="javascript">
+
+function lock_screen() {
+
+	$.get("<!--{site_url('backend/login/public_lock_screen')}-->");
+
+	$('#dvLockScreen').css('display','');
+
+
+}
+
+function check_screenlock() {
+
+	var lock_password = $('#lock_password').val();
+
+	if(lock_password=='') {
+
+		$('#lock_tips').html('<font color="red">密码不能为空。</font>');
+
+		return false;
+
+	}
+
+	$.get("<!--{site_url('backend/login/public_login_screenlock')}-->", {lock_user:"<!--{$user_info.admin_user}-->",lock_password: lock_password},function(data){
+
+		if(data==1) {
+
+			$('#dvLockScreen').css('display','none');
+
+			$('#lock_password').val('');
+
+			$('#lock_tips').html('锁屏状态，请输入密码解锁');
+
+		} else {
+
+			strings = data.split('|');
+
+			$('#lock_tips').html('<font color="red">密码错误</font>');
+
+		}
+
+	});
+
+}
+
+
+$(document).bind('keydown', 'return', function(evt){check_screenlock();return false;});
+
+
+</script>
+</body></html>

@@ -22,7 +22,7 @@
       
 <center>
 
- <table width="754" height="88px;" border="0" cellspacing="0" cellpadding="0" style="border-bottom:2px solid #DDD;margin-bottom:5px;" valign="top">
+ <table width="754" height="88px;" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:5px;" valign="top">
     <tbody><tr>
         <td align="left" valign="top" style="background:url(<!--{$img_url}-->/guestbook/toplogo.gif) left 30px no-repeat;font-size:16px;  font-weight:bold;letter-spacing:2px;padding-left:200px;padding-bottom:3px;">   </td>
         <td align="right" valign="bottom" style="padding-bottom:10px;padding-right:10px;">
@@ -32,8 +32,9 @@
 
 
 
+
 <!--{foreach from=$list item=item}-->
-<table width='754' border='0' cellpadding='3' cellspacing='1' bgcolor='#CCCCCC'>
+<table width='754' border='0' cellpadding='3' cellspacing='1' bgcolor='#CCCCCC' style="margin-bottom:25px;">
   <tr>
     <td width='160' rowspan='3' valign='top' bgcolor='#FFFFFF'>
     <table border='0' cellPadding='4' cellSpacing='0' width='100%'>
@@ -50,30 +51,17 @@
    &nbsp;QQ：<!--{$item.ms_qq}--><br>
   </P>
   </td>
-    <td width='600' bgcolor='#FFFFFF'><img height='16' src='<!--{$img_url}-->guestbook/time.gif' width='16'> 发表时间: <!--{$item.ms_date}--> </td>
-  </tr>
-  <tr>
-    <td height='100' bgcolor='#FFFFFF' style='word-break: break-all'>
-   <!--{$item.ms_content}-->
-
-    <!--{if $item.ms_feedback}-->
-    
-     <div   style="padding-left:20px;color:#ff0000" >管理员回复：<!--{$item.ms_feedback}--></div>
-          
-      <!--{/if}-->
-
-
-    </td>
-  </tr>
-  <tr>
-    <td bgcolor='#FFFFFF'>
-    <a href='mailto:<!--{$item.ms_email}-->'><img src='<!--{$img_url}-->guestbook/mail.gif' border=0 width='16' height='16'>[邮件]</a> 
-    <a href='<!--{$item.ms_homepage}-->' target='_blank'><img src='<!--{$img_url}-->guestbook/home.gif' border=0 width='16' height='16'>[主页]</a>  
    
+  
+    <td height='200' bgcolor='#fff' style='word-break: break-all' align="left" valign="top">
+      <div style="height:25px;text-align:right;"><a href='mailto:<!--{$item.ms_email}-->'><img src='<!--{$img_url}-->guestbook/mail.gif' border=0 width='16' height='16'>&nbsp;</a> 
+    <a href='<!--{$item.ms_homepage}-->' target='_blank'><img src='<!--{$img_url}-->guestbook/home.gif' border=0 width='16' height='16'>&nbsp;</a></div>
+   <!--{$item.ms_content}-->[<!--{$item.ms_date}--> ]
     </td>
   </tr>
+ 
 </table>
-<table width='754'><td height='2'></td></table>
+
 <!--{/foreach}-->
 <table border='0' cellpadding='4' cellspacing='0' width='754' align='center'>
   <tr>
@@ -101,13 +89,46 @@
         <td align="center" nowrap height="12">个人主页：</td>
         <td height="12"><input maxlength="80" type="text" name="main[ms_homepage]" size="46" class="input"></td>
       </tr>
+      
+      <tr bgcolor="#ffffff"> 
+        
+        <td align="center" nowrap height="2" width="10%">选择头像：</td>
+        <td  height="2" colspan="3" align="left" class="m_img"> 
+<style>
+          .m_img li{
+            list-style-type: none;
+            float:left;
+            width:40px;
+            min-height:25px;
+            line-height: 150%;
+            display: block;
+            height: auto;
+          }
+         
+          </style>
+
+
+          <!--{section name=total loop=24}--> 
+          <li>
+          <img src="<!--{$img_url}-->/guestbook/<!--{sprintf("%02d",$smarty.section.total.index+1)}-->.gif" width="25" height="25"> <br><input type="radio" name="main[ms_img]" value="<!--{sprintf("%02d",$smarty.section.total.index+1)}-->"> </li>
+           <!--{/section}--> 
+
+ </td>
+      </tr>
+<tr bgcolor="#ffffff">
+      <td align="center" nowrap width="10%"> <font color="#FF0000">*</font>留言内容：<br>
+          (1000字内) </td>
+        <td align="left" colspan="3"><textarea name="main[ms_content]" cols="36" rows="8" class="textarea"  id="main[ms_content]" valid="required" errmsg="请输入留言内容"></textarea></td>
+
+      </tr>
+      
       <tr bgcolor="#ffffff"> 
         <td align="center" nowrap width="10%">验 证 码：</td>
-        <td height="12" colspan="3"> <table width="200" border="0" cellspacing="0" cellpadding="0">
+        <td height="12" colspan="3" align="left"> <table  border="0" cellspacing="0" cellpadding="0">
             <tr> 
-              <td width="84"><input name="captcha" type="text" id="captcha"   size="10" valid='required' errmsg='请输入验证码'/></td>
-              <td width="116"> <a href="javascript:;"  >
-               <img id='captcha1' src='<!--{func_site_url segments="message/show_captcha"}-->'/>            </a>
+              <td width="120"><input name="captcha" type="text" id="captcha"   size="10" valid='required' errmsg='请输入验证码'/></td>
+              <td > <a href="javascript:;"  >
+               <img id='captcha1' src='<!--{func_site_url segments="message/show_captcha"}-->'/></a>
             <script language="javascript">
       $('#captcha1').bind('click',function(){
         
@@ -117,40 +138,12 @@
         })
         </script> </td>
             </tr>
+
+
+
           </table></td>
       </tr>
-      <tr bgcolor="#ffffff"> 
-        <td align="center" nowrap width="10%"> <font color="#FF0000">*</font>留言内容：<br>
-          (1000字内) </td>
-        <td align="left" width="40%"><textarea name="main[ms_content]" cols="36" rows="8" class="textarea"  id="main[ms_content]" valid="required" errmsg="请输入留言内容"></textarea></td>
-        <td align="center" nowrap height="2" width="10%">选择头像：</td>
-        <td nowrap height="2" width="40%"> 
-         <input type="radio" name="main[ms_img]" value="01" checked> 
-          <img src="<!--{$img_url}-->/guestbook/01.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="02"> 
-          <img src="<!--{$img_url}-->/guestbook/02.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="03"> 
-          <img src="<!--{$img_url}-->/guestbook/03.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="04"> 
-          <img src="<!--{$img_url}-->/guestbook/04.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="05"> 
-          <img src="<!--{$img_url}-->/guestbook/05.gif" width="25" height="25"> <br> <input type="radio" name="main[ms_img]" value="06"> 
-          <img src="<!--{$img_url}-->/guestbook/06.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="07"> 
-          <img src="<!--{$img_url}-->/guestbook/07.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="08"> 
-          <img src="<!--{$img_url}-->/guestbook/08.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="09"> 
-          <img src="<!--{$img_url}-->/guestbook/09.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="10"> 
-          <img src="<!--{$img_url}-->/guestbook/10.gif" width="25" height="25"> <br><input type="radio" name="main[ms_img]" value="11"> 
-          <img src="<!--{$img_url}-->/guestbook/11.gif" width="25" height="25">  <input type="radio" name="main[ms_img]" value="12"> 
-          <img src="<!--{$img_url}-->/guestbook/12.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="13"> 
-          <img src="<!--{$img_url}-->/guestbook/13.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="14"> 
-          <img src="<!--{$img_url}-->/guestbook/14.gif" width="25" height="25">   <input type="radio" name="main[ms_img]" value="15"> 
-          <img src="<!--{$img_url}-->/guestbook/15.gif" width="25" height="25"> <br><input type="radio" name="main[ms_img]" value="16"> 
-          <img src="<!--{$img_url}-->/guestbook/16.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="17"> 
-          <img src="<!--{$img_url}-->/guestbook/17.gif" width="25" height="25"><input type="radio" name="main[ms_img]" value="18"> 
-          <img src="<!--{$img_url}-->/guestbook/18.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="19"> 
-          <img src="<!--{$img_url}-->/guestbook/19.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="20"> 
-          <img src="<!--{$img_url}-->/guestbook/20.gif" width="25" height="25"> <br><input type="radio" name="main[ms_img]" value="21"> 
-          <img src="<!--{$img_url}-->/guestbook/21.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="22"> 
-          <img src="<!--{$img_url}-->/guestbook/22.gif" width="25" height="25">  <input type="radio" name="main[ms_img]" value="23"> 
-          <img src="<!--{$img_url}-->/guestbook/23.gif" width="25" height="25"> <input type="radio" name="main[ms_img]" value="24"> 
-          <img src="<!--{$img_url}-->/guestbook/24.gif" width="25" height="25"> </td>
-      </tr>
+
       <tr bgcolor="#ffffff"> 
         <td align="center" nowrap colspan="4"> <input maxlength="1000" type="submit" name="Submit" value="提 交" class="btn"> 
           &nbsp;&nbsp; <input type="reset" name="Submit2" value="取 消" class="btn"> 

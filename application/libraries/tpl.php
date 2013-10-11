@@ -304,7 +304,8 @@ function func_tag_input_html($parameter){
 function func_vsprintf($array){
 	$r_name = $array['name'];
 	$r_value = $array['value'];
-	
+	$r_ext_prop = $array['ext_prop'];
+	$r_desc = $array['desc'];
 	
 	$html = array_shift($array);
 
@@ -312,6 +313,10 @@ function func_vsprintf($array){
 	
 	$html = str_replace("%name",$r_name,$html);
 	$html = str_replace("%value",$r_value,$html);
+	$html = str_replace("%ext_prop",$r_ext_prop,$html);
+	$html = str_replace("%desc",$r_desc,$html);
+
+
 	$html = str_replace("%id",str_replace(array('[',']'), array('_','_'), $r_name),$html);
 	
 	$html = preg_replace("/<\?php(.*?)\?>/ies","eval(stripcslashes('\\1'))",$html);
@@ -427,8 +432,7 @@ function ci_router($key=''){
   */
 class tpl extends Smarty
 {
-	private static $instance;
-	
+	private static $instance;	
     function __construct()
     {    	
         parent::__construct();
@@ -441,10 +445,6 @@ class tpl extends Smarty
         $this->setCacheDir(config_item('cache_dir'));
 
 
-        //是否需要启用缓存
-		config_item('view_caching')			&&	$this->caching = config_item('view_caching');
-		config_item('view_cache_lifetime') 	&&	$this->cache_lifetime=config_item('view_cache_lifetime');
-		
         
         //use CI's cache folder        
         $this->left_delimiter = config_item('left_delimiter');
@@ -529,7 +529,7 @@ class tpl extends Smarty
         }
        	//cache id
        $cor_page = &get_cor_page();
-       return parent::display($resource_name,$cor_page->get_cache_id());
+       return parent::display($resource_name);
         
     }
     
@@ -542,6 +542,7 @@ class tpl extends Smarty
         if (strpos($resource_name, '.') === false) {
             $resource_name .= '.htm';
         }
+
          if(!$this->isCached($resource_name)) {
          
 	        if (is_array($params) && count($params)) {
@@ -556,6 +557,7 @@ class tpl extends Smarty
         if (!is_file($this->getTemplateDir(0). $resource_name)) {
             show_error("template: [$resource_name] cannot be found.");
         }
+ 
 
        return parent::fetch($resource_name);
         

@@ -17,12 +17,7 @@
 	function __construct()
 	{
 		parent::__construct();
-		//启用缓存显示,key is action name,val is view name
-		$act2view = array(
-			'index'=>'engage',
-			'detail'=>'engage_detail',
-		);
-		$this->cor_page->view_cache_all($act2view);
+
 		
 	}
 	
@@ -189,13 +184,13 @@
 		$engage = $this->cor_db->fetch_one($sql_arr);
 		
 		$b_place = $this->Common_model->func_get_province();
-	
+
 		
 		$data = array(
 		
 			'eg_id'=>$eg_id,
 			'area'=> get_area($area_id), //地区
-			'editor'=> $this->Engage_model->editor(null,'apply_text'),
+			'editor'=> $this->Common_model->editor(null,'apply_text'),
 			'engage'=> $engage,
 			'work_year'=>$this->cor_cache->cache_fetch('work_year'),
 			'sex'=>$this->cor_cache->cache_fetch('sex'),

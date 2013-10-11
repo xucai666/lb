@@ -23,7 +23,7 @@ body{background:#F7FBFC;overflow-x:hidden;overflow-y:auto;}
 		 <!--{foreach from=$rights_options item=item key=key}-->
 
 			<table  class="left_menu" cellpadding=0 cellspacing=0 id="purview_<!--{$key}-->">
-	<tr><td><b class="mtop"><!--{$item.r_title}--></b></td></tr>
+	<tr><td style="border-bottom:1px solid #d9e4ea;"><div class="mtop"><b class="mtop_1"><!--{$item.r_title}--></b><b class="mtop_2"></b></div></td></tr>
 <!--{foreach from=$item.detail key=key1 item=item1}--> 	
 		<tr><td onclick="seton(this,'<!--{realUrl($item1.r_url)}-->');" class="category">
 		<span><a href="javascript:void(0)"  <!--{if count($item1.detail)>0}-->style="font-weight:bold;"<!--{/if}-->><!--{$item1.r_title}--></a></span>

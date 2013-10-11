@@ -1,13 +1,16 @@
 <!--{include file="`$dir_backend`/top.htm"}-->
 <div class="nav_title">模型数据</div>
 
-
+<div  align="right"><a href="<!--{func_site_url segments='/backend/tree/action_root_add'}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
   
 <table class='mytable'>
 	<thead>
 <tr>
 	<th>
-	请选择
+	栏目名称
+	</th>	
+	<th>
+	操作
 	</th>
 	
 	
@@ -20,6 +23,10 @@
 	<td>
 		<a href="<!--{func_site_url segments="backend/tree/action_root_set/`$key`"}-->">
 			<!--{$item}--></a>
+	</td>
+	<td>
+		<!--{ci_anchor segment="backend/tree/action_root_add/`$key`" attrs="class:link_mod"}-->
+		<!--{ci_anchor segment="backend/tree/action_root_set/`$key`" attrs="class:link_view"}-->
 	</td>
 	
 </tr>

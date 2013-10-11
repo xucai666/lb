@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cor.Cms</title>
+<meta name="Keywords" content="Cor.Cms" />
+<meta name="Description" content="Codeigniter CMS" />
+<link href="http://localhost/lb/application//templates/front/corcms/zh//css/lb.css" rel=stylesheet > 
+<script language='javascript'>
+var url_root ='http://localhost/lb/';
+var site_url='http://localhost/lb/';
+var js_front='http://localhost/lb/application//templates/front/corcms/zh//js/';
+var js_backend='http://localhost/lb/application//templates/backend/corcms//js/';
+var img_front='http://localhost/lb/application//templates/front/corcms/zh//images/';
+var img_backend='http://localhost/lb/application//templates/backend/corcms//images/';
+var css_front='http://localhost/lb/application//templates/front/corcms/zh//css/';
+var css_backend='http://localhost/lb/application//templates/backend/corcms//css/';
+</script>
+<script language="JavaScript" type="text/javascript" src="http://localhost/lb/application//templates/front/corcms/zh//js//jquery-1.9.1.min.js"></script><script language="JavaScript" type="text/javascript" src="http://localhost/lb/application//templates/front/corcms/zh//js//core.js"></script><script language="JavaScript" type="text/javascript" src="http://localhost/lb/application//templates/front/corcms/zh//js//FormValid.js"></script><script language="JavaScript" type="text/javascript" src="http://localhost/lb/application//templates/front/corcms/zh//js//menu_script.js"></script>
+<script language="javascript">
+  $(function(){
+    $('#login_panel').load('http://localhost/lb/front/index/top_login'); 
+  })
+</script>
+</head>
+<body>
+<table width="991" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="3"><img src="http://localhost/lb/application//templates/front/corcms/zh//images//top_02.jpg" width="3" height="95" /></td>
+    <td style="background:url(http://localhost/lb/application//templates/front/corcms/zh//images//top_04.jpg) repeat-x"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="http://localhost/lb/application//templates/front/corcms/zh//images//logo_02.jpg" width="248" height="95" style="margin-left:20px;" /></td>
+        <td id="login_panel"> 
+        
+        </td>
+      </tr>
+    </table></td>
+    <td width="3"><img src="http://localhost/lb/application//templates/front/corcms/zh//images//top_06.jpg" width="3" height="95" /></td>
+  </tr>
+</table>
+<table width="991" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+    <SCRIPT type='text/javascript'>
+function selectTag(showContent,selfObj,str){
+	// 操作标签
+	var tag = document.getElementById("top_dhlm").getElementsByTagName("li");
+	var taglength = tag.length;
+	for(i=0; i<taglength; i++){
+		tag[i].className = "";
+	}
+	selfObj.parentNode.className = "selectTag"+str;
+	// 操作内容
+	for(i=0; j=document.getElementById("top_dhlmContent"+i); i++){
+		j.style.display = "none";
+	}
+	document.getElementById(showContent).style.display = "block";
+}
+</SCRIPT>
+
+
+
+    <div id="top_flash">
+		<script>
+            var widths=991;
+            var heights=470;	
+            var counts=parseInt("1");
+			            img1=new Image ();
+            url1=new Image ();
+            url1.src='http://localhost/lb//swfupload/uploads/未命名2.jpg';
+            img1.src='http://localhost/lb//swfupload/uploads/未命名2.jpg';
+			
+			            var nn=1; 
+            var key=0; 
+            function change_img() 
+            {if(key==0){key=1;} 
+            else if(document.all) 
+            {document.getElementById("pic1").filters[0].Apply();document.getElementById("pic1").filters[0].Play(duration=2);} 
+            eval('document.getElementById("pic1").src=img'+nn+'.src'); 
+            eval('document.getElementById("url").href=url'+nn+'.src'); 
+            for (var i=1;i<=counts;i++){document.getElementById("xxjdjj"+i).className='axx';} 
+            document.getElementById("xxjdjj"+nn).className='bxx'; 
+            nn++;if(nn>counts){nn=1;} 
+            tt=setTimeout('change_img()',6000);}
+            function changeimg(n){nn=n;window.clearInterval(tt);change_img();} 
+            document.write('<style>'); 
+            document.write('.axx{padding:1px 7px;border-left:#cccccc 1px solid;}'); 
+            document.write('a.axx:link,a.axx:visited{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:#666;}'); 
+            document.write('a.axx:active,a.axx:hover{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:#999;}'); 
+            document.write('.bxx{padding:1px 7px;border-left:#cccccc 1px solid;}'); 
+            document.write('a.bxx:link,a.bxx:visited{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:##66CC33;}'); 
+            document.write('a.bxx:active,a.bxx:hover{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:##66CC33;}'); 
+            document.write('</style>'); 
+            document.write('<div style="width:'+widths+'px;height:'+heights+'px;overflow:hidden;text-overflow:clip;">'); 
+            document.write('<div><a id="url"><img id="pic1" style="border:0px;filter:progid:dximagetransform.microsoft.wipe(gradientsize=1.0,wipestyle=4, motion=forward)" width='+widths+' height='+heights+' /></a></div>'); 
+            document.write('<div style="filter:alpha(style=1,opacity=10,finishOpacity=0);background: #888888;width:100%-2px;text-align:right;top:-12px;position:relative;margin:1px;height:12px;padding:0px;margin:0px;border:0px;">'); 
+          
+			for(var i=1;i<counts+1;i++){document.write('<a href="javascript:changeimg('+i+');" id="xxjdjj'+i+'" class="axx" target="_self">'+i+'</a>');} 
+            document.write('</div></div>'); 
+            change_img(); 
+        </script>
+	</div>
+    </td>
+  </tr>
+</table>
+<table width="991" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="link_tu" width="69"><a href="http://localhost/lb//html//index.htm" class="selected">首页</a></td><td class="link_tu" width="69"><a href="http://localhost/lb/index" class="selected">网站栏目</a></td><td class="link_tu" width="69"><a href="http://localhost/lb//html/gong_si_jian_jie/about.htm" class="">公司简介</a></td><td class="link_tu" width="69"><a href="http://localhost/lb//html/xin_wen_zhong_xin/dynamic.htm" class="">新闻中心</a></td><td class="link_tu" width="69"><a href="http://localhost/lb//html/chan_pin_zhan_shi/product.htm" class="">产品展示</a></td><td class="link_tu" width="69"><a href="http://localhost/lb/sales" class="">销售网络</a></td><td class="link_tu" width="69"><a href="http://localhost/lb/engage" class="">人才招聘</a></td><td class="link_tu" width="69"><a href="http://localhost/lb/message" class="">在线留言</a></td><td class="link_tu" width="69"><a href="http://localhost/lb/contact" class="">联系我们</a></td>
+    <td style="background:url(http://localhost/lb/application//templates/front/corcms/zh//images//daohan_25.jpg) repeat-x">&nbsp;</td>
+    <td width="2"><img src="http://localhost/lb/application//templates/front/corcms/zh//images//daohan_27.jpg" width="2" height="33" /></td>
+  </tr>
+</table>
+<table width="991" border="0" align="center" cellpadding="0" cellspacing="0" >
+  <tr>
+    <td width="652" valign="top"><table width="642" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="142" ><img src="http://localhost/lb/application//templates/front/corcms/zh//images//about_09.jpg" width="142" height="28" /></td>
+        <td width="496" style="background:url(http://localhost/lb/application//templates/front/corcms/zh//images//about_11.jpg) repeat-x">&nbsp;</td>
+        <td width="4"><img src="http://localhost/lb/application//templates/front/corcms/zh//images//about_13.jpg" width="4" height="28" /></td>
+      </tr>
+      <tr>
+        <td colspan="3"><table width="642" height="168" border="0" cellspacing="0" cellpadding="0" style="margin-top:3px; background-color:#f7f7f7" class="bian">
+          <tr>
+            <td><span class="tutu"><img src="http://localhost/lb/application//templates/front/corcms/zh//images//tu_05.jpg" width="268"  border="0" style="margin-top:5px; margin-left:5px; float:left"/></span></td>
+            <td style="padding-left:8px; padding-right:8px; line-height:18px;" class="link_qq">
+            <a  href="http://localhost/lb/about">
+            &nbsp;公司的组织形式。以营利为目的的社团法人。在资本主义社会获得高度发展。我国在建国后对私营公司进行了社会主义改造。国营工、商、建筑、运输等部门中实行独立经济核算的经营管理组织和某些城市中按行业...
+
+            </a>
+            </td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+    <td><table width="339" border="0" cellpadding="0" cellspacing="0" >
+      <tr>
+        <td width="175"><img src="http://localhost/lb/application//templates/front/corcms/zh//images//new_09.jpg" width="175" height="28" /></td>
+        <td  style="background:url(http://localhost/lb/application//templates/front/corcms/zh//images//new_11.jpg) repeat-x;width:161px">&nbsp;</td>
+        <td width="3"><img src="http://localhost/lb/application//templates/front/corcms/zh//images//new_13.jpg" width="3" height="28" /></td>
+      </tr>
+      <tr>
+        <td colspan="3"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="bian" style="background-color:#f7f7f7; margin-top:3px;height:161px;">
+          <tr>
+            <td style="line-height:30px; padding-top:7px; padding-bottom:8px;">
+            
+<img src="http://localhost/lb/application//templates/front/corcms/zh//images//hong_05.jpg" width="3" height="3" style="margin-left:13px; margin-right:5px; margin-bottom:2px" />
+<a href="http://localhost/lb/dynamic/view/1377">
+ Personalized En
+<span class="lan"> [2013-08-18]</span></a> <br />
+<img src="http://localhost/lb/application//templates/front/corcms/zh//images//hong_05.jpg" width="3" height="3" style="margin-left:13px; margin-right:5px; margin-bottom:2px" />
+<a href="http://localhost/lb/dynamic/view/1376">
+ 750ml Dark Gree
+<span class="lan"> [2013-08-18]</span></a> <br />
+<img src="http://localhost/lb/application//templates/front/corcms/zh//images//hong_05.jpg" width="3" height="3" style="margin-left:13px; margin-right:5px; margin-bottom:2px" />
+<a href="http://localhost/lb/dynamic/view/1375">
+ clear mouth blo
+<span class="lan"> [2013-08-18]</span></a> <br />
+<img src="http://localhost/lb/application//templates/front/corcms/zh//images//hong_05.jpg" width="3" height="3" style="margin-left:13px; margin-right:5px; margin-bottom:2px" />
+<a href="http://localhost/lb/dynamic/view/1374">
+ wine glass tumb
+<span class="lan"> [2013-08-18]</span></a> <br />
+<img src="http://localhost/lb/application//templates/front/corcms/zh//images//hong_05.jpg" width="3" height="3" style="margin-left:13px; margin-right:5px; margin-bottom:2px" />
+<a href="http://localhost/lb/dynamic/view/1373">
+ whisky glass/wh
+<span class="lan"> [2013-08-18]</span></a> <br />
+            </td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
+
+<div style="height:5px;"></div>
+
+<table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
+  <tr>
+    <td width="7"><img src="http://localhost/lb/application//templates/front/corcms/zh//images//banquan_09.jpg" width="7" height="39" /></td>
+    <td align="center" style="background:url(http://localhost/lb/application//templates/front/corcms/zh//images//banquan_11.jpg) repeat-x"><span class="hui">CCMS 版权所有 Copyright @2013-2015 Conqweal All Right Reserved</span></td>
+    <td width="7"><img src="http://localhost/lb/application//templates/front/corcms/zh//images//banquan_13.jpg" width="7" height="39" /></td>
+  </tr>
+</table>
+
+
+</body>
+</html>

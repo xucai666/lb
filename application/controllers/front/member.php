@@ -17,13 +17,7 @@ class Member extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();		
-		//启用缓存显示,key is action name,val is view name
-		$act2view = array(
-			'index'=>'member_login',
-			'action_register'=>'member_register',
-		);
-		
-		$this->cor_page->view_cache_all($act2view);
+
 		//initial Breadcrumb
 		$this->load->library('Breadcrumb');
 		$this->load->model('Member_model','im');

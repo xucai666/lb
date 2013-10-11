@@ -76,14 +76,14 @@
 
 
   <tr style="height:30px!important; background-color:#f1f1f1">
-    <th align="right">留言：</th>
+    <th align="right">问：</th>
     <td colspan="3" align="left"><a href='#' onmouseout="$('#people_container').hide();" onmouseover="showimg(this);" ><!--{$item.ms_title}--></a>
 		&nbsp;&nbsp;
 		<!--{$item.ms_content}-->
 		&nbsp;&nbsp;
 		<!--{$item.ms_date}-->&nbsp;&nbsp;<!--{$item.ms_ip}-->
 		&nbsp;&nbsp;
-       <a href="<!--{$site_url}-->/backend/message/action_del?ms_id=<!--{$item.ms_id}-->" onclick="return confirm('确定删除?');" style="float:right;"><img name="" src="<!--{$img_url}-->/del.png"  alt="" /></a>    </div> 
+       <a href="<!--{$site_url}-->/backend/message/action_del?ms_id=<!--{$item.ms_id}-->" onclick="return confirm('确定删除?');"><img name="" src="<!--{$img_url}-->/del.png"  alt="" /></a>    </div> 
 
     <div style="display:none;margin-left:50px;">
 	    <li>公司名称：<!--{$item.ms_company}--></li>
@@ -108,7 +108,7 @@
     <td colspan="3" align="left">&nbsp;</td>
     </tr>
   <tr>
-    <th align="right">回复：</th>
+    <th align="right">答：</th>
     <td colspan="3" align="left"><form action="<!--{$site_url}-->/backend/message/action_save" method="post" name="form1" target="_myiframe" id="form1">
       <textarea name="main[ms_feedback]" cols="50" rows="5" id="main[ms_feedback]"><!--{$item.ms_feedback}--></textarea>
         <label>
@@ -117,11 +117,11 @@
        
         </label>
 		
-		<div style="margin-top:10px;margin-bottom:10px;"><!--{create_button type='submit' }--></div>
+		<!--{create_button type='save'}-->
     </form>      <label></label></td>
   </tr>
   <tr>
-    <th align="right">是否显示：</th>
+    <th align="right">显示：</th>
     <td colspan="3" align="left">
 	
 	<a href="javascript:;"  class="<!--{if $item.ms_valid}-->yes<!--{else}-->no<!--{/if}-->"    alt=""  onclick="ajax_change_state(this,'message','ms_id','<!--{$item.ms_id}-->','ms_valid');">&nbsp;</a>

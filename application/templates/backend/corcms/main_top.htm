@@ -16,6 +16,9 @@
 	<tr><td rowspan="2" width="150"><div class="logo"><a href="<!--{site_url()}-->" target="_blank"><img src="<!--{$img_url}-->x6cms.gif" width=150></a></div></td>
 	<td height="40"><div class="nav">&nbsp;&nbsp;&nbsp;&nbsp;欢迎您！<!--{$user_info.admin_user}--><i>|</i> [<!--{$user_info.role_name}-->]  <i>|</i> [<a href="<!--{site_url('/backend/system_manage/exit_system')}-->" target="_top"><!--{"exit"|lang}--></a>]</div></td>
 	<td align="right"><div class="nav">
+
+<a href="javascript:;" onclick="top.lock_screen()"><img src="<!--{$img_url}-->lockscreen.png"> 锁屏</a>
+
 <a href="<!--{site_url()}-->" target="_blank">浏览站点</a>
 <i>|</i>
 
@@ -59,14 +62,16 @@ $(function($){
 	$("#topmenufunc_0").addClass('current');
 })
 
-</script>
-<script>
-//var throughBox = $.dialog.through;
-	//var myDialog = throughBox({title:'xx',lock:true});
-	//myDialog.content('zzzzzzz');
 
-	
+
+
+
 
 </script>
+
+
+
+
+
 
 </body></html>

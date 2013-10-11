@@ -341,4 +341,61 @@ function RndString($body)
   return $reString;
 }//函数结束
 
+
+
+  
+  //获得当前的脚本网址 
+  function GetCurUrl() 
+  { 
+    if(!empty($_SERVER["REQUEST_URI"])) 
+    { 
+      $scriptName = $_SERVER["REQUEST_URI"]; 
+      $nowurl = $scriptName; 
+    } 
+    else 
+    { 
+     $scriptName = $_SERVER["PHP_SELF"]; 
+      if(empty($_SERVER["QUERY_STRING"])) 
+      { 
+      $nowurl = $scriptName; 
+      } 
+      else 
+      { 
+      $nowurl = $scriptName."?".$_SERVER["QUERY_STRING"]; 
+      } 
+    } 
+    
+    
+    $nowurl = str_replace("/index.php", "", $nowurl);
+
+    return $nowurl;
+  } 
+
+
+    
+  /**
+   * make html
+   */
+  function MakeHtmlFile($file_name, $content) {      
+        //目录不存在就创建  
+        $CI = & get_instance(); 
+        $CI->Common_model->mkdirs(dirname($file_name));                      
+        if(!$fp = fopen($file_name, "w")){  
+            echo "文件打开失败！";  
+            return false;  
+        }  
+ 
+        if(!fwrite($fp, $content)){  
+            echo "文件写入失败！";  
+            fclose($fp);  
+            return false;  
+        }  
+        fclose($fp); 
+        @chmod($file_name,0666); 
+    }
+
+
+
+
+
 ?>

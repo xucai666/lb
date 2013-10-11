@@ -10,6 +10,11 @@
 <!--{$header_html.css}-->
 <!--{$header_html.js}-->
 <base target="_self" />
+<script language="javascript">
+  $(function(){
+    $('#login_panel').load('<!--{site_url('front/index/top_login')}-->'); 
+  })
+</script>
 
 </head> 
  <body> 
@@ -23,42 +28,7 @@
         <img src="<!--{$img_url}-->/logo_02.jpg" width="237" height="95" style="margin-left:27px;" /></td>
         <td width="552"><table width="552" border="0" cellspacing="0" cellpadding="0">
           <tr>
-            <td width="552" align="right" style="position:relative" >
-            
-                        
-                   
-            
-              <form id="form1" name="form1" method="get" action="<!--{func_site_url segments='search'}-->" >
-         <ul class="index_top_right">
-           
-             <li <!--{if !config_item('lang_multiple')}--> class="hide" <!--{/if}-->>
-             <a href="<!--{$site_url|cat:$next_lang}-->"><img src="<!--{$img_url}-->/lang_change.gif">&nbsp;<!--{$lang_type}--></a>
-            
-          
-         </li>
-         <li class="top_search_li" > 
-            <input type="text" name="title" id="textfield"   class="input" value="<!--{$smarty.get.title}-->"/> 
-            <input type="submit"  class="top_search_button" value="" />
-            </li>
-
-            <li class="account_link">
-            <!--{if "member"|get_cookie}-->
-            <a href="<!--{"front/member/action_member_center"|site_url}-->">
-
-            你好,<!--{"member"|get_cookie|func_my_encrypt:'DECODE'}-->, 会员中心</a>
-
-            <!--{else}-->
-            <a href="<!--{"front/member/action_register"|site_url}-->">注册</a><a href="<!--{"front/member/index"|site_url}-->">登陆</a>
-            
-            <!--{/if}-->
-
-
-            </li>
-           
-        </ul>
-
-          </form>
-        
+            <td width="552" align="right" style="position:relative" id="login_panel" >        
             
             </td>
           </tr>
@@ -92,3 +62,4 @@
   </tr>
 </table>
 <!--{$breadcrumb}-->
+

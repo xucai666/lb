@@ -419,6 +419,7 @@ function load_autocomplete(_auto_obj){
 
 
 function loadjs(file,id){
+	alert(file)
 	$("<scri"+"pt>"+"</scr"+"ipt>").attr({src:file,type:'text/javascript',id:id}).appendTo($('head').remove(id));
 
 }
@@ -471,7 +472,6 @@ function ImgError(source){
  * @return {[type]}            [description]
  */
 function art_dialog_close(msg,callback){
-
 		var list = art.dialog.list;
 		for (var i in list) {
 		    list[i].close();

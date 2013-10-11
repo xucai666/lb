@@ -196,9 +196,10 @@ class Mdata extends CI_Controller{
 		 			'log_type'=>'12',
 		 			'log_desc'=>sprintf('module %s,%s ID %s success',$this->m->main($this->im->get_mid(),'m_name'),$rs['sys_db_type'],$rs['main'][$log_cf['main']['primary_key']]),
 		 		));
-		 		if(empty($main[$primary])){
-   					$callback = ',parent.frmright_reload()';
-		 		}
+		 		// if(empty($main[$primary])){
+   					$callback = ',top.frmright_reload()';
+		 		// }
+		 		@header("content-type:text/html;charset=utf-8;");
 		 		echo "<script>top.art_dialog_close('保存完毕.'".$callback.");</script>";
 		 		exit;
 			} 

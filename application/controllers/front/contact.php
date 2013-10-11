@@ -18,11 +18,8 @@ class Contact extends CI_Controller {
 	{
 		parent::__construct();	
 		
-		//启用缓存显示,key is action name,val is view name
-		$act_to_view = array(
-			'index'=>'contact',
-		);
-		$this->cor_page->view_cache_all($act_to_view);
+		
+
 	
 	}
 	

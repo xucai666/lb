@@ -17,11 +17,7 @@ class Detail extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();	
-		//启用缓存显示,key is action name,val is view name
-		$act_to_view = array(
-			'index'=>'detail',
-		);
-		$this->cor_page->view_cache_all($act_to_view);		
+		
 	}
 	
 	/**

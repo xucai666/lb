@@ -74,6 +74,8 @@
                ); 
        	
             set_cookie($cookie);  
+            $CI  = &get_instance();
+            $CI->session->set_userdata('lock_screen', '0');
             
  		}
  		
@@ -90,7 +92,7 @@
         set_cookie($cookie);   
 
         //add login log
-    	$CI = &get_instance();
+    	
 		    $data = array(
  		   	'login_ip'=>$CI->input->ip_address(),
  		   	'login_client'=>$CI->input->user_agent(),
@@ -107,6 +109,8 @@
  		foreach($session_data as $k){
  				delete_cookie($k);
  		}  	
+ 		$CI  = &get_instance();
+        $CI->session->set_userdata('lock_screen', '0');
  		redirect($url);
  	}
  	

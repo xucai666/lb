@@ -179,7 +179,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  }
   
  function &get_cor_cache(){	
-	return cor_cache::get_cor_cache();
+	return Cor_cache::get_cor_cache();
 } 
 	
 ?>

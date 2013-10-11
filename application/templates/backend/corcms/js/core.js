@@ -570,8 +570,7 @@ function art_dialog_close(msg,callback){
 		}
 		if(msg!="undefined" && typeof(msg)!="undefined"){
 			top.art.dialog.tips(msg);
-		}
-		
+		}		
 		(callback && typeof(callback) === "function") && callback();
 }
 	
@@ -633,7 +632,22 @@ var toUN = {
     }
 };
 
+//取得拼音
+function ajax_pinyin(str,obj){
 
+	$.ajax({
+	  type: "POST",
+	  url: site_url+"backend/common/ajax_pinyin",
+	  data:{str:str},
+	  dataType: "text",
+	  success:function(msg){
+		  	obj.val(msg);
+	  }
+	  
+	});
+
+
+}
 
 //document ready
 $(function($){

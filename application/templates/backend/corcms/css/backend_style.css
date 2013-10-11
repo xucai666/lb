@@ -305,11 +305,11 @@ h2{
 }
 
 .nav_title{
-	font-size:16px;font-weight:bold;color:#15428B;padding-left:40px;
+	font-size:16px;font-weight:bold;color:#15428B;padding-left:20px;
 	background-image: url(../images/nav_theme_1.gif);
 	background-repeat: no-repeat;
 	height:25px;
-	background-position: 22px 5px;
+	
 	
 
 }
@@ -368,14 +368,10 @@ h2{
 .search li{
 	float:left;
 	list-style-type: none;
-	width: auto;	
-	
+	width: auto;		
 	overflow: hidden;
 	display: inline;
 	vertical-align: middle;
-	
-	
-
 
 }
 
@@ -665,8 +661,8 @@ color:#ffffff;
 
   
 
-.main_foot{width:100%;height:30px;background:#f6f6f6;border-top:1px solid #eee;margin:0;padding:1px;position:fixed;_position:absolute;bottom:0;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));}
-.main_head{width:100%;padding:0;background:#ffffff;height:70px;line-height:25px;position:fixed;_position:absolute;bittom:0;_bottom:auto;top:0px;_top:expression(eval(document.documentElement.scrollTop));}
+.main_foot{width:100%;height:55px;background:#f6f6f6;border-top:1px solid #ccc;margin:0;padding:1px;position:fixed;_position:absolute;bottom:0;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));}
+.main_head{border-bottom:1px solid #cccccc;width:100%;padding:0;background:#ffffff;height:65px;line-height:25px;position:fixed;_position:absolute;bittom:0;_bottom:auto;top:0px;_top:expression(eval(document.documentElement.scrollTop));}
 .mdata_head{
 	cursor: pointer;
 	
@@ -676,4 +672,8 @@ color:#ffffff;
 	display: block;
 	height:20px;
 	
+}
+.textarea{
+	width:350px;
+	height:135px;
 }

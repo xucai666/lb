@@ -153,40 +153,10 @@ class Cor_page{
 		return $type=='backend'?$type.'/'.$this->front_theme.'/'.$v:$type.'/'.$this->front_theme.'/'.$this->lang_type.'/'.$v;
 	}
 
-	//cache for single view
-	function view_cache($v,$type='front'){
-		$CI = & get_instance();	
-		$tpl_path = $this->get_view_path($v,$type);
-		$cache_id = $this->get_cache_id();
-		if($CI->tpl->isCached($tpl_path,$cache_id)){
-			 $CI->tpl->display($tpl_path,$cache_id);
-			 exit;
-		}
-
-	}
-
-	//caching for views
-	function view_cache_all($act_to_view){
-		$CI = & get_instance();	
-		$act_current = $CI->router->fetch_method();
-	    if(in_array($act_current, array_keys($act_to_view))){
-	    	$this->view_cache($act_to_view[$act_current]);
-	    }else{
-	    	$CI->tpl->caching = 0;
-	    }
-
-	}
-
-	//cache unique id
-	function get_cache_id(){
-		return md5($this->GetCurUrl());
-	}
 
 
-	function clear_page_cache($v){
-		$CI = &get_instance();
-		$CI->tpl->clearCache($this->get_view_path($v,'front'),$this->get_cache_id());
-	}
+
+
 	/*
 	 * 前台view,load
 	 */	
@@ -233,19 +203,7 @@ class Cor_page{
 
 
 			$data['header_html'] = $this->header_html;	
-			/*
-			 *
-			if(is_array($view)){
-				foreach($view as $v){
-					 $tpl->view($this->get_view_path($v,'front'),$data);
-					
-			    }
-		    }else{
-				     $tpl->view($this->get_view_path($view,'front'),$data);
-				
-		    }
-			 * 
-		     */
+			
 		    if(is_array($view)){
 				foreach($view as $v){
 					
@@ -259,64 +217,16 @@ class Cor_page{
 				if($sys_config['optimize']['gather']) $content = RndString($content);
 				$OUT->append_output($content);	
 				
-			}
+			}		
 
+			
 			$OUT->_display(); 
 			exit;
 					
 	}	
 	
 	
-	//获得当前的脚本网址 
-	function GetCurUrl() 
-	{ 
-		if(!empty($_SERVER["REQUEST_URI"])) 
-		{ 
-		$scriptName = $_SERVER["REQUEST_URI"]; 
-		$nowurl = $scriptName; 
-		} 
-		else 
-		{ 
-		$scriptName = $_SERVER["PHP_SELF"]; 
-		if(empty($_SERVER["QUERY_STRING"])) 
-		{ 
-		$nowurl = $scriptName; 
-		} 
-		else 
-		{ 
-		$nowurl = $scriptName."?".$_SERVER["QUERY_STRING"]; 
-		} 
-		} 
-		if(substr($nowurl,0,1)=='/'){
-			$nowurl = substr($nowurl,1);
-		}
-		return $nowurl;
-	} 
 	
-	/**
-	 * make html
-	 */
-	function MakeHtmlFile($file_name, $content) {      
-        //目录不存在就创建  
-        if (!file_exists (dirname($file_name))) {  
-            if (!@mkdir (dirname($file_name), 0777)) {  
-                die($file_name."目录创建失败！");  
-            }  
-        }  
-                      
-        if(!$fp = fopen($file_name, "w")){  
-            echo "文件打开失败！";  
-            return false;  
-        }  
- 
-        if(!fwrite($fp, $content)){  
-            echo "文件写入失败！";  
-            fclose($fp);  
-            return false;  
-        }  
-        fclose($fp); 
-        chmod($file_name,0666); 
-    }
 	
 	/**
 	 * 加载js
@@ -549,7 +459,6 @@ class Cor_page{
  * javascript alert
  */
 function myalert($msg){
-	@header("content-type:text/html;charset=utf-8");
 	echo "<script language='javascript'>alert('".$msg."');</script>";
 	exit();
 }
@@ -557,7 +466,7 @@ function myalert($msg){
 
 function &get_cor_page()
 {
-	return cor_page::get_cor_page();
+	return Cor_page::get_cor_page();
 }
 
 

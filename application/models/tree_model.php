@@ -44,7 +44,7 @@ class Tree_model extends CI_Model{
 	 */
 	function fetch_select($treeId=null,$v_field='name'){
 		$treeId = $treeId?$treeId:$this->get_root();
-		return $this->cor_form->array_re_index($this->db->select("id,name as init_name",false)->select('LEVEL,CONCAT(REPEAT("|-",LEVEL),NAME) as name',false)->from('tree_node')->where('treeId',$treeId)->order_by('leftId','asc')->get()->result_array(),'id',$v_field);
+		return $this->cor_form->array_re_index($this->db->select("id,name as init_name",false)->select('LEVEL,CONCAT(REPEAT("│ ",LEVEL),"├─",NAME) as name',false)->from('tree_node')->where('treeId',$treeId)->order_by('leftId','asc')->get()->result_array(),'id',$v_field);
 	}
 
 	/**
@@ -54,7 +54,7 @@ class Tree_model extends CI_Model{
 	 */
 	function fetch_select_query($treeId=null){
 		$treeId = $treeId?$treeId:$this->get_root();
-		$ls =  $this->cor_form->array_re_index($this->db->select("id,name as init_name,leftId,rightId",false)->select('LEVEL,CONCAT(REPEAT("|-",LEVEL),NAME) as name',false)->from('tree_node')->where('treeId',$treeId)->order_by('leftId','asc')->get()->result_array(),'id');
+		$ls =  $this->cor_form->array_re_index($this->db->select("id,name as init_name,leftId,rightId",false)->select('LEVEL,CONCAT(REPEAT("│ ",LEVEL),"├─",NAME) as name',false)->from('tree_node')->where('treeId',$treeId)->order_by('leftId','asc')->get()->result_array(),'id');
 		$ls_new = array();
 		foreach($ls as $v){
 			$ds = $this->db->select("group_concat(id) as ids",false)->from('tree_node')->where('treeId',$treeId)->where('leftId <= '.$v[leftId].' and rightId >= '.$v[rightId])->get()->first_row('array');
@@ -81,6 +81,15 @@ class Tree_model extends CI_Model{
 		return $key?$ds[$key]:$ds;
 	}
 
+	//detail
+	function tree_detail($treeId,$key=null){
+		$ds = $this->db->select("*")->from("tree_node")->where(array('pid'=>0,'treeId'=>$treeId))->get()->first_row('array');
+		return $key?$ds[$key]:$ds;
+	}
+
+
+
+
 
 
 
@@ -104,20 +113,47 @@ class Tree_model extends CI_Model{
 
 	/**
 	 * 添加根节点
-	 * @param [type] $tree_id
+	 * @param [type] $treeId
 	 * @param [type] $code
 	 * @param [type] $name
 	 */
-	function add_tree_root_node($tree_id,$code,$name){
+	function add_tree_root_node($code,$name){
+		try {
+			$aff = 0;	
+			$sql = "SELECT ifnull(max(treeId),0)+1 as treeId  FROM ".$this->db->dbprefix."tree_node WHERE   pid = 0";
+			$v = $this->db->query($sql)->first_row('array');
+			$treeId = $v['treeId'];	
+			$this->db->query('START TRANSACTION');
+			$sql = "INSERT INTO ".$this->db->dbprefix."tree_node(code,name,pid,leftId,rightId,level,treeId) VALUES ('$code','$name',0,1,2,0,$treeId)";
+			$this->db->query($sql);
+			$aff = $this->db->affected_rows();
+			if($aff==1){
+				$insert_id =  $this->db->insert_id();
+				$this->db->query('COMMIT');
+			}else{
+				$this->db->query('ROLLBACK');
+			}
+			return $insert_id;
+
+		} catch (Exception $e) {
+			throw new Exception($e->getMessage(), 1);
+			
+		}
+	}
+
+
+/**
+	 * 添加根节点
+	 * @param [type] $treeId
+	 * @param [type] $code
+	 * @param [type] $name
+	 */
+	function edit_tree_root_node($id,$code,$name){
 		try {
 			$aff = 0;
-			$sql = "SELECT leftId as vLeftId  FROM ".$this->db->dbprefix."tree_node WHERE treeId= $tree_id AND pid = 0";
-			$v = $this->db->query($sql)->first_row('array');
-			if($v[vLeftId]){
-				throw new Exception("根节点已存在", 1);
-			}
+			
 			$this->db->query('START TRANSACTION');
-			$sql = "INSERT INTO ".$this->db->dbprefix."tree_node(code,name,pid,leftId,rightId,level,treeId) VALUES ('$code','$name',0,1,2,0,$tree_id)";
+			$sql = "update ".$this->db->dbprefix."tree_node set name='".$name."' where id= ".$id;
 			$this->db->query($sql);
 			$aff = $this->db->affected_rows();
 			if($aff==1){
@@ -131,6 +167,9 @@ class Tree_model extends CI_Model{
 			
 		}
 	}
+
+
+
 
 	/**
 	 * 添加节点
@@ -336,6 +375,7 @@ class Tree_model extends CI_Model{
 		}
 
 	}
+
 
 
 

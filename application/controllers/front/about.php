@@ -20,13 +20,6 @@ class About extends CI_Controller {
 		
 	
 		
-		//启用缓存显示,key is action name,val is view name
-		$act2view = array(
-			'index'=>'about',
-			'contact'=>'contact',
-		);
-
-		$this->cor_page->view_cache_all($act2view);
 		
 
 	}
@@ -36,9 +29,8 @@ class About extends CI_Controller {
 	 */
 	function index()
 	{
-
-	
-
+		
+		$this->tpl->caching = true;
 		$this->cor_page->load_front_view('about',$data);
 	}	
 	

@@ -19,6 +19,8 @@ class Product extends CI_Controller {
 		parent::__construct();
  		$this->load->model('Product_model','im');
  		$this->load->library('Breadcrumb');
+ 		
+		
 
 	}
 	
@@ -33,7 +35,6 @@ class Product extends CI_Controller {
 		$this->breadcrumb->append_crumb('Home', '/');
 		$this->breadcrumb->append_crumb('Product', 'product');
 		$this->breadcrumb->output();
-		
 		$this->cor_page->load_front_view('product',$data);
 		
 	}
@@ -43,11 +44,11 @@ class Product extends CI_Controller {
 
 	function view(){
 		// add breadcrumbs
+		
 		$this->breadcrumb->append_crumb('Home', '/');
 		$this->breadcrumb->append_crumb('Product', '/product');
 		$this->breadcrumb->append_crumb('View', '/product/view');
-		$this->breadcrumb->output();
-
+		$this->breadcrumb->output();	
 		$this->cor_page->load_front_view("product_view",$data);
 	}
 	

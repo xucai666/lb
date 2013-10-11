@@ -4,10 +4,10 @@
 <table class="table_ctl" >
 	<!--{foreach from=$fields item=v}-->
 	 <tr>
-		<td  ><!--{$v.r_alias}-->：</td>
+		<td  width="150" ><!--{$v.r_alias}-->：</td>
 		<td>
 			
-		<!--{func_vsprintf html =$html[$v.f_id] name="main[`$v.r_name`]"  value=$main[$v.r_name]|default:$v.r_default|escape:"html"}-->
+		<!--{func_vsprintf html =$html[$v.f_id] name="main[`$v.r_name`]"  value=$main[$v.r_name]|default:$v.r_default|escape:"html" ext_prop=$v.r_ext_prop desc=$v.r_desc}-->
 		<!--{ci_form_error k="main[`$v.r_name`]"}-->
 			
 		</td>
@@ -37,7 +37,7 @@
 					<!--{foreach from=$dt_fields item=item key=key}-->
 					<td>
 
-			<!--{func_vsprintf html =$html[$item.f_id] name="detail[`$item.r_name`][$k]" value=$v[$item.r_name]|default:$item.r_default|escape:"html"}-->
+			<!--{func_vsprintf html =$html[$item.f_id] name="detail[`$item.r_name`][$k]" value=$v[$item.r_name]|default:$item.r_default|escape:"html"  }-->
 					<!--{ci_form_error k="detail[`$item.r_name`][$k]"}-->
 
 					</td>

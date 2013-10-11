@@ -22,7 +22,8 @@
 		<!--{create_button type='delete' ext=''}-->		
 		<input type="checkbox" id="chkall"  value="1" onclick="CheckAll(this.form);">
 	</th>
-	<th>编号</th>
+	<th>序号</th>
+	<th>编码</th>
 	<th>名称</th>
 	<th>Pid</th>
 	<th>操作</th>
@@ -39,6 +40,7 @@
 		<input type="checkbox" class="ids"  name="id[]" value="<!--{$item.id}-->">
 	</td>
 	<td><!--{$item.id}--></td>
+	<td><!--{$item.code}--></td>
 	<td><!--{$item.name}--></td>
 	<td><!--{$item.pid}--></td>
 	<td align='center'>

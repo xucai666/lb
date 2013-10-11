@@ -16,9 +16,7 @@ class Login extends CI_Controller {
 
 	function __construct()
 	{
-		parent::__construct();
-		
-			
+		parent::__construct();		
 		$this->lang->load('item_backend_login',lang_get());
 		$cur_lang = $this->lang->language;
 		$this->tpl->assign('lang_login',$cur_lang);
@@ -77,6 +75,12 @@ class Login extends CI_Controller {
 	 * 中心
 	 */
 	function center(){	
+			//检查锁屏状态
+			$lock_screen = $this->session->userdata('lock_screen');	
+			if(isset($lock_screen) && $lock_screen==1) {
+				$this->cor_auth->process_logout(array('user_name','user_id'),'/admin');	
+			}
+
 			$this->cor_auth->execute_auth();
 			$this->cor_page->fetch_js('artdialog/jquery.artDialog','view',getRootUrl('js','backend'));	
 			$this->lang->load("item_backend",lang_get());
@@ -239,6 +243,43 @@ class Login extends CI_Controller {
 	function main_center(){
  		$this->cor_page->load_backend_view("main_center",$data);
  	}
+
+
+
+ 	/**
+	 * 锁屏
+	 */
+	function public_lock_screen() {
+		
+		$this->session->set_userdata('lock_screen', '1');
+		echo $this->session->userdata('lock_screen');
+		exit;
+	}
+
+	function public_login_screenlock() {		
+		
+		
+
+		$rs = $this->db->select('admin_pass',false)->from('admins')->where('admin_user',$this->input->get('lock_user'))->get()->first_row('array');
+		$admin_pass = $rs['admin_pass'];
+		
+		$de_str = $this->cor_page->my_encrypt($admin_pass,"DECODE");	
+			
+		if ($this->input->get('lock_password') != $de_str)
+		{
+			
+			exit('2');
+		}
+		else
+		{
+			$this->session->set_userdata('lock_screen', '0');
+			exit('1');
+			
+		}
+
+		
+	}
+
 
 
 	

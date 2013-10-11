@@ -57,7 +57,7 @@ $config['uri_protocol']	= "AUTO";
 | http://codeigniter.com/user_guide/general/urls.html
 */
 
-$config['url_suffix'] = ".htm";
+$config['url_suffix'] = "";
 
 /*
 |--------------------------------------------------------------------------
@@ -346,9 +346,7 @@ $config['compile_dir'] = APPPATH.'compiles/';
 $config['cache_dir'] = APPPATH.'templates_c/';
 $config['left_delimiter'] = '<!--{';
 $config['right_delimiter'] = '}-->';
-//寮€鍚痵marty缂撳瓨
-$config['view_caching'] = false;
-$config['view_cache_lifetime'] = 1260;
+
 
 //琛ㄥ墠缂€
 
@@ -474,3 +472,5 @@ $config['weather'] = '';
 $config['allow_get_array'] = true;
 
 $config['time_zone']=date_default_timezone_set('Asia/shanghai');
+//html生成文件根目录
+$config['html_root'] = "/html/";

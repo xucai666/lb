@@ -35,7 +35,10 @@ select{padding:2px;}
 .down{background-position:0 -96px;}
 .audit{background-position:0 -32px;}
 .add{background-position:0 -206px;margin-top:6px;}
-.mtop{float:left;height:16px;line-height:16px;margin-left:10px;background:url(../images/ico.gif) no-repeat 0 -128px;text-indent:20px;}
+.mtop{}
+.mtop b.mtop_1{padding-left:10px;font-weight: 700;color: #275D96;font-size:14px;text-align:left;background:none;float:left;width:auto;height:20px;display:block;}
+.mtop b.mtop_2{margin-top:5px;margin-right:10px;float:right;background:url(../images/left_menu.png) no-repeat -33px -78px;width:20px;height:20px;display:block;}
+
 .shou{cursor:pointer;}
 .tag{margin-right:10px;}
 .selectcolor{padding:0px 8px;cursor:pointer;width:16px;height:16px;background:url(../images/ico.gif) no-repeat 0 -112px;margin-left:5px;}
@@ -77,13 +80,13 @@ select{padding:2px;}
 
 .left_menu  {margin:5px 10px;display:none;}
 .left_menu tr th {height:29px;line-height:29px;padding-left:10px; border-bottom:1px solid #d5dfe8;text-align:left; font-size:14px;}
-.left_menu tr td {border-bottom:  #EAEFF4 1px solid;height:29px;line-height:29px;width:100%;overflow:hidden;}
-.left_menu tr td span {margin-top:1px;padding-left:30px;float:left;cursor:pointer;width:100%;height:27px;line-height:27px;background:url(../images/dot.gif) no-repeat 15px 10px;}
+.left_menu tr td {height:29px;line-height:29px;width:100%;overflow:hidden;}
+.left_menu tr td span {margin-top:1px;padding-left:10px;float:left;cursor:pointer;width:100%;height:27px;line-height:27px;}
 .left_menu tr td a {}
-.left_menu tr td span:hover ,.left_menu tr td.on span {background:#E2E9EA url(../images/dot.gif) no-repeat 15px 10px;}
+.left_menu tr td span:hover ,.left_menu tr td.on span {background:#E2E9EA}
 
-.main{width:100%;padding-top:70px;padding-bottom:40px;font-size:12px;}
-.main_head{width:100%;padding:0;background:#ffffff;height:70px;line-height:25px;position:fixed;_position:absolute;bittom:0;_bottom:auto;top:0px;_top:expression(eval(document.documentElement.scrollTop));}
+
+.main_head{width:100%;padding:0;height:65px;line-height:25px;position:fixed;_position:absolute;bittom:0;_bottom:auto;top:0px;_top:expression(eval(document.documentElement.scrollTop));}
 .main_head table,.main table{width:99%;margin:0 auto;}
 .main_head table td,.main table td,.main_head table th,.main table th{padding-left:5px;}
 .main_head .menu{padding-top:5px;margin-top:0;_margin-top:5px;border-bottom:1px solid #ddd;line-height:25px;}
@@ -177,4 +180,52 @@ body.rtl .formError .formErrorArrow {margin: -2px 13px 0 0;}
 	
 	
 	
+}
+
+
+.ScreenLock {
+background-position: 50% 50%;
+background-repeat: no-repeat;
+height: 100%;
+left: 0;
+position: absolute;
+top: 0;
+width: 100%;
+z-index: 2000;
+}
+
+.ScreenLock {
+background-color: #3A6EA5;
+background-image: url("../images/ScreenLock.png");
+}
+
+
+.ScreenLock .inputpwd {
+font-size: 14px;
+height: 134px;
+left: 50%;
+margin: -102px 0 0 -150px;
+padding: 28px;
+position: absolute;
+top: 50%;
+width: 280px;
+}
+
+.ScreenLock h5 {
+height: 60px;
+line-height: 60px;
+padding-top: 10px;
+padding-left: 40px;
+background: url(../images/msg_bg.png) no-repeat 0px -476px;
+}
+
+.ScreenLock .submit {
+background: url(../images/ScreenLockBut.png) no-repeat;
+height: 24px;
+width: 55px;
+cursor: hand;
+display: inline-block;
+display: -moz-inline-stack;
+zoom: 1;
+border: none;
 }

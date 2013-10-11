@@ -225,11 +225,26 @@ class System_manage extends CI_Controller{
  	 function action_clear_cache(){
  	 	//清除模板编译
  	 	$this->tpl->clearCompiledTemplate();
+ 	 	$this->tpl->clearAllCache();
  	 	//清除模板缓存
  	 	//$this->tpl->clearAllCache();
  	 	$this->cor_cache->clear_pages();
  	 	//clear rights config
  	 	$this->cor_cache->cache_delete('admin_rights_config');
+ 	 	
+ 	 	//create  tree cache
+ 	 	$treeIds = $this->cor_form->array_re_index($this->db->select('treeId,name',false)->from('tree_node')->where('pid',0)->get()->result_array(),'treeId','name');
+ 	 	$this->cor_cache->cache_create($treeIds,'treeIds');
+		//create  channel cache
+ 	 	$channel = $this->cor_form->array_re_index($this->db->select('*',false)->from('module_channel')->get()->result_array(),'c_id');
+ 	 	$this->cor_cache->cache_create($channel,'channel');	//create  channel cache
+ 	 	//channel type
+ 	 	$channel_types = $this->cor_form->array_re_index($this->db->select('code,treeId,name',false)->from('tree_node')->where(array('treeId'=>3,'pid >'=>0))->get()->result_array(),'code','name');
+ 	 
+ 	 	$this->cor_cache->cache_create($channel_types,'channel_types');
+
+
+
  		$this->cor_page->pop_redirect('缓存更新成功！','javascript:parent.location.reload();');
  	}
 
@@ -373,6 +388,17 @@ class System_manage extends CI_Controller{
    		$this->cor_page->load_backend_view("regexp_test");
    }
 
+
+   function action_create_html(){
+   		$channel = $this->cor_cache->cache_fetch('channel');
+   		foreach($channel as $k=>$v){
+   			if($v['c_html'] && empty($v['c_external'])){   				
+   				MakeHtmlFile(FCPATH.config_item('html_root').'/'.$v['c_dir'].'/'.$v['c_url'].'.htm',file_get_contents(site_url().'/front/'.$v['c_url']));
+   			}
+   		}
+   		$this->cor_page->pop_redirect('html生成完毕','javascript:parent.location.reload();');
+   		
+   }
 
 
  	

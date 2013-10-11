@@ -631,6 +631,20 @@
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
+    129 => 
+    array (
+      'r_id' => '129',
+      'r_title' => '生成html',
+      'r_pid' => '78',
+      'r_name' => NULL,
+      'r_order' => '111',
+      'r_display' => '1',
+      'r_url' => 'backend/system_manage/action_create_html',
+      'r_code' => '78,129',
+      'r_level' => '2',
+      'r_js_action' => NULL,
+      'r_type' => NULL,
+    ),
     79 => 
     array (
       'r_id' => '79',
@@ -652,7 +666,7 @@
       'r_pid' => '78',
       'r_name' => '单选框测试',
       'r_order' => '1',
-      'r_display' => '0',
+      'r_display' => '1',
       'r_url' => 'backend/mdata/action_set_module/60',
       'r_code' => '78,80',
       'r_level' => '2',
@@ -828,6 +842,6 @@
       'r_type' => NULL,
     ),
   ),
-  'count' => '59',
+  'count' => '60',
   'page_link' => '',
 );?>

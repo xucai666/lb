@@ -59,6 +59,7 @@
 						<th><!--{'modules_input_field_alias'|lang}--></th>
 						<th><!--{'modules_input_field_length'|lang}--></th>
 						<th><!--{'modules_input_field_input_value'|lang}--></th>
+						<th><!--{'modules_input_field_ext_prop'|lang}--></th>
 						<th><!--{'modules_input_field_output_value'|lang}--></th>
 						<th><!--{'modules_input_field_primary'|lang}--></th>
 						<th><!--{'modules_input_field_query_able'|lang}--></th>
@@ -88,6 +89,14 @@
 						<input type="text" size="5" name="detail[r_default][<!--{$k}-->]" value="<!--{$v.r_default|escape:'html'}-->">
 						
 					</td>
+
+	<td>
+						<textarea name="detail[r_ext_prop][<!--{$k}-->]" ><!--{$v.r_ext_prop|trim|escape:'text'}-->
+						</textarea>
+						
+					</td>
+
+
 					<td>
 						<input type="text" size="5" name="detail[r_output][<!--{$k}-->]" value="<!--{$v.r_output|default:""|escape:'html'}-->">
 						
