@@ -89,11 +89,11 @@ function display_ckeditor($data = array())
     // Creating a Ckeditor instance
     $return .= cke_create_instance($data);
 	
-
+    $return .= '<script type=\"text/javascript\">';
     // Adding styles values
     if(isset($data['styles'])) {
     	
-    	$return .= "<script type=\"text/javascript\">CKEDITOR.addStylesSet( 'my_styles_" . $data['id'] . "', [";
+    	$return .= "CKEDITOR.addStylesSet( 'my_styles_" . $data['id'] . "', [";
    
     	
 	    foreach($data['styles'] as $k=>$v) {

@@ -377,13 +377,14 @@ $config['front_default_js'] = array('jquery-1.9.1.min','core','FormValid','menu_
 
 $config['per_page'] = '15';
 
+
 //骞垮憡鍥剧墖涓婁紶閰嶇疆
 
 $config['advs_files'] = array(
 	'upload_path'=>BASEPATH . '../uploads/',
 	'allowed_types'=>'swf|gif|jpg|png',	
 	'encrypt_name'=>true,
-	'max_size'=>"5000",
+	'max_size'=>"55000",
 	'overwrite'=>"true",
 );
 
@@ -395,7 +396,7 @@ $config['info_files'] = array(
 	'upload_path'=>BASEPATH . '../uploads/infos',
 	'allowed_types'=>'rar|doc|xls|ppt|zip|jpg|gif|bmp',	
 	'encrypt_name'=>true,
-	'max_size'=>"3000",
+	'max_size'=>"35000",
 );
 
 

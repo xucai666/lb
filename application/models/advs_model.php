@@ -99,7 +99,7 @@ class Advs_model extends CI_Model{
 		$this->load->library('upload');						
 		$detail = $this->input->post('detail');	
 		$main = $this->input->post('main');	
-		$file_s = $_FILES;	
+		$file_s = $_FILES;
 			
 		//重整数组	
 		foreach($file_s['detail']['name']['img'] as $k=>$v){
@@ -120,15 +120,18 @@ class Advs_model extends CI_Model{
 			$index = $key;
 			@unlink($this->input->post('adv_pic_'.$index));	
 			$this->upload->initialize($config);		
-			if(!$this->upload->do_upload($key)){
-				$error = $this->upload->display_errors();		
+			if(!$this->upload->do_upload($key)){	
+
+				$error = $this->upload->display_errors();
 				if("<p>404</p>"!=$error)	throw new Exception($error);				
 			}else{
+			
 				$rs  =  $this->upload->data();			
 				$detail['adv_pic'][$index] =  str_replace(str_replace("\\","/",FCPATH),'',$rs['full_path']);
 			}				
 			
 		}	
+		
 		return array(
 			'main'=>$main,
 			'detail'=>$this->cor_form->post_to_set($detail),
@@ -144,10 +147,11 @@ function showadv($id,$type='backend'){
 	if(empty($id)) return false;
 	$main = $this->cor_db->fetch_value( "SELECT * from ".$this->cor_db->table("advs")." where adv_id='".$id."'" );
 	if($main['adv_type']==1){	
-		$this->cor_page->fetch_js('jquery.Slider','view',$this->cor_page->getRes('js',$type));
+		//$this->cor_page->fetch_js('jquery.Slider','view',$this->cor_page->getRes('js',$type));
 		$detail = $this->db->query( "SELECT * from ".$this->cor_db->table("adv_detail")." where adv_type=1 and adv_id='".$id."'" )->result_array();
-		$reval  = "";
-		$reval  = "<table   ><tr><td >";
+		$reval = js_url('jquery-1.9.1.min','front')."\n";
+		$reval .= js_url('jquery.Slider','front')."\n";
+		$reval  .= "<table   ><tr><td >";
 		$reval .= "\n";
 		$reval .= "<style type=\"text/css\"> \n";
 		$reval .= "<!--\n";
@@ -217,7 +221,7 @@ function showadv($id,$type='backend'){
 			
 			$reval .= "		>      \n";
 		}
-		$reval .= "			<a   href=\"".$v['adv_url']."\" target=\"_blank\" title=\"".$v['adv_title']."\">	<img src=\"".$v['adv_pic']."\" width=\"".$main['adv_w']."\" height=\"".$main['adv_h']."\" class=\"myimg\" /></a> \n";
+		$reval .= "			<a   href=\"".$v['adv_url']."\" target=\"_blank\" title=\"".$v['adv_title']."\">	<img src=\"".base_url().$v['adv_pic']."\" width=\"".$main['adv_w']."\" height=\"".$main['adv_h']."\" class=\"myimg\" /></a> \n";
 		$reval .= "		</li> \n";
 		$reval .= "       \n";
 		$reval .= "	  \n";
@@ -243,15 +247,14 @@ function showadv($id,$type='backend'){
 	$reval .= "</tr> \n";
 	$reval .= "</table> \n";
 	
-	}else{
-		$this->cor_page->fetch_js('swfobject','view',$this->cor_page->getRes('js',$type));
+	}else{	
+
 		$detail = $this->db->query( "SELECT * from ".$this->cor_db->table("adv_detail")." where adv_type=2 and   adv_id='".$id."'" )->first_row("array");
-		$reval  = "";
-		$reval  = "<table><tr><td>";		
-		
+		$reval  = js_url('jquery-1.9.1.min','front')."\n";
+		$reval .= js_url('swfobject','front')."\n";
+		$reval .= "<table><tr><td>";		
 		$reval .= "\n";
-		$reval .= '<div id="flash_'.$detail['detail_id'].'"></div><script>swfobject.embedSWF("'.$detail[adv_pic].'", "flash_'.$detail['detail_id'].'", "'.$main[adv_w].'", "'.$main[adv_h].'", "9.0.0", "expressInstall.swf");</script>';
-		
+		$reval .= '<div id="flash_'.$detail['detail_id'].'"></div><script>swfobject.embedSWF("'.base_url().$detail['adv_pic'].'", "flash_'.$detail['detail_id'].'", "'.$main[adv_w].'", "'.$main[adv_h].'", "9.0.0", "expressInstall.swf");</script>';
 		$reval .= "</td>\n";
 		$reval .= "</tr>\n";
 		$reval .= "</table>\n";

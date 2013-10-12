@@ -54,7 +54,7 @@ class Advs extends CI_Controller{
 			'total_size'=>count($detail),
 			'editor'=> $this->Common_model->editor($main['info_content']),
 			'adv_show'=> $adv_show,
-		);
+		);		
 		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);		
 	}
 	
@@ -73,22 +73,30 @@ class Advs extends CI_Controller{
 		 	if($this->form_validation->run()==true){
 		 		//上传文件	
 		 		$data = $this->im->do_upload($main);
-		 		
-		 		$this->cor_db->save($data,$this->im->db_config());
+		 		$rs = $this->cor_db->save($data,$this->im->db_config());
+		 		$main  = $rs['main'];
+		 		$adv_id = $main['adv_id'];
+				$adv_show = $this->im->showadv($adv_id);	
+
+				$adv_show =  "document.write('".str_replace(array("\r","\n"),array('',''),addslashes($adv_show))."');";
+				MakeHtmlFile(FCPATH.config_item('html_root').'/js/zh_'.$adv_id.'.js',$adv_show);	
 		 		$this->cor_page->pop_redirect('已保存',site_url('backend/advs/action_list/?parent_cat='.$main['info_class_sn']));
 		 	}else{
 		 		;
 				$data['editor']  = $this->Common_model->editor($main['info_content']);
 		 		$this->cor_page->load_backend_view('advs_add',$data);
 		 	}
-		
-	 		
+
 	 	}catch(Exception $e){
 	 		$this->cor_page->backend_redirect('javascript:history.go(-1);',$e->getMessage());
 	 	}			
 	 }
 	
-	 
+	 function action_view(){
+	 	 $adv_id   = $this->input->get('adv_id');
+	 	 $data['adv_url'] = base_url().config_item('html_root').'/js/zh_'.$adv_id.'.js';
+		 $this->cor_page->load_backend_view('advs_view',$data);	
+	 }
 	 
 	 /*
 	  *  * 方法说明
