@@ -10,7 +10,7 @@
     'c_html' => '1',
     'c_pid' => '10',
     'c_type' => '1',
-    'c_dir' => '',
+    'c_dir' => './../',
   ),
   12 => 
   array (
@@ -135,7 +135,7 @@
     'c_title' => '网站栏目',
     'c_url' => 'index',
     'c_order' => '1',
-    'c_display' => '1',
+    'c_display' => '0',
     'c_pic' => '',
     'c_html' => '0',
     'c_pid' => '0',

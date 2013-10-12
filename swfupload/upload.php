@@ -77,9 +77,11 @@ Notes:
 
 // Settings
     $uid = $_POST['uid'];
+    $uid = $uid ? $uid:uniqid();
     $table = $_POST['table'];
 	$post_path = $_POST['save_path'];
-	$save_path = $post_path? base64_decode($post_path).DIRECTORY_SEPARATOR:getcwd()."/uploads/"; // The path were we will save the file (getcwd() may not be reliable and should be tested in your environment)
+	//custom save path
+	$save_path = $post_path? base64_decode($post_path).DIRECTORY_SEPARATOR:dirname(__file__)."/uploads/images/".date("Y-m-d").'/'; // The path were we will save the file (getcwd() may not be reliable and should be tested in your environment)
 
 	make_dir($save_path);
 
@@ -132,10 +134,11 @@ Notes:
 	$file_name = $_FILES[$upload_name]['name'];
 	//new name
 	$dir = $save_path;
-	$arr = scandir($dir); 
+	$arr = scandir($dir); 	
 	$all = count(preg_grep("/^".$uid."/", $arr))+1;
 	$file_name = $uid.'____'.sprintf("%06d",$all).substr(strrchr($file_name,'.'),0);
-	$save_url = $_POST['save_url'];
+	//custom url
+	$save_url = $_POST['save_url']?$_POST['save_url']:'http://'.$_SERVER['HTTP_HOST'].str_replace("\\", '/', str_replace(realpath($_SERVER['DOCUMENT_ROOT']),'',realpath($save_path))).'/';
 	if (strlen($file_name) == 0 || strlen($file_name) > $MAX_FILENAME_LENGTH) {
 		HandleError("Invalid file name");
 		exit(0);

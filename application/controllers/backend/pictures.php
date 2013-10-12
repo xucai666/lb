@@ -20,6 +20,7 @@ class Pictures extends CI_Controller{
 		$this->load->model('Pictures_model'); 
 		$this->act = 'pictures';	
 		$this->im = $this->Pictures_model;
+		
 	}
 
 

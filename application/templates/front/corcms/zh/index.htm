@@ -58,8 +58,8 @@ function selectTag(showContent,selfObj,str){
 			<!--{foreach from=$pics.list item=item key=key}-->
             img<!--{$key+1}-->=new Image ();
             url<!--{$key+1}-->=new Image ();
-            url<!--{$key+1}-->.src='<!--{$base_url}-->/swfupload/uploads/<!--{$item.p_thumb}-->';
-            img<!--{$key+1}-->.src='<!--{$base_url}-->/swfupload/uploads/<!--{$item.p_thumb}-->';
+            url<!--{$key+1}-->.src='<!--{$item.p_thumb}-->';
+            img<!--{$key+1}-->.src='<!--{$item.p_thumb}-->';
 			
 			<!--{/foreach}-->
             var nn=1; 
@@ -84,10 +84,10 @@ function selectTag(showContent,selfObj,str){
             document.write('a.bxx:active,a.bxx:hover{text-decoration:none;color:#fff;line-height:12px;font:9px sans-serif;background-color:##66CC33;}'); 
             document.write('</style>'); 
             document.write('<div style="width:'+widths+'px;height:'+heights+'px;overflow:hidden;text-overflow:clip;">'); 
-            document.write('<div><a id="url"><img id="pic1" style="border:0px;filter:progid:dximagetransform.microsoft.wipe(gradientsize=1.0,wipestyle=4, motion=forward)" width='+widths+' height='+heights+' /></a></div>'); 
+            document.write('<div><a id="url" target="_blank"><img id="pic1" style="border:0px;filter:progid:dximagetransform.microsoft.wipe(gradientsize=1.0,wipestyle=4, motion=forward)" width='+widths+' height='+heights+' /></a></div>'); 
             document.write('<div style="filter:alpha(style=1,opacity=10,finishOpacity=0);background: #888888;width:100%-2px;text-align:right;top:-12px;position:relative;margin:1px;height:12px;padding:0px;margin:0px;border:0px;">'); 
           
-			for(var i=1;i<counts+1;i++){document.write('<a href="javascript:changeimg('+i+');" id="xxjdjj'+i+'" class="axx" target="_self">'+i+'</a>');} 
+			for(var i=1;i<counts+1;i++){document.write('<a target="_self" href="javascript:changeimg('+i+');" id="xxjdjj'+i+'" class="axx" >'+i+'</a>');} 
             document.write('</div></div>'); 
             change_img(); 
         </script>

@@ -25,8 +25,8 @@
 				upload_start_handler : uploadStart,
 				upload_progress_handler : uploadProgress,
 				upload_error_handler : uploadError,
-				upload_success_handler : uploadSuccess,
-				upload_complete_handler : uploadComplete_<!--{$key}-->,
+				upload_success_handler : uploadSuccess_<!--{$key}-->,
+				//upload_complete_handler : uploadComplete_<!--{$key}-->,
 				// Button Settings
 				button_image_url : "<!--{$base_url}-->/swfupload/images/TestImageNoText_65x29.png",
 				button_placeholder_id : "spanButtonPlaceholder_<!--{$key}-->",
@@ -47,15 +47,16 @@
 				// Debug Settings
 				debug: false
 			});
-			function uploadComplete_<!--{$key}-->(file, serverData){
-				
-				$('#show_img_<!--{$key}-->').html('<img src="<!--{$base_url}-->/swfupload/uploads/'+file.name+'" width="100" />');
+			function uploadSuccess_<!--{$key}-->(file, serverData){
+				    var rs = eval('('+serverData+')') ;
+			
+				$('#show_img_<!--{$key}-->').html('<img src="'+rs.url+'" width="100" />');
 			
 				
 				$.ajax({
 				   type: "POST",
 				   url: '<!--{$site_url}-->/backend/pictures/action_index_rotation_save',
-				   data: {"p_type":"index_rotation","p_tb":"pictures_config",'p_key':'1','p_id':$('#p_id_<!--{$key}-->').val(),'p_thumb':file.name},
+				   data: {"p_type":"index_rotation","p_tb":"pictures_config",'p_key':'1','p_id':$('#p_id_<!--{$key}-->').val(),'p_thumb':rs.url},
 				   dataType:"json",
 				   success: function(msg){	
 				  
@@ -70,6 +71,7 @@
 			upload_1000 = new SWFUpload({
 				// Backend Settings
 				upload_url: "<!--{$base_url}-->/swfupload/upload.php",
+
 				post_params: {"p_type":"index_rotation","p_tb":"pictures_config",'p_key':'1'},
 				// File Upload Settings
 				file_size_limit : "1024",	// 100MB
@@ -85,8 +87,8 @@
 				upload_start_handler : uploadStart,
 				upload_progress_handler : uploadProgress,
 				upload_error_handler : uploadError,
-				upload_success_handler : uploadSuccess,
-				upload_complete_handler : uploadComplete_1000,
+				upload_success_handler : uploadSuccess_1000,
+				//upload_complete_handler : uploadComplete_1000,
 				queue_complete_handler : queueComplete, 
 				
 				
@@ -109,12 +111,13 @@
 				// Debug Settings
 				debug: false
 			});
-			function uploadComplete_1000(file, serverData){
-			
+			function uploadSuccess_1000(file, serverData){
+			  var rs = eval('('+serverData+')') ;
+
 				$.ajax({
 				   type: "POST",
 				   url: '<!--{$site_url}-->/backend/pictures/action_index_rotation_save',
-				   data: {"p_type":"index_rotation","p_tb":"pictures_config",'p_key':'1','p_thumb':file.name},
+				   data: {"p_type":"index_rotation","p_tb":"pictures_config",'p_key':'1','p_thumb':rs.url},
 				   dataType:"json",
 				   success: function(msg){	
 				  	
@@ -194,7 +197,7 @@
         
         <div id='show_img_<!--{$key}-->'>
         <!--{if $item.p_thumb}-->
-          <img src="<!--{$base_url}-->/swfupload/uploads/<!--{$item.p_thumb}-->" width="100" />
+          <img src="<!--{$item.p_thumb}-->" width="100" />
            <!--{/if}-->
           </div>
        

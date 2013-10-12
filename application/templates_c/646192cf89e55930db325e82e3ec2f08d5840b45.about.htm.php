@@ -1,4 +1,45 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php /*%%SmartyHeaderCode:1238352590e527cc040-13926546%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '646192cf89e55930db325e82e3ec2f08d5840b45' => 
+    array (
+      0 => 'application\\templates\\front\\corcms\\zh\\about.htm',
+      1 => 1380536268,
+      2 => 'file',
+    ),
+    '8b2ccbca6cd952602225ef14328668bf65dbf08a' => 
+    array (
+      0 => 'application\\templates\\front\\corcms\\zh\\top.htm',
+      1 => 1380520668,
+      2 => 'file',
+    ),
+    'f32b781624383bf9a74aea8a15fd4bce38251991' => 
+    array (
+      0 => 'application\\templates\\front\\corcms\\zh\\left_about.htm',
+      1 => 1378470606,
+      2 => 'file',
+    ),
+    '3a715f905da6e089cb10c68205e5329c232117b8' => 
+    array (
+      0 => 'application\\templates\\front\\corcms\\zh\\left_contact.htm',
+      1 => 1378470606,
+      2 => 'file',
+    ),
+    'ae0446f50b5c68d1a71cae5d127e6988ad63b43f' => 
+    array (
+      0 => 'application\\templates\\front\\corcms\\zh\\foot.htm',
+      1 => 1380353832,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1238352590e527cc040-13926546',
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52591e1c98e069_40065050',
+  'has_nocache_code' => false,
+  'cache_lifetime' => 3600,
+),true); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_52591e1c98e069_40065050')) {function content_52591e1c98e069_40065050($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -170,4 +211,4 @@ var css_backend='http://localhost/lb/application//templates/backend/corcms//css/
 
 
 </body>
-</html>
+</html><?php }} ?>
