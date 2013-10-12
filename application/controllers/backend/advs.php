@@ -47,6 +47,7 @@ class Advs extends CI_Controller{
 			$main['adv_type'] = 1;
 		}
 		$detail = array_pad((array)$detail,2,'');
+		
 		$adv_show = $this->im->showadv($adv_id);	
 		$data = array(
 			'main'=>$main,
@@ -67,6 +68,7 @@ class Advs extends CI_Controller{
 	 	try{		 	
 	 		 //数据
 	 		$main = $this->input->post('main');	
+	 		$detail = $this->input->post('detail');	
 	 		$data['main'] = $main;
 		 	//验证
 		 	$this->form_validation->set_rules($this->im->validator());
@@ -82,7 +84,9 @@ class Advs extends CI_Controller{
 				MakeHtmlFile(FCPATH.config_item('html_root').'/js/zh_'.$adv_id.'.js',$adv_show);	
 		 		$this->cor_page->pop_redirect('已保存',site_url('backend/advs/action_list/?parent_cat='.$main['info_class_sn']));
 		 	}else{
-		 		;
+		 	
+		 		$data['detail'] = array_pad((array)$this->cor_form->post_to_set($detail),2,'');
+		 		
 				$data['editor']  = $this->Common_model->editor($main['info_content']);
 		 		$this->cor_page->load_backend_view('advs_add',$data);
 		 	}
