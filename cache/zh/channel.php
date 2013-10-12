@@ -123,7 +123,7 @@
     'c_url' => 'member',
     'c_order' => '11',
     'c_display' => '0',
-    'c_pic' => '525922a5c6c61,http://localhost/lb//swfupload/uploads/2013-08-23/1____000001.jpg,5259213007973',
+    'c_pic' => '525924f0bb784',
     'c_html' => '0',
     'c_pid' => '10',
     'c_type' => '1',

@@ -168,6 +168,11 @@
 	},
 	"file_history":
 	[
+		"/E/phpnow/htdocs/lb/application/config/config.php",
+		"/C/Users/Administrator/AppData/Local/Temp/_tc/config.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/top.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/member_login.htm",
+		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/pictures_index_rotation.htm",
 		"/E/phpnow/htdocs/lb/swfupload/upload.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/advs_add.htm",
@@ -188,7 +193,6 @@
 		"/E/phpnow/htdocs/lb/application/libraries/cor_form.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/admins_view.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/advs_view.htm",
-		"/E/phpnow/htdocs/lb/application/config/config.php",
 		"/E/phpnow/htdocs/lb/html/js/zh_3.js",
 		"/E/phpnow/htdocs/lb/html/js/zh_2.js",
 		"/E/phpnow/htdocs/lb/application/core/MY_Upload.php",
@@ -215,7 +219,6 @@
 		"/E/phpnow/htdocs/WebFTP/Config.php",
 		"/E/phpnow/htdocs/8file/8.php.dump",
 		"/E/phpnow/htdocs/8file/8.php",
-		"/C/Users/Administrator/AppData/Local/Temp/_tc/config.php",
 		"/C/Users/Administrator/AppData/Local/Temp/_tc/.htaccess",
 		"/E/phpnow/htdocs/wordpress/wp-admin/includes/revision.php",
 		"/E/phpnow/htdocs/wordpress/wp-includes/revision.php",
@@ -258,7 +261,6 @@
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/mdata_view.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jquery.Slider.js.dump",
 		"/E/phpnow/htdocs/lb/tools/jQuery弹出层有9种效果/styles/core.css.dump",
-		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
 		"/E/phpnow/htdocs/lb/system/libraries/Cart.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/iwin.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/iwin.js",
@@ -293,9 +295,7 @@
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/item/templates.js",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/templates.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/templates_view.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/templates_add.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/css/table.css",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/css/style.css"
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/templates_add.htm"
 	],
 	"find":
 	{
@@ -303,7 +303,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"E:\\phpnow\\htdocs\\lb\\application",
