@@ -1,4 +1,4 @@
-<?php /*%%SmartyHeaderCode:1238352590e527cc040-13926546%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:30229525922c2b663a5-59920538%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8b2ccbca6cd952602225ef14328668bf65dbf08a' => 
     array (
       0 => 'application\\templates\\front\\corcms\\zh\\top.htm',
-      1 => 1380520668,
+      1 => 1381573195,
       2 => 'file',
     ),
     'f32b781624383bf9a74aea8a15fd4bce38251991' => 
@@ -33,13 +33,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1238352590e527cc040-13926546',
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52591e1c98e069_40065050',
+  'nocache_hash' => '30229525922c2b663a5-59920538',
+  'variables' => 
+  array (
+    'dir_front' => 0,
+    'ci_uri' => 0,
+  ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_525922c2d58a08_83235649',
   'cache_lifetime' => 3600,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52591e1c98e069_40065050')) {function content_52591e1c98e069_40065050($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_525922c2d58a08_83235649')) {function content_525922c2d58a08_83235649($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -108,6 +113,9 @@ var css_backend='http://localhost/lb/application//templates/backend/corcms//css/
     <td>
 
     <img src="http://localhost/lb//swfupload/uploads/2013-08-21/nav-10.jpg" width="992" height="179" />
+
+
+
 
     </td>
   </tr>
