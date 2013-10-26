@@ -168,6 +168,8 @@
 	},
 	"file_history":
 	[
+		"/E/phpnow/htdocs/lb/application/config/routes.php",
+		"/E/phpnow/htdocs/lb/.htaccess",
 		"/E/phpnow/htdocs/lb/application/config/config.php",
 		"/C/Users/Administrator/AppData/Local/Temp/_tc/config.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/top.htm",
@@ -239,7 +241,6 @@
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/adminindex.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/main_index.htm",
 		"/E/phpnow/php-5.2.12-Win32/php-apache2handler.ini",
-		"/E/phpnow/htdocs/lb/.htaccess",
 		"/E/phpnow/htdocs/test/zip.php",
 		"/E/phpnow/htdocs/lb/tools/ext.php",
 		"/E/phpnow/htdocs/lb/tools/unpack.php.dump",
@@ -294,8 +295,7 @@
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/vote_view.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/item/templates.js",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/templates.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/templates_view.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/templates_add.htm"
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/templates_view.htm"
 	],
 	"find":
 	{
