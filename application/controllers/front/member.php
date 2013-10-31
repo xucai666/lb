@@ -247,7 +247,7 @@ class Member extends CI_Controller {
 
 	 function action_order_pay(){
 	 	$stats = $this->db->select('sum(1) as p_stat,sum(p_qty*p_price ) as sub',false)->from('order_detail')->where('order_id',$this->uri->segment(4))->get()->first_row('array');
-	 	$main = $this->db->select('*',false)->from('order_main')->where('order_id',$this->uri->segment(4)->get()->first_row('array');
+	 	$main = $this->db->select('*',false)->from('order_main')->where('order_id',$this->uri->segment(4))->get()->first_row('array');
 	 	$data = array('stats'=>$stats,'main'=>$main);
 	 	$this->init_page->load_front_view('member_order_pay',$data);
 	 }

@@ -24,22 +24,6 @@ class System_manage extends CI_Controller{
 		$this->lang->load("item_backend_sys",lang_get());
 		$this->m_lang = $this->lang->language;	
 		$this->tpl->assign('lang_sys',$this->m_lang);
-		//doctrine
-		/**
-		try {
-			$this->load->library('doctrine');
-			$em = $this->doctrine->em;
-			$conn  = $em->getConnection();
-
-			$rs = $em->getRepository('Entity\User')
-                         ->findOneBy(array('id' => 1));
-
-		} catch (Exception $e) {
-			echo $e->getMessage();
-		}
-		**/
-
-		
 
 	}
 	

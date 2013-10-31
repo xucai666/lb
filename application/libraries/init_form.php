@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 if (!defined('BASEPATH')) show_error('No direct script access allowed'); 
 /**
   * start page for webaccess

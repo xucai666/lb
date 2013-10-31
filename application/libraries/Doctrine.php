@@ -10,6 +10,22 @@ use Doctrine\Common\ClassLoader,
  * @author	Joseph Wynn <joseph@wildlyinaccurate.com>
  * @link	http://wildlyinaccurate.com/integrating-doctrine-2-with-codeigniter-2
  */
+//doctrine
+/**
+ * 调用方式，说明Entity设置表格特征，Proxies目录下的文件自动生成
+ */
+/**try {
+	$this->load->library('doctrine');
+	$em = $this->doctrine->em;
+	$conn  = $em->getConnection();
+
+	$rs = $em->getRepository('Entity\User')
+                 ->findOneBy(array('id' => 1));
+
+} catch (Exception $e) {
+	echo $e->getMessage();
+}
+**/
 class Doctrine
 {
 

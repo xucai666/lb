@@ -194,6 +194,7 @@ imagestring($img, $font, $paddingLeft + $border, $paddingTop + $border,
 $code, $textColor);
 
 // 输出图像
+ob_clean();
 switch (strtolower($this->imagetype)) {
 case 'png':
 header("Content-type: " . image_type_to_mime_type(IMAGETYPE_PNG));

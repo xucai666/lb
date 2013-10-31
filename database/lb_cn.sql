@@ -997,7 +997,7 @@ CREATE TABLE `mysys_module_member` (
 
 LOCK TABLES `mysys_module_member` WRITE;
 /*!40000 ALTER TABLE `mysys_module_member` DISABLE KEYS */;
-INSERT INTO `mysys_module_member` VALUES (1,'test','ODg4ODg4','yehua365@163.com','叶先生','1360096406','厦门塘边社258号'),(2,'1212','MTExMTEx','11@11.com','11','3343','');
+INSERT INTO `mysys_module_member` VALUES (1,'test','ODg4ODg4','yehua365@163.com','叶先生','13600964906','厦门塘边社258号'),(2,'1212','MTExMTEx','11@11.com','11','3343','');
 /*!40000 ALTER TABLE `mysys_module_member` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1172,7 +1172,7 @@ CREATE TABLE `mysys_order_detail` (
   `p_price` decimal(20,2) DEFAULT NULL,
   `p_name` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`detail_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1181,6 +1181,7 @@ CREATE TABLE `mysys_order_detail` (
 
 LOCK TABLES `mysys_order_detail` WRITE;
 /*!40000 ALTER TABLE `mysys_order_detail` DISABLE KEYS */;
+INSERT INTO `mysys_order_detail` VALUES (1,1,9,1,'2.00','bottle cap,vodka cap,beer cap,bottle cap,wine label.wine logo (03)'),(2,1,10,1,'2.00','wine label, vodka label, bottle tag, whiskey necklace, 3D lenticular adhesive labels, stannum labels'),(3,1,12,1,'2.00','Custom PVC 3D Lenticular Adhesive Wine Bottle Label, bottle sticker (02)');
 /*!40000 ALTER TABLE `mysys_order_detail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1203,7 +1204,7 @@ CREATE TABLE `mysys_order_main` (
   `status` tinyint(4) DEFAULT '0' COMMENT '0新订单，1付款，2已发货，3已收货',
   `member` varchar(80) DEFAULT NULL,
   PRIMARY KEY (`order_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1212,6 +1213,7 @@ CREATE TABLE `mysys_order_main` (
 
 LOCK TABLES `mysys_order_main` WRITE;
 /*!40000 ALTER TABLE `mysys_order_main` DISABLE KEYS */;
+INSERT INTO `mysys_order_main` VALUES (1,'叶先生','13600964906','厦门塘边社258号','','2013-10-31','yehua365@163.com','20131031001',0,'test');
 /*!40000 ALTER TABLE `mysys_order_main` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1771,4 +1773,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-10-31 16:51:34
+-- Dump completed on 2013-10-31 17:32:02

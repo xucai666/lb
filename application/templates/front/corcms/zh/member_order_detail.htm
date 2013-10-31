@@ -78,7 +78,7 @@
           </thead>
           <!--{foreach from=$list item=item}-->
             <tr>
-            <td><!--{$item.p_name}--></td>
+            <td><a href='<!--{site_url("product/view/`$item.p_id`")}-->' target="_blank"><!--{$item.p_name}--></a></td>
             <td><!--{$item.p_price}--></td>
             <td><!--{$item.p_qty}--></td>
             

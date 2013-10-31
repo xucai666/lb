@@ -156,10 +156,15 @@ class Product extends CI_Controller {
 		}
 		if($sort){
 			$p_all = $this->init_form->array_re_index($this->db->query("select SUBSTRING_INDEX(p_pic,',',1) as p_pic,p_id from ".$this->db->dbprefix."module_product where p_id in(".implode(',',$sort).")")->result_array(),'p_id','p_pic');
-			$imgs = $this->db->query("select SUBSTRING_INDEX(i_url,',',1) as p_pic,i_uid from ".$this->db->dbprefix."module_images where i_uid in('".implode("','",$p_all)."')")->result_array();
-			$imgs_re = $this->init_form->array_re_index($imgs,'i_uid','p_pic');
+			foreach($p_all as $k=>$v1){
+				$imgs_re[$k] = $this->Common_model->fetch_images($v1,true);
+			}
+			
 			$cart_arr && array_multisort($sort,SORT_ASC,$cart_arr);
-			foreach($cart_arr as &$v) $v['p_pic'] = $imgs_re[$p_all[$v['id']]];
+
+			foreach($cart_arr as &$v) $v['p_pic'] = strpos($imgs_re[$v['id']],',')!==false ? substr($imgs_re[$v['id']],0,strpos($imgs_re[$v['id']],',')):$imgs_re[$v['id']];
+
+
 		}
 
 		//fetch member identity infomation
