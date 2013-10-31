@@ -31,8 +31,8 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  	 */
  	function run(){
  		$CI = &get_instance();
- 		$CI->cor_page->fetch_css(array('invoke'),null,$CI->cor_page->getRes('css','backend'));	
- 		$CI->cor_page->fetch_js(array('invoke'),null,$CI->cor_page->getRes('js','backend'));	
+ 		$CI->init_page->fetch_css(array('invoke'),null,$CI->init_page->getRes('css','backend'));	
+ 		$CI->init_page->fetch_js(array('invoke'),null,$CI->init_page->getRes('js','backend'));	
  		$reval  = "";
 		$reval .= "\n";
 	
@@ -61,10 +61,4 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  
  function &get_invoke(){	
 	return Invoke::get_invoke();
-} 
-	
-
-
- 
- 
-?>
+}

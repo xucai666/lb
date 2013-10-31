@@ -25,7 +25,7 @@ class Commission_model extends CI_Model{
 	function db_config(){
 		return array(
 			'main'=>array(
-				'table_name'=>$this->cor_db->table('commission'),
+				'table_name'=>$this->init_db->table('commission'),
 				'primary_key'=>'comm_id',
 			)
 		);

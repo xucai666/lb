@@ -35,7 +35,7 @@ class Common_model  extends CI_Model{
 			$this->db->where("parent_id",0,false);
 		}
 		$list = $this->db->order_by("region_name","asc")->get()->result_array();
-		$ar = $this->cor_form->indexArrayByKey($list,'region_id','region_name');		
+		$ar = $this->init_form->indexArrayByKey($list,'region_id','region_name');		
 		return $ar;
 		
 	}
@@ -57,7 +57,7 @@ class Common_model  extends CI_Model{
 	 */
 	function fetchClass($class_id){
 		static $ar;
-		$class_rs= $this->db->select("cc_id")->from($this->cor_db->mytable('class_category'))
+		$class_rs= $this->db->select("cc_id")->from($this->init_db->mytable('class_category'))
 		->where("cc_parent_id",$class_id)
 		->get()->result_array();
 		$ar[$class_id] = $class_id;
@@ -98,7 +98,7 @@ class Common_model  extends CI_Model{
 	function func_get_province() {
 		$CI  =  &get_instance();	
 		$a = $CI->db->select( "region_id, region_name, parent_id",false)->from("ecs_region")->where ("parent_id",1)->get()->result_array();
-		$select = $this->cor_form->array_re_index($a,'region_id','region_name');
+		$select = $this->init_form->array_re_index($a,'region_id','region_name');
 		return $select;
 	}
 	
@@ -107,7 +107,7 @@ class Common_model  extends CI_Model{
 	
 	
 	function lang_all(){
-		return $this->cor_cache->cache_fetch('lang_type',null,lang_get());		
+		return $this->init_cache->cache_fetch('lang_type',null,lang_get());		
 	}
 	
 	//语种切换链接
@@ -116,7 +116,7 @@ class Common_model  extends CI_Model{
 		$lang_current = lang_get();
 		foreach($langs as $v){
 			if($v == $lang_current) continue;
-			$lang_cache[$v] = $this->cor_cache->cache_fetch('lang_type',null,$v);
+			$lang_cache[$v] = $this->init_cache->cache_fetch('lang_type',null,$v);
 			
 		}	
 		return $lang_cache;		
@@ -224,32 +224,25 @@ class Common_model  extends CI_Model{
 		try{
 			$db_config = array(
 				'main'=>array(
-					'table_name'=>$this->cor_db->table('invoke'),
+					'table_name'=>$this->init_db->table('invoke'),
 					'primary_key'=>'i_url',
 				)
 			);
-			 return $this->cor_db->save($data,$db_config);
+			 return $this->init_db->save($data,$db_config);
 		}catch(Exception $e){
 			throw new Exception('save error');
 		}		
 	}
 
 	function tag($parameter){
-	 	$cor_db  =  &get_cor_db();	
-	 	$ds = $cor_db->getDs();
+	 	$init_db  =  &get_init_db();	
+	 	$ds = $init_db->getDs();
 	 	$CI = &get_instance();
 
 		extract($parameter);
-		//查询模板，返回值由模板设定
-	
-		$config = array(
-				'fileds'=>'*',
-				'table_name'=>'templates',
-				'primary_id'=>'t_id',
-				'primary_val'=>$t_id,
-			);
+		//查询模板，返回值由模板设定	
 
-		$rs = $cor_db->fetch_one($config);
+		$rs = $this->db->select('*',false)->from('templates')->where('t_id',$t_id)->get()->first_row('array');
 		if(!$rs['t_enable']){
 			return false;
 		}
@@ -276,7 +269,7 @@ class Common_model  extends CI_Model{
 
 		//查询字段
 		
-		$select = $select?$select:implode(',',$cor_db->getDs()->list_fields($rs['t_db_name']));
+		$select = $select?$select:implode(',',$init_db->getDs()->list_fields($rs['t_db_name']));
 		
 			
 		//查询条件
@@ -365,21 +358,18 @@ class Common_model  extends CI_Model{
 
 
 	function tag_pager($parameter){
-		$cor_db  =  &get_cor_db();	
-	 	$cor_page = &get_cor_page();
-	 	$ds = $cor_db->getDs();
+		$init_db  =  &get_init_db();	
+	 	$init_page = &get_init_page();
+	 	$ds = $init_db->getDs();
 	 	$CI = &get_instance();
 
 		extract($parameter);
 		//查询模板，返回值由模板设定
 		
-		$config = array(
-				'fileds'=>'*',
-				'table_name'=>'templates',
-				'primary_id'=>'t_id',
-				'primary_val'=>$t_id,
-			);
-		$rs = $cor_db->fetch_one($config);
+	
+		$rs = $this->db->select('*',false)->from('templates')->where('t_id',$t_id)->get()->first_row('array');
+
+
 		if(!$rs['t_enable']){
 			return false;
 		}
@@ -399,7 +389,7 @@ class Common_model  extends CI_Model{
 
 		//查询字段
 		
-		$select = $select?$select:implode(',',$cor_db->getDs()->list_fields($rs['t_db_name']));
+		$select = $select?$select:implode(',',$init_db->getDs()->list_fields($rs['t_db_name']));
 		
 			
 		//查询条件
@@ -432,7 +422,7 @@ class Common_model  extends CI_Model{
 		}
 		
 		$limit_from = $_GET['per_page']; 		
-		$link_str = $cor_page->array_to_url($_GET);		
+		$link_str = $init_page->array_to_url($_GET);		
 		$params = array( 		
 			'limit_to'=>$page_size,
 			'limit_from'=>$limit_from,
@@ -562,8 +552,8 @@ class Common_model  extends CI_Model{
 	function get_nav($tb,$id,$title_field,$where='1=1'){
 
 		if(!is_numeric($id)) return false;
-		$tb = $this->cor_db->table($tb);
-		$primary = $this->cor_db->primary($tb);
+		$tb = $this->init_db->table($tb);
+		$primary = $this->init_db->primary($tb);
 		$url = $this->uri->uri_string();
 		$url =  substr($url,0,strrpos($url,"/")+1);
 		$sq = <<<EOT
@@ -571,7 +561,7 @@ class Common_model  extends CI_Model{
 			UNION   ALL 
 		SELECT concat('$url',$primary) as url,'Next' as nav_title,`$title_field` FROM (SELECT  *  FROM  $tb   WHERE   $where and  $primary<$id ORDER BY $primary desc  LIMIT 1) AS t2
 EOT;
-		return $this->cor_form->array_re_index($this->cor_db->fetch_values($sq),'nav_title',array('url',$title_field));
+		return $this->init_form->array_re_index($this->init_db->fetchAll($sq),'nav_title',array('url',$title_field));
 	}
 
 	/**
@@ -612,7 +602,7 @@ EOT;
 		$uid_convert = explode(',',$uid);
 		$img_field = $thumb?"REPLACE(i_url,'images','_thumbs/Images') as i_url ":'i_url';
 		$rs = $this->db->select("i_id,".$img_field,false)->from('module_images')->where_in('i_uid',$uid_convert)->order_by('i_id','asc')->get()->result_array();
-		$rs  = $this->cor_form->array_re_index($rs,'i_id','i_url');
+		$rs  = $this->init_form->array_re_index($rs,'i_id','i_url');
 		return implode(',',$rs);
 	}
 

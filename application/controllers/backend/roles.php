@@ -17,8 +17,8 @@
  	function __construct(){
  		parent::__construct();
  		//验证登陆
-		$this->cor_auth->execute_auth();
- 		$this->cor_page->fetch_css('rights','loadview',$this->cor_page->getRes('css','backend'));
+		$this->init_auth->execute_auth();
+ 		$this->init_page->fetch_css('rights','loadview',$this->init_page->getRes('css','backend'));
  		$this->load->model('Roles_model');
  		$this->im = $this->Roles_model;
  		$this->act = 'roles';
@@ -28,7 +28,7 @@
  		$this->tpl->assign('lang_roles',$this->lang->language);
  				
 		//只调用中文数据库	
- 		$this->ds = $this->cor_db->getDs();
+ 		$this->ds = $this->init_db->getDs();
 
  	}
  	
@@ -43,18 +43,13 @@
 	 		$main_id = $this->uri->segment(4); 	  		
 	 		if($main_id) { 
 		 		//验证权限
-		 		$this->cor_auth->execute_auth(array('35,28,29,118')) ;
-	 			$role_select_config  = array(
-		 			'primary_id'=>'role_id',
-		 			'primary_val'=>$main_id,
-		 			'table_name'=>$this->cor_db->table($this->act.''),
-	 			); 			
-	 			$main_info = $this->cor_db->fetch_one($role_select_config);  	
+		 		$this->init_auth->execute_auth(array('35,28,29,118')) ;
+	 			$main_info = $this->db->select('*',false)->from('roles')->where('role_id',$main_id)->get()->first_row('array');	
 	 			$this->ds->_reset_select();
 	 			$rights_have = unserialize($main_info['rights']);	
 	 		}else{
 	 			//验证权限
-		 		$this->cor_auth->execute_auth(array('35,28,29,117')) ;
+		 		$this->init_auth->execute_auth(array('35,28,29,117')) ;
 	 			//添加
 				$main_info = array(
 					'group_id'=>3,				
@@ -87,9 +82,9 @@
 		 		'rights_options'=>$rights_options['detail_string'],	 
 		 		'rights_have'=>$rights_have,	 	
 	  		);   	  		
-	 		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);
+	 		$this->init_page->load_backend_view(strtolower($this->act).'_add',$data);
  		}catch(Exception $e){
- 			$this->cor_page->pop_redirect($e->getMessage(),"javascript:history.go(-1);");
+ 			$this->init_page->pop_redirect($e->getMessage(),"javascript:history.go(-1);");
  		}	
  	}
  	
@@ -103,9 +98,9 @@
 	 		$main = $this->input->post('main'); 
 
 	 		$main['rights'] = serialize($this->input->post('admin'));
-	 		$db_config = array('main'=>array('primary_key'=>'role_id','table_name'=>$this->cor_db->table('roles')));			
+	 		$db_config = array('main'=>array('primary_key'=>'role_id','table_name'=>$this->init_db->table('roles')));			
  			
- 			$roles_return = $this->cor_db->save(array('main'=>$main),$db_config);
+ 			$roles_return = $this->init_db->save(array('main'=>$main),$db_config);
  			
  			//添加日志	
 	 		$lang = $this->m_lang;				 
@@ -115,7 +110,7 @@
 	 		$this->Logs_model->log_insert(array(
 	 			'log_table'=>$db_config['main']['table_name'],
 	 			'log_table_id'=>$roles_return['main'][$db_config['main']['primary_key']],
-	 			'log_user'=>$this->cor_auth->fetch_auth('user_name'),
+	 			'log_user'=>$this->init_auth->fetch_auth('user_name'),
 	 			'log_date'=>date("Y-m-d H:i:s"),
 	 			'log_sql'=>trim(implode("\n",(array)$this->ds->sql_log)),
 	 			'log_type'=>'9',
@@ -123,7 +118,7 @@
 	 		));
 		 		
 		 				
- 			$this->cor_page->pop_redirect('保存成功',site_url("backend/".$this->act."/action_list"));	
+ 			$this->init_page->pop_redirect('保存成功',site_url("backend/".$this->act."/action_list"));	
  		}catch(Exception $e){
  			show_error($e->getMessage());
  		}
@@ -140,8 +135,8 @@
  				
  		$data = array('list'=>$this->im->fetch_roles_list());
  		
- 		$data['current_role_id'] = $this->cor_db->fetch_value('select group_id from '.$this->cor_db->table('admins').' where admin_id='.get_cookie('user_id'),'group_id');
- 		$this->cor_page->load_backend_view(strtolower($this->act).'_list',$data);
+ 		$data['current_role_id'] = $this->init_db->fetchColumn('select group_id from '.$this->init_db->table('admins').' where admin_id=?',array(get_cookie('user_id')));
+ 		$this->init_page->load_backend_view(strtolower($this->act).'_list',$data);
  		
  	}
  	
@@ -152,22 +147,22 @@
  	function action_del(){
  		try{
  			//验证权限
-		 	$this->cor_auth->execute_auth(array('35,28,29,119')) ;
- 			$rs = $this->cor_db->delete($this->uri->segment(4),$this->im->db_config());
+		 	$this->init_auth->execute_auth(array('35,28,29,119')) ;
+ 			$rs = $this->init_db->delete($this->uri->segment(4),$this->im->db_config());
  			//-------------添加日志
  			$cf = $this->im->db_config();
  			$this->load->model('Logs_model');
  			$this->Logs_model->log_insert(array(
 	 			'log_table'=>$cf['main']['table_name'],
 	 			'log_table_id'=>$rs['main'][$cf['main']['primary_key']],
-	 			'log_user'=>$this->cor_auth->fetch_auth('user_name'),
+	 			'log_user'=>$this->init_auth->fetch_auth('user_name'),
 	 			'log_date'=>date("Y-m-d H:i:s"),
 	 			'log_sql'=>trim(implode("\n",(array)$this->ds->sql_log)),
 	 			'log_type'=>'9',
 	 			'log_desc'=>'删除角色',
 	 		));
 
- 			$this->cor_page->pop_redirect('删除成功',site_url("backend/".$this->act."/action_list"));	
+ 			$this->init_page->pop_redirect('删除成功',site_url("backend/".$this->act."/action_list"));	
 
  			
 

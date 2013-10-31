@@ -17,14 +17,30 @@ class System_manage extends CI_Controller{
 	function __construct(){		
 		parent::__construct();
 		//验证登陆
-		$this->cor_auth->execute_auth();
+		$this->init_auth->execute_auth();
 		$this->load->model('Admins_model');
 		$this->im = $this->Admins_model;
 		$this->load->library('encrypt');	
 		$this->lang->load("item_backend_sys",lang_get());
 		$this->m_lang = $this->lang->language;	
 		$this->tpl->assign('lang_sys',$this->m_lang);
+		//doctrine
+		/**
+		try {
+			$this->load->library('doctrine');
+			$em = $this->doctrine->em;
+			$conn  = $em->getConnection();
+
+			$rs = $em->getRepository('Entity\User')
+                         ->findOneBy(array('id' => 1));
+
+		} catch (Exception $e) {
+			echo $e->getMessage();
+		}
+		**/
+
 		
+
 	}
 	
 	/**
@@ -32,21 +48,21 @@ class System_manage extends CI_Controller{
 	 */
 	function change_password(){
 		$data = array('main'=>$this->Admins_model->fetch_detail(get_cookie('user_id')));
-		$this->cor_page->load_backend_view('admins_change_password',$data);
+		$this->init_page->load_backend_view('admins_change_password',$data);
 	}
 	
 	/**
 	 *退出系统
 	 */
 	function exit_system(){		
-		$this->cor_auth->process_logout(array('user_name','user_id'),'/admin');		
+		$this->init_auth->process_logout(array('user_name','user_id'),'/admin');		
 	}
 	
 	/*
 	  *退出系统
 	 */
 	function relogin(){		
-		$this->cor_auth->process_logout(array('user_name','user_id'),"admin");		
+		$this->init_auth->process_logout(array('user_name','user_id'),"admin");		
 	}
 	
 	
@@ -58,14 +74,14 @@ class System_manage extends CI_Controller{
 		$this->form_validation->set_rules($rules);
 		$data = array('main'=>$this->input->post('main'));
 		if($this->form_validation->run()==false){		
-			$this->cor_page->load_backend_view('admins_change_password',$data);
+			$this->init_page->load_backend_view('admins_change_password',$data);
 		}else{
 			$save_data = array('main'=>array(
-				'admin_pass'=>$this->cor_page->my_encrypt($data['main']['new_password'],"ENCODE"),
+				'admin_pass'=>$this->init_page->my_encrypt($data['main']['new_password'],"ENCODE"),
 				'admin_id'=>$data['main']['admin_id'],
 			));			
-			$this->cor_db->save($save_data,$this->Admins_model->db_config());
-			$this->cor_page->backend_redirect('system_manage/exit_system','修改成功，需要重新登陆系统');
+			$this->init_db->save($save_data,$this->Admins_model->db_config());
+			$this->init_page->backend_redirect('system_manage/exit_system','修改成功，需要重新登陆系统');
 		}
 	}
 	
@@ -88,7 +104,7 @@ class System_manage extends CI_Controller{
  	function old_password_check($str){
  		$main_form  = $this->input->post('main');
  		$main_db = $this->Admins_model->fetch_detail($main_form['admin_id']);
- 		$db_pass = $this->cor_page->my_encrypt($main_db['admin_pass'],"DECODE");
+ 		$db_pass = $this->init_page->my_encrypt($main_db['admin_pass'],"DECODE");
  		if($db_pass != $main_form['old_password']){
  			$this->form_validation->set_message("old_password_check","旧密码输入不正确!");
  			return false;
@@ -131,7 +147,7 @@ class System_manage extends CI_Controller{
 				$this->load->helper('download');
 				force_download($file_name, $backup);
 			}			
-			$this->cor_page->pop_redirect(implode(',',(array)$words_return),site_url("backend/system_manage/db_backup_list"));
+			$this->init_page->pop_redirect(implode(',',(array)$words_return),site_url("backend/system_manage/db_backup_list"));
  
  		}catch(Exception $e){
  			show_error($e->getMessage());
@@ -148,9 +164,9 @@ class System_manage extends CI_Controller{
  	function db_backup_list(){
  		$this->load->helper("file");
  		$this->load->helper('number');
- 	    $data = $this->cor_cache->cache_fetch('sys_config');
+ 	    $data = $this->init_cache->cache_fetch('sys_config');
  	    $data['files'] = get_dir_file_info('backup/'.lang_get().'/',false);
- 		$this->cor_page->load_backend_view('db_backup_list',$data);
+ 		$this->init_page->load_backend_view('db_backup_list',$data);
  		
  	}
  	
@@ -165,10 +181,10 @@ class System_manage extends CI_Controller{
  		$this->load->helper('directory'); 	
  		$styles = directory_map(config_item('template_dir').DIRECTORY_SEPARATOR.'backend',1);
  			
-		$data = $this->cor_cache->cache_fetch('sys_config');
+		$data = $this->init_cache->cache_fetch('sys_config');
 		
 		$data['styles'] = $styles;
- 		$this->cor_page->load_backend_view('config_save',$data);
+ 		$this->init_page->load_backend_view('config_save',$data);
  		
  	}
  	
@@ -183,9 +199,9 @@ class System_manage extends CI_Controller{
 			'contact'=>$this->input->post('contact'),
 			'develop'=>$this->input->post('develop'),
 		);		
- 		$this->cor_cache->cache_create($arr,'sys_config'); 
+ 		$this->init_cache->cache_create($arr,'sys_config'); 
  		
- 		$this->cor_page->pop_redirect('保存成功',site_url("backend/system_manage/basic_config"));
+ 		$this->init_page->pop_redirect('保存成功',site_url("backend/system_manage/basic_config"));
  				
  	}
  	
@@ -195,7 +211,7 @@ class System_manage extends CI_Controller{
  	 * 执行sql语句
  	 */	
  	function action_execute_sql(){
- 		$this->cor_page->load_backend_view('sys_execute_sql');
+ 		$this->init_page->load_backend_view('sys_execute_sql');
  		
  	}
  	
@@ -203,9 +219,9 @@ class System_manage extends CI_Controller{
  	
  	function action_execute_sql_submit(){
  		$sql = $this->input->post("sql");
- 		$sql = $this->cor_db->adjust_sql_str($sql);
+ 		$sql = $this->init_db->adjust_sql_str($sql);
  		if(empty($sql)){
- 			$this->cor_page->pop_redirect('请输入要执行的sql语句',site_url("backend/system_manage/action_execute_sql"));
+ 			$this->init_page->pop_redirect('请输入要执行的sql语句',site_url("backend/system_manage/action_execute_sql"));
  		} 
  		$query = $this->db->query($sql);
  		if ($query->num_rows() > 0){
@@ -215,7 +231,7 @@ class System_manage extends CI_Controller{
 		} 
 		$data['qr_afr'] = mysql_affected_rows();
 		
- 		$this->cor_page->load_backend_view('sys_execute_sql',$data);
+ 		$this->init_page->load_backend_view('sys_execute_sql',$data);
  		
  	}
  	
@@ -228,24 +244,24 @@ class System_manage extends CI_Controller{
  	 	$this->tpl->clearAllCache();
  	 	//清除模板缓存
  	 	//$this->tpl->clearAllCache();
- 	 	$this->cor_cache->clear_pages();
+ 	 	$this->init_cache->clear_pages();
  	 	//clear rights config
- 	 	$this->cor_cache->cache_delete('admin_rights_config');
+ 	 	$this->init_cache->cache_delete('admin_rights_config');
  	 	
  	 	//create  tree cache
- 	 	$treeIds = $this->cor_form->array_re_index($this->db->select('treeId,name',false)->from('tree_node')->where('pid',0)->get()->result_array(),'treeId','name');
- 	 	$this->cor_cache->cache_create($treeIds,'treeIds');
+ 	 	$treeIds = $this->init_form->array_re_index($this->db->select('treeId,name',false)->from('tree_node')->where('pid',0)->get()->result_array(),'treeId','name');
+ 	 	$this->init_cache->cache_create($treeIds,'treeIds');
 		//create  channel cache
- 	 	$channel = $this->cor_form->array_re_index($this->db->select('*',false)->from('module_channel')->get()->result_array(),'c_id');
- 	 	$this->cor_cache->cache_create($channel,'channel');	//create  channel cache
+ 	 	$channel = $this->init_form->array_re_index($this->db->select('*',false)->from('module_channel')->get()->result_array(),'c_id');
+ 	 	$this->init_cache->cache_create($channel,'channel');	//create  channel cache
  	 	//channel type
- 	 	$channel_types = $this->cor_form->array_re_index($this->db->select('code,treeId,name',false)->from('tree_node')->where(array('treeId'=>3,'pid >'=>0))->get()->result_array(),'code','name');
+ 	 	$channel_types = $this->init_form->array_re_index($this->db->select('code,treeId,name',false)->from('tree_node')->where(array('treeId'=>3,'pid >'=>0))->get()->result_array(),'code','name');
  	 
- 	 	$this->cor_cache->cache_create($channel_types,'channel_types');
+ 	 	$this->init_cache->cache_create($channel_types,'channel_types');
 
 
 
- 		$this->cor_page->pop_redirect('缓存更新成功！','javascript:parent.location.reload();');
+ 		$this->init_page->pop_redirect('缓存更新成功！','javascript:parent.location.reload();');
  	}
 
 
@@ -256,7 +272,7 @@ class System_manage extends CI_Controller{
  	function action_helper_docs(){
  			$this->load->helper("file");
  			$data = array('ls'=>get_dir_file_info(getcwd().'/docs'));
- 			$this->cor_page->load_backend_view('helper_docs',$data);
+ 			$this->init_page->load_backend_view('helper_docs',$data);
  	}
  	
  	/**
@@ -273,14 +289,14 @@ class System_manage extends CI_Controller{
  		}
  		$this->db->order_by('lang_id','asc');
  		$page_size = 15;
- 		$data = $this->cor_db->fetch_all($page_size);
+ 		$data = $this->init_db->fetch_all($page_size);
  		$status = array(
  			'1'=>'已翻译',
  			'0'=>'未翻译',
  		);
  		$data = array_merge($data,array('status'=>$status,'page_size'=>$page_size));
  		$this->load->model('Trans_model','it');
-		$this->cor_page->load_backend_view('lang_trans',$data);
+		$this->init_page->load_backend_view('lang_trans',$data);
  	}
  	
  	/**
@@ -309,7 +325,7 @@ class System_manage extends CI_Controller{
  			}
  		}
 
- 		$this->cor_page->backend_redirect('system_manage/action_lang_trans','导入完毕');
+ 		$this->init_page->backend_redirect('system_manage/action_lang_trans','导入完毕');
 
 		
  	}
@@ -325,7 +341,7 @@ class System_manage extends CI_Controller{
  		
  		$ls = $this->db->select('*',false)->from('lang')->where("lang_type !='zh'")->order_by('lang_id','asc')->get()->result_array();
  		if(!count($ls)){
- 			$this->cor_page->backend_redirect('system_manage/action_lang_trans','操作失败，无数据');
+ 			$this->init_page->backend_redirect('system_manage/action_lang_trans','操作失败，无数据');
  		}
  		foreach($ls as $v){
  			$file = $path.$v['lang_type'].'/'.$v['lang_file'];
@@ -336,7 +352,7 @@ class System_manage extends CI_Controller{
  			write_file($key,"<?php\n \$lang = ".var_export($v,true).";\n?>");
  		}
 
- 		$this->cor_page->backend_redirect('system_manage/action_lang_trans','导出完毕');
+ 		$this->init_page->backend_redirect('system_manage/action_lang_trans','导出完毕');
 		
  	}
 
@@ -385,18 +401,18 @@ class System_manage extends CI_Controller{
 	    }
 
 
-   		$this->cor_page->load_backend_view("regexp_test");
+   		$this->init_page->load_backend_view("regexp_test");
    }
 
 
    function action_create_html(){
-   		$channel = $this->cor_cache->cache_fetch('channel');
+   		$channel = $this->init_cache->cache_fetch('channel');
    		foreach($channel as $k=>$v){
    			if($v['c_html'] && empty($v['c_external'])){   				
    				MakeHtmlFile(FCPATH.config_item('html_root').'/'.$v['c_dir'].'/'.$v['c_url'].'.htm',file_get_contents(site_url().'/front/'.$v['c_url']));
    			}
    		}
-   		$this->cor_page->pop_redirect('html生成完毕','javascript:parent.location.reload();');
+   		$this->init_page->pop_redirect('html生成完毕','javascript:parent.location.reload();');
    		
    }
 

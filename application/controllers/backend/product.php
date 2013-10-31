@@ -16,7 +16,7 @@ class Product extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		//验证登陆
-		$this->cor_auth->execute_auth();
+		$this->init_auth->execute_auth();
 		$this->load->model(array('Product_model','Category_model')); 
 		//load css,js
 				
@@ -62,7 +62,7 @@ class Product extends CI_Controller{
 			'class_info'=>$class_info,
 		);
 		
-		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);		
+		$this->init_page->load_backend_view(strtolower($this->act).'_add',$data);		
 	}
 	
 	
@@ -126,17 +126,17 @@ class Product extends CI_Controller{
 			 	
 			$db_config = $this->im->db_config();
 			
-	 		$data_var = $this->cor_db->save($data,$db_config);	
+	 		$data_var = $this->init_db->save($data,$db_config);	
  			$back_url = "product/action_add/?parent_class=".$parent_class."&pro_id=".$data_var['main']['pro_id'];
 	 		
-	 		$this->cor_page->backend_redirects(array($this->cor_page->fetchButton('j_edit')=>$back_url,$this->cor_page->fetchButton('j_add')=>'product/action_add?parent_class='.$parent_class,$this->cor_page->fetchButton('j_list')=>'product/action_list?parent_class='.$parent_class),'产品资料更新完毕.');
+	 		$this->init_page->backend_redirects(array($this->init_page->fetchButton('j_edit')=>$back_url,$this->init_page->fetchButton('j_add')=>'product/action_add?parent_class='.$parent_class,$this->init_page->fetchButton('j_list')=>'product/action_list?parent_class='.$parent_class),'产品资料更新完毕.');
 		 	}else{
 				$data['editor']  = $this->Common_model->editor($main['pro_content']);
-		 		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);
+		 		$this->init_page->load_backend_view(strtolower($this->act).'_add',$data);
 		 	}
 	 		
 	 	}catch(Exception $e){
-	 		$this->cor_page->backend_redirect($_SERVER['HTTP_REFERER'],$e->getMessage());
+	 		$this->init_page->backend_redirect($_SERVER['HTTP_REFERER'],$e->getMessage());
 	 	}			
 	 }
 	
@@ -145,7 +145,7 @@ class Product extends CI_Controller{
 	//产品列表
 	
 	function action_list(){
-		$this->cor_page->fetch_js('jquery.form','loadview',$this->cor_page->getRes('js','backend'));
+		$this->init_page->fetch_js('jquery.form','loadview',$this->init_page->getRes('js','backend'));
 		$parent_class = $this->input->get('parent_class');
 		$search_class = $this->input->get('search_class');
 		$parent_class_info = $this->Category_model->detail($parent_class,'bysn');
@@ -163,13 +163,13 @@ class Product extends CI_Controller{
 		->like('a.pro_class_sn',$search_class,'after')
 		->like('a.pro_title',$this->input->get('pro_title'))
 		->order_by("pro_id","desc");
-		$data = $this->cor_db->fetch_all(12);	
+		$data = $this->init_db->fetch_all(12);	
 		$data = array_merge($data,
 		array(
 			'class_info'=>$class_info,
 		)
 		);	
-		$this->cor_page->load_backend_view(strtolower($this->act)."_list",$data);
+		$this->init_page->load_backend_view(strtolower($this->act)."_list",$data);
 		
 	}
 	
@@ -187,20 +187,20 @@ class Product extends CI_Controller{
 				'class_select'=>$class_select,
 		);		
 					
-		$this->cor_page->fetch_css(array('backend_pro'));
-		$this->db->select("a.*,b.c_title",false)->from($this->cor_db->table('products').' as a ')
+		$this->init_page->fetch_css(array('backend_pro'));
+		$this->db->select("a.*,b.c_title",false)->from($this->init_db->table('products').' as a ')
 		->join('category as b','a.pro_class_sn=b.c_sn')
 		->like('a.pro_class_sn',$parent_class,'after')
 		->like('a.pro_class_sn',$search_class,'after')
 		->like('a.pro_title',$this->input->get('pro_title'))
 		->order_by("pro_id","desc");
-		$data = $this->cor_db->fetch_all(12,true);	
+		$data = $this->init_db->fetch_all(12,true);	
 		$data = array_merge($data,
 		array(
 			'class_info'=>$class_info,
 		)
 		);	
-		$this->cor_page->load_backend_view("ajax_product_list",$data);
+		$this->init_page->load_backend_view("ajax_product_list",$data);
 		
 	}
 	
@@ -213,8 +213,8 @@ class Product extends CI_Controller{
 						
 			$parent_class = $this->input->get('parent_class');		
 			$this->db->where_in('pro_id',$id);
-	 		$this->db->delete($this->cor_db->table('products'));			
-			$this->cor_page->pop_redirect('已删除',site_url('backend/'.$this->act.'/action_list/?parent_class='.$parent_class));
+	 		$this->db->delete($this->init_db->table('products'));			
+			$this->init_page->pop_redirect('已删除',site_url('backend/'.$this->act.'/action_list/?parent_class='.$parent_class));
 		}catch(Exception $e){			
 			show_error($e->getMessage());
 		}
@@ -227,21 +227,21 @@ class Product extends CI_Controller{
 	function action_order(){		
 	
 						
-		$this->cor_page->fetch_css(array('backend_order'),'view',$this->cor_page->getRes('css','backend').'item/');
-		$this->db->select("a.*",false)->from($this->cor_db->table('order_main').' as a ')
+		$this->init_page->fetch_css(array('backend_order'),'view',$this->init_page->getRes('css','backend').'item/');
+		$this->db->select("a.*",false)->from($this->init_db->table('order_main').' as a ')
 		->like('a.order_no',$this->input->get('order_no'))
 		->like('a.contact',$this->input->get('contact'))
 		->like('a.mobile',$this->input->get('mobile'));
 		$this->input->get('status') && $this->db->where('status',$this->input->get('status'));
 		$this->db->order_by("order_id","desc");
-		$data = $this->cor_db->fetch_all();	
+		$data = $this->init_db->fetch_all();	
 		
 		$data = array_merge($data,
-		array('status'=>$this->cor_cache->cache_fetch('order_status'),
+		array('status'=>$this->init_cache->cache_fetch('order_status'),
 		)
 		);			
 		
-		$this->cor_page->load_backend_view("order_list",$data);
+		$this->init_page->load_backend_view("order_list",$data);
 		
 		
 	}
@@ -252,20 +252,15 @@ class Product extends CI_Controller{
 
 	//订单删除
 	function action_order_del(){
-		$config = array(
-			'table_name'=>'order_main',
-			'primary_id'=>'order_id',
-			'primary_val'=>$this->input->get('order_id'),
-
-		);		
-		$dt = $this->cor_db->fetch_one($config);
+	
+		$dt = $this->db->select('*')->from('order_main')->where('order_id',$this->input->get('order_id'))->get()->first_row('array');
 		if($dt['status']>0){
 
-			$this->cor_page->pop_redirect('订单状态变更，不允许删除',site_url('backend/'.$this->act.'/action_order/'));
+			$this->init_page->pop_redirect('订单状态变更，不允许删除',site_url('backend/'.$this->act.'/action_order/'));
 
 		}else{
-		$this->cor_db->delete($this->input->get('order_id'),$this->im->db_config_order());	
-		$this->cor_page->pop_redirect('已删除',site_url('backend/'.$this->act.'/action_order/'));
+		$this->init_db->delete($this->input->get('order_id'),$this->im->db_config_order());	
+		$this->init_page->pop_redirect('已删除',site_url('backend/'.$this->act.'/action_order/'));
 		
 		}
 		
@@ -274,17 +269,11 @@ class Product extends CI_Controller{
 	
 	//订单查看
 	function action_order_view(){
-		$this->cor_page->fetch_css(array('backend_order'),'view',getRootUrl('css','backend').'/item/');
-		$this->cor_page->fetch_css(array('table'),'view',getRootUrl('css','backend'));
+		$this->init_page->fetch_css(array('backend_order'),'view',getRootUrl('css','backend').'/item/');
+		$this->init_page->fetch_css(array('table'),'view',getRootUrl('css','backend'));
 		$order_id = $this->input->get("order_id");
-		$sql_arr = array(
-			'table_name'=>$this->cor_db->table('order_main'),
-			'fields'=>'*',
-			'primary_id'=>'order_id',
-			'primary_val'=>$order_id,
-		);	
-		$main = $this->cor_db->fetch_one($sql_arr);
-		$detail = $this->db->query('select a.*,b.p_pic,(a.p_price*a.p_qty) as sub_total from '.$this->cor_db->table('order_detail').' as a left join '.$this->cor_db->table('module_product').' as b  on a.p_id=b.p_id where a.order_id='.$order_id)
+		$main = $this->db->select('*',false)->from('order_main')->where('order_id',$order_id)->get()->first_row('array');
+		$detail = $this->db->query('select a.*,b.p_pic,(a.p_price*a.p_qty) as sub_total from '.$this->init_db->table('order_detail').' as a left join '.$this->init_db->table('module_product').' as b  on a.p_id=b.p_id where a.order_id='.$order_id)
 		->result_array();
 		$amount_total = 0;
 		$p_count = 0;
@@ -302,10 +291,10 @@ class Product extends CI_Controller{
 			'p_num'=>$p_num,
 			'p_count'=>$p_count,
 			'amount_total'=>$amount_total,
-			'status'=>$this->cor_cache->cache_fetch('order_status'),
+			'status'=>$this->init_cache->cache_fetch('order_status'),
 		);
 		
-		$this->cor_page->load_backend_view("order_view",$data);
+		$this->init_page->load_backend_view("order_view",$data);
 	}
 	
 	
@@ -313,7 +302,7 @@ class Product extends CI_Controller{
 	function action_order_status_change(){
 		$this->db->where('order_id',$this->input->get('order_id'));
 		$this->db->update('order_main',array('status'=>$this->input->get('status')));
-		$this->cor_page->backend_redirect($_SERVER['HTTP_REFERER'],'订单状态更新成功');
+		$this->init_page->backend_redirect($_SERVER['HTTP_REFERER'],'订单状态更新成功');
 	}
 
 

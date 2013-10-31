@@ -27,7 +27,7 @@ class Sales extends CI_Controller {
 	function index()
 	{
 		
-		$this->cor_page->load_front_view("sales",$data);
+		$this->init_page->load_front_view("sales",$data);
 		
 		
 	}	

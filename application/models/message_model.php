@@ -24,7 +24,7 @@
 	function db_config(){		
 		return array(
 			'main'=>array(
-				'table_name'=>$this->cor_db->table('message'),
+				'table_name'=>$this->init_db->table('message'),
 				'primary_key'=>'ms_id',
 			),
 		

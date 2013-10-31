@@ -16,7 +16,7 @@ class Download extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		//验证登陆
-		$this->cor_auth->execute_auth();
+		$this->init_auth->execute_auth();
 		$this->load->model(array('Download_model','Category_model'));
  		$this->act = 'download';
  		$this->im = $this->Download_model;
@@ -34,14 +34,7 @@ class Download extends CI_Controller{
 		$info_id = $this->input->get('info_id');
 		$parent_class = $this->input->get('parent_class');
 		if($info_id){
-			$sql_arr = array(
-				'table_name'=>$this->cor_db->table('infos'),
-				'fields'=>'*',
-				'primary_id'=>'info_id',
-				'primary_val'=>$info_id,
-			);	
-				
-			$main = $this->cor_db->fetch_one($sql_arr);		
+			$main = $this->db->select('*')->from('infos')->where('info_id',$info_id)->get()->first_row('array');
 			
 		}else{
 			
@@ -56,7 +49,7 @@ class Download extends CI_Controller{
 		
 		$soft_class_select  = $this->Category_model->fetch_category_option('0107',$main['info_soft_class_sn']);
 		
-		$select_soft_language = $this->cor_cache->cache_fetch("select_language_soft");		
+		$select_soft_language = $this->init_cache->cache_fetch("select_language_soft");		
 		
 		
 		$class_info = array(
@@ -76,7 +69,7 @@ class Download extends CI_Controller{
 			'pro_options'=>$pro_options,
 			'pro_select'=>explode(',',$main['pro_id']),
 		);
-		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);		
+		$this->init_page->load_backend_view(strtolower($this->act).'_add',$data);		
 	}
 	
 	
@@ -132,15 +125,15 @@ class Download extends CI_Controller{
 			 
 		 		$db_config = $this->im->db_config(); 
 		 		$data['main']['pro_id'] = implode(",",$data['main']['pro_id']);
-		 		$data_var = $this->cor_db->save($data,$db_config);
-		 		$this->cor_page->pop_redirect('已保存',site_url('backend/'.$this->act.'/action_list/?parent_class='.$parent_class));
+		 		$data_var = $this->init_db->save($data,$db_config);
+		 		$this->init_page->pop_redirect('已保存',site_url('backend/'.$this->act.'/action_list/?parent_class='.$parent_class));
 		 	}else{
 				$data['editor']  = $this->Common_model->editor($main['info_content']);
-		 		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);
+		 		$this->init_page->load_backend_view(strtolower($this->act).'_add',$data);
 		 	}
 	 		
 	 	}catch(Exception  $e){
-	 		$this->cor_page->backend_redirect($this->act.'/action_add?parent_class='.$parent_class,$e->getMessage());
+	 		$this->init_page->backend_redirect($this->act.'/action_add?parent_class='.$parent_class,$e->getMessage());
 	 	}			
 	 }
 	
@@ -159,7 +152,7 @@ class Download extends CI_Controller{
 				'class_select'=>$class_select,
 		);		
 					
-		$this->cor_page->fetch_css(array('backend_download'));
+		$this->init_page->fetch_css(array('backend_download'));
 		$this->db->select("a.*,b.c_title",false)->from('infos as a')
 		->join('category as b','a.info_class_sn=b.c_sn')
 		->like('a.info_class_sn',$parent_class,'after')
@@ -171,7 +164,7 @@ class Download extends CI_Controller{
 		$this->db->order_by("info_id","desc");
 		
 		
-		$data = $this->cor_db->fetch_all();	
+		$data = $this->init_db->fetch_all();	
 		$this->load->model("Product_model");
 		$pro_options  = $this->Product_model->product_select();			
 		
@@ -183,13 +176,13 @@ class Download extends CI_Controller{
 			'product_select'=>$this->input->get('pro_id'),
 		)
 		);	
-		$pro_all = implode(',',(array)$this->cor_form->array_re_index($data['list'],'pro_id','pro_id'));
+		$pro_all = implode(',',(array)$this->init_form->array_re_index($data['list'],'pro_id','pro_id'));
 		if($pro_all){
-			$pro_list = $this->db->query("select pro_title,pro_id from ".$this->cor_db->table('products')." where pro_id in(".$pro_all.")")->result_array();
-			$pro_name_all = $this->cor_form->array_re_index($pro_list,'pro_id','pro_title');
+			$pro_list = $this->db->query("select pro_title,pro_id from ".$this->init_db->table('products')." where pro_id in(".$pro_all.")")->result_array();
+			$pro_name_all = $this->init_form->array_re_index($pro_list,'pro_id','pro_title');
 			foreach($data['list'] as &$v) $v['pro_name'] = $pro_name_all[$v['pro_id']];
 		}
-		$this->cor_page->load_backend_view(strtolower($this->act)."_list",$data);
+		$this->init_page->load_backend_view(strtolower($this->act)."_list",$data);
 		
 	}
 	
@@ -200,8 +193,8 @@ class Download extends CI_Controller{
 			$id = $id?$id:$this->input->get("info_id");				
 			$parent_class = $this->input->get('parent_class');		
 			$this->db->where_in('info_id',$id);
-	 		$this->db->delete($this->cor_db->table('infos'));			
-			$this->cor_page->pop_redirect('已删除',site_url('backend/'.$this->act.'/action_list/?parent_class='.$parent_class));
+	 		$this->db->delete($this->init_db->table('infos'));			
+			$this->init_page->pop_redirect('已删除',site_url('backend/'.$this->act.'/action_list/?parent_class='.$parent_class));
 		}catch(Exception $e){			
 			show_error($e->getMessage());
 		}

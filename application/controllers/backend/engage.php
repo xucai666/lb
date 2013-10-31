@@ -18,8 +18,8 @@
 	
 		parent::__construct();
 		//验证登陆
-		$this->cor_auth->execute_auth();
-		$this->cor_page->fetch_js(array('jscript','common'),'view',$this->cor_page->getRes('js','backend'));
+		$this->init_auth->execute_auth();
+		$this->init_page->fetch_js(array('jscript','common'),'view',$this->init_page->getRes('js','backend'));
 		$this->load->model(array('Engage_model','Category_model'));
 		$this->im = $this->Engage_model;
 		$this->act = "engage";
@@ -30,13 +30,8 @@
 
 	function action_add(){	
 		if($this->input->get("eg_id")){		
-				$sql_arr = array(
-					'table_name'=>$this->cor_db->table('engage'),
-					'fields'=>"*",
-					'primary_id'=>'eg_id',
-					'primary_val'=>$this->input->get("eg_id"),
-				);	
-				$main = $this->cor_db->fetch_one($sql_arr);
+				
+				$main = $this->db->select('*',false)->from('engage')->where('eg_id',$this->input->get('eg_id'))->get()->first_row('array');
 		}
 		//分类
 		$class_select =  $this->Category_model->fetch_category_option('0106',$main['eg_job_class']);	
@@ -48,14 +43,14 @@
  		$data = array(		
 			'area'=>$area, 	
 			'main'=>$main,				
-			'edu_options'=>$this->cor_cache->cache_fetch('edu_level'),				
+			'edu_options'=>$this->init_cache->cache_fetch('edu_level'),				
 			'class_select'=>$class_select,				
 			'editor'=>array(
 				'eg_content'=>$this->Common_model->editor($main['eg_content'],'eg_content'),
 			),
  		
  		); 		
-		$this->cor_page->load_backend_view(strtolower($this->act)."_add",$data);
+		$this->init_page->load_backend_view(strtolower($this->act)."_add",$data);
 	}
 
 
@@ -69,8 +64,8 @@
 						//'eg_area'=>$area,
 				)
 			);
-			$this->cor_db->save($data,$this->im->save_config());
-			$this->cor_page->pop_redirect('已保存',site_url('backend/'.$this->act.'/action_list'));
+			$this->init_db->save($data,$this->im->save_config());
+			$this->init_page->pop_redirect('已保存',site_url('backend/'.$this->act.'/action_list'));
 		}catch(Exception $e){			
 			show_error($e->getMessage());
 		}
@@ -88,13 +83,13 @@
 		);
 		$search['eg_pos'] && $this->db->like('eg_pos',$search['eg_pos']);
 		
-		$this->db->select("a.*,date_format(a.eg_addtime,'%Y-%m-%d') as pub_date,b.c_title",false)->from($this->cor_db->table('engage').' as a ')
-		->join($this->cor_db->table('category').' as b','a.eg_job_class=b.c_sn','left')
+		$this->db->select("a.*,date_format(a.eg_addtime,'%Y-%m-%d') as pub_date,b.c_title",false)->from($this->init_db->table('engage').' as a ')
+		->join($this->init_db->table('category').' as b','a.eg_job_class=b.c_sn','left')
 		->order_by("a.eg_id","desc");
 		
-		$data = $this->cor_db->fetch_all();	
+		$data = $this->init_db->fetch_all();	
 			
-		$this->cor_page->load_backend_view(strtolower($this->act)."_list",array_merge($data,array('search'=>$search)));
+		$this->init_page->load_backend_view(strtolower($this->act)."_list",array_merge($data,array('search'=>$search)));
 	}
 	
 
@@ -102,8 +97,8 @@
 		try{			
 			$id  = $this->input->get("eg_id");			
 			$this->db->where('eg_id',$id);
-	 		$this->db->delete($this->cor_db->table('engage'));			
-			$this->cor_page->backend_redirect("backend/'.$this->act.'/action_list","删除成功");
+	 		$this->db->delete($this->init_db->table('engage'));			
+			$this->init_page->backend_redirect("backend/'.$this->act.'/action_list","删除成功");
 		}catch(Exception $e){			
 			show_error($e->getMessage());
 		}
@@ -114,17 +109,17 @@
 	//应聘
 	function action_apply(){			
 					
-		$this->cor_page->fetch_css(array('backend_apply2'));
-		$this->db->select("a.*",false)->from($this->cor_db->table('engage_apply').' as a ')
+		$this->init_page->fetch_css(array('backend_apply2'));
+		$this->db->select("a.*",false)->from($this->init_db->table('engage_apply').' as a ')
 		->order_by("apply_id","desc");
-		$data = $this->cor_db->fetch_all();	
+		$data = $this->init_db->fetch_all();	
 		$data = array_merge($data,
 		array(
 		)
 		);		
 		
 		
-		$this->cor_page->load_backend_view(strtolower($this->act)."_apply_list",$data);
+		$this->init_page->load_backend_view(strtolower($this->act)."_apply_list",$data);
 		
 				
 		
@@ -132,24 +127,27 @@
 	
 	//查看简历
 	function action_apply_view(){
-		$this->cor_page->fetch_css('table');
+		$this->init_page->fetch_css('table');
 		$id  = $this->input->get("apply_id");			
 		if($id){		
 				$sql_arr = array(
-					'table_name'=>$this->cor_db->table('engage_apply'),
+					'table_name'=>$this->init_db->table('engage_apply'),
 					'fields'=>'*',
 					'primary_id'=>'apply_id',
 					'primary_val'=>$id,
 				);	
-				$main = $this->cor_db->fetch_one($sql_arr);
-				
+
+				$main = $this->db->select('*')->from('engage_apply')->where('apply_id',$id)->get()->first_row('array');
 				$sql_arr = array(
-					'table_name'=>$this->cor_db->table('engage'),
+					'table_name'=>$this->init_db->table('engage'),
 					'fields'=>'eg_pos',
 					'primary_id'=>'eg_id',
 					'primary_val'=>$main['eg_id'],
 				);	
-				$engage = $this->cor_db->fetch_one($sql_arr);
+				
+			
+				$engage = $this->db->select('eg_pos')->from('engage_apply')->where('eg_id',$main['eg_id'])->get()->first_row('array');
+
 				$main['eg_pos'] = $engage['eg_pos'];
 		
 				
@@ -157,7 +155,7 @@
 		
 		
 			
-		$this->cor_page->load_backend_view(strtolower($this->act)."_apply_view",array('main'=>$main));
+		$this->init_page->load_backend_view(strtolower($this->act)."_apply_view",array('main'=>$main));
 		
 	
 	}
@@ -167,8 +165,8 @@
 		try{			
 			$id  = $this->input->get("apply_id");			
 			$this->db->where('apply_id',$id);
-	 		$this->db->delete($this->cor_db->table('engage_apply'));			
-			$this->cor_page->pop_redirect('已删除',site_url('backend/engage/action_apply'));
+	 		$this->db->delete($this->init_db->table('engage_apply'));			
+			$this->init_page->pop_redirect('已删除',site_url('backend/engage/action_apply'));
 		}catch(Exception $e){			
 			show_error($e->getMessage());
 		}

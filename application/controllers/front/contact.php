@@ -29,7 +29,7 @@ class Contact extends CI_Controller {
 	function index()
 	{
 		
-		$this->cor_page->load_front_view("contact");
+		$this->init_page->load_front_view("contact");
 		
 		
 	}	

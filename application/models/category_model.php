@@ -17,7 +17,7 @@
 	function __construct(){
 	
 		parent::__construct();		
-		$this->table  = $this->cor_db->table('category');
+		$this->table  = $this->init_db->table('category');
 		$this->lang->load('item_backend_category', lang_get());	 
 		$this->tpl->assign('lang_category',$this->lang->language);			
 	}
@@ -66,7 +66,7 @@
 	//调用分类
 	public function fetch_category($sn=null){
 		$category  = $this->_db_category($sn);		
-		return $this->cor_form->array_re_index($category,'c_sn','c_title');
+		return $this->init_form->array_re_index($category,'c_sn','c_title');
 		
 	}
 	
@@ -98,8 +98,8 @@
 	function fetch_parent($sub){
 		if(empty($sub)) return null;
 		
-		$sql = "select * from ".$this->table." where '".$sub."' regexp c_sn order by c_level desc limit 1,1 ";
-		return  $this->cor_db->fetch_value($sql);
+		$sql = "select * from ".$this->table." where ? regexp c_sn order by c_level desc limit 1,1 ";
+		return  $this->init_db->fetchArray($sql,array($sub));
 		
 	}
 	
@@ -108,8 +108,8 @@
 	function fetch_new_sn($cur_sn,$parent){
 		if(strcmp(substr($cur_sn,0,-2),$parent)!=0){
 			$level = intval(strlen($parent)/2);
-			$sql = "select  max(c_sn) as new_c_sn  from ".$this->table." where c_sn like '".$parent."_%' and c_level=".$level;
-			$new_c_sn =  $this->cor_db->fetch_value($sql,'new_c_sn');
+			$sql = "select  max(c_sn) as new_c_sn  from ".$this->table." where ? ";
+			$new_c_sn =  $this->init_db->fetchColumn($sql,array("c_sn like '".$parent."_%' and c_level=".$level));
 			$new_c_sn = $new_c_sn?$new_c_sn+1:$parent.'01';	
 			$len = (strlen($parent)+2);	
 			$new_c_sn = sprintf("%0".$len."s",$new_c_sn);
@@ -122,13 +122,8 @@
 	//取分类信息,通过id或者c_sn标记
 	function detail($val,$type='byid',$key=null){
 		$primary_id = $type=='byid'?'c_id':'c_sn';
-		$config = array(
-			'table_name'=>$this->cor_db->table('category'),
-			'primary_id'=>$primary_id,
-			'primary_val'=>$val,
-		);
-	
-		$rs =   $this->cor_db->fetch_one($config);
+		
+		$rs =   $this->db->select('*',false)->from('category')->where($primary_id,$val)->get()->first_row('array');
 		return  $key?$rs[$key]:$rs;
 	}
 	
@@ -136,12 +131,12 @@
 	//查询列表
 	function fetch_list($c_parent=null){
 			$this->db->select('*,left(c_sn,length(c_sn)-2) as c_parent',false)
- 			->from($this->cor_db->table('category'));
+ 			->from($this->init_db->table('category'));
  			$c_parent && $this->db->like('c_sn',$c_parent,'after');
  			$this->db->order_by('c_sn','asc')
  			->order_by('c_order','desc');
  			$rs = $this->db->get()->result_array();
- 			$rs_parent = $this->cor_form->array_re_index($rs,'c_parent','c_id');
+ 			$rs_parent = $this->init_form->array_re_index($rs,'c_parent','c_id');
 			foreach($rs as &$v){
 				$v['more'] = $rs_parent[$v['c_sn']]?1:0;
 			}

@@ -23,9 +23,9 @@
  *
  * Although deep hierarchies are possible, they are not recommended. Try to keep your
  * cache groups as shallow as possible. Anything up 3-5 parents should be ok. So
- * »a|b|c« is a good depth where »a|b|c|d|e|f|g|h|i|j|k« isn't. Try to join correlating
- * cache groups: if your cache groups look somewhat like »a|b|$page|$items|$whatever«
- * consider using »a|b|c|$page-$items-$whatever« instead.
+ * 禄a|b|c芦 is a good depth where 禄a|b|c|d|e|f|g|h|i|j|k芦 isn't. Try to join correlating
+ * cache groups: if your cache groups look somewhat like 禄a|b|$page|$items|$whatever芦
+ * consider using 禄a|b|c|$page-$items-$whatever芦 instead.
  *
  * @package Smarty
  * @subpackage Cacher

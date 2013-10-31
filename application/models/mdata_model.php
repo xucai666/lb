@@ -100,7 +100,7 @@ class Mdata_model extends CI_Model{
 		
 		//config table
 		$tb = $this->m->main($this->get_mid(),'m_tb');
-	    $query_types = $this->cor_cache->cache_fetch('query_types');
+	    $query_types = $this->init_cache->cache_fetch('query_types');
 		//config fields
 		$fields_r = $this->m->details($this->get_mid());
 		
@@ -127,11 +127,11 @@ class Mdata_model extends CI_Model{
 			//数据列表页面，隐藏未配置输出格式的字段
 			if(empty($v['r_output'])) unset($fields_r[$k]);
 		}
-		$fields_out = $this->cor_form->array_re_index($fields_r,'r_name','r_output');
+		$fields_out = $this->init_form->array_re_index($fields_r,'r_name','r_output');
 		$this->db->select(implode(',',array_keys($fields_out)),false)->from($tb);
 		if($query['mdata_sort']) $this->db->order_by($query['mdata_sort'],$query['mdata_sort_direction']);
 		$this->db->order_by($primary,'desc');
-		$ls = $this->cor_db->fetch_all($size);
+		$ls = $this->init_db->fetch_all($size);
 
 		
 		//按输出格式对数据处理后再输出
@@ -153,14 +153,9 @@ class Mdata_model extends CI_Model{
 
 	//detail
 	function detail($id){
-		$cf = array(
-				'primary_val'=>$id,
-				'primary_id'=>$this->m->fetch_primary($this->get_mid(),'r_name'),
-				'table_name'=>$this->m->main($this->get_mid(),'m_tb'),
-		);
-		$ds =  $this->cor_db->fetch_one($cf);
-
-		return $ds;
+		$tb = $this->m->main($this->get_mid(),'m_tb');
+		$primary = $this->m->fetch_primary($this->get_mid(),'r_name');
+		return $this->db->select('*',false)->from($tb)->where($primary,$id)->get()->first_row('array');
 	}
 
 
@@ -193,7 +188,7 @@ class Mdata_model extends CI_Model{
 	 */
 	function select_list(){
 		$list = $this->m->all();
-		$m_sub = $this->cor_form->array_re_index($this->m->all(array("m_sub > "=>0)),'m_sub','m_sub');
+		$m_sub = $this->init_form->array_re_index($this->m->all(array("m_sub > "=>0)),'m_sub','m_sub');
 		
 		foreach($list as $k=>&$v){
 			if($v[m_lock] || in_array($v['m_id'], $m_sub)){

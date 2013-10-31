@@ -22,9 +22,3 @@
  $lang['inp_pardon']												= '对不起';
  $lang['home_page']												= '网站首页';
  $lang['exit']												= '退出';
- //主题
- 
- 
- //日志
- 
-?>

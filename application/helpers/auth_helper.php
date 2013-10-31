@@ -16,7 +16,7 @@
 if(!function_exists('my_encrypt')){
 	 function my_encrypt($string=null, $operation) { 
 		 	if(empty($string)) return '';
-		 	if(empty($operation)) show_error('¼ÓÃÜÀàĞÍÎ´ÉèÖÃ');
+		 	if(empty($operation)) show_error('åŠ å¯†ç±»å‹æœªè®¾ç½®');
 		 	$key  = config_item('encryption_key');	
 			$keylength = strlen($key);
 			$string = $operation == 'DECODE' ? base64_decode($string) : $string;
@@ -24,7 +24,7 @@ if(!function_exists('my_encrypt')){
 			for($i = 0; $i < strlen($string); $i += $keylength) {
 			
 				$coded .= substr($string, $i, $keylength) ^ $key;
-				//substr ÀàËÆÓÚ.netÖĞsubstring
+				//substr ç±»ä¼¼äº.netä¸­substring
 			}	
 			
 			$coded = $operation == 'ENCODE' ? str_replace('=', '', base64_encode($coded)) : $coded;
@@ -34,15 +34,15 @@ if(!function_exists('my_encrypt')){
 }
 
 
-if(!function_exists('cor_base64_encode')){
-	 function cor_base64_encode($string) { 
+if(!function_exists('init_base64_encode')){
+	 function init_base64_encode($string) { 
 		 	return my_encrypt($string, 'ENCODE');
 		 		
 	}
 }
 
-if(!function_exists('cor_base64_decode')){
-	 function cor_base64_decode($string) { 
+if(!function_exists('init_base64_decode')){
+	 function init_base64_decode($string) { 
 		 	return my_encrypt($string, 'DECODE');
 		 		
 	}

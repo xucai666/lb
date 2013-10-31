@@ -23,7 +23,7 @@ class Pictures_model extends CI_Model{
 	function db_config(){
 		return array(
 			'main'=>array(
-				'table_name'=>$this->cor_db->table('pictures'),
+				'table_name'=>$this->init_db->table('pictures'),
 				'primary_key'=>'p_id',
 			)
 		);
@@ -39,7 +39,7 @@ class Pictures_model extends CI_Model{
 	function db_pictures_model_config(){
 		return array(
 			'main'=>array(
-				'table_name'=>$this->cor_db->table('pictures_config'),
+				'table_name'=>$this->init_db->table('pictures_config'),
 				'primary_key'=>'m_id',
 			)
 		);
@@ -56,9 +56,9 @@ class Pictures_model extends CI_Model{
 	 
 	function list_head(){
 		$this->db->select('b.*,a.m_name,a.m_class,a.m_id');
-		$this->db->from($this->cor_db->table('pictures_config as a'));
-		$this->db->join($this->cor_db->table('pictures as b'),'a.m_id=b.p_key','left');
-		return $this->cor_db->fetch_all();
+		$this->db->from($this->init_db->table('pictures_config as a'));
+		$this->db->join($this->init_db->table('pictures as b'),'a.m_id=b.p_key','left');
+		return $this->init_db->fetch_all();
 		
 		
 	}	
@@ -71,7 +71,7 @@ class Pictures_model extends CI_Model{
 	 */
 	function save_single($post){
 		$post['main']['p_date'] = date('Y-m-d');
-		return $this->cor_db->save($post,$this->db_config());
+		return $this->init_db->save($post,$this->db_config());
 	}
 
 
@@ -84,8 +84,8 @@ class Pictures_model extends CI_Model{
 	 
 	function list_index(){
 		$this->db->select('a.*,b.m_name,b.m_class,b.m_id');
-		$this->db->from($this->cor_db->table('pictures as a'));
-		$this->db->join($this->cor_db->table('pictures_config as b'),'b.m_class=a.p_type','left');
+		$this->db->from($this->init_db->table('pictures as a'));
+		$this->db->join($this->init_db->table('pictures_config as b'),'b.m_class=a.p_type','left');
 		$this->db->where('m_class','index_rotation');
 		$this->db->order_by('a.p_sort','asc');
 		$list = $this->db->get()->result_array();
@@ -99,8 +99,8 @@ class Pictures_model extends CI_Model{
 	 */
 	function find_top($m_id){
 		$this->db->select('b.*,a.m_name,a.m_class,a.m_id');
-		$this->db->from($this->cor_db->table('pictures_config as a'));
-		$this->db->join($this->cor_db->table('pictures as b'),'a.m_id=b.p_key','left');
+		$this->db->from($this->init_db->table('pictures_config as a'));
+		$this->db->join($this->init_db->table('pictures as b'),'a.m_id=b.p_key','left');
 		$this->db->where('a.m_id',$m_id);
 		$top  = $this->db->get()->first_row('array');
 		$top = config_item('base_url')."/swfupload/uploads/".$top['p_thumb'];

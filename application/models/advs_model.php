@@ -18,17 +18,17 @@ class Advs_model extends CI_Model{
 	}
 	
 	/**
-	 * 入库参数配置
+	 * 鍏ュ簱鍙傛暟閰嶇疆
 	 */
 	function db_config(){
 		return array(
 			'main'=>array(
-				'table_name'=>$this->cor_db->table('advs'),
+				'table_name'=>$this->init_db->table('advs'),
 				'primary_key'=>'adv_id',
 			),
 			
 			'detail'=>array(
-				'table_name'=>$this->cor_db->table('adv_detail'),
+				'table_name'=>$this->init_db->table('adv_detail'),
 				'primary_key'=>'detail_id',
 			)
 		);
@@ -41,21 +41,21 @@ class Advs_model extends CI_Model{
 	
 	
 	/**
-	 * 校验 
+	 * 鏍￠獙 
 	 */
 	function validator(){	 
 		return  array(
 		
 			array(
  					"field"=>"main[adv_title]",	
- 					"label"=>"分类",	
+ 					"label"=>"鍒嗙被",	
  					"rules"=>"required|max_length[100]",	
  			
  			),
  		
  			array(
  					"field"=>"main[adv_w]",	
- 					"label"=>"广告宽度",	
+ 					"label"=>"骞垮憡瀹藉害",	
  					"rules"=>"required|max_length[100]",	
  			
  			),
@@ -63,7 +63,7 @@ class Advs_model extends CI_Model{
  			
  			array(
  					"field"=>"main[adv_h]",	
- 					"label"=>"广告高度",	
+ 					"label"=>"骞垮憡楂樺害",	
  					"rules"=>"required|max_length[100]",	
  			
  			),
@@ -80,15 +80,15 @@ class Advs_model extends CI_Model{
 	 	
 	 	
 	 
-	//查询列表
+	//鏌ヨ鍒楄〃
 	function fetch_list(){	
 			$rs = $this->db->select('a.*,count(b.detail_id) as pic_stat',false)
- 			->from($this->cor_db->table('advs').' as a ')
+ 			->from($this->init_db->table('advs').' as a ')
  			->like('a.adv_title',$this->input->get('adv_title'))
- 			->join($this->cor_db->table('adv_detail').' as b','a.adv_id=b.adv_id','left')
+ 			->join($this->init_db->table('adv_detail').' as b','a.adv_id=b.adv_id','left')
  			->group_by('a.adv_id')
  			->order_by('a.adv_id','desc');
- 			return $this->cor_db->fetch_all();
+ 			return $this->init_db->fetch_all();
 	}	
 	 	
 	
@@ -101,7 +101,7 @@ class Advs_model extends CI_Model{
 		$main = $this->input->post('main');	
 		$file_s = $_FILES;
 			
-		//重整数组	
+		//閲嶆暣鏁扮粍	
 		foreach($file_s['detail']['name']['img'] as $k=>$v){
 			if($file_s['detail']['size']['img'][$k]==0) continue;
 			$file_s_new[$k] = array(
@@ -114,7 +114,7 @@ class Advs_model extends CI_Model{
 				
 		}	
 
-		//重新构造文件数组		
+		//閲嶆柊鏋勯€犳枃浠舵暟缁?	
 		$_FILES = $file_s_new;	
 		foreach((array)$_FILES as $key=>$v){
 			$index = $key;
@@ -134,21 +134,20 @@ class Advs_model extends CI_Model{
 		
 		return array(
 			'main'=>$main,
-			'detail'=>$this->cor_form->post_to_set($detail),
+			'detail'=>$this->init_form->post_to_set($detail),
 		);
 	}	
 	
  	
  	
  	
-//广告显示
+//骞垮憡鏄剧ず
 
 function showadv($id,$type='backend'){	
 	if(empty($id)) return false;
-	$main = $this->cor_db->fetch_value( "SELECT * from ".$this->cor_db->table("advs")." where adv_id='".$id."'" );
+	$main = $this->init_db->fetchArray( "SELECT * from ".$this->init_db->table("advs")." where adv_id=?",array($id) );
 	if($main['adv_type']==1){	
-		//$this->cor_page->fetch_js('jquery.Slider','view',$this->cor_page->getRes('js',$type));
-		$detail = $this->db->query( "SELECT * from ".$this->cor_db->table("adv_detail")." where adv_type=1 and adv_id='".$id."'" )->result_array();
+		$detail = $this->db->query( "SELECT * from ".$this->init_db->table("adv_detail")." where adv_type=1 and adv_id='".$id."'" )->result_array();
 		$reval = js_url('jquery-1.9.1.min','front')."\n";
 		$reval .= js_url('jquery.Slider','front')."\n";
 		$reval  .= "<table   ><tr><td >";
@@ -249,7 +248,7 @@ function showadv($id,$type='backend'){
 	
 	}else{	
 
-		$detail = $this->db->query( "SELECT * from ".$this->cor_db->table("adv_detail")." where adv_type=2 and   adv_id='".$id."'" )->first_row("array");
+		$detail = $this->db->query( "SELECT * from ".$this->init_db->table("adv_detail")." where adv_type=2 and   adv_id='".$id."'" )->first_row("array");
 		$reval  = js_url('jquery-1.9.1.min','front')."\n";
 		$reval .= js_url('swfobject','front')."\n";
 		$reval .= "<table><tr><td>";		

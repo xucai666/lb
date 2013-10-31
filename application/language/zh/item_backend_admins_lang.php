@@ -38,5 +38,3 @@
  $lang['log_add']													= '添加用户 %s';
  $lang['log_mod']													= '修改用户 %s';
  $lang['log_del']													= '删除用户 %s';
- 
-?>

@@ -15,14 +15,14 @@
 class Roles_model extends CI_Model{
 	function __construct(){
 		parent::__construct();
-		$this->ds = $this->cor_db->getDs();	
+		$this->ds = $this->init_db->getDs();	
 	}
 	
 	/**
 	 * 管理员明细
 	 */
 	function fetch_detail($admin_id){
-		$db_temp  = $this->ds->select('*')->from($this->cor_db->table('admins'))->where('admin_id',1)->get()->result_array();
+		$db_temp  = $this->ds->select('*')->from($this->init_db->table('admins'))->where('admin_id',1)->get()->result_array();
 		return $db_temp[0];
 	}
 	
@@ -52,7 +52,7 @@ class Roles_model extends CI_Model{
 	 function db_config(){
 	 	return array(
 	 		'main'=>array(
-	 			'table_name'=>$this->cor_db->table('roles'),
+	 			'table_name'=>$this->init_db->table('roles'),
 	 			'primary_key'=>'role_id',	 			
 	 		),
 	 	);
@@ -63,17 +63,17 @@ class Roles_model extends CI_Model{
 	  * 权限参数
 	  */
 	  function get_rights_item(){
-	  	return $this->cor_auth->get_rights_item();
+	  	return $this->init_auth->get_rights_item();
 	  }
 	  
 	  
 	  
 	  function fetch_roles_list(){
 	  		
-	  	$this->ds->select("*",false)->from($this->cor_db->table('roles'))
+	  	$this->ds->select("*",false)->from($this->init_db->table('roles'))
 		->order_by("role_id","asc");
 		
-		$data = $this->cor_db->fetch_all(15);	
+		$data = $this->init_db->fetch_all(15);	
 		
 		foreach($data['list'] as $v){
 			$list[$v['role_id']] = $v;

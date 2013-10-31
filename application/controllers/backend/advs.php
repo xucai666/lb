@@ -16,7 +16,7 @@ class Advs extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		//验证登陆
-		$this->cor_auth->execute_auth();
+		$this->init_auth->execute_auth();
 		$this->load->model('Advs_model'); 
 		$this->load->model('Category_model'); 
 		$this->parent_cat = $this->input->get('parent_cat');
@@ -34,14 +34,8 @@ class Advs extends CI_Controller{
 		//查询
 		$adv_id = $this->input->get('adv_id');
 		if($adv_id){
-			$sql_arr = array(
-				'table_name'=>$this->cor_db->table('advs'),
-				'fields'=>'*',
-				'primary_id'=>'adv_id',
-				'primary_val'=>$this->input->get('adv_id'),
-			);	
-			$main = $this->cor_db->fetch_one($sql_arr);
-			$detail = $this->db->query("select * from ".$this->cor_db->table('adv_detail')." where adv_id=".$adv_id)->result_array();
+			$main = $this->db->select('*')->from('advs')->where('adv_id',$this->input->get('adv_id'))->get()->first_row('array');
+			$detail = $this->db->query("select * from ".$this->init_db->table('adv_detail')." where adv_id=".$adv_id)->result_array();
 		}else{
 			
 			$main['adv_type'] = 1;
@@ -56,7 +50,7 @@ class Advs extends CI_Controller{
 			'editor'=> $this->Common_model->editor($main['info_content']),
 			'adv_show'=> $adv_show,
 		);		
-		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);		
+		$this->init_page->load_backend_view(strtolower($this->act).'_add',$data);		
 	}
 	
 	
@@ -75,31 +69,31 @@ class Advs extends CI_Controller{
 		 	if($this->form_validation->run()==true){
 		 		//上传文件	
 		 		$data = $this->im->do_upload($main);
-		 		$rs = $this->cor_db->save($data,$this->im->db_config());
+		 		$rs = $this->init_db->save($data,$this->im->db_config());
 		 		$main  = $rs['main'];
 		 		$adv_id = $main['adv_id'];
 				$adv_show = $this->im->showadv($adv_id);	
 
 				$adv_show =  "document.write('".str_replace(array("\r","\n"),array('',''),addslashes($adv_show))."');";
 				MakeHtmlFile(FCPATH.config_item('html_root').'/js/zh_'.$adv_id.'.js',$adv_show);	
-		 		$this->cor_page->pop_redirect('已保存',site_url('backend/advs/action_list/?parent_cat='.$main['info_class_sn']));
+		 		$this->init_page->pop_redirect('已保存',site_url('backend/advs/action_list/?parent_cat='.$main['info_class_sn']));
 		 	}else{
 		 	
-		 		$data['detail'] = array_pad((array)$this->cor_form->post_to_set($detail),2,'');
+		 		$data['detail'] = array_pad((array)$this->init_form->post_to_set($detail),2,'');
 		 		
 				$data['editor']  = $this->Common_model->editor($main['info_content']);
-		 		$this->cor_page->load_backend_view('advs_add',$data);
+		 		$this->init_page->load_backend_view('advs_add',$data);
 		 	}
 
 	 	}catch(Exception $e){
-	 		$this->cor_page->backend_redirect('javascript:history.go(-1);',$e->getMessage());
+	 		$this->init_page->backend_redirect('javascript:history.go(-1);',$e->getMessage());
 	 	}			
 	 }
 	
 	 function action_view(){
 	 	 $adv_id   = $this->input->get('adv_id');
 	 	 $data['adv_url'] = base_url().config_item('html_root').'/js/zh_'.$adv_id.'.js';
-		 $this->cor_page->load_backend_view('advs_view',$data);	
+		 $this->init_page->load_backend_view('advs_view',$data);	
 	 }
 	 
 	 /*
@@ -110,11 +104,11 @@ class Advs extends CI_Controller{
 	 		//分类
  			
  			$data = $this->im->fetch_list();
-	 		$this->cor_page->load_backend_view(strtolower($this->act).'_list',$data);
+	 		$this->init_page->load_backend_view(strtolower($this->act).'_list',$data);
 		 	
 	 		
 	 	}catch(Exception $e){
-	 		$this->cor_page->backend_redirect('advs/action_list/',$e->getMessage());
+	 		$this->init_page->backend_redirect('advs/action_list/',$e->getMessage());
 	 	}			
 	 }
 	
@@ -128,13 +122,13 @@ class Advs extends CI_Controller{
 	 */
 	 function action_del(){
 	 	try{
-			$this->cor_db->delete($this->input->get('adv_id'),$this->im->db_config());
-			$this->cor_page->pop_redirect('已删除',site_url('backend/advs/action_list/'));
+			$this->init_db->delete($this->input->get('adv_id'),$this->im->db_config());
+			$this->init_page->pop_redirect('已删除',site_url('backend/advs/action_list/'));
 		 	
 	 		
 	 	}catch(Exception $e){
 	 		
-	 		$this->cor_page->backend_redirect('advs/action_list/',$e->getMessage());
+	 		$this->init_page->backend_redirect('advs/action_list/',$e->getMessage());
 	 	}			
 	 }
 	

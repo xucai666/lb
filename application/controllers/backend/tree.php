@@ -16,14 +16,14 @@ class Tree extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		//auth login
-        $this->cor_auth->execute_auth();
+        $this->init_auth->execute_auth();
 		$this->load->model("Tree_model",'im');
 		
 	}
 
 	function index(){
-		$data = array('treeIds'=>$this->cor_cache->cache_fetch('treeIds'));
-		$this->cor_page->load_backend_view('tree_select',$data);
+		$data = array('treeIds'=>$this->init_cache->cache_fetch('treeIds'));
+		$this->init_page->load_backend_view('tree_select',$data);
 	}
 	
 
@@ -35,7 +35,7 @@ class Tree extends CI_Controller{
 			$main = $this->im->tree_detail($treeId);
 		}
 		$data = array('main'=>$main);
-		$this->cor_page->load_backend_view('tree_root_add',$data);
+		$this->init_page->load_backend_view('tree_root_add',$data);
 
 
 	}
@@ -58,17 +58,17 @@ class Tree extends CI_Controller{
 				$this->db->update('tree_node',$main);
 
 				//create  tree cache
-		 	 	$treeIds = $this->cor_form->array_re_index($this->db->select('treeId,name')->from('tree_node')->where('pid',0)->get()->result_array(),'treeId','name');
-		 	 	$this->cor_cache->cache_create($treeIds,'treeIds');
+		 	 	$treeIds = $this->init_form->array_re_index($this->db->select('treeId,name')->from('tree_node')->where('pid',0)->get()->result_array(),'treeId','name');
+		 	 	$this->init_cache->cache_create($treeIds,'treeIds');
 			
-				$this->cor_page->backend_redirect('tree/index','保存成功');
+				$this->init_page->backend_redirect('tree/index','保存成功');
 			}else{
 				$data = array_merge(array('pids'=>$this->im->fetch_select()),$data);				
-				$this->cor_page->load_backend_view('tree_root_add',$data);
+				$this->init_page->load_backend_view('tree_root_add',$data);
 			}
 
 		}catch(EXCEPTION $e){
-			$this->cor_page->backend_redirect('tree/index',$e->getMessage());
+			$this->init_page->backend_redirect('tree/index',$e->getMessage());
 		}
 
 	}
@@ -77,7 +77,7 @@ class Tree extends CI_Controller{
 
 	function action_root_set(){
 		$this->im->set_root($this->uri->segment(4));
-		$this->cor_page->backend_redirect('tree/action_list');
+		$this->init_page->backend_redirect('tree/action_list');
 
 	}
 
@@ -96,7 +96,7 @@ class Tree extends CI_Controller{
 			$main = $this->im->detail($id);
 		}
 		$data = array('main'=>$main,'pids'=>$pids);
-		$this->cor_page->load_backend_view('tree_add',$data);
+		$this->init_page->load_backend_view('tree_add',$data);
 	}
 
 	function action_save(){
@@ -116,14 +116,14 @@ class Tree extends CI_Controller{
 				$this->db->where('id',$main['id']);
 				$this->db->update('tree_node',$main);
 			
-				$this->cor_page->backend_redirect('tree/action_list','保存成功');
+				$this->init_page->backend_redirect('tree/action_list','保存成功');
 			}else{
 				$data = array_merge(array('pids'=>$this->im->fetch_select()),$data);				
-				$this->cor_page->load_backend_view('tree_add',$data);
+				$this->init_page->load_backend_view('tree_add',$data);
 			}
 
 		}catch(EXCEPTION $e){
-			$this->cor_page->backend_redirect('tree/action_list',$e->getMessage());
+			$this->init_page->backend_redirect('tree/action_list',$e->getMessage());
 		}
 
 	}
@@ -138,18 +138,18 @@ class Tree extends CI_Controller{
 				$this->im->delete_tree_node($item);
 			}
 			
-			$this->cor_page->backend_redirect('tree/action_list','删除成功');
+			$this->init_page->backend_redirect('tree/action_list','删除成功');
 		}catch(EXCEPTION $e){
-			$this->cor_page->backend_redirect($_SERVER['HTTP_REFERER'],$e->getMessage());
+			$this->init_page->backend_redirect($_SERVER['HTTP_REFERER'],$e->getMessage());
 		}
 	}
 
 	function action_list(){
 		$this->db->select('id,treeId,pid,code',false)->select('LEVEL,CONCAT(REPEAT("│ ",LEVEL-1),"├─",NAME) as name',false)->from('tree_node')->where('treeId',$this->im->get_root())->like('name',$this->input->get('name'))->order_by('leftId','asc');
 		if($treeId) $this->db->where('treeId',$treeId);
-		$data = $this->cor_db->fetch_all(15);
+		$data = $this->init_db->fetch_all(15);
 		$data['treeIds'] = $treeIds;
-		$this->cor_page->load_backend_view('tree_list',$data);
+		$this->init_page->load_backend_view('tree_list',$data);
 	}
 
 

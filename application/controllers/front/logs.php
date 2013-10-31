@@ -26,15 +26,15 @@ class Logs extends CI_Controller {
 	 */
 	function index()
 	{
-		$this->db->select("a.*",false)->from($this->cor_db->table('log').' as a ')	
+		$this->db->select("a.*",false)->from($this->init_db->table('log').' as a ')	
 		->like('a.log_user',$this->input->get('log_user'))		
 		->like('a.log_type',$this->input->get('log_type'))		
 		->order_by("log_id","desc");
-		$data = $this->cor_db->fetch_all();	
+		$data = $this->init_db->fetch_all();	
 		$data = array_merge($data,
 		array()
 		);	
-		$this->cor_page->load_front_view("logs",$data);
+		$this->init_page->load_front_view("logs",$data);
 		
 	}	
 	

@@ -16,7 +16,7 @@ class Archives extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		//验证登陆
-		$this->cor_auth->execute_auth();
+		$this->init_auth->execute_auth();
 		$this->load->model(array('Archives_model','Category_model'));
  		$this->act = 'archives';
  		$this->im = $this->Archives_model;
@@ -37,14 +37,7 @@ class Archives extends CI_Controller{
 		$info_id = $this->input->get('info_id');
 		$parent_class = $this->input->get('parent_class');
 		if($info_id){
-			$sql_arr = array(
-				'table_name'=>$this->cor_db->table('infos'),
-				'fields'=>'*',
-				'primary_id'=>'info_id',
-				'primary_val'=>$info_id,
-			);	
-				
-			$main = $this->cor_db->fetch_one($sql_arr);				
+			$main = $this->db->select('*')->from('infos')->where('info_id',$info_id)->get()->first_row('array');		
 			
 		}else{
 			
@@ -65,11 +58,11 @@ class Archives extends CI_Controller{
 			'main'=>$main,
 			'editor'=>$data['editor']  = $this->Common_model->editor($main['info_content']),
 			'class_info'=>$class_info,
-			'options_slide'=>$this->cor_cache->cache_fetch('select_slide'),
+			'options_slide'=>$this->init_cache->cache_fetch('select_slide'),
 			'options_slide_select'=>$main['info_slide'],
 		);
 		
-		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);		
+		$this->init_page->load_backend_view(strtolower($this->act).'_add',$data);		
 	}
 	
 	
@@ -109,7 +102,7 @@ class Archives extends CI_Controller{
 				 $this->load->library('upload', $file_config);				
 				 if($_FILES['file1']['size']>0){
 					if ( ! $this->upload->do_upload("file1")){						 
-							 $this->cor_page->backend_redirect($this->act.'/action_add?parent_class='.$parent_class,'图片上传失败');				
+							 $this->init_page->backend_redirect($this->act.'/action_add?parent_class='.$parent_class,'图片上传失败');				
 					  }else{
 							 $files_info = $this->upload->data();
 							 @unlink('../../'.$main['info_pic']);
@@ -119,19 +112,19 @@ class Archives extends CI_Controller{
 		 		
 		 				
 		 		$db_config = $this->im->db_config(); 		 		
-		 		$data_var = $this->cor_db->save($data,$db_config);
+		 		$data_var = $this->init_db->save($data,$db_config);
 		 				 		
 		 		
 			 		
 		 		
-		 		$this->cor_page->pop_redirect('已保存',site_url('backend/archives/action_list/?parent_class='.$parent_class));
+		 		$this->init_page->pop_redirect('已保存',site_url('backend/archives/action_list/?parent_class='.$parent_class));
 		 	}else{
 				$data['editor']  = $this->Common_model->editor($main['info_content']);
-		 		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);
+		 		$this->init_page->load_backend_view(strtolower($this->act).'_add',$data);
 		 	}
 	 		
 	 	}catch(Exception $e){
-	 		$this->cor_page->backend_redirect($this->act.'/action_add?parent_class='.$parent_class,$e->getMessage());
+	 		$this->init_page->backend_redirect($this->act.'/action_add?parent_class='.$parent_class,$e->getMessage());
 	 	}			
 	 }
 	
@@ -151,20 +144,20 @@ class Archives extends CI_Controller{
 				'class_select'=>$class_select,
 		);		
 					
-		$this->cor_page->fetch_css(array('backend_archives'));
+		$this->init_page->fetch_css(array('backend_archives'));
 		$this->db->select("a.*,b.c_title",false)->from('infos as a ')
 		->join('category as b','a.info_class_sn=b.c_sn')
 		->like('a.info_title',$info_title,'after')
 		->like('a.info_class_sn',$parent_class,'after')
 		->like('a.info_class_sn',$search_class,'after')
 		->order_by("info_id","desc");
-		$data = $this->cor_db->fetch_all(2);	
+		$data = $this->init_db->fetch_all(2);	
 		$data = array_merge($data,
 		array(
 			'class_info'=>$class_info,
 		)
 		);	
-		$this->cor_page->load_backend_view(strtolower($this->act)."_list",$data);
+		$this->init_page->load_backend_view(strtolower($this->act)."_list",$data);
 		
 	}
 	
@@ -176,8 +169,8 @@ class Archives extends CI_Controller{
 						
 			$parent_class = $this->input->get('parent_class');
 			$this->db->where_in('info_id',$id);
-	 		$this->db->delete($this->cor_db->table('infos'));			
-			$this->cor_page->pop_redirect('已删除',site_url('backend/'.$this->act.'/action_list/?parent_class='.$parent_class));
+	 		$this->db->delete($this->init_db->table('infos'));			
+			$this->init_page->pop_redirect('已删除',site_url('backend/'.$this->act.'/action_list/?parent_class='.$parent_class));
 		}catch(Exception $e){			
 			show_error($e->getMessage());
 		}

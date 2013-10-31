@@ -1,5 +1,4 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-
 //require "Smarty-2.6.20/libs/Smarty.class.php";
 require "Smarty-3.1.14/libs/Smarty.class.php";
 
@@ -64,18 +63,12 @@ function func_get_area_str( $array ) {
 	
 function func_get_areat($array) {
 	extract($array);
-	$cor_db  =  &get_cor_db();
+	$init_db  =  &get_init_db();
 	if( $id <= 1 ) $id=53;
 	$html = "";
 	while( $id > 1 ) {	
-		$sql_arr = array(
-			'table_name'=>'ecs_region',
-			'fields'=>'region_id, region_name,parent_id',
-			'primary_id'=>'region_id',
-			'primary_val'=>$id,
-		);	
-		
-		$a = $cor_db->fetch_one($sql_arr);			
+	
+		$a = $this->db->select('*',false)->from('ecs_region')->where('region_id',$id)->get()->first_row('array');
 		$html = get_area_help( $a['parent_id'], $id ) ."<span>&nbsp;" .$html."</span>";
 		$id = $a['parent_id'];
 	}
@@ -92,8 +85,8 @@ function func_get_areat($array) {
 function func_sex($array){
 	$ci = &get_instance();	
 	extract($array);
-	$cor_cache  =  &get_cor_cache();
-	$cache = $cor_cache->cache_fetch('sex');
+	$init_cache  =  &get_init_cache();
+	$cache = $init_cache->cache_fetch('sex');
 	if($sex){
 		 return $cache[$sex];
 		
@@ -113,8 +106,8 @@ function func_sex($array){
 function func_soft_language($array){
 	$ci = &get_instance();	
 	extract($array);
-	$cor_cache  =  &get_cor_cache();
-	$cache = $cor_cache->cache_fetch('select_language_soft');
+	$init_cache  =  &get_init_cache();
+	$cache = $init_cache->cache_fetch('select_language_soft');
 	if($select_soft_language){
 		 return $cache[$select_soft_language];
 		
@@ -138,8 +131,8 @@ function func_soft_language($array){
 
 function func_work_year($array){
 	extract($array);
-	$cor_cache  =  &get_cor_cache();
-	$cache = $cor_cache->cache_fetch('work_year');
+	$init_cache  =  &get_init_cache();
+	$cache = $init_cache->cache_fetch('work_year');
 	return $cache[$work_year];
 	
 }
@@ -160,7 +153,7 @@ function func_insert_css($array){
 	extract($array);
 	$ci = &get_instance();
 	$file = explode(",",$file);
-	return $ci->cor_page->fetch_css($file,'loadview',$catalog);
+	return $ci->init_page->fetch_css($file,'loadview',$catalog);
 	
 }
 
@@ -173,7 +166,7 @@ function func_insert_js($array){
 	$ci = &get_instance();
 	$file = explode(",",$file);
 	$path = $path?$path:'js';
-	return $ci->cor_page->fetch_js($file,'loadview',$path);	
+	return $ci->init_page->fetch_js($file,'loadview',$path);	
 }
 
 
@@ -182,14 +175,9 @@ function func_insert_js($array){
  * 底部信息
  */
 function func_bottom_info(){
-			$cor_db  =  &get_cor_db();
+			$init_db  =  &get_init_db();
 			$ds->_reset_select();		
-			$sql_paramater = array(
-				'table_name'=>$cor_db->table('infos'),
-				'primary_id'=>'info_class',
-				'primary_val'=>'-4',
-			);
-			$detail =   $cor_db->fetch_one($sql_paramater);	
+			$detail =   $this->db->select('*',false)->from('infos')->where('info_class','-4')->get()->first_row('array');
 			$ds->_reset_select();			
 			echo $detail['info_content'];
 }
@@ -371,8 +359,8 @@ function func_state($array){
 }
 
 function func_my_encrypt($string=null,$direction){
-	$cor_page = &get_cor_page();
-	return $cor_page->my_encrypt($string,$direction);
+	$init_page = &get_init_page();
+	return $init_page->my_encrypt($string,$direction);
 }
 
 //form_error
@@ -459,7 +447,7 @@ class tpl extends Smarty
         //backend path,js,css,img  ect.     
 		//template path
 
-		$sys_config = $CI->cor_cache->cache_fetch('sys_config','develop',lang_get());
+		$sys_config = $CI->init_cache->cache_fetch('sys_config','develop',lang_get());
 		if($sys_config['debug']) $CI->output->enable_profiler(true);			
         $this->assign("dir_front", config_item('template_dir').'front/'.$sys_config['template'].'/'.$lang_type); // so we can get the full path to CI easily
         $this->assign("dir_backend", config_item('template_dir').'backend/'.$sys_config['template'].'/'); // so we can get the full path to CI easily
@@ -493,10 +481,6 @@ class tpl extends Smarty
         $this->registerPlugin("function","ci_form_error","ci_form_error");  //灵动标签
         $this->registerPlugin("function","ci_anchor","ci_anchor");  //灵动标签
         $this->registerPlugin("function","func_get_nav","func_get_nav");  //灵动标签
-     
-
-        
- 		
     }
 
   
@@ -509,8 +493,7 @@ class tpl extends Smarty
     * @param $params array holds params that will be passed to the template
     * @desc loads the template
     */
-    function view($resource_name, $params = array())   {  
-
+    function view($resource_name, $params = array())   {
         if (strpos($resource_name, '.') === false) {
             $resource_name .= '.htm';
         }     
@@ -527,10 +510,7 @@ class tpl extends Smarty
         if (!is_file($this->getTemplateDir(0). $resource_name)) {
             show_error("template: [$resource_name] cannot be found.");
         }
-       	//cache id
-       $cor_page = &get_cor_page();
-       return parent::display($resource_name);
-        
+       return parent::display($resource_name);        
     }
     
     /**
@@ -558,9 +538,7 @@ class tpl extends Smarty
             show_error("template: [$resource_name] cannot be found.");
         }
  
-
        return parent::fetch($resource_name);
-        
     }
     
     
@@ -568,8 +546,4 @@ class tpl extends Smarty
 
 function &get_tpl(){	
 	return tpl::get_tpl();
-} 
-	
-
-
-?>
+}

@@ -25,16 +25,12 @@ class Detail extends CI_Controller {
 	 */
 	function index()
 	{
-		$config = array(
- 				'table_name'=>$this->cor_db->table('infos'),
- 				'primary_id'=>'info_id',
- 				'primary_val'=>$this->input->get('info_id'),
- 			);
- 		$about  = $this->cor_db->fetch_one($config);
+
+ 		$about  = $this->db->select('*',false)->from('infos')->where('info_id',$this->input->get('info_id'))->get()->first_row('array');
  		$develop = $this->db->select('a.*,b.c_title')
- 		->from($this->cor_db->table('infos'.' as a '))
+ 		->from($this->init_db->table('infos'.' as a '))
  		->like('a.info_class_sn','0102')
- 		->join($this->cor_db->table('category').' as b','a.info_class_sn=b.c_sn','left')
+ 		->join($this->init_db->table('category').' as b','a.info_class_sn=b.c_sn','left')
  		->order_by('a.info_class_sn','asc')
  		->order_by('b.c_order','desc')->get()->result_array();
  		foreach($develop as $v){
@@ -43,10 +39,10 @@ class Detail extends CI_Controller {
  		
  		}
  		
- 		$sql =		"select info_id,info_title,'上一篇' as type  from (select info_id,info_title from ".$this->cor_db->table('infos') ." where info_class_sn like '010702%' and info_id>".$about['info_id']." order by info_id asc limit 1) as b  
+ 		$sql =		"select info_id,info_title,'上一篇' as type  from (select info_id,info_title from ".$this->init_db->table('infos') ." where info_class_sn like '010702%' and info_id>".$about['info_id']." order by info_id asc limit 1) as b  
 
 						union all 
-						select info_id,info_title,'下一篇' as type  from (select info_id,info_title from ".$this->cor_db->table('infos') ." where info_class_sn like '010702%' and info_id<".$about['info_id']." order by info_id desc limit 1) as a
+						select info_id,info_title,'下一篇' as type  from (select info_id,info_title from ".$this->init_db->table('infos') ." where info_class_sn like '010702%' and info_id<".$about['info_id']." order by info_id desc limit 1) as a
 					";
  		$nav = $this->db->query($sql)->result_array();
  	
@@ -56,9 +52,9 @@ class Detail extends CI_Controller {
  			'nav'=>$nav, 			
  		);
 
- 		$this->db->query("update ".$this->cor_db->table('infos')." set info_view=info_view+1 where info_id=".$this->input->get('info_id'));
+ 		$this->db->query("update ".$this->init_db->table('infos')." set info_view=info_view+1 where info_id=".$this->input->get('info_id'));
  	
-		$this->cor_page->load_front_view("detail",$data);
+		$this->init_page->load_front_view("detail",$data);
 		
 		
 	}	

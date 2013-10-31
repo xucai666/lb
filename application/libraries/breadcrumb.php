@@ -22,7 +22,7 @@ class Breadcrumb {
 	 * Options
 	 *
 	 */
-	private $_divider 		= ' &nbsp;&#8250;&nbsp; ';
+	private $_divider 		= ' &nbsp;›&nbsp; ';
 	private $_tag_open 		= '<div id="breadcrumb">';
 	private $_tag_close 	= '</div>';
 	

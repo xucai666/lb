@@ -17,9 +17,9 @@ class Category extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		//验证登陆
-		$this->cor_auth->execute_auth();
+		$this->init_auth->execute_auth();
 		$config = &get_config();
-		$this->cor_page->fetch_css(array('backend_category'),'view',$this->cor_page->getRes('css','backend'));
+		$this->init_page->fetch_css(array('backend_category'),'view',$this->init_page->getRes('css','backend'));
 		$this->load->model('Category_model');	
 		$this->act = 'category';	
 		$this->lang->load('item_backend_category', lang_get());	 
@@ -49,11 +49,11 @@ class Category extends CI_Controller{
 				'catgory'=>$cat,
 				'main'=>$main,
  			);
-	 		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);
+	 		$this->init_page->load_backend_view(strtolower($this->act).'_add',$data);
 	 	
 	 		
 	 	}catch(Exception $e){
-	 		$this->cor_page->backend_redirect('category/action_list',$e->getMessage());
+	 		$this->init_page->backend_redirect('category/action_list',$e->getMessage());
 	 	}			
 	 }
 	
@@ -82,24 +82,24 @@ class Category extends CI_Controller{
 		 		//更新子类的识别码
 		 		
 		 		if(strcmp($data['main']['c_sn'],$main['c_sn'])!=0&&$main['c_id']){
-		 			$sql = "update ".$this->cor_db->table('category')." set c_sn=concat('".$data['main']['c_sn']."',right(c_sn,length(c_sn)-".strlen($main['c_sn']).")) " .
+		 			$sql = "update ".$this->init_db->table('category')." set c_sn=concat('".$data['main']['c_sn']."',right(c_sn,length(c_sn)-".strlen($main['c_sn']).")) " .
 		 					",c_level  =(length(c_sn)/2-1)" .
 		 					"where c_sn like '".$main['c_sn']."_%'";
 		 			$this->db->query($sql);
 		 		}
 		 		$data['main']['c_level'] = intval(strlen($data['main']['c_sn'])/2-1);
-		 		$this->cor_db->save($data,$this->Category_model->db_config());
+		 		$this->init_db->save($data,$this->Category_model->db_config());
 		 		
 		 		//扩展更新
 		 		
 		 		$this->Category_model->ext_save($main['c_sn'],$data['main']['c_sn']);
-		 		$this->cor_page->pop_redirect('已保存',site_url('backend/category/action_list?parent='.$parent_cat));
+		 		$this->init_page->pop_redirect('已保存',site_url('backend/category/action_list?parent='.$parent_cat));
 		 	}else{
-		 		$this->cor_page->load_backend_view(strtolower($this->act).'_add',$data);
+		 		$this->init_page->load_backend_view(strtolower($this->act).'_add',$data);
 		 	}
 	 		
 	 	}catch(Exception $e){
-	 		$this->cor_page->backend_redirect('category/action_list?parent='.$parent_cat,$e->getMessage());
+	 		$this->init_page->backend_redirect('category/action_list?parent='.$parent_cat,$e->getMessage());
 	 	}			
 	 }
 	 
@@ -110,11 +110,11 @@ class Category extends CI_Controller{
 	 	try{
 	 		$c_parent = $this->input->get('parent');
  			$data = $this->Category_model->fetch_list($c_parent); 	
-	 		$this->cor_page->load_backend_view(strtolower($this->act).'_list',$data);
+	 		$this->init_page->load_backend_view(strtolower($this->act).'_list',$data);
 		 	
 	 		
 	 	}catch(Exception $e){
-	 		$this->cor_page->backend_redirect('category/action_list',$e->getMessage());
+	 		$this->init_page->backend_redirect('category/action_list',$e->getMessage());
 	 	}			
 	 }
 	 
@@ -124,28 +124,22 @@ class Category extends CI_Controller{
 	 */
 	 function action_del(){
 	 	try{
-	 		$config = array(
- 				'table_name'=>$this->cor_db->table('category'),
- 				'primary_id'=>'c_id',
- 				'primary_val'=>$this->input->get('c_id'),
- 			);
- 			$main = $this->cor_db->fetch_one($array);
- 			
+ 			$main = $this->db->select('*',false)->from('category')->where('c_id',$this->input->get('c_id'))->get()->first_row('array');
  			//验证是否可删除
  			$del_ok = $this->Category_model->valid_del($main['c_sn']);
  			
  			if(empty($del_ok)) throw new Exception('相关信息未删除，分类不可删除');
-			$this->cor_db->delete($this->input->get('c_id'),$this->Category_model->db_config());
+			$this->init_db->delete($this->input->get('c_id'),$this->Category_model->db_config());
 			
 			//扩展处理
 			
 			$this->Category_model->ext_del($main['c_sn']);
-			$this->cor_page->pop_redirect('已删除',site_url('backend/category/action_list/'));
+			$this->init_page->pop_redirect('已删除',site_url('backend/category/action_list/'));
 		 	
 	 		
 	 	}catch(Exception $e){
 	 		
-	 		$this->cor_page->backend_redirect('category/action_list',$e->getMessage());
+	 		$this->init_page->backend_redirect('category/action_list',$e->getMessage());
 	 	}			
 	 }
 	

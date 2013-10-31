@@ -34,7 +34,7 @@ class Dynamic extends CI_Controller {
 		$this->breadcrumb->append_crumb('Home', '/');
 		$this->breadcrumb->append_crumb('Dynamic', 'dynamic');
 		$this->breadcrumb->output();
-		$this->cor_page->load_front_view("dynamic",$data);
+		$this->init_page->load_front_view("dynamic",$data);
 		
 		
 	}	
@@ -51,7 +51,7 @@ class Dynamic extends CI_Controller {
 		$this->breadcrumb->append_crumb('View', 'dynamic/view');
 		$this->breadcrumb->output();
 		
-		$this->cor_page->load_front_view("dynamic_view",$data);
+		$this->init_page->load_front_view("dynamic_view",$data);
 	}
 	
 	

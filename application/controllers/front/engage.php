@@ -28,14 +28,14 @@
 	{
 		
 	 		
- 		$this->db->select("a.*",false)->from($this->cor_db->table('engage').' as a ')
+ 		$this->db->select("a.*",false)->from($this->init_db->table('engage').' as a ')
  		->where('a.eg_pos<>','\'\'',false)
  		
 		->order_by("eg_id","desc");
-		$data = $this->cor_db->fetch_all();		
+		$data = $this->init_db->fetch_all();		
 		
 
-		$this->cor_page->load_front_view("engage",$data);
+		$this->init_page->load_front_view("engage",$data);
 			
 		
 	}	
@@ -48,14 +48,8 @@
 	function detail()
 	{
 		if($this->input->get("eg_id")){		
-				$sql_arr = array(
-					'table_name'=>$this->cor_db->table('engage'),
-					'fields'=>'*',
-					'primary_id'=>'eg_id',
-					'primary_val'=>$this->input->get("eg_id"),
-				);	
-				$main = $this->cor_db->fetch_one($sql_arr);
-				$edu_level = $this->cor_cache->cache_fetch('edu_level');
+				$main = $this->db->select('*',false)->from('engage')->where('eg_id',$this->input->get('eg_id'))->get()->first_row('array');
+				$edu_level = $this->init_cache->cache_fetch('edu_level');
 		}
 					
 		
@@ -66,7 +60,7 @@
  			);
  		
  						
-		$this->cor_page->load_front_view("engage_detail",$data);		
+		$this->init_page->load_front_view("engage_detail",$data);		
 		
 	}	
 	
@@ -80,7 +74,7 @@
 	{
 	
 					
-		$this->cor_page->load_front_view("engage_friend",$data);		
+		$this->init_page->load_front_view("engage_friend",$data);		
 		
 	}	
 	
@@ -94,14 +88,9 @@
 
 			$eg_id = $this->input->get('eg_id');
 			if($eg_id){		
-				$sql_arr = array(
-					'table_name'=>$this->cor_db->table('engage'),
-					'fields'=>'*',
-					'primary_id'=>'eg_id',
-					'primary_val'=>$this->input->get("eg_id"),
-				);	
-				$main = $this->cor_db->fetch_one($sql_arr);
-				$edu_level = $this->cor_cache->cache_fetch('edu_level');
+				
+				$main = $this->db->select('*',false)->from('engage')->where('eg_id',$this->input->get('eg_id'))->get()->first_row('array');
+				$edu_level = $this->init_cache->cache_fetch('edu_level');
 				
 				$email = $this->input->post("email");
 				
@@ -112,7 +101,7 @@
 			    $this->email->to($email);
 		
 			    $this->email->subject('你的朋友向您推荐职位'.$main['eg_pos']);
-			    $sys_config = $this->cor_cache->cache_fetch('sys_config','develop',lang_get());
+			    $sys_config = $this->init_cache->cache_fetch('sys_config','develop',lang_get());
 
 			    $tpl_dir = config_item('template_dir').'/front/'.$sys_config['template'].'/'.lang_get().'/';
 			
@@ -150,7 +139,7 @@
 				
 				
 				
-				$this->cor_page->front_redirect("engage/",'邮件已经发送');		
+				$this->init_page->front_redirect("engage/",'邮件已经发送');		
 				
 		}
 			
@@ -158,7 +147,7 @@
 			
 		}catch(Exception $e){
 			
-				$this->cor_page->front_redirect("javascript:history.go(-1);",$e->getMessage());		
+				$this->init_page->front_redirect("javascript:history.go(-1);",$e->getMessage());		
 			
 		}
 		
@@ -170,18 +159,13 @@
 	//职位申请
 	function action_apply(){	
 		
-		$this->cor_page->fetch_js(array('jscript','common'),'view',$this->cor_page->getRes('js','front'));
+		$this->init_page->fetch_js(array('jscript','common'),'view',$this->init_page->getRes('js','front'));
 		$this->load->model('Engage_model');
 		
 		$eg_id = $this->input->get('eg_id');
 		
-		$sql_arr = array(
-					'table_name'=>$this->cor_db->table('engage'),
-					'fields'=>'eg_pos',
-					'primary_id'=>'eg_id',
-					'primary_val'=>$eg_id,
-		);	
-		$engage = $this->cor_db->fetch_one($sql_arr);
+		
+		$engage = $this->db->select('*',false)->from('engage')->where('eg_id',$eg_id)->get()->first_row('array');
 		
 		$b_place = $this->Common_model->func_get_province();
 
@@ -192,14 +176,14 @@
 			'area'=> get_area($area_id), //地区
 			'editor'=> $this->Common_model->editor(null,'apply_text'),
 			'engage'=> $engage,
-			'work_year'=>$this->cor_cache->cache_fetch('work_year'),
-			'sex'=>$this->cor_cache->cache_fetch('sex'),
+			'work_year'=>$this->init_cache->cache_fetch('work_year'),
+			'sex'=>$this->init_cache->cache_fetch('sex'),
 			'b_place'=>$b_place,
 			
 		);	
 		
 		
-		$this->cor_page->load_front_view("engage_apply",$data);		
+		$this->init_page->load_front_view("engage_apply",$data);		
 		
 	}
 	
@@ -213,7 +197,7 @@
 			'eg_id'=>$eg_id,
 			'editor'=> $this->Engage_model->editor(null,'apply_text'),
 		);		
-		$this->cor_page->load_front_view("engage_apply2",$data);		
+		$this->init_page->load_front_view("engage_apply2",$data);		
 		
 	}
 	
@@ -259,14 +243,14 @@
 			 }			
 			 			
 			
-			$this->cor_db->save($data,$this->Engage_model->db_config_apply())	;			
+			$this->init_db->save($data,$this->Engage_model->db_config_apply())	;			
 			
-			$this->cor_page->front_redirect("engage/",'应聘信息已经提交');	
+			$this->init_page->front_redirect("engage/",'应聘信息已经提交');	
 			
 		
 		}catch(Exception $e){
 			
-				$this->cor_page->front_redirect("javascript:history.go(-1);",$e->getMessage());		
+				$this->init_page->front_redirect("javascript:history.go(-1);",$e->getMessage());		
 			
 		}
 			

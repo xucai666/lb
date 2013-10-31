@@ -16,7 +16,7 @@ class Mdata extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		//auth login
-        $this->cor_auth->execute_auth();		
+        $this->init_auth->execute_auth();		
 		$this->load->model("Modules_model",'m');
 		$this->load->model("Fields_model",'f');
 		$this->load->model("Mdata_model",'im');
@@ -30,12 +30,12 @@ class Mdata extends CI_Controller{
 
 	function index(){
 		$data = $this->im->select_list();
-		$this->cor_page->load_backend_view('mdata_select',$data);
+		$this->init_page->load_backend_view('mdata_select',$data);
 	}
 
 	function action_set_module(){
 		$this->im->set_mid($this->uri->segment(4));
-		$this->cor_page->backend_redirect('mdata/action_list');
+		$this->init_page->backend_redirect('mdata/action_list');
 	}
 
 
@@ -80,7 +80,7 @@ class Mdata extends CI_Controller{
 
 		$data = array_merge($data,array('dt_fields'=>$dt_fields,'dt_primary'=>$dt_primary,'detail'=>$detail,'detail_total'=>count($detail),'dt_mid'=>$dt_mid));
 		
-		$this->cor_page->load_backend_view('mdata_add',$data);
+		$this->init_page->load_backend_view('mdata_add',$data);
 	}
 
 	function action_view(){
@@ -128,7 +128,7 @@ class Mdata extends CI_Controller{
 		$t_id = $this->Templates_model->detail_by_mid($module_id,'t_id');
 		$data = array_merge($data,array('t_id'=>$t_id));
 
-		$this->cor_page->load_backend_view('mdata_view',$data);
+		$this->init_page->load_backend_view('mdata_view',$data);
 
 		
 	}
@@ -144,14 +144,14 @@ class Mdata extends CI_Controller{
 		$t_id = $this->Templates_model->detail_by_mid($module_id,'t_id');
 		
 		$data = array('id'=>$id,'t_id'=>$t_id,'primary'=>$primary);
-		$this->cor_page->load_backend_view('mdata_view_front',$data);
+		$this->init_page->load_backend_view('mdata_view_front',$data);
 
 	}
 
 	function action_save(){
 		
 		$main = $this->input->post('main');
-		$detail = $this->cor_form->post_to_set($this->input->post('detail'));
+		$detail = $this->init_form->post_to_set($this->input->post('detail'));
 		$data = array('main'=>$main,'detail'=>$detail);
 		try{
 			$rules = $this->im->valid_config($data);
@@ -178,11 +178,11 @@ class Mdata extends CI_Controller{
 				$data = array_merge($data,array('dt_fields'=>$dt_fields,'dt_primary'=>$dt_primary,'detail'=>$detail,'detail_total'=>count($detail),'dt_mid'=>$dt_mid));	
 
 				
-				$this->cor_page->load_backend_view('mdata_add',$data);
+				$this->init_page->load_backend_view('mdata_add',$data);
 				
 			}else{	
 				
-				$rs = $this->cor_db->save($data,$this->im->save_config());
+				$rs = $this->init_db->save($data,$this->im->save_config());
 
 				//insert log
 				$log_cf = $this->im->save_config();
@@ -190,7 +190,7 @@ class Mdata extends CI_Controller{
 		 		$this->Logs_model->log_insert(array(
 		 			'log_table'=>$log_cf['main']['table_name'],
 		 			'log_table_id'=>$rs['main'][$log_cf['main']['primary_key']],
-		 			'log_user'=>$this->cor_auth->fetch_auth('user_name'),
+		 			'log_user'=>$this->init_auth->fetch_auth('user_name'),
 		 			'log_date'=>date("Y-m-d H:i:s"),
 		 			'log_sql'=>trim(implode("\n",(array)$this->db->sql_log)),
 		 			'log_type'=>'12',
@@ -200,12 +200,12 @@ class Mdata extends CI_Controller{
    					$callback = ',top.frmright_reload()';
 		 		// }
 		 		@header("content-type:text/html;charset=utf-8;");
-		 		echo "<script>top.art_dialog_close('保存完毕.'".$callback.");</script>";
+		 		echo "<script>top.art_dialog_close('淇濆瓨瀹屾瘯.'".$callback.");</script>";
 		 		exit;
 			} 
 
 		}catch(EXCEPTION $e){
-			$this->cor_page->backend_redirect($_SREVER['HTTP_REFERER'],$e->getMessage());
+			$this->init_page->backend_redirect($_SREVER['HTTP_REFERER'],$e->getMessage());
 		}
 
 	}
@@ -219,7 +219,7 @@ class Mdata extends CI_Controller{
             $ids = $ids?$ids:$this->uri->segment(4);
 			if(empty($ids)) throw new Exception(lang('errro_parameter'));
 			$cfg = $this->im->save_config();
-			$rs = $this->cor_db->delete($ids,$cfg);
+			$rs = $this->init_db->delete($ids,$cfg);
 
 			//insert log
 			$this->load->model('Logs_model');	
@@ -227,17 +227,17 @@ class Mdata extends CI_Controller{
 		 		$this->Logs_model->log_insert(array(
 		 			'log_table'=>$cfg['main']['table_name'],
 		 			'log_table_id'=>$v[$cfg['main']['primary_key']],
-		 			'log_user'=>$this->cor_auth->fetch_auth('user_name'),
+		 			'log_user'=>$this->init_auth->fetch_auth('user_name'),
 		 			'log_date'=>date("Y-m-d H:i:s"),
 		 			'log_sql'=>trim(implode("\n",(array)$this->db->sql_log)),
 		 			'log_type'=>'12',
 		 			'log_desc'=>sprintf('module %s,delete  %s success.',$this->m->main($this->im->get_mid(),'m_name'),$rs[$log_cf['main']['primary_key']]),
 		 		));
 	 		endforeach;
-	 		//删除图片等媒体文件
+	 		//鍒犻櫎鍥剧墖绛夊獟浣撴枃浠?
 	 		$media_fid = array_keys($this->f->fields_list('f_id',array('f_media'=>1)));
 	 		$media_fields = $this->m->details($this->im->get_mid(),'f_id in ('.implode(',',$media_fid).') ','r_id,r_name');
-	 		$media_fields = $this->cor_form->array_re_index($media_fields,'r_id','r_name');
+	 		$media_fields = $this->init_form->array_re_index($media_fields,'r_id','r_name');
 	 		
 
 	 		foreach($rs as $k=>$v){
@@ -274,9 +274,9 @@ class Mdata extends CI_Controller{
 	 				}
 	 			}
 	 		}
-			$this->cor_page->backend_redirect($_SERVER['HTTP_REFERER']);
+			$this->init_page->backend_redirect($_SERVER['HTTP_REFERER']);
 		}catch(EXCEPTION $e){
-			$this->cor_page->backend_redirect($_SERVER['HTTP_REFERER'],$e->getMessage());
+			$this->init_page->backend_redirect($_SERVER['HTTP_REFERER'],$e->getMessage());
 		}
 	}
 
@@ -288,7 +288,7 @@ class Mdata extends CI_Controller{
 
 		$data = array_merge($data,array('theme'=>$this->m->main($this->im->get_mid(),'m_name')));
 		
-		$this->cor_page->load_backend_view('mdata_list',$data);
+		$this->init_page->load_backend_view('mdata_list',$data);
 	}
 }
 ?>

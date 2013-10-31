@@ -43,7 +43,7 @@ class Index extends CI_Controller {
 
     $data =  array_merge($data,array('next_lang'=>$next_lang));
     
-    $this->cor_page->load_front_view("index",$data);
+    $this->init_page->load_front_view("index",$data);
   } 
 
 
@@ -55,7 +55,7 @@ class Index extends CI_Controller {
   {
         
 
-    $this->cor_page->load_front_view("top_login");
+    $this->init_page->load_front_view("top_login");
   } 
 
 

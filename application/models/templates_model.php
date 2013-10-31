@@ -53,12 +53,8 @@ class Templates_model extends CI_Model{
 
 
 	function detail($t_id){
-		$fetch_config  = array(
-            'primary_id'=>'t_id',
-            'primary_val'=>$t_id,
-            'table_name'=>'templates',
-        );
-        return  $this->cor_db->fetch_one($fetch_config);
+		
+        return  $this->db->select('*',false)->from('templates')->where('t_id',$t_id)->get()->first_row('array');;
 	}
 	
 	

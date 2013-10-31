@@ -31,7 +31,7 @@ class About extends CI_Controller {
 	{
 		
 		$this->tpl->caching = true;
-		$this->cor_page->load_front_view('about',$data);
+		$this->init_page->load_front_view('about',$data);
 	}	
 	
 	
@@ -45,7 +45,7 @@ class About extends CI_Controller {
 	//新闻列表
 	function archives_list(){			
 		
-		$this->cor_page->load_front_view("about_news",$data);
+		$this->init_page->load_front_view("about_news",$data);
 		
 	}	
 

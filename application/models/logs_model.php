@@ -24,7 +24,7 @@
 	function db_config(){		
 		return array(
 			'main'=>array(
-				'table_name'=>$this->cor_db->table('log'),
+				'table_name'=>$this->init_db->table('log'),
 				'primary_key'=>'log_id',
 			),
 		
@@ -61,7 +61,7 @@
 	 */
 	function log_list(){	
 		
-		$this->db->select("a.*",false)->from($this->cor_db->table('log').' as a ')	
+		$this->db->select("a.*",false)->from($this->init_db->table('log').' as a ')	
 		->order_by("log_id","desc")->limit(5);
 		$list = $this->db->get()->result_array();			
 		return $list;		
@@ -71,8 +71,8 @@
 
 
 	function last_login(){
-		$stat = $this->db->from('log_login')->where('login_user',$this->cor_auth->fetch_auth('user_name'))->count_all_results();
-		$last = $this->db->select('*',false)->from('log_login')->where('login_user',$this->cor_auth->fetch_auth('user_name'))->order_by('login_id','desc')->limit(1,1)->get()->first_row('array');
+		$stat = $this->db->from('log_login')->where('login_user',$this->init_auth->fetch_auth('user_name'))->count_all_results();
+		$last = $this->db->select('*',false)->from('log_login')->where('login_user',$this->init_auth->fetch_auth('user_name'))->order_by('login_id','desc')->limit(1,1)->get()->first_row('array');
 		return array('last'=>$last,'stat'=>$stat);
 	}
 	

@@ -431,7 +431,7 @@ class CI_Trackback {
 	 * @param	string
 	 * @return	string
 	 */
-	function limit_characters($str, $n = 500, $end_char = '&#8230;')
+	function limit_characters($str, $n = 500, $end_char = '…')
 	{
 		if (strlen($str) < $n)
 		{

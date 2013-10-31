@@ -16,7 +16,7 @@
 	function __construct(){
 		parent::__construct();
 		//验证是否登陆 
-		$this->cor_auth->execute_auth();
+		$this->init_auth->execute_auth();
 		$this->load->model("Logs_model",'im');
 		$this->lang->load('item_backend_log',lang_get());	
 		$this->m_lang = $this->lang->language;
@@ -32,23 +32,23 @@
 		
 	
 		
-		$this->db->select("a.*",false)->from($this->cor_db->table('log').' as a ')	
+		$this->db->select("a.*",false)->from($this->init_db->table('log').' as a ')	
 		->like('a.log_user',$this->input->get('log_user'))		
 		->like('a.log_type',$this->input->get('log_type'))		
 		->order_by("log_id","desc");
 		$this->input->get('log_date') && $this->db->like('a.log_date',$this->input->get('log_date'),'after');
-		$data = $this->cor_db->fetch_all(100);	
-		$cache_log_types = $this->cor_cache->cache_fetch("log_types");
+		$data = $this->init_db->fetch_all(100);	
+		$cache_log_types = $this->init_cache->cache_fetch("log_types");
 		foreach($data['list'] as &$v){
 			$v['log_type_str'] = $cache_log_types[$v['log_type']];
 		}
 		$data = array_merge($data,array(
-				'log_types'=>$this->cor_cache->cache_fetch('log_types'),
+				'log_types'=>$this->init_cache->cache_fetch('log_types'),
 				'log_type_default'=>$this->input->get('log_type'),
 			)		
 		);
 		
-		$this->cor_page->load_backend_view("logs_list",$data);
+		$this->init_page->load_backend_view("logs_list",$data);
 		
 	}
 	
@@ -61,19 +61,19 @@
 				throw new Exception($this->m_lang['unselect']);
 			}
 			$this->db->where_in("log_id",$ids);
-			$this->db->delete($this->cor_db->table('log'));
-			$this->cor_page->backend_redirect('logs/action_list');
+			$this->db->delete($this->init_db->table('log'));
+			$this->init_page->backend_redirect('logs/action_list');
 			
 		}catch(Exception $e){
-	 		$this->cor_page->backend_redirect('logs/action_list',$e->getMessage());
+	 		$this->init_page->backend_redirect('logs/action_list',$e->getMessage());
 	 	}	
 		
 	}
 
 	function action_login_log(){
 			$this->db->select('*',false)->from('log_login')->like('login_user',$this->input->get('login_user'))->like('login_time',$this->input->get('login_time'))->order_by('login_id','desc');
-			$data = $this->cor_db->fetch_all(15);
-			$this->cor_page->load_backend_view("logs_login_list",$data);
+			$data = $this->init_db->fetch_all(15);
+			$this->init_page->load_backend_view("logs_login_list",$data);
 	}
 
 	function action_login_del(){
@@ -83,11 +83,11 @@
 				throw new Exception($this->m_lang['unselect']);
 			}
 			$this->db->where_in("login_id",$ids);
-			$this->db->delete($this->cor_db->table('log_login'));
-			$this->cor_page->backend_redirect('logs/action_login_log');
+			$this->db->delete($this->init_db->table('log_login'));
+			$this->init_page->backend_redirect('logs/action_login_log');
 			
 		}catch(Exception $e){
-	 		$this->cor_page->backend_redirect('logs/action_login_log',$e->getMessage());
+	 		$this->init_page->backend_redirect('logs/action_login_log',$e->getMessage());
 	 	}	
 
 	}

@@ -55,7 +55,7 @@ ATTENTION: The trailing slash is required.
 
 
 /**
- * ������վ���·��
+ * 返回网站相对路径
  * @return [type] [description]
  */
 function get_real_url(){
@@ -313,7 +313,7 @@ $config['ChmodFolders'] = 0755 ;
 
 /*
 Force ASCII names for files and folders.
-If enabled, characters with diactric marks, like å, ä, ö, ć, č, đ, š
+If enabled, characters with diactric marks, like 氓, 盲, 枚, 膰, 膷, 膽, 拧
 will be automatically converted to ASCII letters.
 */
 $config['ForceAscii'] = false;

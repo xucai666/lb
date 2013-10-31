@@ -15,7 +15,7 @@
 class Admins_model extends CI_Model{
 	function __construct(){
 		parent::__construct();
-		$this->ds = $this->cor_db->getDs();	
+		$this->ds = $this->init_db->getDs();	
 		  
 	}
 	
@@ -26,7 +26,7 @@ class Admins_model extends CI_Model{
 	 * @return [string]           [返回值]
 	 */
 	function fetch_detail($admin_id,$field=null){
-		$rs  = $this->ds->select('*')->from($this->cor_db->table('admins'))->where('admin_id',$admin_id)->get()->first_row('array');
+		$rs  = $this->ds->select('*')->from($this->init_db->table('admins'))->where('admin_id',$admin_id)->get()->first_row('array');
 		return $field?$rs[$field]:$rs;
 	}
 	
@@ -104,7 +104,7 @@ class Admins_model extends CI_Model{
 	 function db_config(){
 	 	return array(
 	 		'main'=>array(
-	 			'table_name'=>$this->cor_db->table('admins'),
+	 			'table_name'=>$this->init_db->table('admins'),
 	 			'primary_key'=>'admin_id',	 			
 	 		),
 	 	);
@@ -115,7 +115,7 @@ class Admins_model extends CI_Model{
 	 function db_menu_config(){
 	 	return array(
 	 		'main'=>array(
-	 			'table_name'=>$this->cor_db->table('system_rights'),
+	 			'table_name'=>$this->init_db->table('system_rights'),
 	 			'primary_key'=>'r_id',	 			
 	 		),
 	 	);

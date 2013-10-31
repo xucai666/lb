@@ -21,7 +21,7 @@ class Member_model extends CI_Model{
     function  db_config(){
       return array(
         'main'=>array(
-          'table_name'=>$this->cor_db->table('module_member'),
+          'table_name'=>$this->init_db->table('module_member'),
           'primary_key'=>'m_id',
         )
       ); 
@@ -104,19 +104,15 @@ class Member_model extends CI_Model{
     function auth_login(){
    
       if(!get_cookie('member')){
-         $this->cor_page->front_redirect('member/index','请先登陆');
+         $this->init_page->front_redirect('member/index','请先登陆');
          exit;
 
       }
     }
 
     function  detail($m_user){
-      $config = array(
-        'table_name'=>'module_member',
-        'primary_id'=>'m_user',
-        'primary_val'=>$m_user,
-      );
-      return $this->cor_db->fetch_one($config);
+
+      return $this->db->select('*',false)->from('module_member')->where('m_user',$m_user)->get()->first_row('array');
     }
 
 }

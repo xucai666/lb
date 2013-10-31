@@ -4,13 +4,13 @@
  *
  * @license Highcharts JS v2.0.5 (FusionCharts optimized)
  *
- * (c) 2009-2010 Torstein Hønsi
+ * (c) 2009-2010 Torstein H酶nsi
  * Embedded license information at <http://www.fusioncharts.com/license>
  * All modifications made to this code are copyright of FusionCharts Technologies LLP.
  * License: www.highcharts.com/license
  *
  *
- * (c) 2009-2010 Torstein Hønsi
+ * (c) 2009-2010 Torstein H酶nsi
  * Embedded license information at <http://www.fusioncharts.com/license>
  * All modifications made to this code are copyright of FusionCharts Technologies LLP.
  * License: www.highcharts.com/license

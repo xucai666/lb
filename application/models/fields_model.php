@@ -42,30 +42,20 @@ class Fields_model extends CI_Model{
 
 	//options
 	function fetch_select(){
-		return $this->cor_form->array_re_index($this->db->select("*",false)->from('module_fields')->get()->result_array(),'f_id','f_name');
+		return $this->init_form->array_re_index($this->db->select("*",false)->from('module_fields')->get()->result_array(),'f_id','f_name');
 	}
 
 	//detail
 	function detail($f_id,$key=null){
-		$cf = array(
-				'primary_val'=>$f_id,
-				'primary_id'=>'f_id',
-				'table_name'=>'module_fields',
-			);
-		$ds = $this->cor_db->fetch_one($cf);
+		$ds = $this->db->select('*',false)->from('module_fields')->where('f_id',$f_id)->get()->first_row('array');
 		return $key?$ds[$key]:$ds;
 	}
 
 
 	//detail
 	function fields_list($fields='*',$where=null){
-		$cf = array(
-				'table_name'=>'module_fields',
-				'where'=>$where,
-				'fields'=>$fields,
-				'key'=>'f_id',
-			);
-		return  $this->cor_db->fetch_list($cf);
+		
+		return  $this->db->findAll("select * from module_fields ".$where);
 	}
 
 

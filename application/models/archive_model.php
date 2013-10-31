@@ -23,7 +23,7 @@ class Archive_model extends CI_Model{
 	function db_config(){
 		return array(
 			'main'=>array(
-				'table_name'=>$this->cor_db->table('infos'),
+				'table_name'=>$this->init_db->table('infos'),
 				'primary_key'=>'info_id',
 			)
 		);

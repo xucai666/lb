@@ -1,20 +1,20 @@
 
-UenuProbe PHPÌ½Õë 
+UenuProbe PHPæŽ¢é’ˆ 
 
 ///////////////////////////////////////
- ©³©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©· 
- ©Ä                                ©Ì 
- ©Ä            Èí¼þÏÂÔØ  ¡¡¡¡¡¡¡¡  ©Ì 
- ©Ä  Èí¼þÃû³Æ£ºUenuProbe PHPÌ½Õë   ©Ì 
- ©Ä  ×îÐÂ°æ±¾£ºVer 2.08.12         ©Ì 
- ©Ä  ·¢²¼ÈÕÆÚ£º2008Äê12ÔÂ01ÈÕ      ©Ì 
- ©Ä  ¼¼ÊõÖ§³Ö£ºwww.uenu.com        ©Ì 
- ©Ä                                ©Ì 
- ©»©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¿ 
+ â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”“ 
+ â”                                 â”¨ 
+ â”             è½¯ä»¶ä¸‹è½½  ã€€ã€€ã€€ã€€  â”¨ 
+ â”   è½¯ä»¶åç§°ï¼šUenuProbe PHPæŽ¢é’ˆ   â”¨ 
+ â”   æœ€æ–°ç‰ˆæœ¬ï¼šVer 2.08.12         â”¨ 
+ â”   å‘å¸ƒæ—¥æœŸï¼š2008å¹´12æœˆ01æ—¥      â”¨ 
+ â”   æŠ€æœ¯æ”¯æŒï¼šwww.uenu.com        â”¨ 
+ â”                                 â”¨ 
+ â”—â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”› 
 ///////////////////////////////////////
 
 
-UenuProbe PHPÌ½ÕëËµÃ÷ÎÄµµ
+UenuProbe PHPæŽ¢é’ˆè¯´æ˜Žæ–‡æ¡£
 
 
 UenuProbe Programe Introduction as follow:
@@ -29,40 +29,40 @@ The main use and application of the object:
 3. For the company's customers to buy Virtual host using testing server performance.
 *******************************************************************************
 
-Ò»¡¢³ÌÐòËµÃ÷
-±¾³ÌÐò»ùÓÚDiv+Css ÐÂÐÍ¼Ü¹¹PHPÌ½Õë£¬Ãâ·Ñ¿ªÔ´µÄ×ÔÓÉÈí¼þ£¬¹¦ÄÜÇ¿´ó£¬½á¹¹ÇåÎú£¬Ê¹ÓÃ·½±ã¡£
-1.Ö§³ÖWindows£¬linux,Unix,FreeBSD,Sun SolarÏµÍ³
-2.Ö§³ÖIE6£¬IE7£¬Firefox, Opera, Google chromeµÈä¯ÀÀÆ÷¡£
+ä¸€ã€ç¨‹åºè¯´æ˜Ž
+æœ¬ç¨‹åºåŸºäºŽDiv+Css æ–°åž‹æž¶æž„PHPæŽ¢é’ˆï¼Œå…è´¹å¼€æºçš„è‡ªç”±è½¯ä»¶ï¼ŒåŠŸèƒ½å¼ºå¤§ï¼Œç»“æž„æ¸…æ™°ï¼Œä½¿ç”¨æ–¹ä¾¿ã€‚
+1.æ”¯æŒWindowsï¼Œlinux,Unix,FreeBSD,Sun Solarç³»ç»Ÿ
+2.æ”¯æŒIE6ï¼ŒIE7ï¼ŒFirefox, Opera, Google chromeç­‰æµè§ˆå™¨ã€‚
 
-¶þ¡¢Ö÷ÒªÓÃÍ¾¼°ÊÊÓÃ¶ÔÏó£º
-1.ÊìÏ¤PHP±à³ÌµÄÒµÓà°®ºÃÕß¼°×¨Òµ¿ª·¢ÈËÔ±¡£
-2.»ú·¿¹ÜÀíÈËÔ±ÅäÖÃLinux£¨Windows£©+PHP+mySQL+ZendÏµÍ³»·¾³£¬¼ì²âÏµÍ³ÊÇ·ñÅäÖÃ³É¹¦¡£
-3.¶ÔÓÚ¹ºÂòÐéÄâÖ÷»úµÄÓÃ»§£¬ÓÃÓÚ²âÊÔ·þÎñÆ÷ÐÔÄÜ¡£
-
-
-Èý¡¢°æ±¾¸ñÊ½ËµÃ÷ Ver a.b.c 
-a Îª°æ±¾±àºÅ 1ÎªÖ§³ÖPHP4.x.xx£¬ 2ÎªÖ§³ÖPHP5.x.xx
-b Îª°æ±¾Äê·Ý 06 ±íÊ¾ 2006Äê
-c Îª°æ±¾ÔÂ·Ý 02 ±íÊ¾ ¶þÔÂ                      
-
-ËÄ¡¢ÏÂÒ»¸ö°æ±¾¹¦ÄÜ¸ÅÒª
-Ver 2.09.xx  ½«Ôö¼ÓÈí¼þ°æ±¾×Ô¶¯¼ì²â£¬×Ô¶¯¸üÐÂ¹¦ÄÜ£¬¸ù¾Ý¼ì²âÊý¾ÝÉú³É°ïÖúÎÄµµ£¬ÎªPHP¿ª·¢ÈËÔ±Ìá¹©ºÏÀí½¨Òé¡£
+äºŒã€ä¸»è¦ç”¨é€”åŠé€‚ç”¨å¯¹è±¡ï¼š
+1.ç†Ÿæ‚‰PHPç¼–ç¨‹çš„ä¸šä½™çˆ±å¥½è€…åŠä¸“ä¸šå¼€å‘äººå‘˜ã€‚
+2.æœºæˆ¿ç®¡ç†äººå‘˜é…ç½®Linuxï¼ˆWindowsï¼‰+PHP+mySQL+Zendç³»ç»ŸçŽ¯å¢ƒï¼Œæ£€æµ‹ç³»ç»Ÿæ˜¯å¦é…ç½®æˆåŠŸã€‚
+3.å¯¹äºŽè´­ä¹°è™šæ‹Ÿä¸»æœºçš„ç”¨æˆ·ï¼Œç”¨äºŽæµ‹è¯•æœåŠ¡å™¨æ€§èƒ½ã€‚
 
 
-Îå¡¢ÀúÊ·°æ±¾
-Ver 2.08.12 ½â¾öUenuProbeÔÚWindows 2003ÏµÍ³ÖÐ¼ì²âCPU¸öÊý¼°ÐÍºÅÊ±³öÏÖÊý¾ÝÓÐÎóÎÊÌâ£»ÐÞÕýÁËÏµÍ³½ûÓÃº¯ÊýÊä³ö×´Ì¬¡£
-Ver 2.08.11 ÐÞÕýUenuProbeÔÚGoogle chromeä¯ÀÀÆ÷ÏÔÊ¾Ð§¹û,½â¾ö²¿·ÖDIVÔ½½çÎÊÌâ¡£
-Ver 2.08.10 ½â¾öÔÚCentosÏµÍ³ÖÐ¼ì²âCPU»ñÈ¡Êý¾ÝÓÐÎóÎÊÌâ¡£Windows, FreeBSDÏÂ¼ì²âÕý³£¡£
-Ver 2.08.05 ½â¾ö¼ì²âFreeBSDÏµÍ³ÔËÐÐÊ±¼äÎÊÌâ£¬×¼È·¼ÆËãFreeBSDÏµÍ³ÔËÐÐÊ±¼ä¡£
-            Ä¿Ç°Linux£¬FreeBSDÏÂ¾ù¿ÉÒÔÕý³£ÔËÐÐ¡£
-Ver 2.07.08 ¼ÓÈë·ç¸ñÏÔÊ¾£¬Êä³ö¸ñÊ½¹¦ÄÜ£¬½çÃæÓÑºÃ£¬Ò»Ä¿ÁËÈ»¡£
-Ver 1.05.12 UenuProbe PHPÌ½ÕëVer1.0·¢²¼¡£
-Ver 0.04.08 UenuProbe PHPÌ½Õë²âÊÔ°æ±¾Íê³É¡£
+ä¸‰ã€ç‰ˆæœ¬æ ¼å¼è¯´æ˜Ž Ver a.b.c 
+a ä¸ºç‰ˆæœ¬ç¼–å· 1ä¸ºæ”¯æŒPHP4.x.xxï¼Œ 2ä¸ºæ”¯æŒPHP5.x.xx
+b ä¸ºç‰ˆæœ¬å¹´ä»½ 06 è¡¨ç¤º 2006å¹´
+c ä¸ºç‰ˆæœ¬æœˆä»½ 02 è¡¨ç¤º äºŒæœˆ                      
+
+å››ã€ä¸‹ä¸€ä¸ªç‰ˆæœ¬åŠŸèƒ½æ¦‚è¦
+Ver 2.09.xx  å°†å¢žåŠ è½¯ä»¶ç‰ˆæœ¬è‡ªåŠ¨æ£€æµ‹ï¼Œè‡ªåŠ¨æ›´æ–°åŠŸèƒ½ï¼Œæ ¹æ®æ£€æµ‹æ•°æ®ç”Ÿæˆå¸®åŠ©æ–‡æ¡£ï¼Œä¸ºPHPå¼€å‘äººå‘˜æä¾›åˆç†å»ºè®®ã€‚
+
+
+äº”ã€åŽ†å²ç‰ˆæœ¬
+Ver 2.08.12 è§£å†³UenuProbeåœ¨Windows 2003ç³»ç»Ÿä¸­æ£€æµ‹CPUä¸ªæ•°åŠåž‹å·æ—¶å‡ºçŽ°æ•°æ®æœ‰è¯¯é—®é¢˜ï¼›ä¿®æ­£äº†ç³»ç»Ÿç¦ç”¨å‡½æ•°è¾“å‡ºçŠ¶æ€ã€‚
+Ver 2.08.11 ä¿®æ­£UenuProbeåœ¨Google chromeæµè§ˆå™¨æ˜¾ç¤ºæ•ˆæžœ,è§£å†³éƒ¨åˆ†DIVè¶Šç•Œé—®é¢˜ã€‚
+Ver 2.08.10 è§£å†³åœ¨Centosç³»ç»Ÿä¸­æ£€æµ‹CPUèŽ·å–æ•°æ®æœ‰è¯¯é—®é¢˜ã€‚Windows, FreeBSDä¸‹æ£€æµ‹æ­£å¸¸ã€‚
+Ver 2.08.05 è§£å†³æ£€æµ‹FreeBSDç³»ç»Ÿè¿è¡Œæ—¶é—´é—®é¢˜ï¼Œå‡†ç¡®è®¡ç®—FreeBSDç³»ç»Ÿè¿è¡Œæ—¶é—´ã€‚
+            ç›®å‰Linuxï¼ŒFreeBSDä¸‹å‡å¯ä»¥æ­£å¸¸è¿è¡Œã€‚
+Ver 2.07.08 åŠ å…¥é£Žæ ¼æ˜¾ç¤ºï¼Œè¾“å‡ºæ ¼å¼åŠŸèƒ½ï¼Œç•Œé¢å‹å¥½ï¼Œä¸€ç›®äº†ç„¶ã€‚
+Ver 1.05.12 UenuProbe PHPæŽ¢é’ˆVer1.0å‘å¸ƒã€‚
+Ver 0.04.08 UenuProbe PHPæŽ¢é’ˆæµ‹è¯•ç‰ˆæœ¬å®Œæˆã€‚
 *******************************************************************************
-³ÌÐòÏÂÔØ http://www.uenu.com/download/UenuProbe.rar
-³ÌÐòÑÝÊ¾ http://www.uenu.com/UenuProbe/
+ç¨‹åºä¸‹è½½ http://www.uenu.com/download/UenuProbe.rar
+ç¨‹åºæ¼”ç¤º http://www.uenu.com/UenuProbe/
          http://tool.uenu.com/UenuProbe/
 
 
-Copyright Uenu.Com£¨ÓÅÒÕ¹ú¼Ê£©
+Copyright Uenu.Comï¼ˆä¼˜è‰ºå›½é™…ï¼‰
 

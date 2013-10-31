@@ -27,7 +27,7 @@ class Vote extends CI_Controller {
 	function index()
 	{
 
-		$this->cor_page->load_front_view('vote_list',$data);
+		$this->init_page->load_front_view('vote_list',$data);
 	}	
 	
 
@@ -39,7 +39,7 @@ class Vote extends CI_Controller {
 		$v_id = $this->uri->segment(4);
 
 		$data =array('v_id'=>$v_id);
-		$this->cor_page->load_front_view('vote_list_single',$data);
+		$this->init_page->load_front_view('vote_list_single',$data);
 	}	
 	
 
@@ -53,7 +53,7 @@ class Vote extends CI_Controller {
 	{	
 		$v_id = $this->uri->segment(4);
 		$data =array('v_id'=>$v_id);
-		$this->cor_page->load_front_view('vote_view',$data);
+		$this->init_page->load_front_view('vote_view',$data);
 	}	
 	
 	
@@ -83,7 +83,7 @@ class Vote extends CI_Controller {
                ); 
        	
         set_cookie($cookie);  
-		$this->cor_page->front_redirect('vote/view');
+		$this->init_page->front_redirect('vote/view');
 	}	
 
 	

@@ -30,7 +30,8 @@ function detail($id,$ke=null){
 		'primary_id'=>'lang_id',
 		'primary_val'=>$id,
 	);
-	return $this->cor_db->fetch_one($cf,$key);
+	$rs = $this->db->select('*',false)->from('lang')->where('lang_id',$id)->get()->first_row('array');
+	return $ke ? $rs[$ke] : $rs;
 }
 
 

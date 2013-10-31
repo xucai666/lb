@@ -1100,7 +1100,7 @@ class Smarty extends Smarty_Internal_TemplateBase {
      * Set autoload filters
      *
      * @param array $filters filters to load automatically
-     * @param string $type "pre", "output", … specify the filter type to set. Defaults to none treating $filters' keys as the appropriate types
+     * @param string $type "pre", "output", 鈥?specify the filter type to set. Defaults to none treating $filters' keys as the appropriate types
      * @return Smarty current Smarty instance for chaining
      */
     public function setAutoloadFilters($filters, $type=null)
@@ -1118,7 +1118,7 @@ class Smarty extends Smarty_Internal_TemplateBase {
      * Add autoload filters
      *
      * @param array $filters filters to load automatically
-     * @param string $type "pre", "output", … specify the filter type to set. Defaults to none treating $filters' keys as the appropriate types
+     * @param string $type "pre", "output", 鈥?specify the filter type to set. Defaults to none treating $filters' keys as the appropriate types
      * @return Smarty current Smarty instance for chaining
      */
     public function addAutoloadFilters($filters, $type=null)
@@ -1146,7 +1146,7 @@ class Smarty extends Smarty_Internal_TemplateBase {
      * Get autoload filters
      *
      * @param string $type type of filter to get autoloads for. Defaults to all autoload filters
-     * @return array array( 'type1' => array( 'filter1', 'filter2', … ) ) or array( 'filter1', 'filter2', …) if $type was specified
+     * @return array array( 'type1' => array( 'filter1', 'filter2', 鈥?) ) or array( 'filter1', 'filter2', 鈥? if $type was specified
      */
     public function getAutoloadFilters($type=null)
     {

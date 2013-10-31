@@ -1,5 +1,4 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -11,11 +10,7 @@
 |	http://example.com/
 |
 */
-
-
 $config['base_url'] = "http://localhost/lb";
-
-
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -27,7 +22,6 @@ $config['base_url'] = "http://localhost/lb";
 |
 */
 $config['index_page'] = "";
-
 /*
 |--------------------------------------------------------------------------
 | URI PROTOCOL
@@ -45,7 +39,6 @@ $config['index_page'] = "";
 |
 */
 $config['uri_protocol']	= "AUTO";
-
 /*
 |--------------------------------------------------------------------------
 | URL suffix
@@ -56,9 +49,7 @@ $config['uri_protocol']	= "AUTO";
 |
 | http://codeigniter.com/user_guide/general/urls.html
 */
-
 $config['url_suffix'] = "";
-
 /*
 |--------------------------------------------------------------------------
 | Default Language
@@ -72,7 +63,6 @@ $config['url_suffix'] = "";
 $config['language']	= "zh";
 $config['support_language']	=array('en','zh');
 $config['lang_multiple']	= false;
-
 /*
 |--------------------------------------------------------------------------
 | Default Character Set
@@ -83,7 +73,6 @@ $config['lang_multiple']	= false;
 |
 */
 $config['charset'] = "UTF-8";
-
 /*
 |--------------------------------------------------------------------------
 | Enable/Disable System Hooks
@@ -94,9 +83,6 @@ $config['charset'] = "UTF-8";
 |
 */
 $config['enable_hooks'] = true;
-
-
-
 /*
 |--------------------------------------------------------------------------
 | Class Extension Prefix
@@ -110,8 +96,6 @@ $config['enable_hooks'] = true;
 |
 */
 $config['subclass_prefix'] = 'MY_';
-
-
 /*
 |--------------------------------------------------------------------------
 | Allowed URL Characters
@@ -130,8 +114,6 @@ $config['subclass_prefix'] = 'MY_';
 |
 */
 $config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
-
-
 /*
 |--------------------------------------------------------------------------
 | Enable Query Strings
@@ -158,7 +140,6 @@ $config['enable_query_strings'] = false;
 $config['controller_trigger'] 	= 'c';
 $config['function_trigger'] 	= 'm';
 $config['directory_trigger'] 	= 'd'; // experimental not currently in use
-
 /*
 |--------------------------------------------------------------------------
 | Error Logging Threshold
@@ -180,7 +161,6 @@ $config['directory_trigger'] 	= 'd'; // experimental not currently in use
 |
 */
 $config['log_threshold'] = 0;
-
 /*
 |--------------------------------------------------------------------------
 | Error Logging Directory Path
@@ -191,7 +171,6 @@ $config['log_threshold'] = 0;
 |
 */
 $config['log_path'] = '';
-
 /*
 |--------------------------------------------------------------------------
 | Date Format for Logs
@@ -202,7 +181,6 @@ $config['log_path'] = '';
 |
 */
 $config['log_date_format'] = 'Y-m-d H:i:s';
-
 /*
 |--------------------------------------------------------------------------
 | Cache Directory Path
@@ -214,7 +192,6 @@ $config['log_date_format'] = 'Y-m-d H:i:s';
 */
 $config['cache_path'] = 'application/cache/';
 $config['cache_on'] = true;
-
 /*
 |--------------------------------------------------------------------------
 | Encryption Key
@@ -225,7 +202,6 @@ $config['cache_on'] = true;
 |
 */
 $config['encryption_key'] = "5204";
-
 /*
 |--------------------------------------------------------------------------
 | Session Variables
@@ -246,7 +222,6 @@ $config['sess_table_name']		= 'ci_sessions';
 $config['sess_match_ip']		= FALSE;
 $config['sess_match_useragent']	= TRUE;
 $config['sess_time_to_update'] 	= 300;
-
 /*
 |--------------------------------------------------------------------------
 | Cookie Related Variables
@@ -260,7 +235,6 @@ $config['sess_time_to_update'] 	= 300;
 $config['cookie_prefix']	= "mysys_";
 $config['cookie_domain']	= "";
 $config['cookie_path']		= "/";
-
 /*
 |--------------------------------------------------------------------------
 | Global XSS Filtering
@@ -271,7 +245,6 @@ $config['cookie_path']		= "/";
 |
 */
 $config['global_xss_filtering'] = FALSE;
-
 /*
 |--------------------------------------------------------------------------
 | Output Compression
@@ -290,7 +263,6 @@ $config['global_xss_filtering'] = FALSE;
 |
 */
 $config['compress_output'] = FALSE;
-
 /*
 |--------------------------------------------------------------------------
 | Master Time Reference
@@ -303,8 +275,6 @@ $config['compress_output'] = FALSE;
 |
 */
 $config['time_reference'] = 'local';
-
-
 /*
 |--------------------------------------------------------------------------
 | Rewrite PHP Short Tags
@@ -316,8 +286,6 @@ $config['time_reference'] = 'local';
 |
 */
 $config['rewrite_short_tags'] = FALSE;
-
-
 /*
 |--------------------------------------------------------------------------
 | Reverse Proxy IPs
@@ -330,56 +298,24 @@ $config['rewrite_short_tags'] = FALSE;
 |
 */
 $config['proxy_ips'] = '';
-
-
 /* End of file config.php */
 /* Location: ./system/application/config/config.php */
-
-//smarty鍙傛暟锛屾敞鎰忓鏋滄槸鍏朵粬璺緞锛岄渶瑕佷慨鏀筂y_url_helper
 $config['template_dir'] = APPPATH.'/templates/';
-
-//set theme 
-
-
-
 $config['compile_dir'] = APPPATH.'compiles/';
 $config['cache_dir'] = APPPATH.'templates_c/';
 $config['left_delimiter'] = '<!--{';
 $config['right_delimiter'] = '}-->';
-
-
-//琛ㄥ墠缂€
-
-
- //榛樿鍔犺浇鏍峰紡
- 
  
  
 $config['backend_default_css'] = array('table','backend_style');
-
-
-//榛樿鍔犺浇js
-
 $config['backend_default_js'] = array('jquery-1.9.1.min','core','FormValid','My97DatePicker/WdatePicker','admin');
  
  
- //榛樿鍔犺浇鏍峰紡
  
 $config['front_default_css'] = array('lb');
-
-
-//榛樿鍔犺浇js
-
 $config['front_default_js'] = array('jquery-1.9.1.min','core','FormValid','menu_script');
-
-
 //per page
-
 $config['per_page'] = '15';
-
-
-//骞垮憡鍥剧墖涓婁紶閰嶇疆
-
 $config['advs_files'] = array(
 	'upload_path'=>BASEPATH . '../uploads/',
 	'allowed_types'=>'swf|gif|jpg|png',	
@@ -387,91 +323,48 @@ $config['advs_files'] = array(
 	'max_size'=>"55000",
 	'overwrite'=>"true",
 );
-
-
-
-
-//淇℃伅鍥剧墖涓婁紶
 $config['info_files'] = array(
 	'upload_path'=>BASEPATH . '../uploads/infos',
 	'allowed_types'=>'rar|doc|xls|ppt|zip|jpg|gif|bmp',	
 	'encrypt_name'=>true,
 	'max_size'=>"35000",
 );
-
-
-
-
-//鍟嗗搧鍥剧墖涓婁紶
 $config['pro_files'] = array(
 	'upload_path'=>BASEPATH . '../uploads/products',
 	'allowed_types'=>'png|rar|doc|xls|ppt|zip|jpg|gif|bmp',	
 	'encrypt_name'=>true,
 	'max_size'=>"3000",
 );
-
-
-//璧勬簮涓嬭浇涓婁紶
 $config['download_files'] = array(
 	'upload_path'=>BASEPATH . '../uploads/download_files',
 	'allowed_types'=>'exe|pdf|rar|doc|xls|ppt|zip|jpg|gif|bmp',	
 	'encrypt_name'=>false,
 	'max_size'=>"3000000",
 );
-
-
-
-
-//灞曠ず鍥剧墖涓婁紶
 $config['show_files'] = array(
 	'upload_path'=>BASEPATH . '../uploads/show',
 	'allowed_types'=>'rar|doc|xls|ppt|zip|jpg|gif|bmp',	
 	'encrypt_name'=>true,
 	'max_size'=>"3000",
 );
-
-//閾炬帴涓婁紶
 $config['link_files'] = array(
 	'upload_path'=>BASEPATH . '../uploads/link',
 	'allowed_types'=>'rar|doc|xls|ppt|zip|jpg|gif|bmp',	
 	'encrypt_name'=>false,
 	'max_size'=>"3000",
 );
-
-
-
-
-//绠€鍘嗘枃浠朵笂浼?
 $config['eg_files'] = array(
 	'upload_path'=>BASEPATH . '../uploads/engage',
 	'allowed_types'=>'txt|doc|xls|ppt|docx',	
 	'encrypt_name'=>true,
 	'max_size'=>"3000",
 );
-
-
-
-
-
 $config['email_from'] = 'yehua365@163.com';
-
-//澶氳瑷€妯″紡,1琛ㄧず寮€鍚?
-
-//灏嗗浠芥枃浠跺彂閫佸埌閭
 $config['backup_email'] = '0';
-
-//鏁版嵁澶囦唤涓嬭浇
 $config['backup_to_download'] = '0';
-
-//瓒呯骇绠＄悊鍛樿鑹?
 $config['admin_role_id'] = '1';
-
-//鏄剧ず澶╂皵棰勬姤
 $config['weather'] = '';
-
 //config get
 $config['allow_get_array'] = true;
-
 $config['time_zone']=date_default_timezone_set('Asia/shanghai');
-//html生成文件根目录
 $config['html_root'] = "/html/";

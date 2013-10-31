@@ -217,7 +217,7 @@ function HandleError($message) {
 }
 
 /**
- * 创建多级目录
+ * 鍒涘缓澶氱骇鐩綍
  * @param  [type] $pathname [description]
  * @param  [type] $mode     [description]
  * @return [type]           [description]

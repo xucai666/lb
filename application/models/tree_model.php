@@ -44,7 +44,7 @@ class Tree_model extends CI_Model{
 	 */
 	function fetch_select($treeId=null,$v_field='name'){
 		$treeId = $treeId?$treeId:$this->get_root();
-		return $this->cor_form->array_re_index($this->db->select("id,name as init_name",false)->select('LEVEL,CONCAT(REPEAT("│ ",LEVEL),"├─",NAME) as name',false)->from('tree_node')->where('treeId',$treeId)->order_by('leftId','asc')->get()->result_array(),'id',$v_field);
+		return $this->init_form->array_re_index($this->db->select("id,name as init_name",false)->select('LEVEL,CONCAT(REPEAT("│ ",LEVEL),"├─",NAME) as name',false)->from('tree_node')->where('treeId',$treeId)->order_by('leftId','asc')->get()->result_array(),'id',$v_field);
 	}
 
 	/**
@@ -54,7 +54,7 @@ class Tree_model extends CI_Model{
 	 */
 	function fetch_select_query($treeId=null){
 		$treeId = $treeId?$treeId:$this->get_root();
-		$ls =  $this->cor_form->array_re_index($this->db->select("id,name as init_name,leftId,rightId",false)->select('LEVEL,CONCAT(REPEAT("│ ",LEVEL),"├─",NAME) as name',false)->from('tree_node')->where('treeId',$treeId)->order_by('leftId','asc')->get()->result_array(),'id');
+		$ls =  $this->init_form->array_re_index($this->db->select("id,name as init_name,leftId,rightId",false)->select('LEVEL,CONCAT(REPEAT("│ ",LEVEL),"├─",NAME) as name',false)->from('tree_node')->where('treeId',$treeId)->order_by('leftId','asc')->get()->result_array(),'id');
 		$ls_new = array();
 		foreach($ls as $v){
 			$ds = $this->db->select("group_concat(id) as ids",false)->from('tree_node')->where('treeId',$treeId)->where('leftId <= '.$v[leftId].' and rightId >= '.$v[rightId])->get()->first_row('array');
@@ -72,12 +72,8 @@ class Tree_model extends CI_Model{
 
 	//detail
 	function detail($id,$key=null){
-		$cf = array(
-				'primary_val'=>$id,
-				'primary_id'=>'id',
-				'table_name'=>'tree_node',
-			);
-		$ds = $this->cor_db->fetch_one($cf);
+	
+		$ds = $this->db->select('*',false)->from('tree_node')->where('id',$id)->get()->first_row('array');
 		return $key?$ds[$key]:$ds;
 	}
 

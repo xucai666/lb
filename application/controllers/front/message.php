@@ -31,23 +31,23 @@ class Message extends CI_Controller {
 	{
 		
  		$this->db->select('*',false)->from('message')->where('ms_valid',1)->order_by('ms_id','desc');
- 		$data = $this->cor_db->fetch_all(5);
-		$this->cor_page->load_front_view("message",$data);
+ 		$data = $this->init_db->fetch_all(5);
+		$this->init_page->load_front_view("message",$data);
 		
 	}	
 	
 	
 	function action_list(){
 		//clear cache
-		$this->db->select("a.*",false)->from($this->cor_db->table('message').' as a ')	
+		$this->db->select("a.*",false)->from($this->init_db->table('message').' as a ')	
 		->where('a.ms_valid',"1")
 		->order_by("ms_id","desc");
-		$data = $this->cor_db->fetch_all(5);	
+		$data = $this->init_db->fetch_all(5);	
 		$data = array_merge($data,array()	
 		);		
 		
 		
-		$this->cor_page->load_front_view("message_list",$data);
+		$this->init_page->load_front_view("message_list",$data);
 		
 	}	
 	
@@ -78,12 +78,12 @@ class Message extends CI_Controller {
 			$this->load->helper('date');
 			$_POST['main']['ms_date'] = date("Y-m-d H:i:s");
 			$_POST['main']['ms_ip'] = $this->input->ip_address();
-			$this->cor_db->save($_POST,$this->Message_model->db_config());
-			$this->cor_page->front_redirect('message','留言提交成功!');
+			$this->init_db->save($_POST,$this->Message_model->db_config());
+			$this->init_page->front_redirect('message','留言提交成功!');
 	 		
 	 	}catch(Exception $e){
-	 		$this->cor_page->pop_redirect($e->getMessage(),"javascript:history.back(1);");	
-	 		//$this->cor_page->backend_redirect($this->act.'/action_list',$e->getMessage());	  
+	 		$this->init_page->pop_redirect($e->getMessage(),"javascript:history.back(1);");	
+	 		//$this->init_page->backend_redirect($this->act.'/action_list',$e->getMessage());	  
 	 	}			
 		
 		

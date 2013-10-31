@@ -17,7 +17,7 @@ class Common extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		//验证登陆
-		$this->cor_auth->execute_auth();
+		$this->init_auth->execute_auth();
 		$this->load->model('Common_model');
 		
 	}	

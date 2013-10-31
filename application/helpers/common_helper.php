@@ -18,7 +18,7 @@ if(!function_exists('display_size')){
 	function display_size($file_size){ 
 
 	
-		//ÎÄ¼ş´óÓÚµÈÓÚ1073741824Ê±ÓÃg±íÊ¾ 
+		//æ–‡ä»¶å¤§äºç­‰äº1073741824æ—¶ç”¨gè¡¨ç¤º 
 
 		if($file_size >= 1073741824) 
 
@@ -28,7 +28,7 @@ if(!function_exists('display_size')){
 
 		} 
 
-		//ÎÄ¼ş>= 1048576 && <1073741824 Ê±ÓÃm±íÊ¾ 
+		//æ–‡ä»¶>= 1048576 && <1073741824 æ—¶ç”¨mè¡¨ç¤º 
 
 		elseif($file_size >= 1048576) 
 
@@ -38,7 +38,7 @@ if(!function_exists('display_size')){
 
 		} 
 
-		//ÎÄ¼ş>= 1024 && <1048576 Ê±ÓÃk±íÊ¾ 
+		//æ–‡ä»¶>= 1024 && <1048576 æ—¶ç”¨kè¡¨ç¤º 
 
 		elseif($file_size >= 1024) 
 
@@ -48,7 +48,7 @@ if(!function_exists('display_size')){
 
 		} 
 
-		//ÎÄ¼ş <1024 Ê±ÓÃb±íÊ¾ 
+		//æ–‡ä»¶ <1024 æ—¶ç”¨bè¡¨ç¤º 
 
 		else{ 
 
@@ -68,7 +68,7 @@ if(!function_exists('display_size')){
 
 
 /**
-	 * ²Ëµ¥Ñ¡Ôñ
+	 * èœå•é€‰æ‹©
 	 */
 	function tree_options_deal($class_arr,$id,$index,$m)
 	{	
@@ -97,7 +97,7 @@ if(!function_exists('display_size')){
 
 	function category_options($id=0,$index=0,$m=0){		
 		$CI = &get_instance();
- 		$tree_db = $CI->db->select('cc_id,cc_title,cc_parent_id',false)->from($cor_db->mytable('class_category'),false)->order_by('cc_id','asc')->order_by('sort','asc')->get()->result_array();
+ 		$tree_db = $CI->db->select('cc_id,cc_title,cc_parent_id',false)->from($init_db->mytable('class_category'),false)->order_by('cc_id','asc')->order_by('sort','asc')->get()->result_array();
 		
 		foreach($tree_db as $k=>$v){
 		
@@ -111,21 +111,14 @@ if(!function_exists('display_size')){
 	
 	
 	
-//²Ëµ¥´¦Àí	
+//èœå•å¤„ç†	
 	
 function get_area($id) {
-	$cor_db  =  &get_cor_db();
+	$CI  =  &get_instance();
 	if( $id <= 1 ) return get_area_help( 1, 0 );
 	$html = "";
 	while( $id > 1 ) {	
-		$sql_arr = array(
-			'table_name'=>'ecs_region',
-			'fields'=>'region_id, region_name,parent_id',
-			'primary_id'=>'region_id',
-			'primary_val'=>$id,
-		);	
-		
-		$a = $cor_db->fetch_one($sql_arr);			
+		$a = $CI->db->select('*',false)->from('ecs_region')->where('region_id',$id)->get()->first_row('array');		
 		$html = get_area_help( $a['parent_id'], $id ) ."<span>&nbsp;" .$html."</span>";
 		$id = $a['parent_id'];
 	}
@@ -137,7 +130,7 @@ function get_area_help( $pid, $id ,$select_name='area[]') {
 	$html = "";
 	$a = $CI->db->select( "region_id, region_name, parent_id",false)->from("ecs_region")->where ("parent_id",$pid)->get()->result_array();
 	if( $a ) {
-		$html .= "<select name='".$select_name."' onchange='region(this)'><option value='0'>ÇëÑ¡Ôñ</option>";
+		$html .= "<select name='".$select_name."' onchange='region(this)'><option value='0'>è¯·é€‰æ‹©</option>";
 		foreach( $a as $aa ) {
 			$s = $id == $aa['region_id'] ? ' selected' : '';
 			$html .= "<option value='{$aa['region_id']}'{$s}>{$aa['region_name']}</option>";
@@ -223,7 +216,7 @@ if(!function_exists('msubstr')){
 
 
 /**
- * ½ØÈ¡ÖĞÎÄ£¬°´ÖĞÎÄÕ¼Î»·µ»Ø
+ * æˆªå–ä¸­æ–‡ï¼ŒæŒ‰ä¸­æ–‡å ä½è¿”å›
  * @param [type] $sourcestr   [description]
  * @param [type] $startlength [description]
  * @param [type] $cutlength   [description]
@@ -234,27 +227,27 @@ function FSubstr($sourcestr, $startlength, $cutlength,$tail='...')
    $returnstr=''; 
    $i=0; 
    $n=0; 
-   $str_length=strlen($sourcestr);            //×Ö·û´®µÄ×Ö½ÚÊı 
+   $str_length=strlen($sourcestr);            //å­—ç¬¦ä¸²çš„å­—èŠ‚æ•° 
    while (($n<$cutlength) and ($i<=$str_length))
    { 
       $temp_str=substr($sourcestr,$i,1); 
-      $ascnum=Ord($temp_str);               //µÃµ½×Ö·û´®ÖĞµÚ$iÎ»×Ö·ûµÄasciiÂë 
-      if ($ascnum>=224) {                  //Èç¹ûASCIIÎ»¸ßÓë224£¬
-         $returnstr=$returnstr.substr($sourcestr,$i,3);  //¸ù¾İUTF-8±àÂë¹æ·¶£¬½«3¸öÁ¬ĞøµÄ×Ö·û¼ÆÎªµ¥¸ö×Ö·û         
-         $i=$i+3;                           //Êµ¼ÊByte¼ÆÎª3
-         $n++;                             //×Ö´®³¤¶È¼Æ1
-      } elseif ($ascnum>=192){              //Èç¹ûASCIIÎ»¸ßÓë192£¬
-         $returnstr=$returnstr.substr($sourcestr,$i,2);  //¸ù¾İUTF-8±àÂë¹æ·¶£¬½«2¸öÁ¬ĞøµÄ×Ö·û¼ÆÎªµ¥¸ö×Ö·û 
-         $i=$i+2;                           //Êµ¼ÊByte¼ÆÎª2
-         $n++;                            //×Ö´®³¤¶È¼Æ1
-      } elseif ($ascnum>=65 && $ascnum<=90){       //Èç¹ûÊÇ´óĞ´×ÖÄ¸£¬
+      $ascnum=Ord($temp_str);               //å¾—åˆ°å­—ç¬¦ä¸²ä¸­ç¬¬$iä½å­—ç¬¦çš„asciiç  
+      if ($ascnum>=224) {                  //å¦‚æœASCIIä½é«˜ä¸224ï¼Œ
+         $returnstr=$returnstr.substr($sourcestr,$i,3);  //æ ¹æ®UTF-8ç¼–ç è§„èŒƒï¼Œå°†3ä¸ªè¿ç»­çš„å­—ç¬¦è®¡ä¸ºå•ä¸ªå­—ç¬¦         
+         $i=$i+3;                           //å®é™…Byteè®¡ä¸º3
+         $n++;                             //å­—ä¸²é•¿åº¦è®¡1
+      } elseif ($ascnum>=192){              //å¦‚æœASCIIä½é«˜ä¸192ï¼Œ
+         $returnstr=$returnstr.substr($sourcestr,$i,2);  //æ ¹æ®UTF-8ç¼–ç è§„èŒƒï¼Œå°†2ä¸ªè¿ç»­çš„å­—ç¬¦è®¡ä¸ºå•ä¸ªå­—ç¬¦ 
+         $i=$i+2;                           //å®é™…Byteè®¡ä¸º2
+         $n++;                            //å­—ä¸²é•¿åº¦è®¡1
+      } elseif ($ascnum>=65 && $ascnum<=90){       //å¦‚æœæ˜¯å¤§å†™å­—æ¯ï¼Œ
          $returnstr=$returnstr.substr($sourcestr,$i,1); 
-         $i=$i+1;                           //Êµ¼ÊµÄByteÊıÈÔ¼Æ1¸ö
-         $n++;                            //µ«¿¼ÂÇÕûÌåÃÀ¹Û£¬´óĞ´×ÖÄ¸¼Æ³ÉÒ»¸ö¸ßÎ»×Ö·û
-      } else {                              //ÆäËûÇé¿öÏÂ£¬°üÀ¨Ğ¡Ğ´×ÖÄ¸ºÍ°ë½Ç±êµã·ûºÅ£¬
+         $i=$i+1;                           //å®é™…çš„Byteæ•°ä»è®¡1ä¸ª
+         $n++;                            //ä½†è€ƒè™‘æ•´ä½“ç¾è§‚ï¼Œå¤§å†™å­—æ¯è®¡æˆä¸€ä¸ªé«˜ä½å­—ç¬¦
+      } else {                              //å…¶ä»–æƒ…å†µä¸‹ï¼ŒåŒ…æ‹¬å°å†™å­—æ¯å’ŒåŠè§’æ ‡ç‚¹ç¬¦å·ï¼Œ
          $returnstr=$returnstr.substr($sourcestr,$i,1); 
-         $i=$i+1;                           //Êµ¼ÊµÄByteÊı¼Æ1¸ö
-         $n=$n+0.5;                        //Ğ¡Ğ´×ÖÄ¸ºÍ°ë½Ç±êµãµÈÓë°ë¸ö¸ßÎ»×Ö·û¿í...
+         $i=$i+1;                           //å®é™…çš„Byteæ•°è®¡1ä¸ª
+         $n=$n+0.5;                        //å°å†™å­—æ¯å’ŒåŠè§’æ ‡ç‚¹ç­‰ä¸åŠä¸ªé«˜ä½å­—ç¬¦å®½...
       } 
       
    if ($n <= $startlength){
@@ -264,23 +257,23 @@ function FSubstr($sourcestr, $startlength, $cutlength,$tail='...')
     }
     
     if ($str_length>$cutlength){
-       $returnstr = $returnstr . $tail;          //³¬¹ı³¤¶ÈÊ±ÔÚÎ²´¦¼ÓÉÏÊ¡ÂÔºÅ
+       $returnstr = $returnstr . $tail;          //è¶…è¿‡é•¿åº¦æ—¶åœ¨å°¾å¤„åŠ ä¸Šçœç•¥å·
     }
     return $returnstr; 
 }
 
 
 /**
- * »ìÏı·À²É¼¯
+ * æ··æ·†é˜²é‡‡é›†
  * @param [type] $body [description]
  */
 function RndString($body)
 {
-  //×î´ó¼ä¸ô¾àÀë(Èç¹ûÔÚ¼ì²â²»µ½p±ê¼ÇµÄÇé¿öÏÂ£¬¼ÓÈë»ìÏı×Ö´®µÄ×î´ó¼ä¸ô¾àÀë)
+  //æœ€å¤§é—´éš”è·ç¦»(å¦‚æœåœ¨æ£€æµ‹ä¸åˆ°pæ ‡è®°çš„æƒ…å†µä¸‹ï¼ŒåŠ å…¥æ··æ·†å­—ä¸²çš„æœ€å¤§é—´éš”è·ç¦»)
   $maxpos = 1024;
-  //font µÄ×ÖÌåÑÕÉ«
+  //font çš„å­—ä½“é¢œè‰²
   $fontColor = "#FFFFFF";
-  //div span p ±ê¼ÇµÄËæ»úÑùÊ½
+  //div span p æ ‡è®°çš„éšæœºæ ·å¼
   $st1 = chr(mt_rand(ord('A'),ord('Z'))).chr(mt_rand(ord('a'),ord('z'))).chr(mt_rand(ord('a'),ord('z'))).mt_rand(100,999);
   $st2 = chr(mt_rand(ord('A'),ord('Z'))).chr(mt_rand(ord('a'),ord('z'))).chr(mt_rand(ord('a'),ord('z'))).mt_rand(100,999);
   $st3 = chr(mt_rand(ord('A'),ord('Z'))).chr(mt_rand(ord('a'),ord('z'))).chr(mt_rand(ord('a'),ord('z'))).mt_rand(100,999);
@@ -294,17 +287,17 @@ function RndString($body)
   $rndstyle[4]['value'] = ".{$st4} { display:none; }";
   $rndstyle[4]['name'] = $st4;
   $mdd = mt_rand(1,4);
-  //ÒÔºóÄÚÈİÈç¹ûÄã²»¶®Æäº¬Òå£¬Çë²»Òª¸Ä¶¯
+  //ä»¥åå†…å®¹å¦‚æœä½ ä¸æ‡‚å…¶å«ä¹‰ï¼Œè¯·ä¸è¦æ”¹åŠ¨
   //---------------------------------------------------
   $rndstyleValue = $rndstyle[$mdd]['value'];
   $rndstyleName = $rndstyle[$mdd]['name'];
   $reString = "<style> $rndstyleValue </style>\r\n";
-  //¸½»ú±ê¼Ç
+  //é™„æœºæ ‡è®°
   $rndem[1] = 'font';
   $rndem[2] = 'div';
   $rndem[3] = 'span';
   $rndem[4] = 'p';
-  //¶ÁÈ¡×Ö·û´®Êı¾İ
+  //è¯»å–å­—ç¬¦ä¸²æ•°æ®
   $fp = fopen(realpath(dirname(__FILE__).'/../resources/downmix.php'),'r');
   $start = 0;
   $totalitem = 0;
@@ -317,7 +310,7 @@ function RndString($body)
 	   if(ereg("#start#",$v)){ $start = 1; }
   }
   fclose($fp);
-  //´¦ÀíÒª·À²É¼¯µÄ×Ö¶Î
+  //å¤„ç†è¦é˜²é‡‡é›†çš„å­—æ®µ
   $bodylen = strlen($body) - 1;
   $prepos = 0;
   for($i=0;$i<=$bodylen;$i++){
@@ -339,12 +332,12 @@ function RndString($body)
   }
   unset($body);
   return $reString;
-}//º¯Êı½áÊø
+}//å‡½æ•°ç»“æŸ
 
 
 
   
-  //»ñµÃµ±Ç°µÄ½Å±¾ÍøÖ· 
+  //è·å¾—å½“å‰çš„è„šæœ¬ç½‘å€ 
   function GetCurUrl() 
   { 
     if(!empty($_SERVER["REQUEST_URI"])) 
@@ -377,16 +370,16 @@ function RndString($body)
    * make html
    */
   function MakeHtmlFile($file_name, $content) {      
-        //Ä¿Â¼²»´æÔÚ¾Í´´½¨  
+        //ç›®å½•ä¸å­˜åœ¨å°±åˆ›å»º  
         $CI = & get_instance(); 
         $CI->Common_model->mkdirs(dirname($file_name));                      
         if(!$fp = fopen($file_name, "w")){  
-            echo "ÎÄ¼ş´ò¿ªÊ§°Ü£¡";  
+            echo "æ–‡ä»¶æ‰“å¼€å¤±è´¥ï¼";  
             return false;  
         }  
  
         if(!fwrite($fp, $content)){  
-            echo "ÎÄ¼şĞ´ÈëÊ§°Ü£¡";  
+            echo "æ–‡ä»¶å†™å…¥å¤±è´¥ï¼";  
             fclose($fp);  
             return false;  
         }  

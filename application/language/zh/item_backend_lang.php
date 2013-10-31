@@ -70,8 +70,8 @@
 		$lang['sys_change_pass']				 = '修改密码';
 		
 		//提示信息
-		$lang['cor_page_theme']					 = '系统提示信息';
-		$lang['cor_page_remarks']				 = '如果你的浏览器没反应，请点击这里';
+		$lang['init_page_theme']					 = '系统提示信息';
+		$lang['init_page_remarks']				 = '如果你的浏览器没反应，请点击这里';
 
 
 		//button
@@ -114,5 +114,3 @@
 		$lang['confirm_delete']				 	 = '确定删除?';
 		//operate
 		$lang['opt']				 		  	 = '操作';
-
-?>

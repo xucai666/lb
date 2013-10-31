@@ -28,14 +28,9 @@ class Alipay extends CI_Controller {
      */
     function index() {
         $stats = $this->db->select('sum(1) as p_stat,sum(p_qty*p_price ) as sub',false)->from('order_detail')->where('order_id',$this->uri->segment(3))->get()->first_row('array');
-        $config = array(
-            'table_name'=>'order_main',
-            'primary_id'=>'order_id',
-            'primary_val'=>$this->uri->segment(3),
-        );
-        $main = $this->cor_db->fetch_one($config);
+        $main = $this->db->select('*',false)->from('order_main')->where('order_id',$this->uri->segment(3))->get()->first_row('array');
         $list = $this->db->select('*',false)->from('order_detail')->where('order_id',$this->uri->segment(4))->get()->result_array();
-        $data = array('stats'=>$stats,'main'=>$main,'list'=>$list,'status'=>$this->cor_cache->cache_fetch('order_status'));
+        $data = array('stats'=>$stats,'main'=>$main,'list'=>$list,'status'=>$this->init_cache->cache_fetch('order_status'));
       
         $this->load->view('alipay_from',$data);
     }
