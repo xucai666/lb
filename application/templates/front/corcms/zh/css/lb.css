@@ -10,7 +10,7 @@ span,td,tr,li,ul,input,div,form,a{
 
 
 /*导航*/
-.link_tu a{ background:url(../images/nav.jpg) no-repeat  scroll 0px 0px; display:block; width:70px;height:23px;color:#ffffff;font-weight:bold;text-align:center;padding-top: 10px}
+.link_tu a{ background:url(../images/nav.jpg) no-repeat  scroll 0px 0px; display:block; width:70px;height:23px;color:#ffffff;font-weight:bold;text-align:center;padding-top: 5px}
 .link_tu a:hover{ background:url(../images/nav.jpg) no-repeat scroll 0px -33px; display:block; border:0;color:#ffffff;}
 .link_tu .selected{ background:url(../images/nav.jpg) no-repeat scroll 0px -33px; display:block; border:0;color:#ffffff;}
 

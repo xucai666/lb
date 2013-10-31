@@ -168,13 +168,29 @@
 	},
 	"file_history":
 	[
+		"/E/phpnow/htdocs/lb/application/libraries/init_page.php",
+		"/E/phpnow/htdocs/lb/application/helpers/common_helper.php",
+		"/E/phpnow/htdocs/lb/application/helpers/auth_helper.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/advs_add.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/adv_template/1.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/adv_template/3.htm",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/advs.php",
+		"/E/phpnow/htdocs/lb/application/models/advs_model.php",
+		"/E/phpnow/htdocs/lb/application/libraries/init_db.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/advs_template/adv_html_2.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/advs_list.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/advs_template/adv_html_1.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/advs_template/adv_html_3.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/advs_template/type_1.htm",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/mdata.php",
+		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_lang.php",
+		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_admins_lang.php",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/menu.php",
 		"/E/phpnow/htdocs/lb/application/compiles/046954601904dd33ce5ee7899e57210de4c216d3.file.mdata_list.htm.php",
 		"/E/phpnow/htdocs/lb/application/libraries/cor_db.php",
 		"/E/phpnow/htdocs/lb/application/libraries/cor_lang.php",
 		"/E/phpnow/htdocs/lb/index.php",
 		"/E/phpnow/htdocs/lb/application/libraries/cor_auth.php",
-		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_lang.php",
-		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_admins_lang.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/main_index.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/center.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/main_top.htm",
@@ -207,7 +223,6 @@
 		"/E/phpnow/htdocs/lb/application/language/zh/item_front_lang.php",
 		"/E/phpnow/htdocs/lb/application/language/zh/item_front_member_lang.php",
 		"/E/phpnow/htdocs/lb/application/helpers/init_lang_helper.php",
-		"/E/phpnow/htdocs/lb/application/libraries/init_page.php",
 		"/E/phpnow/htdocs/lb/application/libraries/tree.php",
 		"/E/phpnow/htdocs/lb/application/libraries/invoke.php",
 		"/E/phpnow/htdocs/lb/application/libraries/MY_Form_validation.php",
@@ -216,7 +231,6 @@
 		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
 		"/E/phpnow/htdocs/lb/application/libraries/init_auth.php",
 		"/E/phpnow/htdocs/lb/application/libraries/init_cache.php",
-		"/E/phpnow/htdocs/lb/application/libraries/init_db.php",
 		"/E/phpnow/htdocs/lb/application/libraries/init_form.php",
 		"/E/phpnow/htdocs/lb/application/libraries/init_lang.php",
 		"/E/phpnow/htdocs/lb/application/libraries/init_zip.php",
@@ -237,7 +251,6 @@
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jquery.form.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/jquery.form.js",
 		"/E/phpnow/htdocs/lb/application/helpers/auth_helper.php.dump",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/advs.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/archive.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/archives.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/category.php",
@@ -247,8 +260,6 @@
 		"/E/phpnow/htdocs/lb/application/controllers/backend/fields.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/friendlink.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/logs.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/mdata.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/menu.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/message.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/modules.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/pictures.php",
@@ -277,7 +288,6 @@
 		"/E/phpnow/htdocs/lb/application/controllers/front/vote.php",
 		"/E/phpnow/htdocs/lb/application/helpers/MY_url_helper.php",
 		"/E/phpnow/htdocs/lb/application/models/admins_model.php",
-		"/E/phpnow/htdocs/lb/application/models/advs_model.php",
 		"/E/phpnow/htdocs/lb/application/models/archive_model.php",
 		"/E/phpnow/htdocs/lb/application/models/archives_model.php",
 		"/E/phpnow/htdocs/lb/application/models/category_model.php",
@@ -285,27 +295,18 @@
 		"/E/phpnow/htdocs/lb/application/models/common_model.php",
 		"/E/phpnow/htdocs/lb/application/models/download_model.php",
 		"/E/phpnow/htdocs/lb/application/models/engage_model.php",
-		"/E/phpnow/htdocs/lb/application/models/fields_model.php",
-		"/E/phpnow/htdocs/lb/application/models/friendlink_model.php",
-		"/E/phpnow/htdocs/lb/application/models/logs_model.php",
-		"/E/phpnow/htdocs/lb/application/models/mdata_model.php",
-		"/E/phpnow/htdocs/lb/application/models/member_model.php",
-		"/E/phpnow/htdocs/lb/application/models/menu_model.php",
-		"/E/phpnow/htdocs/lb/application/models/message_model.php",
-		"/E/phpnow/htdocs/lb/application/models/modules_model.php",
-		"/E/phpnow/htdocs/lb/application/models/pictures_model.php",
-		"/E/phpnow/htdocs/lb/application/models/product_model.php",
-		"/E/phpnow/htdocs/lb/application/models/roles_model.php"
+		"/E/phpnow/htdocs/lb/application/models/fields_model.php"
 	],
 	"find":
 	{
-		"height": 72.0
+		"height": 84.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
+			"E:\\phpnow\\htdocs\\lb\\application\\helpers",
 			"E:\\phpnow\\htdocs\\lb\\application",
 			"E:\\phpnow\\htdocs\\lb",
 			"E:\\phpnow\\htdocs\\lb\\application",
@@ -387,6 +388,29 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"init_base64_encode",
+			"my_encrypt",
+			"duilian_right",
+			"260",
+			"adv_type",
+			"fetcharray",
+			"findarray",
+			"findarra",
+			"$type",
+			"$main",
+			"adv_type",
+			"show_adv",
+			"showadv",
+			"$dir_backend/",
+			"adv_type",
+			"show_upload",
+			"adv_html_",
+			"radio1",
+			"show_upload",
+			"showadv",
+			"show_upload",
+			"echo",
+			"redirect",
 			"ob_start",
 			"short",
 			"On",
@@ -491,30 +515,7 @@
 			"saev_path",
 			"save_path",
 			"thumb",
-			"save_path_encode",
-			"64decode",
-			"save_path_encode",
-			"save_path",
-			"save_path_encode",
-			"save_path",
-			"uid",
-			"upload.php",
-			"action_index_rotation_save",
-			"spanButtonPlaceholder_",
-			"fsUploadProgress_1000",
-			"unlink",
-			"swfobject",
-			"tbody_upload",
-			"htm",
-			"radio2",
-			"html",
-			"html_store",
-			"adv_type",
-			"radio",
-			"checkbox",
-			"('",
-			"('');",
-			"show_upload"
+			"save_path_encode"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -597,6 +598,18 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"init_page",
+				"application/libraries/init_page.php"
+			],
+			[
+				"advs_model",
+				"application/models/advs_model.php"
+			],
+			[
+				"adv_list",
+				"application/templates/backend/corcms/advs_list.htm"
+			],
 			[
 				"core.js",
 				"application/templates/front/corcms/zh/js/core.js"
@@ -1096,18 +1109,6 @@
 			[
 				"backend_st",
 				"application/templates/backend/corcms/css/backend_style.css"
-			],
-			[
-				"templ",
-				"ckeditor/plugins/templates/dialogs/templates.css"
-			],
-			[
-				"myurl",
-				"application/helpers/MY_url_helper.php"
-			],
-			[
-				"cor_page.",
-				"application/libraries/cor_page.php"
 			]
 		],
 		"width": 0.0
