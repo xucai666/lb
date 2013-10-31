@@ -138,19 +138,13 @@
 				);	
 
 				$main = $this->db->select('*')->from('engage_apply')->where('apply_id',$id)->get()->first_row('array');
-				$sql_arr = array(
-					'table_name'=>$this->init_db->table('engage'),
-					'fields'=>'eg_pos',
-					'primary_id'=>'eg_id',
-					'primary_val'=>$main['eg_id'],
-				);	
 				
 			
-				$engage = $this->db->select('eg_pos')->from('engage_apply')->where('eg_id',$main['eg_id'])->get()->first_row('array');
+				$engage = $this->db->select('eg_pos')->from('engage')->where('eg_id',$main['eg_id'])->get()->first_row('array');
 
 				$main['eg_pos'] = $engage['eg_pos'];
 		
-				
+			
 		}
 		
 		

@@ -46,7 +46,7 @@
     'c_order' => '4',
     'c_display' => '1',
     'c_pic' => 'http://localhost/lb//swfupload/uploads/2013-08-21/nav-09.jpg',
-    'c_html' => '1',
+    'c_html' => '0',
     'c_pid' => '10',
     'c_type' => '3',
     'c_dir' => 'chan_pin_zhan_shi',
