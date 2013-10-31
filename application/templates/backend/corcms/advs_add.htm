@@ -33,7 +33,9 @@
       <td height="40" align="right">广告类别：</td>
       <td height="40"><label>
         <input type="radio"  class="adv_type" name="main[adv_type]" id="radio1" value="1"   />
-        图片
+        轮显广告
+         <input type="radio"  class="adv_type" name="main[adv_type]" id="radio3" value="3"   />
+        对联广告
         <input type="radio"  class="adv_type" name="main[adv_type]" id="radio2" value="2"  />
       Flash</label></td>
     </tr>
@@ -79,72 +81,10 @@
   </table>
 </form>
 
-<textarea class="hide" id="html_flash"> <tr>
-      <td height="40" align="right" valign="top">上传Flash：</td>
-      <td>
-      
-        <input name="detail[img][0]" type="file" size="15"   >
-            <input name="detail[adv_pic][0]" type="hidden"   value="<!--{$detail.0.adv_pic}-->" >           
-            <input name="detail[detail_id][0]"  id="detail_id" type="hidden" value="<!--{$detail.0.detail_id}-->"   >   
-            <input type="hidden" name="detail[adv_type][0]" value="2" >     
-      
-      
-      </td>
-    </tr></textarea>
-<textarea class="hide" id="html_pic">
- <tr>
-      <td height="40" align="right" valign="top">
-      上传图片： <br /></td>
-      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-          <tr>
-            <td><table width="100%" border="0" cellspacing="0" cellpadding="0" class="mytable">
-              <thead>
-              <tr>
-          <th>预览</th>
-          <th width="150" align="center">上传</th>
-          <th align="center">链接</th>
-          <th>广告说明</th>
-          <th>操作</th>
-        </tr>
-      </thead>
-         <!--{foreach from=$detail key=key item=item}-->  
-           
-          <tr>
-          <td>
-            <!--{if $item.adv_pic}-->
-            <img src="<!--{$item.adv_pic}-->" width="100" height="80" class="myimg" onerror="ImgError(this);" />
-            <!--{/if}-->
-            </td>
-          <td align="center">
-            <input name="detail[img][<!--{$key}-->]" type="file" size="15"   >
-            <input name="detail[adv_pic][<!--{$key}-->]" type="hidden"   value="<!--{$item.adv_pic}-->" >           
-            <input name="detail[detail_id][<!--{$key}-->]"  id="detail_id" type="hidden" value="<!--{$item.detail_id}-->"   >  
-            <input name="detail[adv_type][<!--{$key}-->]" type="hidden"  value="1"   >
-          </td>
-          <td align="center"><input type="text"  name="detail[adv_url][<!--{$key}-->]" value="<!--{$item.adv_url}-->"/></td>
-          <td align="center">
-            <input type="text" name="detail[adv_title][<!--{$key}-->]"   value="<!--{$item.adv_title}-->" id="adv_title" />
-          </td>
-          <td align="center">         
-            
-            <a id="copyfile_a"  href="javascript:;" onclick="core_copy(this,'#detail_id','copy_ext');"><img  title="添加" add1.png"  src="<!--{$img_url}-->/add1.png" ></a>
-            
-            <a id="delete_link"  href="javascript:;" onclick="core_drop(this,'#detail_id','copy_ext');"  class=" <!--{if $key==0}-->hide<!--{/if}-->"  ><img  title="删除"    src="<!--{$img_url}-->/del1.gif" ></a>
-            
-            </td>
-          </tr>
-        
-            <!--{/foreach}-->
-            
-        </table>
-   
-            </td>
-          </tr>
-      </table></td>
-    </tr>
+<textarea class="hide" id="adv_html_2"> <!--{include file="$dir_backend/adv_template/2.htm"}--></textarea>
+<textarea class="hide" id="adv_html_1"><!--{include file="$dir_backend/adv_template/1.htm"}--></textarea>
+<textarea class="hide" id="adv_html_3"><!--{include file="$dir_backend/adv_template/3.htm"}--></textarea>
 
-
-</textarea>
 <script language="JavaScript">
 	function copy_ext(obj){
 		var p_obj = $(obj).parents("tr:first");		
@@ -155,15 +95,14 @@
 	function show_upload(adv_type){
   var str='';
 
-  if(adv_type==1){
-    $("#radio1").prop("checked","true");
-    str = $('#html_pic').val();
 
-  }else{
-    $("#radio2").prop("checked","true");
-    str = $('#html_flash').val();
-  }
-  
+
+
+  $(".adv_type[value='"+adv_type+"']").prop("checked",true);
+
+
+  str = $('#adv_html_'+adv_type).val();  
+
 	 $('#tbody_upload').html(str);
    
 	}
@@ -173,6 +112,7 @@
 	$(document).ready(function(){
  
 		$(".adv_type").on("click",function(){
+
 				show_upload($(this).val());							 
 		});		
      				   

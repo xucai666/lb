@@ -732,7 +732,7 @@ IMG	.\ckfinder\core\connector\php\php5\Utils\Misc.php	/^        $IMG = fread($f1
 IN	.\system\core\CodeIgniter.php	/^	$IN	=& load_class('Input', 'core');$/;"	v	language:PHP
 INTELLIGENTFILENAMING	.\charts\ExportHandlers\PHP\FCExporter.php	/^define ( "INTELLIGENTFILENAMING", true );  $/;"	d	language:PHP
 IN_CKFINDER	.\ckfinder\core\connector\php\constants.php	/^define('IN_CKFINDER',true);$/;"	d	language:PHP
-IS_ADMIN	.\tools\faisunsql_v40_utf8\index.php	/^define("IS_ADMIN","yes");  \/\/鐢ㄤ簬妫€楠屾槸鍚﹀姞浜嗙鐞嗗憳韬唤楠岃瘉浠ｇ爜銆?/;"	d	language:PHP
+IS_ADMIN	.\tools\faisunsql_v40_utf8\index.php	/^define("IS_ADMIN","yes");  \/\/用于检验是否加了管理员身份验证代码。$/;"	d	language:PHP
 Id	.\application\libraries\Doctrine\ORM\Mapping\Id.php	/^final class Id implements Annotation$/;"	c	language:PHP
 Id	.\ckfinder\core\ckfinder_php5.php	/^	public $Id = '' ;$/;"	v	language:PHP
 IdentificationVariable	.\application\libraries\Doctrine\ORM\Query\Parser.php	/^    public function IdentificationVariable()$/;"	f	language:PHP
@@ -795,6 +795,7 @@ JoinColumns	.\application\libraries\Doctrine\ORM\Mapping\JoinColumns.php	/^final
 JoinTable	.\application\libraries\Doctrine\ORM\Mapping\JoinTable.php	/^final class JoinTable implements Annotation$/;"	c	language:PHP
 JoinedSubclassPersister	.\application\libraries\Doctrine\ORM\Persisters\JoinedSubclassPersister.php	/^class JoinedSubclassPersister extends AbstractEntityInheritancePersister$/;"	c	language:PHP
 JsonArrayType	.\application\libraries\Doctrine\DBAL\Types\JsonArrayType.php	/^class JsonArrayType extends Type$/;"	c	language:PHP
+JumpUrl	.\application\compiles\c11fef5b2930592637bdc3ac6ddb20a2a4983741.file.page_redirect.htm.php	/^      function JumpUrl(){$/;"	f	language:PHP
 K64	.\ckfinder\core\connector\php\php5\Utils\Misc.php	/^        $K64 = 65536;    \/\/ number of bytes in 64K$/;"	v	language:PHP
 KeywordList	.\application\libraries\Doctrine\DBAL\Platforms\Keywords\KeywordList.php	/^abstract class KeywordList$/;"	c	language:PHP
 LANG	.\system\core\CodeIgniter.php	/^	$LANG =& load_class('Lang', 'core');$/;"	v	language:PHP
@@ -882,12 +883,12 @@ MysqlSessionInit	.\application\libraries\Doctrine\DBAL\Event\Listeners\MysqlSess
 MysqliConnection	.\application\libraries\Doctrine\DBAL\Driver\Mysqli\MysqliConnection.php	/^class MysqliConnection implements Connection$/;"	c	language:PHP
 MysqliException	.\application\libraries\Doctrine\DBAL\Driver\Mysqli\MysqliException.php	/^class MysqliException extends \\Exception$/;"	c	language:PHP
 MysqliStatement	.\application\libraries\Doctrine\DBAL\Driver\Mysqli\MysqliStatement.php	/^class MysqliStatement implements \\IteratorAggregate, Statement$/;"	c	language:PHP
-NO	.\tools\UenuProbe\index.php	/^  define("NO", "<span class='CNNo'>涓嶆敮鎸?\/span>");$/;"	d	language:PHP
+NO	.\tools\UenuProbe\index.php	/^  define("NO", "<span class='CNNo'>不支持<\/span>");$/;"	d	language:PHP
 NO	.\tools\UenuProbe\index.php	/^  define("NO", "<span class='EnglishNo'>No<\/span>");$/;"	d	language:PHP
-NO	.\tools\UenuProbe\index.php	/^  define("NO", "<span class='resNo'>脳<\/span>");$/;"	d	language:PHP
-NO	.\tools\UenuProbe\uenu.php	/^  define("NO", "<span class='CNNo'>涓嶆敮鎸?\/span>");$/;"	d	language:PHP
+NO	.\tools\UenuProbe\index.php	/^  define("NO", "<span class='resNo'>×<\/span>");$/;"	d	language:PHP
+NO	.\tools\UenuProbe\uenu.php	/^  define("NO", "<span class='CNNo'>不支持<\/span>");$/;"	d	language:PHP
 NO	.\tools\UenuProbe\uenu.php	/^  define("NO", "<span class='EnglishNo'>No<\/span>");$/;"	d	language:PHP
-NO	.\tools\UenuProbe\uenu.php	/^  define("NO", "<span class='resNo'>脳<\/span>");$/;"	d	language:PHP
+NO	.\tools\UenuProbe\uenu.php	/^  define("NO", "<span class='resNo'>×<\/span>");$/;"	d	language:PHP
 NUM	.\swfupload\libs\db_access.class.php	/^		define('NUM', 1);$/;"	d	language:PHP
 NamedNativeQueries	.\application\libraries\Doctrine\ORM\Mapping\NamedNativeQueries.php	/^final class NamedNativeQueries implements Annotation$/;"	c	language:PHP
 NamedNativeQuery	.\application\libraries\Doctrine\ORM\Mapping\NamedNativeQuery.php	/^final class NamedNativeQuery implements Annotation$/;"	c	language:PHP
@@ -1368,9 +1369,10 @@ UpperFunction	.\application\libraries\Doctrine\ORM\Query\AST\Functions\UpperFunc
 User	.\application\models\Entity\User.php	/^class User$/;"	c	language:PHP
 UserGroup	.\application\models\Entity\UserGroup.php	/^class UserGroup$/;"	c	language:PHP
 UserGroup	.\application\models\Proxies\__CG__EntityUserGroup.php	/^class UserGroup extends \\Entity\\UserGroup implements \\Doctrine\\ORM\\Proxy\\Proxy$/;"	c	language:PHP
+Utils.fixEvent	.\application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^Utils.fixEvent = function(e)$/;"	j	language:PHP
 UuidGenerator	.\application\libraries\Doctrine\ORM\Id\UuidGenerator.php	/^class UuidGenerator extends AbstractIdGenerator$/;"	c	language:PHP
 VERSION	.\tools\faisunsql_v40_utf8\index.php	/^		define("VERSION","'.VERSION.'");$/;"	d	language:PHP
-VERSION	.\tools\faisunsql_v40_utf8\index.php	/^define("VERSION","4.0"); \/\/鐗堟湰$/;"	d	language:PHP
+VERSION	.\tools\faisunsql_v40_utf8\index.php	/^define("VERSION","4.0"); \/\/版本$/;"	d	language:PHP
 VERSION	.\tools\faisunsql_v40_utf8\index\index.php	/^		define("VERSION","4.0");$/;"	d	language:PHP
 VIDE	.\ckfinder\core\connector\php\php5\Utils\Misc.php	/^        $VIDE = chr(0);$/;"	v	language:PHP
 ValidateSchemaCommand	.\application\libraries\Doctrine\ORM\Tools\Console\Command\ValidateSchemaCommand.php	/^class ValidateSchemaCommand extends Console\\Command\\Command$/;"	c	language:PHP
@@ -1407,19 +1409,19 @@ XcacheCache	.\application\libraries\Doctrine\Common\Cache\XcacheCache.php	/^clas
 XmlDriver	.\application\libraries\Doctrine\ORM\Mapping\Driver\XmlDriver.php	/^class XmlDriver extends FileDriver$/;"	c	language:PHP
 XmlExporter	.\application\libraries\Doctrine\ORM\Tools\Export\Driver\XmlExporter.php	/^class XmlExporter extends AbstractExporter$/;"	c	language:PHP
 Y	.\ckfinder\core\connector\php\php5\Utils\Misc.php	/^        $Y = $BMP['height']-1;$/;"	v	language:PHP
-YES	.\tools\UenuProbe\index.php	/^   \/\/ define("YES", "<span class='resYes'>鈭?\/span>");$/;"	d	language:PHP
-YES	.\tools\UenuProbe\index.php	/^  define("YES", "<span class='CNYes'>鏀寔<\/span>");$/;"	d	language:PHP
+YES	.\tools\UenuProbe\index.php	/^   \/\/ define("YES", "<span class='resYes'>√<\/span>");$/;"	d	language:PHP
+YES	.\tools\UenuProbe\index.php	/^  define("YES", "<span class='CNYes'>支持<\/span>");$/;"	d	language:PHP
 YES	.\tools\UenuProbe\index.php	/^  define("YES", "<span class='EnglishYes'>Yes<\/span>");$/;"	d	language:PHP
-YES	.\tools\UenuProbe\index.php	/^  define("YES", "<span class='resYes'>鈭?\/span>");$/;"	d	language:PHP
-YES	.\tools\UenuProbe\uenu.php	/^   \/\/ define("YES", "<span class='resYes'>鈭?\/span>");$/;"	d	language:PHP
-YES	.\tools\UenuProbe\uenu.php	/^  define("YES", "<span class='CNYes'>鏀寔<\/span>");$/;"	d	language:PHP
+YES	.\tools\UenuProbe\index.php	/^  define("YES", "<span class='resYes'>√<\/span>");$/;"	d	language:PHP
+YES	.\tools\UenuProbe\uenu.php	/^   \/\/ define("YES", "<span class='resYes'>√<\/span>");$/;"	d	language:PHP
+YES	.\tools\UenuProbe\uenu.php	/^  define("YES", "<span class='CNYes'>支持<\/span>");$/;"	d	language:PHP
 YES	.\tools\UenuProbe\uenu.php	/^  define("YES", "<span class='EnglishYes'>Yes<\/span>");$/;"	d	language:PHP
-YES	.\tools\UenuProbe\uenu.php	/^  define("YES", "<span class='resYes'>鈭?\/span>");$/;"	d	language:PHP
+YES	.\tools\UenuProbe\uenu.php	/^  define("YES", "<span class='resYes'>√<\/span>");$/;"	d	language:PHP
 Yaml	.\application\libraries\Doctrine\Symfony\Component\Yaml\Yaml.php	/^class Yaml$/;"	c	language:PHP
 YamlDriver	.\application\libraries\Doctrine\ORM\Mapping\Driver\YamlDriver.php	/^class YamlDriver extends FileDriver$/;"	c	language:PHP
 YamlExporter	.\application\libraries\Doctrine\ORM\Tools\Export\Driver\YamlExporter.php	/^class YamlExporter extends AbstractExporter$/;"	c	language:PHP
-You_trade_status	.\application\controllers\front\alipay.php	/^             * $You_trade_status="1";琛ㄧず浜ゆ槗鎴愬姛锛圱RADE_FINISHED\/TRADE_SUCCESS锛夛紱$/;"	v	language:PHP
-You_trade_status	.\application\controllers\front\alipay.php	/^            $You_trade_status = "1"; \/\/鑾峰彇鍟嗘埛鏁版嵁搴撲腑鏌ヨ寰楀埌璇ョ瑪浜ゆ槗褰撳墠鐨勪氦鏄撶姸鎬?/;"	v	language:PHP
+You_trade_status	.\application\controllers\front\alipay.php	/^             * $You_trade_status="1";表示交易成功（TRADE_FINISHED\/TRADE_SUCCESS）；$/;"	v	language:PHP
+You_trade_status	.\application\controllers\front\alipay.php	/^            $You_trade_status = "1"; \/\/获取商户数据库中查询得到该笔交易当前的交易状态$/;"	v	language:PHP
 ZendDataCache	.\application\libraries\Doctrine\Common\Cache\ZendDataCache.php	/^class ZendDataCache extends CacheProvider$/;"	c	language:PHP
 _BuildUrl	.\ckfinder\core\ckfinder_php5.php	/^	private function _BuildUrl( $url = "" )$/;"	f	language:PHP
 _CHARSET	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^    public static $_CHARSET = SMARTY_RESOURCE_CHAR_SET;$/;"	v	language:PHP
@@ -2098,8 +2100,18 @@ _bind_params	.\system\database\drivers\oci8\oci8_driver.php	/^	private function 
 _bindedValues	.\application\libraries\Doctrine\DBAL\Driver\Mysqli\MysqliStatement.php	/^            $this->_bindedValues = $bindedValues;$/;"	v	language:PHP
 _bindedValues	.\application\libraries\Doctrine\DBAL\Driver\Mysqli\MysqliStatement.php	/^    protected $_bindedValues;$/;"	v	language:PHP
 _bit_depths	.\system\libraries\Email.php	/^	var	$_bit_depths	= array('7bit', '8bit');$/;"	v	language:PHP
+_block_content	.\application\compiles\08e5a137d313ace64256eb31229d25deba9b3247.file.foot.htm.php	/^echo base_url();<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
+_block_content	.\application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^ echo display_size(@disk_free_space("."));<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
+_block_content	.\application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^echo $_SERVER['SERVER_SOFTWARE'];<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
+_block_content	.\application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^echo ini_get('upload_max_filesize');<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
+_block_content	.\application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^echo mysql_get_server_info();<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
 _block_content	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_compile_extends.php	/^            $_block_content = str_replace($compiler->smarty->left_delimiter . '$smarty.block.parent' . $compiler->smarty->right_delimiter, '%%%%SMARTY_PARENT%%%%',$/;"	v	language:PHP
 _block_content	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_resource_extends.php	/^                    $_block_content = str_replace($source->smarty->left_delimiter . '$smarty.block.parent' . $source->smarty->right_delimiter, '%%%%SMARTY_PARENT%%%%',$/;"	v	language:PHP
+_block_repeat	.\application\compiles\08e5a137d313ace64256eb31229d25deba9b3247.file.foot.htm.php	/^<div id="sys_base_url" class="hide"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
+_block_repeat	.\application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^&gt<\/td><td width="15%">MYSQL版本<\/td><td width="35%"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
+_block_repeat	.\application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^<\/td><td width="15%">上传许可<\/td><td width="35%"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
+_block_repeat	.\application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^<\/td><td width="15%">剩余空间<\/td><td width="35%"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
+_block_repeat	.\application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^<\/td><td width="15%">运行环境<\/td><td width="35%"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
 _blur	.\system\libraries\javascript\Jquery.php	/^	function _blur($element = 'this', $js = '')$/;"	f	language:PHP
 _bmpSupported	.\ckfinder\core\connector\php\php5\Core\ThumbnailsConfig.php	/^            $this->_bmpSupported = CKFinder_Connector_Utils_Misc::booleanValue($thumbnailsNode['bmpSupported']);$/;"	v	language:PHP
 _bmpSupported	.\ckfinder\core\connector\php\php5\Core\ThumbnailsConfig.php	/^    private $_bmpSupported = false;$/;"	v	language:PHP
@@ -2917,6 +2929,21 @@ _foreignColumnNames	.\application\libraries\Doctrine\DBAL\Schema\ForeignKeyConst
 _foreignTableName	.\application\libraries\Doctrine\DBAL\Schema\ForeignKeyConstraint.php	/^        $this->_foreignTableName = $foreignTableName;$/;"	v	language:PHP
 _foreignTableName	.\application\libraries\Doctrine\DBAL\Schema\ForeignKeyConstraint.php	/^    protected $_foreignTableName;$/;"	v	language:PHP
 _format_newlines	.\system\libraries\Typography.php	/^	function _format_newlines($str)$/;"	f	language:PHP
+_from	.\application\compiles\046954601904dd33ce5ee7899e57210de4c216d3.file.mdata_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['fields']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_from	.\application\compiles\046954601904dd33ce5ee7899e57210de4c216d3.file.mdata_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_from	.\application\compiles\046954601904dd33ce5ee7899e57210de4c216d3.file.mdata_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['querys']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_from	.\application\compiles\220cb315481c24f94ad869dade37131f5746027b.file.3.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['detail']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_from	.\application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['item']->value['detail']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_from	.\application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['item1']->value['detail']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_from	.\application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['rights_options']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_from	.\application\compiles\69164d1440cda3085cad42aa7f3faaff147ae8ac.file.main_top.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['rights_options']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_from	.\application\compiles\7d3a4b6015952b092ea73602443b8df467b34cf8.file.advs_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_from	.\application\compiles\8cf7fb5887f6f45732b95cd65c6d7b05ddd2cee0.file.1.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['detail']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_from	.\application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['stat']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_from	.\application\compiles\d63de435cc31a396d9e5fe1e2f375052c5f6e26e.file.mdata_add.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['detail']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_from	.\application\compiles\d63de435cc31a396d9e5fe1e2f375052c5f6e26e.file.mdata_add.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['dt_fields']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_from	.\application\compiles\d63de435cc31a396d9e5fe1e2f375052c5f6e26e.file.mdata_add.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['fields']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
+_from	.\application\compiles\dbe4bc18857e73325ed37ee82fc13c09d403bf4f.file.tree_select.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['treeIds']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
 _from	.\application\libraries\Doctrine\ORM\Tools\ConvertDoctrine1Schema.php	/^        $this->_from = (array) $from;$/;"	v	language:PHP
 _from_tables	.\system\database\drivers\cubrid\cubrid_driver.php	/^	function _from_tables($tables)$/;"	f	language:PHP
 _from_tables	.\system\database\drivers\mssql\mssql_driver.php	/^	function _from_tables($tables)$/;"	f	language:PHP
@@ -3225,7 +3252,7 @@ _initializedCollections	.\application\libraries\Doctrine\ORM\Internal\Hydration\
 _initializedCollections	.\application\libraries\Doctrine\ORM\Internal\Hydration\ObjectHydrator.php	/^    private $_initializedCollections = array();$/;"	v	language:PHP
 _input_charset	.\application\controllers\front\alipay.php	/^        $_input_charset = $this->Alipay_Model->_input_charset;$/;"	v	language:PHP
 _input_charset	.\application\models\alipay_model.php	/^            $_input_charset = $_input_charset;$/;"	v	language:PHP
-_input_charset	.\application\models\alipay_model.php	/^        $this->_input_charset = "utf-8"; \/\/瀛楃缂栫爜鏍煎紡 鐩墠鏀寔 GBK 鎴?utf-8$/;"	v	language:PHP
+_input_charset	.\application\models\alipay_model.php	/^        $this->_input_charset = "utf-8"; \/\/字符编码格式 目前支持 GBK 或 utf-8$/;"	v	language:PHP
 _input_charset	.\application\models\alipay_model.php	/^        $this->_input_charset = $this->parameter['_input_charset'];$/;"	v	language:PHP
 _input_charset	.\application\models\alipay_model.php	/^    var $_input_charset;$/;"	v	language:PHP
 _insert	.\system\database\drivers\cubrid\cubrid_driver.php	/^	function _insert($table, $keys, $values)$/;"	f	language:PHP
@@ -4515,6 +4542,7 @@ _thumbsServerPath	.\ckfinder\core\connector\php\php5\Core\FolderHandler.php	/^  
 _thumbsServerPath	.\ckfinder\core\connector\php\php5\Core\FolderHandler.php	/^            $this->_thumbsServerPath = CKFinder_Connector_Utils_FileSystem::combinePaths($this->_thumbsServerPath, ltrim($this->_clientPath, '\/'));$/;"	v	language:PHP
 _thumbsServerPath	.\ckfinder\core\connector\php\php5\Core\FolderHandler.php	/^    private $_thumbsServerPath;$/;"	v	language:PHP
 _time	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_cacheresource_file.php	/^            $_time = time();$/;"	v	language:PHP
+_tmp1	.\application\compiles\046954601904dd33ce5ee7899e57210de4c216d3.file.mdata_list.htm.php	/^<?php $_tmp1=ob_get_clean();?><?php echo ci_anchor(array('segment'=>"backend\/mdata\/action_del\/".((string)$_smarty_tpl->tpl_vars['item']->value[$_smarty_tpl->tpl_vars['primary']->value]),'attrs'=>"class:link_del,onclick:return confirm('".$_tmp1."');"),$_smarty_tpl);?>$/;"	v	language:PHP
 _tmp_file	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_write_file.php	/^        $_tmp_file = $_dirpath . DS . uniqid('wrt', true);$/;"	v	language:PHP
 _toSql	.\application\libraries\Doctrine\DBAL\Schema\SchemaDiff.php	/^    protected function _toSql(AbstractPlatform $platform, $saveMode = false)$/;"	f	language:PHP
 _toggle	.\system\libraries\javascript\Jquery.php	/^	function _toggle($element = 'this')$/;"	f	language:PHP
@@ -4624,8 +4652,25 @@ _val	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_radios.php
 _val	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_radios.php	/^            $_val = isset($output[$_i]) ? $output[$_i] : '';$/;"	v	language:PHP
 _val	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_select_date.php	/^            $_val = sprintf('%02d', $i);$/;"	v	language:PHP
 _val	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_select_time.php	/^            $_val = sprintf('%02d', $i);$/;"	v	language:PHP
+_valid	.\application\compiles\046954601904dd33ce5ee7899e57210de4c216d3.file.mdata_list.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\08e5a137d313ace64256eb31229d25deba9b3247.file.foot.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\090fca48abdcc9955687f2ca28fbdccf222355c0.file.center.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\220cb315481c24f94ad869dade37131f5746027b.file.3.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\5058bd06fae55f725b6716266e32d490ab562e54.file.top.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\50d1dc5d956dcf8018ad4fc72ccccfaee196163a.file.advs_add.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\5666bfb2573f6235e99a796c3fe9166da62d8fc6.file.main_foot.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\57bca995376f3e9a04397d23c80716afd9138e67.file.main_index.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\69164d1440cda3085cad42aa7f3faaff147ae8ac.file.main_top.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\7d3a4b6015952b092ea73602443b8df467b34cf8.file.advs_list.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\8cf7fb5887f6f45732b95cd65c6d7b05ddd2cee0.file.1.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\9b58c5f9cee58ee20026cabb2a1cddb56b18b909.file.adminindex.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\b099701eadf8f55eddca3fa391a827440415bbad.file.2.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\b1ebafe76c14cfee9fa856e3cff454ae0f09ab58.file.advs_view.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\c11fef5b2930592637bdc3ac6ddb20a2a4983741.file.page_redirect.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\d63de435cc31a396d9e5fe1e2f375052c5f6e26e.file.mdata_add.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\dbe4bc18857e73325ed37ee82fc13c09d403bf4f.file.tree_select.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid_ipv4	.\system\core\Input.php	/^	protected function _valid_ipv4($ip)$/;"	f	language:PHP
 _valid_ipv6	.\system\core\Input.php	/^	protected function _valid_ipv6($str)$/;"	f	language:PHP
 _validateAndCompleteAssociationMapping	.\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php	/^    protected function _validateAndCompleteAssociationMapping(array $mapping)$/;"	f	language:PHP
@@ -5155,6 +5200,10 @@ adv_id	.\application\controllers\backend\advs.php	/^	 	 $adv_id   = $this->input
 adv_show	.\application\controllers\backend\advs.php	/^				$adv_show =  "document.write('".str_replace(array("\\r","\\n"),array('',''),addslashes($adv_show))."');";$/;"	v	language:PHP
 adv_show	.\application\controllers\backend\advs.php	/^				$adv_show = $this->im->showadv($adv_id);	$/;"	v	language:PHP
 adv_show	.\application\controllers\backend\advs.php	/^		$adv_show = $this->im->showadv($adv_id);	$/;"	v	language:PHP
+adv_type1	.\application\models\advs_model.php	/^function adv_type1($id){$/;"	f	language:PHP
+adv_type2	.\application\models\advs_model.php	/^function adv_type2($id){$/;"	f	language:PHP
+adv_type3	.\application\models\advs_model.php	/^function adv_type3($id){$/;"	f	language:PHP
+adv_types	.\application\models\advs_model.php	/^ function adv_types($key=null){$/;"	f	language:PHP
 advance	.\application\libraries\Smarty-3.1.14\libs\plugins\function.cycle.php	/^    $advance = (isset($params['advance'])) ? (bool)$params['advance'] : true;$/;"	v	language:PHP
 af	.\application\models\tree_model.php	/^			$af = 0; $/;"	v	language:PHP
 af	.\application\models\tree_model.php	/^			$af = 0;$/;"	v	language:PHP
@@ -5418,7 +5467,7 @@ answer	.\application\libraries\Doctrine\Symfony\Component\Console\Helper\DialogH
 answer	.\application\libraries\Doctrine\Symfony\Component\Console\Helper\DialogHelper.php	/^        $answer = 'z';$/;"	v	language:PHP
 anti_phishing_key	.\tools\alipay\alipayapi.php	/^        $anti_phishing_key = "";$/;"	v	language:PHP
 antiphishing	.\application\controllers\front\alipay.php	/^        $antiphishing = $this->Alipay_Model->antiphishing;$/;"	v	language:PHP
-antiphishing	.\application\models\alipay_model.php	/^        $this->antiphishing = "0"; \/\/闃查挀楸煎姛鑳藉紑鍏筹紝'0'琛ㄧず璇ュ姛鑳藉叧闂紝'1'琛ㄧず璇ュ姛鑳藉紑鍚€傞粯璁や负鍏抽棴$/;"	v	language:PHP
+antiphishing	.\application\models\alipay_model.php	/^        $this->antiphishing = "0"; \/\/防钓鱼功能开关，'0'表示该功能关闭，'1'表示该功能开启。默认为关闭$/;"	v	language:PHP
 antiphishing	.\application\models\alipay_model.php	/^    var $antiphishing;$/;"	v	language:PHP
 any	.\application\libraries\Doctrine\ORM\Query\Expr.php	/^    public function any($subquery)$/;"	f	language:PHP
 app	.\application\libraries\Doctrine\Symfony\Component\Console\Application.php	/^ *     $app = new Application('myapp', '1.0 (stable)');$/;"	v	language:PHP
@@ -5530,9 +5579,9 @@ area_id	.\application\controllers\backend\engage.php	/^ 		$area_id = $main['eg_a
 arg	.\application\libraries\Doctrine\Symfony\Component\Console\Input\ArgvInput.php	/^            $arg = $this->definition->getArgument($c - 1);$/;"	v	language:PHP
 arg	.\application\libraries\Doctrine\Symfony\Component\Console\Input\ArgvInput.php	/^            $arg = $this->definition->getArgument($c);$/;"	v	language:PHP
 arg	.\application\models\alipay_model.php	/^        $arg = "";$/;"	v	language:PHP
-arg	.\application\models\alipay_model.php	/^        $arg = $this->create_linkstring_urlencode($sort_array); \/\/鎶婃暟缁勬墍鏈夊厓绱狅紝鎸夌収鈥滃弬鏁?鍙傛暟鍊尖€濈殑妯″紡鐢ㄢ€?鈥濆瓧绗︽嫾鎺ユ垚瀛楃涓?/;"	v	language:PHP
-arg	.\application\models\alipay_model.php	/^        $arg = substr($arg, 0, count($arg) - 2);       \/\/鍘绘帀鏈€鍚庝竴涓?瀛楃$/;"	v	language:PHP
-arg	.\application\models\alipay_model.php	/^        $arg = substr($arg, 0, count($arg) - 2); \/\/鍘绘帀鏈€鍚庝竴涓?瀛楃$/;"	v	language:PHP
+arg	.\application\models\alipay_model.php	/^        $arg = $this->create_linkstring_urlencode($sort_array); \/\/把数组所有元素，按照“参数=参数值”的模式用“&”字符拼接成字符串$/;"	v	language:PHP
+arg	.\application\models\alipay_model.php	/^        $arg = substr($arg, 0, count($arg) - 2);       \/\/去掉最后一个&字符$/;"	v	language:PHP
+arg	.\application\models\alipay_model.php	/^        $arg = substr($arg, 0, count($arg) - 2); \/\/去掉最后一个&字符$/;"	v	language:PHP
 arg	.\ckfinder\core\connector\php\php5\Utils\Misc.php	/^    public static function getErrorMessage($number, $arg = "") {$/;"	v	language:PHP
 arg	.\tools\alipay\lib\alipay_core.function.php	/^	$arg  = "";$/;"	v	language:PHP
 arg	.\tools\alipay\lib\alipay_core.function.php	/^	$arg = substr($arg,0,count($arg)-2);$/;"	v	language:PHP
@@ -5660,7 +5709,7 @@ ascii	.\application\helpers\JSON.php	/^                $ascii = '';$/;"	v	langua
 ascii	.\system\libraries\Email.php	/^				$ascii = ord($char);$/;"	v	language:PHP
 ascii	.\system\libraries\Email.php	/^			$ascii = ord($char);$/;"	v	language:PHP
 ascii_to_entities	.\system\helpers\text_helper.php	/^	function ascii_to_entities($str)$/;"	f	language:PHP
-ascnum	.\application\helpers\common_helper.php	/^      $ascnum=Ord($temp_str);               \/\/锟矫碉拷锟街凤拷锟斤拷锟叫碉拷$i位锟街凤拷锟斤拷ascii锟斤拷 $/;"	v	language:PHP
+ascnum	.\application\helpers\common_helper.php	/^      $ascnum=Ord($temp_str);               \/\/得到字符串中第$i位字符的ascii码 $/;"	v	language:PHP
 ask	.\application\libraries\Doctrine\Symfony\Component\Console\Helper\DialogHelper.php	/^    public function ask(OutputInterface $output, $question, $default = null)$/;"	f	language:PHP
 askAndValidate	.\application\libraries\Doctrine\Symfony\Component\Console\Helper\DialogHelper.php	/^    public function askAndValidate(OutputInterface $output, $question, $validator, $attempts = false, $default = null)$/;"	f	language:PHP
 askConfirmation	.\application\libraries\Doctrine\Symfony\Component\Console\Helper\DialogHelper.php	/^    public function askConfirmation(OutputInterface $output, $question, $default = true)$/;"	f	language:PHP
@@ -5865,9 +5914,9 @@ backRefFieldName	.\application\libraries\Doctrine\ORM\PersistentCollection.php	/
 backRefFieldName	.\application\libraries\Doctrine\ORM\PersistentCollection.php	/^    private $backRefFieldName;$/;"	v	language:PHP
 back_url	.\application\controllers\backend\product.php	/^ 			$back_url = "product\/action_add\/?parent_class=".$parent_class."&pro_id=".$data_var['main']['pro_id'];$/;"	v	language:PHP
 backarr	.\application\controllers\backend\system_manage.php	/^			  	 $backarr = array();$/;"	v	language:PHP
-backcolor	.\application\models\captcha_model.php	/^public $backcolor  = '#F6F6F6' ;  \/\/鑳屾櫙鑹?/;"	v	language:PHP
-backcolorRGB	.\application\models\captcha_model.php	/^  $this->backcolorRGB = $this->getcolor($this->backcolor);   \/\/灏?ffffff鏍煎紡鐨勮儗鏅壊杞崲鎴怰GB鏍煎紡$/;"	v	language:PHP
-backcolorRGB	.\application\models\captcha_model.php	/^protected $backcolorRGB ;  \/\/鑳屾櫙鑹睷GB$/;"	v	language:PHP
+backcolor	.\application\models\captcha_model.php	/^public $backcolor  = '#F6F6F6' ;  \/\/背景色$/;"	v	language:PHP
+backcolorRGB	.\application\models\captcha_model.php	/^  $this->backcolorRGB = $this->getcolor($this->backcolor);   \/\/将#ffffff格式的背景色转换成RGB格式$/;"	v	language:PHP
+backcolorRGB	.\application\models\captcha_model.php	/^protected $backcolorRGB ;  \/\/背景色RGB$/;"	v	language:PHP
 backend_redirect	.\application\libraries\init_page.php	/^	function backend_redirect($url,$msg=null,$view='page_redirect'){	$/;"	f	language:PHP
 backend_redirects	.\application\libraries\init_page.php	/^	function backend_redirects($url_array,$msg=null){	$/;"	f	language:PHP
 backend_theme	.\application\libraries\init_page.php	/^		$this->backend_theme = $sys_config['template'];$/;"	v	language:PHP
@@ -6027,7 +6076,7 @@ block_nesting_level	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty
 block_nesting_level	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_templateparser.php	/^    $this->block_nesting_level = count($this->compiler->_tag_stack);$/;"	v	language:PHP
 blur	.\system\libraries\Javascript.php	/^	function blur($element = 'this', $js = '')$/;"	f	language:PHP
 bmpSupported	.\ckfinder\core\connector\php\php5\CommandHandler\Thumbnail.php	/^    public static function createThumb($sourceFile, $targetFile, $maxWidth, $maxHeight, $quality, $preserverAspectRatio, $bmpSupported = false)$/;"	v	language:PHP
-body	.\application\controllers\front\alipay.php	/^        $body = $this->input->post('body', TRUE); \/\/ 璁㈠崟鎻忚堪銆佽鍗曡缁嗐€佽鍗曞娉紝鏄剧ず鍦ㄦ敮浠樺疂鏀堕摱鍙伴噷鐨勨€滃晢鍝佹弿杩扳€濋噷銆?/;"	v	language:PHP
+body	.\application\controllers\front\alipay.php	/^        $body = $this->input->post('body', TRUE); \/\/ 订单描述、订单详细、订单备注，显示在支付宝收银台里的“商品描述”里。$/;"	v	language:PHP
 body	.\application\libraries\Doctrine\ORM\Tools\EntityGenerator.php	/^        $body = $this->generateEntityBody($metadata);$/;"	v	language:PHP
 body	.\application\libraries\Doctrine\ORM\Tools\EntityGenerator.php	/^        $body = str_replace('<spaces>', $this->spaces, $body);$/;"	v	language:PHP
 body	.\system\libraries\Email.php	/^			$body = $match['1'];$/;"	v	language:PHP
@@ -6045,9 +6094,9 @@ booleanValue	.\ckfinder\core\connector\php\php5\Utils\Misc.php	/^    public stat
 border	.\application\helpers\imgcode_helper.php	/^$border = isset($options['border']) ? (int)$options['border'] : 1;$/;"	v	language:PHP
 borderColor	.\application\helpers\imgcode_helper.php	/^$borderColor = imagecolorallocate($img, $r, $g, $b);$/;"	v	language:PHP
 border_color	.\system\helpers\captcha_helper.php	/^		$border_color	= imagecolorallocate ($im, 153, 102, 102);$/;"	v	language:PHP
-bordercolor	.\application\models\captcha_model.php	/^public $bordercolor = null;   \/\/杈规鑹?/;"	v	language:PHP
+bordercolor	.\application\models\captcha_model.php	/^public $bordercolor = null;   \/\/边框色$/;"	v	language:PHP
 bordercolorRGB	.\application\models\captcha_model.php	/^   $this->bordercolorRGB = $this->getcolor($this->bordercolor);$/;"	v	language:PHP
-bordercolorRGB	.\application\models\captcha_model.php	/^protected $bordercolorRGB = null;   \/\/杈规鑹?/;"	v	language:PHP
+bordercolorRGB	.\application\models\captcha_model.php	/^protected $bordercolorRGB = null;   \/\/边框色$/;"	v	language:PHP
 bot	.\system\libraries\Image_lib.php	/^				$bot = $height-1;$/;"	v	language:PHP
 both	.\application\libraries\Doctrine\ORM\Query\AST\Functions\TrimFunction.php	/^            $this->both = true;$/;"	v	language:PHP
 both	.\application\libraries\Doctrine\ORM\Query\AST\Functions\TrimFunction.php	/^    public $both;$/;"	v	language:PHP
@@ -6129,7 +6178,7 @@ builder	.\application\libraries\Doctrine\ORM\Mapping\Builder\FieldBuilder.php	/^
 builder	.\application\libraries\Doctrine\ORM\PersistentCollection.php	/^        $builder         = Criteria::expr();$/;"	v	language:PHP
 but	.\system\helpers\form_helper.php	/^ * Identical to the input function but adds the "file" type$/;"	f	language:PHP
 but	.\system\helpers\form_helper.php	/^ * Identical to the input function but adds the "password" type$/;"	f	language:PHP
-buyer_email	.\application\controllers\front\alipay.php	/^        $buyer_email = '';   \/\/榛樿涔板鏀粯瀹濊处鍙?/;"	v	language:PHP
+buyer_email	.\application\controllers\front\alipay.php	/^        $buyer_email = '';   \/\/默认买家支付宝账号$/;"	v	language:PHP
 by	.\application\libraries\Doctrine\ORM\EntityRepository.php	/^                $by = substr($method, 6);$/;"	v	language:PHP
 by	.\application\libraries\Doctrine\ORM\EntityRepository.php	/^                $by = substr($method, 9);$/;"	v	language:PHP
 by	.\system\database\DB_active_rec.php	/^			$by = explode(',', $by);$/;"	v	language:PHP
@@ -6162,7 +6211,7 @@ c_parent	.\application\controllers\backend\category.php	/^	 		$c_parent = $this-
 c_parent	.\application\controllers\backend\category.php	/^ 				$c_parent = $this->input->get('c_parent');$/;"	v	language:PHP
 c_sn	.\application\controllers\backend\category.php	/^	 	$c_sn = $main['c_sn'];$/;"	v	language:PHP
 c_sn	.\application\models\archives_model.php	/^		$this->c_sn = '0101';$/;"	v	language:PHP
-c_sn	.\application\models\product_model.php	/^		$this->c_sn = '0102'; \/\/浜у搧鍩虹被$/;"	v	language:PHP
+c_sn	.\application\models\product_model.php	/^		$this->c_sn = '0102'; \/\/产品基类$/;"	v	language:PHP
 c_theme	.\application\helpers\MY_url_helper.php	/^	         $c_theme = $c_f['develop']['template'];$/;"	v	language:PHP
 cache	.\application\controllers\front\download.php	/^		$cache = $this->init_cache->cache_fetch('archives_class');$/;"	v	language:PHP
 cache	.\application\libraries\Doctrine\Common\Annotations\CachedReader.php	/^        $this->cache = $cache;$/;"	v	language:PHP
@@ -6552,6 +6601,7 @@ checkerror	.\tools\faisunsql_v40_utf8\index\index.php	/^				function checkerror(
 checks	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_compilebase.php	/^     * This function checks if the attributes passed are valid$/;"	f	language:PHP
 child	.\application\libraries\tree.php	/^        $child = $this->get_child($myid);$/;"	v	language:PHP
 child_class	.\system\libraries\Driver.php	/^		$child_class = $this->lib_name.'_'.$child;$/;"	v	language:PHP
+chkdel2	.\application\compiles\046954601904dd33ce5ee7899e57210de4c216d3.file.mdata_list.htm.php	/^	function chkdel2(){$/;"	f	language:PHP
 chklogin	.\application\controllers\backend\login.php	/^	function chklogin(){	$/;"	f	language:PHP
 chmod	.\system\libraries\Ftp.php	/^	function chmod($path, $perm)$/;"	f	language:PHP
 chooseConnectionConfiguration	.\application\libraries\Doctrine\DBAL\Connections\MasterSlaveConnection.php	/^    protected function chooseConnectionConfiguration($connectionName, $params)$/;"	f	language:PHP
@@ -7760,6 +7810,9 @@ content	.\system\helpers\form_helper.php	/^			$content = $data['content'];$/;"	v
 content	.\system\helpers\form_helper.php	/^	function form_button($data = '', $content = '', $extra = '')$/;"	v	language:PHP
 content	.\system\helpers\html_helper.php	/^			$content	= ( ! isset($meta['content']))	? ''	: $meta['content'];$/;"	v	language:PHP
 content	.\system\helpers\html_helper.php	/^	function meta($name = '', $content = '', $type = 'name', $newline = "\\n")$/;"	v	language:PHP
+content	.\tools\to_utf8.php	/^    $content = "\\xEF\\xBB\\xBF".$content;      $/;"	v	language:PHP
+content	.\tools\to_utf8.php	/^    $content = file_get_contents($filename);      $/;"	v	language:PHP
+content	.\tools\to_utf8.php	/^    $content = utf8_encode($content);      $/;"	v	language:PHP
 contents	.\application\libraries\Doctrine\Common\Reflection\StaticReflectionParser.php	/^                $contents = $matches[1];$/;"	v	language:PHP
 contents	.\application\libraries\Doctrine\Common\Reflection\StaticReflectionParser.php	/^        $contents = file_get_contents($fileName);$/;"	v	language:PHP
 contents	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_cacheresource_keyvaluestore.php	/^    protected $contents = array();$/;"	v	language:PHP
@@ -7863,6 +7916,7 @@ copy	.\system\libraries\Image_lib.php	/^			$copy	= 'imagecopyresampled';$/;"	v	l
 copy	.\system\libraries\Image_lib.php	/^			$copy	= 'imagecopyresized';$/;"	v	language:PHP
 copyDir	.\application\libraries\File_util.php	/^    function copyDir($oldDir, $aimDir, $overWrite = false) {$/;"	f	language:PHP
 copyFile	.\application\libraries\File_util.php	/^    function copyFile($fileUrl, $aimUrl, $overWrite = false) {$/;"	f	language:PHP
+copy_ext	.\application\compiles\50d1dc5d956dcf8018ad4fc72ccccfaee196163a.file.advs_add.htm.php	/^	function copy_ext(obj){$/;"	f	language:PHP
 copy_fnc	.\system\libraries\Image_lib.php	/^	var $copy_fnc			= 'imagecopyresampled';$/;"	v	language:PHP
 corner	.\system\libraries\javascript\Jquery.php	/^	function corner($element = '', $corner_style = '')$/;"	f	language:PHP
 corner_location	.\system\libraries\javascript\Jquery.php	/^		$corner_location = '\/plugins\/jquery.corner.js';$/;"	v	language:PHP
@@ -7895,7 +7949,7 @@ count	.\application\libraries\Doctrine\Symfony\Component\Console\Application.php
 count	.\application\libraries\Doctrine\Symfony\Component\Yaml\Parser.php	/^        $count = 0;$/;"	v	language:PHP
 count	.\application\libraries\Smarty-3.1.14\libs\plugins\shared.mb_str_replace.php	/^            $count = count($parts) - 1;$/;"	v	language:PHP
 count	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_compile_private_print_expression.php	/^                            for ($i = 0, $count = count($mod_array[0]);$i < $count;$i++) {$/;"	v	language:PHP
-count	.\application\libraries\init_db.php	/^		$count = $CI->db->count_all("($sql_count) as t ");		\/\/缁熻		$/;"	v	language:PHP
+count	.\application\libraries\init_db.php	/^		$count = $CI->db->count_all("($sql_count) as t ");		\/\/统计		$/;"	v	language:PHP
 count	.\application\models\common_model.php	/^		$count = $dsq->first_row('array');$/;"	v	language:PHP
 count	.\ckfinder\core\connector\php\php5\Core\Hooks.php	/^                $count = count($hook);$/;"	v	language:PHP
 count	.\system\core\Security.php	/^			$count = 0;$/;"	v	language:PHP
@@ -8161,8 +8215,8 @@ current_size	.\tools\faisunsql_v40_utf8\index.php	/^		$current_size = 0;$/;"	v	l
 current_url	.\system\helpers\url_helper.php	/^	function current_url()$/;"	f	language:PHP
 currentmodif	.\tools\chat\chat_backend.php	/^	$currentmodif = filemtime($filename);$/;"	v	language:PHP
 currentmodif	.\tools\chat\chat_backend.php	/^$currentmodif = filemtime($filename);$/;"	v	language:PHP
-currentmodif	.\tools\comet长连接聊天\chat_backend.php	/^	$currentmodif = filemtime($filename);$/;"	v	language:PHP
-currentmodif	.\tools\comet长连接聊天\chat_backend.php	/^$currentmodif = filemtime($filename);$/;"	v	language:PHP
+currentmodif	.\tools\comet����������\chat_backend.php	/^	$currentmodif = filemtime($filename);$/;"	v	language:PHP
+currentmodif	.\tools\comet����������\chat_backend.php	/^$currentmodif = filemtime($filename);$/;"	v	language:PHP
 currow	.\tools\faisunsql_v40_utf8\index.php	/^	$currow=mysql_fetch_array(mysql_query("select version() as v"));$/;"	v	language:PHP
 curs_id	.\system\database\DB_driver.php	/^	var $curs_id;$/;"	v	language:PHP
 curs_id	.\system\database\drivers\oci8\oci8_driver.php	/^		$this->curs_id = oci_new_cursor($this->conn_id);$/;"	v	language:PHP
@@ -8404,7 +8458,7 @@ data	.\system\libraries\Xmlrpc.php	/^		$this->data = array();$/;"	v	language:PHP
 data	.\system\libraries\Xmlrpc.php	/^	var $data;$/;"	v	language:PHP
 data	.\system\libraries\Xmlrpcs.php	/^			$data = $HTTP_RAW_POST_DATA;$/;"	v	language:PHP
 data	.\system\libraries\Zip.php	/^	function add_data($filepath, $data = NULL)$/;"	v	language:PHP
-data	.\tools\faisunsql_v40_utf8\index.php	/^		$data="echo '<center><BR><BR><BR><BR>瀹屾垚銆傛墍鏈夋暟鎹兘宸茬粡瀵煎叆鏁版嵁搴撲腑銆?\/center>'; exit; ?".">";$/;"	v	language:PHP
+data	.\tools\faisunsql_v40_utf8\index.php	/^		$data="echo '<center><BR><BR><BR><BR>完成。所有数据都已经导入数据库中。<\/center>'; exit; ?".">";$/;"	v	language:PHP
 data	.\tools\faisunsql_v40_utf8\index.php	/^		$data='<?$/;"	v	language:PHP
 data	.\tools\unpack.php	/^    $data = unpack('vchk\/vid\/vversion\/vflag\/vcompression\/vmtime\/vmdate\/Vcrc\/Vcompressed_size\/Vsize\/vfilename_len\/vextra_len', $binary_data);$/;"	v	language:PHP
 data	.\tools\unpack.php	/^$data=@unpack('vdisk\/vdisk_start\/vdisk_entries\/ventries\/Vsize\/Voffset\/vcomment_size',$fdata);$/;"	v	language:PHP
@@ -8551,16 +8605,16 @@ db_connect	.\system\database\drivers\pdo\pdo_driver.php	/^	function db_connect()
 db_connect	.\system\database\drivers\postgre\postgre_driver.php	/^	function db_connect()$/;"	f	language:PHP
 db_connect	.\system\database\drivers\sqlite\sqlite_driver.php	/^	function db_connect()$/;"	f	language:PHP
 db_connect	.\system\database\drivers\sqlsrv\sqlsrv_driver.php	/^	function db_connect($pooling = false)$/;"	f	language:PHP
-db_dbname	.\tools\faisunsql_v40_utf8\index.php	/^$db_dbname="";          \/\/閫夋嫨鐨勬暟鎹簱$/;"	v	language:PHP
+db_dbname	.\tools\faisunsql_v40_utf8\index.php	/^$db_dbname="";          \/\/选择的数据库$/;"	v	language:PHP
 db_debug	.\system\database\DB_driver.php	/^	var $db_debug		= FALSE;$/;"	v	language:PHP
-db_host	.\tools\faisunsql_v40_utf8\index.php	/^$db_host="localhost";    \/\/鏁版嵁搴撴湇鍔″櫒$/;"	v	language:PHP
+db_host	.\tools\faisunsql_v40_utf8\index.php	/^$db_host="localhost";    \/\/数据库服务器$/;"	v	language:PHP
 db_list	.\application\models\archives_model.php	/^ 		$db_list = $this->db->get()->result_array(); $/;"	v	language:PHP
 db_menu_config	.\application\models\admins_model.php	/^	 function db_menu_config(){$/;"	f	language:PHP
 db_menu_config	.\application\models\menu_model.php	/^	 function db_menu_config(){$/;"	f	language:PHP
 db_menus	.\application\controllers\backend\menu.php	/^		 		$db_menus = $this->init_auth->getAuthMenu();$/;"	v	language:PHP
 db_menus	.\application\controllers\backend\menu.php	/^ 		$db_menus = $this->init_auth->getAuthMenu();$/;"	v	language:PHP
 db_pass	.\application\controllers\backend\system_manage.php	/^ 		$db_pass = $this->init_page->my_encrypt($main_db['admin_pass'],"DECODE");$/;"	v	language:PHP
-db_password	.\tools\faisunsql_v40_utf8\index.php	/^$db_password="";         \/\/鏁版嵁搴撳瘑鐮?/;"	v	language:PHP
+db_password	.\tools\faisunsql_v40_utf8\index.php	/^$db_password="";         \/\/数据库密码$/;"	v	language:PHP
 db_pconnect	.\system\database\drivers\cubrid\cubrid_driver.php	/^	function db_pconnect()$/;"	f	language:PHP
 db_pconnect	.\system\database\drivers\mssql\mssql_driver.php	/^	function db_pconnect()$/;"	f	language:PHP
 db_pconnect	.\system\database\drivers\mysql\mysql_driver.php	/^	function db_pconnect()$/;"	f	language:PHP
@@ -8601,7 +8655,7 @@ db_temp	.\application\controllers\backend\login.php	/^		$db_temp = $this->db->se
 db_temp	.\application\models\menu_model.php	/^		$db_temp  = $this->db->select('*')->from($this->init_db->table('admins'))->where('admin_id',$admin_id)->get()->result_array();$/;"	v	language:PHP
 db_temp	.\application\models\roles_model.php	/^		$db_temp  = $this->ds->select('*')->from($this->init_db->table('admins'))->where('admin_id',1)->get()->result_array();$/;"	v	language:PHP
 db_user	.\application\libraries\init_auth.php	/^ 	function db_user($field=null){$/;"	f	language:PHP
-db_username	.\tools\faisunsql_v40_utf8\index.php	/^$db_username="root";     \/\/鏁版嵁搴撶敤鎴峰悕$/;"	v	language:PHP
+db_username	.\tools\faisunsql_v40_utf8\index.php	/^$db_username="root";     \/\/数据库用户名$/;"	v	language:PHP
 dbcollat	.\system\database\DB_driver.php	/^	var $dbcollat		= 'utf8_general_ci';$/;"	v	language:PHP
 dbdriver	.\system\database\DB_driver.php	/^	var $dbdriver		= 'mysql';$/;"	v	language:PHP
 dbdriver	.\system\database\drivers\cubrid\cubrid_driver.php	/^	var $dbdriver = 'cubrid';$/;"	v	language:PHP
@@ -8651,8 +8705,8 @@ debug_request	.\application\libraries\curl.php	/^	public function debug_request(
 debug_tpl	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^        $this->debug_tpl = $tpl_name;$/;"	v	language:PHP
 debug_tpl	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^        $this->debug_tpl = 'file:' . dirname(__FILE__) . '\/debug.tpl';$/;"	v	language:PHP
 debug_tpl	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^    public $debug_tpl = null;$/;"	v	language:PHP
-debugerhost	.\tools\UenuProbe\index.php	/^<div class="info03">璋冭瘯鍣ㄥ湴鍧€\/绔彛<\/div><div class="info04"><?php echo $debugerhost=@get_cfg_var("debugger.host")?YES:NO;if ($debugerhost =="YES") {echo @get_cfg_var("debugger.port")?YES:NO;}?><\/div>$/;"	v	language:PHP
-debugerhost	.\tools\UenuProbe\uenu.php	/^<div class="info03">璋冭瘯鍣ㄥ湴鍧€\/绔彛<\/div><div class="info04"><?php echo $debugerhost=@get_cfg_var("debugger.host")?YES:NO;if ($debugerhost =="YES") {echo @get_cfg_var("debugger.port")?YES:NO;}?><\/div>$/;"	v	language:PHP
+debugerhost	.\tools\UenuProbe\index.php	/^<div class="info03">调试器地址\/端口<\/div><div class="info04"><?php echo $debugerhost=@get_cfg_var("debugger.host")?YES:NO;if ($debugerhost =="YES") {echo @get_cfg_var("debugger.port")?YES:NO;}?><\/div>$/;"	v	language:PHP
+debugerhost	.\tools\UenuProbe\uenu.php	/^<div class="info03">调试器地址\/端口<\/div><div class="info04"><?php echo $debugerhost=@get_cfg_var("debugger.host")?YES:NO;if ($debugerhost =="YES") {echo @get_cfg_var("debugger.port")?YES:NO;}?><\/div>$/;"	v	language:PHP
 debugging	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^    public $debugging = false;$/;"	v	language:PHP
 debugging_ctrl	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^    public $debugging_ctrl = 'NONE';$/;"	v	language:PHP
 dec	.\system\libraries\Encrypt.php	/^			$dec = $this->_xor_decode($dec, $key);$/;"	v	language:PHP
@@ -8763,7 +8817,7 @@ default_resource_type	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.ph
 default_template	.\system\libraries\Calendar.php	/^	function default_template()$/;"	f	language:PHP
 default_template_handler_func	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^    public $default_template_handler_func = null;$/;"	v	language:PHP
 defaultbank	.\application\controllers\front\alipay.php	/^            $defaultbank = "";$/;"	v	language:PHP
-defaultbank	.\application\controllers\front\alipay.php	/^            $defaultbank = $pay_mode;  \/\/榛樿缃戦摱浠ｅ彿锛屼唬鍙峰垪琛ㄨhttp:\/\/club.alipay.com\/read.php?tid=8681379$/;"	v	language:PHP
+defaultbank	.\application\controllers\front\alipay.php	/^            $defaultbank = $pay_mode;  \/\/默认网银代号，代号列表见http:\/\/club.alipay.com\/read.php?tid=8681379$/;"	v	language:PHP
 defaults	.\application\libraries\Doctrine\Symfony\Component\Console\Input\InputDefinition.php	/^                $defaults = is_array($option->getDefault()) ? $option->getDefault() : (is_bool($option->getDefault()) ? array(var_export($option->getDefault(), true)) : ($option->getDefault() ? array($option->getDefault()) : array()));$/;"	v	language:PHP
 defaults	.\application\libraries\Doctrine\Symfony\Component\Console\Input\InputDefinition.php	/^            $defaults = is_array($argument->getDefault()) ? $argument->getDefault() : (is_bool($argument->getDefault()) ? array(var_export($argument->getDefault(), true)) : ($argument->getDefault() ? array($argument->getDefault()) : array()));$/;"	v	language:PHP
 defaults	.\application\libraries\Doctrine\Symfony\Component\Console\Tests\Input\InputDefinitionTest.php	/^        $defaults = array($/;"	v	language:PHP
@@ -8936,9 +8990,10 @@ detail	.\application\controllers\backend\product.php	/^		$detail = $this->db->qu
 detail	.\application\controllers\front\engage.php	/^	function detail()$/;"	f	language:PHP
 detail	.\application\libraries\init_db.php	/^ 		$detail = $info['detail']; $/;"	v	language:PHP
 detail	.\application\libraries\tpl.php	/^			$detail =   $this->db->select('*',false)->from('infos')->where('info_class','-4')->get()->first_row('array');$/;"	v	language:PHP
-detail	.\application\models\advs_model.php	/^		$detail = $this->db->query( "SELECT * from ".$this->init_db->table("adv_detail")." where adv_type=1 and adv_id='".$id."'" )->result_array();$/;"	v	language:PHP
 detail	.\application\models\advs_model.php	/^		$detail = $this->db->query( "SELECT * from ".$this->init_db->table("adv_detail")." where adv_type=2 and   adv_id='".$id."'" )->first_row("array");$/;"	v	language:PHP
 detail	.\application\models\advs_model.php	/^		$detail = $this->input->post('detail');	$/;"	v	language:PHP
+detail	.\application\models\advs_model.php	/^	$detail = $this->db->query( "SELECT * from ".$this->init_db->table("adv_detail")." where adv_type=1 and adv_id='".$id."'" )->result_array();$/;"	v	language:PHP
+detail	.\application\models\advs_model.php	/^	$detail = $this->init_db->findAll( "SELECT * from ".$this->init_db->table("adv_detail")." where adv_type=3 and   adv_id='".$id."'" );$/;"	v	language:PHP
 detail	.\application\models\category_model.php	/^	function detail($val,$type='byid',$key=null){$/;"	f	language:PHP
 detail	.\application\models\fields_model.php	/^	function detail($f_id,$key=null){$/;"	f	language:PHP
 detail	.\application\models\mdata_model.php	/^	function detail($id){$/;"	f	language:PHP
@@ -8996,6 +9051,8 @@ dir	.\install\index_3.php	/^$dir  = dirname(__file__).$dl ;$/;"	v	language:PHP
 dir	.\swfupload\upload.php	/^	$dir = $save_path;$/;"	v	language:PHP
 dir	.\system\libraries\Zip.php	/^		$dir = str_replace("\\\\", "\/", $dir);$/;"	v	language:PHP
 dir	.\tools\rm.php	/^$dir = realpath(dirname(__file__).'\/..');$/;"	v	language:PHP
+dir	.\tools\to_utf8.php	/^$dir = dirname(__FILE__);$/;"	v	language:PHP
+dir	.\tools\to_utf8.php	/^$dir = realpath($dir.'.\/..\/');  $/;"	v	language:PHP
 dirExists	.\ckfinder\plugins\zip\plugin.php	/^      $dirExists = new CKFinder_Connector_Utils_XmlNode("FolderExists");$/;"	v	language:PHP
 dirHandle	.\application\libraries\File_util.php	/^        $dirHandle = opendir($aimDir);$/;"	v	language:PHP
 dirHandle	.\application\libraries\File_util.php	/^        $dirHandle = opendir($oldDir);$/;"	v	language:PHP
@@ -9028,7 +9085,7 @@ directory_map	.\install\index.php	/^function directory_map($source_dir, $directo
 directory_map	.\system\helpers\directory_helper.php	/^	function directory_map($source_dir, $directory_depth = 0, $hidden = FALSE)$/;"	f	language:PHP
 dirs	.\application\libraries\Doctrine\Common\Annotations\AnnotationRegistry.php	/^    static public function registerAutoloadNamespace($namespace, $dirs = null)$/;"	v	language:PHP
 dirs	.\install\index.php	/^		$dirs = directory_map(dirname(dirname(__file__)).DIRECTORY_SEPARATOR.'database',1);$/;"	v	language:PHP
-dirstr	.\tools\faisunsql_v40_utf8\faisunsql_files\zipclass.php	/^		$dirstr=fread($fp,$this->dirstr_len);	\/\/鐩綍淇℃伅瀛楃涓?/;"	v	language:PHP
+dirstr	.\tools\faisunsql_v40_utf8\faisunsql_files\zipclass.php	/^		$dirstr=fread($fp,$this->dirstr_len);	\/\/目录信息字符串$/;"	v	language:PHP
 dirstr	.\tools\faisunsql_v40_utf8\faisunsql_files\zipclass.php	/^        $dirstr  = "\\x50\\x4b\\x01\\x02";$/;"	v	language:PHP
 dirstr_len	.\tools\faisunsql_v40_utf8\faisunsql_files\zipclass.php	/^	var $dirstr_len = 0;$/;"	v	language:PHP
 disable	.\application\libraries\Doctrine\ORM\Query\FilterCollection.php	/^    public function disable($name)$/;"	f	language:PHP
@@ -9278,6 +9335,8 @@ doctrineTypeMapping	.\application\libraries\Doctrine\DBAL\Platforms\PostgreSqlPl
 doctrineTypeMapping	.\application\libraries\Doctrine\DBAL\Platforms\SQLServerPlatform.php	/^        $this->doctrineTypeMapping = array($/;"	v	language:PHP
 doctrineTypeMapping	.\application\libraries\Doctrine\DBAL\Platforms\SqlitePlatform.php	/^        $this->doctrineTypeMapping = array($/;"	v	language:PHP
 doctype	.\system\helpers\html_helper.php	/^	function doctype($type = 'xhtml1-strict')$/;"	f	language:PHP
+document.onmousedown	.\application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^document.onmousedown = function(e)$/;"	j	language:PHP
+document.onmouseup	.\application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^document.onmouseup = function(e)$/;"	j	language:PHP
 does	.\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php	/^     * NONE means the class does not have a generated id. That means the class$/;"	c	language:PHP
 does	.\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php	/^     * NONE means the class does not participate in an inheritance hierarchy$/;"	c	language:PHP
 does	.\application\libraries\Doctrine\ORM\Persisters\BasicEntityPersister.php	/^     *               if the entity class does not use the IDENTITY generation strategy.$/;"	c	language:PHP
@@ -9317,6 +9376,7 @@ download	.\system\libraries\Ftp.php	/^	function download($rempath, $locpath, $mo
 download	.\system\libraries\Zip.php	/^	function download($filename = 'backup.zip')$/;"	f	language:PHP
 download_for_product	.\application\models\download_model.php	/^	function download_for_product($pro_id){$/;"	f	language:PHP
 download_left	.\application\models\download_model.php	/^	 function download_left(){$/;"	f	language:PHP
+dp	.\tools\to_utf8.php	/^    $dp = opendir($dir);      $/;"	v	language:PHP
 dpi_default	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_image.php	/^            $dpi_default = 72;$/;"	v	language:PHP
 dpi_default	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_image.php	/^            $dpi_default = 96;$/;"	v	language:PHP
 dql	.\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php	/^        $dql    = str_replace('__CLASS__', $this->name, $query);$/;"	v	language:PHP
@@ -9652,7 +9712,7 @@ encoding	.\application\libraries\Smarty-3.1.14\libs\plugins\shared.mb_unicode.ph
 encoding	.\ckfinder\core\connector\php\php5\Utils\FileSystem.php	/^        $encoding = $_config->getFilesystemEncoding();$/;"	v	language:PHP
 encoding	.\install\libs\phpMyImporter.php	/^			$encoding = @mysql_query("SET NAMES 'utf8'", $this->connection);$/;"	v	language:PHP
 encrypt_key	.\application\controllers\front\alipay.php	/^            $encrypt_key = $this->Alipay_Model->query_timestamp($partner);$/;"	v	language:PHP
-encrypt_key	.\application\controllers\front\alipay.php	/^        $encrypt_key = '';     \/\/闃查挀楸兼椂闂存埑锛屽垵濮嬪€?/;"	v	language:PHP
+encrypt_key	.\application\controllers\front\alipay.php	/^        $encrypt_key = '';     \/\/防钓鱼时间戳，初始值$/;"	v	language:PHP
 encrypt_key	.\application\models\alipay_model.php	/^        $encrypt_key = "";$/;"	v	language:PHP
 encrypt_key	.\tools\alipay\lib\alipay_submit.class.php	/^		$encrypt_key = "";		$/;"	v	language:PHP
 encrypt_key	.\tools\alipay\lib\alipay_submit.class.php	/^		$encrypt_key = $itemEncrypt_key->item(0)->nodeValue;$/;"	v	language:PHP
@@ -10135,7 +10195,7 @@ exists	.\application\libraries\Doctrine\ORM\Query\Expr.php	/^    public function
 exists	.\application\libraries\Doctrine\ORM\Query\Parser.php	/^        $exists = class_exists($schemaName, true);$/;"	v	language:PHP
 exists	.\application\libraries\Doctrine\ORM\Query\Parser.php	/^        $exists = isset($this->_queryComponents[$aliasIdentVariable]);$/;"	v	language:PHP
 exists	.\application\libraries\Doctrine\ORM\Query\Parser.php	/^        $exists = isset($this->_queryComponents[$resultVariable]);$/;"	v	language:PHP
-exists	.\application\libraries\Doctrine\ORM\Query\TreeWalkerAdapter.php	/^ * are empty. 锘縏his class exists as convenience for creating tree walkers.$/;"	c	language:PHP
+exists	.\application\libraries\Doctrine\ORM\Query\TreeWalkerAdapter.php	/^ * are empty. ﻿This class exists as convenience for creating tree walkers.$/;"	c	language:PHP
 exists	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^        \/\/ if function or class exists, exit silently (already loaded)$/;"	c	language:PHP
 exists	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_cacheresource.php	/^                $this->exists = true;$/;"	v	language:PHP
 exists	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_cacheresource.php	/^    public $exists = false;$/;"	v	language:PHP
@@ -10363,8 +10423,8 @@ extensionList	.\charts\ExportHandlers\PHP\FCExporter.php	/^	$extensionList = ban
 extension_whitelist	.\swfupload\upload.php	/^	$extension_whitelist = array("jpg", "gif", "png","css","js","htm","swf");	\/\/ Allowed file extensions$/;"	v	language:PHP
 extensions	.\ckfinder\core\connector\php\php5\Core\ResourceTypeConfig.php	/^                    $extensions = explode(",", $resourceTypeNode["allowedExtensions"]);$/;"	v	language:PHP
 extensions	.\ckfinder\core\connector\php\php5\Core\ResourceTypeConfig.php	/^                    $extensions = explode(",", $resourceTypeNode["deniedExtensions"]);$/;"	v	language:PHP
-exter_invoke_ip	.\application\controllers\front\alipay.php	/^            $exter_invoke_ip = '';   \/\/鑾峰彇瀹㈡埛绔殑IP鍦板潃锛屽缓璁細缂栧啓鑾峰彇瀹㈡埛绔疘P鍦板潃鐨勭▼搴?/;"	v	language:PHP
-exter_invoke_ip	.\application\controllers\front\alipay.php	/^        $exter_invoke_ip = '';    \/\/瀹㈡埛绔殑IP鍦板潃锛屽垵濮嬪€?/;"	v	language:PHP
+exter_invoke_ip	.\application\controllers\front\alipay.php	/^            $exter_invoke_ip = '';   \/\/获取客户端的IP地址，建议：编写获取客户端IP地址的程序$/;"	v	language:PHP
+exter_invoke_ip	.\application\controllers\front\alipay.php	/^        $exter_invoke_ip = '';    \/\/客户端的IP地址，初始值$/;"	v	language:PHP
 exter_invoke_ip	.\tools\alipay\alipayapi.php	/^        $exter_invoke_ip = "";$/;"	v	language:PHP
 external	.\system\libraries\Javascript.php	/^	function external($external_file = '', $relative = FALSE)$/;"	f	language:PHP
 external_scripts	.\system\libraries\javascript\Jquery.php	/^		$external_scripts = implode('', $this->jquery_code_for_load);$/;"	v	language:PHP
@@ -10383,7 +10443,7 @@ extraUpdates	.\application\libraries\Doctrine\ORM\UnitOfWork.php	/^        $this
 extraUpdates	.\application\libraries\Doctrine\ORM\UnitOfWork.php	/^    private $extraUpdates = array();$/;"	v	language:PHP
 extra_attrs	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_select_date.php	/^    $extra_attrs = '';$/;"	v	language:PHP
 extra_attrs	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_select_time.php	/^    $extra_attrs = '';$/;"	v	language:PHP
-extra_common_param	.\application\controllers\front\alipay.php	/^        $extra_common_param = '';   \/\/鑷畾涔夊弬鏁帮紝鍙瓨鏀句换浣曞唴瀹癸紙闄?銆?绛夌壒娈婂瓧绗﹀锛夛紝涓嶄細鏄剧ず鍦ㄩ〉闈笂$/;"	v	language:PHP
+extra_common_param	.\application\controllers\front\alipay.php	/^        $extra_common_param = '';   \/\/自定义参数，可存放任何内容（除=、&等特殊字符外），不会显示在页面上$/;"	v	language:PHP
 extractClientPath	.\ckfinder\plugins\zip\plugin.php	/^      $extractClientPath = $this->_currentFolder->getClientPath();$/;"	v	language:PHP
 extractClientPath	.\ckfinder\plugins\zip\plugin.php	/^    $extractClientPath = CKFinder_Connector_Utils_FileSystem::combinePaths($this->_currentFolder->getClientPath(),$extractDir);$/;"	v	language:PHP
 extractClientPathDir	.\ckfinder\plugins\zip\plugin.php	/^      $extractClientPathDir = '';$/;"	v	language:PHP
@@ -10423,7 +10483,7 @@ fallback	.\ckfinder\core\connector\php\php5\Utils\FileSystem.php	/^        $fall
 fastImageCopyResampled	.\ckfinder\core\connector\php\php5\Utils\Misc.php	/^    public static function fastImageCopyResampled (&$dst_image, $src_image, $dst_x, $dst_y, $src_x, $src_y, $dst_w, $dst_h, $src_w, $src_h, $quality = 3)$/;"	f	language:PHP
 faultCode	.\system\libraries\Xmlrpc.php	/^	function faultCode()$/;"	f	language:PHP
 faultString	.\system\libraries\Xmlrpc.php	/^	function faultString()$/;"	f	language:PHP
-fbutton	.\tools\faisunsql_v40_utf8\index.php	/^function fbutton($type="submit",$name="Submit",$value="纭畾",$script="",$return=0){$/;"	f	language:PHP
+fbutton	.\tools\faisunsql_v40_utf8\index.php	/^function fbutton($type="submit",$name="Submit",$value="确定",$script="",$return=0){$/;"	f	language:PHP
 fc	.\charts\ExportHandlers\PHP\Resources\FCExporter_PDF.php	/^		$fc = @fclose( $fp );$/;"	v	language:PHP
 fdata	.\application\libraries\init_zip.php	/^$fdata=fread($zip,18);$/;"	v	language:PHP
 fdata	.\tools\unpack.php	/^$fdata=fread($zip,18);$/;"	v	language:PHP
@@ -10767,6 +10827,7 @@ file	.\system\libraries\Unit_test.php	/^			$file = ( ! isset($back['1']['file'])
 file	.\system\libraries\Upload.php	/^		$file = $this->file_temp;$/;"	v	language:PHP
 file	.\tools\faisunsql_v40_utf8\index.php	/^			$file = "{$_POST[filename]}_pg{$_POST[page]}.php";$/;"	v	language:PHP
 file	.\tools\faisunsql_v40_utf8\index.php	/^			$file="$_POST[dir]\/$_POST[filename].php";$/;"	v	language:PHP
+file	.\tools\to_utf8.php	/^        if($file == '.' || $file == '..')      $/;"	v	language:PHP
 fileExists	.\application\libraries\Doctrine\Common\Persistence\Mapping\Driver\DefaultFileLocator.php	/^    public function fileExists($className)$/;"	f	language:PHP
 fileExists	.\application\libraries\Doctrine\Common\Persistence\Mapping\Driver\FileLocator.php	/^    function fileExists($className);$/;"	f	language:PHP
 fileExists	.\application\libraries\Doctrine\Common\Persistence\Mapping\Driver\SymfonyFileLocator.php	/^    public function fileExists($className)$/;"	f	language:PHP
@@ -10939,7 +11000,7 @@ filename	.\system\libraries\Upload.php	/^		$filename	= array_shift($parts);$/;"	
 filename	.\system\libraries\Upload.php	/^		$filename = str_replace($bad, '', $filename);$/;"	v	language:PHP
 filename	.\system\libraries\Upload.php	/^		$filename = str_replace($this->file_ext, '', $filename);$/;"	v	language:PHP
 filename	.\tools\chat\chat_backend.php	/^$filename  = dirname(__FILE__).'\/data.txt';$/;"	v	language:PHP
-filename	.\tools\comet长连接聊天\chat_backend.php	/^$filename  = dirname(__FILE__).'\/data.txt';$/;"	v	language:PHP
+filename	.\tools\comet����������\chat_backend.php	/^$filename  = dirname(__FILE__).'\/data.txt';$/;"	v	language:PHP
 filepath	.\application\libraries\Doctrine\Common\Cache\FilesystemCache.php	/^        $filepath   = pathinfo($filename, PATHINFO_DIRNAME);$/;"	v	language:PHP
 filepath	.\application\libraries\Doctrine\Common\Cache\PhpFileCache.php	/^        $filepath   = pathinfo($filename, PATHINFO_DIRNAME);$/;"	v	language:PHP
 filepath	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_cacheresource.php	/^    public $filepath = false;$/;"	v	language:PHP
@@ -11100,6 +11161,7 @@ first_tag_open	.\system\libraries\Pagination.php	/^	var $first_tag_open		= '';$/
 first_url	.\system\libraries\Pagination.php	/^			$first_url = ($this->first_url == '') ? $this->base_url : $this->first_url;$/;"	v	language:PHP
 first_url	.\system\libraries\Pagination.php	/^	var $first_url			= ''; \/\/ Alternative URL for the First Page.$/;"	v	language:PHP
 fixCase	.\application\libraries\Doctrine\DBAL\Portability\Statement.php	/^        $fixCase = !is_null($this->case) && ($fetchMode == PDO::FETCH_ASSOC || $fetchMode == PDO::FETCH_BOTH) && ($this->portability & Connection::PORTABILITY_FIX_CASE);$/;"	v	language:PHP
+fixEvent	.\application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^Utils.fixEvent = function(e)$/;"	j	language:PHP
 fixIdentificationVariableOrder	.\application\libraries\Doctrine\ORM\Query\Parser.php	/^    private function fixIdentificationVariableOrder($AST)$/;"	f	language:PHP
 fixRow	.\application\libraries\Doctrine\DBAL\Portability\Statement.php	/^    protected function fixRow($row, $iterateRow, $fixCase)$/;"	f	language:PHP
 fixSchemaElementName	.\application\libraries\Doctrine\DBAL\Platforms\AbstractPlatform.php	/^    public function fixSchemaElementName($schemaElementName)$/;"	f	language:PHP
@@ -11178,7 +11240,7 @@ font	.\application\helpers\imgcode_helper.php	/^$font = 5;$/;"	v	language:PHP
 font	.\application\helpers\imgcode_helper.php	/^$font = imageloadfont($options['font']);$/;"	v	language:PHP
 font	.\application\helpers\imgcode_helper.php	/^if ($font < 0 || $font > 5) { $font = 5; }$/;"	v	language:PHP
 font	.\application\models\captcha_model.php	/^  $this->font = APPPATH."..\/..\/font\/04B_08.TTF";  $/;"	v	language:PHP
-font	.\application\models\captcha_model.php	/^public $font ;    \/\/鑷畾涔夊瓧浣?/;"	v	language:PHP
+font	.\application\models\captcha_model.php	/^public $font ;    \/\/自定义字体$/;"	v	language:PHP
 fontColor	.\application\helpers\common_helper.php	/^  $fontColor = "#FFFFFF";$/;"	v	language:PHP
 fontHeight	.\application\helpers\imgcode_helper.php	/^$fontHeight = imagefontheight($font);$/;"	v	language:PHP
 fontWidth	.\application\helpers\imgcode_helper.php	/^$fontWidth = imagefontwidth($font);$/;"	v	language:PHP
@@ -11411,6 +11473,7 @@ fp	.\tools\faisunsql_v40_utf8\faisunsql_files\zipclass.php	/^		$fp = fopen("$gzf
 fp	.\tools\faisunsql_v40_utf8\faisunsql_files\zipclass.php	/^		$fp=fopen($gzfilename,"r");$/;"	v	language:PHP
 fp	.\tools\faisunsql_v40_utf8\index.php	/^				$fp=fopen("$_POST[dir]\/$file","$method");$/;"	v	language:PHP
 fp	.\tools\faisunsql_v40_utf8\index.php	/^			$fp=fopen($file,"w");$/;"	v	language:PHP
+fp	.\tools\to_utf8.php	/^    $fp = fopen($filename, "w");       $/;"	v	language:PHP
 fp	.\tools\unpack.php	/^    $fp = @fopen($to.$header['filename'], 'wb');$/;"	v	language:PHP
 fp	.\tools\unpack.php	/^    $fp = @fopen($to.$header['filename'],'wb');$/;"	v	language:PHP
 fp	.\tools\unpack.php	/^    $fp = @fopen($to.$header['filename'].'.gz','wb');$/;"	v	language:PHP
@@ -11497,8 +11560,8 @@ full_tag_open	.\system\libraries\Pagination.php	/^	var $full_tag_open		= '';$/;"
 fullySpecified	.\application\libraries\Doctrine\Common\Reflection\StaticReflectionParser.php	/^                                    $fullySpecified = true;$/;"	v	language:PHP
 fullySpecified	.\application\libraries\Doctrine\Common\Reflection\StaticReflectionParser.php	/^                            $fullySpecified = true;$/;"	v	language:PHP
 fullySpecified	.\application\libraries\Doctrine\Common\Reflection\StaticReflectionParser.php	/^                        $fullySpecified = false;$/;"	v	language:PHP
-funRe	.\tools\UenuProbe\index.php	/^        $funRe = "鍑芥暟 <b>".$_POST['funName']."<\/b> 鏀寔鐘跺喌妫€娴嬬粨鏋滐細".isfun($_POST['funName']);$/;"	v	language:PHP
-funRe	.\tools\UenuProbe\uenu.php	/^        $funRe = "鍑芥暟 <b>".$_POST['funName']."<\/b> 鏀寔鐘跺喌妫€娴嬬粨鏋滐細".isfun($_POST['funName']);$/;"	v	language:PHP
+funRe	.\tools\UenuProbe\index.php	/^        $funRe = "函数 <b>".$_POST['funName']."<\/b> 支持状况检测结果：".isfun($_POST['funName']);$/;"	v	language:PHP
+funRe	.\tools\UenuProbe\uenu.php	/^        $funRe = "函数 <b>".$_POST['funName']."<\/b> 支持状况检测结果：".isfun($_POST['funName']);$/;"	v	language:PHP
 funReShow	.\tools\UenuProbe\index.php	/^        $funReShow = "show";$/;"	v	language:PHP
 funReShow	.\tools\UenuProbe\index.php	/^    $funReShow = "none";$/;"	v	language:PHP
 funReShow	.\tools\UenuProbe\uenu.php	/^        $funReShow = "show";$/;"	v	language:PHP
@@ -11582,10 +11645,11 @@ g	.\application\helpers\imgcode_helper.php	/^$g = hexdec(substr($color, 2, 2));$
 g	.\application\models\captcha_model.php	/^  $g = $color[4].$color[5];$/;"	v	language:PHP
 g	.\application\models\captcha_model.php	/^  $g = hexdec ($g);$/;"	v	language:PHP
 gateway	.\application\controllers\front\alipay.php	/^        $gateway = $this->Alipay_Model->gateway;$/;"	v	language:PHP
-gateway	.\application\models\alipay_model.php	/^        $this->gateway = "https:\/\/mapi.alipay.com\/gateway.do?"; \/\/ 缃戝叧鍦板潃$/;"	v	language:PHP
+gateway	.\application\models\alipay_model.php	/^        $this->gateway = "https:\/\/mapi.alipay.com\/gateway.do?"; \/\/ 网关地址$/;"	v	language:PHP
 gateway	.\application\models\alipay_model.php	/^    var $gateway;$/;"	v	language:PHP
 gatherRowData	.\application\libraries\Doctrine\ORM\Internal\Hydration\AbstractHydrator.php	/^    protected function gatherRowData(array $data, array &$cache, array &$id, array &$nonemptyComponents)$/;"	f	language:PHP
 gatherScalarRowData	.\application\libraries\Doctrine\ORM\Internal\Hydration\AbstractHydrator.php	/^    protected function gatherScalarRowData(&$data, &$cache)$/;"	f	language:PHP
+gbk2utf8	.\tools\to_utf8.php	/^function gbk2utf8($filename)      $/;"	f	language:PHP
 gc_probability	.\system\libraries\Session.php	/^	var $gc_probability				= 5;$/;"	v	language:PHP
 gd_loaded	.\system\libraries\Image_lib.php	/^	function gd_loaded()$/;"	f	language:PHP
 gd_version	.\system\libraries\Image_lib.php	/^				$gd_version = str_replace('0', '', $this->gd_version());$/;"	v	language:PHP
@@ -11666,7 +11730,7 @@ get	.\application\libraries\Doctrine\ORM\PersistentCollection.php	/^    public f
 get	.\application\libraries\Doctrine\ORM\Persisters\AbstractCollectionPersister.php	/^    public function get(PersistentCollection $coll, $index)$/;"	f	language:PHP
 get	.\application\libraries\Doctrine\Symfony\Component\Console\Application.php	/^    public function get($name)$/;"	f	language:PHP
 get	.\application\libraries\Doctrine\Symfony\Component\Console\Helper\HelperSet.php	/^    public function get($name)$/;"	f	language:PHP
-get	.\application\models\alipay_model.php	/^            $get = $this->para_filter($_GET); \/\/瀵规墍鏈塆ET鍙嶉鍥炴潵鐨勬暟鎹幓绌?/;"	v	language:PHP
+get	.\application\models\alipay_model.php	/^            $get = $this->para_filter($_GET); \/\/对所有GET反馈回来的数据去空$/;"	v	language:PHP
 get	.\ckfinder\core\connector\php\php5\Core\Registry.php	/^    public function get($key)$/;"	f	language:PHP
 get	.\system\core\Input.php	/^			$get = array();$/;"	v	language:PHP
 get	.\system\core\Input.php	/^	function get($index = NULL, $xss_clean = FALSE)$/;"	f	language:PHP
@@ -13296,7 +13360,7 @@ get_init_db	.\application\libraries\init_db.php	/^ function &get_init_db(){	$/;"
 get_init_form	.\application\libraries\init_form.php	/^ 	public static function &get_init_form(){ 		$/;"	f	language:PHP
 get_init_form	.\application\libraries\init_form.php	/^function &get_init_form(){	$/;"	f	language:PHP
 get_init_lang	.\application\libraries\init_lang.php	/^ 	public static function &get_init_lang(){ 	$/;"	f	language:PHP
-get_init_lang	.\application\libraries\init_lang.php	/^ function &get_init_lang(){	$/;"	f	language:PHP
+get_init_lang	.\application\libraries\init_lang.php	/^function &get_init_lang(){	$/;"	f	language:PHP
 get_init_page	.\application\libraries\init_page.php	/^	public static function &get_init_page()$/;"	f	language:PHP
 get_init_page	.\application\libraries\init_page.php	/^function &get_init_page()$/;"	f	language:PHP
 get_instance	.\system\core\CodeIgniter.php	/^	function &get_instance()$/;"	f	language:PHP
@@ -13401,7 +13465,7 @@ gte	.\application\libraries\Doctrine\DBAL\Query\Expression\ExpressionBuilder.php
 gte	.\application\libraries\Doctrine\ORM\Query\Expr.php	/^    public function gte($x, $y)$/;"	f	language:PHP
 gzdata	.\system\libraries\Zip.php	/^		$gzdata = gzcompress($data);$/;"	v	language:PHP
 gzdata	.\system\libraries\Zip.php	/^		$gzdata = substr($gzdata, 2, -4);$/;"	v	language:PHP
-gzfilename	.\tools\faisunsql_v40_utf8\faisunsql_files\zipclass.php	/^	$gzfilename = "zipfiles\/mygz.zip";	\/\/鍘嬬缉鍖呰矾寰?/;"	v	language:PHP
+gzfilename	.\tools\faisunsql_v40_utf8\faisunsql_files\zipclass.php	/^	$gzfilename = "zipfiles\/mygz.zip";	\/\/压缩包路径$/;"	v	language:PHP
 gzfilename	.\tools\faisunsql_v40_utf8\faisunsql_files\zipclass.php	/^	var $gzfilename = 'fsql.zip';$/;"	v	language:PHP
 gzp	.\application\libraries\init_zip.php	/^    $gzp = @gzopen($to.$header['filename'].'.gz','rb') or die("Cette archive est compress闂?);$/;"	v	language:PHP
 gzp	.\tools\unpack.php	/^    $gzp = @gzopen($to.$header['filename'].'.gz','rb') or die("Cette archive est compress閑");$/;"	v	language:PHP
@@ -13591,7 +13655,7 @@ height	.\application\helpers\imgcode_helper.php	/^$height = $fontHeight + $paddi
 height	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_image.php	/^            $height = $_image_data[1];$/;"	v	language:PHP
 height	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_image.php	/^        $height = round($height * $_resize);$/;"	v	language:PHP
 height	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_image.php	/^    $height = '';$/;"	v	language:PHP
-height	.\application\models\captcha_model.php	/^public $height = 20; \/\/楂樺害$/;"	v	language:PHP
+height	.\application\models\captcha_model.php	/^public $height = 20; \/\/高度$/;"	v	language:PHP
 height	.\ckfinder\core\ckfinder_php5.php	/^			$height = intval( $this->Height );$/;"	v	language:PHP
 height	.\swfupload\libs\image_thumb.class.php	/^      $this->height = $image[1];$/;"	v	language:PHP
 height	.\swfupload\libs\image_thumb.class.php	/^    public $height;$/;"	v	language:PHP
@@ -13651,8 +13715,8 @@ hooks	.\system\core\Hooks.php	/^		$this->hooks =& $hook;$/;"	v	language:PHP
 hooks	.\system\core\Hooks.php	/^	var $hooks			= array();$/;"	v	language:PHP
 hor	.\application\models\common_model.php	/^		$hor = $date_array["hours"];$/;"	v	language:PHP
 host	.\application\libraries\Smarty-3.1.14\libs\plugins\function.fetch.php	/^            $host = $server_name = $uri_parts['host'];$/;"	v	language:PHP
-host_ip	.\tools\UenuProbe\index.php	/^<div class="info3">鏈嶅姟鍣↖P鍦板潃<\/div><div class="info4"><?php $host_ip=gethostbyname($_SERVER["SERVER_NAME"]); echo($host_ip);?><\/div>$/;"	v	language:PHP
-host_ip	.\tools\UenuProbe\uenu.php	/^<div class="info3">鏈嶅姟鍣↖P鍦板潃<\/div><div class="info4"><?php $host_ip=gethostbyname($_SERVER["SERVER_NAME"]); echo($host_ip);?><\/div>$/;"	v	language:PHP
+host_ip	.\tools\UenuProbe\index.php	/^<div class="info3">服务器IP地址<\/div><div class="info4"><?php $host_ip=gethostbyname($_SERVER["SERVER_NAME"]); echo($host_ip);?><\/div>$/;"	v	language:PHP
+host_ip	.\tools\UenuProbe\uenu.php	/^<div class="info3">服务器IP地址<\/div><div class="info4"><?php $host_ip=gethostbyname($_SERVER["SERVER_NAME"]); echo($host_ip);?><\/div>$/;"	v	language:PHP
 hostname	.\system\database\DB_driver.php	/^	var $hostname;$/;"	v	language:PHP
 hostname	.\system\libraries\Ftp.php	/^		$this->hostname = preg_replace('|.+?:\/\/|', '', $this->hostname);$/;"	v	language:PHP
 hostname	.\system\libraries\Ftp.php	/^	var $hostname	= '';$/;"	v	language:PHP
@@ -13708,7 +13772,7 @@ html_all_js	.\application\libraries\init_page.php	/^			$html_all_js = '';$/;"	v	
 html_comments	.\system\libraries\Typography.php	/^		$html_comments = array();$/;"	v	language:PHP
 html_escape	.\system\core\Common.php	/^	function html_escape($var)$/;"	f	language:PHP
 html_field	.\application\models\common_model.php	/^		$html_field = (empty($html_type) || $html_type=='list')?'t_html':'t_html_'.$html_type;		$/;"	v	language:PHP
-html_text	.\tools\alipay\alipayapi.php	/^$html_text = $alipaySubmit->buildRequestForm($parameter,"get", "纭");$/;"	v	language:PHP
+html_text	.\tools\alipay\alipayapi.php	/^$html_text = $alipaySubmit->buildRequestForm($parameter,"get", "确认");$/;"	v	language:PHP
 http_header	.\application\libraries\curl.php	/^	public function http_header($header, $content = NULL)$/;"	f	language:PHP
 http_login	.\application\libraries\curl.php	/^	public function http_login($username = '', $password = '', $type = 'any')$/;"	f	language:PHP
 http_method	.\application\libraries\curl.php	/^	public function http_method($method)$/;"	f	language:PHP
@@ -13745,10 +13809,10 @@ hydrator	.\application\libraries\Doctrine\ORM\Persisters\BasicEntityPersister.ph
 hydrator	.\application\libraries\Doctrine\ORM\Persisters\BasicEntityPersister.php	/^        $hydrator = $this->_em->newHydrator(Query::HYDRATE_OBJECT);$/;"	v	language:PHP
 hydrators	.\application\libraries\Doctrine\ORM\EntityManager.php	/^    private $hydrators = array();$/;"	v	language:PHP
 i	.\application\helpers\common_helper.php	/^	$i = 0;$/;"	v	language:PHP
-i	.\application\helpers\common_helper.php	/^         $i=$i+1;                           \/\/实锟绞碉拷Byte锟斤拷锟皆硷拷1锟斤拷$/;"	v	language:PHP
-i	.\application\helpers\common_helper.php	/^         $i=$i+1;                           \/\/实锟绞碉拷Byte锟斤拷锟斤拷1锟斤拷$/;"	v	language:PHP
-i	.\application\helpers\common_helper.php	/^         $i=$i+2;                           \/\/实锟斤拷Byte锟斤拷为2$/;"	v	language:PHP
-i	.\application\helpers\common_helper.php	/^         $i=$i+3;                           \/\/实锟斤拷Byte锟斤拷为3$/;"	v	language:PHP
+i	.\application\helpers\common_helper.php	/^         $i=$i+1;                           \/\/实际的Byte数仍计1个$/;"	v	language:PHP
+i	.\application\helpers\common_helper.php	/^         $i=$i+1;                           \/\/实际的Byte数计1个$/;"	v	language:PHP
+i	.\application\helpers\common_helper.php	/^         $i=$i+2;                           \/\/实际Byte计为2$/;"	v	language:PHP
+i	.\application\helpers\common_helper.php	/^         $i=$i+3;                           \/\/实际Byte计为3$/;"	v	language:PHP
 i	.\application\helpers\common_helper.php	/^   $i=0; $/;"	v	language:PHP
 i	.\application\libraries\Doctrine\DBAL\SQLParserUtils.php	/^                    $i = $j;$/;"	v	language:PHP
 i	.\application\libraries\Doctrine\ORM\Query\Exec\MultiTableUpdateExecutor.php	/^        $i = -1;$/;"	v	language:PHP
@@ -13812,7 +13876,7 @@ iFinalHeight	.\ckfinder\core\connector\php\php5\CommandHandler\Thumbnail.php	/^ 
 iFinalWidth	.\ckfinder\core\connector\php\php5\CommandHandler\Thumbnail.php	/^        $iFinalWidth = $maxWidth == 0 ? $sourceImageWidth : $maxWidth;$/;"	v	language:PHP
 iHeight	.\charts\ExportHandlers\PHP\Resources\FCExporter_PDF.php	/^			$iHeight=$this->arrExportData[$itr]["height"];$/;"	v	language:PHP
 iWidth	.\charts\ExportHandlers\PHP\Resources\FCExporter_PDF.php	/^			$iWidth=$this->arrExportData[$itr]["width"];$/;"	v	language:PHP
-icon	.\application\libraries\tree.php	/^    var $icon = array('鈹?,'鈹?,'鈹?);$/;"	v	language:PHP
+icon	.\application\libraries\tree.php	/^    var $icon = array('│','├','└');$/;"	v	language:PHP
 icon	.\tools\UenuProbe\index.php	/^  $icon = "image";$/;"	v	language:PHP
 icon	.\tools\UenuProbe\index.php	/^  $icon = $_GET['icon'];$/;"	v	language:PHP
 icon	.\tools\UenuProbe\uenu.php	/^  $icon = "image";$/;"	v	language:PHP
@@ -14021,8 +14085,8 @@ im	.\application\controllers\front\message.php	/^		$this->im = $this->Message_mo
 im	.\system\helpers\captcha_helper.php	/^			$im = imagecreate($img_width, $img_height);$/;"	v	language:PHP
 im	.\system\helpers\captcha_helper.php	/^			$im = imagecreatetruecolor($img_width, $img_height);$/;"	v	language:PHP
 image	.\application\helpers\imgcode_helper.php	/^function image($type = 0, $length = 4, $lefttime = 900, $options = null)$/;"	f	language:PHP
-image	.\application\models\captcha_model.php	/^  $this->image = imageCreate($this->width, $this->height); \/\/鍒涘缓鍥剧墖$/;"	v	language:PHP
-image	.\application\models\captcha_model.php	/^protected $image ;   \/\/鍥剧墖鍙橀噺$/;"	v	language:PHP
+image	.\application\models\captcha_model.php	/^  $this->image = imageCreate($this->width, $this->height); \/\/创建图片$/;"	v	language:PHP
+image	.\application\models\captcha_model.php	/^protected $image ;   \/\/图片变量$/;"	v	language:PHP
 image	.\charts\ExportHandlers\PHP\Resources\FCExporter_IMG.php	/^		$image = imagecreatetruecolor($this->arrExportData[$id]["width"], $this->arrExportData[$id]["height"]);$/;"	v	language:PHP
 image	.\swfupload\libs\image_thumb.class.php	/^      $image = getimagesize($this->filename);$/;"	v	language:PHP
 imageCheckExtensions	.\ckfinder\core\connector\php\php5\Utils\FileSystem.php	/^        $imageCheckExtensions = array('gif', 'jpeg', 'jpg', 'png', 'psd', 'bmp', 'tiff');$/;"	v	language:PHP
@@ -14304,7 +14368,7 @@ info	.\application\libraries\Doctrine\Symfony\Component\Console\Application.php	
 info	.\application\libraries\Doctrine\Symfony\Component\Console\Shell.php	/^        $info = readline_info();$/;"	v	language:PHP
 info	.\application\libraries\curl.php	/^		$this->info = curl_getinfo($this->session);$/;"	v	language:PHP
 info	.\application\libraries\curl.php	/^	public $info;                   \/\/ Returned after request (elapsed time, etc)$/;"	v	language:PHP
-info	.\application\libraries\init_db.php	/^		$info  = $this->main_save($save_info,$save_config); \/\/淇濆瓨涓昏〃淇℃伅		$/;"	v	language:PHP
+info	.\application\libraries\init_db.php	/^		$info  = $this->main_save($save_info,$save_config); \/\/保存主表信息		$/;"	v	language:PHP
 info	.\swfupload\libs\db_access.class.php	/^		$info = array();$/;"	v	language:PHP
 info	.\system\database\drivers\sqlsrv\sqlsrv_driver.php	/^		$info = sqlsrv_server_info($this->conn_id);$/;"	v	language:PHP
 info_class	.\application\controllers\front\download.php	/^		$info_class = $this->input->get('info_class');$/;"	v	language:PHP
@@ -14333,7 +14397,6 @@ init_db	.\application\libraries\tpl.php	/^	$init_db  =  &get_init_db();$/;"	v	la
 init_db	.\application\models\common_model.php	/^		$init_db  =  &get_init_db();	$/;"	v	language:PHP
 init_db	.\application\models\common_model.php	/^	 	$init_db  =  &get_init_db();	$/;"	v	language:PHP
 init_page	.\application\libraries\tpl.php	/^	$init_page = &get_init_page();$/;"	v	language:PHP
-init_page	.\application\libraries\tpl.php	/^       $init_page = &get_init_page();$/;"	v	language:PHP
 init_page	.\application\models\common_model.php	/^	 	$init_page = &get_init_page();$/;"	v	language:PHP
 init_path	.\application\controllers\backend\templates.php	/^          $init_path = config_item('template_dir').'\/front\/'.$develop['template'].'\/'.lang_get();$/;"	v	language:PHP
 init_size	.\system\libraries\Encrypt.php	/^		$init_size = mcrypt_get_iv_size($this->_get_cipher(), $this->_get_mode());$/;"	v	language:PHP
@@ -14612,7 +14675,7 @@ ip_address	.\system\core\Input.php	/^			$this->ip_address = ($spoof !== FALSE &&
 ip_address	.\system\core\Input.php	/^	public function ip_address()$/;"	f	language:PHP
 ip_address	.\system\core\Input.php	/^	var $ip_address				= FALSE;$/;"	v	language:PHP
 ip_segments	.\system\core\Input.php	/^		$ip_segments = explode('.', $ip);$/;"	v	language:PHP
-ips	.\application\controllers\backend\login.php	/^					$ips = array('city'=>'鍘﹂棬');$/;"	v	language:PHP
+ips	.\application\controllers\backend\login.php	/^					$ips = array('city'=>'厦门');$/;"	v	language:PHP
 ipv4	.\system\core\Input.php	/^			$ipv4 = array_pop($chunks);$/;"	v	language:PHP
 is	.\application\libraries\Doctrine\Common\Annotations\DocParser.php	/^        \/\/ verify that the class is really meant to be an annotation and not just any ordinary class$/;"	c	language:PHP
 is	.\application\libraries\Doctrine\Common\Annotations\DocParser.php	/^        \/\/ verify that the class is really meant to be an annotation$/;"	c	language:PHP
@@ -15689,7 +15752,7 @@ labels	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_radios.p
 lang	.\application\controllers\backend\roles.php	/^	 		$lang = $this->m_lang;				 $/;"	v	language:PHP
 lang	.\application\controllers\backend\system_manage.php	/^ 				$lang = null;$/;"	v	language:PHP
 lang	.\application\helpers\MY_url_helper.php	/^	         $lang = $lang?$lang:lang_get();$/;"	v	language:PHP
-lang	.\application\helpers\init_lang_helper.php	/^		$lang = $lang?$lang:config_item('language');$/;"	v	language:PHP
+lang	.\application\helpers\init_lang_helper.php	/^		$lang = $lang?$lang:config_item('language');		$/;"	v	language:PHP
 lang	.\application\helpers\init_lang_helper.php	/^		$lang = $lang_get?$lang_get:$lang;	$/;"	v	language:PHP
 lang	.\application\helpers\init_lang_helper.php	/^		$lang = get_cookie('lang');$/;"	v	language:PHP
 lang	.\application\language\en\item_backend_admins_lang.php	/^ $lang = array ($/;"	v	language:PHP
@@ -15786,7 +15849,7 @@ last_tag_close	.\system\libraries\Pagination.php	/^	var $last_tag_close		= '';$/
 last_tag_open	.\system\libraries\Pagination.php	/^	var $last_tag_open		= '&nbsp;';$/;"	v	language:PHP
 last_variable	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_templateparser.php	/^        $this->last_variable = $this->yystack[$this->yyidx + 0]->minor['var'];$/;"	v	language:PHP
 lastmodif	.\tools\chat\chat_backend.php	/^$lastmodif    = isset($_GET['timestamp']) ? $_GET['timestamp'] : 0;$/;"	v	language:PHP
-lastmodif	.\tools\comet长连接聊天\chat_backend.php	/^$lastmodif    = isset($_GET['timestamp']) ? $_GET['timestamp'] : 0;$/;"	v	language:PHP
+lastmodif	.\tools\comet����������\chat_backend.php	/^$lastmodif    = isset($_GET['timestamp']) ? $_GET['timestamp'] : 0;$/;"	v	language:PHP
 lastqueryid	.\swfupload\libs\db_access.class.php	/^	public $lastqueryid = null;$/;"	v	language:PHP
 lastqueryid	.\swfupload\libs\mysql.class.php	/^			$this->lastqueryid = null;$/;"	v	language:PHP
 lastqueryid	.\swfupload\libs\mysql.class.php	/^		$this->lastqueryid = $this->execute($sql);$/;"	v	language:PHP
@@ -15803,7 +15866,7 @@ leading	.\application\libraries\Doctrine\ORM\Query\AST\Functions\TrimFunction.ph
 leading	.\system\core\URI.php	/^			$leading	= '';$/;"	v	language:PHP
 leading	.\system\core\URI.php	/^		$leading	= '\/';$/;"	v	language:PHP
 left	.\application\controllers\backend\login.php	/^	function left()$/;"	f	language:PHP
-left	.\application\models\captcha_model.php	/^  $left = ($this->width-$this->len*($this->size+$this->sizestr2str))\/$this->size;   \/\/ (楠岃瘉鐮佸浘鐗囧搴?- 瀹為檯闇€瑕佺殑瀹藉害)\/姣忎釜瀛楃鐨勫搴?= 璺濈宸﹁竟鐨勫搴?/;"	v	language:PHP
+left	.\application\models\captcha_model.php	/^  $left = ($this->width-$this->len*($this->size+$this->sizestr2str))\/$this->size;   \/\/ (验证码图片宽度 - 实际需要的宽度)\/每个字符的宽度 = 距离左边的宽度$/;"	v	language:PHP
 left	.\system\libraries\Image_lib.php	/^				$left  = 0;$/;"	v	language:PHP
 leftBetweenExpression	.\application\libraries\Doctrine\ORM\Query\AST\BetweenExpression.php	/^        $this->leftBetweenExpression = $leftExpr;$/;"	v	language:PHP
 leftBetweenExpression	.\application\libraries\Doctrine\ORM\Query\AST\BetweenExpression.php	/^    public $leftBetweenExpression;$/;"	v	language:PHP
@@ -15833,7 +15896,7 @@ len	.\application\libraries\Doctrine\Symfony\Component\Console\Helper\FormatterH
 len	.\application\libraries\Doctrine\Symfony\Component\Console\Input\ArgvInput.php	/^        $len = strlen($name);$/;"	v	language:PHP
 len	.\application\libraries\Doctrine\Symfony\Component\Yaml\Inline.php	/^        $len = strlen($mapping);$/;"	v	language:PHP
 len	.\application\libraries\Doctrine\Symfony\Component\Yaml\Inline.php	/^        $len = strlen($sequence);$/;"	v	language:PHP
-len	.\application\models\captcha_model.php	/^public $len    = 4;  \/\/瀛楃闀垮害$/;"	v	language:PHP
+len	.\application\models\captcha_model.php	/^public $len    = 4;  \/\/字符长度$/;"	v	language:PHP
 len	.\application\models\category_model.php	/^			$len = (strlen($parent)+2);	$/;"	v	language:PHP
 len	.\charts\ExportHandlers\PHP\Resources\FCExporter_PDF.php	/^		$len=strlen($imgBinary);$/;"	v	language:PHP
 len	.\system\helpers\string_helper.php	/^	function random_string($type = 'alnum', $len = 8)$/;"	v	language:PHP
@@ -16097,6 +16160,7 @@ list	.\application\models\product_model.php	/^		$list = $this->db->query($sql)->
 list	.\application\models\product_model.php	/^		$list = $this->init_form->array_re_index($list,'pro_id','pro_title');$/;"	v	language:PHP
 list	.\system\libraries\Ftp.php	/^		$list = $this->list_files($filepath);$/;"	v	language:PHP
 listDatabases	.\application\libraries\Doctrine\DBAL\Schema\AbstractSchemaManager.php	/^    public function listDatabases()$/;"	f	language:PHP
+listDir	.\tools\to_utf8.php	/^function listDir($dir)      $/;"	f	language:PHP
 listInvalidationKeys	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_cacheresource_keyvaluestore.php	/^    protected function listInvalidationKeys($cid, $resource_name = null, $cache_id = null, $compile_id = null, $resource_uid = null)$/;"	f	language:PHP
 listMethods	.\system\libraries\Xmlrpcs.php	/^	function listMethods($m)$/;"	f	language:PHP
 listSequences	.\application\libraries\Doctrine\DBAL\Schema\AbstractSchemaManager.php	/^    public function listSequences($database = null)$/;"	f	language:PHP
@@ -16265,8 +16329,8 @@ log_cf	.\application\controllers\backend\mdata.php	/^				$log_cf = $this->im->sa
 log_cf	.\application\controllers\backend\modules.php	/^				$log_cf = $this->im->save_config();$/;"	v	language:PHP
 log_cf	.\application\controllers\backend\modules.php	/^			$log_cf = $this->im->save_config();$/;"	v	language:PHP
 log_clear	.\application\models\logs_model.php	/^	function log_clear(){$/;"	f	language:PHP
-log_desc	.\application\controllers\backend\admins.php	/^		 		$log_desc = sprintf('淇敼鐢ㄦ埛%s',$rs[main]['admin_user']);	$/;"	v	language:PHP
-log_desc	.\application\controllers\backend\admins.php	/^	 		$log_desc = sprintf('鍒犻櫎鐢ㄦ埛%s',$rs['admin_user']);	$/;"	v	language:PHP
+log_desc	.\application\controllers\backend\admins.php	/^		 		$log_desc = sprintf('修改用户%s',$rs[main]['admin_user']);	$/;"	v	language:PHP
+log_desc	.\application\controllers\backend\admins.php	/^	 		$log_desc = sprintf('删除用户%s',$rs['admin_user']);	$/;"	v	language:PHP
 log_desc	.\application\controllers\backend\roles.php	/^	 		$log_desc = sprintf($lang['log_mod'],$this->input->post('role_name'));	$/;"	v	language:PHP
 log_error	.\install\index_2.php	/^function log_error($txt){$/;"	f	language:PHP
 log_error	.\system\core\Common.php	/^	function show_404($page = '', $log_error = TRUE)$/;"	v	language:PHP
@@ -16311,7 +16375,7 @@ ls	.\application\models\common_model.php	/^		$ls = $q->result_array();$/;"	v	lan
 ls	.\application\models\common_model.php	/^		$ls = $this->db->select('i_url',false)->from('module_images')->where_in('i_uid',$uid_convert)->order_by('i_id','asc')->get()->first_row('array');$/;"	v	language:PHP
 ls	.\application\models\mdata_model.php	/^		$ls = $this->init_db->fetch_all($size);$/;"	v	language:PHP
 ls	.\application\models\modules_model.php	/^		$ls = $this->db->select('m_tb,m_name',false)->from('module')->get()->result_array();$/;"	v	language:PHP
-ls	.\application\models\tree_model.php	/^		$ls =  $this->init_form->array_re_index($this->db->select("id,name as init_name,leftId,rightId",false)->select('LEVEL,CONCAT(REPEAT("鈹?",LEVEL),"鈹溾攢",NAME) as name',false)->from('tree_node')->where('treeId',$treeId)->order_by('leftId','asc')->get()->result_array(),'id');$/;"	v	language:PHP
+ls	.\application\models\tree_model.php	/^		$ls =  $this->init_form->array_re_index($this->db->select("id,name as init_name,leftId,rightId",false)->select('LEVEL,CONCAT(REPEAT("│ ",LEVEL),"├─",NAME) as name',false)->from('tree_node')->where('treeId',$treeId)->order_by('leftId','asc')->get()->result_array(),'id');$/;"	v	language:PHP
 ls_new	.\application\models\tree_model.php	/^		$ls_new = array();$/;"	v	language:PHP
 lsw	.\system\libraries\Sha1.php	/^		$lsw = ($x & 0xFFFF) + ($y & 0xFFFF);$/;"	v	language:PHP
 lt	.\application\libraries\Doctrine\Common\Collections\ExpressionBuilder.php	/^    public function lt($field, $value)$/;"	f	language:PHP
@@ -16348,8 +16412,8 @@ m_lang	.\application\controllers\backend\system_manage.php	/^		$this->m_lang = $
 m_sub	.\application\models\mdata_model.php	/^		$m_sub = $this->init_form->array_re_index($this->m->all(array("m_sub > "=>0)),'m_sub','m_sub');$/;"	v	language:PHP
 m_sub	.\application\models\modules_model.php	/^		$m_sub = $this->init_form->array_re_index($this->all(array("m_sub > "=>0)),'m_sub','m_sub');$/;"	v	language:PHP
 m_type	.\application\controllers\backend\modules.php	/^		$m_type = $this->input->get('m_type');$/;"	v	language:PHP
-mailRe	.\tools\UenuProbe\index.php	/^        $mailRe = "MAIL閭欢鍙戦€佹祴璇曠粨鏋滐細鍙戦€?;$/;"	v	language:PHP
-mailRe	.\tools\UenuProbe\uenu.php	/^        $mailRe = "MAIL閭欢鍙戦€佹祴璇曠粨鏋滐細鍙戦€?;$/;"	v	language:PHP
+mailRe	.\tools\UenuProbe\index.php	/^        $mailRe = "MAIL邮件发送测试结果：发送";$/;"	v	language:PHP
+mailRe	.\tools\UenuProbe\uenu.php	/^        $mailRe = "MAIL邮件发送测试结果：发送";$/;"	v	language:PHP
 mailReShow	.\tools\UenuProbe\index.php	/^        $mailReShow = "show";$/;"	v	language:PHP
 mailReShow	.\tools\UenuProbe\index.php	/^    $mailReShow = "none";$/;"	v	language:PHP
 mailReShow	.\tools\UenuProbe\uenu.php	/^        $mailReShow = "show";$/;"	v	language:PHP
@@ -16438,7 +16502,7 @@ main_temp	.\application\libraries\init_db.php	/^ 		$main_temp = $CI->db->from($s
 main_top	.\application\controllers\backend\login.php	/^ 	function  main_top(){$/;"	f	language:PHP
 mainly	.\system\libraries\Typography.php	/^	 * This function mainly converts double and single quotes$/;"	f	language:PHP
 mainname	.\application\controllers\front\alipay.php	/^        $mainname = $this->Alipay_Model->mainname;$/;"	v	language:PHP
-mainname	.\application\models\alipay_model.php	/^        $this->mainname = "鍙跺崕"; \/\/鏀舵鏂瑰悕绉帮紝濡傦細鍏徃鍚嶇О銆佺綉绔欏悕绉般€佹敹娆句汉濮撳悕绛?/;"	v	language:PHP
+mainname	.\application\models\alipay_model.php	/^        $this->mainname = "叶华"; \/\/收款方名称，如：公司名称、网站名称、收款人姓名等$/;"	v	language:PHP
 mainname	.\application\models\alipay_model.php	/^    var $mainname;$/;"	v	language:PHP
 maintain_ratio	.\system\libraries\Image_lib.php	/^	var $maintain_ratio		= TRUE;		\/\/ Whether to maintain aspect ratio when resizing or use hard values$/;"	v	language:PHP
 major	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_configfileparser.php	/^    public $major;         \/* The major token value.  This is the code$/;"	v	language:PHP
@@ -17039,7 +17103,7 @@ msg	.\system\libraries\Upload.php	/^			$msg = ($CI->lang->line($msg) == FALSE) ?
 msg	.\system\libraries\Xmlrpc.php	/^			\/\/ $msg = XML_RPC_Messages$/;"	v	language:PHP
 msg	.\system\libraries\Xmlrpcs.php	/^		$msg = new XML_RPC_Message($scalar_value);$/;"	v	language:PHP
 msg	.\tools\chat\chat_backend.php	/^$msg = isset($_GET['msg']) ? $_GET['msg'] : '';$/;"	v	language:PHP
-msg	.\tools\comet长连接聊天\chat_backend.php	/^$msg = isset($_GET['msg']) ? $_GET['msg'] : '';$/;"	v	language:PHP
+msg	.\tools\comet����������\chat_backend.php	/^$msg = isset($_GET['msg']) ? $_GET['msg'] : '';$/;"	v	language:PHP
 msg_redirect	.\application\libraries\init_page.php	/^	function msg_redirect($url,$msg){	$/;"	f	language:PHP
 msubstr	.\application\helpers\common_helper.php	/^	function msubstr($string, $start, $end,$tail='...') {$/;"	f	language:PHP
 msw	.\system\libraries\Sha1.php	/^		$msw = ($x >> 16) + ($y >> 16) + ($lsw >> 16);$/;"	v	language:PHP
@@ -17083,14 +17147,14 @@ myalert	.\application\libraries\init_page.php	/^function myalert($msg){$/;"	f	la
 mydir	.\application\libraries\init_zip.php	/^$mydir = '';$/;"	v	language:PHP
 mydir	.\tools\unpack.php	/^$mydir = '';$/;"	v	language:PHP
 mypathdir	.\tools\faisunsql_v40_utf8\faisunsql_files\zipclass.php	/^		$mypathdir=array();$/;"	v	language:PHP
-mysgin	.\application\models\alipay_model.php	/^        $mysgin = $this->sign($prestr, $sign_type); \/\/鎶婃渶缁堢殑瀛楃涓插姞瀵嗭紝鑾峰緱绛惧悕缁撴灉$/;"	v	language:PHP
+mysgin	.\application\models\alipay_model.php	/^        $mysgin = $this->sign($prestr, $sign_type); \/\/把最终的字符串加密，获得签名结果$/;"	v	language:PHP
 mysgin	.\tools\alipay\lib\alipay_md5.function.php	/^	$mysgin = md5($prestr);$/;"	v	language:PHP
 mysign	.\application\libraries\alipay.php	/^			$mysign=$this->getMysign($param);$/;"	v	language:PHP
 mysign	.\application\libraries\alipay.php	/^			if(preg_match("\/true$\/i",$responseTxt) && $mysign==$_GET['sign']){$/;"	v	language:PHP
 mysign	.\application\libraries\alipay.php	/^			if(preg_match("\/true$\/i",$responseTxt) && $mysign==$_POST['sign']){$/;"	v	language:PHP
 mysign	.\application\libraries\alipay.php	/^		$mysign=$this->getMysign($param);$/;"	v	language:PHP
-mysign	.\application\models\alipay_model.php	/^            $this->mysign = $this->build_mysign($sort_get, $this->security_code, $this->sign_type);    \/\/鐢熸垚绛惧悕缁撴灉$/;"	v	language:PHP
-mysign	.\application\models\alipay_model.php	/^            $this->mysign = $this->build_mysign($sort_post, $this->security_code, $this->sign_type); \/\/鐢熸垚绛惧悕缁撴灉$/;"	v	language:PHP
+mysign	.\application\models\alipay_model.php	/^            $this->mysign = $this->build_mysign($sort_get, $this->security_code, $this->sign_type);    \/\/生成签名结果$/;"	v	language:PHP
+mysign	.\application\models\alipay_model.php	/^            $this->mysign = $this->build_mysign($sort_post, $this->security_code, $this->sign_type); \/\/生成签名结果$/;"	v	language:PHP
 mysign	.\application\models\alipay_model.php	/^        $this->mysign = $this->build_mysign($sort_array, $this->security_code, $this->sign_type);$/;"	v	language:PHP
 mysign	.\application\models\alipay_model.php	/^    var $mysign;$/;"	v	language:PHP
 mysign	.\tools\alipay\lib\alipay_submit.class.php	/^				$mysign = "";$/;"	v	language:PHP
@@ -17098,8 +17162,8 @@ mysign	.\tools\alipay\lib\alipay_submit.class.php	/^				$mysign = md5Sign($prest
 mysign	.\tools\alipay\lib\alipay_submit.class.php	/^		$mysign = "";$/;"	v	language:PHP
 mysign	.\tools\alipay\lib\alipay_submit.class.php	/^		$mysign = $this->buildRequestMysign($para_sort);$/;"	v	language:PHP
 mysql	.\swfupload\libs\mysql.class.php	/^final class mysql {$/;"	c	language:PHP
-mysqlRe	.\tools\UenuProbe\index.php	/^        $mysqlRe = "MYSQL杩炴帴娴嬭瘯缁撴灉锛?;$/;"	v	language:PHP
-mysqlRe	.\tools\UenuProbe\uenu.php	/^        $mysqlRe = "MYSQL杩炴帴娴嬭瘯缁撴灉锛?;$/;"	v	language:PHP
+mysqlRe	.\tools\UenuProbe\index.php	/^        $mysqlRe = "MYSQL连接测试结果：";$/;"	v	language:PHP
+mysqlRe	.\tools\UenuProbe\uenu.php	/^        $mysqlRe = "MYSQL连接测试结果：";$/;"	v	language:PHP
 mysqlReShow	.\tools\UenuProbe\index.php	/^        $mysqlReShow = "show";$/;"	v	language:PHP
 mysqlReShow	.\tools\UenuProbe\index.php	/^    $mysqlReShow = "none";$/;"	v	language:PHP
 mysqlReShow	.\tools\UenuProbe\uenu.php	/^        $mysqlReShow = "show";$/;"	v	language:PHP
@@ -17113,7 +17177,7 @@ mytype	.\system\libraries\Xmlrpc.php	/^		$this->mytype = $this->xmlrpcTypes['str
 mytype	.\system\libraries\Xmlrpc.php	/^	var $mytype	= 0;$/;"	v	language:PHP
 n	.\application\helpers\common_helper.php	/^		$n = str_pad('',$m,'-',STR_PAD_RIGHT);$/;"	v	language:PHP
 n	.\application\helpers\common_helper.php	/^		$n = str_replace("-","&nbsp;&nbsp;",$n);$/;"	v	language:PHP
-n	.\application\helpers\common_helper.php	/^         $n=$n+0.5;                        \/\/小写锟斤拷母锟酵帮拷潜锟斤拷锟斤拷锟斤拷锟斤拷锟轿伙拷址锟斤拷锟?..$/;"	v	language:PHP
+n	.\application\helpers\common_helper.php	/^         $n=$n+0.5;                        \/\/小写字母和半角标点等与半个高位字符宽...$/;"	v	language:PHP
 n	.\application\helpers\common_helper.php	/^   $n=0; $/;"	v	language:PHP
 n	.\application\libraries\MY_Pagination.php	/^					$n = ($i == 0) ? '' : $i;$/;"	v	language:PHP
 n	.\application\libraries\Smarty-3.1.14\libs\plugins\shared.mb_str_replace.php	/^                $n = max(count($search), count($replace));$/;"	v	language:PHP
@@ -17685,7 +17749,7 @@ node	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_templ
 nodeCount	.\application\libraries\Doctrine\ORM\Internal\CommitOrderCalculator.php	/^        $nodeCount = count($this->_classes);$/;"	v	language:PHP
 nodeValue	.\ckfinder\core\connector\php\php5\Utils\XmlNode.php	/^    function __construct($nodeName, $nodeValue = null)$/;"	v	language:PHP
 nofields	.\swfupload\libs\mysql.class.php	/^		$nofields = array();$/;"	v	language:PHP
-noisenum	.\application\models\captcha_model.php	/^public $noisenum  = NULL ;  \/\/鏉傜偣鏁伴噺$/;"	v	language:PHP
+noisenum	.\application\models\captcha_model.php	/^public $noisenum  = NULL ;  \/\/杂点数量$/;"	v	language:PHP
 nonUniqueResult	.\application\libraries\Doctrine\ORM\Internal\Hydration\HydrationException.php	/^    public static function nonUniqueResult()$/;"	f	language:PHP
 non_displayables	.\system\core\Common.php	/^		$non_displayables = array();$/;"	v	language:PHP
 nonemptyComponents	.\application\libraries\Doctrine\ORM\Internal\Hydration\ArrayHydrator.php	/^        $nonemptyComponents = array();$/;"	v	language:PHP
@@ -17720,7 +17784,7 @@ not_like	.\system\database\DB_active_rec.php	/^	public function not_like($field,
 notices	.\charts\ExportHandlers\PHP\FCExporter.php	/^$notices = "" ;$/;"	v	language:PHP
 notify_page	.\application\controllers\front\alipay.php	/^    function notify_page() {$/;"	f	language:PHP
 notify_url	.\application\controllers\front\alipay.php	/^        $notify_url = $this->Alipay_Model->notify_url;$/;"	v	language:PHP
-notify_url	.\application\models\alipay_model.php	/^        $this->notify_url = "http:\/\/www.derui88.com\/corcms\/alipay\/notify_page\/"; \/\/浜ゆ槗杩囩▼涓湇鍔″櫒閫氱煡鐨勯〉闈紝鍗冲紓姝ラ€氱煡锛岃瀹為檯鏈嶅姟鍣ㄧ幆澧冧腑锛岃鐢?http:\/\/鏍煎紡鐨勫畬鏁磋矾寰勶紝涓嶅緱鍚湁鍙傛暟$/;"	v	language:PHP
+notify_url	.\application\models\alipay_model.php	/^        $this->notify_url = "http:\/\/www.derui88.com\/corcms\/alipay\/notify_page\/"; \/\/交易过程中服务器通知的页面，即异步通知，请实际服务器环境中，要用 http:\/\/格式的完整路径，不得含有参数$/;"	v	language:PHP
 notify_url	.\application\models\alipay_model.php	/^    var $notify_url;$/;"	v	language:PHP
 notify_url	.\tools\alipay\alipayapi.php	/^        $notify_url = "http:\/\/www.xxx.com\/create_direct_pay_by_user-PHP-UTF-8\/notify_url.php";$/;"	v	language:PHP
 notify_verify	.\application\models\alipay_model.php	/^    function notify_verify() {$/;"	f	language:PHP
@@ -18043,12 +18107,14 @@ oneToOneMappingArray	.\application\libraries\Doctrine\ORM\Tools\Export\Driver\Ph
 oneToOneMappingArray	.\application\libraries\Doctrine\ORM\Tools\Export\Driver\YamlExporter.php	/^                $oneToOneMappingArray = array($/;"	v	language:PHP
 onload	.\swfupload\index.php	/^		window.onload = function() {$/;"	j	language:PHP
 only	.\application\libraries\Doctrine\ORM\Mapping\Driver\AnnotationDriver.php	/^                \/\/ filter for the declaring class only, callbacks from parents will already be registered.$/;"	c	language:PHP
+onmousedown	.\application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^document.onmousedown = function(e)$/;"	j	language:PHP
+onmouseup	.\application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^document.onmouseup = function(e)$/;"	j	language:PHP
 op	.\application\libraries\Doctrine\Common\Collections\Expr\Comparison.php	/^        $this->op = $operator;$/;"	v	language:PHP
 op	.\application\libraries\Doctrine\Common\Collections\Expr\Comparison.php	/^    private $op;$/;"	v	language:PHP
 op	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_select_date.php	/^            $op = $start_year > $end_year ? -1 : 1;$/;"	v	language:PHP
 op	.\system\libraries\Xmlrpc.php	/^		$op  = "POST {$this->path} HTTP\/1.0$r";$/;"	v	language:PHP
-opRe	.\tools\UenuProbe\index.php	/^        $opRe = "閰嶇疆鍙傛暟 <b>".$_POST['opName']."<\/b> 妫€娴嬬粨鏋滐細".getcon($_POST['opName']);$/;"	v	language:PHP
-opRe	.\tools\UenuProbe\uenu.php	/^        $opRe = "閰嶇疆鍙傛暟 <b>".$_POST['opName']."<\/b> 妫€娴嬬粨鏋滐細".getcon($_POST['opName']);$/;"	v	language:PHP
+opRe	.\tools\UenuProbe\index.php	/^        $opRe = "配置参数 <b>".$_POST['opName']."<\/b> 检测结果：".getcon($_POST['opName']);$/;"	v	language:PHP
+opRe	.\tools\UenuProbe\uenu.php	/^        $opRe = "配置参数 <b>".$_POST['opName']."<\/b> 检测结果：".getcon($_POST['opName']);$/;"	v	language:PHP
 opReShow	.\tools\UenuProbe\index.php	/^        $opReShow = "show";$/;"	v	language:PHP
 opReShow	.\tools\UenuProbe\index.php	/^    $opReShow = "none";$/;"	v	language:PHP
 opReShow	.\tools\UenuProbe\uenu.php	/^        $opReShow = "show";$/;"	v	language:PHP
@@ -18337,9 +18403,9 @@ orphanRemovals	.\application\libraries\Doctrine\ORM\UnitOfWork.php	/^        $th
 orphanRemovals	.\application\libraries\Doctrine\ORM\UnitOfWork.php	/^    private $orphanRemovals = array();$/;"	v	language:PHP
 orphanedForeignKeys	.\application\libraries\Doctrine\DBAL\Schema\SchemaDiff.php	/^    public $orphanedForeignKeys = array();$/;"	v	language:PHP
 os	.\tools\UenuProbe\index.php	/^$os = explode(" ", php_uname()); if ($os[0] =="Windows") {echo "height:292px";} else {echo "height:356px";}$/;"	v	language:PHP
-os	.\tools\UenuProbe\index.php	/^<div class="info3">鏈嶅姟鍣ㄦ搷浣滅郴缁?\/div><div class="info4"><?php $os = explode(" ", php_uname()); echo $os[0]; echo "&nbsp;&nbsp;";$/;"	v	language:PHP
+os	.\tools\UenuProbe\index.php	/^<div class="info3">服务器操作系统<\/div><div class="info4"><?php $os = explode(" ", php_uname()); echo $os[0]; echo "&nbsp;&nbsp;";$/;"	v	language:PHP
 os	.\tools\UenuProbe\uenu.php	/^$os = explode(" ", php_uname()); if ($os[0] =="Windows") {echo "height:292px";} else {echo "height:356px";}$/;"	v	language:PHP
-os	.\tools\UenuProbe\uenu.php	/^<div class="info3">鏈嶅姟鍣ㄦ搷浣滅郴缁?\/div><div class="info4"><?php $os = explode(" ", php_uname()); echo $os[0]; echo "&nbsp;&nbsp;";$/;"	v	language:PHP
+os	.\tools\UenuProbe\uenu.php	/^<div class="info3">服务器操作系统<\/div><div class="info4"><?php $os = explode(" ", php_uname()); echo $os[0]; echo "&nbsp;&nbsp;";$/;"	v	language:PHP
 other	.\application\libraries\Doctrine\ORM\UnitOfWork.php	/^                                    $other = $this->em->find($targetClass->name, $relatedId);$/;"	v	language:PHP
 other	.\application\libraries\Doctrine\ORM\UnitOfWork.php	/^                                    $other = $this->em->getProxyFactory()->getProxy($assoc2['targetEntity'], $relatedId);$/;"	v	language:PHP
 other	.\application\libraries\Doctrine\ORM\UnitOfWork.php	/^                        $other = $prop->getValue($entity);$/;"	v	language:PHP
@@ -18362,7 +18428,7 @@ out	.\system\libraries\Table.php	/^		$out = $this->template['table_open'];$/;"	v
 out	.\system\libraries\Trackback.php	/^		$out	= '';$/;"	v	language:PHP
 out	.\system\libraries\Trackback.php	/^		$out = "";$/;"	v	language:PHP
 out_string	.\application\models\trans_model.php	/^		$out_string = $this->bingtrans(implode($tag,$inputs),$this->get_lang_code('zh','alias'),$this->get_lang_code($rs['lang_type'],'alias'));$/;"	v	language:PHP
-out_trade_no	.\application\controllers\front\alipay.php	/^        $out_trade_no = local_to_gmt(now()); \/\/ 鍞竴璁㈠崟鍙凤紝杩欓噷鐢熸垚浜嗕竴涓?Unix 鏃堕棿鐨勪緥瀛?/;"	v	language:PHP
+out_trade_no	.\application\controllers\front\alipay.php	/^        $out_trade_no = local_to_gmt(now()); \/\/ 唯一订单号，这里生成了一个 Unix 时间的例子$/;"	v	language:PHP
 out_trade_no	.\tools\alipay\alipayapi.php	/^        $out_trade_no = $_POST['WIDout_trade_no'];$/;"	v	language:PHP
 out_trade_no	.\tools\alipay\notify_url.php	/^	$out_trade_no = $_POST['out_trade_no'];$/;"	v	language:PHP
 out_trade_no	.\tools\alipay\return_url.php	/^	$out_trade_no = $_GET['out_trade_no'];$/;"	v	language:PHP
@@ -18737,7 +18803,7 @@ params	.\application\libraries\curl.php	/^			$params = http_build_query($params,
 params	.\application\libraries\curl.php	/^	public function _simple_call($method, $url, $params = array(), $options = array())$/;"	v	language:PHP
 params	.\application\libraries\init_db.php	/^ 		$params = array( 		$/;"	v	language:PHP
 params	.\application\libraries\tpl.php	/^    function fetch_page_content($resource_name, $params = array())   {    	$/;"	v	language:PHP
-params	.\application\libraries\tpl.php	/^    function view($resource_name, $params = array())   {  $/;"	v	language:PHP
+params	.\application\libraries\tpl.php	/^    function view($resource_name, $params = array())   {$/;"	v	language:PHP
 params	.\application\models\common_model.php	/^		$params = array( 		$/;"	v	language:PHP
 params	.\charts\ExportHandlers\PHP\FCExporter.php	/^		$params = bang ( $strParams , array( "|" , "=" ) );$/;"	v	language:PHP
 params	.\system\core\Hooks.php	/^			$params = $data['params'];$/;"	v	language:PHP
@@ -18958,7 +19024,7 @@ partition	.\application\libraries\Doctrine\ORM\PersistentCollection.php	/^    pu
 partitionSchema	.\application\libraries\Doctrine\DBAL\Sharding\SQLAzure\SQLAzureFederationsSynchronizer.php	/^    private function partitionSchema(Schema $schema)$/;"	f	language:PHP
 partner	.\application\controllers\front\alipay.php	/^        $partner = $this->Alipay_Model->partner;$/;"	v	language:PHP
 partner	.\application\libraries\alipay.php	/^		$partner=trim($this->aliapy_config['partner']);$/;"	v	language:PHP
-partner	.\application\models\alipay_model.php	/^        $this->partner = '2088002085673643'; \/\/鍚堜綔韬唤鑰匢D$/;"	v	language:PHP
+partner	.\application\models\alipay_model.php	/^        $this->partner = '2088002085673643'; \/\/合作身份者ID$/;"	v	language:PHP
 partner	.\application\models\alipay_model.php	/^    var $partner;$/;"	v	language:PHP
 partner	.\tools\alipay\lib\alipay_notify.class.php	/^		$partner = trim($this->alipay_config['partner']);$/;"	v	language:PHP
 parts	.\application\libraries\Doctrine\DBAL\Platforms\AbstractPlatform.php	/^            $parts = array_map(array($this, "quoteIdentifier"), explode(".", $str));$/;"	v	language:PHP
@@ -19111,8 +19177,8 @@ payload	.\system\libraries\Xmlrpc.php	/^		$this->payload = "<?xml version=\\"1.0
 payload	.\system\libraries\Xmlrpc.php	/^	var $payload;$/;"	v	language:PHP
 payload	.\system\libraries\Xmlrpcs.php	/^		$payload  = '<?xml version="1.0" encoding="'.$this->xmlrpc_defencoding.'"?'.'>'."\\n";$/;"	v	language:PHP
 payment_type	.\tools\alipay\alipayapi.php	/^        $payment_type = "1";$/;"	v	language:PHP
-paymethod	.\application\controllers\front\alipay.php	/^            $paymethod = "bankPay";  \/\/榛樿鏀粯鏂瑰紡锛屽洓涓€煎彲閫夛細bankPay(缃戦摱); cartoon(鍗￠€?; directPay(浣欓); CASH(缃戠偣鏀粯)$/;"	v	language:PHP
-paymethod	.\application\controllers\front\alipay.php	/^            $paymethod = "directPay"; \/\/榛樿鏀粯鏂瑰紡锛屽洓涓€煎彲閫夛細bankPay(缃戦摱); cartoon(鍗￠€?; directPay(浣欓); CASH(缃戠偣鏀粯)$/;"	v	language:PHP
+paymethod	.\application\controllers\front\alipay.php	/^            $paymethod = "bankPay";  \/\/默认支付方式，四个值可选：bankPay(网银); cartoon(卡通); directPay(余额); CASH(网点支付)$/;"	v	language:PHP
+paymethod	.\application\controllers\front\alipay.php	/^            $paymethod = "directPay"; \/\/默认支付方式，四个值可选：bankPay(网银); cartoon(卡通); directPay(余额); CASH(网点支付)$/;"	v	language:PHP
 pb	.\application\libraries\Doctrine\Symfony\Component\Console\Shell.php	/^                $pb = new ProcessBuilder();$/;"	v	language:PHP
 pconnect	.\system\database\DB_driver.php	/^	var $pconnect		= FALSE;$/;"	v	language:PHP
 pdata	.\tools\faisunsql_v40_utf8\index.php	/^	$pdata=explode("|",$data);$/;"	v	language:PHP
@@ -19396,7 +19462,7 @@ possibleAliases	.\application\libraries\Doctrine\ORM\Tools\Pagination\LimitSubqu
 post	.\application\controllers\backend\admins.php	/^	 		$post  = $this->input->post('main');$/;"	v	language:PHP
 post	.\application\controllers\backend\system_manage.php	/^	    $post = $this->input->post();$/;"	v	language:PHP
 post	.\application\libraries\curl.php	/^	public function post($params = array(), $options = array())$/;"	f	language:PHP
-post	.\application\models\alipay_model.php	/^            $post = $this->para_filter($_POST); \/\/瀵规墍鏈塒OST杩斿洖鐨勫弬鏁板幓绌?/;"	v	language:PHP
+post	.\application\models\alipay_model.php	/^            $post = $this->para_filter($_POST); \/\/对所有POST返回的参数去空$/;"	v	language:PHP
 post	.\system\core\Input.php	/^			$post = array();$/;"	v	language:PHP
 post	.\system\core\Input.php	/^	function post($index = NULL, $xss_clean = FALSE)$/;"	f	language:PHP
 postConnect	.\application\libraries\Doctrine\DBAL\Event\Listeners\MysqlSessionInit.php	/^    public function postConnect(ConnectionEventArgs $args)$/;"	f	language:PHP
@@ -19527,8 +19593,8 @@ preserve_filepath	.\system\libraries\Zip.php	/^	function read_dir($path, $preser
 preserve_filepath	.\system\libraries\Zip.php	/^	function read_file($path, $preserve_filepath = FALSE)$/;"	v	language:PHP
 prestr	.\application\libraries\alipay.php	/^		$prestr='';$/;"	v	language:PHP
 prestr	.\application\libraries\alipay.php	/^		$prestr=substr($prestr, 0, count($prestr)-2);$/;"	v	language:PHP
-prestr	.\application\models\alipay_model.php	/^        $prestr = $prestr . $security_code; \/\/鎶婃嫾鎺ュ悗鐨勫瓧绗︿覆鍐嶄笌瀹夊叏鏍￠獙鐮佺洿鎺ヨ繛鎺ヨ捣鏉?/;"	v	language:PHP
-prestr	.\application\models\alipay_model.php	/^        $prestr = $this->create_linkstring($sort_array); \/\/鎶婃暟缁勬墍鏈夊厓绱狅紝鎸夌収鈥滃弬鏁?鍙傛暟鍊尖€濈殑妯″紡鐢ㄢ€?鈥濆瓧绗︽嫾鎺ユ垚瀛楃涓?/;"	v	language:PHP
+prestr	.\application\models\alipay_model.php	/^        $prestr = $prestr . $security_code; \/\/把拼接后的字符串再与安全校验码直接连接起来$/;"	v	language:PHP
+prestr	.\application\models\alipay_model.php	/^        $prestr = $this->create_linkstring($sort_array); \/\/把数组所有元素，按照“参数=参数值”的模式用“&”字符拼接成字符串$/;"	v	language:PHP
 prestr	.\tools\alipay\lib\alipay_md5.function.php	/^	$prestr = $prestr . $key;$/;"	v	language:PHP
 prestr	.\tools\alipay\lib\alipay_notify.class.php	/^		$prestr = createLinkstring($para_sort);$/;"	v	language:PHP
 prestr	.\tools\alipay\lib\alipay_submit.class.php	/^		$prestr = createLinkstring($para_sort);$/;"	v	language:PHP
@@ -20050,7 +20116,7 @@ rand	.\system\libraries\Encrypt.php	/^		$rand = '';$/;"	v	language:PHP
 randColor	.\application\models\captcha_model.php	/^   $randColor = imageColorAllocate($this->image, rand(0, 255), rand(0, 255), rand(0, 255));$/;"	v	language:PHP
 random_element	.\system\helpers\array_helper.php	/^	function random_element($array)$/;"	f	language:PHP
 random_string	.\system\helpers\string_helper.php	/^	function random_string($type = 'alnum', $len = 8)$/;"	f	language:PHP
-randtext	.\application\models\captcha_model.php	/^   $randtext = rand(0, 9);  \/\/楠岃瘉鐮佹暟瀛?0-9闅忔満鏁?/;"	v	language:PHP
+randtext	.\application\models\captcha_model.php	/^   $randtext = rand(0, 9);  \/\/验证码数字 0-9随机数$/;"	v	language:PHP
 rangeDecl	.\application\libraries\Doctrine\ORM\Query\Exec\MultiTableDeleteExecutor.php	/^        $rangeDecl = new AST\\RangeVariableDeclaration($primaryClass->name, $primaryDqlAlias);$/;"	v	language:PHP
 rangeDecl	.\application\libraries\Doctrine\ORM\Query\Exec\MultiTableUpdateExecutor.php	/^        $rangeDecl = new AST\\RangeVariableDeclaration($primaryClass->name, $updateClause->aliasIdentificationVariable);$/;"	v	language:PHP
 rangeVariableDeclaration	.\application\libraries\Doctrine\ORM\Query\AST\IdentificationVariableDeclaration.php	/^        $this->rangeVariableDeclaration = $rangeVariableDecl;$/;"	v	language:PHP
@@ -20460,7 +20526,7 @@ response	.\system\libraries\Xmlrpc.php	/^		$response = $this->values_parsing($re
 response	.\system\libraries\Xmlrpc.php	/^		$this->response = $this->result->decode();$/;"	v	language:PHP
 response	.\system\libraries\Xmlrpc.php	/^	var $response			= array();  \/\/ Response from remote server$/;"	v	language:PHP
 response	.\tools\chat\chat_backend.php	/^$response = array();$/;"	v	language:PHP
-response	.\tools\comet长连接聊天\chat_backend.php	/^$response = array();$/;"	v	language:PHP
+response	.\tools\comet����������\chat_backend.php	/^$response = array();$/;"	v	language:PHP
 responseText	.\tools\alipay\lib\alipay_core.function.php	/^	$responseText = curl_exec($curl);$/;"	v	language:PHP
 responseTxt	.\application\libraries\alipay.php	/^			$responseTxt='true';$/;"	v	language:PHP
 responseTxt	.\application\libraries\alipay.php	/^		$responseTxt=@file_get_contents($veryfy_url);$/;"	v	language:PHP
@@ -20709,7 +20775,7 @@ returnBytes	.\ckfinder\core\connector\php\php5\Utils\Misc.php	/^    public stati
 return_insert_id	.\swfupload\libs\mysql.class.php	/^	public function insert($data, $table, $return_insert_id = false, $replace = false) {$/;"	v	language:PHP
 return_page	.\application\controllers\front\alipay.php	/^    function return_page() {$/;"	f	language:PHP
 return_url	.\application\controllers\front\alipay.php	/^        $return_url = $this->Alipay_Model->return_url;$/;"	v	language:PHP
-return_url	.\application\models\alipay_model.php	/^        $this->return_url = "http:\/\/www.derui88.com\/corcms\/alipay\/return_page\/"; \/\/浜ゆ槗杩囩▼涓湇鍔″櫒閫氱煡鐨勯〉闈紝鍗冲紓姝ラ€氱煡锛岃瀹為檯鏈嶅姟鍣ㄧ幆澧冧腑锛岃鐢?http:\/\/鏍煎紡鐨勫畬鏁磋矾寰勶紝涓嶅緱鍚湁鍙傛暟$/;"	v	language:PHP
+return_url	.\application\models\alipay_model.php	/^        $this->return_url = "http:\/\/www.derui88.com\/corcms\/alipay\/return_page\/"; \/\/交易过程中服务器通知的页面，即异步通知，请实际服务器环境中，要用 http:\/\/格式的完整路径，不得含有参数$/;"	v	language:PHP
 return_url	.\application\models\alipay_model.php	/^    var $return_url;$/;"	v	language:PHP
 return_url	.\tools\alipay\alipayapi.php	/^        $return_url = "http:\/\/www.xxx.com\/create_direct_pay_by_user-PHP-UTF-8\/return_url.php";$/;"	v	language:PHP
 return_verify	.\application\models\alipay_model.php	/^    function return_verify() {$/;"	f	language:PHP
@@ -20724,9 +20790,9 @@ returns	.\system\core\URI.php	/^	 * based on the number provided.  If there is n
 returns	.\system\libraries\Upload.php	/^				 * it is possible that this function returns an empty string$/;"	f	language:PHP
 returnsReference	.\application\libraries\Doctrine\Common\Reflection\StaticReflectionMethod.php	/^    public function returnsReference() { throw new ReflectionException('Method not implemented'); }$/;"	f	language:PHP
 returnstr	.\application\helpers\common_helper.php	/^         $returnstr=$returnstr.substr($sourcestr,$i,1); $/;"	v	language:PHP
-returnstr	.\application\helpers\common_helper.php	/^         $returnstr=$returnstr.substr($sourcestr,$i,2);  \/\/锟斤拷锟斤拷UTF-8锟斤拷锟斤拷娣讹拷锟斤拷锟?锟斤拷锟斤拷锟斤拷锟斤拷锟街凤拷锟斤拷为锟斤拷锟斤拷锟街凤拷 $/;"	v	language:PHP
-returnstr	.\application\helpers\common_helper.php	/^         $returnstr=$returnstr.substr($sourcestr,$i,3);  \/\/锟斤拷锟斤拷UTF-8锟斤拷锟斤拷娣讹拷锟斤拷锟?锟斤拷锟斤拷锟斤拷锟斤拷锟街凤拷锟斤拷为锟斤拷锟斤拷锟街凤拷         $/;"	v	language:PHP
-returnstr	.\application\helpers\common_helper.php	/^       $returnstr = $returnstr . $tail;          \/\/锟斤拷锟斤拷锟斤拷锟斤拷时锟斤拷尾锟斤拷锟斤拷锟斤拷省锟皆猴拷$/;"	v	language:PHP
+returnstr	.\application\helpers\common_helper.php	/^         $returnstr=$returnstr.substr($sourcestr,$i,2);  \/\/根据UTF-8编码规范，将2个连续的字符计为单个字符 $/;"	v	language:PHP
+returnstr	.\application\helpers\common_helper.php	/^         $returnstr=$returnstr.substr($sourcestr,$i,3);  \/\/根据UTF-8编码规范，将3个连续的字符计为单个字符         $/;"	v	language:PHP
+returnstr	.\application\helpers\common_helper.php	/^       $returnstr = $returnstr . $tail;          \/\/超过长度时在尾处加上省略号$/;"	v	language:PHP
 returnstr	.\application\helpers\common_helper.php	/^    $returnstr = '';$/;"	v	language:PHP
 returnstr	.\application\helpers\common_helper.php	/^   $returnstr=''; $/;"	v	language:PHP
 retval	.\application\libraries\Doctrine\DBAL\Driver\IBMDB2\DB2Statement.php	/^            $retval = @db2_execute($this->_stmt);$/;"	v	language:PHP
@@ -20765,6 +20831,8 @@ retvalue	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_t
 reval	.\application\libraries\invoke.php	/^ 		$reval  = "";$/;"	v	language:PHP
 reval	.\application\models\advs_model.php	/^		$reval  = js_url('jquery-1.9.1.min','front')."\\n";$/;"	v	language:PHP
 reval	.\application\models\advs_model.php	/^		$reval = js_url('jquery-1.9.1.min','front')."\\n";$/;"	v	language:PHP
+reval	.\application\models\advs_model.php	/^	$reval  = "";$/;"	v	language:PHP
+reval	.\application\models\advs_model.php	/^	$reval  = js_url('jquery-1.9.1.min','front')."\\n";$/;"	v	language:PHP
 reval	.\application\models\common_model.php	/^ 		$reval = array();$/;"	v	language:PHP
 reval	.\application\models\modules_model.php	/^				$reval  = "";$/;"	v	language:PHP
 reval	.\application\models\modules_model.php	/^				$reval = "ALTER TABLE `$tb` ";$/;"	v	language:PHP
@@ -21297,7 +21365,7 @@ security	.\system\core\Input.php	/^		$this->security =& $SEC;$/;"	v	language:PHP
 security_class	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^            $security_class = $this->security_class;$/;"	v	language:PHP
 security_class	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^    public $security_class = 'Smarty_Security';$/;"	v	language:PHP
 security_code	.\application\controllers\front\alipay.php	/^        $security_code = $this->Alipay_Model->security_code;$/;"	v	language:PHP
-security_code	.\application\models\alipay_model.php	/^        $this->security_code = "pqn64w9u77f2i4l0qtubf32oke6o4qa3"; \/\/瀹夊叏妫€楠岀爜$/;"	v	language:PHP
+security_code	.\application\models\alipay_model.php	/^        $this->security_code = "pqn64w9u77f2i4l0qtubf32oke6o4qa3"; \/\/安全检验码$/;"	v	language:PHP
 security_code	.\application\models\alipay_model.php	/^    var $security_code;$/;"	v	language:PHP
 security_policy	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^            $this->security_policy = $security_class;$/;"	v	language:PHP
 security_policy	.\application\libraries\Smarty-3.1.14\libs\Smarty.class.php	/^            $this->security_policy = new $security_class($this);$/;"	v	language:PHP
@@ -21383,7 +21451,7 @@ selects	.\application\libraries\Doctrine\ORM\QueryBuilder.php	/^        $selects
 self	.\application\libraries\Doctrine\Symfony\Component\Yaml\Unescaper.php	/^        $self = $this;$/;"	v	language:PHP
 selfReferential	.\application\libraries\Doctrine\ORM\Persisters\BasicEntityPersister.php	/^                $selfReferential = ($mapping['targetEntity'] == $mapping['sourceEntity']);$/;"	v	language:PHP
 seller_email	.\application\controllers\front\alipay.php	/^        $seller_email = $this->Alipay_Model->seller_email;$/;"	v	language:PHP
-seller_email	.\application\models\alipay_model.php	/^        $this->seller_email = "conqweal@sohu.com"; \/\/绛剧害鏀粯瀹濊处鍙锋垨鍗栧鏀粯瀹濆笎鎴?/;"	v	language:PHP
+seller_email	.\application\models\alipay_model.php	/^        $this->seller_email = "conqweal@sohu.com"; \/\/签约支付宝账号或卖家支付宝帐户$/;"	v	language:PHP
 seller_email	.\application\models\alipay_model.php	/^    var $seller_email;$/;"	v	language:PHP
 seller_email	.\tools\alipay\alipayapi.php	/^        $seller_email = $_POST['WIDseller_email'];$/;"	v	language:PHP
 selrev	.\tools\faisunsql_v40_utf8\index.php	/^			function selrev() {$/;"	f	language:PHP
@@ -21680,6 +21748,7 @@ setInteractive	.\application\libraries\Doctrine\Symfony\Component\Console\Input\
 setJoinTable	.\application\libraries\Doctrine\ORM\Mapping\Builder\ManyToManyAssociationBuilder.php	/^    public function setJoinTable($name)$/;"	f	language:PHP
 setJoinedTableInheritance	.\application\libraries\Doctrine\ORM\Mapping\Builder\ClassMetadataBuilder.php	/^    public function setJoinedTableInheritance()$/;"	f	language:PHP
 setKeywordListClass	.\application\libraries\Doctrine\DBAL\Tools\Console\Command\ReservedWordsCommand.php	/^    public function setKeywordListClass($name, $class)$/;"	f	language:PHP
+setLeft	.\application\compiles\69164d1440cda3085cad42aa7f3faaff147ae8ac.file.main_top.htm.php	/^function setLeft(tid){$/;"	f	language:PHP
 setLength	.\application\libraries\Doctrine\DBAL\Schema\Column.php	/^    public function setLength($length)$/;"	f	language:PHP
 setLifecycleCallbacks	.\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php	/^    public function setLifecycleCallbacks(array $callbacks)$/;"	f	language:PHP
 setLifetime	.\application\libraries\Doctrine\DBAL\Cache\QueryCacheProfile.php	/^    public function setLifetime($lifetime)$/;"	f	language:PHP
@@ -21786,6 +21855,7 @@ setStaticPropertyValue	.\application\libraries\Doctrine\Common\Reflection\Static
 setStyle	.\application\libraries\Doctrine\Symfony\Component\Console\Formatter\OutputFormatter.php	/^    public function setStyle($name, OutputFormatterStyleInterface $style)$/;"	f	language:PHP
 setStyle	.\application\libraries\Doctrine\Symfony\Component\Console\Formatter\OutputFormatterInterface.php	/^    function setStyle($name, OutputFormatterStyleInterface $style);$/;"	f	language:PHP
 setSubclasses	.\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php	/^    public function setSubclasses(array $subclasses)$/;"	f	language:PHP
+setTab	.\application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^	function setTab(tid){$/;"	f	language:PHP
 setTable	.\application\libraries\Doctrine\ORM\Mapping\Builder\ClassMetadataBuilder.php	/^    public function setTable($name)$/;"	f	language:PHP
 setTableName	.\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php	/^    public function setTableName($tableName)$/;"	f	language:PHP
 setTables	.\application\libraries\Doctrine\ORM\Mapping\Driver\DatabaseDriver.php	/^    public function setTables($entityTables, $manyToManyTables)$/;"	f	language:PHP
@@ -21896,6 +21966,7 @@ set_var	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_co
 set_wordwrap	.\system\libraries\Email.php	/^	public function set_wordwrap($wordwrap = TRUE)$/;"	f	language:PHP
 set_xss_clean	.\system\libraries\Upload.php	/^	public function set_xss_clean($flag = FALSE)$/;"	f	language:PHP
 setnoise	.\application\models\captcha_model.php	/^protected function setnoise()$/;"	f	language:PHP
+seton	.\application\compiles\3477c7ab26b6fd3483fdf412b2268b827a6473d7.file.main_left.htm.php	/^	function seton(t,url) {$/;"	f	language:PHP
 setter	.\application\libraries\Doctrine\Common\Persistence\PersistentObject.php	/^            $setter = ($targetMetadata->isCollectionValuedAssociation($mappedByField) ? "add" : "set").$mappedByField;$/;"	v	language:PHP
 setupDownload	.\charts\ExportHandlers\PHP\FCExporter.php	/^function setupDownload ( $exportFile, $exportType, $target="_self" ) $/;"	f	language:PHP
 setupInlineSubTemplate	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_template.php	/^    public function setupInlineSubTemplate($template, $cache_id, $compile_id, $caching, $cache_lifetime, $data, $parent_scope, $hash)$/;"	f	language:PHP
@@ -21976,8 +22047,9 @@ show_hide_js	.\system\libraries\Profiler.php	/^			$show_hide_js = '(<span style=
 show_img	.\application\models\captcha_model.php	/^public function show_img()$/;"	f	language:PHP
 show_next_prev	.\system\libraries\Calendar.php	/^	var $show_next_prev	= FALSE;$/;"	v	language:PHP
 show_php_error	.\system\core\Exceptions.php	/^	function show_php_error($severity, $message, $filepath, $line)$/;"	f	language:PHP
+show_upload	.\application\compiles\50d1dc5d956dcf8018ad4fc72ccccfaee196163a.file.advs_add.htm.php	/^	function show_upload(adv_type){$/;"	f	language:PHP
 show_url	.\application\controllers\front\alipay.php	/^        $show_url = $this->Alipay_Model->show_url;$/;"	v	language:PHP
-show_url	.\application\models\alipay_model.php	/^        $this->show_url = "http:\/\/www.derui88.com\/corcms\/"; \/\/缃戠珯鍟嗗搧鐨勫睍绀哄湴鍧€锛屼笉鍏佽鍔??id=123 杩欑被鑷畾涔夊弬鏁?/;"	v	language:PHP
+show_url	.\application\models\alipay_model.php	/^        $this->show_url = "http:\/\/www.derui88.com\/corcms\/"; \/\/网站商品的展示地址，不允许加 ?id=123 这类自定义参数$/;"	v	language:PHP
 show_url	.\application\models\alipay_model.php	/^    var $show_url;$/;"	v	language:PHP
 show_url	.\tools\alipay\alipayapi.php	/^        $show_url = $_POST['WIDshow_url'];$/;"	v	language:PHP
 showadv	.\application\models\advs_model.php	/^function showadv($id,$type='backend'){	$/;"	f	language:PHP
@@ -22002,7 +22074,7 @@ sign	.\application\models\alipay_model.php	/^        $sign = '';$/;"	v	language:
 sign	.\application\models\alipay_model.php	/^    function sign($prestr, $sign_type) {$/;"	f	language:PHP
 sign_type	.\application\controllers\front\alipay.php	/^        $sign_type = $this->Alipay_Model->sign_type;$/;"	v	language:PHP
 sign_type	.\application\libraries\alipay.php	/^	var $sign_type='MD5';$/;"	v	language:PHP
-sign_type	.\application\models\alipay_model.php	/^        $this->sign_type = "MD5"; \/\/鍔犲瘑鏂瑰紡 涓嶉渶淇敼$/;"	v	language:PHP
+sign_type	.\application\models\alipay_model.php	/^        $this->sign_type = "MD5"; \/\/加密方式 不需修改$/;"	v	language:PHP
 sign_type	.\application\models\alipay_model.php	/^    function build_mysign($sort_array, $security_code, $sign_type = "MD5") {$/;"	v	language:PHP
 sign_type	.\application\models\alipay_model.php	/^    var $sign_type;$/;"	v	language:PHP
 signature	.\system\libraries\Xmlrpcs.php	/^				$signature = $this->methods[$method_name]['signature'];$/;"	v	language:PHP
@@ -22044,9 +22116,9 @@ size	.\application\libraries\Doctrine\ORM\UnitOfWork.php	/^    public function s
 size	.\application\libraries\init_zip.php	/^    $size = $header['compressed_size'];$/;"	v	language:PHP
 size	.\application\libraries\init_zip.php	/^    $size = $header['size'];$/;"	v	language:PHP
 size	.\application\libraries\init_zip.php	/^$size = filesize($zip_name);$/;"	v	language:PHP
-size	.\application\models\captcha_model.php	/^  $this->size = $this->width\/$this->len; \/\/瀹藉害闄や互瀛楃鏁?= 姣忎釜瀛楃闇€瑕佺殑瀹藉害$/;"	v	language:PHP
-size	.\application\models\captcha_model.php	/^  if($this->size>$this->height) $this->size=$this->height; \/\/濡傛灉 姣忎釜瀛楃闇€瑕佺殑瀹藉害 澶т簬鍥剧墖楂樺害 鍒?鍗曞瓧绗﹀搴?楂樺害(姝ｆ柟鍧?$/;"	v	language:PHP
-size	.\application\models\captcha_model.php	/^protected $size;   \/\/姣忎釜瀛楃鐨勫搴?px)$/;"	v	language:PHP
+size	.\application\models\captcha_model.php	/^  $this->size = $this->width\/$this->len; \/\/宽度除以字符数 = 每个字符需要的宽度$/;"	v	language:PHP
+size	.\application\models\captcha_model.php	/^  if($this->size>$this->height) $this->size=$this->height; \/\/如果 每个字符需要的宽度 大于图片高度 则 单字符宽度=高度(正方块)$/;"	v	language:PHP
+size	.\application\models\captcha_model.php	/^protected $size;   \/\/每个字符的宽度(px)$/;"	v	language:PHP
 size	.\application\models\common_model.php	/^		$size = filesize($file_path);$/;"	v	language:PHP
 size	.\ckfinder\core\connector\php\php5\CommandHandler\GetFiles.php	/^                        $size = (int)round($size \/ 1024);$/;"	v	language:PHP
 size	.\ckfinder\core\connector\php\php5\CommandHandler\GetFiles.php	/^                        $size = 1;$/;"	v	language:PHP
@@ -22063,8 +22135,8 @@ size_stat	.\application\models\common_model.php	/^			$size_stat = ceil($size\/10
 size_stat	.\application\models\common_model.php	/^			$size_stat = ceil($size\/1024\/1024).'M';			$/;"	v	language:PHP
 size_str	.\system\libraries\Image_lib.php	/^		$this->size_str		= $vals['3'];$/;"	v	language:PHP
 size_str	.\system\libraries\Image_lib.php	/^	var $size_str			= '';$/;"	v	language:PHP
-sizestr2str	.\application\models\captcha_model.php	/^  $this->sizestr2str = $this->size\/10 ; \/\/浠ユ瘡涓瓧绗︾殑1\/10瀹藉害涓?瀛楃闂磋窛$/;"	v	language:PHP
-sizestr2str	.\application\models\captcha_model.php	/^protected $sizestr2str;  \/\/瀛楃闂磋窛$/;"	v	language:PHP
+sizestr2str	.\application\models\captcha_model.php	/^  $this->sizestr2str = $this->size\/10 ; \/\/以每个字符的1\/10宽度为 字符间距$/;"	v	language:PHP
+sizestr2str	.\application\models\captcha_model.php	/^protected $sizestr2str;  \/\/字符间距$/;"	v	language:PHP
 skipUntil	.\application\libraries\Doctrine\Common\Lexer.php	/^    public function skipUntil($type)$/;"	f	language:PHP
 skip_elements	.\system\libraries\Typography.php	/^	var $skip_elements	= 'p|pre|ol|ul|dl|object|table|h\\d';$/;"	v	language:PHP
 skippedFilesNode	.\ckfinder\plugins\zip\plugin.php	/^    $this->skippedFilesNode = new CKFinder_Connector_Utils_XmlNode("Errors");$/;"	v	language:PHP
@@ -22213,11 +22285,11 @@ sortByField	.\application\libraries\Doctrine\Common\Collections\Expr\ClosureExpr
 sortCommands	.\application\libraries\Doctrine\Symfony\Component\Console\Application.php	/^    private function sortCommands($commands)$/;"	f	language:PHP
 sort_array	.\application\models\alipay_model.php	/^        $sort_array = $this->arg_sort($this->parameter);$/;"	v	language:PHP
 sort_array	.\application\models\alipay_model.php	/^        $sort_array = array();$/;"	v	language:PHP
-sort_get	.\application\models\alipay_model.php	/^            $sort_get = $this->arg_sort($get); \/\/瀵规墍鏈塆ET鍙嶉鍥炴潵鐨勬暟鎹帓搴?/;"	v	language:PHP
+sort_get	.\application\models\alipay_model.php	/^            $sort_get = $this->arg_sort($get); \/\/对所有GET反馈回来的数据排序$/;"	v	language:PHP
 sort_options	.\system\libraries\javascript\Jquery.php	/^			$sort_options = '';$/;"	v	language:PHP
 sort_options	.\system\libraries\javascript\Jquery.php	/^			$sort_options = array();$/;"	v	language:PHP
 sort_options	.\system\libraries\javascript\Jquery.php	/^			$sort_options = implode(",", $sort_options);$/;"	v	language:PHP
-sort_post	.\application\models\alipay_model.php	/^            $sort_post = $this->arg_sort($post); \/\/瀵规墍鏈塒OST鍙嶉鍥炴潵鐨勬暟鎹帓搴?/;"	v	language:PHP
+sort_post	.\application\models\alipay_model.php	/^            $sort_post = $this->arg_sort($post); \/\/对所有POST反馈回来的数据排序$/;"	v	language:PHP
 sortable	.\system\libraries\javascript\Jquery.php	/^	function sortable($element, $options = array())$/;"	f	language:PHP
 sorted	.\application\libraries\Doctrine\ORM\Internal\CommitOrderCalculator.php	/^        $sorted = array_reverse($this->_sorted);$/;"	v	language:PHP
 sortedId	.\application\libraries\Doctrine\ORM\EntityManager.php	/^            $sortedId = array($class->identifier[0] => $sortedId);$/;"	v	language:PHP
@@ -22340,7 +22412,7 @@ sql	.\application\controllers\backend\menu.php	/^			 		$sql = "update ".$this->i
 sql	.\application\controllers\backend\menu.php	/^			 		$sql = 'select  r_code  from  '.$this->init_db->table('system_rights','r_code').' where r_id=?';$/;"	v	language:PHP
 sql	.\application\controllers\backend\system_manage.php	/^ 		$sql = $this->init_db->adjust_sql_str($sql);$/;"	v	language:PHP
 sql	.\application\controllers\backend\system_manage.php	/^ 		$sql = $this->input->post("sql");$/;"	v	language:PHP
-sql	.\application\controllers\front\detail.php	/^ 		$sql =		"select info_id,info_title,'涓婁竴绡? as type  from (select info_id,info_title from ".$this->init_db->table('infos') ." where info_class_sn like '010702%' and info_id>".$about['info_id']." order by info_id asc limit 1) as b  $/;"	v	language:PHP
+sql	.\application\controllers\front\detail.php	/^ 		$sql =		"select info_id,info_title,'上一篇' as type  from (select info_id,info_title from ".$this->init_db->table('infos') ." where info_class_sn like '010702%' and info_id>".$about['info_id']." order by info_id asc limit 1) as b  $/;"	v	language:PHP
 sql	.\application\libraries\Doctrine\DBAL\Connection.php	/^        $sql  = 'UPDATE ' . $tableName . ' SET ' . implode(', ', $set)$/;"	v	language:PHP
 sql	.\application\libraries\Doctrine\DBAL\Driver\IBMDB2\DB2Connection.php	/^        $sql = $args[0];$/;"	v	language:PHP
 sql	.\application\libraries\Doctrine\DBAL\Driver\Mysqli\MysqliConnection.php	/^        $sql = $args[0];$/;"	v	language:PHP
@@ -23119,9 +23191,9 @@ str	.\tools\faisunsql_v40_utf8\index.php	/^		$str=str_replace('\\\\\\'','\\'\\''
 str	.\tools\faisunsql_v40_utf8\index.php	/^	$str = fsql_StrCode(serialize($_POST),"ENCODE");$/;"	v	language:PHP
 str	.\tools\faisunsql_v40_utf8\index.php	/^	$str="<input type='$type' name='$name' value='$value' class='tabletitle' style='border:3px double #FF6600' $script> ";$/;"	v	language:PHP
 str	.\tools\faisunsql_v40_utf8\index.php	/^	$str="<tr class='tabledata' onmouseover='this.className=\\"tabledata_on\\";' onmouseout='this.className=\\"tabledata\\";'>\\r\\n";$/;"	v	language:PHP
-str	.\tools\test.php	/^$str = 'abc鎬х殑瑙勫畾鍙箍娉涚殑瑕嗙洊澶ф矙鍙戞墿澶у弻鏂?;$/;"	v	language:PHP
-str1	.\tools\faisunsql_v40_utf8\index.php	/^				$str1="<br>-= 浠ヤ笅鏁版嵁琛ㄥ鐞嗗畬鎴?=- <div class='borderdiv' style='width:150px;height:100px;overflow:auto;' align=left>";$/;"	v	language:PHP
-str2	.\tools\faisunsql_v40_utf8\index.php	/^				$str2=tablestart("瀵煎嚭鐘舵€?,300);$/;"	v	language:PHP
+str	.\tools\test.php	/^$str = 'abc性的规定可广泛的覆盖大沙发扩大双方';$/;"	v	language:PHP
+str1	.\tools\faisunsql_v40_utf8\index.php	/^				$str1="<br>-= 以下数据表处理完成 =- <div class='borderdiv' style='width:150px;height:100px;overflow:auto;' align=left>";$/;"	v	language:PHP
+str2	.\tools\faisunsql_v40_utf8\index.php	/^				$str2=tablestart("导出状态",300);$/;"	v	language:PHP
 strFormat	.\charts\ExportHandlers\PHP\FCExporter.php	/^	$strFormat = strtolower( $strFormat );$/;"	v	language:PHP
 strHexColor	.\charts\ExportHandlers\PHP\Resources\FCExporter_IMG.php	/^			$strHexColor = str_pad($strHexColor, 6, '0', STR_PAD_LEFT);$/;"	v	language:PHP
 strPixelRGB_hex	.\charts\ExportHandlers\PHP\Resources\FCExporter_PDF.php	/^					$strPixelRGB_hex=str_repeat(($rgb),$r);$/;"	v	language:PHP
@@ -23131,7 +23203,7 @@ strTmpObj	.\charts\ExportHandlers\PHP\Resources\FCExporter_PDF.php	/^		$strTmpOb
 strTmpObj	.\charts\ExportHandlers\PHP\Resources\FCExporter_PDF.php	/^		$strTmpObj="1 0 obj<<\\n\/Author (FusionCharts)\\n\/Title (FusionCharts)\\n\/Creator (FusionCharts)\\n>>\\nendobj\\n";$/;"	v	language:PHP
 strTmpObj	.\charts\ExportHandlers\PHP\Resources\FCExporter_PDF.php	/^		$strTmpObj="2 0 obj\\n<< \/Type \/Catalog \/Pages 3 0 R >>\\nendobj\\n";$/;"	v	language:PHP
 strTmpObj	.\charts\ExportHandlers\PHP\Resources\FCExporter_PDF.php	/^		$strTmpObj="3 0 obj\\n<<  \/Type \/Pages \/Kids [";$/;"	v	language:PHP
-str_length	.\application\helpers\common_helper.php	/^   $str_length=strlen($sourcestr);            \/\/锟街凤拷锟斤拷锟斤拷锟街斤拷锟斤拷 $/;"	v	language:PHP
+str_length	.\application\helpers\common_helper.php	/^   $str_length=strlen($sourcestr);            \/\/字符串的字节数 $/;"	v	language:PHP
 str_r	.\application\models\common_model.php	/^			$str_r = preg_replace("\/<\\?php(.*?)\\?>\/ies","eval(stripcslashes('\\\\1'))",$str_r);$/;"	v	language:PHP
 str_r	.\application\models\common_model.php	/^		$str_r = implode('',$reval);$/;"	v	language:PHP
 strategy	.\application\libraries\Doctrine\ORM\Mapping\Driver\XmlDriver.php	/^                $strategy = isset($idElement->generator['strategy']) ?$/;"	v	language:PHP
@@ -23249,7 +23321,7 @@ sub_table	.\application\models\modules_model.php	/^		$sub_table = $this->main($r
 subclass	.\system\core\Loader.php	/^			$subclass = APPPATH.'libraries\/'.$subdir.config_item('subclass_prefix').$class.'.php';$/;"	v	language:PHP
 subdir	.\system\core\Loader.php	/^			$subdir = substr($class, 0, $last_slash + 1);$/;"	v	language:PHP
 subdir	.\system\core\Loader.php	/^		$subdir = '';$/;"	v	language:PHP
-subject	.\application\controllers\front\alipay.php	/^        $subject = $this->input->post('subject', TRUE); \/\/ 璁㈠崟鍚嶇О锛屾樉绀哄湪鏀粯瀹濇敹閾跺彴閲岀殑鈥滃晢鍝佸悕绉扳€濋噷锛屾樉绀哄湪鏀粯瀹濈殑浜ゆ槗绠＄悊鐨勨€滃晢鍝佸悕绉扳€濈殑鍒楄〃閲屻€?/;"	v	language:PHP
+subject	.\application\controllers\front\alipay.php	/^        $subject = $this->input->post('subject', TRUE); \/\/ 订单名称，显示在支付宝收银台里的“商品名称”里，显示在支付宝的交易管理的“商品名称”的列表里。$/;"	v	language:PHP
 subject	.\application\libraries\Doctrine\Symfony\Component\Yaml\Inline.php	/^        $subject = substr($scalar, $i);$/;"	v	language:PHP
 subject	.\application\libraries\Doctrine\Symfony\Component\Yaml\Inline.php	/^        $subject = substr($subject, 0, strlen($items[0]) + 1);$/;"	v	language:PHP
 subject	.\application\libraries\Smarty-3.1.14\libs\plugins\shared.mb_str_replace.php	/^                    $subject = smarty_mb_str_replace($string, $replace, $subject, $c);$/;"	v	language:PHP
@@ -24008,14 +24080,14 @@ text	.\system\core\Common.php	/^		if (isset($stati[$code]) AND $text == '')$/;"	
 text	.\system\core\Common.php	/^	function set_status_header($code = 200, $text = '')$/;"	v	language:PHP
 text	.\system\core\Output.php	/^	function set_status_header($code = 200, $text = '')$/;"	v	language:PHP
 textColor	.\application\helpers\imgcode_helper.php	/^$textColor = imagecolorallocate($img, $r, $g, $b);$/;"	v	language:PHP
-textColor	.\application\models\captcha_model.php	/^   $textColor = imageColorAllocate($this->image, rand(50, 155), rand(50, 155), rand(50, 155)); \/\/鍥剧墖鏂囧瓧棰滆壊$/;"	v	language:PHP
+textColor	.\application\models\captcha_model.php	/^   $textColor = imageColorAllocate($this->image, rand(50, 155), rand(50, 155), rand(50, 155)); \/\/图片文字颜色$/;"	v	language:PHP
 textIndent	.\application\libraries\Doctrine\Symfony\Component\Yaml\Parser.php	/^        $textIndent = $matches['indent'];$/;"	v	language:PHP
 text_color	.\system\helpers\captcha_helper.php	/^		$text_color		= imagecolorallocate ($im, 204, 153, 153);$/;"	v	language:PHP
 text_encode	.\application\libraries\Smarty-3.1.14\libs\plugins\function.mailto.php	/^        $text_encode = '';$/;"	v	language:PHP
 text_types	.\system\libraries\Ftp.php	/^		$text_types = array($/;"	v	language:PHP
 text_watermark	.\system\libraries\Image_lib.php	/^	function text_watermark()$/;"	f	language:PHP
-textsize	.\application\models\captcha_model.php	/^   if (!isset($this->textsize) ) $this->textsize = rand( ($this->size-$this->size\/10), ($this->size + $this->size\/10) ); \/\/濡傛灉鏈畾涔夊瓧浣撳ぇ灏?鍒欏彇闅忔満澶у皬 $/;"	v	language:PHP
-textsize	.\application\models\captcha_model.php	/^public $textsize = 10;    \/\/瀛椾綋澶у皬$/;"	v	language:PHP
+textsize	.\application\models\captcha_model.php	/^   if (!isset($this->textsize) ) $this->textsize = rand( ($this->size-$this->size\/10), ($this->size + $this->size\/10) ); \/\/如果未定义字体大小 则取随机大小 $/;"	v	language:PHP
+textsize	.\application\models\captcha_model.php	/^public $textsize = 10;    \/\/字体大小$/;"	v	language:PHP
 th_attr	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_table.php	/^    $th_attr = '';$/;"	v	language:PHP
 that	.\application\libraries\Doctrine\Common\Annotations\AnnotationRegistry.php	/^     * IMPORTANT: Loaders have to return true if they loaded a class that could contain the searched annotation class.$/;"	c	language:PHP
 that	.\application\libraries\Doctrine\Common\Comparable.php	/^ * Comparable interface that allows to compare two value objects to each other for similarity.$/;"	i	language:PHP
@@ -24125,9 +24197,9 @@ time	.\system\libraries\Profiler.php	/^					$time = number_format($db->query_tim
 time	.\system\libraries\Session.php	/^			$time = mktime(gmdate("H", $now), gmdate("i", $now), gmdate("s", $now), gmdate("m", $now), gmdate("d", $now), gmdate("Y", $now));$/;"	v	language:PHP
 time	.\system\libraries\Session.php	/^			$time = time();$/;"	v	language:PHP
 time	.\tools\UenuProbe\index.php	/^        $time = ($timeEnd["usec"]-$timeStart["usec"])\/1000000+$timeEnd["sec"]-$timeStart["sec"];$/;"	v	language:PHP
-time	.\tools\UenuProbe\index.php	/^        $time = round($time, 6)."绉?;$/;"	v	language:PHP
+time	.\tools\UenuProbe\index.php	/^        $time = round($time, 6)."秒";$/;"	v	language:PHP
 time	.\tools\UenuProbe\uenu.php	/^        $time = ($timeEnd["usec"]-$timeStart["usec"])\/1000000+$timeEnd["sec"]-$timeStart["sec"];$/;"	v	language:PHP
-time	.\tools\UenuProbe\uenu.php	/^        $time = round($time, 6)."绉?;$/;"	v	language:PHP
+time	.\tools\UenuProbe\uenu.php	/^        $time = round($time, 6)."秒";$/;"	v	language:PHP
 timeEnd	.\tools\UenuProbe\index.php	/^        $timeEnd = gettimeofday();$/;"	v	language:PHP
 timeEnd	.\tools\UenuProbe\uenu.php	/^        $timeEnd = gettimeofday();$/;"	v	language:PHP
 timeStart	.\tools\UenuProbe\index.php	/^        $timeStart = gettimeofday();$/;"	v	language:PHP
@@ -24266,6 +24338,7 @@ to_update	.\application\controllers\backend\common.php	/^	 		$to_update = array(
 today	.\system\libraries\Calendar.php	/^		$today = array('cal_cell_start_today', 'cal_cell_content_today', 'cal_cell_no_content_today', 'cal_cell_end_today');$/;"	v	language:PHP
 toggle	.\system\libraries\Javascript.php	/^	function toggle($element = 'this')$/;"	f	language:PHP
 toggleClass	.\system\libraries\Javascript.php	/^	function toggleClass($element = 'this', $class='')$/;"	f	language:PHP
+toggleMenu	.\application\compiles\e5f007cbaa184d3fceba651aa94b5f29d4d07f2a.file.main_center.htm.php	/^function toggleMenu()$/;"	f	language:PHP
 token	.\application\libraries\Doctrine\Common\Annotations\DocParser.php	/^            $token = $this->lexer->lookahead;$/;"	v	language:PHP
 token	.\application\libraries\Doctrine\Common\Annotations\DocParser.php	/^    private function syntaxError($expected, $token = null)$/;"	v	language:PHP
 token	.\application\libraries\Doctrine\Common\Lexer.php	/^        $this->token = $this->lookahead;$/;"	v	language:PHP
@@ -24421,12 +24494,12 @@ top	.\application\helpers\JSON.php	/^                        $top = end($stk);$/
 top	.\application\models\pictures_model.php	/^		$top  = $this->db->get()->first_row('array');$/;"	v	language:PHP
 top	.\application\models\pictures_model.php	/^		$top = config_item('base_url')."\/swfupload\/uploads\/".$top['p_thumb'];$/;"	v	language:PHP
 top	.\system\libraries\Image_lib.php	/^				$top = 0;$/;"	v	language:PHP
-top_last	.\application\libraries\init_db.php	/^		$top_last = ($count-$limit_from)<$page_size? $count-$limit_from:$page_size;	\/\/鍒ゆ柇鍗曟搴旀彁鍙栬褰?$/;"	v	language:PHP
+top_last	.\application\libraries\init_db.php	/^		$top_last = ($count-$limit_from)<$page_size? $count-$limit_from:$page_size;	\/\/判断单次应提取记录	$/;"	v	language:PHP
 top_level_only	.\system\helpers\file_helper.php	/^				if (@is_dir($source_dir.$file) AND strncmp($file, '.', 1) !== 0 AND $top_level_only === FALSE)$/;"	v	language:PHP
 top_level_only	.\system\helpers\file_helper.php	/^	function get_dir_file_info($source_dir, $top_level_only = TRUE, $_recursion = FALSE)$/;"	v	language:PHP
 top_login	.\application\controllers\front\index.php	/^  function top_login()$/;"	f	language:PHP
 topay	.\application\controllers\front\alipay.php	/^    function topay() {$/;"	f	language:PHP
-total	.\application\controllers\front\alipay.php	/^            $total = $_POST['total_fee']; \/\/鑾峰彇鏀粯瀹濅紶閫掕繃鏉ョ殑鎬讳环鏍?/;"	v	language:PHP
+total	.\application\controllers\front\alipay.php	/^            $total = $_POST['total_fee']; \/\/获取支付宝传递过来的总价格$/;"	v	language:PHP
 total	.\application\libraries\tree.php	/^            $total = count($child);$/;"	v	language:PHP
 total	.\system\database\DB_active_rec.php	/^		for ($i = 0, $total = count($this->ar_set); $i < $total; $i = $i + 100)$/;"	v	language:PHP
 total	.\system\libraries\Cart.php	/^		$total = 0;$/;"	v	language:PHP
@@ -24436,7 +24509,7 @@ total	.\system\libraries\Typography.php	/^		for ($i = 0, $total = count($html_co
 total_chunks	.\system\libraries\Typography.php	/^		$total_chunks = count($chunks);$/;"	v	language:PHP
 total_days	.\system\libraries\Calendar.php	/^		$total_days = $this->get_total_days($month, $year);$/;"	v	language:PHP
 total_errors	.\system\libraries\Form_validation.php	/^		$total_errors = count($this->_error_array);$/;"	v	language:PHP
-total_fee	.\application\controllers\front\alipay.php	/^        $total_fee = $this->input->post('total_fee', TRUE); \/\/ 璁㈠崟鎬婚噾棰濓紝鏄剧ず鍦ㄦ敮浠樺疂鏀堕摱鍙伴噷鐨勨€滃簲浠樻€婚鈥濋噷锛屽彲浠ユ湁涓や綅灏忔暟銆?/;"	v	language:PHP
+total_fee	.\application\controllers\front\alipay.php	/^        $total_fee = $this->input->post('total_fee', TRUE); \/\/ 订单总金额，显示在支付宝收银台里的“应付总额”里，可以有两位小数。$/;"	v	language:PHP
 total_fee	.\tools\alipay\alipayapi.php	/^        $total_fee = $_POST['WIDtotal_fee'];$/;"	v	language:PHP
 total_files	.\application\libraries\init_zip.php	/^var $total_files = 0;$/;"	v	language:PHP
 total_files	.\tools\unpack.php	/^var $total_files = 0;$/;"	v	language:PHP
@@ -24488,7 +24561,7 @@ trace	.\application\libraries\Doctrine\Symfony\Component\Console\Application.php
 trace	.\system\database\DB_driver.php	/^		$trace = debug_backtrace();$/;"	v	language:PHP
 trace	.\system\libraries\Driver.php	/^		$trace = debug_backtrace();$/;"	v	language:PHP
 trackingPolicy	.\application\libraries\Doctrine\ORM\Tools\Export\Driver\XmlExporter.php	/^        $trackingPolicy = $this->_getChangeTrackingPolicyString($metadata->changeTrackingPolicy);$/;"	v	language:PHP
-trade	.\application\controllers\front\alipay.php	/^            $trade = $_POST['out_trade_no']; \/\/鑾峰彇鏀粯瀹濅紶閫掕繃鏉ョ殑璁㈠崟鍙?/;"	v	language:PHP
+trade	.\application\controllers\front\alipay.php	/^            $trade = $_POST['out_trade_no']; \/\/获取支付宝传递过来的订单号$/;"	v	language:PHP
 trade_no	.\tools\alipay\notify_url.php	/^	$trade_no = $_POST['trade_no'];$/;"	v	language:PHP
 trade_no	.\tools\alipay\return_url.php	/^	$trade_no = $_GET['trade_no'];$/;"	v	language:PHP
 trade_status	.\tools\alipay\notify_url.php	/^	$trade_status = $_POST['trade_status'];$/;"	v	language:PHP
@@ -24804,6 +24877,7 @@ types	.\application\libraries\Doctrine\ORM\Query.php	/^        $types     = arra
 types	.\application\libraries\Doctrine\ORM\Query\Exec\MultiTableUpdateExecutor.php	/^                    $types = isset($this->_sqlParameters[$i]['types']) ? $this->_sqlParameters[$i]['types'] : array();$/;"	v	language:PHP
 types	.\application\libraries\Doctrine\ORM\Query\Exec\MultiTableUpdateExecutor.php	/^                $types      = array();$/;"	v	language:PHP
 types	.\application\libraries\Doctrine\ORM\Tools\EntityGenerator.php	/^        $types          = Type::getTypesMap();$/;"	v	language:PHP
+types	.\application\models\advs_model.php	/^ 	$types =  array($/;"	v	language:PHP
 types	.\system\libraries\Image_lib.php	/^		$types = array(1 => 'gif', 2 => 'jpeg', 3 => 'png');$/;"	v	language:PHP
 types	.\system\libraries\Upload.php	/^				$types = array(1 => 'gif', 2 => 'jpeg', 3 => 'png');$/;"	v	language:PHP
 types	.\system\libraries\Upload.php	/^		if ( ! is_array($types) && $types == '*')$/;"	v	language:PHP
@@ -25103,8 +25177,8 @@ used	.\system\helpers\form_helper.php	/^ * Helper function used by some of the f
 used	.\system\helpers\smiley_helper.php	/^		$used = array();$/;"	v	language:PHP
 used	.\system\helpers\text_helper.php	/^		\/\/ Prior to PHP 5, the highligh function used icky <font> tags$/;"	f	language:PHP
 used_tags	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_template.php	/^    public $used_tags = array();$/;"	v	language:PHP
-usedumppass	.\tools\faisunsql_v40_utf8\index.php	/^		$usedumppass=1;  \/\/瀵煎叆鏁版嵁鏃舵槸鍚︿娇鐢ㄥ鍏ュ瘑鐮併€傚鏋滄偍蹇樿浜嗗鍏ュ瘑鐮侊紝璇锋妸鍊兼敼涓?0 銆侶TTP鏂瑰紡涓嬭浇鏁版嵁鏂囦欢涓嶈兘鍙栨秷瀵煎叆瀵嗙爜銆?/;"	v	language:PHP
-usedumppass	.\tools\faisunsql_v40_utf8\index\index.php	/^		$usedumppass=1;  \/\/瀵煎叆鏁版嵁鏃舵槸鍚︿娇鐢ㄥ鍏ュ瘑鐮併€傚鏋滄偍蹇樿浜嗗鍏ュ瘑鐮侊紝璇锋妸鍊兼敼涓?0 銆侶TTP鏂瑰紡涓嬭浇鏁版嵁鏂囦欢涓嶈兘鍙栨秷瀵煎叆瀵嗙爜銆?/;"	v	language:PHP
+usedumppass	.\tools\faisunsql_v40_utf8\index.php	/^		$usedumppass=1;  \/\/导入数据时是否使用导入密码。如果您忘记了导入密码，请把值改为 0 。HTTP方式下载数据文件不能取消导入密码。$/;"	v	language:PHP
+usedumppass	.\tools\faisunsql_v40_utf8\index\index.php	/^		$usedumppass=1;  \/\/导入数据时是否使用导入密码。如果您忘记了导入密码，请把值改为 0 。HTTP方式下载数据文件不能取消导入密码。$/;"	v	language:PHP
 user	.\application\libraries\Doctrine\DBAL\Connection.php	/^        $user = isset($this->_params['user']) ? $this->_params['user'] : null;$/;"	v	language:PHP
 user	.\application\libraries\Doctrine\DBAL\Connections\MasterSlaveConnection.php	/^        $user = isset($connectionParams['user']) ? $connectionParams['user'] : null;$/;"	v	language:PHP
 user	.\application\libraries\Doctrine\DBAL\Driver\PDOConnection.php	/^    public function __construct($dsn, $user = null, $password = null, array $options = null)$/;"	v	language:PHP
@@ -25217,12 +25291,12 @@ v1	.\application\models\common_model.php	/^				$v1 = explode(',',$v);$/;"	v	lang
 v2_override	.\system\libraries\Image_lib.php	/^				$v2_override = ($gd_version == 2) ? TRUE : FALSE;$/;"	v	language:PHP
 v2_override	.\system\libraries\Image_lib.php	/^		$v2_override = FALSE;$/;"	v	language:PHP
 v2_override	.\system\libraries\Image_lib.php	/^		\/\/  if ($this->image_library == 'gd2' AND function_exists('imagecreatetruecolor') AND $v2_override == FALSE)$/;"	v	language:PHP
-vDiff	.\application\models\tree_model.php	/^				   $vDiff = $v[vLeftId] - $vt[vTargetRightId]; \/*宸﹀彸鍊肩殑宸€?\/$/;"	v	language:PHP
-vDiff	.\application\models\tree_model.php	/^			 	   $vDiff = $vt[vTargetRightId] - 1 - $v[vRightId]; \/*宸﹀彸鍊肩殑宸€?\/$/;"	v	language:PHP
+vDiff	.\application\models\tree_model.php	/^				   $vDiff = $v[vLeftId] - $vt[vTargetRightId]; \/*左右值的差值*\/$/;"	v	language:PHP
+vDiff	.\application\models\tree_model.php	/^			 	   $vDiff = $vt[vTargetRightId] - 1 - $v[vRightId]; \/*左右值的差值*\/$/;"	v	language:PHP
 vDiff	.\application\models\tree_model.php	/^			       $vDiff = $v[vRightId]-$v[vLeftId]+1;$/;"	v	language:PHP
 vDiff	.\application\models\tree_model.php	/^	        	   $vDiff = $v[vRightId]-$v[vLeftId]+1;$/;"	v	language:PHP
-vLevelDiff	.\application\models\tree_model.php	/^			       $vLevelDiff = $vt[vTargetLevel] + 1 - $v[vLevel]; \/*Level鐨勫樊鍊?\/$/;"	v	language:PHP
-vLevelDiff	.\application\models\tree_model.php	/^	   			   $vLevelDiff = $vt[vTargetLevel] + 1 - $v[vLevel]; \/*Level鐨勫樊鍊?\/$/;"	v	language:PHP
+vLevelDiff	.\application\models\tree_model.php	/^			       $vLevelDiff = $vt[vTargetLevel] + 1 - $v[vLevel]; \/*Level的差值*\/$/;"	v	language:PHP
+vLevelDiff	.\application\models\tree_model.php	/^	   			   $vLevelDiff = $vt[vTargetLevel] + 1 - $v[vLevel]; \/*Level的差值*\/$/;"	v	language:PHP
 v_id	.\application\controllers\front\vote.php	/^		$v_id = $this->uri->segment(4);$/;"	v	language:PHP
 val	.\application\helpers\JSON.php	/^                                    $val = $this->decode($parts[2]);$/;"	v	language:PHP
 val	.\application\libraries\Doctrine\DBAL\Driver\PDOSqlsrv\Connection.php	/^			$val = substr($val, 0, -1);$/;"	v	language:PHP
@@ -25264,17 +25338,17 @@ val	.\system\libraries\Xmlrpc.php	/^			$this->val = new XML_RPC_Values();$/;"	v	
 val	.\system\libraries\Xmlrpc.php	/^			if (strcasecmp($val,'true')==0 OR $val==1 OR ($val==true && strcasecmp($val,'false')))$/;"	v	language:PHP
 val	.\system\libraries\Xmlrpc.php	/^	var $val = 0;$/;"	v	language:PHP
 valFloat	.\tools\UenuProbe\index.php	/^        $valFloat = test_float();$/;"	v	language:PHP
-valFloat	.\tools\UenuProbe\index.php	/^    $valFloat = (false == empty($_POST['pFloat']))?$_POST['pFloat']:"鏈祴璇?;$/;"	v	language:PHP
+valFloat	.\tools\UenuProbe\index.php	/^    $valFloat = (false == empty($_POST['pFloat']))?$_POST['pFloat']:"未测试";$/;"	v	language:PHP
 valFloat	.\tools\UenuProbe\uenu.php	/^        $valFloat = test_float();$/;"	v	language:PHP
-valFloat	.\tools\UenuProbe\uenu.php	/^    $valFloat = (false == empty($_POST['pFloat']))?$_POST['pFloat']:"鏈祴璇?;$/;"	v	language:PHP
+valFloat	.\tools\UenuProbe\uenu.php	/^    $valFloat = (false == empty($_POST['pFloat']))?$_POST['pFloat']:"未测试";$/;"	v	language:PHP
 valInt	.\tools\UenuProbe\index.php	/^        $valInt = test_int();$/;"	v	language:PHP
-valInt	.\tools\UenuProbe\index.php	/^    $valInt = (false == empty($_POST['pInt']))?$_POST['pInt']:"鏈祴璇?;$/;"	v	language:PHP
+valInt	.\tools\UenuProbe\index.php	/^    $valInt = (false == empty($_POST['pInt']))?$_POST['pInt']:"未测试";$/;"	v	language:PHP
 valInt	.\tools\UenuProbe\uenu.php	/^        $valInt = test_int();$/;"	v	language:PHP
-valInt	.\tools\UenuProbe\uenu.php	/^    $valInt = (false == empty($_POST['pInt']))?$_POST['pInt']:"鏈祴璇?;$/;"	v	language:PHP
+valInt	.\tools\UenuProbe\uenu.php	/^    $valInt = (false == empty($_POST['pInt']))?$_POST['pInt']:"未测试";$/;"	v	language:PHP
 valIo	.\tools\UenuProbe\index.php	/^        $valIo = test_io();$/;"	v	language:PHP
-valIo	.\tools\UenuProbe\index.php	/^    $valIo = (false == empty($_POST['pIo']))?$_POST['pIo']:"鏈祴璇?;$/;"	v	language:PHP
+valIo	.\tools\UenuProbe\index.php	/^    $valIo = (false == empty($_POST['pIo']))?$_POST['pIo']:"未测试";$/;"	v	language:PHP
 valIo	.\tools\UenuProbe\uenu.php	/^        $valIo = test_io();$/;"	v	language:PHP
-valIo	.\tools\UenuProbe\uenu.php	/^    $valIo = (false == empty($_POST['pIo']))?$_POST['pIo']:"鏈祴璇?;$/;"	v	language:PHP
+valIo	.\tools\UenuProbe\uenu.php	/^    $valIo = (false == empty($_POST['pIo']))?$_POST['pIo']:"未测试";$/;"	v	language:PHP
 val_str	.\system\database\drivers\mysql\mysql_utility.php	/^				$val_str = '';$/;"	v	language:PHP
 val_str	.\system\database\drivers\mysql\mysql_utility.php	/^				$val_str = preg_replace( "\/, $\/" , "" , $val_str);$/;"	v	language:PHP
 valid	.\application\libraries\Doctrine\ORM\Internal\Hydration\IterableResult.php	/^    public function valid()$/;"	f	language:PHP
@@ -25583,7 +25657,7 @@ vars	.\system\core\Loader.php	/^			$vars = array($vars => $val);$/;"	v	language:
 vars	.\system\core\Loader.php	/^		$vars = $this->_ci_object_to_array($vars);$/;"	v	language:PHP
 vars	.\system\core\Loader.php	/^	public function vars($vars = array(), $val = '')$/;"	f	language:PHP
 vars	.\system\core\Loader.php	/^	public function view($view, $vars = array(), $return = FALSE)$/;"	v	language:PHP
-vcode	.\application\models\captcha_model.php	/^public $vcode  = NULL; \/\/楠岃瘉鐮佸唴瀹?鏁板瓧)$/;"	v	language:PHP
+vcode	.\application\models\captcha_model.php	/^public $vcode  = NULL; \/\/验证码内容(数字)$/;"	v	language:PHP
 vdir	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_table.php	/^    $vdir = 'down';$/;"	v	language:PHP
 ver	.\system\database\drivers\mssql\mssql_driver.php	/^		$ver = self::_parse_major_version($this->version());$/;"	v	language:PHP
 verb	.\application\libraries\curl.php	/^			$verb = str_replace('simple_', '', $method);$/;"	v	language:PHP
@@ -25645,7 +25719,7 @@ view	.\application\controllers\front\product.php	/^	function view(){$/;"	f	langu
 view	.\application\controllers\front\vote.php	/^	function view()$/;"	f	language:PHP
 view	.\application\libraries\Doctrine\DBAL\Schema\DB2SchemaManager.php	/^        $view = array_change_key_case($view, \\CASE_LOWER);$/;"	v	language:PHP
 view	.\application\libraries\Doctrine\DBAL\Schema\OracleSchemaManager.php	/^        $view = \\array_change_key_case($view, CASE_LOWER);$/;"	v	language:PHP
-view	.\application\libraries\tpl.php	/^    function view($resource_name, $params = array())   {  $/;"	f	language:PHP
+view	.\application\libraries\tpl.php	/^    function view($resource_name, $params = array())   {$/;"	f	language:PHP
 view	.\system\core\Loader.php	/^	public function view($view, $vars = array(), $return = FALSE)$/;"	f	language:PHP
 view2	.\application\controllers\front\download.php	/^	function view2()$/;"	f	language:PHP
 viewName	.\application\libraries\Doctrine\DBAL\Schema\AbstractSchemaManager.php	/^                $viewName = strtolower($view->getQuotedName($this->_platform));$/;"	v	language:PHP
@@ -26005,7 +26079,7 @@ width	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_image.php
 width	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_image.php	/^        $width = round($width * $_resize);$/;"	v	language:PHP
 width	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_image.php	/^    $width = '';$/;"	v	language:PHP
 width	.\application\libraries\Smarty-3.1.14\libs\plugins\shared.mb_wordwrap.php	/^    function smarty_mb_wordwrap($str, $width=75, $break="\\n", $cut=false)$/;"	v	language:PHP
-width	.\application\models\captcha_model.php	/^public $width  = 57; \/\/瀹藉害$/;"	v	language:PHP
+width	.\application\models\captcha_model.php	/^public $width  = 57; \/\/宽度$/;"	v	language:PHP
 width	.\charts\ExportHandlers\PHP\Resources\FCExporter_IMG.php	/^	function FCIMGGenerator($imageData_FCFormat="", $width="", $height="", $bgcolor="ffffff"){$/;"	v	language:PHP
 width	.\charts\ExportHandlers\PHP\Resources\FCExporter_PDF.php	/^	function FCPDFGenerator($imageData_FCFormat="", $width="", $height="", $bgcolor="ffffff"){$/;"	v	language:PHP
 width	.\ckfinder\core\ckfinder_php5.php	/^			$width = intval( $this->Width );$/;"	v	language:PHP
@@ -26756,8 +26830,8 @@ zTracePrompt	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_intern
 zdata	.\tools\faisunsql_v40_utf8\faisunsql_files\zipclass.php	/^        $zdata   = gzcompress($data);$/;"	v	language:PHP
 zdata	.\tools\faisunsql_v40_utf8\faisunsql_files\zipclass.php	/^        $zdata   = substr(substr($zdata, 0, strlen($zdata) - 4), 2);$/;"	v	language:PHP
 zebra	.\system\libraries\javascript\Jquery.php	/^		$zebra  = "\\t\\$(\\"table{$class} tbody tr:nth-child(even)\\").addClass(\\"{$odd}\\");";$/;"	v	language:PHP
-zend	.\tools\UenuProbe\index.php	/^<div class="info03">鏀寔ZEND缂栬瘧杩愯&nbsp;&nbsp;(<?php if($zend="YES") {echo "鐗堟湰:";echo zend_version();}?>)<\/div><div class="info04"><?php echo $zend=(get_cfg_var("zend_optimizer.optimization_level")||get_cfg_var("zend_extension_manager.optimizer_ts")||get_cfg_var("zend_extension_ts")) ?YES:NO?><\/div>$/;"	v	language:PHP
-zend	.\tools\UenuProbe\uenu.php	/^<div class="info03">鏀寔ZEND缂栬瘧杩愯&nbsp;&nbsp;(<?php if($zend="YES") {echo "鐗堟湰:";echo zend_version();}?>)<\/div><div class="info04"><?php echo $zend=(get_cfg_var("zend_optimizer.optimization_level")||get_cfg_var("zend_extension_manager.optimizer_ts")||get_cfg_var("zend_extension_ts")) ?YES:NO?><\/div>$/;"	v	language:PHP
+zend	.\tools\UenuProbe\index.php	/^<div class="info03">支持ZEND编译运行&nbsp;&nbsp;(<?php if($zend="YES") {echo "版本:";echo zend_version();}?>)<\/div><div class="info04"><?php echo $zend=(get_cfg_var("zend_optimizer.optimization_level")||get_cfg_var("zend_extension_manager.optimizer_ts")||get_cfg_var("zend_extension_ts")) ?YES:NO?><\/div>$/;"	v	language:PHP
+zend	.\tools\UenuProbe\uenu.php	/^<div class="info03">支持ZEND编译运行&nbsp;&nbsp;(<?php if($zend="YES") {echo "版本:";echo zend_version();}?>)<\/div><div class="info04"><?php echo $zend=(get_cfg_var("zend_optimizer.optimization_level")||get_cfg_var("zend_extension_manager.optimizer_ts")||get_cfg_var("zend_extension_ts")) ?YES:NO?><\/div>$/;"	v	language:PHP
 zh	.\application\controllers\admin.php	/^	function zh(){$/;"	f	language:PHP
 zip	.\ckfinder\plugins\zip\plugin.php	/^      $zip = new ZipArchive();$/;"	v	language:PHP
 zip	.\ckfinder\plugins\zip\plugin.php	/^    $this->zip = $zip;$/;"	v	language:PHP

@@ -200,7 +200,7 @@ class Mdata extends CI_Controller{
    					$callback = ',top.frmright_reload()';
 		 		// }
 		 		@header("content-type:text/html;charset=utf-8;");
-		 		echo "<script>top.art_dialog_close('淇濆瓨瀹屾瘯.'".$callback.");</script>";
+		 		echo "<script>top.art_dialog_close('".lang('success_save')."'".$callback.");</script>";
 		 		exit;
 			} 
 

@@ -1,0 +1,48 @@
+ <tr>
+      <td height="40" align="right" valign="top">
+      上传图片： <br /></td>
+      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0" class="mytable">
+              <thead>
+              <tr>
+          <th>预览</th>
+          <th width="150" align="center">上传</th>
+          <th align="center">链接</th>
+          <th>广告说明</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+         <!--{foreach from=$detail key=key item=item}-->  
+           
+          <tr>
+          <td>
+            <!--{if $item.adv_pic}-->
+            <img src="<!--{$item.adv_pic}-->" width="100" height="80" class="myimg" onerror="ImgError(this);" />
+            <!--{/if}-->
+            </td>
+          <td align="center">
+            <input name="detail[img][<!--{$key}-->]" type="file" size="15"   >
+            <input name="detail[adv_pic][<!--{$key}-->]" type="hidden"   value="<!--{$item.adv_pic}-->" >           
+            <input name="detail[detail_id][<!--{$key}-->]"  id="detail_id" type="hidden" value="<!--{$item.detail_id}-->"   >  
+            <input name="detail[adv_type][<!--{$key}-->]" type="hidden"  value="3"   >
+          </td>
+          <td align="center"><input type="text"  name="detail[adv_url][<!--{$key}-->]" value="<!--{$item.adv_url}-->"/></td>
+          <td align="center">
+            <input type="text" name="detail[adv_title][<!--{$key}-->]"   value="<!--{$item.adv_title}-->" id="adv_title" />
+          </td>
+          <td align="center">         
+            
+           
+            
+            </td>
+          </tr>
+        
+            <!--{/foreach}-->
+            
+        </table>
+   
+            </td>
+          </tr>
+      </table></td>
+    </tr>

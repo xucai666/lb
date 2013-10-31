@@ -63,6 +63,7 @@ class Advs extends CI_Controller{
 	 		 //数据
 	 		$main = $this->input->post('main');	
 	 		$detail = $this->input->post('detail');	
+	 		
 	 		$data['main'] = $main;
 		 	//验证
 		 	$this->form_validation->set_rules($this->im->validator());
@@ -104,6 +105,7 @@ class Advs extends CI_Controller{
 	 		//分类
  			
  			$data = $this->im->fetch_list();
+ 			$data['adv_types'] = $this->im->adv_types();
 	 		$this->init_page->load_backend_view(strtolower($this->act).'_list',$data);
 		 	
 	 		
