@@ -50,11 +50,7 @@ var theme_backend='http://localhost/lb/application//templates/';
 </script>
 <script language="JavaScript" type="text/javascript" src="http://localhost/lb/application//templates/front/corcms/zh//js//jquery-1.9.1.min.js"></script><script language="JavaScript" type="text/javascript" src="http://localhost/lb/application//templates/front/corcms/zh//js//core.js"></script><script language="JavaScript" type="text/javascript" src="http://localhost/lb/application//templates/front/corcms/zh//js//FormValid.js"></script>
 <base target="_self" />
-<script language="javascript">
-  $(function(){
-    $('#login_panel').load('http://localhost/lb/front/index/top_login'); 
-  })
-</script>
+
 
 </head> 
  <body> 
@@ -69,7 +65,11 @@ var theme_backend='http://localhost/lb/application//templates/';
         <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
           <tr>
             <td width="552" align="right" style="position:relative" id="login_panel" >        
+            <script language="javascript">
+           
+              $('#login_panel').load('http://localhost/lb/front/index/top_login'); 
             
+           </script>
             </td>
           </tr>
           <tr>

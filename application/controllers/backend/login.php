@@ -45,6 +45,7 @@ class Login extends CI_Controller {
 			  $this->load->library('encrypt');		
 			  $this->form_validation->set_rules('user_name',$this->m_lang->username, 'required|callback_user_name_check');
 			  $this->form_validation->set_rules('user_pass', $this->m_lang->password, 'required|callback_user_pass_check');
+			  $this->form_validation->set_rules('captcha', $this->m_lang->captcha, 'required|callback_user_captcha_check');
 			  if ($this->form_validation->run() == FALSE){
 			  	$tpl_name = 'login';
 			  	$this->init_page->load_backend_view($tpl_name);
@@ -61,7 +62,7 @@ class Login extends CI_Controller {
 			  		->where('a.admin_user','\''.$this->input->post("user_name").'\'',false)->get()->result_array();
 			  		$login_info = $login_info_temp[0];
 			  		$this->init_auth->process_login(array("user_name"=>$login_info['admin_user'],"user_id"=>$login_info['admin_id']));
-			  		$this->init_page->pop_redirect($this->m_lang->inp_login_ok.$ucsynlogin,site_url("backend/login/center"),'parent');
+			  		$this->init_page->pop_redirect(null,site_url("backend/login/center"),'parent');
 			  }
 			
 		}catch(Exception $e){
@@ -173,10 +174,9 @@ class Login extends CI_Controller {
 	}
 	
  	//验证码
- 	function sys_valid_code_check(){ 	
- 		return true;	
- 		if($this->session->userdata('sys_valid_code')!=$this->input->post('sys_valid_code')){
- 			$this->form_validation->set_message('sys_valid_code_check',$this->m_lang->inp_pardon.'，'.$this->m_lang->inp_error);
+ 	function user_captcha_check(){ 	
+ 		if(strtolower($this->session->userdata('captcha_backend'))!=strtolower($this->input->post('captcha'))){
+ 			$this->form_validation->set_message('user_captcha_check',$this->m_lang->inp_pardon.'，'.$this->m_lang->inp_error);
 			return FALSE;
  			
  		}
@@ -280,6 +280,19 @@ class Login extends CI_Controller {
 			
 		}
 
+		
+	}
+
+	function action_captcha(){
+		$this->load->library('checkcode');
+		$checkcode = $this->checkcode;
+		$checkcode->code_len = 4;
+		$checkcode->width = 130;
+		$checkcode->height = 20;
+		$checkcode->font_size =14;
+		$checkcode->background = "#ffffff";
+		$this->session->set_userdata('captcha_backend', $checkcode->get_code());
+		$checkcode->doimage();	
 		
 	}
 

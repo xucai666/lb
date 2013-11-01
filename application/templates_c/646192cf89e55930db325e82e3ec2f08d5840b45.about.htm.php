@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8b2ccbca6cd952602225ef14328668bf65dbf08a' => 
     array (
       0 => 'application\\templates\\front\\corcms\\zh\\top.htm',
-      1 => 1383272744,
+      1 => 1383323779,
       2 => 'file',
     ),
     'f32b781624383bf9a74aea8a15fd4bce38251991' => 
@@ -34,12 +34,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     ),
   ),
   'nocache_hash' => '151535273894d0c3190-32943638',
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5273b80731be26_09579392',
-  'has_nocache_code' => false,
   'cache_lifetime' => 3600,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5273d886e3bf26_69651716',
+  'variables' => 
+  array (
+    'dir_front' => 0,
+    'ci_uri' => 0,
+  ),
+  'has_nocache_code' => false,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5273b80731be26_09579392')) {function content_5273b80731be26_09579392($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_5273d886e3bf26_69651716')) {function content_5273d886e3bf26_69651716($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -63,11 +68,7 @@ var theme_backend='http://localhost/lb/application//templates/';
 </script>
 <script language="JavaScript" type="text/javascript" src="http://localhost/lb/application//templates/front/corcms/zh//js//jquery-1.9.1.min.js"></script><script language="JavaScript" type="text/javascript" src="http://localhost/lb/application//templates/front/corcms/zh//js//core.js"></script><script language="JavaScript" type="text/javascript" src="http://localhost/lb/application//templates/front/corcms/zh//js//FormValid.js"></script>
 <base target="_self" />
-<script language="javascript">
-  $(function(){
-    $('#login_panel').load('http://localhost/lb/front/index/top_login'); 
-  })
-</script>
+
 
 </head> 
  <body> 
@@ -82,7 +83,11 @@ var theme_backend='http://localhost/lb/application//templates/';
         <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
           <tr>
             <td width="552" align="right" style="position:relative" id="login_panel" >        
+            <script language="javascript">
+           
+              $('#login_panel').load('http://localhost/lb/front/index/top_login'); 
             
+           </script>
             </td>
           </tr>
           <tr>

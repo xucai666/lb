@@ -8,6 +8,7 @@
  //标签
  $lang['username']													= '账号';
  $lang['password']													= '密码';
+ $lang['captcha']													= '验证';
  $lang['login']													= '登陆';
  
  
