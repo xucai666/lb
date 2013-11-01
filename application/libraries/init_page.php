@@ -46,7 +46,7 @@ class Init_page{
 		$sys_config = $CI->init_cache->cache_fetch('sys_config','develop',lang_get());
 		
 				
-		$this->backend_theme = $sys_config['template'];
+		
 		$this->front_theme = $sys_config['template'];
 		
 		
@@ -100,12 +100,12 @@ class Init_page{
 			if(is_array($view)){
 				foreach($view as $v){
 					
-					$content = $tpl->fetch_page_content('backend/'.$this->backend_theme.'/'.$v,$data);
+					$content = $tpl->fetch_page_content('backend/'.$v,$data);
 					$OUT->append_output($content);
 					
 				}
 			}else{
-				$content = $tpl->fetch_page_content('backend/'.$this->backend_theme.'/'.$view,$data);
+				$content = $tpl->fetch_page_content('backend/'.$view,$data);
 				$OUT->append_output($content);	
 			}	
 			if($return==1){

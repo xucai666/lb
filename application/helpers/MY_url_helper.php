@@ -96,8 +96,8 @@
 	         $lang = $lang?$lang:lang_get();
 	         $c_f = $CI->init_cache->cache_fetch('sys_config');
 	         $c_theme = $c_f['develop']['template'];
-	         $path = base_url(config_item('template_dir').$type."/".$c_theme);
-	         $path = ($type == 'front')? $path.'/'.$lang:$path;
+	         $path = base_url(config_item('template_dir').$type);
+	         $path = ($type == 'front')? $path."/".$c_theme.'/'.$lang:$path;
 	         return $path . '/';
 	     }
 	 }
@@ -131,7 +131,7 @@
 		 * @return string       
 		 */
 	 	function realUrl($url){
-			if(preg_match("/javascript/",$url)||preg_match("/http/",$url)){
+			if(preg_match("/\#/",$url)||preg_match("/javascript/",$url)||preg_match("/http/",$url)){
 				$url_new = $url;
 				
 			}elseif(preg_match("/event/",$url)){

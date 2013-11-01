@@ -97,7 +97,6 @@ class Login extends CI_Controller {
 			$lang_link  = $this->init_cache->cache_fetch("lang_type",null,$lang_show);	
 			$data['lang_link']  = $lang_link[$lang_show];
 			$config = &get_config();
-			$theme = $this->init_page->backend_theme;
 			
 			$data['user_info'] = $this->init_auth->db_user();
 
@@ -190,7 +189,6 @@ class Login extends CI_Controller {
 	function left()
 	{
 		$this->init_auth->execute_auth();		
-		$theme = config_item('backend_theme');
 		$this->init_page->fetch_css('style_left',null,getRootUrl('css','backend'));
 		
 		//加载公共语言包

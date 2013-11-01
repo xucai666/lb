@@ -450,7 +450,7 @@ class tpl extends Smarty
 		$sys_config = $CI->init_cache->cache_fetch('sys_config','develop',lang_get());
 		if($sys_config['debug']) $CI->output->enable_profiler(true);			
         $this->assign("dir_front", config_item('template_dir').'front/'.$sys_config['template'].'/'.$lang_type); // so we can get the full path to CI easily
-        $this->assign("dir_backend", config_item('template_dir').'backend/'.$sys_config['template'].'/'); // so we can get the full path to CI easily
+        $this->assign("dir_backend", config_item('template_dir').'backend/'); // so we can get the full path to CI easily
         $ci_config  = &get_config();
         $this->assign('ci_config',$ci_config);
         $this->assign('ci_uri',ci_uri());

@@ -312,8 +312,8 @@ $config['backend_default_js'] = array('jquery-1.9.1.min','core','FormValid','My9
  
  
  
-$config['front_default_css'] = array('lb');
-$config['front_default_js'] = array('jquery-1.9.1.min','core','FormValid','menu_script');
+$config['front_default_css'] = array('lb','coolMenu');
+$config['front_default_js'] = array('jquery-1.9.1.min','core','FormValid');
 //per page
 $config['per_page'] = '15';
 $config['advs_files'] = array(

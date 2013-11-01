@@ -340,14 +340,7 @@ class Common_model  extends CI_Model{
 		$str_r = implode('',$reval);
 		if(strpos($str_r, '<?php')!==false){
 			
-			
-
 			$str_r = preg_replace("/<\?php(.*?)\?>/ies","eval(stripcslashes('\\1'))",$str_r);
-
-
-			
-
-			
 
 		}
 		
