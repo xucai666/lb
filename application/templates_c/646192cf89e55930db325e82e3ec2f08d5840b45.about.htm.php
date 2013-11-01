@@ -34,17 +34,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     ),
   ),
   'nocache_hash' => '151535273894d0c3190-32943638',
-  'variables' => 
-  array (
-    'dir_front' => 0,
-    'ci_uri' => 0,
-  ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5273894d4fd769_80158571',
+  'unifunc' => 'content_5273b80731be26_09579392',
+  'has_nocache_code' => false,
   'cache_lifetime' => 3600,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5273894d4fd769_80158571')) {function content_5273894d4fd769_80158571($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_5273b80731be26_09579392')) {function content_5273b80731be26_09579392($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -63,6 +58,8 @@ var img_front='http://localhost/lb/application//templates/front/corcms/zh//image
 var img_backend='http://localhost/lb/application//templates/backend//images/';
 var css_front='http://localhost/lb/application//templates/front/corcms/zh//css/';
 var css_backend='http://localhost/lb/application//templates/backend//css/';
+var theme_front='http://localhost/lb/application//templates/';
+var theme_backend='http://localhost/lb/application//templates/';
 </script>
 <script language="JavaScript" type="text/javascript" src="http://localhost/lb/application//templates/front/corcms/zh//js//jquery-1.9.1.min.js"></script><script language="JavaScript" type="text/javascript" src="http://localhost/lb/application//templates/front/corcms/zh//js//core.js"></script><script language="JavaScript" type="text/javascript" src="http://localhost/lb/application//templates/front/corcms/zh//js//FormValid.js"></script>
 <base target="_self" />

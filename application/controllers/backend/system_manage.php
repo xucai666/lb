@@ -162,7 +162,7 @@ class System_manage extends CI_Controller{
  	 */
  	function basic_config(){
  		$this->load->helper('directory'); 	
- 		$styles = directory_map(config_item('template_dir').DIRECTORY_SEPARATOR.'backend',1);
+ 		$styles = directory_map(config_item('template_dir').DIRECTORY_SEPARATOR.'front',1);
  			
 		$data = $this->init_cache->cache_fetch('sys_config');
 		
