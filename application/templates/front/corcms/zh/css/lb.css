@@ -438,3 +438,34 @@ td,span,th,div,input,button,a{
 .vote ul ul li{
 	width:300px;height:25px;clear:both;margin-top:20px;
 }
+
+
+.local_13033875926094 {
+background: url(../images/guestbook/ico_13033875926094.jpg) 0px 28px no-repeat;
+line-height: 30px;
+height: 30px;
+}
+.local_13033875926094 .col_1 {
+float: left;
+}
+
+.local_13033875926094 .col_2 {
+float: right;
+
+}
+.local_13033875926094 .col_2 a{
+font-size:8px;
+color:#ccc;}
+
+
+ p.info {
+padding: 5px;
+line-height: 20px;
+border: 1px solid #f4f4f4;
+margin: 10px;
+color: #970000;
+text-align: left;
+}
+.message_box td{
+	text-align: left!important;padding-left: 10px;
+}

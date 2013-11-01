@@ -80,7 +80,7 @@
   17 => 
   array (
     'c_id' => '17',
-    'c_title' => '在线留言',
+    'c_title' => '给我留言',
     'c_url' => 'message',
     'c_order' => '7',
     'c_display' => '1',

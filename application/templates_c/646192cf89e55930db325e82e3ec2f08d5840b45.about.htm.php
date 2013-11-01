@@ -1,4 +1,4 @@
-<?php /*%%SmartyHeaderCode:211735273138c80dde7-34697870%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1777152731c24955235-57742894%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -33,7 +33,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '211735273138c80dde7-34697870',
+  'nocache_hash' => '1777152731c24955235-57742894',
   'variables' => 
   array (
     'dir_front' => 0,
@@ -41,10 +41,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5273138ca98570_53259919',
+  'unifunc' => 'content_52731c24c24b53_59945251',
   'cache_lifetime' => 3600,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5273138ca98570_53259919')) {function content_5273138ca98570_53259919($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_52731c24c24b53_59945251')) {function content_52731c24c24b53_59945251($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -108,7 +108,7 @@ var css_backend='http://localhost/lb/application//templates/backend//css/';
 </li><li><a href="http://localhost/lb/engage" >人才招聘</a>
 <ul class="noJS"></ul>
 
-</li><li><a href="http://localhost/lb/message" >在线留言</a>
+</li><li><a href="http://localhost/lb/message" >给我留言</a>
 <ul class="noJS"></ul>
 
 </li>

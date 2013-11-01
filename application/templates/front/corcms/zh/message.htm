@@ -20,74 +20,34 @@
    
     </table>
       
-<center>
-
- <table width="754" height="88px;" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:5px;" valign="top">
-    <tbody><tr>
-        <td align="left" valign="top" style="background:url(<!--{$img_url}-->/guestbook/toplogo.gif) left 30px no-repeat;font-size:16px;  font-weight:bold;letter-spacing:2px;padding-left:200px;padding-bottom:3px;">   </td>
-        <td align="right" valign="bottom" style="padding-bottom:10px;padding-right:10px;">
-        <a href="#write">[签写留言]</a>   </td>
-    </tr>
-</tbody></table>
 
 
+<div class="local_13033875926094 w724"><span class="col_1">给我留言</span><span class="col_2"> <a href="#write">签写留言</a></span></div>
 
+<p class="info">如果您对我们的服务、业务、网站或其它什么问题，可以通过填写以下表单，我们将在最短时间内回答您的问题，您会享受完善的专业化的服务。</p>
 
-<!--{foreach from=$list item=item}-->
-<table width='754' border='0' cellpadding='3' cellspacing='1' bgcolor='#CCCCCC' style="margin-bottom:25px;">
-  <tr>
-    <td width='160' rowspan='3' valign='top' bgcolor='#FFFFFF'>
-    <table border='0' cellPadding='4' cellSpacing='0' width='100%'>
-      <tr>
-        <td align=center width='17%'>
-          <img src='<!--{$img_url}-->/guestbook/<!--{sprintf("%02d",$item.ms_img)}-->.gif' border=0>
-       
-        </td>
-      </tr>
-    </table>
-   <P> 
-   &nbsp;姓名： <!--{$item.ms_name}--><br>
-   &nbsp;来自：<!--{$item.ms_ip}--><br>
-   &nbsp;QQ：<!--{$item.ms_qq}--><br>
-  </P>
-  </td>
-   
-  
-    <td height='200' bgcolor='#fff' style='word-break: break-all' align="left" valign="top">
-      <div style="height:25px;text-align:right;"><a href='mailto:<!--{$item.ms_email}-->'><img src='<!--{$img_url}-->guestbook/mail.gif' border=0 width='16' height='16'>&nbsp;</a> 
-    <a href='<!--{$item.ms_homepage}-->' target='_blank'><img src='<!--{$img_url}-->guestbook/home.gif' border=0 width='16' height='16'>&nbsp;</a></div>
-   <!--{$item.ms_content}-->[<!--{$item.ms_date}--> ]
-    </td>
-  </tr>
- 
-</table>
-
-<!--{/foreach}-->
-<table border='0' cellpadding='4' cellspacing='0' width='754' align='center'>
-  <tr>
-  <td align="right">
-     <div class="page"> <!--{$page_link}--></div>
-  </td>
-  </tr>
-  <tr><td></td></tr>
-</table>
 
 
 
   <a name="write"></a>
-  <table width="754" border="0" cellspacing="1" cellpadding="4" align="center" bgcolor="#CCCCCC">
-    <form id="form1" name="form1" method="post" action="<!--{$site_url}-->/message/save" onsubmit="return validator(this)">
+  
+    <form id="form1" name="form1" method="post" action="<!--{$site_url}-->/message/save" onsubmit="return validator(this)" >
+    <table width="754" border="0" cellspacing="1" cellpadding="4" align="center" bgcolor="#CCCCCC" >
       <tr bgcolor="#ffffff"> 
-        <td width="10%" align="center" nowrap><font color="#FF0000">*</font>你的姓名：</td>
-        <td width="40%"><input type="text" maxlength="10" name="main[ms_name]" size="36" class="input" id="main[ms_name]"  valid="required" errmsg="请输入尊称"></td>
-        <td width="10%" align="center" nowrap>OICQ号码：</td>
-        <td width="40%"><input maxlength="20" type="text" name="main[ms_qq]" size="46" class="input"></td>
+        <td width="10%" align="center" nowrap>您的姓名：</td>
+        <td ><input type="text" maxlength="10" name="main[ms_name]" size="36" class="input" id="main[ms_name]"  valid="required" errmsg="请输入尊称">请输入姓名&nbsp;<font color="#FF0000">*</font></td>
+        
       </tr>
+      <tr bgcolor="#ffffff">
+
+      <td  width="10%" align="center" nowrap>电话/手机：</td>
+        <td ><input maxlength="20" type="text" name="main[ms_tel]"  id="main[ms_tel]"size="46" class="input"  valid="required" errmsg="请输入电话/手机" />请输入联系电话,例如：021-57578588&nbsp;<font color="#FF0000">*</font></td>
+
+        </tr>
       <tr bgcolor="#ffffff"> 
         <td align="center" nowrap>&nbsp;电子邮件：</td>
-        <td><input maxlength="80" type="text" name="main[ms_email]" size="36" class="input" id="email" valid="required|isEmail" errmsg="请输入电子邮件，方便联系|电子邮件地址格式不正确" ></td>
-        <td align="center" nowrap height="12">个人主页：</td>
-        <td height="12"><input maxlength="80" type="text" name="main[ms_homepage]" size="46" class="input"></td>
+        <td><input maxlength="80" type="text" name="main[ms_email]" size="36" class="input" id="email" valid="required|isEmail" errmsg="请输入电子邮件，方便联系|电子邮件地址格式不正确" >请输入电子邮件地址&nbsp;<font color="#FF0000">*</font></td>
+        
       </tr>
       
       <tr bgcolor="#ffffff"> 
@@ -118,7 +78,7 @@
 <tr bgcolor="#ffffff">
       <td align="center" nowrap width="10%"> <font color="#FF0000">*</font>留言内容：<br>
           (1000字内) </td>
-        <td align="left" colspan="3"><textarea name="main[ms_content]" cols="36" rows="8" class="textarea"  id="main[ms_content]" valid="required" errmsg="请输入留言内容"></textarea></td>
+        <td align="left" colspan="3"><textarea name="main[ms_content]" cols="36" rows="8" class="textarea"  id="main[ms_content]" valid="required" errmsg="请输入留言内容"></textarea>输入您的留言&nbsp;<font color="#FF0000">*</font></td>
 
       </tr>
       
@@ -144,17 +104,48 @@
           </table></td>
       </tr>
 
-      <tr bgcolor="#ffffff"> 
-        <td align="center" nowrap colspan="4"> <input maxlength="1000" type="submit" name="Submit" value="提 交" class="btn"> 
-          &nbsp;&nbsp; <input type="reset" name="Submit2" value="取 消" class="btn"> 
-        </td>
-      </tr>
+        </table>
+         <center> <input maxlength="1000" type="submit" name="Submit" value="提 交" class="btn"> 
+          &nbsp;&nbsp; <input type="reset" name="Submit2" value="取 消" class="btn"> </center>
     </form>
-  </table>
+   
 
 
-</center>
-          </td>
+<div style="display:none;">
+<!--{foreach from=$list item=item}-->
+<table width='754' border='0' cellpadding='3' cellspacing='1' bgcolor='#CCCCCC' style="margin-bottom:25px;">
+  <tr>
+    <td width='160' rowspan='3' valign='top' bgcolor='#FFFFFF'>
+   
+   <P style="line-height:35px;"> 
+
+   &nbsp;<!--{$item.ms_date}--> <!--{$item.ms_name}--><br>
+   &nbsp;IP：<!--{$item.ms_ip}--><br>
+   
+   &nbsp;<img src='<!--{$img_url}-->/guestbook/<!--{sprintf("%02d",$item.ms_img)}-->.gif' border=0>
+  </P>
+  </td>
+   
+  
+    <td height='200' bgcolor='#fff' style='word-break: break-all' align="left" valign="top">
+      
+   <!--{$item.ms_content}-->
+    </td>
+  </tr>
+ 
+</table>
+
+<!--{/foreach}-->
+
+<table border='0' cellpadding='4' cellspacing='0' width='754' align='center'>
+  <tr>
+  <td align="right">
+     <div class="page"> <!--{$page_link}--></div>
+  </td>
+  </tr>
+  <tr><td></td></tr>
+</table>
+   </div>       </td>
         </tr>
       </table>
     </td>
