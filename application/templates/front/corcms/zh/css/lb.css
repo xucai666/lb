@@ -2,7 +2,7 @@
 /* CSS Document */
 body{ margin:0; padding:0; background-color:#FFF; color:#000;}
 a{text-decoration:none;}
-a:hover{
+#coolMenu a:hover{
 	 text-decoration: none; border-bottom: 1px solid #F90;
 }
 span,td,tr,li,ul,input,div,form,a{

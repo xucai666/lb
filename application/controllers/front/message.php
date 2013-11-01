@@ -54,7 +54,7 @@ class Message extends CI_Controller {
 	
 	function show_captcha(){
 	
-		$this->load->helper('imgCode');
+		$this->load->helper('imgcode');
 		$imgcode=new imgcode();
 		
 		$imgcode->image(1);

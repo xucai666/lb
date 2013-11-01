@@ -111,7 +111,6 @@
 	 		}else{
 	 			$data = array(
 	 				'main'=>$main,
-	 				'group_options'=>$this->init_cache->cache_fetch('admin_group'),	 
 		 	 	
 	 	 		); 	 			
 	 			$this->init_page->load_backend_view(strtolower($this->act).'_add',$data);

@@ -367,4 +367,4 @@ $config['weather'] = '';
 //config get
 $config['allow_get_array'] = true;
 $config['time_zone']=date_default_timezone_set('Asia/shanghai');
-$config['html_root'] = "/html/";
+$config['html_root'] = "html";

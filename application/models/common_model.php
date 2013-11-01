@@ -110,17 +110,7 @@ class Common_model  extends CI_Model{
 		return $this->init_cache->cache_fetch('lang_type',null,lang_get());		
 	}
 	
-	//语种切换链接
-	function lang_get_link(){
-		$langs =  $this->lang_all();
-		$lang_current = lang_get();
-		foreach($langs as $v){
-			if($v == $lang_current) continue;
-			$lang_cache[$v] = $this->init_cache->cache_fetch('lang_type',null,$v);
-			
-		}	
-		return $lang_cache;		
-	}	
+	
 	
 	
 	//下载文件

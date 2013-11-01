@@ -123,6 +123,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "application/templates/front/corcms/zh/css/jqFancyTransitions.1.8.css",
+			"settings":
+			{
+				"buffer_size": 1625,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -131,12 +139,12 @@
 		"selected_items":
 		[
 			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
 				"remove",
 				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
 			],
 			[
 				"remoe",
@@ -172,26 +180,78 @@
 	},
 	"file_history":
 	[
-		"/E/phpnow/htdocs/lb/application/helpers/MY_url_helper.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/css/jquery.mCustomScrollbar.css",
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/core.js",
 		"/E/phpnow/htdocs/lb/application/libraries/init_page.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/login.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/system_manage.php",
+		"/E/phpnow/htdocs/lb/application/helpers/MY_url_helper.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/top.htm",
+		"/E/phpnow/htdocs/lb/application/templates/backend/js/artdialog/jquery.artDialog.js",
+		"/E/phpnow/htdocs/lb/application/templates/backend/js/iwin.js",
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/css/jqFancyTransitions.1.8.css",
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/jqFancyTransitions.1.8.js",
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/css/jqFancyTransitons1.8.css",
+		"/E/phpnow/htdocs/lb/application/config/email.php",
+		"/E/phpnow/htdocs/lb/application/controllers/front/engage.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/engage_apply.htm",
 		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
+		"/E/phpnow/htdocs/lb/application/helpers/common_helper.php",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/engage.php",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/fields.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/fields_list.htm",
+		"/E/phpnow/htdocs/lb/cache/zh/fields_types.php",
+		"/E/phpnow/htdocs/lb/application/config/config.php",
+		"/E/phpnow/htdocs/lb/cache/zh/edu_level.php",
+		"/E/phpnow/htdocs/lb/cache/zh/eg_expire.php",
+		"/E/phpnow/htdocs/lb/cache/zh/eg_prop_select.php",
+		"/E/phpnow/htdocs/lb/cache/zh/integral_require.php",
+		"/E/phpnow/htdocs/lb/cache/zh/lang_type.php",
+		"/E/phpnow/htdocs/lb/cache/zh/learn_type.php",
+		"/E/phpnow/htdocs/lb/cache/zh/log_types.php",
+		"/E/phpnow/htdocs/lb/cache/zh/qualify_level.php",
+		"/E/phpnow/htdocs/lb/cache/zh/order_status.php",
+		"/E/phpnow/htdocs/lb/cache/zh/nation.php",
+		"/E/phpnow/htdocs/lb/cache/zh/question.php",
+		"/E/phpnow/htdocs/lb/cache/zh/select_language_soft.php",
+		"/E/phpnow/htdocs/lb/cache/zh/select_slide.php",
+		"/E/phpnow/htdocs/lb/cache/zh/study_item.php",
+		"/E/phpnow/htdocs/lb/cache/zh/sys_config.php",
+		"/E/phpnow/htdocs/lb/cache/zh/template_types.php",
+		"/E/phpnow/htdocs/lb/cache/zh/treeIds.php",
+		"/E/phpnow/htdocs/lb/cache/zh/work_year.php",
+		"/E/phpnow/htdocs/lb/cache/zh/channel.php",
+		"/E/phpnow/htdocs/lb/cache/zh/channel_types.php",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/system_manage.php",
+		"/E/phpnow/htdocs/lb/cache/zh/edu_highest.php",
+		"/E/phpnow/htdocs/lb/cache/zh/archive_class.php",
+		"/E/phpnow/htdocs/lb/cache/zh/assign_type.php",
+		"/E/phpnow/htdocs/lb/cache/zh/archives_class_prop.php",
+		"/E/phpnow/htdocs/lb/cache/zh/apply_comp_type.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/apply_view.htm",
+		"/E/phpnow/htdocs/lb/cache/zh/admin_rights_config.php",
+		"/E/phpnow/htdocs/lb/application/models/common_model.php",
+		"/E/phpnow/htdocs/lb/application/helpers/init_lang_helper.php",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/admins.php",
+		"/E/phpnow/htdocs/lb/index.php",
+		"/E/phpnow/htdocs/lb/cache/zh/admin_group.php",
+		"/E/phpnow/htdocs/lb/system/core/Config.php",
+		"/E/phpnow/htdocs/lb/system/helpers/url_helper.php",
+		"/E/phpnow/htdocs/lb/application/helpers/imgcode_helper.php",
+		"/E/phpnow/htdocs/lb/application/controllers/front/message.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/message.htm",
+		"/E/phpnow/htdocs/lb/application/libraries/MY_Pagination.php",
+		"/E/phpnow/htdocs/lb/system/libraries/Pagination.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/css/lb.css",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/login.php",
 		"/E/phpnow/htdocs/lb/application/controllers/front/index.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/top_login.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/css/lb.css",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/top.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/index.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/css/coolMenu.css",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/product_order.htm",
-		"/E/phpnow/htdocs/lb/application/helpers/common_helper.php",
-		"/E/phpnow/htdocs/lb/application/config/config.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/coolMenu.js",
 		"/E/phpnow/htdocs/lb/application/config/autoload.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/jquery-1.9.1.min.js",
 		"/E/phpnow/htdocs/lb/application/libraries/init_db.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/contact.htm",
-		"/E/phpnow/htdocs/lb/application/models/common_model.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/menu_script.js",
 		"/C/Users/Administrator/AppData/Local/Temp/_tc/config.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/member_login.htm",
@@ -209,7 +269,6 @@
 		"/E/phpnow/htdocs/lb/application/models/captcha_model.php",
 		"/E/phpnow/htdocs/lb/application/models/advs_model.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/advs.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/core.js",
 		"/E/phpnow/htdocs/lb/application/libraries/cor_form.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/admins_view.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/advs_view.htm",
@@ -223,7 +282,6 @@
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/mdata_list.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/config_save.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/archive_add.htm",
-		"/E/phpnow/htdocs/lb/index.php",
 		"/E/phpnow/htdocs/lb/html/js/zh_1.js",
 		"/E/phpnow/htdocs/lb/application/helpers/common_helper.php.dump",
 		"/E/phpnow/htdocs/lb/application/libraries/cor_db.php",
@@ -245,61 +303,11 @@
 		"/E/phpnow/htdocs/lb/install/index.php",
 		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_lang.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/message_list.htm",
-		"/E/phpnow/htdocs/lb/application/controllers/front/message.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/message_list.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/message.htm",
 		"/E/phpnow/htdocs/lb/application/controllers/front/vote.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/message.php",
 		"/C/Users/Administrator/AppData/Local/Temp/_tc/test.php",
-		"/E/phpnow/htdocs/lb/tools/rm.php",
-		"/E/phpnow/htdocs/lb/tools/2.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/adminindex.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/main_index.htm",
-		"/E/phpnow/php-5.2.12-Win32/php-apache2handler.ini",
-		"/E/phpnow/htdocs/lb/.htaccess",
-		"/E/phpnow/htdocs/test/zip.php",
-		"/E/phpnow/htdocs/lb/tools/ext.php",
-		"/E/phpnow/htdocs/lb/tools/unpack.php.dump",
-		"/E/phpnow/htdocs/lb/tools/unpack.php",
-		"/E/phpnow/htdocs/lb/111.htaccess",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/regexp_test.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/left_message.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/css/item/regexp_test.css",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/regexo_test.htm",
-		"/E/phpnow/htdocs/lb/application/libraries/Smarty-3.1.14/libs/sysplugins/smarty_internal_templatebase.php",
-		"/E/phpnow/htdocs/lb/system/core/Output.php",
-		"/E/phpnow/htdocs/lb/application/resources/pinyin.dat.dump",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/admins.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/mdata_add.htm",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/mdata.php",
-		"/E/phpnow/htdocs/lb/application/models/mdata_model.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/mdata_view.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jquery.Slider.js.dump",
-		"/E/phpnow/htdocs/lb/tools/jQuery弹出层有9种效果/styles/core.css.dump",
-		"/E/phpnow/htdocs/lb/system/libraries/Cart.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/iwin.js",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/iwin.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/css/iwin.css",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/css/iwin.css",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/css/backend_style.css",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jqFancyTransitions.1.8.js",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/jqFancyTransitions.1.8.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/css/item/templates.css",
-		"/D/tools/k开发成果/develop/javascript/dialog2/dialog/dialog_box.html",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/engage.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/engage_add.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jscript.js",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/jscript.js",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/about_news22.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/jquery-1.10.2.min.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/invoke.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/core.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jquery-ui-1.10.2.custom.min.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/admin.public.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/Clock_en.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/Clock_zh.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jquery-ui-1.10.3.custom.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jquery-ui-1.10.3.custom.min.js"
+		"/E/phpnow/htdocs/lb/tools/rm.php"
 	],
 	"find":
 	{
@@ -310,6 +318,8 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"E:\\phpnow\\htdocs\\lb\\application",
+			"E:\\phpnow\\htdocs\\lb\\system",
 			"E:\\phpnow\\htdocs\\lb\\application",
 			"E:\\phpnow\\htdocs\\lb\\application\\templates",
 			"E:\\phpnow\\htdocs\\lb\\application\\templates\\front\\corcms\\zh\\js",
@@ -391,6 +401,35 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$.include",
+			"theme_url",
+			"theme_url\n",
+			"$.include",
+			"inlcude",
+			"ft-next",
+			"ecs_region",
+			"alert",
+			"fields_list",
+			"edu_level",
+			"edu_highest",
+			"channel_types",
+			"channel",
+			"assign_type",
+			"archives_class_prop",
+			"archive_class",
+			"jiamen",
+			"apply_comp_type",
+			"group_options",
+			"admin_group",
+			"base_url",
+			"lang_get_link",
+			"lang_get",
+			"1=1",
+			"per_page",
+			"1=1",
+			"per_page",
+			"width=\"40%\"",
+			"<CENTER",
 			"backend",
 			"bakckend",
 			"theme",
@@ -489,36 +528,7 @@
 			"AbstractKeyValueStore",
 			"InMemoryKeyValueStore",
 			"AbstractKeyValueStore",
-			"Variable",
-			"add_options_page('Delete-Revision', 'Delete-Revision', 'manage_options', basename(__FILE__), 'my_options_delete_revision');",
-			"url_root +",
-			"';\n",
-			"save",
-			"backend_redirect",
-			"text/html",
-			"header",
-			"header(\"type",
-			"backend_redire",
-			"#",
-			"suffi",
-			"index",
-			"top",
-			"src='images",
-			"720",
-			"<form",
-			"name=\"img\"",
-			"img",
-			"images/",
-			"stafrm",
-			"结果",
-			"_POST",
-			"images/",
-			"debug",
-			"develop",
-			"_display",
-			"backend_view",
-			"exit",
-			"vsprintf"
+			"Variable"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -545,8 +555,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "application/templates/front/corcms/zh/css/jqFancyTransitions.1.8.css",
+					"settings":
+					{
+						"buffer_size": 1625,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1139,
+								1139
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 443.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -592,20 +631,76 @@
 		"selected_items":
 		[
 			[
-				"tpl.pp",
-				"application/libraries/tpl.php"
+				"qfancytransitions.1.8.css",
+				"application/templates/front/corcms/zh/css/jqFancyTransitions.1.8.css"
 			],
 			[
-				"init_page",
-				"application/libraries/init_page.php"
+				"core.js",
+				"application/templates/front/corcms/zh/js/core.js"
 			],
 			[
 				"top.htm",
 				"application/templates/front/corcms/zh/top.htm"
 			],
 			[
+				"init_page.php",
+				"application/libraries/init_page.php"
+			],
+			[
+				"jqf",
+				"application/templates/front/corcms/zh/js/jqFancyTransitions.1.8.js"
+			],
+			[
+				"tpl.php",
+				"application/libraries/tpl.php"
+			],
+			[
+				"engage_apply.",
+				"application/templates/front/corcms/zh/engage_apply.htm"
+			],
+			[
+				"engage.php",
+				"application/controllers/front/engage.php"
+			],
+			[
+				"engage",
+				"application/controllers/backend/engage.php"
+			],
+			[
+				"fields_list.htm",
+				"application/templates/backend/fields_list.htm"
+			],
+			[
+				"fields.php",
+				"application/controllers/backend/fields.php"
+			],
+			[
+				"config.php",
+				"application/config/config.php"
+			],
+			[
+				"system",
+				"application/controllers/backend/system_manage.php"
+			],
+			[
+				"common_model",
+				"application/models/common_model.php"
+			],
+			[
 				"lb.css",
 				"application/templates/front/corcms/zh/css/lb.css"
+			],
+			[
+				"message.htm",
+				"application/templates/front/corcms/zh/message.htm"
+			],
+			[
+				"tpl.pp",
+				"application/libraries/tpl.php"
+			],
+			[
+				"init_page",
+				"application/libraries/init_page.php"
 			],
 			[
 				"top_login",
@@ -624,20 +719,12 @@
 				"application/libraries/init_db.php"
 			],
 			[
-				"core.js",
-				"application/templates/front/corcms/zh/js/core.js"
-			],
-			[
 				"cor_form",
 				"application/libraries/cor_form.php"
 			],
 			[
 				"mess",
 				"application/templates/backend/corcms/message_list.htm"
-			],
-			[
-				"message.htm",
-				"application/templates/front/corcms/zh/message.htm"
 			],
 			[
 				"message",
@@ -650,10 +737,6 @@
 			[
 				"messge_list",
 				"application/templates/backend/corcms/message_list.htm"
-			],
-			[
-				"tpl.php",
-				"application/libraries/tpl.php"
 			],
 			[
 				"cor_pae",
@@ -686,14 +769,6 @@
 			[
 				"config_save",
 				"application/templates/backend/corcms/config_save.htm"
-			],
-			[
-				"system",
-				"application/controllers/backend/system_manage.php"
-			],
-			[
-				"common_model",
-				"application/models/common_model.php"
 			],
 			[
 				"mdata_add.",
@@ -734,10 +809,6 @@
 			[
 				"iwin.js",
 				"application/templates/front/corcms/zh/js/iwin.js"
-			],
-			[
-				"jqf",
-				"application/templates/front/corcms/zh/js/jqFancyTransitions.1.8.js"
 			],
 			[
 				"iwin.cs",
@@ -892,10 +963,6 @@
 				"application/templates/backend/corcms/foot.htm"
 			],
 			[
-				"fields.php",
-				"application/controllers/backend/fields.php"
-			],
-			[
 				"vote_list.htm",
 				"application/templates/front/corcms/zh/vote_list.htm"
 			],
@@ -973,10 +1040,6 @@
 			],
 			[
 				"config",
-				"application/config/config.php"
-			],
-			[
-				"config.php",
 				"application/config/config.php"
 			],
 			[
@@ -1078,30 +1141,6 @@
 			[
 				"auth",
 				"application/helpers/auth_helper.php"
-			],
-			[
-				"dynamic_vie",
-				"application/templates/front/blue/zh/dynamic_view.htm"
-			],
-			[
-				"comon_mod",
-				"application/models/common_model.php"
-			],
-			[
-				"common_md",
-				"application/models/common_model.php"
-			],
-			[
-				"about.htm",
-				"application/templates/front/corcms/zh/about.htm"
-			],
-			[
-				"about.php",
-				"application/controllers/front/about.php"
-			],
-			[
-				"dynamic_view.htm",
-				"application/templates/front/blue/zh/dynamic_view.htm"
 			]
 		],
 		"width": 0.0

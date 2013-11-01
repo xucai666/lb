@@ -18,11 +18,6 @@ function smarty_php_tag($params, $content, $template, &$repeat)
 function func_site_url($array){
 	extract($array);	
 	$CI = & get_instance();	
-    if(config_item('lang_multiple') && !preg_match("/backend/", $segments)){
-    	$lang_type = lang_get();
-    	$segments = $lang_type.'/'.$segments;
-    
-    }
 	return site_url($segments);
 }
 
@@ -64,11 +59,14 @@ function func_get_area_str( $array ) {
 function func_get_areat($array) {
 	extract($array);
 	$init_db  =  &get_init_db();
+	$CI = & get_instance();	
+
 	if( $id <= 1 ) $id=53;
 	$html = "";
 	while( $id > 1 ) {	
 	
-		$a = $this->db->select('*',false)->from('ecs_region')->where('region_id',$id)->get()->first_row('array');
+		$a = $CI->db->select('*',false)->from('ecs_region')->where('region_id',$id)->get()->first_row('array');
+		
 		$html = get_area_help( $a['parent_id'], $id ) ."<span>&nbsp;" .$html."</span>";
 		$id = $a['parent_id'];
 	}

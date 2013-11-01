@@ -51,3 +51,25 @@
 	}	
 		
 	 }
+
+
+
+
+	//获取语种
+	
+	 if ( ! function_exists('lang_url'))
+	 {
+	 
+		function lang_url(){
+			if(config_item('lang_multiple')){
+				$lang = get_cookie('lang');
+				$lang_get = $_GET['lang'];		
+				$lang = $lang_get?$lang_get:$lang;	
+				$lang = $lang?$lang:config_item('language');	
+			}else{
+				$lang =  '';
+			}			
+			return '/'.$lang.'/';			
+		}	
+		
+	 }

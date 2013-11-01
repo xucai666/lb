@@ -126,7 +126,7 @@ function ajax_change_state(obj,tb,key,val,change_key){
    var src =$(obj).attr('src');		
    var change_val = src.match(/yes.gif/i) ? 0 : 1; //提交前
 	$.get(url_root +"/backend/common/ajax_change_state/?tb="+tb+"&key="+key+"&val="+val+"&change_key="+change_key+"&change_val="+change_val,function(msg){	
-			alert(msg)
+			
 				if(msg>0){
 				src = change_val>0? '/images/yes.gif' : '/images/no.gif';
 				$(obj).attr('src',src);		
@@ -419,7 +419,7 @@ function load_autocomplete(_auto_obj){
 
 
 function loadjs(file,id){
-	alert(file)
+	
 	$("<scri"+"pt>"+"</scr"+"ipt>").attr({src:file,type:'text/javascript',id:id}).appendTo($('head').remove(id));
 
 }

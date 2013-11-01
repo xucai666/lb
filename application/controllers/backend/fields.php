@@ -106,7 +106,7 @@ class Fields extends CI_Controller{
 		$this->db->order_by('f_id','desc');
 		$data = $this->init_db->fetch_all(15);
 		$data['fields_types'] = $fields_types;
-		$data['medias'] = array(2=>'鏄?,1=>'鍚?);
+		$data['medias'] = array(2=>'是',1=>'否');
 		$this->init_page->load_backend_view('fields_list',$data);
 	}
 
