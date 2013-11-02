@@ -155,6 +155,9 @@ class Init_page{
 			
 			$tpl->assign("lang_type",$this->lang_type);	
 			
+				//online qq
+			$CI->load->library('online');	
+			$tpl->assign('online',$CI->online->run());	
 			
 	 		$tpl->assign("lang_type",$this->lang_type);	
 	 		$tpl->assign('js_url',js_url(null,'front')); 
@@ -162,7 +165,8 @@ class Init_page{
 	 		$tpl->assign('img_url',img_url(null,'front')); 	
 	 		$tpl->assign('theme_url',theme_url('front')); 
 			$data['header_html'] = $this->header_html;	
-			
+
+		
 		    if(is_array($view)){
 				foreach($view as $v){
 					

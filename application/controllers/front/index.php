@@ -17,7 +17,7 @@ class Index extends CI_Controller {
   function __construct()
   {
     parent::__construct();
-
+   
     
     
   }
@@ -42,7 +42,6 @@ class Index extends CI_Controller {
 
 
     $data =  array_merge($data,array('next_lang'=>$next_lang));
-    
     $this->init_page->load_front_view("index",$data);
   } 
 

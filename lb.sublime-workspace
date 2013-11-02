@@ -172,8 +172,29 @@
 	},
 	"file_history":
 	[
-		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/top.htm",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/login.php",
 		"/E/phpnow/htdocs/lb/application/libraries/init_page.php",
+		"/E/phpnow/htdocs/lb/application/libraries/checkcode.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/login.htm",
+		"/E/phpnow/htdocs/lb/application/language/en/item_backend_login_lang.php",
+		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_login_lang.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/css/backend_style.css",
+		"/E/phpnow/htdocs/lb/tools/bom.php.dump",
+		"/E/phpnow/htdocs/lb/index.php",
+		"/E/phpnow/htdocs/lb/application/libraries/Doctrine.php",
+		"/E/phpnow/htdocs/lb/application/libraries/init_cache.php",
+		"/E/phpnow/htdocs/lb/application/resources/downmix.php",
+		"/E/phpnow/htdocs/lb/.htaccess",
+		"/E/phpnow/htdocs/lb/index.htm",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/system_manage.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/config_save.htm",
+		"/E/phpnow/htdocs/lb/html/chan_pin_zhan_shi/product.htm",
+		"/E/phpnow/htdocs/lb/zh/index.htm",
+		"/E/phpnow/htdocs/lb/application/controllers/front/index.php",
+		"/E/phpnow/htdocs/lb/cache/zh/sys_config.php",
+		"/E/phpnow/htdocs/lb/cache/zh/template_types.php",
+		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
 		"/E/phpnow/htdocs/lb/application/libraries/invoke.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/foot.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/jqFancyTransitions.1.8.js",
@@ -182,7 +203,6 @@
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/css/jquery.mCustomScrollbar.css",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/core.js",
 		"/E/phpnow/htdocs/lb/application/helpers/MY_url_helper.php",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/top.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/js/artdialog/jquery.artDialog.js",
 		"/E/phpnow/htdocs/lb/application/templates/backend/js/iwin.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/css/jqFancyTransitons1.8.css",
@@ -209,13 +229,10 @@
 		"/E/phpnow/htdocs/lb/cache/zh/select_language_soft.php",
 		"/E/phpnow/htdocs/lb/cache/zh/select_slide.php",
 		"/E/phpnow/htdocs/lb/cache/zh/study_item.php",
-		"/E/phpnow/htdocs/lb/cache/zh/sys_config.php",
-		"/E/phpnow/htdocs/lb/cache/zh/template_types.php",
 		"/E/phpnow/htdocs/lb/cache/zh/treeIds.php",
 		"/E/phpnow/htdocs/lb/cache/zh/work_year.php",
 		"/E/phpnow/htdocs/lb/cache/zh/channel.php",
 		"/E/phpnow/htdocs/lb/cache/zh/channel_types.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/system_manage.php",
 		"/E/phpnow/htdocs/lb/cache/zh/edu_highest.php",
 		"/E/phpnow/htdocs/lb/cache/zh/archive_class.php",
 		"/E/phpnow/htdocs/lb/cache/zh/assign_type.php",
@@ -226,7 +243,6 @@
 		"/E/phpnow/htdocs/lb/application/models/common_model.php",
 		"/E/phpnow/htdocs/lb/application/helpers/init_lang_helper.php",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/admins.php",
-		"/E/phpnow/htdocs/lb/index.php",
 		"/E/phpnow/htdocs/lb/cache/zh/admin_group.php",
 		"/E/phpnow/htdocs/lb/system/core/Config.php",
 		"/E/phpnow/htdocs/lb/system/helpers/url_helper.php",
@@ -235,8 +251,6 @@
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/message.htm",
 		"/E/phpnow/htdocs/lb/application/libraries/MY_Pagination.php",
 		"/E/phpnow/htdocs/lb/system/libraries/Pagination.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/login.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/index.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/top_login.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/index.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/css/coolMenu.css",
@@ -285,29 +299,15 @@
 		"/E/phpnow/htdocs/lb/application/controllers/backend/friendlink.php",
 		"/E/phpnow/htdocs/lb/application/helpers/ckeditor_helper.php",
 		"/E/phpnow/htdocs/osFileManager_2.2/index.php",
-		"/E/phpnow/htdocs/WebFTP/Config.php",
-		"/E/phpnow/htdocs/8file/8.php.dump",
-		"/E/phpnow/htdocs/8file/8.php",
-		"/C/Users/Administrator/AppData/Local/Temp/_tc/.htaccess",
-		"/E/phpnow/htdocs/wordpress/wp-admin/includes/revision.php",
-		"/E/phpnow/htdocs/wordpress/wp-includes/revision.php",
-		"/E/phpnow/htdocs/lb/application/controllers/front/search.php",
-		"/E/phpnow/htdocs/lb/application/config/database.php",
-		"/E/phpnow/htdocs/lb/ckeditor/config.js",
-		"/E/phpnow/htdocs/lb/install/index.php",
-		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_lang.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/message_list.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/message_list.htm",
-		"/E/phpnow/htdocs/lb/application/controllers/front/vote.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/message.php"
+		"/E/phpnow/htdocs/WebFTP/Config.php"
 	],
 	"find":
 	{
-		"height": 72.0
+		"height": 81.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
 			"E:\\phpnow\\htdocs\\lb\\application",
@@ -393,6 +393,21 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"captcha",
+			"$code",
+			"user_captcha_check",
+			"check",
+			"creat_code",
+			"code",
+			"code_len",
+			"creat_code",
+			"doimage",
+			"user_pass_check",
+			"user_captcha_check",
+			"user_name_check",
+			"callback_",
+			"resources",
+			"front_theme",
 			"invoke",
 			"href",
 			"login_panel",
@@ -505,22 +520,7 @@
 			"swf",
 			"embedSWF",
 			"MakeHtmlFile",
-			"html_root",
-			"MakeHtmlFile",
-			"makehtmlfile",
-			"js",
-			"showadv",
-			"cke_create_instance",
-			"script>",
-			"replace",
-			"http",
-			"密码",
-			"password",
-			".htm",
-			"AbstractKeyValueStore",
-			"$key",
-			"_load",
-			"get"
+			"html_root"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -594,6 +594,42 @@
 		"selected_items":
 		[
 			[
+				"top.htm",
+				"application/templates/front/corcms/zh/top.htm"
+			],
+			[
+				"login.htm",
+				"application/templates/backend/login.htm"
+			],
+			[
+				"check",
+				"application/libraries/checkcode.php"
+			],
+			[
+				"login.php",
+				"application/controllers/backend/login.php"
+			],
+			[
+				"style.css",
+				"application/templates/backend/css/backend_style.css"
+			],
+			[
+				"item_backend_login",
+				"application/language/zh/item_backend_login_lang.php"
+			],
+			[
+				"item_backend_lo",
+				"application/language/en/item_backend_login_lang.php"
+			],
+			[
+				"lang_login.php",
+				"application/language/zh/item_backend_login_lang.php"
+			],
+			[
+				"config_save",
+				"application/templates/backend/config_save.htm"
+			],
+			[
 				"init_page.php",
 				"application/libraries/init_page.php"
 			],
@@ -616,10 +652,6 @@
 			[
 				"core.js",
 				"application/templates/front/corcms/zh/js/core.js"
-			],
-			[
-				"top.htm",
-				"application/templates/front/corcms/zh/top.htm"
 			],
 			[
 				"engage_apply.",
@@ -728,10 +760,6 @@
 			[
 				"rege",
 				"application/templates/backend/corcms/regexo_test.htm"
-			],
-			[
-				"config_save",
-				"application/templates/backend/corcms/config_save.htm"
 			],
 			[
 				"mdata_add.",
@@ -918,10 +946,6 @@
 				"application/models/common_model.php"
 			],
 			[
-				"login.php",
-				"application/controllers/backend/login.php"
-			],
-			[
 				"foot.htm",
 				"application/templates/backend/corcms/foot.htm"
 			],
@@ -1080,30 +1104,6 @@
 			[
 				"main",
 				"application/templates/backend/corcms/main_center.htm"
-			],
-			[
-				"main_index",
-				"application/templates/backend/corcms/main_index.htm"
-			],
-			[
-				"adminindex.htm",
-				"application/templates/backend/corcms/adminindex.htm"
-			],
-			[
-				"left_archive",
-				"application/templates/front/corcms/zh/left_archive.htm"
-			],
-			[
-				"dynamic.htm",
-				"application/templates/front/corcms/en/dynamic.htm"
-			],
-			[
-				"dynamic",
-				"application/templates/front/blue/zh/dynamic.htm"
-			],
-			[
-				"auth",
-				"application/helpers/auth_helper.php"
 			]
 		],
 		"width": 0.0

@@ -29,22 +29,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ae0446f50b5c68d1a71cae5d127e6988ad63b43f' => 
     array (
       0 => 'application\\templates\\front\\corcms\\zh\\foot.htm',
-      1 => 1380353832,
+      1 => 1383353427,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '151535273894d0c3190-32943638',
   'cache_lifetime' => 3600,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5273d886e3bf26_69651716',
-  'variables' => 
-  array (
-    'dir_front' => 0,
-    'ci_uri' => 0,
-  ),
+  'unifunc' => 'content_52744d6108ec98_25630402',
   'has_nocache_code' => false,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5273d886e3bf26_69651716')) {function content_5273d886e3bf26_69651716($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_52744d6108ec98_25630402')) {function content_52744d6108ec98_25630402($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -53,7 +48,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <meta name="Keywords" content="Cor.Cms" />
 <meta name="Description" content="Codeigniter CMS" />
 
-<link href="http://localhost/lb/application//templates/front/corcms/zh//css/lb.css" rel=stylesheet > <link href="http://localhost/lb/application//templates/front/corcms/zh//css/coolMenu.css" rel=stylesheet > 
+<link href="http://localhost/lb/application//templates/front/corcms/zh//css/lb.css" rel=stylesheet > <link href="http://localhost/lb/application//templates/front/corcms/zh//css/coolMenu.css" rel=stylesheet > <link href="http://localhost/lb/application//templates/front/corcms/zh//css/online.css" rel=stylesheet > 
 <script language='javascript'>
 var url_root ='http://localhost/lb/';
 var site_url='http://localhost/lb/';
@@ -66,7 +61,7 @@ var css_backend='http://localhost/lb/application//templates/backend//css/';
 var theme_front='http://localhost/lb/application//templates/';
 var theme_backend='http://localhost/lb/application//templates/';
 </script>
-<script language="JavaScript" type="text/javascript" src="http://localhost/lb/application//templates/front/corcms/zh//js//jquery-1.9.1.min.js"></script><script language="JavaScript" type="text/javascript" src="http://localhost/lb/application//templates/front/corcms/zh//js//core.js"></script><script language="JavaScript" type="text/javascript" src="http://localhost/lb/application//templates/front/corcms/zh//js//FormValid.js"></script>
+<script language="JavaScript" type="text/javascript" src="http://localhost/lb/application//templates/front/corcms/zh//js//jquery-1.9.1.min.js"></script><script language="JavaScript" type="text/javascript" src="http://localhost/lb/application//templates/front/corcms/zh//js//core.js"></script><script language="JavaScript" type="text/javascript" src="http://localhost/lb/application//templates/front/corcms/zh//js//FormValid.js"></script><script language="JavaScript" type="text/javascript" src="http://localhost/lb/application//templates/front/corcms/zh//js//online.js"></script>
 <base target="_self" />
 
 
@@ -236,6 +231,32 @@ var theme_backend='http://localhost/lb/application//templates/';
     <td width="7"><img src="http://localhost/lb/application//templates/front/corcms/zh//images//banquan_13.jpg" width="7" height="39" /></td>
   </tr>
 </table>
+<div class='online_qq'>
+<div id="online_qq_layer">
+	<div id="online_qq_tab">
+		<a id="floatShow" style="display:block;" href="javascript:void(0);">收缩</a> 
+		<a id="floatHide" style="display:none;" href="javascript:void(0);">展开</a>
+	</div>
+	<div id="onlineService">
+		<div class="onlineMenu">
+			<h3 class="tQQ">QQ在线客服</h3>
+			<ul>
+				<li class="tli zixun">在线咨询</li>
+				<li><a href="#"><img src="http://localhost/lb/application//templates/front/corcms/zh//images/right/pa.gif" width="74" height="22" alt="客服001" /></a></li>
+				<li><a href="#"><img src="http://localhost/lb/application//templates/front/corcms/zh//images/right/pa.gif" width="74" height="22" alt="客服001" /></a></li>
+			</ul>
+		</div>
+		<div class="onlineMenu">
+			<h3 class="tele">QQ在线客服</h3>
+			<ul>
+				<li class="tli phone">400-517-517</li>
+				<li class="last"><a class="newpage" href="#">新版调查</a></li>
+			</ul>
+		</div>
+		<div class="btmbg"></div>
+	</div>
+</div>
+</div>
 
 
 </body>
