@@ -29,7 +29,11 @@ class Message extends CI_Controller {
 	 */
 	function index()
 	{
-		
+		// add breadcrumbs
+		$this->load->library('Breadcrumb');
+		$this->breadcrumb->append_crumb('Home', '/');
+		$this->breadcrumb->append_crumb('Message', 'message');
+		$this->breadcrumb->output();	
  		$this->db->select('*',false)->from('message')->where('ms_valid',1)->order_by('ms_id','desc');
  		$data = $this->init_db->fetch_all(5);
 		$this->init_page->load_front_view("message",$data);

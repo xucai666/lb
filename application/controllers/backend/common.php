@@ -123,7 +123,7 @@ class Common extends CI_Controller{
 
  	//拼音
  	function ajax_pinyin(){
- 		$this->load->helper('pinyin');
+ 		$this->load->helper('pinyin');		
  		echo GetPinyin($this->input->post('str'));
  		exit;
  	}

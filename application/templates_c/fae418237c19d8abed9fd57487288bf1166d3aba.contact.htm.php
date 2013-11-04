@@ -1,29 +1,17 @@
-<?php /*%%SmartyHeaderCode:217375277816b28db87-05755409%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:23459527781a551d882-18939296%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '646192cf89e55930db325e82e3ec2f08d5840b45' => 
+    'fae418237c19d8abed9fd57487288bf1166d3aba' => 
     array (
-      0 => 'application\\templates\\front\\corcms\\zh\\about.htm',
-      1 => 1380536268,
+      0 => 'application\\templates\\front\\corcms\\zh\\contact.htm',
+      1 => 1378470606,
       2 => 'file',
     ),
     '8b2ccbca6cd952602225ef14328668bf65dbf08a' => 
     array (
       0 => 'application\\templates\\front\\corcms\\zh\\top.htm',
       1 => 1383560566,
-      2 => 'file',
-    ),
-    'f32b781624383bf9a74aea8a15fd4bce38251991' => 
-    array (
-      0 => 'application\\templates\\front\\corcms\\zh\\left_about.htm',
-      1 => 1378470606,
-      2 => 'file',
-    ),
-    '3a715f905da6e089cb10c68205e5329c232117b8' => 
-    array (
-      0 => 'application\\templates\\front\\corcms\\zh\\left_contact.htm',
-      1 => 1378470606,
       2 => 'file',
     ),
     'ae0446f50b5c68d1a71cae5d127e6988ad63b43f' => 
@@ -33,18 +21,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '217375277816b28db87-05755409',
+  'nocache_hash' => '23459527781a551d882-18939296',
   'variables' => 
   array (
     'dir_front' => 0,
-    'ci_uri' => 0,
+    'img_url' => 0,
+    'contact' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5277816b74b6b2_28836193',
+  'unifunc' => 'content_527781a56595b6_51998919',
   'cache_lifetime' => 3600,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5277816b74b6b2_28836193')) {function content_5277816b74b6b2_28836193($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_527781a56595b6_51998919')) {function content_527781a56595b6_51998919($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -133,37 +122,28 @@ var theme_backend='http://localhost/lb/application//templates/';
 <table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
     <td>
-    <img src="http://localhost/lb//swfupload/uploads/2013-08-21/nav-10.jpg" width="992" height="179" />
+    <img src="http://localhost/lb//swfupload/uploads/2013-08-21/ban_05.jpg" width="992" height="179" />
 
 
     </td>
   </tr>
 </table>
 
-<div id="breadcrumb"><a href="http://localhost/lb/">Home</a> &nbsp;›&nbsp; <span>About</span></div>
-
+<div id="breadcrumb"><a href="http://localhost/lb/">Home</a> &nbsp;›&nbsp; <span>Contact</span></div>
 
 
 <table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
-    <td width="246" valign="top">
-    
-  	     <table width="233" border="0" cellspacing="0" cellpadding="0">
+    <td width="246" valign="top"><table  border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td width="3"><img src="http://localhost/lb/application//templates/front/corcms/zh//images//daohanhh_09.jpg" width="3" height="28" /></td>
-        <td width="212" style="background:url(http://localhost/lb/application//templates/front/corcms/zh//images//daohanhh_11.jpg) repeat-x; padding-left:15px;" class="hong">公司简介</td>
+        <td width="212" style="background:url(http://localhost/lb/application//templates/front/corcms/zh//images//daohanhh_11.jpg) repeat-x; padding-left:15px;" class="hong">联系我们</td>
         <td width="3"><img src="http://localhost/lb/application//templates/front/corcms/zh//images//daohanhh_13.jpg" width="3" height="28" /></td>
       </tr>
       <tr>
-        <td colspan="3" class="bian1" ><table width="231" border="0" cellspacing="0" cellpadding="0" style="margin-top:5px; margin-bottom:17px;">
-         <tr>
-            <td height="30" valign="bottom" style="padding-bottom:3px;" class="link_pa"><img src="http://localhost/lb/application//templates/front/corcms/zh//images//jiantou_05.jpg" width="6" height="9" style="margin-left:20px; margin-right:15px;"  /><a href="http://localhost/lb//about/index/3">品牌介绍</a></td>
-          </tr>
+        <td colspan="3" class="bian1" ><table  border="0" cellspacing="0" cellpadding="0" style="margin-top:5px; margin-bottom:17px;">
           <tr>
-            <td><img src="http://localhost/lb/application//templates/front/corcms/zh//images//huitiao_05.jpg" width="227" height="1" /></td>
-          </tr>
-          <tr>
-             <td height="30" valign="bottom" style="padding-bottom:3px;" class="link_pa"><img src="http://localhost/lb/application//templates/front/corcms/zh//images//jiantou_05.jpg" width="6" height="9" style="margin-left:20px; margin-right:15px;" /><a href="http://localhost/lb//about/index/4">经营理念</a></td>
+            <td height="30" valign="bottom" style="padding-bottom:3px;" class="link_pa"><img src="http://localhost/lb/application//templates/front/corcms/zh//images//jiantou_05.jpg" width="6" height="9" style="margin-left:20px; margin-right:15px;"  /><a href="#">联系方式</a></td>
           </tr>
           <tr>
             <td><img src="http://localhost/lb/application//templates/front/corcms/zh//images//huitiao_05.jpg" width="227" height="1" /></td>
@@ -171,59 +151,21 @@ var theme_backend='http://localhost/lb/application//templates/';
         </table></td>
       </tr>
     </table>
-  	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<table width="233" border="0" cellspacing="0" cellpadding="0" >
-        <tr>
-          <td width="3"><img src="http://localhost/lb/application//templates/front/corcms/zh//images//daohanhh_09.jpg" width="3" height="28" /></td>
-          <td width="212" style="background:url(http://localhost/lb/application//templates/front/corcms/zh//images//daohanhh_11.jpg) repeat-x; padding-left:15px;" class="hong">联系我们</td>
-          <td width="3"><img src="http://localhost/lb/application//templates/front/corcms/zh//images//daohanhh_13.jpg" width="3" height="28" /></td>
-        </tr>
-        <tr>
-          <td colspan="3" class="bian1" style="line-height:16px; padding:10px;"><p>地 址：福州工业路523号</p>
-            <p>电 话：13600964906 </p>
-          <p>传 真：0591-888888</p></td>
-        </tr>
-      </table>
-    
-      
-    <td valign="top">
-	
-		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <p><img src="http://localhost/lb/application//templates/front/corcms/zh//images//3d_05.jpg" width="230" height="156" style="margin-top:25px;" /></p>
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td width="3"><img src="http://localhost/lb/application//templates/front/corcms/zh//images//daohanhh_09.jpg" width="3" height="28" /></td>
-        <td style="background:url(http://localhost/lb/application//templates/front/corcms/zh//images//daohanhh_11.jpg) repeat-x; padding-left:20px; " class="hong">
-        关于我们
-        
-        </td>
+        <td width="687" style="background:url(http://localhost/lb/application//templates/front/corcms/zh//images//daohanhh_11.jpg) repeat-x; padding-left:20px; " class="hong">联系方式</td>
         <td width="3"><img src="http://localhost/lb/application//templates/front/corcms/zh//images//daohanhh_13.jpg" width="3" height="28" /></td>
       </tr>
       <tr>
-  <td  colspan="3" class="bian1">
- <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:5px; margin-bottom:14px;">
- 
-  
-        <tr>
-         <td >
-          <div class="content">
-           <p>&nbsp;公司的组织形式。以营利为目的的社团法人。在<a target="_blank" href="http://baike.baidu.com/view/87694.htm" style="color: rgb(19, 110, 194);">资本主义社会</a>获得高度发展。我国在建国后对私营公司进行了社会主义改造。国营工、商、建筑、运输等部门中实行独立经济核算的经营管理组织和某些城市中按行业划分的专业管理机构，也通称公司。近年来随着我国经济体制的改革，享有法人资格的各种公司纷纷设立，按章程从事自身的生产经营活动。</p>
-           </div> 
-        </td>
-        </tr>
-      <tr>
-         <td>
-		
-
-         
-         </td>
-        </tr>
-    
-        
-    
-  </table>
-        </td>
+        <td width="691" colspan="3" valign="top" class="bian1" style="line-height:24px; padding-top:30px; padding-bottom:30px; padding-left:10px; padding-right:10px;height:250px;">
+             地 址：福州工业路523号<br />
+             电 话：13600964906<br /> 
+             传 真：0591-888888 
+          </td>
       </tr>
-    </table>
-	</td>
+    </table></td>
   </tr>
 </table>
 <div style="height:5px;"></div>

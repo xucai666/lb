@@ -17,6 +17,7 @@ class About extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
+
 		
 	
 		
@@ -29,8 +30,11 @@ class About extends CI_Controller {
 	 */
 	function index()
 	{
-		
-		$this->tpl->caching = true;
+		// add breadcrumbs
+		$this->load->library('Breadcrumb');
+		$this->breadcrumb->append_crumb('Home', '/');
+		$this->breadcrumb->append_crumb('About', 'about');
+		$this->breadcrumb->output();
 		$this->init_page->load_front_view('about',$data);
 	}	
 	
@@ -39,16 +43,6 @@ class About extends CI_Controller {
 		
 	
 	
-	
-	
-	
-	//新闻列表
-	function archives_list(){			
-		
-		$this->init_page->load_front_view("about_news",$data);
-		
-	}	
-
 	
 	
  

@@ -26,7 +26,11 @@ class Sales extends CI_Controller {
 	 */
 	function index()
 	{
-		
+		// add breadcrumbs
+		$this->load->library('Breadcrumb');
+		$this->breadcrumb->append_crumb('Home', '/');
+		$this->breadcrumb->append_crumb('Sales', 'sales');
+		$this->breadcrumb->output();
 		$this->init_page->load_front_view("sales",$data);
 		
 		

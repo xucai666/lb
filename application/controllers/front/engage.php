@@ -27,7 +27,11 @@
 	function index()
 	{
 		
-	 		
+	 	// add breadcrumbs
+		$this->load->library('Breadcrumb');
+		$this->breadcrumb->append_crumb('Home', '/');
+		$this->breadcrumb->append_crumb('Engage', 'engage');
+		$this->breadcrumb->output();	
  		$this->db->select("a.*",false)->from($this->init_db->table('engage').' as a ')
  		->where('a.eg_pos<>','\'\'',false)
  		
