@@ -56,8 +56,8 @@ class Templates extends CI_Controller {
     *添加/修改
        **/ 
       function action_copy(){
-          $this->init_page->fetch_css('templates','view',$this->init_page->getRes('css','backend','item/'));
-          $this->init_page->fetch_js('templates','view',$this->init_page->getRes('js','backend','item/'));
+          $this->init_page->fetch_css('templates','item/view',$this->init_page->getRes('css','backend').'/item/');
+          $this->init_page->fetch_js('templates','view',$this->init_page->getRes('js','backend').'/item/');
           $main_id = $this->uri->segment(4);
           $main = $this->db->select('*')->from('templates')->where('t_id',$main_id)->get()->first_row('array');
           unset($main[t_id]);

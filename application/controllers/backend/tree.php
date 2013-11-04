@@ -101,6 +101,7 @@ class Tree extends CI_Controller{
 
 	function action_save(){
 		$main = $this->input->post('main');
+		$main = php_escape($main);
 		$main['treeId'] = $this->im->detail($main[pid],'treeId');
 		$data = array('main'=>$main);
 		try{

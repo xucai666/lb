@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8b2ccbca6cd952602225ef14328668bf65dbf08a' => 
     array (
       0 => 'application\\templates\\front\\corcms\\zh\\top.htm',
-      1 => 1383323779,
+      1 => 1383560566,
       2 => 'file',
     ),
     'f32b781624383bf9a74aea8a15fd4bce38251991' => 
@@ -36,10 +36,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'nocache_hash' => '151535273894d0c3190-32943638',
   'cache_lifetime' => 3600,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52744d6108ec98_25630402',
+  'unifunc' => 'content_527776515509c2_25896719',
+  'variables' => 
+  array (
+    'dir_front' => 0,
+    'ci_uri' => 0,
+  ),
   'has_nocache_code' => false,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52744d6108ec98_25630402')) {function content_52744d6108ec98_25630402($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_527776515509c2_25896719')) {function content_527776515509c2_25896719($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -72,22 +77,20 @@ var theme_backend='http://localhost/lb/application//templates/';
     <td width="3"><img src="http://localhost/lb/application//templates/front/corcms/zh//images//top_02.jpg" width="3" height="95" /></td>
     <td style="background:url(http://localhost/lb/application//templates/front/corcms/zh//images//top_04.jpg) repeat-x"><table width="985" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td width="237" valign="top">
+        <td width="237" >
         
-        <img src="http://localhost/lb/application//templates/front/corcms/zh//images//logo_02.jpg" width="237" height="95" style="margin-left:27px;" /></td>
+        <img src="http://localhost/lb/application//templates/front/corcms/zh//images//logo_02.png" width="237" height="95" style="margin-left:27px;" /></td>
         <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
-          <tr>
-            <td width="552" align="right" style="position:relative" id="login_panel" >        
-            <script language="javascript">
-           
-              $('#login_panel').load('http://localhost/lb/front/index/top_login'); 
-            
-           </script>
-            </td>
-          </tr>
+
           <tr>
             <td align="right">
-
+               <div id="login_panel">        
+                            <script language="javascript">
+                           
+                              $('#login_panel').load('http://localhost/lb/front/index/top_login'); 
+                            
+                           </script>
+                       </div>
 
                   <ul id="coolMenu">
                     <li><a href="http://localhost/lb/html/./..///index.htm" >首页</a>
@@ -242,15 +245,15 @@ var theme_backend='http://localhost/lb/application//templates/';
 			<h3 class="tQQ">QQ在线客服</h3>
 			<ul>
 				<li class="tli zixun">在线咨询</li>
-				<li><a href="#"><img src="http://localhost/lb/application//templates/front/corcms/zh//images/right/pa.gif" width="74" height="22" alt="客服001" /></a></li>
-				<li><a href="#"><img src="http://localhost/lb/application//templates/front/corcms/zh//images/right/pa.gif" width="74" height="22" alt="客服001" /></a></li>
+				<li><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=150672834&site=qq&menu=yes'><img border='0' src='http://wpa.qq.com/pa?p=2:150672834:41 &amp;r=0.22914223582483828' alt='点击这里' /></a></li>
+				<li><a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=56055473&site=qq&menu=yes'><img border='0' src='http://wpa.qq.com/pa?p=2:56055473:41 &amp;r=0.22914223582483828' alt='点击这里' /></a></li>
 			</ul>
 		</div>
 		<div class="onlineMenu">
 			<h3 class="tele">QQ在线客服</h3>
 			<ul>
-				<li class="tli phone">400-517-517</li>
-				<li class="last"><a class="newpage" href="#">新版调查</a></li>
+				<li class="tli phone">13600964906</li>
+				<li class="tli fufei">0591-888888</li>
 			</ul>
 		</div>
 		<div class="btmbg"></div>

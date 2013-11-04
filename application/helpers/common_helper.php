@@ -387,7 +387,17 @@ function RndString($body)
         @chmod($file_name,0666); 
     }
 
-
+/**
+ * php_escape
+ * @param  [type] $post [description]
+ * @return [type]       [description]
+ */
+function php_escape($post){
+	foreach($post as $k=>$v){
+		$post[$k] = mysql_real_escape_string($v);
+	}
+	return $post;
+}
 
 
 
