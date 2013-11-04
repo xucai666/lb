@@ -168,10 +168,13 @@
 	},
 	"file_history":
 	[
+		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
+		"/E/phpnow/htdocs/lb/application/models/common_model.php",
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/top.htm",
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/product.htm",
+		"/C/Users/Administrator/AppData/Local/Temp/_tc/database/lb_cn.sql",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/message.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/left_message.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/product.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/top.htm",
 		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/contact.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/about.htm",
@@ -209,7 +212,6 @@
 		"/E/phpnow/htdocs/lb/tools/test.php",
 		"/E/phpnow/htdocs/lb/tools/xx/tt.php",
 		"/E/phpnow/htdocs/lb/tools/tt.php",
-		"/E/phpnow/htdocs/lb/application/models/common_model.php",
 		"/E/phpnow/htdocs/lb/application/helpers/MY_url_helper.php",
 		"/E/phpnow/htdocs/lb/swfupload/loader.php",
 		"/E/phpnow/htdocs/lb/swfupload/index.php",
@@ -228,7 +230,6 @@
 		"/E/phpnow/htdocs/lb/application/core/MY_Config.php",
 		"/E/phpnow/htdocs/lb/application/config/doctypes.php",
 		"/E/phpnow/htdocs/lb/application/config/mimes.php",
-		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/advs_list.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/mdata_list.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/config_save.htm",
@@ -294,8 +295,7 @@
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/jqFancyTransitions.1.8.js",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/css/item/templates.css",
 		"/D/tools/k开发成果/develop/javascript/dialog2/dialog/dialog_box.html",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/engage.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/engage_add.htm"
+		"/E/phpnow/htdocs/lb/application/controllers/backend/engage.php"
 	],
 	"find":
 	{
@@ -303,7 +303,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"E:\\phpnow\\htdocs\\lb\\application",
@@ -383,6 +383,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"tag",
 			"important",
 			"fufei",
 			"search_list",
@@ -509,8 +510,7 @@
 			"focus",
 			"links",
 			".height",
-			"src",
-			"img"
+			"src"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -584,6 +584,22 @@
 		"selected_items":
 		[
 			[
+				"tpl.php",
+				"application/libraries/tpl.php"
+			],
+			[
+				"common_model",
+				"application/models/common_model.php"
+			],
+			[
+				"top.htm",
+				"application/templates/front/corcms/zh/top.htm"
+			],
+			[
+				"product.htm",
+				"application/templates/front/corcms/zh/product.htm"
+			],
+			[
 				"message.htm",
 				"application/templates/front/corcms/zh/message.htm"
 			],
@@ -610,10 +626,6 @@
 			[
 				"product.php",
 				"application/controllers/front/product.php"
-			],
-			[
-				"top.htm",
-				"application/templates/front/corcms/zh/top.htm"
 			],
 			[
 				"product",
@@ -676,10 +688,6 @@
 				"application/templates/backend/corcms/message_list.htm"
 			],
 			[
-				"tpl.php",
-				"application/libraries/tpl.php"
-			],
-			[
 				"cor_pae",
 				"application/libraries/cor_page.php"
 			],
@@ -714,10 +722,6 @@
 			[
 				"system",
 				"application/controllers/backend/system_manage.php"
-			],
-			[
-				"common_model",
-				"application/models/common_model.php"
 			],
 			[
 				"mdata_add.",
@@ -1090,10 +1094,6 @@
 			[
 				"dynamic_vie",
 				"application/templates/front/blue/zh/dynamic_view.htm"
-			],
-			[
-				"comon_mod",
-				"application/models/common_model.php"
 			]
 		],
 		"width": 0.0
