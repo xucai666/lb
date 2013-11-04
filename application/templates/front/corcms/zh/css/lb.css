@@ -146,9 +146,13 @@ border:0;
 
 .content{
 	min-height:250px;
-	padding:10px;
+	padding:2px;
+	word-break:break-all;
+	word-wrap:break-word;
+	overflow: hidden;
+
 	
-	text-indent: 2em;
+	
 	line-height: 30px;
 }
 .content_nav{
@@ -185,6 +189,7 @@ border:0;
 	border:solid 1px #cccccc;
 	width: 160px;
 	height: 140px;
+	text-align: center;
 	
 }
 
@@ -347,7 +352,7 @@ td,span,th,div,input,button,a{
 
 .search_list li{
 	height: auto;
-	line-height: 150%;
+	line-height: 25px;
 
 	 
 }

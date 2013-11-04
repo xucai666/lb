@@ -232,15 +232,19 @@ class Product extends CI_Controller {
 				foreach($cart_arr as &$v){
 					$v['name'] = $v['name'];
 					$sort[$v['id']] = $v['id'];
-					$p_all[$v['id']] = $v['id'];
 				}
-				$p_all && $imgs = $this->db->select('p_pic,p_id',false)
-				->from($this->init_db->table('module_product'))
-				->where_in('p_id',$p_all)
-				->get()->result_array();
-				$imgs_re = $this->init_form->array_re_index($imgs,'p_id','p_pic');
-				$cart_arr && array_multisort($sort,SORT_ASC,$cart_arr);
-				foreach($cart_arr as &$v) $v['p_pic'] = $imgs_re[$v['id']];
+				if($sort){
+						$p_all = $this->init_form->array_re_index($this->db->query("select SUBSTRING_INDEX(p_pic,',',1) as p_pic,p_id from ".$this->db->dbprefix."module_product where p_id in(".implode(',',$sort).")")->result_array(),'p_id','p_pic');
+						foreach($p_all as $k=>$v1){
+							$imgs_re[$k] = $this->Common_model->fetch_images($v1,true);
+						}
+						
+						$cart_arr && array_multisort($sort,SORT_ASC,$cart_arr);
+
+						foreach($cart_arr as &$v) $v['p_pic'] = strpos($imgs_re[$v['id']],',')!==false ? substr($imgs_re[$v['id']],0,strpos($imgs_re[$v['id']],',')):$imgs_re[$v['id']];
+
+
+				}
 
 				$this->init_page->load_front_view("product_order",array('main'=>$main,'list'=>$cart_arr));
 			}

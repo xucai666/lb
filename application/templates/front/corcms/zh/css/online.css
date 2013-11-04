@@ -22,7 +22,7 @@ a,img{border:0;}
 .onlineMenu li{height:36px;line-height:36px;border-bottom:solid 1px #E6E5E4;text-align:center;}
 .onlineMenu li.tli{padding:0 0 0 28px;font-size:12px;text-align:left;}
 .onlineMenu li.zixun{background-position:0px -131px;}
-.onlineMenu li.fufei{background-position:0px -190px;}
+.onlineMenu li.fufei{background-position:0px -190px;white-space:nowrap;  }
 .onlineMenu li.phone{background-position:0px -244px;}
 .onlineMenu li a.newpage{display:block;height:36px;line-height:999em;overflow:hidden;background-position:5px -100px;}
 .onlineMenu li img{margin:8px 0 0 0;}

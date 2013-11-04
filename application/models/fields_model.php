@@ -55,7 +55,7 @@ class Fields_model extends CI_Model{
 	//detail
 	function fields_list($fields='*',$where=null){
 		
-		return  $this->db->findAll("select * from module_fields ".$where);
+		return  $this->init_db->fetchAll("select * from ".$this->db->dbprefix."module_fields ".$where);
 	}
 
 
