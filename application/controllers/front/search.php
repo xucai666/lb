@@ -28,6 +28,12 @@ class Search extends CI_Controller {
 	function index()
 	{
 	
+		// add breadcrumbs
+		$this->load->library('Breadcrumb');
+		$this->breadcrumb->append_crumb('Home', '/');
+		$this->breadcrumb->append_crumb('Search', 'search');
+		$this->breadcrumb->output();
+
 		$page_size = 15;
 
 		//modules 
