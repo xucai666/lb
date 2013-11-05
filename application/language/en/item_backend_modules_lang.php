@@ -7,7 +7,7 @@
   'modules_success_delete' => 'Deleted successfully',
   'modules_error_parameter' => 'Parameter error',
   'modules_error_delete' => 'Delete fails, please erase data model',
-  'modules_input_name' => 'Module name',
+  'modules_input_name' => 'The module name',
   'modules_input_sub_module' => 'Subordinate modules',
   'modules_input_select' => 'Please select',
   'modules_input_tb' => 'Data sheet',

@@ -3,7 +3,7 @@
   'username' => 'Account number',
   'password' => 'Password',
   'captcha' => 'Validation',
-  'login' => 'Login',
+  'login' => 'Landing',
   'inp_username' => 'Please enter your user name',
   'inp_password' => 'Please enter your password',
   'inp_password_error' => 'Password error',

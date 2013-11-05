@@ -21,7 +21,7 @@
   'inp_password' => 'Please enter your password',
   'inp_password_confirm' => 'Please enter your password to confirm',
   'inp_password_confirm_error' => 'Twice the password entered are inconsistent',
-  'theme_add' => 'Adding/modifying',
+  'theme_add' => 'User add/modify',
   'theme_manage' => 'User management',
   'log_add' => 'Adding user%s',
   'log_mod' => 'Modify user%s',

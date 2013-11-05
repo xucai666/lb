@@ -7,6 +7,6 @@
   'submit' => 'Submit',
   'select_all' => 'Select all',
   'theme_roles' => 'Configure role permissions',
-  'log_mod' => 'Modify the role%s',
+  'log_mod' => 'Modifying role%s',
 );
 ?>

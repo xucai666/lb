@@ -24,7 +24,7 @@
   'p_param' => 'Technical parameters',
   'p_doc_relate' => 'Related documents',
   'p_driver' => 'Software driver',
-  'p_demo' => 'Sample download',
+  'p_demo' => 'Sample downloads',
   'p_fit' => 'Related accessories',
   'p_news' => 'Product news',
   'p_adv' => 'Brochure',

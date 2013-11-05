@@ -2,8 +2,8 @@
  $lang = array (
   'basic_config' => 'Basic configuration',
   'opt_title' => 'Site name',
-  'opt_meta' => 'Website keyword',
-  'opt_des' => 'Web site description',
+  'opt_meta' => 'Site keywords',
+  'opt_des' => 'Site description',
   'opt' => 'Search engine optimization',
   'smt_config' => 'Mail server configuration',
   'smt_host' => 'Server',

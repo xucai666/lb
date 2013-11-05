@@ -15,9 +15,9 @@
       
 
 
-<div class="local_13033875926094 w724"><span class="col_1">给我留言</span><span class="col_2"> <a href="#write">签写留言</a></span></div>
+<div class="local_13033875926094 w724"><span class="col_1"><!--{lang('gb_leave_message')}--></span><span class="col_2"> <a href="#write"><!--{lang('gb_write_message')}--></a></span></div>
 
-<p style="text-indent:2em;line-height:30px;">如果您对我们的服务、业务、网站或其它什么问题，可以通过填写以下表单，我们将在最短时间内回答您的问题，您会享受完善的专业化的服务。</p>
+<p style="text-indent:2em;line-height:30px;"><!--{lang('gb_theme')}--></p>
 
 
 
@@ -27,25 +27,25 @@
     <form id="form1" name="form1" method="post" action="<!--{$site_url}-->/message/save" onsubmit="return validator(this)" >
     <table width="754" border="0" cellspacing="1" cellpadding="4" align="center" bgcolor="#CCCCCC" >
       <tr bgcolor="#ffffff"> 
-        <td width="10%" align="center" nowrap>您的姓名：</td>
-        <td ><input type="text" maxlength="10" name="main[ms_name]" size="36" class="input" id="main[ms_name]"  valid="required" errmsg="请输入尊称">&nbsp;<font color="#FF0000">*</font></td>
+        <td width="10%" align="center" nowrap><!--{lang('gb_name')}-->：</td>
+        <td ><input type="text" maxlength="10" name="main[ms_name]" size="36" class="input" id="main[ms_name]"  valid="required" errmsg="<!--{lang('gb_valie_name')}-->">&nbsp;<font color="#FF0000">*</font></td>
         
       </tr>
       <tr bgcolor="#ffffff">
 
-      <td  width="10%" align="center" nowrap>电话/手机：</td>
-        <td ><input maxlength="20" type="text" name="main[ms_tel]"  id="main[ms_tel]"size="46" class="input"  valid="required" errmsg="请输入电话/手机" />&nbsp;<font color="#FF0000">*</font></td>
+      <td  width="10%" align="center" nowrap><!--{lang('gb_tel')}-->：</td>
+        <td ><input maxlength="20" type="text" name="main[ms_tel]"  id="main[ms_tel]"size="46" class="input"  valid="required" errmsg="<!--{lang('gb_valie_tel')}-->" />&nbsp;<font color="#FF0000">*</font></td>
 
         </tr>
       <tr bgcolor="#ffffff"> 
-        <td align="center" nowrap>&nbsp;电子邮件：</td>
-        <td><input maxlength="80" type="text" name="main[ms_email]" size="36" class="input" id="email" valid="required|isEmail" errmsg="请输入电子邮件，方便联系|电子邮件地址格式不正确" >&nbsp;<font color="#FF0000">*</font></td>
+        <td align="center" nowrap>&nbsp;<!--{lang('gb_email')}-->：</td>
+        <td><input maxlength="80" type="text" name="main[ms_email]" size="36" class="input" id="email" valid="required|isEmail" errmsg="<!--{lang('gb_valie_email')}-->" >&nbsp;<font color="#FF0000">*</font></td>
         
       </tr>
       
       <tr bgcolor="#ffffff"> 
         
-        <td align="center" nowrap height="2" width="10%">选择头像：</td>
+        <td align="center" nowrap height="2" width="10%"><!--{lang('gb_avatar')}-->：</td>
         <td  height="2" colspan="3" align="left" class="m_img"> 
 <style>
           .m_img li{
@@ -69,17 +69,17 @@
  </td>
       </tr>
 <tr bgcolor="#ffffff">
-      <td align="center" nowrap width="10%"> <font color="#FF0000">*</font>留言内容：<br>
-          (1000字内) </td>
-        <td align="left" colspan="3"><textarea name="main[ms_content]" cols="36" rows="8" class="textarea"  id="main[ms_content]" valid="required" errmsg="请输入留言内容"></textarea>&nbsp;<font color="#FF0000">*</font></td>
+      <td align="center" nowrap width="10%"> <font color="#FF0000">*</font><!--{lang('gb_content')}-->：<br>
+          (<!--{lang('gb_txt_limit')}-->) </td>
+        <td align="left" colspan="3"><textarea name="main[ms_content]" cols="36" rows="8" class="textarea"  id="main[ms_content]" valid="required" errmsg="<!--{lang('gb_valie_content')}-->"></textarea>&nbsp;<font color="#FF0000">*</font></td>
 
       </tr>
       
       <tr bgcolor="#ffffff"> 
-        <td align="center" nowrap width="10%">验 证 码：</td>
+        <td align="center" nowrap width="10%"><!--{lang('sys_captcha')}-->：</td>
         <td height="12" colspan="3" align="left"> <table  border="0" cellspacing="0" cellpadding="0">
             <tr> 
-              <td width="120"><input name="captcha" type="text" id="captcha"   size="10" valid='required' errmsg='请输入验证码'/></td>
+              <td width="120"><input name="captcha" type="text" id="captcha"   size="10" valid='required' errmsg='<!--{lang('sys_valid_captcha')}-->'/></td>
               <td > <a href="javascript:;"  >
                <img id='captcha1' src='<!--{func_site_url segments="message/show_captcha"}-->'/></a>
             <script language="javascript">
@@ -98,8 +98,8 @@
       </tr>
 
         </table>
-         <center> <input maxlength="1000" type="submit" name="Submit" value="提 交" class="btn"> 
-          &nbsp;&nbsp; <input type="reset" name="Submit2" value="取 消" class="btn"> </center>
+         <center> <input maxlength="1000" type="submit" name="Submit" value="<!--{lang('button_submit')}-->" class="btn"> 
+          &nbsp;&nbsp; <input type="reset" name="Submit2" value="<!--{lang('button_cancel')}-->" class="btn"> </center>
     </form>
    
 
