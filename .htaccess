@@ -1,17 +1,6 @@
 ﻿RewriteEngine on 
-
-
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l
 RewriteCond $1 !^(index\.php|robots\.txt|swfupload|templates|ckfinder|ckeditor|tools|docs|charts|install|user_guide|uploads)    
-#RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
-#for nginx only
-#RewriteRule ^(.*)$ index.php?/$1 [L] 
-
-
-
-RewriteRule ^(.*)$ index.php/$1 [L] 
-
-
-
+RewriteRule ^(.*)$ index.php/$1 [L]

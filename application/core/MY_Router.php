@@ -50,6 +50,8 @@ class MY_Router extends CI_Router
 
 			if (count($segments) > 0)
 			{
+
+
 				// Does the requested controller exist in the sub-folder?
 				if ( ! file_exists(APPPATH.'controllers/'.$this->fetch_directory().$segments[0].'.php'))
 				{
@@ -65,6 +67,7 @@ class MY_Router extends CI_Router
 					}
 					else
 					{
+
 						show_404($this->fetch_directory().$segments[0]);
 					}
 				}

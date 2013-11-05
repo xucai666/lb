@@ -2,7 +2,7 @@
  $lang = array (
   'username' => 'User name',
   'role' => 'Roles',
-  'name' => 'The name',
+  'name' => 'Name',
   'tel' => 'Phone',
   'mobile' => 'Cell phone',
   'qq' => 'qq',

@@ -55,7 +55,7 @@
                     $restr .= "_";
                 }
             }
-            else if( eregi("[a-z0-9]",$str[$i]) )
+            else if( preg_match("/[a-z0-9]/",$str[$i]) )
             {
                 $restr .= $str[$i];
             }

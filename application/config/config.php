@@ -60,7 +60,7 @@ $config['url_suffix'] = "";
 | than english.
 |
 */
-$config['language']	= "zh";
+$config['language']	= "en";
 $config['support_language']	=array('en','zh');
 $config['lang_multiple']	= true;
 /*

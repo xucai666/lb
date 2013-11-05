@@ -1,8 +1,8 @@
 <?php return array (
   'optimize' => 
   array (
-    'title' => 'Cor.Cms v1.0',
-    'meta' => 'Cor.Cms v1.0',
+    'title' => 'Welcome to visit this site',
+    'meta' => 'Welcome to visit this site',
     'description' => 'Codeigniter CMS',
   ),
   'smtp' => false,
@@ -12,6 +12,7 @@
     'tel' => '13600964906',
     'fax' => '0591-888888',
     'email' => 'conqweal@163.com',
+    'qq' => '150672834,56055473',
   ),
   'develop' => 
   array (

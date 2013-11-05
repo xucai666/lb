@@ -19,6 +19,11 @@ class Product extends CI_Controller {
 		parent::__construct();
  		$this->load->model('Product_model','im');
  		$this->load->library('Breadcrumb');
+
+ 		$cache = &get_init_cache();
+ 		$channel = $cache->cache_fetch('channel');
+ 		
+ 		
 	}
 	
 	/**

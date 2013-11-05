@@ -19,7 +19,7 @@
   'delete' => 'Delete',
   'confirm_delete' => 'Sure you want to delete?',
   'prop_slide' => 'Home wheels',
-  'upload_pic' => 'Separate images',
+  'upload_pic' => 'Individually upload images',
   'inp_title' => 'Please enter a title',
   'inp_content' => 'Please enter content',
   'inp_category' => 'Please select a category',

@@ -2,7 +2,7 @@
  $lang = array (
   'modules_manage' => 'Model maintenance',
   'modules_valid_primary' => 'Please add a primary key field',
-  'modules_valid_table' => 'Save failed table already exists',
+  'modules_valid_table' => 'Failed to save table already exists',
   'modules_success_save' => 'Successfully saved',
   'modules_success_delete' => 'Deleted successfully',
   'modules_error_parameter' => 'Parameter error',
@@ -24,5 +24,6 @@
   'modules_input_field_valid' => 'Validation type',
   'modules_input_field_desc' => 'Field description',
   'modules_input_field_opt' => 'Operation',
+  'modules_input_field_ext_prop' => 'Attached properties',
 );
 ?>

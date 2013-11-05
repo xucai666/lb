@@ -2,9 +2,9 @@
  $lang = array (
   'username' => 'User name',
   'role' => 'Roles',
-  'name' => 'The name',
+  'name' => 'Name',
   'tel' => 'Phone',
-  'mobile' => 'Mobile phone',
+  'mobile' => 'Cell phone',
   'qq' => 'qq',
   'email' => 'E-mail',
   'password' => 'Password',
@@ -21,9 +21,9 @@
   'inp_password' => 'Please enter your password',
   'inp_password_confirm' => 'Please enter your password to confirm',
   'inp_password_confirm_error' => 'Twice the password entered are inconsistent',
-  'theme_add' => 'User add/modify',
+  'theme_add' => 'Adding/modifying',
   'theme_manage' => 'User management',
-  'log_add' => 'Add user%s',
+  'log_add' => 'Adding user%s',
   'log_mod' => 'Modify user%s',
   'log_del' => 'Delete user%s',
 );

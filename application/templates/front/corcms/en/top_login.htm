@@ -1,0 +1,31 @@
+ <form id="form1" name="form1" method="get" action="<!--{func_site_url segments='search'}-->"  style="display:;" >
+         <ul class="index_top_right">          
+          <li  class="" >
+           <img src="<!--{$img_url}-->/lang_change.gif">&nbsp; <!--{$lang_link}-->
+           
+         
+          
+         </li>
+
+         <li class="top_search_li" > 
+            <input type="text" name="title" id="textfield"   class="input" /> 
+            <input type="submit"  class="top_search_button" value="" />
+            </li>
+
+            <li class="account_link">
+            <!--{if "member"|get_cookie}-->
+            <a href="<!--{"front/member/action_member_center"|site_url}-->" target="_parent">
+
+            你好,<!--{"member"|get_cookie|func_my_encrypt:'DECODE'}-->, 会员中心</a>
+
+            <!--{else}-->
+            <a href="<!--{"front/member/action_register"|site_url}-->" target="_parent">注册</a><a href="<!--{"front/member/index"|site_url}-->" target="_parent">登陆</a>
+            
+            <!--{/if}-->
+
+
+            </li>
+           
+        </ul>
+
+</form>

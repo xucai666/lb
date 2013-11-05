@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /> 
+<title><!--{$optimize.title}-->-<!--{$seo.meta}--></title>
+<meta name="Keywords" content="<!--{$optimize.meta}-->" />
+<meta name="Description" content="<!--{$optimize.description}-->" />
+
+<!--{$header_html.css}-->
+<!--{$header_html.js}-->
+<base target="_self" />
+
+
+</head> 
+ <body> 
+<table width="992" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="3"><img src="<!--{$img_url}-->/top_02.jpg" width="3" height="95" /></td>
+    <td style="background:url(<!--{$img_url}-->/top_04.jpg) repeat-x"><table width="985" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="237" >
+        
+        <img src="<!--{$img_url}-->/logo_02.png" width="237" height="95" style="margin-left:27px;" /></td>
+        <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+          <tr>
+            <td align="right">
+               <div id="login_panel">        
+                            <script language="javascript">
+                           
+                              $('#login_panel').load('<!--{site_url('front/index/top_login')}-->'); 
+                            
+                           </script>
+                       </div>
+
+                  <ul id="coolMenu">
+                    <!--{tag t_id=44   }-->
+                  
+                  </ul>
+        
+
+                
+              
+        </td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+    <td width="3"><img src="<!--{$img_url}-->/top_06.jpg" width="3" height="95" /></td>
+  </tr>
+
+</table>
+<center>
+<div style="width:992px;height:1px;background:#ccc" ></div>
+</center>
+<table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
+  <tr>
+    <td>
+    <!--{tag t_id=44 html_type="detail"  where="c_url like '"|cat:('controller'|ci_router)|cat:("%'") page_size="1"}-->
+
+    </td>
+  </tr>
+</table>
+
+<!--{$breadcrumb}-->

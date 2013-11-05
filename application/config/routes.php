@@ -47,9 +47,9 @@ $route['default_controller'] = "front/product";
 $route['404_override']       = '';
 
 //for language
-$route['(/zh/|/en/)/(:any)']     = 'front/$2';
+$route['(zh|en)/(:any)']     = 'front/$2';
 
-$route['/zh/|/en/']     = 'front/index';
+$route['zh|en']     = 'front/index';
 
 //short route
 //$route['(?!admin|backend|front)(.+(?<!\.htm))(\.htm)?$']     = 'front/$1';

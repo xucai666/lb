@@ -10,7 +10,7 @@
   'serv' => 'Customer service',
   'serv_flow' => 'Repair process',
   'serv_query' => 'Repairing queries',
-  'serv_yard' => 'Online production bar code',
+  'serv_yard' => 'Online production of bar code',
   'serv_message' => 'Message feedback',
   'down' => 'Resources to download',
   'down_doc_related' => 'Related documents',
@@ -47,5 +47,12 @@
   'button_add' => 'Add',
   'button_back' => 'Return',
   'button_pay' => 'Payment',
+  'button_submit' => 'Submit',
+  'button_close' => 'Shut down',
+  'button_vote' => 'Vote',
+  'button_result' => 'To view the results',
+  'links' => 'Friend Link',
+  'category' => 'Category',
+
 );
 ?>
