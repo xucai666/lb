@@ -40,7 +40,7 @@
 |
 */
 
-$route['default_controller'] = "front/index";
+$route['default_controller'] = "front/product";
 
 
 

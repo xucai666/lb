@@ -73,3 +73,23 @@
 		}	
 		
 	 }
+
+	 /**
+ * [next_lang description]
+ * @param  [type] $key [description]
+ * @return [type]      [description]
+ */
+function next_lang($vSearch){
+        	$lang =config_item('support_language');
+        	$i = 0;
+        	if($lang[count($lang)-1] == $vSearch) return current($lang);
+        	foreach($lang as $k=>$v){
+        		if($i==1){
+        			return $v;
+        		}
+        		if($v==$vSearch){
+        			$i++;
+        		}
+        		
+        	}
+}

@@ -34,14 +34,7 @@ class Index extends CI_Controller {
     $data['pics'] = $this->Pictures_model->list_index(); 
     $this->load->model('Advs_model');
     $langs = config_item('support_language');
-    function filter_same($v){
-      $CI = &get_instance();
-      return $v==lang_get()?false:true;
-    }
-    $next_lang = current(array_filter($langs,'filter_same'));
 
-
-    $data =  array_merge($data,array('next_lang'=>$next_lang));
     $this->init_page->load_front_view("index",$data);
   } 
 

@@ -228,9 +228,9 @@ class Common_model  extends CI_Model{
 	 	$init_db  =  &get_init_db();	
 	 	$ds = $init_db->getDs();
 	 	$CI = &get_instance();
-
 		extract($parameter);
 		//查询模板，返回值由模板设定	
+
 
 		$rs = $this->db->select('*',false)->from('templates')->where('t_id',$t_id)->get()->first_row('array');
 		if(!$rs['t_enable']){
@@ -329,8 +329,11 @@ class Common_model  extends CI_Model{
 		//transpate php tags
 		$str_r = implode('',$reval);
 		if(strpos($str_r, '<?php')!==false){
-			
-			$str_r = preg_replace("/<\?php(.*?)\?>/ies","eval(stripcslashes('\\1'))",$str_r);
+			$str_r='?'.'>'.($str_r);
+			ob_start();
+			eval($str_r);
+			$str_r = ob_get_contents();
+			ob_end_clean();	
 
 		}
 		
@@ -431,23 +434,6 @@ class Common_model  extends CI_Model{
 		return $pager; 
 	}
 
-
-	/**
-	 * [replace_php_tags description]
-	 * @param  [type] $str [description]
-	 * @return [type]      [description]
-	 */
-	function replace_php_tags($str){
-		preg_match_all("/<\?php(.*?)\?>/ies", $str, $matches);	
-		
-		$j=count($matches[1]);
-	
-		for($i=0;$i<$j;$i++){ 
-			$t = $matches[1][$i];
-			$str = str_replace($matches[0][$i], eval(stripcslashes($t)), $str);
-		} 
-		return $str; 
-	}
 
 	/**
 	 * 编辑器

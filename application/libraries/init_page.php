@@ -142,10 +142,10 @@ class Init_page{
 			$module = $module?$module:1;				
 			
 			$tpl->assign("module_select",$module);	
+			$next_lang = next_lang($this->lang_type);
+			$next_lang_name  = $cache->cache_fetch("lang_type",$next_lang);			
 			
-			$lang_link  = $cache->cache_fetch("lang_type",$this->lang_type);			
-			
-			$data['lang_link']  = $lang_link[$lang_type];	
+			$data['lang_link']  = anchor('/?lang='.$next_lang,$next_lang_name);	
 			
 			
 			//预加载配置信息
@@ -256,6 +256,15 @@ class Init_page{
 		return $html_all_css;
 		
 		
+	}
+
+	/**
+	 * front css
+	 * @param  [type] $css [description]
+	 * @return [type]      [description]
+	 */
+	function fetch_front_css($css){
+		return $this->fetch_css($css,'view',getRootUrl('css','front'));
 	}
 	
 	

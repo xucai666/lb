@@ -44,8 +44,11 @@ class Tree_model extends CI_Model{
 	 */
 	function fetch_select($treeId=null,$v_field='name'){
 		$treeId = $treeId?$treeId:$this->get_root();
-		return $this->init_form->array_re_index($this->db->select("id,name as init_name",false)->select('LEVEL,CONCAT(REPEAT("│ ",LEVEL),"├─",NAME) as name',false)->from('tree_node')->where('treeId',$treeId)->order_by('leftId','asc')->get()->result_array(),'id',$v_field);
+		return $this->init_form->array_re_index($this->db->select("id,name as init_name",false)->select('level,CONCAT(REPEAT("│ ",level),"├─",name) as name',false)->from('tree_node')->where('treeId',$treeId)->order_by('leftId','asc')->get()->result_array(),'id',$v_field);
 	}
+
+
+	
 
 	/**
 	 * [fetch_select_query 模块外使用]
@@ -64,11 +67,34 @@ class Tree_model extends CI_Model{
 
 	}
 
+	/**
+	 * 查询出当前分类的分类树形，本级及以上
+	 * @param  [type] $id [description]
+	 * @return [type]     [description]
+	 */
 	function fetch_belong_ids($id){
+		if(!$id) return false;
 		$ds = $this->detail($id);
 		$r = $this->db->select("group_concat(id) as ids",false)->from('tree_node')->where('treeId',$ds[treeId])->where('leftId <= '.$ds[leftId].' and rightId >= '.$ds[rightId])->get()->first_row('array');
 		return  $r[ids];
 	}
+
+	/**
+	 * 本级以下
+	 * @param  [type] $id [description]
+	 * @return [type]     [description]
+	 */
+	function fetch_belong_tree($id){
+		$ds = $this->detail($id);
+		
+		$r = $this->db->select("id,name",false)->from('tree_node')->where('treeId',$ds[treeId])->where('leftId > '.$ds[leftId].' and rightId < '.$ds[rightId])->get()->result_array();
+		
+		return  $r;
+	}
+
+
+	
+
 
 	//detail
 	function detail($id,$key=null){

@@ -141,7 +141,11 @@ class Mdata_model extends CI_Model{
 				if($fields_out[$k1]){	
 					$t = str_replace("%value",$v1,$fields_out[$k1]);
 					$t = htmlspecialchars_decode($t);
-					$t = preg_replace("/<\?php(.*?)\?>/ies", "eval(stripcslashes('\\1'))", $t);
+					$t='?'.'>'.($t);
+					ob_start();
+					eval($t);
+					$t = ob_get_contents();
+					ob_end_clean();	
 					$v[$k1] = $t;
 				}
 			}

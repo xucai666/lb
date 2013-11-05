@@ -197,7 +197,7 @@ function func_bottom_info(){
   */
 
  function func_tag($parameter){
- 	$CI = &get_instance();
+	$CI = &get_instance();
  	$r = $CI->Common_model->tag($parameter);
  	return $parameter['escape']?htmlspecialchars($r['html']):$r['html'];
  }
@@ -305,7 +305,15 @@ function func_vsprintf($array){
 
 	$html = str_replace("%id",str_replace(array('[',']'), array('_','_'), $r_name),$html);
 	
-	$html = preg_replace("/<\?php(.*?)\?>/ies","eval(stripcslashes('\\1'))",$html);
+	/**$html = preg_replace("/<\?php(.*?)\?>/ies","eval(stripcslashes('\\1'))",$html);**/
+
+
+	$html='?'.'>'.($html);
+	ob_start();
+	eval($html);
+	$html = ob_get_contents();
+	ob_end_clean();	
+
 
 	//select options 
 	if(preg_match("/<select/", $html)){
@@ -336,12 +344,17 @@ function func_vsprintf($array){
 
 			$v =htmlspecialchars_decode($v);
 		}
-		$v = preg_replace("/<\?php(.*?)\?>/ies","eval(stripcslashes('\\1'))",$v);
+		/**
+		 * $v = preg_replace("/<\?php(.*?)\?>/ies","eval(stripcslashes('\1'))",$v);
+		 */
+		
+	$v='?'.'>'.($v);
+	ob_start();
+	eval($v);
+	$v = ob_get_contents();
+	ob_end_clean();	
 	endforeach;
 	
-	
-	//$html = str_replace("%name",$r_name,$html);
-	//$html = str_replace("%value",$r_value,$html);
 	
 	return $html;	
 }
@@ -359,6 +372,17 @@ function func_state($array){
 function func_my_encrypt($string=null,$direction){
 	$init_page = &get_init_page();
 	return $init_page->my_encrypt($string,$direction);
+}
+/**
+ * 分类树，往上推含自身
+ * @param  [type] $params [description]
+ * @return [type]         [description]
+ */
+function tree_full_ids($id){
+
+	$CI = &get_instance();
+	$CI->load->model('Tree_model');
+	return $CI->Tree_model->fetch_belong_ids($id);
 }
 
 //form_error
@@ -379,7 +403,11 @@ function ci_anchor($array){
 	return anchor($segment,$title,$attrs_new);
 }
 
-//form_error
+/**
+ * [ci_uri description]
+ * @param  [type] $array [description]
+ * @return [type]        [description]
+ */
 function ci_uri($array=null){
 	$CI = &get_instance();	
 	if($array){
@@ -402,6 +430,41 @@ function ci_router($key=''){
 	
 	return $router;
 }
+
+
+// put these function somewhere in your application
+function db_get_template ($tpl_name, &$tpl_source, &$smarty_obj)
+{
+    // do database call here to fetch your template,
+    // populating $tpl_source with actual template contents
+    $tpl_source = "This is the template text";
+    // return true on success, false to generate failure notification
+    return true;
+}
+
+function db_get_timestamp($tpl_name, &$tpl_timestamp, &$smarty_obj)
+{
+    // do database call here to populate $tpl_timestamp
+    // with unix epoch time value of last template modification.
+    // This is used to determine if recompile is necessary.
+    $tpl_timestamp = time(); // this example will always recompile!
+    // return true on success, false to generate failure notification
+    return true;
+}
+
+function db_get_secure($tpl_name, &$smarty_obj)
+{
+    // assume all templates are secure
+    return true;
+}
+
+function db_get_trusted($tpl_name, &$smarty_obj)
+{
+    // not used for templates
+}
+
+
+
 
 /**
   * start page for webaccess
@@ -439,6 +502,7 @@ class tpl extends Smarty
 		//vars assign
         
         $lang_type = lang_get();
+        
       
         $this->assign("base_url", base_url()); // so we can get the full path to CI easily
         $this->assign("site_url", site_url()); // so we can get the full path to CI easily
@@ -476,9 +540,15 @@ class tpl extends Smarty
         $this->registerPlugin("function","create_button","create_button");  //灵动标签
         $this->registerPlugin("function","func_vsprintf","func_vsprintf");  //灵动标签
         $this->registerPlugin("function","func_state","func_state");  //灵动标签
+        $this->registerPlugin("function","func_get_nav","func_get_nav");  //灵动标签
         $this->registerPlugin("function","ci_form_error","ci_form_error");  //灵动标签
         $this->registerPlugin("function","ci_anchor","ci_anchor");  //灵动标签
-        $this->registerPlugin("function","func_get_nav","func_get_nav");  //灵动标签
+
+
+
+
+ 
+
     }
 
   
@@ -545,3 +615,4 @@ class tpl extends Smarty
 function &get_tpl(){	
 	return tpl::get_tpl();
 }
+

@@ -529,3 +529,30 @@ vertical-align: top;
 }
 
 
+.language-bar {
+background: #333;
+padding: 0px;
+color: #fff;
+margin: 0 auto;
+min-width: 802px;
+padding: 0 95px;
+text-align: center;
+font: 12px Helvetica;
+height: 30px;
+overflow: hidden;
+position: relative;
+direction: ltr;
+}
+
+
+.language-bar a, .language-bar a:hover {
+color: #d3d3d3;
+line-height: 30px;
+padding: 6px 11px;
+white-space: nowrap;
+}
+
+
+.language-bar a.selected {
+border-bottom: 2px solid #DA333A;
+}

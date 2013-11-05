@@ -1,12 +1,12 @@
  <form id="form1" name="form1" method="get" action="<!--{func_site_url segments='search'}-->"  style="display:;" >
-         <ul class="index_top_right">
+         <ul class="index_top_right">          
+          <li  class="" >
+           <img src="<!--{$img_url}-->/lang_change.gif">&nbsp; <!--{$lang_link}-->
            
-          <li <!--{if !config_item('lang_multiple')}--> class="hide" <!--{/if}-->>
-       
-             <a href="<!--{$site_url|cat:$next_lang}-->"><img src="<!--{$img_url}-->/lang_change.gif">&nbsp;<!--{$lang_type}--></a>
-            
+         
           
          </li>
+
          <li class="top_search_li" > 
             <input type="text" name="title" id="textfield"   class="input" /> 
             <input type="submit"  class="top_search_button" value="" />

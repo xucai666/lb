@@ -31,6 +31,9 @@ class Product extends CI_Controller{
 		$this->m_lang = $this->lang->language;
 		$this->tpl->assign('lang_products',$this->lang->language);
 		
+
+
+		
 	}
 
 	
