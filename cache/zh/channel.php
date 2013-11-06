@@ -146,13 +146,13 @@
   array (
     'c_id' => '23',
     'c_title' => '关于我们',
-    'c_url' => '###',
+    'c_url' => 'about',
     'c_order' => '1',
     'c_display' => '1',
     'c_pic' => 'http://localhost/lb//swfupload/uploads/2013-08-21/nav_12.jpg',
     'c_html' => '0',
     'c_pid' => '10',
     'c_type' => '2',
-    'c_dir' => 'xxx',
+    'c_dir' => 'guan_yu_wo_men',
   ),
 );?>

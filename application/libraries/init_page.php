@@ -219,8 +219,8 @@ class Init_page{
 	
 	function fetch_js_var(){
 		$str  =   "<script language='javascript'>\n";
-		$str .=   "var url_root ='".base_url()."';\n";
-		$str .=   "var site_url='".site_url()."';\n";
+		$str .=   "var url_root ='".base_url('/')."';\n";
+		$str .=   "var site_url='".site_url('/')."';\n";
 		
 		foreach(array('js','img','css','theme') as $k){
 			foreach(array('front','backend') as $v){

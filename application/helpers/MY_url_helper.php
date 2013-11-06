@@ -137,7 +137,7 @@
 			}elseif(preg_match("/event/",$url)){
 				$url_new = "javascript:;";
 			}else{
-				$url_new = site_url().$url;
+				$url_new = site_url($url);
 			}
 			return $url_new;
 		}

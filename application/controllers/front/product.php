@@ -23,7 +23,6 @@ class Product extends CI_Controller {
  		$cache = &get_init_cache();
  		$channel = $cache->cache_fetch('channel');
  		
- 		
 	}
 	
 	/**

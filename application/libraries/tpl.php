@@ -504,8 +504,8 @@ class tpl extends Smarty
         $lang_type = lang_get();
         
       
-        $this->assign("base_url", base_url()); // so we can get the full path to CI easily
-        $this->assign("site_url", site_url()); // so we can get the full path to CI easily
+        $this->assign("base_url", base_url('/')); // so we can get the full path to CI easily
+        $this->assign("site_url", site_url('/')); // so we can get the full path to CI easily
         //backend path,js,css,img  ect.     
 		//template path
 

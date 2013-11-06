@@ -666,7 +666,7 @@
       'r_pid' => '78',
       'r_name' => '单选框测试',
       'r_order' => '1',
-      'r_display' => '1',
+      'r_display' => '0',
       'r_url' => 'backend/mdata/action_set_module/60',
       'r_code' => '78,80',
       'r_level' => '2',
