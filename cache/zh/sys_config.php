@@ -13,6 +13,8 @@
     'fax' => '0591-888888',
     'email' => 'conqweal@163.com',
     'qq' => '150672834,56055473',
+    'skype' => '',
+    'kefu_type' => '1',
   ),
   'develop' => 
   array (

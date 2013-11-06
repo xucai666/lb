@@ -8,11 +8,13 @@
   'smtp' => false,
   'contact' => 
   array (
-    'addr' => '福州工业路523号',
+    'addr' => 'fuzhou university',
     'tel' => '13600964906',
     'fax' => '0591-888888',
     'email' => 'conqweal@163.com',
     'qq' => '150672834,56055473',
+    'skype' => 'conqweal,yehua365',
+    'kefu_type' => '2',
   ),
   'develop' => 
   array (

@@ -479,8 +479,8 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
 	 */
 	function fetchArray($sql,$array){	
 		foreach($array as $v){
-			$sql = preg_replace("/\?/", $v, $sql);
-		}
+			$sql = preg_replace("/\?/", $v, $sql,1);
+		}		
 		return $this->getDs()->query($sql)->first_row('array');
 	}
 
@@ -491,7 +491,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
 	 */
 	function fetchColumn($sql,$array){
 		foreach($array as $v){
-			$sql = preg_replace("/\?/", $v, $sql);
+			$sql = preg_replace("/\?/", $v, $sql,1);
 		}		
 		$rs = $this->getDs()->query($sql)->first_row('array');
 		return current($rs);

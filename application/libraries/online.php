@@ -32,9 +32,18 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  	function run(){
  		$CI = &get_instance();
 		$cfg = $CI->init_cache->cache_fetch('sys_config');
+		$kefu_type = $CI->init_cache->cache_fetch('kefu_type');
+		$fn = $kefu_type[$cfg['contact']['kefu_type']];
+ 		return $this->$fn();
+ 	}
 
- 		$CI->init_page->fetch_css(array('online'),null,$CI->init_page->getRes('css','front'));	
- 		$CI->init_page->fetch_js(array('online'),null,$CI->init_page->getRes('js','front'));	
+
+ 	function qq(){
+ 		$CI = &get_instance();
+		$cfg = $CI->init_cache->cache_fetch('sys_config');
+
+ 		$CI->init_page->fetch_css(array('qq'),null,$CI->init_page->getRes('css','front'));	
+ 		$CI->init_page->fetch_js(array('qq'),null,$CI->init_page->getRes('js','front'));	
  		$reval  = "<div class='online_qq'>";
 		$reval .= "\n";
 		$reval .= "<div id=\"online_qq_layer\">\n";
@@ -68,11 +77,27 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
 		$reval .= "	</div>\n";
 		$reval .= "</div>\n";
 		$reval .= "</div>\n";
+		return $reval;
+ 	}	
 
+ 	function skype(){
+ 		$CI = &get_instance();
+		$cfg = $CI->init_cache->cache_fetch('sys_config');
 
-
+ 		$CI->init_page->fetch_css(array('skype'),null,$CI->init_page->getRes('css','front'));	
  		
- 		return $reval;
+		$reval .= "<div id=\"online_skype_layer\">\n";
+		$skypes = explode(',', $cfg['contact']['skype']);
+		$reval .= "<script type=\"text/javascript\" src=\"http://skype.tom.com/script/skypeCheck40.js\"></script>\n";
+
+		foreach($skypes as $q){
+			$qc = "<a href=\"skype:".$q."?chat\" onclick=\"return skypeCheck();\"><img src=\"http://mystatus.skype.com/mediumicon/".$q."\" style=\"border: none;\" width=\"26\" height=\"26\" alt=\"My status\" /></a><a href=\"skype:".$q."?chat\" onclick=\"return skypeCheck();\">".$q."</a>\n";
+			$reval .= "				<li>".$qc."</li>\n";
+
+		}
+		
+		$reval .= "</div>\n";
+		return $reval;
  	}
  	
  

@@ -165,6 +165,7 @@ class System_manage extends CI_Controller{
  		$styles = directory_map(config_item('template_dir').DIRECTORY_SEPARATOR.'front',1);
  			
 		$data = $this->init_cache->cache_fetch('sys_config');
+		$data['kefu_type'] = $this->init_cache->cache_fetch('kefu_type');
 		
 		$data['styles'] = $styles;
  		$this->init_page->load_backend_view('config_save',$data);
@@ -265,6 +266,8 @@ class System_manage extends CI_Controller{
  	function action_lang_trans(){
  		$this->db->select('*',false)->from('lang');
  		$this->input->get('lang_type') && $this->db->where('lang_type',$this->input->get('lang_type'));
+ 		$this->input->get('lang_val') && $this->db->like('lang_val',$this->input->get('lang_val'));
+ 		$this->input->get('lang_key') && $this->db->like('lang_key',$this->input->get('lang_key'));
  		
  		if(isset($_GET['status']) && $_GET['status']!="-1"){
  			$this->db->where('is_trans',$this->input->get('status'));
@@ -291,12 +294,15 @@ class System_manage extends CI_Controller{
  		$path = APPPATH.'language/zh/';
  		$lang_files = get_filenames($path);
  		//empty
- 		$this->db->truncate('lang');
+ 		//$this->db->truncate('lang');
  		foreach($lang_files as $v){
  			if(strpos($v, 'lang.php')!==false){
  				$lang = null;
  				include_once($path.$v);
  				foreach((array)$lang as $k1=>$v1){
+
+ 					$e = $this->init_db->fetchArray('select lang_id from '.$this->db->dbprefix.'lang where lang_key=\'?\' and lang_file=\'?\'',array($k1,$v));
+ 					if($e) continue;
  					foreach(config_item('support_language') as $v2){
  						$data = array('lang_type'=>$v2,'lang_file'=>$v,'lang_key'=>$k1,'lang_val'=>is_array($v1)?implode('|',$v1):$v1,'is_trans'=>$v2=='zh'?1:0); 
  						

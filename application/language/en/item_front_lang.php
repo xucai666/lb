@@ -118,5 +118,17 @@
   'od_address' => 'Address',
   'od_email' => 'E-mail',
   'od_mark' => 'Notes',
+  'about_brand' => 'Brand introduction',
+  'about_philosophy' => 'Business philosophy',
+  'contact_way' => 'Contact',
+  'mb_login2' => 'User login',
+  'mb_uname' => 'User name',
+  'mb_pwd2' => 'Password',
+  'mb_captcha' => 'Code:',
+  'mb_msg_exit' => 'Exit success',
+  'mb_msg_sign_in' => 'Login success',
+  'sales_net' => 'Sales network',
+  'sales_store_location' => 'Branch location',
+  'sales_services' => 'Sales and service',
 );
 ?>

@@ -22,6 +22,7 @@ class Member extends CI_Controller {
 		$this->load->library('Breadcrumb');
 		$this->load->model('Member_model','im');
 		$this->lang->load('item_front_member');
+		$this->lang->load('item_front');
 
 	}
 	
@@ -57,7 +58,7 @@ class Member extends CI_Controller {
                    'prefix' => 'mysys_',
                 );
 	 			set_cookie($cookie);
-	 			$this->init_page->front_redirect('member/action_member_center','登陆成功');
+	 			$this->init_page->front_redirect('member/action_member_center',lang('mb_msg_sign_in'));
 	 		}else{
 
 	 			$this->init_page->load_front_view('member_login',$data);
@@ -223,7 +224,7 @@ class Member extends CI_Controller {
 	 
 	 function action_exit(){
 	 	delete_cookie('member');
-	 	$this->init_page->front_redirect('member/index','已退出');
+	 	$this->init_page->front_redirect('member/index',lang('mb_msg_exit'));
 	 }
 
 	 function action_order(){

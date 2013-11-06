@@ -9,7 +9,9 @@
 		//关于我们 about		
 		$lang['about'] 						 = '关于我们';
 		$lang['about_instr']			 		 = '公司简介';
+		$lang['about_brand']			 		 = '品牌介绍';
 		$lang['about_engage']					 = '人员招聘';
+		$lang['about_philosophy']					 = '经营理念';
 		
 	    //新闻动态 news	    
 		$lang['news'] 							 = '新闻动态';
@@ -57,6 +59,7 @@
 		
 	    //联系我们 contact
 		$lang['contact'] 						 = '联系我们';
+		$lang['contact_way'] 						 = '联系方式';
 		$lang['contact_head'] 				 = '联系总部';
 		$lang['contact_tech'] 				 = '技术咨询';
 		$lang['contact_internal'] 			 = '国内销售机构';
@@ -134,6 +137,12 @@
 		$lang['mb_default_addr']						 = '默认地址';
 		$lang['mb_reg']									 = '注册';
 		$lang['mb_login']								 = '登陆';
+		$lang['mb_login2']								 = '用户登陆';
+		$lang['mb_uname']								 = '用户名';
+		$lang['mb_pwd2']								 = '密&nbsp;&nbsp;码';
+		$lang['mb_captcha']								 = '验证码';
+		$lang['mb_msg_exit']								 = '退出成功';
+		$lang['mb_msg_sign_in']								 = '登陆成功';
 
 		//订购
 		$lang['sp_code']								 = '编号';
@@ -162,5 +171,11 @@
 		$lang['od_address']							 = '地址';
 		$lang['od_email']							 = 'E-mail';
 		$lang['od_mark']							 = '备注';
+
+		//销售网络
+		$lang['sales_net']							 = '销售网络';
+		$lang['sales_store_location']							 = '分店位置';
+		$lang['sales_services']							 = '销售服务';
+		
  	
 ?>
