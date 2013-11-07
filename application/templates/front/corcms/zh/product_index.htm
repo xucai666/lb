@@ -10,13 +10,10 @@
     <table     border="0" cellspacing="0" cellpadding="0" >
       <tr>
        
-        <td  style="background:url(<!--{$img_url}-->/daohanhh_11.jpg) repeat-x; padding-left:20px; height:25px;" class="hong" width="746">
-        <div style="float:left;width:220px;height:25px;padding-top:3px;">
+        <td  style="background:url(<!--{$img_url}-->/daohanhh_11.jpg) repeat-x; padding-left:20px; height:25px" class="hong" width="746">
+
       <!--{tag t_id=49 where="id="|cat:(","|explode:tree_full_ids($ci_uri.3)|end|default:2) html_type='detail'}-->
-      </div>
-       <div style='float:right;width:400px;height:25px;'>
-         <a href="javascript:;" id="do_shop"><img src="<!--{img_url(null,'front')}-->/inquirenow.gif" style="padding-top:3px;" /></a>
-      </div>
+
         </td>
        
       </tr>
@@ -42,22 +39,6 @@
     </table></td>
   </tr>
 </table>
-
-<script>
-$(function($){
-  $('#do_shop').click(function(){
-  
-    
-
-   var s =  $('input.drop_box').map(function() { return $(this).prop("checked")==true?$(this).val():null; }).get();
-    location.href='<!--{site_url('product/good_cart_add')}-->?ids='+s;
-
-
-  })
-
-})
-</script>
-
 
 
 

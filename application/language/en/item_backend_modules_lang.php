@@ -25,5 +25,6 @@
   'modules_input_field_desc' => 'Field description',
   'modules_input_field_opt' => 'Operation',
   'modules_input_field_ext_prop' => 'Attached properties',
+  'modules_input_field_sort' => 'Sort',
 );
 ?>

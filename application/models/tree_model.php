@@ -87,7 +87,7 @@ class Tree_model extends CI_Model{
 	function fetch_belong_tree($id){
 		$ds = $this->detail($id);
 		
-		$r = $this->db->select("id,name",false)->from('tree_node')->where('treeId',$ds[treeId])->where('leftId > '.$ds[leftId].' and rightId < '.$ds[rightId])->get()->result_array();
+		$r = $this->db->select("*",false)->from('tree_node')->where('treeId',$ds[treeId])->where('leftId > '.$ds[leftId].' and rightId < '.$ds[rightId])->get()->result_array();
 		
 		return  $r;
 	}

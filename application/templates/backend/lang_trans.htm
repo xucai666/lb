@@ -55,7 +55,11 @@
 	
 	<td><!--{$item.lang_id}--></td>
 	<td><!--{$item.lang_key}--></td>
-	<td><!--{$item.lang_val}--></td>
+	<td>
+	<input type="text" size="5"  class="hide" onclick="this.select()" onchange="ajax_change_val('lang','lang_id','<!--{$item.lang_id}-->','lang_val',this.value);$(this).hide().next().text(this.value).show()" value="<!--{$item.lang_val}-->" /> <span onclick="$(this).hide().prev().show();" class="txt_val"><!--{$item.lang_val}--></span>
+
+
+	</td>
 	<td><!--{$item.lang_file}--></td>
 	<td><!--{$item.lang_type}--></td>
 	<td >

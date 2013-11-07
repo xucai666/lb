@@ -337,34 +337,6 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    22 => 
-    array (
-      'r_id' => '22',
-      'r_title' => '首页图片轮显',
-      'r_pid' => '66',
-      'r_name' => '首页图片轮显',
-      'r_order' => '1',
-      'r_display' => '1',
-      'r_url' => 'backend/pictures/action_index_rotation',
-      'r_code' => '66,22',
-      'r_level' => '2',
-      'r_js_action' => NULL,
-      'r_type' => NULL,
-    ),
-    24 => 
-    array (
-      'r_id' => '24',
-      'r_title' => '友情链接',
-      'r_pid' => '66',
-      'r_name' => '友情链接',
-      'r_order' => '1',
-      'r_display' => '1',
-      'r_url' => 'backend/friendlink/action_list/',
-      'r_code' => '66,24',
-      'r_level' => '2',
-      'r_js_action' => NULL,
-      'r_type' => NULL,
-    ),
     25 => 
     array (
       'r_id' => '25',
@@ -842,6 +814,6 @@
       'r_type' => NULL,
     ),
   ),
-  'count' => '60',
+  'count' => '58',
   'page_link' => '',
 );?>

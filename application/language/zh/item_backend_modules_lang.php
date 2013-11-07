@@ -31,5 +31,6 @@
  $lang['modules_input_field_desc']													= '字段说明';
  $lang['modules_input_field_opt']													= '操作';
  $lang['modules_input_field_ext_prop']													= '附加属性';
+ $lang['modules_input_field_sort']													= '排序';
 
 ?>

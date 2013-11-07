@@ -304,10 +304,10 @@ function RndString($body)
   while(!feof($fp)){
 	   $v = trim(fgets($fp,128));
 	   if($start==1){
-		    if(ereg("#end#",$v)) break;
-		    if($v!=""){ $totalitem++; $rndstring[$totalitem] = ereg_replace("#,","",$v); }
+		    if(preg_match("/#end#/",$v)) break;
+		    if($v!=""){ $totalitem++; $rndstring[$totalitem] = preg_replace("/#,/","",$v); }
 	   }
-	   if(ereg("#start#",$v)){ $start = 1; }
+	   if(preg_match("/#start#/",$v)){ $start = 1; }
   }
   fclose($fp);
   //处理要防采集的字段

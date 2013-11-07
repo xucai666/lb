@@ -56,6 +56,7 @@
 					<tr>
 						<th><!--{'modules_input_field_type'|lang}--></th>
 						<th><!--{'modules_input_field_name'|lang}--></th>
+						<th><!--{'modules_input_field_sort'|lang}--></th>
 						<th><!--{'modules_input_field_alias'|lang}--></th>
 						<th><!--{'modules_input_field_length'|lang}--></th>
 						<th><!--{'modules_input_field_input_value'|lang}--></th>
@@ -78,6 +79,9 @@
 					</td>
 					<td><input type="text" name="detail[r_name][<!--{$k}-->]" value='<!--{$v.r_name}-->'>
 						<!--{ci_form_error k="detail[r_name][$k]"}-->
+					</td>
+					<td><input type="text" name="detail[r_sort][<!--{$k}-->]" value='<!--{$v.r_sort}-->'>
+						<!--{ci_form_error k="detail[r_sort][$k]"}-->
 					</td>	
 					<td><input type="text" name="detail[r_alias][<!--{$k}-->]" value='<!--{$v.r_alias}-->'>
 						<!--{ci_form_error k="detail[r_alias][$k]"}-->

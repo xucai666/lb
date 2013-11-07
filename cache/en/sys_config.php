@@ -4,6 +4,7 @@
     'title' => 'Welcome to visit this site',
     'meta' => 'Welcome to visit this site',
     'description' => 'Codeigniter CMS',
+    'gather' => '1',
   ),
   'smtp' => false,
   'contact' => 

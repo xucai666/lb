@@ -196,6 +196,7 @@ class Product_model extends CI_Model{
  		$this->load->model('Tree_model');
  		$cid = $this->Tree_model->fetch_belong_ids($pid);
  		$this->db->like('p_pid',$cid,'after');
+ 		$this->db->where('p_state > ','0');
  		$this->db->from('module_product');
  		return $this->db->count_all_results();
  	}

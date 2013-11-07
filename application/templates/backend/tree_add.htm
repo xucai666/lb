@@ -8,7 +8,7 @@
 		<td>上级分类：</td>
 		<td>
 			<select name="main[pid]">
-				<!--{html_options options=$pids selected=$main.pid}-->
+				<!--{html_options options=$pids selected=$main.pid|default:$smarty.get.bid}-->
 			</select>
 			<!--{php}-->
 				echo form_error("main[pid]","<span id='error_span'>","</span>");

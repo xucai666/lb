@@ -44,8 +44,7 @@
 	<td><!--{$item.name}--></td>
 	<td><!--{$item.pid}--></td>
 	<td align='center'>
-		<!--{php}-->		
-
+		   <!--{php}-->		
 			\$attrs  = array(
 				"class"=>"link_mod",
 			);
@@ -57,9 +56,10 @@
 			);
 			
 			echo anchor("backend/tree/action_del/".\$template->tpl_vars['item']->value['id'],"&nbsp;",\$attrs);
-			
-			
 			<!--{/php}-->
+			<!--{''|cat:anchor("backend/tree/action_add?bid=`$item.id`", '&nbsp;', 'class=link_add')}-->
+
+
 
 	</td>
 </tr>

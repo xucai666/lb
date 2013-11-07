@@ -194,6 +194,13 @@ class Mdata extends CI_Controller{
 		 			'log_type'=>'12',
 		 			'log_desc'=>sprintf('module %s,%s ID %s success',$this->m->main($this->im->get_mid(),'m_name'),$rs['sys_db_type'],$rs['main'][$log_cf['main']['primary_key']]),
 		 		));
+
+		 		
+				//create  channel cache
+		 	 	$channel = $this->init_form->array_re_index($this->db->select('*',false)->from('module_channel')->get()->result_array(),'c_id');
+		 	 	$this->init_cache->cache_create($channel,'channel');	//create  channel cache
+		 	 	
+
 		 		// if(empty($main[$primary])){
    					$callback = ',top.frmright_reload()';
 		 		// }

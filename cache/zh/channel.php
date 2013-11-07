@@ -139,20 +139,6 @@
     'c_dir' => '',
     'c_img_rotator' => '',
   ),
-  10 => 
-  array (
-    'c_id' => '10',
-    'c_title' => '网站栏目',
-    'c_url' => 'index',
-    'c_order' => '1',
-    'c_display' => '0',
-    'c_pic' => '',
-    'c_html' => '0',
-    'c_pid' => '0',
-    'c_type' => '1',
-    'c_dir' => '',
-    'c_img_rotator' => '',
-  ),
   23 => 
   array (
     'c_id' => '23',
@@ -165,6 +151,6 @@
     'c_pid' => '10',
     'c_type' => '2',
     'c_dir' => 'guan_yu_wo_men',
-    'c_img_rotator' => 'http://localhost//lb/uploads/2013-11-07/2013110702140515.jpg||http://www.baidu.com,http://localhost//lb/uploads/2013-11-07/2013110702144819.jpg||http://www.baidu.com',
+    'c_img_rotator' => 'http://localhost//lb/uploads/2013-11-07/2013110702140515.jpg||http://www.baidu.com,http://localhost//lb/uploads/2013-11-07/2013110702144819.jpg||http://www.baidu.com,http://localhost//lb/uploads/2013-11-07/2013110702154793.jpg||http://www.baidu.com',
   ),
 );?>

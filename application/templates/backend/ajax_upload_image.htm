@@ -103,7 +103,7 @@ function showRequest(formData, jqForm, options) {
 // post-submit callback 
 function showResponse(responseText, statusText, xhr, $form)  { 
 
-$('#imgs_container').append('<li><img src='+responseText[0].url+' width="120" height="80" /><input type="text" class="img_url" size="50" value="请输入链接地址" ><a href="###" class="del_img" >×</a></li>');
+$('#imgs_container').append('<li><img src='+responseText[0].url+' width="120" height="80" /><input type="text" class="img_url" size="50" value="请输入链接地址" ><a href="javascript:;" class="del_img" >×</a></li>');
 input_img_html();
     // for normal html responses, the first argument to the success callback 
     // is the XMLHttpRequest object's responseText property 

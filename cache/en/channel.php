@@ -53,7 +53,7 @@
     'c_pid' => '10',
     'c_type' => '3',
     'c_dir' => 'roducts',
-    'c_img_rotator' => '',
+    'c_img_rotator' => 'http://localhost//lb/uploads/2013-11-07/2013110707253653.jpg||http://www.baidu.com,http://localhost//lb/uploads/2013-11-07/2013110707253971.jpg||http://www.baidu.com,http://localhost//lb/uploads/2013-11-07/2013110707264732.jpg||http://www.baidu.com',
   ),
   15 => 
   array (
@@ -141,20 +141,6 @@
     'c_img_rotator' => 'http://localhost//lb/uploads/2013-11-07/2013110712370149.png||请输入链接地址
 
 ',
-  ),
-  10 => 
-  array (
-    'c_id' => '10',
-    'c_title' => 'Category',
-    'c_url' => 'index',
-    'c_order' => '1',
-    'c_display' => '0',
-    'c_pic' => '',
-    'c_html' => '0',
-    'c_pid' => '0',
-    'c_type' => '1',
-    'c_dir' => 'wang_zhan_lan_mu',
-    'c_img_rotator' => '',
   ),
   23 => 
   array (

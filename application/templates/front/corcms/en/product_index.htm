@@ -10,37 +10,41 @@
     <table     border="0" cellspacing="0" cellpadding="0" >
       <tr>
        
-        <td  style="background:url(<!--{$img_url}-->/daohanhh_11.jpg) repeat-x; padding-left:20px; height:25px" class="hong" width="746">
-
+        <td  style="background:url(<!--{$img_url}-->/daohanhh_11.jpg) repeat-x; padding-left:20px; height:25px;" class="hong" width="746">
+        <div style="float:left;width:220px;height:25px;padding-top:3px;">
       <!--{tag t_id=49 where="id="|cat:(","|explode:tree_full_ids($ci_uri.3)|end|default:2) html_type='detail'}-->
-
+      </div>
+       
         </td>
        
       </tr>
       <tr>
-        <td  class="bian1" style="padding-left:25px;"><table height="400" border="0" cellspacing="0" cellpadding="0" >
-          <tr>
-           <td  valign="top"  align="center"  class="product">
+        <td  class="bian1" >
             <ul>  
            
-	         	 <!--{tag t_id=40 where="p_state>0  and p_pid like '`$ci_uri.3|default:2|tree_full_ids`%' and p_name like '%`$smarty.request.p_name`%'"}-->
+	         	 <!--{tag t_id=49 where=" pid = 2"  html_type='style2' }-->
             </ul>
-			  </td>
-			  
-             </tr>
-          
-        </table>
-		<div class="page" align="center">
-
- <!--{tag_pager t_id=40 where="p_state>0 and p_pid like '`$ci_uri.3|default:2|tree_full_ids`%' and p_name like '%`$smarty.request.p_name`%'"}-->
-
-    </div>		</td>
+			 
+		</td>
       </tr>
     </table></td>
   </tr>
 </table>
 
 
+<script>
+$(function($){
+  $('#do_shop').click(function(){
+  
+    
 
+   var s =  $('input.drop_box').map(function() { return $(this).prop("checked")==true?$(this).val():null; }).get();
+    location.href='<!--{site_url('product/good_cart_add')}-->?ids='+s;
+
+
+  })
+
+})
+</script>
  
 <!--{include file="`$dir_front`/foot.htm"}-->

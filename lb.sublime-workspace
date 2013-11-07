@@ -119,14 +119,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "index.htm",
-			"settings":
-			{
-				"buffer_size": 4,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -176,6 +168,8 @@
 	},
 	"file_history":
 	[
+		"/E/phpnow/htdocs/lb/index.htm",
+		"/E/phpnow/htdocs/lb/database/lb_cn.sql",
 		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
 		"/E/phpnow/htdocs/lb/application/models/tree_model.php",
 		"/E/phpnow/htdocs/lb/application/models/product_model.php",
@@ -187,7 +181,6 @@
 		"/E/phpnow/htdocs/lb/tools/ajax_form/ajax_form.html",
 		"/E/phpnow/htdocs/lb/application/templates/backend/js/core.js",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/mdata.php",
-		"/E/phpnow/htdocs/lb/database/lb_cn.sql",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/js/core.js",
 		"/E/phpnow/htdocs/lb/application/templates/backend/mdata_list.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/mdata_add.htm",
@@ -302,8 +295,7 @@
 		"/D/tools/k开发成果/develop/javascript/dialog2/dialog/dialog_box.html",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/contact.htm",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/engage.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/engage_add.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jscript.js"
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/engage_add.htm"
 	],
 	"find":
 	{
@@ -311,7 +303,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"E:\\phpnow\\htdocs\\lb\\application",
@@ -545,35 +537,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "index.htm",
-					"settings":
-					{
-						"buffer_size": 4,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4,
-								4
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
