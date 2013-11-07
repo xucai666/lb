@@ -1,0 +1,134 @@
+<!--{include file="`$dir_backend`/top.htm"}-->
+
+
+<style>
+#imgs_container {
+  list-style-type: none;
+  line-height: 45px;
+
+}
+</style>
+
+
+<div id="imgs_container"></div>
+<form action="<!--{base_url()}-->up.php?action=save" method="post" enctype="multipart/form-data" name="form_ajax_upload" id="form_ajax_upload">
+
+ 
+    <input type="file" name="attach[]" id="fileField" />
+
+  <input type="button" id="upnow" value="上传">
+</form>
+<script>
+$("#upnow").click(function(){
+$("#form_ajax_upload").trigger("submit");
+
+})
+
+var input_id = "<!--{$smarty.get.id}-->";
+// prepare the form when the DOM is ready 
+$(document).ready(function() { 
+    var options = { 
+        beforeSubmit:  showRequest,  // pre-submit callback 
+        success:       showResponse  // post-submit callback 
+ 
+        // other available options: 
+        //url:       url         // override for form's 'action' attribute 
+        //type:      type        // 'get' or 'post', override for form's 'method' attribute 
+      ,  dataType:  'json'        // 'xml', 'script', or 'json' (expected server response type) 
+        ,clearForm: true        // clear all form fields after successful submit 
+        //resetForm: true        // reset the form after successful submit 
+ 
+        // $.ajax options can be used here too, for example: 
+        //timeout:   3000 
+    }; 
+ 
+  
+
+    $('#form_ajax_upload').ajaxForm(options); 
+
+    
+       $("#imgs_container").delegate(".del_img","click",function(){
+              $(this).parents("li:first").remove();
+              input_img_html();
+        });
+
+        $("#imgs_container").delegate(".img_url","change",function(){
+             
+              input_img_html();
+        });
+
+        $("#imgs_container").on("click",".img_url",function(){
+             
+            this.select();
+        });
+
+
+//default loading
+var img_stored = $(window.parent.document.getElementById(input_id)).val();
+if(img_stored!=false){
+  var is = $(window.parent.document.getElementById(input_id)).val().split(',');
+
+  for(var i=0 ;i<is.length;i++){
+      var ij = is[i].split('||');
+    $('#imgs_container').append('<li><img src='+ij[0]+' width="120" height="80" /> <input type="text" class="img_url" size="50" value="'+ij[1]+'"><a href="javascript:;" class="del_img" title="删除">×</a></li>');
+
+  }
+
+  
+}
+
+
+
+
+
+}); 
+ 
+// pre-submit callback 
+function showRequest(formData, jqForm, options) { 
+    // formData is an array; here we use $.param to convert it to a string to display it 
+    // but the form plugin does this for you automatically when it submits the data 
+    var queryString = $.param(formData); 
+ 
+    // jqForm is a jQuery object encapsulating the form element.  To access the 
+    // DOM element for the form do this: 
+    // var formElement = jqForm[0]; 
+ 
+  ////  alert('About to submit: \n\n' + queryString); 
+ 
+    // here we could return false to prevent the form from being submitted; 
+    // returning anything other than false will allow the form submit to continue 
+    return true; 
+} 
+ 
+// post-submit callback 
+function showResponse(responseText, statusText, xhr, $form)  { 
+
+$('#imgs_container').append('<li><img src='+responseText[0].url+' width="120" height="80" /><input type="text" class="img_url" size="50" value="请输入链接地址" ><a href="###" class="del_img" >×</a></li>');
+input_img_html();
+    // for normal html responses, the first argument to the success callback 
+    // is the XMLHttpRequest object's responseText property 
+ 
+    // if the ajaxSubmit method was passed an Options Object with the dataType 
+    // property set to 'xml' then the first argument to the success callback 
+    // is the XMLHttpRequest object's responseXML property 
+ 
+    // if the ajaxSubmit method was passed an Options Object with the dataType 
+    // property set to 'json' then the first argument to the success callback 
+    // is the json data object returned by the server 
+ 
+  ////  alert('status: ' + statusText + '\n\nresponseText: \n' + responseText + 
+      ////  '\n\nThe output div should have already been updated with the responseText.'); 
+      
+} 
+
+
+function input_img_html(){
+    var arr = $('#imgs_container img').map(function() { return this.src+'||'+$(this).next().val(); }).get();
+ $(window.parent.document.getElementById(input_id)).html(arr.toString());
+}
+
+</script>
+
+
+
+<!--{include file="`$dir_backend`/foot.htm"}-->

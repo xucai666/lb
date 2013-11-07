@@ -532,8 +532,9 @@ function art_dialog_open(url,title){
 	button: [{
     	name: '保存',
         callback: function () {
+
          	var iframe = this.iframe.contentWindow;
-    		iframe.$('input:submit').trigger("click");
+    		iframe.$('form').trigger("submit");
             this.button({
                 name: '保存',
                 disabled: true

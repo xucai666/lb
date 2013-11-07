@@ -127,4 +127,10 @@ class Common extends CI_Controller{
  		echo GetPinyin($this->input->post('str'));
  		exit;
  	}
+
+
+ 	function ajax_upload_image(){
+ 		$this->init_page->fetch_js('jquery.form','view',js_url(null,'front'));
+ 		$this->init_page->load_backend_view('ajax_upload_image');
+ 	}
  }

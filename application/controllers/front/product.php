@@ -22,6 +22,9 @@ class Product extends CI_Controller {
 
  		$cache = &get_init_cache();
  		$channel = $cache->cache_fetch('channel');
+
+
+
  		
 	}
 	
@@ -31,6 +34,32 @@ class Product extends CI_Controller {
 
 	
 	function index(){	
+		
+		//css
+		$this->init_page->fetch_front_css('classes');
+		// add breadcrumbs
+		$this->breadcrumb->append_crumb('Home', '/');
+		$this->breadcrumb->append_crumb('Product', 'product');
+		$this->breadcrumb->output();
+		$this->init_page->load_front_view('product_index',$data);
+		
+	}
+	
+
+	function action_category(){
+
+		//css
+		$this->init_page->fetch_front_css('classes');
+		// add breadcrumbs
+		$this->breadcrumb->append_crumb('Home', '/');
+		$this->breadcrumb->append_crumb('Product', 'product');
+		$this->breadcrumb->output();
+
+		$this->init_page->load_front_view('product_category',$data);
+	}
+
+
+	function  action_list(){
 		//css
 		$this->init_page->fetch_front_css('classes');
 		// add breadcrumbs
@@ -38,10 +67,7 @@ class Product extends CI_Controller {
 		$this->breadcrumb->append_crumb('Product', 'product');
 		$this->breadcrumb->output();
 		$this->init_page->load_front_view('product',$data);
-
-		
 	}
-	
 	
 	//产品查看	
 
@@ -101,21 +127,24 @@ class Product extends CI_Controller {
 
 		$this->load->library('cart');	
 		//$this->cart->destroy();
-		$main = $this->db->select('*',false)->from('module_product')->where('p_id',$this->uri->segment(3))->get()->first_row('array');
-		$data = array(
-               'id'      => $main['p_id'],
-               'qty'     => '1',
-               'price'   => '2',
-               'name'    => $main['p_name'],
-         );
-       $cart_arr =  $this->cart->contents();
-       
-		foreach($cart_arr as $k=>$v){
-			$qty = $v['qty']?$v['qty']:0;
-			if($v['id'] == $data['id'])  $data['qty'] = $qty+1;		
-		}   
+		$ids = $this->uri->segment(3)?array($this->uri->segment(3)):explode(',',$this->input->get('ids'));
+		$ls = $this->db->select('*',false)->from('module_product')->where_in('p_id',$ids)->get()->result_array();
+		$cart_arr =  $this->cart->contents();
+		foreach($ls as $v):
+			$item = array(
+	               'id'      => $v['p_id'],
+	               'qty'     => '1',
+	               'price'   => '2',
+	               'name'    => $v['p_name'],
+	         );	       
 	       
-		$this->cart->insert($data);		
+			foreach($cart_arr as $k=>$v){
+				$qty = $v['qty']?$v['qty']:0;
+				if($v['id'] == $item['id'])  $item['qty'] = $qty+1;		
+			}   
+		       
+			$this->cart->insert($item);	
+		endforeach;	
 		redirect("product/good_cart_list");		
 	}
 	

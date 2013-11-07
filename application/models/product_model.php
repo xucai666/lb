@@ -187,7 +187,36 @@ class Product_model extends CI_Model{
 	} 	
 	 	
 	
- 	
+	/**
+	 * [count_products description]
+	 * @param  [type] $pid [description]
+	 * @return [type]      [description]
+	 */
+ 	function count_products($pid){
+ 		$this->load->model('Tree_model');
+ 		$cid = $this->Tree_model->fetch_belong_ids($pid);
+ 		$this->db->like('p_pid',$cid,'after');
+ 		$this->db->from('module_product');
+ 		return $this->db->count_all_results();
+ 	}
+
+ 	/**
+ 	 * [first_img description]
+ 	 * @param  [type] $pid [description]
+ 	 * @return [type]      [description]
+ 	 */
+ 	function first_img($pid){
+ 		$this->load->model('Tree_model');
+ 		$cid = $this->Tree_model->fetch_belong_ids($pid);
+ 		$this->db->like('p_pid',$cid,'after');
+ 		$this->db->from('module_product');
+ 		$rs =  $this->db->get()->first_row('array');
+ 		if($rs){
+ 			$img = $this->Common_model->fetch_images($rs['p_pic'],1);
+ 		}
+ 		return $img;
+
+ 	}
  	
 	
 	

@@ -40,7 +40,6 @@ class Mdata extends CI_Controller{
 
 
 	function action_add(){
-
 		$id = $this->uri->segment(4);
 		$module_id = $this->im->get_mid();
 		//fetch fileds
@@ -149,7 +148,6 @@ class Mdata extends CI_Controller{
 	}
 
 	function action_save(){
-		
 		$main = $this->input->post('main');
 		$detail = $this->init_form->post_to_set($this->input->post('detail'));
 		$data = array('main'=>$main,'detail'=>$detail);

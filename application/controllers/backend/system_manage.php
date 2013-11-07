@@ -397,7 +397,7 @@ class System_manage extends CI_Controller{
    function action_create_html(){
    		$channel = $this->init_cache->cache_fetch('channel');
    		foreach($channel as $k=>$v){
-   			if($v['c_html'] && empty($v['c_external'])){   				
+   			if($v['c_html'] && empty($v['c_external'])){  	
    				MakeHtmlFile(FCPATH.config_item('html_root').'/'.$v['c_dir'].lang_url().'/'.$v['c_url'].'.htm',file_get_contents(site_url('/front/'.$v['c_url'])));
    			}
    		}

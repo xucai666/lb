@@ -11,6 +11,7 @@
     'c_pid' => '10',
     'c_type' => '1',
     'c_dir' => './../',
+    'c_img_rotator' => '',
   ),
   12 => 
   array (
@@ -23,7 +24,8 @@
     'c_html' => '0',
     'c_pid' => '23',
     'c_type' => '2',
-    'c_dir' => 'ntroduction',
+    'c_dir' => 'rofile',
+    'c_img_rotator' => '',
   ),
   13 => 
   array (
@@ -37,6 +39,7 @@
     'c_pid' => '23',
     'c_type' => '3',
     'c_dir' => 'xin_wen_zhong_xin',
+    'c_img_rotator' => '',
   ),
   14 => 
   array (
@@ -50,6 +53,7 @@
     'c_pid' => '10',
     'c_type' => '3',
     'c_dir' => 'roducts',
+    'c_img_rotator' => '',
   ),
   15 => 
   array (
@@ -63,6 +67,7 @@
     'c_pid' => '10',
     'c_type' => '2',
     'c_dir' => '',
+    'c_img_rotator' => '',
   ),
   16 => 
   array (
@@ -76,6 +81,7 @@
     'c_pid' => '10',
     'c_type' => '2',
     'c_dir' => '',
+    'c_img_rotator' => '',
   ),
   17 => 
   array (
@@ -89,6 +95,7 @@
     'c_pid' => '10',
     'c_type' => '1',
     'c_dir' => '',
+    'c_img_rotator' => '',
   ),
   18 => 
   array (
@@ -102,6 +109,7 @@
     'c_pid' => '23',
     'c_type' => '2',
     'c_dir' => '',
+    'c_img_rotator' => '',
   ),
   19 => 
   array (
@@ -115,6 +123,8 @@
     'c_pid' => '10',
     'c_type' => '1',
     'c_dir' => 'earch',
+    'c_img_rotator' => '
+',
   ),
   20 => 
   array (
@@ -128,6 +138,9 @@
     'c_pid' => '10',
     'c_type' => '1',
     'c_dir' => 'ign__n',
+    'c_img_rotator' => 'http://localhost//lb/uploads/2013-11-07/2013110712370149.png||请输入链接地址
+
+',
   ),
   10 => 
   array (
@@ -141,6 +154,7 @@
     'c_pid' => '0',
     'c_type' => '1',
     'c_dir' => 'wang_zhan_lan_mu',
+    'c_img_rotator' => '',
   ),
   23 => 
   array (
@@ -154,5 +168,6 @@
     'c_pid' => '10',
     'c_type' => '2',
     'c_dir' => 'bout__s',
+    'c_img_rotator' => 'http://localhost//lb/uploads/2013-11-07/2013110712581069.jpg||http://www.baidu.com,http://localhost//lb/uploads/2013-11-07/2013110712581373.jpg||http://www.baidu.com,http://localhost//lb/uploads/2013-11-07/2013110712581729.jpg||http://www.baidu.com,http://localhost//lb/uploads/2013-11-07/2013110712582096.jpg||http://www.baidu.com,http://localhost//lb/uploads/2013-11-07/2013110712582397.jpg||http://www.baidu.com',
   ),
 );?>
