@@ -94,7 +94,6 @@
 	$(function($){
 		//排序
 		$('.mdata_head').click(function(){
-			alert(1);
 			var link = self.location.href;
 			link =  replace_url_param(link,"mdata_sort",$(this).attr('title'));
 			link =  replace_url_param(link,"per_page",0);

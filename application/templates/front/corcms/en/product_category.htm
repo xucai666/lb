@@ -22,19 +22,28 @@
           <tr>
            <td  valign="top"  align="center"  class="product">
             <ul>  
-           
-	         	 <!--{tag t_id=49 where=" pid = '`$ci_uri.3`%'"  html_type='style1' }-->
+           <!--{foreach from=$list item=item}-->
+         <li >
+         <div class='img'>      
+          <a href="<!--{site_url($item.lnk)}-->" target="_blank"> <img src="<!--{$item.img}-->"  onerror="ImgError(this)" onload="resizeImage(this,160,140)"  /></a>
+        </div>
+
+         <div>
+         <a href="<!--{site_url($item.lnk)}-->" target="_blank" title="%name"><!--{msubstr(strip_tags(htmlspecialchars_decode(($item.init_name))),0,10)}--></a>
+        <br>
+        <span style="color:#ccc"><!--{$item.ctp}-->Products</span>
+        </div>
+           </li>
+           <!--{/foreach}-->
+
+
             </ul>
 			  </td>
 			  
              </tr>
           
         </table>
-		<div class="page" align="center">
-
- <!--{tag_pager t_id=49 where=" pid = '`$ci_uri.3`%' " html_type='style1'}-->
-
-    </div>		</td>
+			</td>
       </tr>
     </table></td>
   </tr>

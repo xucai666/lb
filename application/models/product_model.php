@@ -197,7 +197,7 @@ class Product_model extends CI_Model{
  		$cid = $this->Tree_model->fetch_belong_ids($pid);
  		$this->db->like('p_pid',$cid,'after');
  		$this->db->where('p_state > ','0');
- 		$this->db->from('module_product');
+ 		$this->db->from('module_product'); 		
  		return $this->db->count_all_results();
  	}
 
@@ -211,9 +211,11 @@ class Product_model extends CI_Model{
  		$cid = $this->Tree_model->fetch_belong_ids($pid);
  		$this->db->like('p_pid',$cid,'after');
  		$this->db->from('module_product');
+ 		$this->db->order_by('p_pid','asc');
  		$rs =  $this->db->get()->first_row('array');
  		if($rs){
- 			$img = $this->Common_model->fetch_images($rs['p_pic'],1);
+ 			$img = current(explode(',',$this->Common_model->fetch_images($rs['p_pic'],1)));
+
  		}
  		return $img;
 

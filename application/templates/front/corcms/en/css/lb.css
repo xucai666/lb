@@ -6,7 +6,7 @@ a:hover{
 	text-decoration: underline;color:#ff0000;
 }
 span,td,tr,li,ul,input,div,form,a{
-	 font-family:"宋体"; font-size:12px;color:#333333;
+	 font-family:"Arial"; font-size:12px;color:#333333;
 }
 *:focus { outline: none; }
 .input{ background:url(../images/sousuo_06.jpg) no-repeat;width:155px; }
@@ -28,7 +28,7 @@ span,td,tr,li,ul,input,div,form,a{
 .lan{ color:#6462a2}
 .hui{ color:#717171}
 .hui1{ color:#585858}
-.hong{ font-family:"宋体"; font-size:14px; font-weight:bold; color:#9b0225;}
+.hong{ font-family:"Arial"; font-size:14px; font-weight:bold; color:#9b0225;}
 .b{ font-weight:bold;}
 
 /*边*/
@@ -568,6 +568,7 @@ margin-right: 35px;
 border: 1px solid #F0F0F0;
 height: 300px;
 line-height: 6px;
+overflow: hidden;
 
 }
 

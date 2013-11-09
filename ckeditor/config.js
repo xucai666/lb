@@ -49,7 +49,12 @@ CKEDITOR.editorConfig = function( config ) {
  
 	config.toolbar_Basic =
 	[
-		['Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink','-','Image', 'ImageButton','About']
+		{ name: 'links', items : [ 'Link','Unlink','Anchor' ] },
+		{ name: 'insert', items : [ 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak','Iframe' ] },
+		{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] },
+		{ name: 'styles', items : [ 'Styles','Format','Font','FontSize' ] },
+		{ name: 'colors', items : [ 'TextColor','BGColor' ] }
+
 	];
 
 

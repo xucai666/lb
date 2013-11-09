@@ -61,7 +61,7 @@ class Product extends CI_Controller{
 	
 		$data = array(
 			'main'=>$main,
-			'editor'=>$this->Common_model->editor($main['pro_content'],'content'),
+			'editor'=>$this->Common_model->editor($main['pro_content'],'content','Full'),
 			'class_info'=>$class_info,
 		);
 		

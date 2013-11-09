@@ -81,7 +81,13 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
 			if(is_array($field_value)){
 				$temp_v = array();
 				foreach($field_value as $v1){					
-					$new_array[$v[$key]][$v1] = $v[$v1];
+					if(is_array($v1)){
+						//重新命名各数组单元					
+						$new_array[$v[$key]][key($v1)] = $v[current($v1)];
+					}else{
+						//提取指定的单元
+						$new_array[$v[$key]][$v1] = $v[$v1];
+					}				
 				}				
 				
 			}elseif($field_value==null){

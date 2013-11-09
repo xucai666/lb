@@ -54,7 +54,22 @@ class Product extends CI_Controller {
 		$this->breadcrumb->append_crumb('Home', '/');
 		$this->breadcrumb->append_crumb('Product', 'product');
 		$this->breadcrumb->output();
-
+		$this->load->model('Tree_model');
+		$ls = $this->Tree_model->fetch_belong_tree($this->uri->segment(3),true);
+		foreach($ls as $k=>&$v){
+				$vls = $this->Tree_model->fetch_belong_tree($v['id'],true);
+				$lnk = $vls?'action_category':'action_list';
+				$v['lnk'] = 'product/'.$lnk.'/'.$v['id'];
+				$v['ctp'] = $this->im->count_products($v['id']);
+				 if($v['pic']){
+				  $img = current(explode(',',$this->Common_model->fetch_images($v['pic'],1)));
+				}else{
+				  $img = $this->im->first_img($v['id']);
+				}
+				$v['img'] = $img;
+		}
+		
+		$data['list'] = $ls;
 		$this->init_page->load_front_view('product_category',$data);
 	}
 

@@ -38,6 +38,16 @@
 		<td></td>
 	</tr>
 	<tr>
+		<td>排序</td>
+		<td>
+				<input size="80" type="text" name="main[orderId]" id="main[orderId]" value="<!--{$main.orderId}-->">
+			<!--{php}-->
+				echo form_error("main[orderId]","<span id='error_span'>","</span>");
+			<!--{/php}-->
+		</td>
+		<td></td>
+	</tr>
+	<tr>
 		<td>图片：</td>
 		<td>
 			<!--{tag_input_html f_id=21 name="main[pic]" value=$main.pic}-->

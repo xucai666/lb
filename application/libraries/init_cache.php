@@ -17,6 +17,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  	
  	
  	private static $instance;
+ 	private  $store;
  	function __construct(){
  		self::$instance =& $this;
  		
@@ -91,12 +92,16 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  	 */
  	function cache_fetch($name,$index=null,$lang=null,$file_ext='.php'){
  		try{
+ 			$e = $this->get_register($name);
+ 			if($e){
+ 				return $index?$e[$index]:$e;
+ 			}
  			$ci = & get_instance();	
 	 		$lang = $lang?$lang:lang_get(); 
 	 		$file = FCPATH.FOLDER_CACHE.'/'.$lang.'/'.$name.$file_ext;
 	 		if(!file_exists($file))  throw new Exception($name.'缓存文件已丢失，请创建！');
-	 		$cache_return = @require($file);
-	 		
+	 		$cache_return = @require_once($file);
+	 		$this->set_register($name,$cache_return);
 	 		return $index?$cache_return[$index]:$cache_return;
  			
  		}catch(Exception $e){
@@ -173,7 +178,14 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
 	    is_dir($pathname) or mkdir($pathname, $mode, true);  
 	    return realpath($pathname);  
 	}  
-	 	
+
+	function set_register($name,$rs){		
+		$this->store[$name] = $rs;
+	}	
+	
+	function get_register($name=null){
+		return $name?$this->store[$name]:$this->store;
+	} 	
  	
  		
  }

@@ -15,10 +15,10 @@
 class Tree extends CI_Controller{
 	function __construct(){
 		parent::__construct();
-		//auth login
+		//auth login		
         $this->init_auth->execute_auth();
 		$this->load->model("Tree_model",'im');
-		
+
 	}
 
 	function index(){
@@ -116,7 +116,10 @@ class Tree extends CI_Controller{
 				}
 				$this->db->where('id',$main['id']);
 				$this->db->update('tree_node',$main);
-			
+				//create cache
+				$this->im->cache_create();
+
+				//save ok
 				$this->init_page->backend_redirect('tree/action_list','保存成功');
 			}else{
 				$data = array_merge(array('pids'=>$this->im->fetch_select()),$data);				
@@ -146,10 +149,7 @@ class Tree extends CI_Controller{
 	}
 
 	function action_list(){
-		$this->db->select('id,treeId,pid,code',false)->select('LEVEL,CONCAT(REPEAT("│ ",LEVEL-1),"├─",NAME) as name',false)->from('tree_node')->where('treeId',$this->im->get_root())->like('name',$this->input->get('name'))->order_by('leftId','asc');
-		if($treeId) $this->db->where('treeId',$treeId);
-		$data = $this->init_db->fetch_all(15);
-		$data['treeIds'] = $treeIds;
+		$data = $this->im->fetch_cache();
 		$this->init_page->load_backend_view('tree_list',$data);
 	}
 
