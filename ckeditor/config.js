@@ -48,12 +48,16 @@ CKEDITOR.editorConfig = function( config ) {
 	];
  
 	config.toolbar_Basic =
-	[
-		{ name: 'links', items : [ 'Link','Unlink','Anchor' ] },
+
+		[{ name: 'document', items : [ 'Source'] },
+		{ name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','CreateDiv',
+		'-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock','-','BidiLtr','BidiRtl' ] },
+		{ name: 'links', items : [ 'Link','Unlink','Anchor','gg'] },
 		{ name: 'insert', items : [ 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak','Iframe' ] },
 		{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] },
 		{ name: 'styles', items : [ 'Styles','Format','Font','FontSize' ] },
 		{ name: 'colors', items : [ 'TextColor','BGColor' ] }
+		
 
 	];
 
@@ -82,6 +86,7 @@ CKEDITOR.editorConfig = function( config ) {
 	config.filebrowserWindowWidth = 1000;
 	config.filebrowserWindowHeight = 700;
 				
+ 	config.extraPlugins = 'gg';
 
 
 	

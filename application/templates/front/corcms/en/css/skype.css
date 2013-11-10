@@ -1,8 +1,16 @@
-#online_skype_layer {
-z-index: 9999;
-position: fixed;
-right: 0px;
-top: 0;
-margin: 150px 0 0 0;
+
+#msgtip {
+background-image: url(../images/skype.gif);
+background-repeat: no-repeat;
+background-position: center 0px;
+position: absolute;
+height: 82px;
+width: 192px;
+padding-top: 35px;
+
 list-style-type:none;
+text-align: center;
+
+
 }
+

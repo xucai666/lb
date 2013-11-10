@@ -84,18 +84,19 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  		$CI = &get_instance();
 		$cfg = $CI->init_cache->cache_fetch('sys_config');
 
+ 		$CI->init_page->fetch_js(array('skype'),null,$CI->init_page->getRes('js','front'));	
  		$CI->init_page->fetch_css(array('skype'),null,$CI->init_page->getRes('css','front'));	
  		
-		$reval .= "<div id=\"online_skype_layer\">\n";
+		$reval .= "<div id=\"msgtip\"><div id=\"\">\n";
 		$skypes = explode(',', $cfg['contact']['skype']);
 		$reval .= "<script type=\"text/javascript\" src=\"http://skype.tom.com/script/skypeCheck40.js\"></script>\n";
 
 		foreach($skypes as $q){
-			$qc = "<a href=\"skype:".$q."?chat\" onclick=\"return skypeCheck();\"><img src=\"http://mystatus.skype.com/mediumicon/".$q."\" style=\"border: none;\" width=\"26\" height=\"26\" alt=\"My status\" /></a><a href=\"skype:".$q."?chat\" onclick=\"return skypeCheck();\">".$q."</a>\n";
-			$reval .= "				<li>".$qc."</li>\n";
+			$qc = "<a href=\"skype:".$q."?chat\" onclick=\"return skypeCheck();\"><img src=\"http://mystatus.skype.com/mediumicon/".$q."\" style=\"border: none;\" width=\"26\" height=\"26\" alt=\"My status\" /></a>\n";
+			$reval .= "				".$qc."\n";
 
 		}
-		
+		$reval .= "</div>\n";
 		$reval .= "</div>\n";
 		return $reval;
  	}

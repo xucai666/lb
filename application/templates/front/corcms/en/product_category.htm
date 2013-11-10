@@ -1,7 +1,7 @@
 <!--{include file="`$dir_front`/top.htm"}-->
 <table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
-    <td width="246" valign="top">
+    <td valign="top">
     <!--{include file="`$dir_front`/left_product.htm"}-->    </td>
     
     <td valign="top" aign="right">&nbsp;</td>
@@ -25,11 +25,11 @@
            <!--{foreach from=$list item=item}-->
          <li >
          <div class='img'>      
-          <a href="<!--{site_url($item.lnk)}-->" target="_blank"> <img src="<!--{$item.img}-->"  onerror="ImgError(this)" onload="resizeImage(this,160,140)"  /></a>
+          <a href="<!--{site_url($item.lnk)}-->" target="_blank" title="<!--{$item.init_name}-->"> <img src="<!--{$item.img}-->"  onerror="ImgError(this)" onload="resizeImage(this,160,140)"  /></a>
         </div>
 
          <div>
-         <a href="<!--{site_url($item.lnk)}-->" target="_blank" title="%name"><!--{msubstr(strip_tags(htmlspecialchars_decode(($item.init_name))),0,10)}--></a>
+         <a href="<!--{site_url($item.lnk)}-->" target="_blank" title="<!--{$item.init_name}-->"><!--{msubstr(strip_tags(htmlspecialchars_decode(($item.init_name))),0,10)}--></a>
         <br>
         <span style="color:#ccc"><!--{$item.ctp}-->Products</span>
         </div>

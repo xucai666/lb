@@ -12,11 +12,7 @@ span,td,tr,li,ul,input,div,form,a{
 .input{ background:url(../images/sousuo_06.jpg) no-repeat;width:155px; }
 
 
-/*导航*/
-#coolMenu a:hover{
-	 text-decoration: none; border-bottom: 1px solid #F90;
-	 clear:both;
-}
+
 
 
 

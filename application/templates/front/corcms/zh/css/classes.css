@@ -1,5 +1,5 @@
 .my_left_category{
-width:220px;
+width:240px;
 font-size:12px;
 font-family:arial,sans-serif;
 letter-spacing:2px;
@@ -16,7 +16,7 @@ margin:0px;
 color:#FFF;
 }
 .my_left_category .my_left_cat_list{
-width:218px;
+width:238px;
 border-color:#2B74E2;
 border-style:solid;
 border-width:0px 1px 1px 1px;
@@ -39,7 +39,7 @@ font-size:14px;
 line-height:22px;
 }
 .my_left_category .h2_cat{
-width:216px;
+width:236px;
 height:26px;
 background:url(../images/classes/my_menubg_w.gif);
 
@@ -53,7 +53,7 @@ position:relative;
 
 }
 .my_left_category .h2_cat_1{
-width:216px;
+width:236px;
 height:26px;
 
 background-repeat:no-repeat;
@@ -84,20 +84,19 @@ padding-left:8px;
 .my_left_category h3 a{	line-height:26px;}
 .my_left_category .h3_cat{
 display:none;
-width:274px;
+width:294px;
 position:absolute;
-left:193px;
+left:213px;
 margin-top:-26px;
 cursor:auto;
 }
 .my_left_category .shadow{
 position:inherit;
-background:url(../images/classes/shadow_04.gif) left top;
-width:274px;
+width:294px;
 }
 .my_left_category .shadow_border{
 position:inherit;
-width:270px;
+width:290px;
 border:1px solid #2B74E2; margin-top:1px;
 border-left-width:0px;
 background:url(../images/classes/shadow_border.gif) no-repeat 0px 21px;
@@ -112,7 +111,7 @@ background:url(../images/classes/my_cat_sub_menu_dot.gif);
 background-repeat:no-repeat;
 background-position:0px 8px;
 float:left;
-width:145px;
+width:165px;
 height:26px;
 overflow:hidden;
 letter-spacing:0px;

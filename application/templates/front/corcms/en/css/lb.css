@@ -12,11 +12,6 @@ span,td,tr,li,ul,input,div,form,a{
 .input{ background:url(../images/sousuo_06.jpg) no-repeat;width:155px; }
 
 
-/*导航*/
-#coolMenu a:hover{
-	 text-decoration: none; border-bottom: 1px solid #F90;
-	 clear:both;
-}
 
 
 
@@ -378,12 +373,14 @@ td,span,th,div,input,button,a{
 }
 
 #breadcrumb{
-	 margin:auto;
+	
 	 background-color:#f1f1f1;
 	text-indent: 20px;
 	width: 992px;
 	height:20px;
 	padding-top:5px;
+	margin: auto;
+
 
 }
 
@@ -588,3 +585,6 @@ font-size: 11px;
 text-decoration: none;
 padding: 1px;
 }
+
+
+

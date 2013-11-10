@@ -41,7 +41,7 @@ Notes:
 	define('BASEPATH', realpath(dirname(__file__).'/../system/'));
 	include_once('loader.php');
 	include_once(realpath(getcwd().'/../application/config/database.php'));
-	$lang = $_COOKIE['mysys_lang']?$_COOKIE['mysys_lang']:'zh';
+	$lang = $_COOKIE['mysys_lang']?$_COOKIE['mysys_lang']:'en';
 	$cfg = $db[$lang];
 	$loader->load_class(array('mysql','image_thumb'));
 	$config = array(
