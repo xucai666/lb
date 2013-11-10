@@ -117,6 +117,5 @@ overflow:hidden;
 letter-spacing:0px;
 }
 .my_left_category .active_cat{ z-index:99;background-position:0 -25px;cursor:pointer;}
-.my_left_category .active_cat h3 { font-weight:bold}
 .my_left_category .active_cat h3 span{ display:none;}
 .my_left_category .active_cat div{display:block;}

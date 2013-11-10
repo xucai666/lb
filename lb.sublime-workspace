@@ -172,6 +172,9 @@
 	},
 	"file_history":
 	[
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/css/classes.css",
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/css/classes.css",
+		"/E/links/icons/sublime_text.exe - 快捷方式.lnk",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/product_view.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/css/skype.css",
 		"/E/phpnow/htdocs/lb/application/libraries/online.php",
@@ -179,10 +182,8 @@
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/images/about_11.jpg",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/js/skype.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/product.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/css/classes.css",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/product_category.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/left_product.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/css/classes.css",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/css/lb.css",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/top.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/foot.htm",
@@ -298,8 +299,7 @@
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/engage_add.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jscript.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/jscript.js",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/about_news22.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/jquery-1.10.2.min.js"
+		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/about_news22.htm"
 	],
 	"find":
 	{
@@ -307,7 +307,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"E:\\phpnow\\htdocs\\lb\\application",
@@ -589,6 +589,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"classes.c",
+				"application/templates/front/corcms/zh/css/classes.css"
+			],
+			[
+				"clases.css",
+				"application/templates/front/corcms/en/css/classes.css"
+			],
 			[
 				"online.php",
 				"application/libraries/online.php"
@@ -1092,14 +1100,6 @@
 			[
 				"auth",
 				"application/helpers/auth_helper.php"
-			],
-			[
-				"dynamic_vie",
-				"application/templates/front/blue/zh/dynamic_view.htm"
-			],
-			[
-				"comon_mod",
-				"application/models/common_model.php"
 			]
 		],
 		"width": 0.0
