@@ -143,6 +143,7 @@
 		$lang['mb_captcha']								 = '验证码';
 		$lang['mb_msg_exit']								 = '退出成功';
 		$lang['mb_msg_sign_in']								 = '登陆成功';
+		$lang['mb_reg']								 = '用户注册';
 
 		//订购
 		$lang['sp_code']								 = '编号';

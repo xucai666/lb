@@ -1,0 +1,30 @@
+ <form id="form1" name="form1" method="get" action="<!--{func_site_url segments='search'}-->"  style="display:;" >
+         <ul class="index_top_right">          
+         <!--{if config_item('lang_multiple')}-->        
+          <li  class="" >
+           <img src="<!--{$img_url}-->/lang_change.gif">&nbsp; <!--{$lang_link}-->         
+         </li>
+         <!--{/if}-->
+
+         <li class="top_search_li" > 
+            <input type="text" name="title" id="textfield"   class="input" /> 
+            <input type="submit"  class="top_search_button" value="" />
+            </li>
+
+            <li class="account_link">
+            <!--{if "member"|get_cookie}-->
+            <a href="<!--{"front/member/action_member_center"|site_url}-->" target="_parent">
+
+            <!--{lang('mb_hello')}-->,<!--{"member"|get_cookie|func_my_encrypt:'DECODE'}-->, <!--{lang('mb_center')}--></a>
+
+            <!--{else}-->
+            <a href="<!--{"front/member/action_register"|site_url}-->" target="_parent"><!--{lang('mb_reg')}--></a><a href="<!--{"front/member/index"|site_url}-->" target="_parent"><!--{lang('mb_login')}--></a>
+            
+            <!--{/if}-->
+
+
+            </li>
+           
+        </ul>
+
+</form>

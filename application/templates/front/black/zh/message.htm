@@ -1,0 +1,149 @@
+<!--{include file="`$dir_front`/top.htm"}-->
+
+<table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
+  <tr>
+    <td width="246" valign="top">
+     	    <!--{include file="`$dir_front`/left_message.htm"}-->
+ 
+	        <!--{include file="`$dir_front`/left_contact.htm"}-->
+
+	  </td>
+	  
+    <td valign="top">
+
+   
+      
+
+
+<div class="local_13033875926094 w724"><span class="col_1"><!--{lang('gb_leave_message')}--></span><span class="col_2"> <a href="#write"><!--{lang('gb_write_message')}--></a></span></div>
+
+<p style="text-indent:2em;line-height:30px;"><!--{lang('gb_theme')}--></p>
+
+
+
+
+  <a name="write"></a>
+  
+    <form id="form1" name="form1" method="post" action="<!--{$site_url}-->/message/save" onsubmit="return validator(this)" >
+    <table width="754" border="0" cellspacing="1" cellpadding="4" align="center" bgcolor="#CCCCCC" >
+      <tr bgcolor="#ffffff"> 
+        <td width="10%" align="center" nowrap><!--{lang('gb_name')}-->：</td>
+        <td ><input type="text" maxlength="10" name="main[ms_name]" size="36" class="input" id="main[ms_name]"  valid="required" errmsg="<!--{lang('gb_valie_name')}-->">&nbsp;<font color="#FF0000">*</font></td>
+        
+      </tr>
+      <tr bgcolor="#ffffff">
+
+      <td  width="10%" align="center" nowrap><!--{lang('gb_tel')}-->：</td>
+        <td ><input maxlength="20" type="text" name="main[ms_tel]"  id="main[ms_tel]"size="46" class="input"  valid="required" errmsg="<!--{lang('gb_valie_tel')}-->" />&nbsp;<font color="#FF0000">*</font></td>
+
+        </tr>
+      <tr bgcolor="#ffffff"> 
+        <td align="center" nowrap>&nbsp;<!--{lang('gb_email')}-->：</td>
+        <td><input maxlength="80" type="text" name="main[ms_email]" size="36" class="input" id="email" valid="required|isEmail" errmsg="<!--{lang('gb_valie_email')}-->" >&nbsp;<font color="#FF0000">*</font></td>
+        
+      </tr>
+      
+      <tr bgcolor="#ffffff"> 
+        
+        <td align="center" nowrap height="2" width="10%"><!--{lang('gb_avatar')}-->：</td>
+        <td  height="2" colspan="3" align="left" class="m_img"> 
+<style>
+          .m_img li{
+            list-style-type: none;
+            float:left;
+            width:40px;
+            min-height:25px;
+            line-height: 150%;
+            display: block;
+            height: auto;
+          }
+         
+          </style>
+
+
+          <!--{section name=total loop=24}--> 
+          <li>
+          <img src="<!--{$img_url}-->/guestbook/<!--{sprintf("%02d",$smarty.section.total.index+1)}-->.gif" width="25" height="25"> <br><input type="radio" name="main[ms_img]" value="<!--{sprintf("%02d",$smarty.section.total.index+1)}-->"> </li>
+           <!--{/section}--> 
+
+ </td>
+      </tr>
+<tr bgcolor="#ffffff">
+      <td align="center" nowrap width="10%"> <font color="#FF0000">*</font><!--{lang('gb_content')}-->：<br>
+          (<!--{lang('gb_txt_limit')}-->) </td>
+        <td align="left" colspan="3"><textarea name="main[ms_content]" cols="36" rows="8" class="textarea"  id="main[ms_content]" valid="required" errmsg="<!--{lang('gb_valie_content')}-->"></textarea>&nbsp;<font color="#FF0000">*</font></td>
+
+      </tr>
+      
+      <tr bgcolor="#ffffff"> 
+        <td align="center" nowrap width="10%"><!--{lang('sys_captcha')}-->：</td>
+        <td height="12" colspan="3" align="left"> <table  border="0" cellspacing="0" cellpadding="0">
+            <tr> 
+              <td width="120"><input name="captcha" type="text" id="captcha"   size="10" valid='required' errmsg='<!--{lang('sys_valid_captcha')}-->'/></td>
+              <td > <a href="javascript:;"  >
+               <img id='captcha1' src='<!--{func_site_url segments="message/show_captcha"}-->'/></a>
+            <script language="javascript">
+      $('#captcha1').bind('click',function(){
+        
+        $(this).attr('src','<!--{func_site_url segments="message/show_captcha"}-->/?rnd='+Math.random());
+        
+        
+        })
+        </script> </td>
+            </tr>
+
+
+
+          </table></td>
+      </tr>
+
+        </table>
+         <center> <input maxlength="1000" type="submit" name="Submit" value="<!--{lang('button_submit')}-->" class="btn"> 
+          &nbsp;&nbsp; <input type="reset" name="Submit2" value="<!--{lang('button_cancel')}-->" class="btn"> </center>
+    </form>
+   
+
+
+<div style="display:none;">
+<!--{foreach from=$list item=item}-->
+<table width='754' border='0' cellpadding='3' cellspacing='1' bgcolor='#CCCCCC' style="margin-bottom:25px;">
+  <tr>
+    <td width='160' rowspan='3' valign='top' bgcolor='#FFFFFF'>
+   
+   <P style="line-height:35px;"> 
+
+   &nbsp;<!--{$item.ms_date}--> <!--{$item.ms_name}--><br>
+   &nbsp;IP：<!--{$item.ms_ip}--><br>
+   
+   &nbsp;<img src='<!--{$img_url}-->/guestbook/<!--{sprintf("%02d",$item.ms_img)}-->.gif' border=0>
+  </P>
+  </td>
+   
+  
+    <td height='200' bgcolor='#fff' style='word-break: break-all' align="left" valign="top">
+      
+   <!--{$item.ms_content}-->
+    </td>
+  </tr>
+ 
+</table>
+
+<!--{/foreach}-->
+
+<table border='0' cellpadding='4' cellspacing='0' width='754' align='center'>
+  <tr>
+  <td align="right">
+     <div class="page"> <!--{$page_link}--></div>
+  </td>
+  </tr>
+  <tr><td></td></tr>
+</table>
+   </div>       </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+
+<!--{include file="`$dir_front`/foot.htm"}-->

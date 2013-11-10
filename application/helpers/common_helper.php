@@ -338,31 +338,21 @@ function RndString($body)
 
   
   //获得当前的脚本网址 
-  function GetCurUrl() 
-  { 
-    if(!empty($_SERVER["REQUEST_URI"])) 
-    { 
-      $scriptName = $_SERVER["REQUEST_URI"]; 
-      $nowurl = $scriptName; 
-    } 
-    else 
-    { 
-     $scriptName = $_SERVER["PHP_SELF"]; 
-      if(empty($_SERVER["QUERY_STRING"])) 
-      { 
-      $nowurl = $scriptName; 
-      } 
-      else 
-      { 
-      $nowurl = $scriptName."?".$_SERVER["QUERY_STRING"]; 
-      } 
-    } 
-    
-    
-    $nowurl = str_replace("/index.php", "", $nowurl);
+function current_urli()
 
-    return $nowurl;
-  } 
+    {
+
+        $sys_protocal = isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == '443' ? 'https://' : 'http://';
+
+        $php_self     = $_SERVER['PHP_SELF'] ? $_SERVER['PHP_SELF'] : $_SERVER['SCRIPT_NAME'];
+
+        $path_info    = isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '';
+
+        $relate_url   = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : $php_self . (isset($_SERVER['QUERY_STRING']) ? '?' . $_SERVER['QUERY_STRING'] : $path_info);
+
+        return $sys_protocal . (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '') . $relate_url;
+
+    }
 
 
     

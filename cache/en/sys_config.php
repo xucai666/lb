@@ -13,12 +13,12 @@
     'fax' => '0591-888888',
     'email' => 'conqweal@163.com',
     'qq' => '150672834,56055473',
-    'skype' => 'conqweal,yehua365',
+    'skype' => 'conqweal',
     'kefu_type' => '2',
   ),
   'develop' => 
   array (
-    'template' => 'corcms',
+    'template' => 'black',
     'time_page_redirect' => '2000',
   ),
 );?>

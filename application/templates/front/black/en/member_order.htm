@@ -1,0 +1,51 @@
+<!--{include file="`$dir_front`/top.htm"}-->
+
+
+<table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
+  <tr>
+    <td width="246" valign="top">
+    
+     <!--{include file="`$dir_front`/left_member.htm"}-->
+     <!--{include file="`$dir_front`/left_contact.htm"}-->
+    
+      
+    <td valign="top" class="product_cart">
+        <h1 align="center"><!--{lang('od_theme_list')}--></h1>
+        <table>
+          <thead>
+          <tr>
+          <th><!--{lang('od_code')}--></th>
+          <th><!--{lang('od_state')}--></th>
+          <th><!--{lang('od_date')}--></th>
+          <th><!--{lang('od_s_amount')}--></th>
+          <th><!--{lang('od_s_num')}--></th>
+         
+          <th><!--{lang('sys_operate')}--></th>
+          </tr>
+          </thead>
+          <!--{foreach from=$list item=item}-->
+           <tr>
+          <td><!--{$item.order_no}--></td>
+          <td><!--{$status[$item.status]}--></td>
+          <td><!--{$item.order_date}--></td>
+          <td><!--{$stats[$item.order_id].sub}--></td>
+          
+          <td><!--{$stats[$item.order_id].p_stat}--></td>
+          <td align="center">
+          <!--{create_button type='view' url="front/member/action_order_detail/`$item.order_id`"}-->
+
+           <!--{create_button type='pay' url="alipay/index/`$item.order_id`"}-->
+
+
+          </td>
+          </tr>
+          <!--{/foreach}-->
+
+        </table> 
+
+        <div clas="page"><!--{$page_link}--></div>
+      
+    </td>
+  </tr> 
+</table>
+<!--{include file="`$dir_front`/foot.htm"}-->

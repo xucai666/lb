@@ -1,0 +1,35 @@
+<!--{include file="`$dir_front`/top.htm"}-->
+
+
+<table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
+  <tr>
+    <td width="246" valign="top">
+    
+     <!--{include file="`$dir_front`/left_about.htm"}-->
+     <!--{include file="`$dir_front`/left_contact.htm"}-->
+    
+      
+    <td valign="top" class="login">
+        <h1 align="center"><!--{lang('mb_reg')}--></h1>
+        
+       <form method="post" action="<!--{'front/member/action_register_save'|site_url}-->">
+       <ul>
+           <li><h3 class="red" ><!--{lang('mb_mark1')}-->：</h3></li>
+           <li><!--{lang('mb_account')}-->：<input type="text" name="main[m_user]" value="<!--{$main.m_user}-->"/><span class="red">*</span><!--{"main[m_user]"|form_error}--></li>
+           <li> <!--{lang('mb_password')}-->：<input type="password" name="main[m_pass]" /><span class="red">*</span><!--{"main[m_pass]"|form_error}--></li> <li> <!--{lang('mb_repeat_password')}-->：<input type="password" name="m_pass_repeat" /><span class="red">*</span><!--{"m_pass_repeat"|form_error}--></li>
+
+           <li> <!--{lang('mb_mobile')}-->：<input type="text" name="main[m_mobile]"  value="<!--{$main.m_mobile}-->" /><!--{"main[m_mobile]"|form_error}--></li>
+           <li> <!--{lang('mb_email')}-->：<input type="text" name="main[m_email]" value="<!--{$main.m_email}-->" /><span class="red">*</span><!--{"main[m_email]"|form_error}--></li>
+           <li> <!--{lang('mb_name')}-->：<input type="text" name="main[m_name]" value="<!--{$main.m_name}-->" /><span class="red">*</span><!--{"main[m_name]"|form_error}--></li>
+          
+
+       </ul>
+        
+     <div align="center"> <!--{create_button type='register'}--></div>
+    
+    
+      </form>
+    </td>
+  </tr> 
+</table>
+<!--{include file="`$dir_front`/foot.htm"}-->

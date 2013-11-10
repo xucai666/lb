@@ -1,0 +1,16 @@
+
+#msgtip {
+background-image: url(../images/skype.gif);
+background-repeat: no-repeat;
+background-position: center 0px;
+position: absolute;
+height: 82px;
+width: 192px;
+padding-top: 35px;
+
+list-style-type:none;
+text-align: center;
+
+
+}
+

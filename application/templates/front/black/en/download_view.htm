@@ -1,0 +1,67 @@
+<!--{include file="`$dir_front`/top.htm"}-->
+<!--{include file="`$dir_front`/nav.htm"}-->
+<div class="container_width"><img src="<!--{$img_url}-->/source_download.jpg" width="896" height="106"></div>
+
+<div id="new_content_container" class="container_width">
+	
+    	<!--{include file="`config_item('template_dir')`/`$lang_type`/left_download.htm"}-->
+    
+  <div id="right_container">
+    	<h4><span><a href="#">当前位置-</a>资源下载</span></h4>
+   	<div class="new_content">
+   	 
+        <dl>
+         
+            <dd>
+           
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="40" colspan="2" align="left" style="font-size:16px;font-weight:bold"> <!--{$about.info_title}-->&nbsp;</td>
+                </tr>
+                <tr>
+                  <td width="13%" height="40" align="right">软件大小：</td>
+                  <td width="87%" height="40">
+                  <!--{$about.file_size}-->
+                  
+                  &nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="40" align="right">软件语言：</td>
+                  <td height="40">                  
+                  
+                     <!--{func_soft_language select_soft_language=$about.info_soft_language}-->&nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="40" align="right">软件类别：</td>
+                  <td height="40">  <!--{$about.soft_class_name}-->&nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="40" align="right">更新时间：</td>
+                  <td height="40">  <!--{$about.info_last_update}-->&nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="40" align="right">下载次数：</td>
+                  <td height="40"><!--{$about.info_download_times}-->&nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="40" align="right">软件下载：</td>
+                  <td height="40"><a href="<!--{$site_url}-->/download/view2/?info_id=<!--{$about.info_id}-->">点击下载&nbsp;<img src="<!--{$img_url}-->/down.gif"></a></td>
+                </tr>
+                <tr>
+                  <td height="40" align="right">软件描述：</td>
+                  <td height="250" valign="top">
+                  <!--{$about.info_content}-->
+                  
+                  &nbsp;</td>
+                </tr>
+              </table>
+            </dd>
+        </dl>
+      </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+
+
+<!--{include file="`$dir_front`/foot.htm"}-->

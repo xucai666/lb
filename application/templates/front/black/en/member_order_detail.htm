@@ -1,0 +1,97 @@
+<!--{include file="`$dir_front`/top.htm"}-->
+
+
+<table width="992" border="0" align="center" cellpadding="0" cellspacing="0" >
+  <tr>
+    <td width="246" valign="top">
+    
+     <!--{include file="`$dir_front`/left_member.htm"}-->
+     <!--{include file="`$dir_front`/left_contact.htm"}-->
+    
+      
+    <td valign="top" class="product_cart">
+        <h1 align="center"><!--{lang('od_theme_detail')}--></h1>
+        <h4><em><!--{lang('od_theme_basic')}--></em></h4>
+        <table>
+          <thead>
+          <tr>
+          <th><!--{lang('od_code')}--></th>
+          <th><!--{lang('od_state')}--></th>
+          <th><!--{lang('od_date')}--></th>
+          <th><!--{lang('od_s_amount')}--></th>
+          <th><!--{lang('od_s_num')}--></th>
+         
+         
+          </tr>
+          </thead>
+        
+           <tr>
+          <td><!--{$main.order_no}--></td>
+          <td><!--{$status[$main.status]}--></td>
+          <td><!--{$main.order_date}--></td>
+          <td><!--{$stats.sub}--></td>
+          
+          <td><!--{$stats.p_stat}--></td>
+         
+         </tr>
+
+        </table> 
+
+         <h4><em><!--{lang('od_theme_goods')}--></em></h4>
+
+          <table>
+          <thead>
+          <tr>
+          <th><!--{lang('od_contact')}--></th>
+          <th><!--{lang('od_tel')}--></th>
+          <th><!--{lang('od_address')}--></th>
+          <th><!--{lang('od_email')}--></th>
+          <th><!--{lang('od_mark')}--></th>
+         
+         
+          </tr>
+          </thead>
+        
+           <tr>
+          <td><!--{$main.contact}--></td>
+          <td><!--{$main.mobile}--></td>
+          <td><!--{$main.address}--></td>
+          
+          <td><!--{$main.email}--></td>
+          <td><!--{$main.remarks}--></td>
+         
+         </tr>
+
+        </table> 
+
+        <h4><em><!--{lang('od_theme_order')}--></em></h4>
+        <table>
+          <thead>
+          <tr>
+          <th><!--{lang('od_p_name')}--></th>
+          <th><!--{lang('od_price')}--></th>
+          <th><!--{lang('od_num')}--></th>
+          <th><!--{lang('od_amount')}--></th>
+         
+         
+          </tr>
+          </thead>
+          <!--{foreach from=$list item=item}-->
+            <tr>
+            <td><a href='<!--{site_url("product/view/`$item.p_id`")}-->' target="_blank"><!--{$item.p_name}--></a></td>
+            <td><!--{$item.p_price}--></td>
+            <td><!--{$item.p_qty}--></td>
+            
+            <td><!--{math equation="a+b" a=$item.p_qty b=$item.p_price }--></td>
+           
+           </tr>
+         <!--{/foreach}-->
+
+        </table> 
+
+        <div align="center" style="margin:50px;"><!--{create_button type="back" url="javascript:history.back(1);"}--></div>
+      
+    </td>
+  </tr> 
+</table>
+<!--{include file="`$dir_front`/foot.htm"}-->
