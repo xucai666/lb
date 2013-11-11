@@ -21,7 +21,7 @@
 	<!--{foreach from=$files item=item key=key name=foo}-->
 	<tr>
 		<td align='center'><!--{$smarty.foreach.foo.index+1}--></td>
-		<td><!--{$key}--></td>
+		<td><a href="<!--{base_url()}-->/<!--{$item.relative_path}-->/<!--{$key}-->" target="_self"><!--{$key}--></a></td>
 		<td align='center'><!--{math equation="round(x,2)" x="`$item.size/1024/1024`"}--> M</td>
 		<td align='center'><!--{$item.date|date_format:"%Y-%m-%d"}--></td>
 	</tr>

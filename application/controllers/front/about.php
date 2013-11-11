@@ -18,11 +18,6 @@ class About extends CI_Controller {
 	{
 		parent::__construct();
 
-		
-	
-		
-		
-
 	}
 	
 	/**
