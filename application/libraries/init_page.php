@@ -16,6 +16,7 @@
 class Init_page{	
 	private static $instance;
 	public $load_config_css = 1;
+	private $controller_path;
 	public function __construct()
 	{
 		self::$instance =& $this;
@@ -48,8 +49,18 @@ class Init_page{
 				
 		
 		$this->front_theme = $sys_config['template'];
+		$this->setPath(trim($CI->router->directory,'/'));
 		
 		
+	}
+
+
+	function setPath($path){
+		$this->controller_path = $path;
+	}
+
+	function getPath(){
+		return $this->controller_path;
 	}
 	
 	/**
@@ -192,7 +203,7 @@ class Init_page{
 	/**
 	 * 加载js
 	 */
-	function fetch_js($js,$from='view',$catalog='js'){
+	function fetch_js($js,$from='view',$catalog='js'){	
 			if(empty($js)) return '';
 			$html_all_js = '';
 			if(is_array($js)){					
@@ -204,32 +215,38 @@ class Init_page{
 					$html_all_js = '<script language="JavaScript" type="text/javascript" src="'.$catalog.'/'.$js.'.js"></script>'.chr(13);
 			}	
 			
-			if($from == 'config'){
-				
+			if($from == 'config'){				
 				$this->header_html['js'] = $this->fetch_js_var().$html_all_js.$this->header_html['js'];
+
 				
 			}else{			
 				$this->header_html['js'] .= $html_all_js;
 				
-			}		
+			}			
 			return $html_all_js;
 		
 	}
 	
 	
 	function fetch_js_var(){
-		$str  =   "<script language='javascript'>\n";
-		$str .=   "var url_root ='".base_url('/')."';\n";
+	   $str = '';
+		$str .=   "var base_url ='".base_url('/')."';\n";
 		$str .=   "var site_url='".site_url('/')."';\n";
-		
 		foreach(array('js','img','css','theme') as $k){
 			foreach(array('front','backend') as $v){
 				$str .=   "var ${k}_${v}='".getRootUrl($k,$v)."';\n";
 			}
 		}
-		
-		$str .=   "</script>\n";
-		return $str;
+		$CI =  &get_instance();
+		$sys_config = $CI->init_cache->cache_fetch('sys_config','develop',lang_get());
+		$js_url = config_item('template_dir').$this->getPath();
+		$js_url .= $this->getPath()=='front'?  '/'.$sys_config['template'].'/'.lang_get().'/js/cfg.js':'/js/cfg.js';
+
+		if(!file_exists($js_url)){
+			$handle = fopen($js_url,'w');
+	 		fwrite($handle,$str);
+	 	}	 	
+		return js_url('cfg',$this->getPath());
 	}
 	
 	/**

@@ -109,8 +109,7 @@
     'c_pid' => '10',
     'c_type' => '1',
     'c_dir' => 'earch',
-    'c_img_rotator' => '
-',
+    'c_img_rotator' => '',
   ),
   20 => 
   array (
@@ -124,8 +123,6 @@
     'c_pid' => '10',
     'c_type' => '1',
     'c_dir' => 'ign__n',
-    'c_img_rotator' => 'http://localhost//lb/uploads/2013-11-07/2013110712370149.png||请输入链接地址
-
-',
+    'c_img_rotator' => 'http://localhost//lb/uploads/2013-11-07/2013110712370149.png||请输入链接地址',
   ),
 );?>

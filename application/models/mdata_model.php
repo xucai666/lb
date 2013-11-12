@@ -96,7 +96,7 @@ class Mdata_model extends CI_Model{
 		
 	}
 
-	function fetch_list($size,$query=null){
+	function fetch_list($size,$query=null,$ajax=false){
 		
 		//config table
 		$tb = $this->m->main($this->get_mid(),'m_tb');
@@ -131,7 +131,7 @@ class Mdata_model extends CI_Model{
 		$this->db->select(implode(',',array_keys($fields_out)),false)->from($tb);
 		if($query['mdata_sort']) $this->db->order_by($query['mdata_sort'],$query['mdata_sort_direction']);
 		$this->db->order_by($primary,'desc');
-		$ls = $this->init_db->fetch_all($size);
+		$ls = $this->init_db->fetch_all($size,$ajax);
 
 		
 		//按输出格式对数据处理后再输出

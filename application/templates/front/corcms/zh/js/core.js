@@ -125,7 +125,7 @@ function ajax_change_state(obj,tb,key,val,change_key){
 	
    var src =$(obj).attr('src');		
    var change_val = src.match(/yes.gif/i) ? 0 : 1; //提交前
-	$.get(url_root +"/backend/common/ajax_change_state/?tb="+tb+"&key="+key+"&val="+val+"&change_key="+change_key+"&change_val="+change_val,function(msg){	
+	$.get(site_url +"/backend/common/ajax_change_state/?tb="+tb+"&key="+key+"&val="+val+"&change_key="+change_key+"&change_val="+change_val,function(msg){	
 			
 				if(msg>0){
 				src = change_val>0? '/images/yes.gif' : '/images/no.gif';
@@ -142,7 +142,7 @@ function ajax_change_state(obj,tb,key,val,change_key){
 //验证重复
 function ajax_check_repeat(obj,tb,key_name,key_value,val_name){	
 
-	var url = url_root+"/common/ajax_repeat_valid";
+	var url = site_url+"/common/ajax_repeat_valid";
 	$.ajax({
    type: "POST",
 	   url: url,
@@ -163,7 +163,7 @@ function ajax_check_repeat(obj,tb,key_name,key_value,val_name){
 
 function start_download(files_id){
 	if(confirm('确定下载?')){
-		$.getJSON(url_root+"/common/ajax_integral_download/?files_id="+files_id,function(msg){	
+		$.getJSON(site_url+"/common/ajax_integral_download/?files_id="+files_id,function(msg){	
 			if(msg.var_return=="1"){				
 					self.location.replace("/loading.php?files_id="+msg.files_id);						
 					
@@ -187,7 +187,7 @@ function start_download(files_id){
 
 function getTeachersContact(teacher_id){
 	if(!teacher_id) return false;
-	$.getJSON(url_root+"/common/ajax_teacher_contact/?teacher_id="+teacher_id,function(data){		
+	$.getJSON(site_url+"/common/ajax_teacher_contact/?teacher_id="+teacher_id,function(data){		
 					
 			if(data.vars=='-1'){
 					alert('请先登录！');
@@ -247,7 +247,7 @@ function ajax_sort(obj,tb,key,val,change_key){
 	change_val = $(obj).val();
 	$(obj).hide();
 	$(obj).next().show();
-	$.get(url_root+"/backend/common/ajax_change_state/?tb="+tb+"&key="+key+"&val="+val+"&change_key="+change_key+"&change_val="+change_val,function(msg){	
+	$.get(site_url+"/backend/common/ajax_change_state/?tb="+tb+"&key="+key+"&val="+val+"&change_key="+change_key+"&change_val="+change_val,function(msg){	
 				if(msg>0){
 					
 					$(obj).show();

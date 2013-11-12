@@ -367,7 +367,7 @@ function ajax_sort(obj,tb,key,val,change_key){
 //ajax
 	function ajaxLoadList(){
 		var args = arguments; 
-		var url = site_url+"/"+args[0]; 
+		var url = args[0]; 
 		var obj_response = args[1]; 
 		var data = args[2];
 		var func = args[3];
@@ -523,9 +523,6 @@ function ImgError(source){
 
 
 function art_dialog_open(url,title){
-
-
-
 	//str =window.showModalDialog(url,'',"dialogWidth=600px;dialogHeight=400px");
 	var d_title =title?title:'对话框';
 	top.art.dialog.open(url,{
@@ -577,7 +574,20 @@ function art_dialog_close(msg,callback){
 	
 	
 function frmright_reload(){
-	window.ifr_main.main.location.reload();
+	$.ajax({
+		url: site_url+"/backend/mdata/action_ajax_list"+window.ifr_main.main.location.search,
+		type: 'GET',
+		dataType: 'html',
+		data: {param1: 'value1'}
+	})
+	.done(function(msg) {
+		window.ifr_main.main.$('#ajax_content').html(msg);
+	})
+	
+	
+	
+	
+	
 }	
 
 //url参数追加或者替换

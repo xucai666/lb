@@ -295,5 +295,16 @@ class Mdata extends CI_Controller{
 		
 		$this->init_page->load_backend_view('mdata_list',$data);
 	}
+
+
+	function action_ajax_list(){
+		$query  = $this->input->get();
+		$size = 6;
+		$data = $this->im->fetch_list($size,$query,true);
+		$data = array_merge($data,array('theme'=>$this->m->main($this->im->get_mid(),'m_name')));
+		ob_clean();
+		echo str_replace(array("\r","\n"),array('',''),($this->init_page->load_backend_view('ajax_mdata_list',$data,1)));
+		exit;
+	}
 }
 ?>
