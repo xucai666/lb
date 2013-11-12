@@ -98,7 +98,7 @@ class Common_model  extends CI_Model{
 	function func_get_province() {
 		$CI  =  &get_instance();	
 		$a = $CI->db->select( "region_id, region_name, parent_id",false)->from("ecs_region")->where ("parent_id",1)->get()->result_array();
-		$select = $this->init_form->array_re_index($a,'region_id','region_name');
+		$select = array_re_index($a,'region_id','region_name');
 		return $select;
 	}
 	
@@ -530,7 +530,7 @@ class Common_model  extends CI_Model{
 			UNION   ALL 
 		SELECT concat('$url',$primary) as url,'Next' as nav_title,`$title_field` FROM (SELECT  *  FROM  $tb   WHERE   $where and  $primary<$id ORDER BY $primary desc  LIMIT 1) AS t2
 EOT;
-		return $this->init_form->array_re_index($this->init_db->fetchAll($sq),'nav_title',array('url',$title_field));
+		return array_re_index($this->init_db->fetchAll($sq),'nav_title',array('url',$title_field));
 	}
 
 	/**
@@ -571,7 +571,7 @@ EOT;
 		$uid_convert = explode(',',$uid);
 		$img_field = $thumb?"REPLACE(i_url,'images','_thumbs/Images') as i_url ":'i_url';
 		$rs = $this->db->select("i_id,".$img_field,false)->from('module_images')->where_in('i_uid',$uid_convert)->order_by('i_id','asc')->get()->result_array();
-		$rs  = $this->init_form->array_re_index($rs,'i_id','i_url');
+		$rs  = array_re_index($rs,'i_id','i_url');
 		return implode(',',$rs);
 	}
 

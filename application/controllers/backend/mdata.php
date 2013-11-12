@@ -22,10 +22,6 @@ class Mdata extends CI_Controller{
 		$this->load->model("Mdata_model",'im');
 		$this->lang->load('item_backend_mdata',lang_get());
 		$this->lang->load('item_backend',lang_get());
-		
-		
-		
-
 	}
 
 	function index(){
@@ -53,10 +49,9 @@ class Mdata extends CI_Controller{
 		$detail = $this->im->details($id);
 
 		//all fields
-		$fields = $this->m->details($module_id,array('r_primary'=>'0'));	
+		$fields = $this->m->detail_exclude_primary($module_id);	
 
-	
-		
+
 		//primary key
 		$primary = $this->m->fetch_primary($module_id,'r_name');
 
@@ -72,11 +67,13 @@ class Mdata extends CI_Controller{
 
 		//detail
 		$dt_mid = $this->m->main($module_id,'m_sub');
-		$dt_fields = $this->m->details($dt_mid,array('r_primary'=>'0'));	
+		
+		$dt_fields = $this->m->detail_exclude_primary($dt_mid);	
 
 		//detail primary key
 		$dt_primary = $this->m->fetch_primary($dt_mid,'r_name');
 
+		
 		$data = array_merge($data,array('dt_fields'=>$dt_fields,'dt_primary'=>$dt_primary,'detail'=>$detail,'detail_total'=>count($detail),'dt_mid'=>$dt_mid));
 		
 		$this->init_page->load_backend_view('mdata_add',$data);
@@ -96,7 +93,7 @@ class Mdata extends CI_Controller{
 		$detail = $this->im->details($id);
 
 		//all fields
-		$fields = $this->m->details($module_id,array('r_primary'=>'0'));	
+		$fields = $this->m->detail_exclude_primary($module_id);	
 
 	
 		
@@ -115,7 +112,7 @@ class Mdata extends CI_Controller{
 
 		//detail
 		$dt_mid = $this->m->main($module_id,'m_sub');
-		$dt_fields = $this->m->details($dt_mid,array('r_primary'=>'0'));	
+		$dt_fields = $this->m->detail_exclude_primary($dt_mid);	
 
 		//detail primary key
 		$dt_primary = $this->m->fetch_primary($dt_mid,'r_name');
@@ -156,7 +153,7 @@ class Mdata extends CI_Controller{
 			$this->form_validation->set_rules($rules);
 			$module_id = $this->im->get_mid();
 			//all fields
-			$fields = $this->m->details($module_id,array('r_primary'=>'0'));
+			$fields = $this->m->detail_exclude_primary($module_id);
 			//primary key
 			$primary = $this->m->fetch_primary($module_id,'r_name');
 
@@ -168,7 +165,7 @@ class Mdata extends CI_Controller{
 
 				//detail
 				$dt_mid = $this->m->main($module_id,'m_sub');
-				$dt_fields = $this->m->details($dt_mid,array('r_primary'=>'0'));	
+				$dt_fields = $this->m->detail_exclude_primary($dt_mid);	
 
 				//detail primary key
 				$dt_primary = $this->m->fetch_primary($dt_mid,'r_name');
@@ -197,7 +194,7 @@ class Mdata extends CI_Controller{
 
 		 		
 				//create  channel cache
-		 	 	$channel = $this->init_form->array_re_index($this->db->select('*',false)->from('module_channel')->get()->result_array(),'c_id');
+		 	 	$channel = array_re_index($this->db->select('*',false)->from('module_channel')->get()->result_array(),'c_id');
 		 	 	$this->init_cache->cache_create($channel,'channel');	//create  channel cache
 		 	 	
 
@@ -239,10 +236,10 @@ class Mdata extends CI_Controller{
 		 			'log_desc'=>sprintf('module %s,delete  %s success.',$this->m->main($this->im->get_mid(),'m_name'),$rs[$log_cf['main']['primary_key']]),
 		 		));
 	 		endforeach;
-	 		//鍒犻櫎鍥剧墖绛夊獟浣撴枃浠?
-	 		$media_fid = array_keys($this->f->fields_list('f_id',array('f_media'=>1)));
+	 		//delete img
+	 		$media_fid = array_keys($this->f->fields_list('f_id',array('f_ext'=>2)));
 	 		$media_fields = $this->m->details($this->im->get_mid(),'f_id in ('.implode(',',$media_fid).') ','r_id,r_name');
-	 		$media_fields = $this->init_form->array_re_index($media_fields,'r_id','r_name');
+	 		$media_fields = array_re_index($media_fields,'r_id','r_name');
 	 		
 
 	 		foreach($rs as $k=>$v){
@@ -289,7 +286,7 @@ class Mdata extends CI_Controller{
 		$query  = $this->input->get();
 		$size = 6;
 		$data = $this->im->fetch_list($size,$query);
-		
+	
 
 		$data = array_merge($data,array('theme'=>$this->m->main($this->im->get_mid(),'m_name')));
 		

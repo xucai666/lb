@@ -58,7 +58,7 @@ class Tree extends CI_Controller{
 				$this->db->update('tree_node',$main);
 
 				//create  tree cache
-		 	 	$treeIds = $this->init_form->array_re_index($this->db->select('treeId,name')->from('tree_node')->where('pid',0)->get()->result_array(),'treeId','name');
+		 	 	$treeIds = array_re_index($this->db->select('treeId,name')->from('tree_node')->where('pid',0)->get()->result_array(),'treeId','name');
 		 	 	$this->init_cache->cache_create($treeIds,'treeIds');
 			
 				$this->init_page->backend_redirect('tree/index','保存成功');

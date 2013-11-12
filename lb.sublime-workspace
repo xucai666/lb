@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"detail_e",
+				"detail_exclude_primary"
+			],
+			[
+				"fetch",
+				"fetch_primary"
+			],
+			[
 				"impl",
 				"implements"
 			],
@@ -168,21 +176,50 @@
 	},
 	"file_history":
 	[
-		"/E/phpnow/htdocs/lb/application/templates/backend/ajax_mdata_list.htm",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/download.php",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/mdata.php",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/system_manage.php",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/tree.php",
+		"/E/phpnow/htdocs/lb/application/controllers/front/member.php",
+		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
+		"/E/phpnow/htdocs/lb/application/models/category_model.php",
+		"/E/phpnow/htdocs/lb/application/models/common_model.php",
+		"/E/phpnow/htdocs/lb/application/models/fields_model.php",
+		"/E/phpnow/htdocs/lb/application/models/mdata_model.php",
+		"/E/phpnow/htdocs/lb/application/models/modules_model.php",
+		"/E/phpnow/htdocs/lb/application/models/product_model.php",
+		"/E/phpnow/htdocs/lb/application/models/tree_model.php",
+		"/E/phpnow/htdocs/lb/application/libraries/init_form.php",
+		"/E/phpnow/htdocs/lb/application/helpers/common_helper.php",
+		"/E/phpnow/htdocs/lb/application/libraries/init_page.php",
+		"/E/phpnow/htdocs/lb/application/helpers/MY_url_helper.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/js/core.js",
+		"/E/phpnow/htdocs/lb/.tags_sorted_by_file",
+		"/E/phpnow/htdocs/lb/application/templates/backend/modules_add.htm",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/modules.php",
+		"/E/phpnow/htdocs/lb/application/compiles/001e4619afaa8bbbd78f9aeed6760e234b077bd1.file.product.htm.php",
+		"/E/phpnow/htdocs/lb/application/controllers/backend/fields.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/fields_add.htm",
+		"/E/phpnow/htdocs/lb/application/language/en/item_backend_lang.php",
+		"/E/phpnow/htdocs/lb/cache/en/fields_ext.php",
+		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_fields_lang.php",
+		"/E/phpnow/htdocs/lb/application/language/en/item_backend_fields_lang.php",
+		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
+		"/E/phpnow/htdocs/lb/application/templates/backend/fields_list.htm",
+		"/E/phpnow/htdocs/lb/cache/zh/fields_ext.php",
+		"/E/phpnow/htdocs/lb/cache/en/fields_types.php",
+		"/E/phpnow/htdocs/lb/system/helpers/form_helper.php",
+		"/E/phpnow/htdocs/lb/system/libraries/Form_validation.php",
 		"/E/phpnow/htdocs/lb/application/config/config.php",
 		"/C/Users/Administrator/AppData/Local/Temp/_tc/config.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/top.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/member_login.htm",
-		"/E/phpnow/htdocs/lb/application/controllers/front/product.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/pictures_index_rotation.htm",
 		"/E/phpnow/htdocs/lb/swfupload/upload.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/advs_add.htm",
 		"/E/phpnow/htdocs/lb/tools/test.php",
 		"/E/phpnow/htdocs/lb/tools/xx/tt.php",
 		"/E/phpnow/htdocs/lb/tools/tt.php",
-		"/E/phpnow/htdocs/lb/application/models/common_model.php",
-		"/E/phpnow/htdocs/lb/application/helpers/MY_url_helper.php",
 		"/E/phpnow/htdocs/lb/swfupload/loader.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/index.htm",
 		"/E/phpnow/htdocs/lb/swfupload/index.php",
@@ -201,7 +238,6 @@
 		"/E/phpnow/htdocs/lb/application/core/MY_Config.php",
 		"/E/phpnow/htdocs/lb/application/config/doctypes.php",
 		"/E/phpnow/htdocs/lb/application/config/mimes.php",
-		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/advs_list.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/mdata_list.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/config_save.htm",
@@ -209,9 +245,7 @@
 		"/E/phpnow/htdocs/lb/index.php",
 		"/E/phpnow/htdocs/lb/html/js/zh_1.js",
 		"/E/phpnow/htdocs/lb/application/helpers/common_helper.php.dump",
-		"/E/phpnow/htdocs/lb/application/helpers/common_helper.php",
 		"/E/phpnow/htdocs/lb/application/libraries/cor_db.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/system_manage.php",
 		"/E/phpnow/htdocs/lb/application/libraries/cor_cache.php",
 		"/E/phpnow/htdocs/lb/application/libraries/cor_page.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/friendlink_add.htm",
@@ -258,8 +292,6 @@
 		"/E/phpnow/htdocs/lb/application/resources/pinyin.dat.dump",
 		"/E/phpnow/htdocs/lb/application/controllers/backend/admins.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/mdata_add.htm",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/mdata.php",
-		"/E/phpnow/htdocs/lb/application/models/mdata_model.php",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/mdata_view.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jquery.Slider.js.dump",
 		"/E/phpnow/htdocs/lb/tools/jQuery弹出层有9种效果/styles/core.css.dump",
@@ -271,31 +303,7 @@
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/css/backend_style.css",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jqFancyTransitions.1.8.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/jqFancyTransitions.1.8.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/css/item/templates.css",
-		"/D/tools/k开发成果/develop/javascript/dialog2/dialog/dialog_box.html",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/contact.htm",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/engage.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/engage_add.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jscript.js",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/jscript.js",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/about_news22.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/jquery-1.10.2.min.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/invoke.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/core.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jquery-ui-1.10.2.custom.min.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/admin.public.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/Clock_en.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/Clock_zh.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jquery-ui-1.10.3.custom.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jquery-ui-1.10.3.custom.min.js",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jquery-1.4.2.min.js",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/artdialog/skins/default.css",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/artdialog/skins/default.css",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/vote_list.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/vote_list_single.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/vote_view.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/item/templates.js",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/templates.php"
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/css/item/templates.css"
 	],
 	"find":
 	{
@@ -303,7 +311,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
 			"E:\\phpnow\\htdocs\\lb\\application",
@@ -383,7 +391,62 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"art_dialog",
+			"$this->init_form->array_re_index",
+			"array_re_index",
+			"myalert",
+			"load_thickbox",
+			"window_close",
+			"thickbox_close",
+			"'backend'",
+			"setPath",
+			"$this->",
+			"getRootUrl",
+			"_close",
+			"$primary",
+			"action_list",
+			"count",
+			"drop",
+			"count",
+			"drop",
+			"f_ext",
+			"templates",
+			"fetch_primary",
+			"r_primary",
+			"r{_primary",
+			"$this->m",
+			"r_primary",
+			"$fid",
+			"r_primary",
+			"r_name",
+			"detail_exclude_primary",
+			"details($module_id,array('r_primary'=>'0'))",
+			"r_primary",
+			"detail_exclude_primary($dt",
+			"$this->m->details($dt_mid,array('r_primary'=>'0'))",
+			"detail_exclude_primary",
+			"details($module_id,array('r_primary'=>'0'))",
+			"details($module_id,array('r_primary'=>'0'",
+			"r_primary",
+			"fields_r",
+			"r_primary",
+			"primary_id",
+			"r_primary",
+			"$this->m->details",
+			"primary",
+			"'r_primary'=>'0'",
+			"r_primary",
+			"f_media",
+			"fetch_primary",
+			"'r_primary'=>'1'",
+			"r_primary",
+			"primary",
+			"f_media",
+			"f_type",
+			"fields_types",
+			"error",
+			"get",
+			"return $this->_field",
+			"_field_data",
 			"save_url",
 			"save_path",
 			"$uid",
@@ -455,62 +518,7 @@
 			"SlowStore",
 			"InMemoryKeyValueStore",
 			"KeyValueStore",
-			"AbstractKeyValueStore",
-			"InMemoryKeyValueStore",
-			"AbstractKeyValueStore",
-			"Variable",
-			"add_options_page('Delete-Revision', 'Delete-Revision', 'manage_options', basename(__FILE__), 'my_options_delete_revision');",
-			"url_root +",
-			"';\n",
-			"save",
-			"backend_redirect",
-			"text/html",
-			"header",
-			"header(\"type",
-			"backend_redire",
-			"#",
-			"suffi",
-			"index",
-			"top",
-			"src='images",
-			"720",
-			"<form",
-			"name=\"img\"",
-			"img",
-			"images/",
-			"stafrm",
-			"结果",
-			"_POST",
-			"images/",
-			"debug",
-			"develop",
-			"_display",
-			"backend_view",
-			"exit",
-			"vsprintf",
-			"func_vsprintf",
-			"$array[value]",
-			"$array[name]",
-			"func_vsprintf",
-			"mainp",
-			"main[",
-			"main",
-			"$v",
-			"product_name_rules",
-			"name",
-			"$('#'+w_id)",
-			"title",
-			"focus",
-			"links",
-			".height",
-			"src",
-			"img",
-			"background-image",
-			"background",
-			"background-size",
-			"background",
-			"background-size",
-			"'contain'"
+			"AbstractKeyValueStore"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -518,6 +526,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"array_re_index",
 			".on",
 			"$this->Common_model->editor",
 			"",
@@ -584,12 +593,72 @@
 		"selected_items":
 		[
 			[
+				"init_page",
+				"application/libraries/init_page.php"
+			],
+			[
 				"core.js",
 				"application/templates/backend/js/core.js"
 			],
 			[
-				"mdata_list",
-				"application/templates/backend/ajax_mdata_list.htm"
+				"mdata_model",
+				"application/models/mdata_model.php"
+			],
+			[
+				"mdata.php",
+				"application/controllers/backend/mdata.php"
+			],
+			[
+				"module_model",
+				"application/models/modules_model.php"
+			],
+			[
+				"modules.php",
+				"application/controllers/backend/modules.php"
+			],
+			[
+				"modules_add",
+				"application/templates/backend/modules_add.htm"
+			],
+			[
+				"modulemod",
+				"application/models/modules_model.php"
+			],
+			[
+				"module_mode",
+				"application/models/modules_model.php"
+			],
+			[
+				"module_add.ht",
+				"application/templates/backend/modules_add.htm"
+			],
+			[
+				"fields_add",
+				"application/templates/backend/fields_add.htm"
+			],
+			[
+				"fields_ext",
+				"cache/en/fields_ext.php"
+			],
+			[
+				"fields.php",
+				"application/controllers/backend/fields.php"
+			],
+			[
+				"fields_list",
+				"application/templates/backend/fields_list.htm"
+			],
+			[
+				"tpl.php",
+				"application/libraries/tpl.php"
+			],
+			[
+				"fields_add.htm",
+				"application/templates/backend/fields_add.htm"
+			],
+			[
+				"fields_ad",
+				"application/templates/backend/fields_add.htm"
 			],
 			[
 				"cor_form",
@@ -614,10 +683,6 @@
 			[
 				"messge_list",
 				"application/templates/backend/corcms/message_list.htm"
-			],
-			[
-				"tpl.php",
-				"application/libraries/tpl.php"
 			],
 			[
 				"cor_pae",
@@ -672,16 +737,8 @@
 				"application/templates/backend/corcms/mdata_add.htm"
 			],
 			[
-				"mdata.php",
-				"application/controllers/backend/mdata.php"
-			],
-			[
 				"mdata_add",
 				"application/templates/backend/corcms/mdata_add.htm"
-			],
-			[
-				"mdata_model",
-				"application/models/mdata_model.php"
 			],
 			[
 				"product.php",
@@ -836,10 +893,6 @@
 				"application/templates/backend/corcms/templates_list.htm"
 			],
 			[
-				"fields_list",
-				"application/templates/backend/corcms/fields_list.htm"
-			],
-			[
 				"test.php",
 				"tools/test.php"
 			],
@@ -862,10 +915,6 @@
 			[
 				"foot.htm",
 				"application/templates/backend/corcms/foot.htm"
-			],
-			[
-				"fields.php",
-				"application/controllers/backend/fields.php"
 			],
 			[
 				"vote_list.htm",
@@ -894,6 +943,10 @@
 			[
 				"module_mod",
 				"application/models/modules_model.php"
+			],
+			[
+				"mdata_list",
+				"application/templates/backend/corcms/mdata_list.htm"
 			],
 			[
 				"common.php",
@@ -996,10 +1049,6 @@
 				"application/templates/backend/corcms/order_view.htm"
 			],
 			[
-				"module_mode",
-				"application/models/modules_model.php"
-			],
-			[
 				"logs_mod",
 				"application/models/logs_model.php"
 			],
@@ -1054,46 +1103,6 @@
 			[
 				"comon_mod",
 				"application/models/common_model.php"
-			],
-			[
-				"common_md",
-				"application/models/common_model.php"
-			],
-			[
-				"about.htm",
-				"application/templates/front/corcms/zh/about.htm"
-			],
-			[
-				"about.php",
-				"application/controllers/front/about.php"
-			],
-			[
-				"dynamic_view.htm",
-				"application/templates/front/blue/zh/dynamic_view.htm"
-			],
-			[
-				"template_vie",
-				"application/templates/backend/corcms/templates_view.htm"
-			],
-			[
-				"templates_add",
-				"application/templates/backend/corcms/templates_add.htm"
-			],
-			[
-				"backend_st",
-				"application/templates/backend/corcms/css/backend_style.css"
-			],
-			[
-				"templ",
-				"ckeditor/plugins/templates/dialogs/templates.css"
-			],
-			[
-				"myurl",
-				"application/helpers/MY_url_helper.php"
-			],
-			[
-				"cor_page.",
-				"application/libraries/cor_page.php"
 			]
 		],
 		"width": 0.0

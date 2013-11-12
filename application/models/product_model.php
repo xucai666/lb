@@ -165,7 +165,7 @@ class Product_model extends CI_Model{
 				
 		$sql  = "select * from ".$this->init_db->table("products")." order by pro_id desc";
 		$list = $this->db->query($sql)->result_array();
-		$list = $this->init_form->array_re_index($list,'pro_id','pro_title');
+		$list = array_re_index($list,'pro_id','pro_title');
 		return $list;	
 	
 	}

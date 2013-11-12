@@ -232,8 +232,8 @@ class Member extends CI_Controller {
 	 	$this->db->where('member',$this->init_page->my_encrypt(get_cookie('member'),'DECODE'));
 	 	$this->db->order_by('order_id','desc');
 	 	$data = $this->init_db->fetch_all();
-	 	$ids  = $this->init_form->array_re_index($data['list'],'order_id','order_id');
-	 	$stats = $this->init_form->array_re_index($this->db->select('sum(1) as p_stat,sum(p_qty*p_price ) as sub,order_id',false)->from('order_detail')->group_by('order_id')->get()->result_array(),'order_id');
+	 	$ids  = array_re_index($data['list'],'order_id','order_id');
+	 	$stats = array_re_index($this->db->select('sum(1) as p_stat,sum(p_qty*p_price ) as sub,order_id',false)->from('order_detail')->group_by('order_id')->get()->result_array(),'order_id');
 	 	$data = array_merge($data,array('stats'=>$stats,'status'=>$this->init_cache->cache_fetch('order_status')));	
 	 	$this->init_page->load_front_view('member_order',$data);
 	 }

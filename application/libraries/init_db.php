@@ -128,13 +128,13 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  	function detail_left_delete($info,$save_config){ 
  		$CI = &get_instance();
  		//表单提交过来的detail_id 
- 		$key_form = $CI->init_form->array_re_index($info['detail'],$save_config['detail']['primary_key'],$save_config['detail']['primary_key']);
+ 		$key_form = array_re_index($info['detail'],$save_config['detail']['primary_key'],$save_config['detail']['primary_key']);
  		//数据库中的detail_id 	 		
  		$CI->db->select($save_config['detail']['primary_key']);
  		$CI->db->from($save_config['detail']['table_name']);
  		$CI->db->where($save_config['main']['primary_key'],$info['main'][$save_config['main']['primary_key']]);
  		$key_db_temp = $CI->db->get()->result_array();
- 		$key_db = $CI->init_form->array_re_index($key_db_temp,$save_config['detail']['primary_key'],$save_config['detail']['primary_key']); 
+ 		$key_db = array_re_index($key_db_temp,$save_config['detail']['primary_key'],$save_config['detail']['primary_key']); 
  		$diff_key = array_diff($key_db,$key_form);	 
  		if(!empty($diff_key)){
  			$CI->db->where_in($save_config['detail']['primary_key'],$diff_key);
@@ -400,7 +400,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  		if($where) $CI->db->where($where);
  		$ls = $CI->db->get()->result_array();
  		if($key){
- 			$ls = $CI->init_form->array_re_index($ls,$key);
+ 			$ls = array_re_index($ls,$key);
  		}
  		return $ls;
  	}

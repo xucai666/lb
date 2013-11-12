@@ -62,7 +62,6 @@
 						<th><!--{'modules_input_field_input_value'|lang}--></th>
 						<th><!--{'modules_input_field_ext_prop'|lang}--></th>
 						<th><!--{'modules_input_field_output_value'|lang}--></th>
-						<th><!--{'modules_input_field_primary'|lang}--></th>
 						<th><!--{'modules_input_field_query_able'|lang}--></th>
 						<th><!--{'modules_input_field_valid'|lang}--></th>
 						<th><!--{'modules_input_field_desc'|lang}--></th>					
@@ -105,12 +104,7 @@
 						<input type="text" size="5" name="detail[r_output][<!--{$k}-->]" value="<!--{$v.r_output|default:""|escape:'html'}-->">
 						
 					</td>
-					<td>
-						<input type="checkbox" class="primary" <!--{if $v.r_primary }-->checked<!--{/if}-->   onclick="$(this).next().val($(this).prop('checked')==true?1:0);$('.primary').not(this).prop('checked',false).next().val(0);$('input.r_valid').not(this).show();$(this).parents('tr:first').find('.r_valid').css('display',$(this).prop('checked')?'none':'block');">	
-						<input type="hidden" name="detail[r_primary][<!--{$k}-->]"  value="<!--{$v.r_primary}-->">
-
-						
-					</td>
+					
 					<td>
 						
 						<select name="detail[r_queryable][<!--{$k}-->]">
@@ -119,7 +113,7 @@
 					</td>
 					<td>
 
-					<input type="text" class="r_valid" size="5" name="detail[r_valid][<!--{$k}-->]" value="<!--{$v.r_valid}-->" style="display:<!--{if $v.r_primary }-->none<!--{/if}-->">
+					<input type="text" class="r_valid" size="5" name="detail[r_valid][<!--{$k}-->]" value="<!--{$v.r_valid}-->" >
 						
 					</td>
 					<td><input type="text" name="detail[r_desc][<!--{$k}-->]" value="<!--{$v.r_desc}-->">

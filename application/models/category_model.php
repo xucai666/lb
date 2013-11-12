@@ -66,7 +66,7 @@
 	//调用分类
 	public function fetch_category($sn=null){
 		$category  = $this->_db_category($sn);		
-		return $this->init_form->array_re_index($category,'c_sn','c_title');
+		return array_re_index($category,'c_sn','c_title');
 		
 	}
 	
@@ -136,7 +136,7 @@
  			$this->db->order_by('c_sn','asc')
  			->order_by('c_order','desc');
  			$rs = $this->db->get()->result_array();
- 			$rs_parent = $this->init_form->array_re_index($rs,'c_parent','c_id');
+ 			$rs_parent = array_re_index($rs,'c_parent','c_id');
 			foreach($rs as &$v){
 				$v['more'] = $rs_parent[$v['c_sn']]?1:0;
 			}

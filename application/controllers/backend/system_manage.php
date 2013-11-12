@@ -233,13 +233,13 @@ class System_manage extends CI_Controller{
  	 	$this->init_cache->cache_delete('admin_rights_config');
  	 	
  	 	//create  tree cache
- 	 	$treeIds = $this->init_form->array_re_index($this->db->select('treeId,name',false)->from('tree_node')->where('pid',0)->get()->result_array(),'treeId','name');
+ 	 	$treeIds = array_re_index($this->db->select('treeId,name',false)->from('tree_node')->where('pid',0)->get()->result_array(),'treeId','name');
  	 	$this->init_cache->cache_create($treeIds,'treeIds');
 		//create  channel cache
- 	 	$channel = $this->init_form->array_re_index($this->db->select('*',false)->from('module_channel')->get()->result_array(),'c_id');
+ 	 	$channel = array_re_index($this->db->select('*',false)->from('module_channel')->get()->result_array(),'c_id');
  	 	$this->init_cache->cache_create($channel,'channel');	//create  channel cache
  	 	//channel type
- 	 	$channel_types = $this->init_form->array_re_index($this->db->select('code,treeId,name',false)->from('tree_node')->where(array('treeId'=>3,'pid >'=>0))->get()->result_array(),'code','name');
+ 	 	$channel_types = array_re_index($this->db->select('code,treeId,name',false)->from('tree_node')->where(array('treeId'=>3,'pid >'=>0))->get()->result_array(),'code','name');
  	 
  	 	$this->init_cache->cache_create($channel_types,'channel_types');
 

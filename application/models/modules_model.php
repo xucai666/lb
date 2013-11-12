@@ -97,6 +97,32 @@ class Modules_model extends CI_Model{
 		return array_pad($dt,1,array());
 	}
 
+
+   function detail_exclude_primary($m_id){
+   		if(!$m_id) return false;
+		$primary_id = $this->fetch_primary($m_id,'f_id');		
+		$this->db->select('*',false)->from('module_relations')->where('m_id',$m_id)->where('f_id !=',$primary_id)->order_by('r_sort','asc');
+		$dt = $this->db->get()->result_array();		
+		return array_pad($dt,1,array());
+	}
+
+	/**
+	 * [fetch_field_ext description]
+	 * @param  [type] $type 2--primary,1-media
+	 * @return [type]       [description]
+	 */
+	function fetch_field_ext(){
+		$r = $this->db->select('f_id,f_ext',false)->from('module_fields')->get()->result_array();
+		return array_re_index($r,'f_id','f_ext');
+	}
+
+	function is_primary($f_id){
+		if(!$f_id) return false;
+		$r = $this->fetch_field_ext();		
+		return $r[$f_id]==2;
+	}
+
+
 	function main($m_id,$key=null){
 	
 		$ds = $this->db->select('*',false)->from('module')->where('m_id',$m_id)->get()->first_row('array');
@@ -147,7 +173,8 @@ class Modules_model extends CI_Model{
 
 
 	function fetch_primary($m_id,$key){
-		$dt =  $this->db->select('*',false)->from('module_relations')->where('r_primary',1)->where('m_id',$m_id)->get()->first_row('array');
+		$this->db->select('a.*',false)->from('module_relations as a')->join('module_fields as b','a.f_id=b.f_id','left')->where('b.f_ext',2)->where('a.m_id',$m_id);
+		$dt = $this->db->get()->first_row('array');
 		return $key?$dt[$key]:$dt;
 	}
 
@@ -180,11 +207,11 @@ class Modules_model extends CI_Model{
 					if(in_array($v[r_name], $fields)){
 						//modify first
 						
-						if($v['r_primary'] && ($primary!=$v[r_name])){
+						if($this->is_primary($v['f_id']) && ($primary!=$v[r_name])){
 							if($primary) $changes[] = " DROP PRIMARY KEY ";
 							$ext_pri = 'AUTO_INCREMENT PRIMARY KEY';
 							$changes[] =" CHANGE   `$v[r_name]` `$v[r_name]`  ".strtoupper($fields_types[$v[f_id]]).$ext_len."  NOT NULL ".$ext_pri." COMMENT  '".$v[r_desc]."' ";
-						}elseif($v['r_primary']){
+						}elseif($this->is_primary($v['f_id'])){
 							
 							continue;
 						}else{
@@ -196,7 +223,7 @@ class Modules_model extends CI_Model{
 					}else{
 						
 						//add new
-						if($v['r_primary']){
+						if($this->is_primary($v['f_id'])){
 							if($primary) $changes[] = ' DROP PRIMARY KEY  ';
 							$ext_pri = 'AUTO_INCREMENT PRIMARY KEY';
 						}else{
@@ -232,7 +259,7 @@ class Modules_model extends CI_Model{
 				$reval .= "CREATE TABLE if not exists   `".$tb."` (";
 				$columns = array();
 				foreach($info[detail] as $v):
-					if($v['r_primary']){
+					if($this->is_primary($v['f_id'])){
 						$ext_pri = 'AUTO_INCREMENT PRIMARY KEY';
 					}else{
 						$ext_pri ='';
@@ -271,7 +298,7 @@ class Modules_model extends CI_Model{
 		$t_name = $info['main']['m_name'];
 		$t_db_name = $info['main']['m_tb'];
 		$t_mid = $info['main']['m_id'];
-		$t_db_fields = array_keys($this->init_form->array_re_index($info['detail'],'r_name','r_name'));
+		$t_db_fields = array_keys(array_re_index($info['detail'],'r_name','r_name'));
 		$t = ($this->db->select('t_id',false)->from('templates')->where('t_type',4)->where('t_mid',$t_mid)->get()->first_row('array'));
 		$t_id = $t['t_id'];
 		$data = array(
@@ -298,7 +325,7 @@ class Modules_model extends CI_Model{
 		$t_db_name = $info['main']['m_tb'];
 		$t_mid = $info['main']['m_id'];
 		//子模块不创建菜单
-		$m_sub = $this->init_form->array_re_index($this->all(array("m_sub > "=>0)),'m_sub','m_sub');
+		$m_sub = array_re_index($this->all(array("m_sub > "=>0)),'m_sub','m_sub');
 		if(in_array($t_mid,$m_sub)){
 			$this->db->where('r_type',1);
 			$this->db->where('r_title',$t_name);

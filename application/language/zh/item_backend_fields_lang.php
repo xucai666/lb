@@ -14,5 +14,6 @@
  $lang['fields_field_name']													= '字段名称';
  $lang['field_html']													= 'Html调用代码';
  $lang['field_media']													= '多媒体';
+ $lang['field_ext']													= '扩展属性';
 
 ?>

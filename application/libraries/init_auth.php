@@ -348,7 +348,7 @@
  			$CI->db->select('*')->from('system_rights')->order_by('r_code','asc')->order_by('r_order','asc');
 
 	   		$data = $CI->init_db->fetch_all(250);
-	   		$ls = $CI->init_form->array_re_index($data['list'],'r_id');
+	   		$ls = array_re_index($data['list'],'r_id');
 	   		$data['list'] = $ls;
 	   		$CI->init_cache->cache_create($data,'admin_rights_config');
  		}

@@ -8,5 +8,6 @@
   'fields_field_name' => 'Field name',
   'field_html' => 'Called Html code',
   'field_media' => 'Multimedia',
+  'field_ext' => 'Fields Extenion',
 );
 ?>

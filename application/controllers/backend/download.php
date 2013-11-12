@@ -176,10 +176,10 @@ class Download extends CI_Controller{
 			'product_select'=>$this->input->get('pro_id'),
 		)
 		);	
-		$pro_all = implode(',',(array)$this->init_form->array_re_index($data['list'],'pro_id','pro_id'));
+		$pro_all = implode(',',(array)array_re_index($data['list'],'pro_id','pro_id'));
 		if($pro_all){
 			$pro_list = $this->db->query("select pro_title,pro_id from ".$this->init_db->table('products')." where pro_id in(".$pro_all.")")->result_array();
-			$pro_name_all = $this->init_form->array_re_index($pro_list,'pro_id','pro_title');
+			$pro_name_all = array_re_index($pro_list,'pro_id','pro_title');
 			foreach($data['list'] as &$v) $v['pro_name'] = $pro_name_all[$v['pro_id']];
 		}
 		$this->init_page->load_backend_view(strtolower($this->act)."_list",$data);

@@ -49,26 +49,31 @@ class Modules extends CI_Controller{
 		$post_main = $this->input->post('main');
 		$data = array('main'=>$post_main,'detail'=>$this->init_form->post_to_set($post_detail),'query_types'=>$this->init_cache->cache_fetch('query_types'));
 		try{
-			if(array_search(1,$post_detail['r_primary'])===false){
-				throw new Exception(lang("modules_valid_primary"));
-				
-			}
+			
 			$this->form_validation->set_rules($this->im->valid_config($data));
+
 			if($this->form_validation->run()){
 				$flag = $this->db->select("*")->from('module')->where('m_tb',$data['main']['m_tb'])->where_not_in('m_id',$data['main']['m_id'])->count_all_results();
 				if($flag) throw new Exception(lang('modules_valid_table'));
+
 				$rs = $this->init_db->save($data,$this->im->save_config());
+
 				//create table
 				$this->im->create_table($data);
 				//create sub module column
+				
 				$this->im->create_sub($rs);
+
 				//create tag
 				$this->im->create_tag($rs);
+
+
 				$this->im->create_menu($rs);
 
 				//insert log
 				$log_cf = $this->im->save_config();
 				$this->load->model('Logs_model');	
+
 		 		$this->Logs_model->log_insert(array(
 		 			'log_table'=>$log_cf['main']['table_name'],
 		 			'log_table_id'=>$rs['main'][$log_cf['main']['primary_key']],
@@ -107,8 +112,10 @@ class Modules extends CI_Controller{
             $tn = 0;
             $ts = $this->db->select('m_tb,m_name',false)->from('module')->where_in('m_id',$m_id)->get()->result_array();
            	foreach($ts as $t){
-           		$tn += $this->db->from($t['m_tb'])->count_all_results();
-           		$m_names[] = $t['m_name'];
+           		if($this->db->table_exists($t['m_tb'])){
+	           		$tn += $this->db->from($t['m_tb'])->count_all_results();
+	           		$m_names[] = $t['m_name'];
+           		}
            	}
 
            	if($tn>0){

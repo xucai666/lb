@@ -28,8 +28,7 @@
 	//留言列表
 	function action_list(){	
 		
-		//css	
-		$this->init_page->fetch_css(array('backend_message'));
+
 		
 		//js
 		$this->db->select("a.*",false)->from('message as  a ')	

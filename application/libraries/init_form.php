@@ -69,40 +69,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
 		return $strval;
 	}
 	
-	/**
-	 * 数组重组
-	 */
-	function array_re_index($array,$key,$field_value=null){
-		
-		if(empty($array)) return array();
-		$new_array = array();
-		foreach($array as $k=>$v){
-			if(empty($v[$key])) continue;
-			if(is_array($field_value)){
-				$temp_v = array();
-				foreach($field_value as $v1){					
-					if(is_array($v1)){
-						//重新命名各数组单元					
-						$new_array[$v[$key]][key($v1)] = $v[current($v1)];
-					}else{
-						//提取指定的单元
-						$new_array[$v[$key]][$v1] = $v[$v1];
-					}				
-				}				
-				
-			}elseif($field_value==null){
-				$new_array[$v[$key]]  = $v;
-			}else{
-				$new_array[$v[$key]]  = $v[$field_value];
-				
-			}
-			
-		}
-		
-		return $new_array;
-		
-		
-	}
+	
 	
 	/**
 	 * 取表单明细最大索引

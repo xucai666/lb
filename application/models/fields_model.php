@@ -42,7 +42,7 @@ class Fields_model extends CI_Model{
 
 	//options
 	function fetch_select(){
-		return $this->init_form->array_re_index($this->db->select("*",false)->from('module_fields')->get()->result_array(),'f_id','f_name');
+		return array_re_index($this->db->select("*",false)->from('module_fields')->get()->result_array(),'f_id','f_name');
 	}
 
 	//detail

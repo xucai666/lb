@@ -145,7 +145,7 @@ class Product extends CI_Controller {
 
 		if($sort){
 
-			$p_all = $this->init_form->array_re_index($this->db->query("select group_concat(p_pic) as p_pic,p_id from ".$this->db->dbprefix."module_product where p_id in(".implode(',',$sort).") group by p_id")->result_array(),'p_id','p_pic');
+			$p_all = array_re_index($this->db->query("select group_concat(p_pic) as p_pic,p_id from ".$this->db->dbprefix."module_product where p_id in(".implode(',',$sort).") group by p_id")->result_array(),'p_id','p_pic');
 			
 
 			foreach($p_all as $k=>$v1){
@@ -234,7 +234,7 @@ class Product extends CI_Controller {
 			
 		}
 		if($sort){
-			$p_all = $this->init_form->array_re_index($this->db->query("select SUBSTRING_INDEX(p_pic,',',1) as p_pic,p_id from ".$this->db->dbprefix."module_product where p_id in(".implode(',',$sort).")")->result_array(),'p_id','p_pic');
+			$p_all = array_re_index($this->db->query("select SUBSTRING_INDEX(p_pic,',',1) as p_pic,p_id from ".$this->db->dbprefix."module_product where p_id in(".implode(',',$sort).")")->result_array(),'p_id','p_pic');
 			foreach($p_all as $k=>$v1){
 				$imgs_re[$k] = $this->Common_model->fetch_images($v1,true);
 			}
@@ -313,7 +313,7 @@ class Product extends CI_Controller {
 					$sort[$v['id']] = $v['id'];
 				}
 				if($sort){
-						$p_all = $this->init_form->array_re_index($this->db->query("select SUBSTRING_INDEX(p_pic,',',1) as p_pic,p_id from ".$this->db->dbprefix."module_product where p_id in(".implode(',',$sort).")")->result_array(),'p_id','p_pic');
+						$p_all = array_re_index($this->db->query("select SUBSTRING_INDEX(p_pic,',',1) as p_pic,p_id from ".$this->db->dbprefix."module_product where p_id in(".implode(',',$sort).")")->result_array(),'p_id','p_pic');
 						foreach($p_all as $k=>$v1){
 							$imgs_re[$k] = $this->Common_model->fetch_images($v1,true);
 						}

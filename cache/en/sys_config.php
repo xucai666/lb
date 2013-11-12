@@ -1,9 +1,9 @@
 <?php return array (
   'optimize' => 
   array (
-    'title' => 'Welcome to visit this site',
-    'meta' => 'Welcome to visit this site',
-    'description' => 'Codeigniter CMS',
+    'title' => 'Pristine',
+    'meta' => 'Pristine',
+    'description' => 'Pristine',
   ),
   'smtp' => false,
   'contact' => 
@@ -18,7 +18,7 @@
   ),
   'develop' => 
   array (
-    'template' => 'black',
+    'template' => 'corcms',
     'time_page_redirect' => '2000',
   ),
 );?>

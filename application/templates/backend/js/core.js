@@ -523,7 +523,6 @@ function ImgError(source){
 
 
 function art_dialog_open(url,title){
-	//str =window.showModalDialog(url,'',"dialogWidth=600px;dialogHeight=400px");
 	var d_title =title?title:'对话框';
 	top.art.dialog.open(url,{
 	button: [{
@@ -574,14 +573,15 @@ function art_dialog_close(msg,callback){
 	
 	
 function frmright_reload(){
+	var win_obj = window.ifr_main.frames['main'][0];
 	$.ajax({
-		url: site_url+"/backend/mdata/action_ajax_list"+window.ifr_main.main.location.search,
+		url: site_url+"/backend/mdata/action_ajax_list"+win_obj.location.search,
 		type: 'GET',
 		dataType: 'html',
 		data: {param1: 'value1'}
 	})
 	.done(function(msg) {
-		window.ifr_main.main.$('#ajax_content').html(msg);
+		$(win_obj).find('#ajax_content').html(msg);
 	})
 	
 	

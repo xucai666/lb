@@ -49,18 +49,17 @@ class Init_page{
 				
 		
 		$this->front_theme = $sys_config['template'];
-		$this->setPath(trim($CI->router->directory,'/'));
+		
 		
 		
 	}
 
 
-	function setPath($path){
-		$this->controller_path = $path;
-	}
+	
 
 	function getPath(){
-		return $this->controller_path;
+		$CI = & get_instance();	
+		return trim($CI->router->directory,'/');
 	}
 	
 	/**

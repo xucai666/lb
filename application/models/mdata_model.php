@@ -43,7 +43,7 @@ class Mdata_model extends CI_Model{
 	function valid_config($info){
 		$module_id = $this->get_mid();
 		$config = array();
-		$fields = $this->m->details($module_id,array('r_primary'=>'0'));
+		$fields = $this->m->detail_exclude_primary($module_id);
 		foreach($fields as $v):
 				if(empty($v[r_valid])) continue;
 				array_push($config,array(
@@ -56,7 +56,7 @@ class Mdata_model extends CI_Model{
 
 
 		$dt_mid = $this->m->main($module_id,'m_sub');
-		$dt_fields = $this->m->details($dt_mid,array('r_primary'=>'0'));	
+		$dt_fields = $this->m->detail_exclude_primary($dt_mid);	
 		if($dt_mid){
 			foreach($info['detail'] as $k=>$v){
 				foreach($dt_fields as $v):
@@ -106,10 +106,12 @@ class Mdata_model extends CI_Model{
 		
 		//fields html
 		$fields_html = $this->m->fetch_f_html();
-
+		foreach($fields_r as $k=>$v){
+			if($this->m->is_primary($v['f_id'])) $primary = $v['r_name'];
+		}
 
 		foreach($fields_r as $k=>$v){
-		if($v['r_primary']) $primary = $v['r_name'];
+		
 			if($v['r_queryable']){
 
 
@@ -127,9 +129,11 @@ class Mdata_model extends CI_Model{
 			//数据列表页面，隐藏未配置输出格式的字段
 			if(empty($v['r_output'])) unset($fields_r[$k]);
 		}
-		$fields_out = $this->init_form->array_re_index($fields_r,'r_name','r_output');
-		$this->db->select(implode(',',array_keys($fields_out)),false)->from($tb);
+
+		$fields_out = array_re_index($fields_r,'r_name','r_output');
+		$this->db->select(implode(',',array_keys($fields_out)),false)->from($tb);		
 		if($query['mdata_sort']) $this->db->order_by($query['mdata_sort'],$query['mdata_sort_direction']);
+		
 		$this->db->order_by($primary,'desc');
 		$ls = $this->init_db->fetch_all($size,$ajax);
 
@@ -192,7 +196,7 @@ class Mdata_model extends CI_Model{
 	 */
 	function select_list(){
 		$list = $this->m->all();
-		$m_sub = $this->init_form->array_re_index($this->m->all(array("m_sub > "=>0)),'m_sub','m_sub');
+		$m_sub = array_re_index($this->m->all(array("m_sub > "=>0)),'m_sub','m_sub');
 		
 		foreach($list as $k=>&$v){
 			if($v[m_lock] || in_array($v['m_id'], $m_sub)){

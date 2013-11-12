@@ -25,19 +25,21 @@ class Fields extends CI_Controller{
 
 	function action_add(){
 		$fields_types = $this->init_cache->cache_fetch('fields_types');
+		$fields_ext = $this->init_cache->cache_fetch('fields_ext');
 		$f_id = $this->uri->segment(4);
 		$main = array();
 		if($f_id){
 			$main = $this->im->detail($f_id);
 		}
 		
-		$data = array('main'=>$main,'fields_types'=>$fields_types);
+		$data = array('main'=>$main,'fields_types'=>$fields_types,'fields_ext'=>$fields_ext);
 		$this->init_page->load_backend_view('fields_add',$data);
 	}
 
 	function action_save(){
 		$fields_types = $this->init_cache->cache_fetch('fields_types');
-		$data = array('main'=>$this->input->post('main'),'fields_types'=>$fields_types);
+		$fields_ext= $this->init_cache->cache_fetch('fields_ext');
+		$data = array('main'=>$this->input->post('main'),'fields_types'=>$fields_types,'fields_ext'=>$fields_ext);
 		try{
 			$this->form_validation->set_rules($this->im->valid_config());
 			if($this->form_validation->run()){
@@ -60,10 +62,6 @@ class Fields extends CI_Controller{
 
 				$this->init_page->load_backend_view('fields_add',$data);
 			}
-
-			
-
-
 		}catch(EXCEPTION $e){
 			$this->init_page->backend_redirect($_SREVER['HTTP_REFERER'],$e->getMessage());
 		}
@@ -98,14 +96,16 @@ class Fields extends CI_Controller{
 
 	function action_list(){
 		$fields_types = $this->init_cache->cache_fetch('fields_types');
+		$fields_ext = $this->init_cache->cache_fetch('fields_ext');
 		$f_type = $this->input->get('f_type');
-		$f_media = $this->input->get('f_media');
+		$f_ext = $this->input->get('f_ext');
 		$this->db->select('*',false)->from('module_fields')->like('f_name',$this->input->get('f_name'));
 		if($f_type) $this->db->where('f_type',$f_type);
-		if($f_media) $this->db->where('f_media',$f_media-1);
+		if($f_ext) $this->db->where('f_ext',$f_ext);
 		$this->db->order_by('f_id','desc');
 		$data = $this->init_db->fetch_all(15);
 		$data['fields_types'] = $fields_types;
+		$data['fields_ext'] = $fields_ext;
 		$data['medias'] = array(2=>'是',1=>'否');
 		$this->init_page->load_backend_view('fields_list',$data);
 	}

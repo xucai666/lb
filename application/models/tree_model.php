@@ -44,7 +44,7 @@ class Tree_model extends CI_Model{
 	 */
 	function fetch_select($treeId=null,$v_field='name'){
 		$treeId = $treeId?$treeId:$this->get_root();
-		return $this->init_form->array_re_index($this->db->select("id,name as init_name",false)->select('level,CONCAT(REPEAT("│ ",level),"├─",name) as name',false)->from('tree_node')->where('treeId',$treeId)->order_by('leftId','asc')->get()->result_array(),'id',$v_field);
+		return array_re_index($this->db->select("id,name as init_name",false)->select('level,CONCAT(REPEAT("│ ",level),"├─",name) as name',false)->from('tree_node')->where('treeId',$treeId)->order_by('leftId','asc')->get()->result_array(),'id',$v_field);
 	}
 
 
@@ -57,7 +57,7 @@ class Tree_model extends CI_Model{
 	 */
 	function fetch_select_query($treeId=null){
 		$treeId = $treeId?$treeId:$this->get_root();
-		$ls =  $this->init_form->array_re_index($this->db->select("id,name as init_name,leftId,rightId",false)->select('LEVEL,CONCAT(REPEAT("│ ",LEVEL),"├─",NAME) as name',false)->from('tree_node')->where('treeId',$treeId)->order_by('leftId','asc')->get()->result_array(),'id');
+		$ls =  array_re_index($this->db->select("id,name as init_name,leftId,rightId",false)->select('LEVEL,CONCAT(REPEAT("│ ",LEVEL),"├─",NAME) as name',false)->from('tree_node')->where('treeId',$treeId)->order_by('leftId','asc')->get()->result_array(),'id');
 		$ls_new = array();
 		foreach($ls as $v){
 			$rs = $this->db->select("id",false)->from('tree_node')->where('treeId',$treeId)->where('leftId <= '.$v[leftId].' and rightId >= '.$v[rightId])->order_by('leftId','asc')->get()->result_array();
@@ -84,7 +84,7 @@ class Tree_model extends CI_Model{
 		$this->load->library('Init_tree');
 		$ds = $this->detail($id);
 		$rs = $this->init_cache->cache_fetch('tree_'.$ds['treeId']);
-		$rs = $this->init_form->array_re_index($rs,'id',array(array('id'=>'id'),array('parentid'=>'pid'),array('name'=>'init_name')));	
+		$rs = array_re_index($rs,'id',array(array('id'=>'id'),array('parentid'=>'pid'),array('name'=>'init_name')));	
 		$this->init_tree->set_tree($rs);		
 		return $this->init_tree->get_pos_ids($id);	
 
@@ -102,17 +102,17 @@ class Tree_model extends CI_Model{
 		$this->load->library('Init_tree');
 		$ds = $this->detail($id);
 		$ls = $this->init_cache->cache_fetch('tree_'.$ds['treeId']);
-		$rs = $this->init_form->array_re_index($ls,'id',array(array('id'=>'id'),array('parentid'=>'pid'),array('name'=>'init_name')));	
+		$rs = array_re_index($ls,'id',array(array('id'=>'id'),array('parentid'=>'pid'),array('name'=>'init_name')));	
 		$this->init_tree->set_tree($rs);	
 		if($norecur && $a = $this->init_tree->get_child($id)){
 			$r =  array_intersect_key($ls,$a);
-			$sort = $this->init_form->array_re_index($r,'id','orderId');
+			$sort = array_re_index($r,'id','orderId');
 			array_multisort($sort,SORT_ASC,$r);
 			return $r;
 		}	
 		if($b = $this->init_tree->get_childs($id)){
 			$r = array_intersect_key($ls,$b);
-			$sort = $this->init_form->array_re_index($r,'id','orderId');
+			$sort = array_re_index($r,'id','orderId');
 			array_multisort($sort,SORT_ASC,$r);
 			return $r;
 		}
@@ -428,7 +428,7 @@ class Tree_model extends CI_Model{
 
 	function cache_create(){
 		$arr =$this->db->select('id,treeId,pid,orderId,code,name as init_name',false)->select('LEVEL,CONCAT(REPEAT("│ ",LEVEL-1),"├─",NAME) as name',false)->from('tree_node')->where('treeId',$this->im->get_root())->like('name',$this->input->get('name'))->order_by('leftId','asc')->get()->result_array();
-		$arr = $this->init_form->array_re_index($arr,'id');	
+		$arr = array_re_index($arr,'id');	
 		$this->init_cache->cache_create($arr,'tree_'.$this->get_root());
 	}
 
