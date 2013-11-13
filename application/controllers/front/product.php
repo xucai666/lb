@@ -40,9 +40,7 @@ class Product extends CI_Controller {
 		$this->breadcrumb->output();
 		$this->load->model('Mdata_model','mm');
 		$this->load->model('Modules_model','m');
-		$meta = $this->mm->fetch_seo_var(65,14);
-		$meta  = $meta ? '-'.$meta:'';
-		$data['seo'] = array('meta'=>$meta);
+		$data['seo'] = array('meta'=>$this->mm->fetch_seo_var(65,14));
 		$this->init_page->load_front_view('product_index',$data);
 		
 	}

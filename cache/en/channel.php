@@ -57,7 +57,7 @@
     'c_type' => '3',
     'c_dir' => 'roducts',
     'c_img_rotator' => 'http://localhost//lb/uploads/2013-11-07/2013110707253653.jpg||http://www.baidu.com,http://localhost//lb/uploads/2013-11-07/2013110707253971.jpg||http://www.baidu.com,http://localhost//lb/uploads/2013-11-07/2013110707264732.jpg||http://www.baidu.com',
-    'c_seo' => 'products',
+    'c_seo' => '-products',
   ),
   15 => 
   array (
