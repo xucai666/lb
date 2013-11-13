@@ -25,11 +25,11 @@
            <!--{foreach from=$list item=item}-->
          <li >
          <div class='img'>      
-          <a href="<!--{site_url($item.lnk)}-->" target="_blank" title="<!--{$item.init_name}-->"> <img src="<!--{$item.img}-->"  onerror="ImgError(this)" onload="resizeImage(this,150,130)"  /></a>
+          <a href="<!--{site_url($item.lnk)}-->" target="_blank" title="<!--{$item.name}-->"> <img src="<!--{$item.img}-->"  onerror="ImgError(this)" onload="resizeImage(this,150,130)"  /></a>
         </div>
 
          <div>
-         <a href="<!--{site_url($item.lnk)}-->" target="_blank" title="<!--{$item.init_name}-->"><!--{msubstr(strip_tags(htmlspecialchars_decode(($item.init_name))),0,10)}--></a>
+         <a href="<!--{site_url($item.lnk)}-->" target="_blank" title="<!--{$item.name}-->"><!--{msubstr(strip_tags(htmlspecialchars_decode(($item.name))),0,10)}--></a>
         <br>
         <span style="color:#ccc"><!--{$item.ctp}-->Products</span>
         </div>

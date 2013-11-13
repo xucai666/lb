@@ -573,7 +573,7 @@ function art_dialog_close(msg,callback){
 	
 	
 function frmright_reload(){
-	var win_obj = window.ifr_main.frames['main'][0];
+	var win_obj = window.ifr_main.main;	
 	$.ajax({
 		url: site_url+"/backend/mdata/action_ajax_list"+win_obj.location.search,
 		type: 'GET',
@@ -581,7 +581,7 @@ function frmright_reload(){
 		data: {param1: 'value1'}
 	})
 	.done(function(msg) {
-		$(win_obj).find('#ajax_content').html(msg);
+		win_obj.$('#ajax_content').html(msg);
 	})
 	
 	

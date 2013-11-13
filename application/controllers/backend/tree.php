@@ -89,7 +89,7 @@ class Tree extends CI_Controller{
 
 	function action_add(){
 		
-		$pids = $this->im->fetch_select();
+		$pids = $this->im->fetch_select($this->im->get_root(),'level_name');
 		$id = $this->uri->segment(4);
 		$main = array();
 		if($id){
@@ -122,7 +122,7 @@ class Tree extends CI_Controller{
 				//save ok
 				$this->init_page->backend_redirect('tree/action_list','保存成功');
 			}else{
-				$data = array_merge(array('pids'=>$this->im->fetch_select()),$data);				
+				$data = array_merge(array('pids'=>$this->im->fetch_select($this->im->get_root(),'level_name')),$data);				
 				$this->init_page->load_backend_view('tree_add',$data);
 			}
 

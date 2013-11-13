@@ -6,9 +6,9 @@
     'pid' => '0',
     'orderId' => '100',
     'code' => '2001',
-    'init_name' => 'Products',
+    'name' => 'Products',
     'LEVEL' => '0',
-    'name' => '├─Products',
+    'level_name' => '├─Products',
   ),
   14 => 
   array (
@@ -17,9 +17,9 @@
     'pid' => '2',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'Car-audio Updating System',
+    'name' => 'Car-audio Updating System',
     'LEVEL' => '1',
-    'name' => '├─Car-audio Updating System',
+    'level_name' => '├─Car-audio Updating System',
   ),
   41 => 
   array (
@@ -28,9 +28,9 @@
     'pid' => '14',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'FORD Series',
+    'name' => 'FORD Series',
     'LEVEL' => '2',
-    'name' => '│ ├─FORD Series',
+    'level_name' => '│ ├─FORD Series',
   ),
   15 => 
   array (
@@ -39,9 +39,9 @@
     'pid' => '2',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'Car Multimedia/DVD Player',
+    'name' => 'Car Multimedia/DVD Player',
     'LEVEL' => '1',
-    'name' => '├─Car Multimedia/DVD Player',
+    'level_name' => '├─Car Multimedia/DVD Player',
   ),
   46 => 
   array (
@@ -50,9 +50,9 @@
     'pid' => '15',
     'orderId' => '2',
     'code' => '',
-    'init_name' => 'TOYOTA',
+    'name' => 'TOYOTA',
     'LEVEL' => '2',
-    'name' => '│ ├─TOYOTA',
+    'level_name' => '│ ├─TOYOTA',
   ),
   47 => 
   array (
@@ -61,9 +61,9 @@
     'pid' => '15',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'HONDA',
+    'name' => 'HONDA',
     'LEVEL' => '2',
-    'name' => '│ ├─HONDA',
+    'level_name' => '│ ├─HONDA',
   ),
   48 => 
   array (
@@ -72,9 +72,9 @@
     'pid' => '15',
     'orderId' => '1',
     'code' => '',
-    'init_name' => 'MITSUBISHI',
+    'name' => 'MITSUBISHI',
     'LEVEL' => '2',
-    'name' => '│ ├─MITSUBISHI',
+    'level_name' => '│ ├─MITSUBISHI',
   ),
   49 => 
   array (
@@ -83,9 +83,9 @@
     'pid' => '15',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'CHEVROLET',
+    'name' => 'CHEVROLET',
     'LEVEL' => '2',
-    'name' => '│ ├─CHEVROLET',
+    'level_name' => '│ ├─CHEVROLET',
   ),
   50 => 
   array (
@@ -94,9 +94,9 @@
     'pid' => '15',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'HYUNDAI',
+    'name' => 'HYUNDAI',
     'LEVEL' => '2',
-    'name' => '│ ├─HYUNDAI',
+    'level_name' => '│ ├─HYUNDAI',
   ),
   51 => 
   array (
@@ -105,9 +105,9 @@
     'pid' => '15',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'KIA',
+    'name' => 'KIA',
     'LEVEL' => '2',
-    'name' => '│ ├─KIA',
+    'level_name' => '│ ├─KIA',
   ),
   52 => 
   array (
@@ -116,9 +116,9 @@
     'pid' => '15',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'SUZUKI',
+    'name' => 'SUZUKI',
     'LEVEL' => '2',
-    'name' => '│ ├─SUZUKI',
+    'level_name' => '│ ├─SUZUKI',
   ),
   53 => 
   array (
@@ -127,9 +127,9 @@
     'pid' => '15',
     'orderId' => '100',
     'code' => '',
-    'init_name' => ' VW',
+    'name' => ' VW',
     'LEVEL' => '2',
-    'name' => '│ ├─ VW',
+    'level_name' => '│ ├─ VW',
   ),
   54 => 
   array (
@@ -138,9 +138,9 @@
     'pid' => '15',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'PEUGEOT',
+    'name' => 'PEUGEOT',
     'LEVEL' => '2',
-    'name' => '│ ├─PEUGEOT',
+    'level_name' => '│ ├─PEUGEOT',
   ),
   16 => 
   array (
@@ -149,9 +149,9 @@
     'pid' => '2',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'Car Deckless MP5 Player',
+    'name' => 'Car Deckless MP5 Player',
     'LEVEL' => '1',
-    'name' => '├─Car Deckless MP5 Player',
+    'level_name' => '├─Car Deckless MP5 Player',
   ),
   55 => 
   array (
@@ -160,9 +160,9 @@
     'pid' => '16',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'Water Proof Single Din Deckless MP3 Player',
+    'name' => 'Water Proof Single Din Deckless MP3 Player',
     'LEVEL' => '2',
-    'name' => '│ ├─Water Proof Single Din Deckless MP3 Player',
+    'level_name' => '│ ├─Water Proof Single Din Deckless MP3 Player',
   ),
   17 => 
   array (
@@ -171,8 +171,8 @@
     'pid' => '2',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'Car Deckless MP3 Player',
+    'name' => 'Car Deckless MP3 Player',
     'LEVEL' => '1',
-    'name' => '├─Car Deckless MP3 Player',
+    'level_name' => '├─Car Deckless MP3 Player',
   ),
 );?>

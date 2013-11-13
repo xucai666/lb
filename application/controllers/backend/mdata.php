@@ -197,7 +197,6 @@ class Mdata extends CI_Controller{
 		 	 	$channel = array_re_index($this->db->select('*',false)->from('module_channel')->get()->result_array(),'c_id');
 		 	 	$this->init_cache->cache_create($channel,'channel');	//create  channel cache
 		 	 	
-
 		 		// if(empty($main[$primary])){
    					$callback = ',top.frmright_reload()';
 		 		// }

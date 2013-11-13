@@ -6,9 +6,9 @@
     'pid' => '0',
     'orderId' => '100',
     'code' => '1001',
-    'init_name' => 'Info Cetner',
+    'name' => 'Info Cetner',
     'LEVEL' => '0',
-    'name' => '├─Info Cetner',
+    'level_name' => '├─Info Cetner',
   ),
   8 => 
   array (
@@ -17,9 +17,9 @@
     'pid' => '1',
     'orderId' => '100',
     'code' => 'news-1',
-    'init_name' => 'News',
+    'name' => 'News',
     'LEVEL' => '1',
-    'name' => '├─News',
+    'level_name' => '├─News',
   ),
   9 => 
   array (
@@ -28,9 +28,9 @@
     'pid' => '8',
     'orderId' => '100',
     'code' => 'qy-01',
-    'init_name' => 'Company News',
+    'name' => 'Company News',
     'LEVEL' => '2',
-    'name' => '│ ├─Company News',
+    'level_name' => '│ ├─Company News',
   ),
   10 => 
   array (
@@ -39,9 +39,9 @@
     'pid' => '8',
     'orderId' => '100',
     'code' => 'mt-1',
-    'init_name' => 'Media News',
+    'name' => 'Media News',
     'LEVEL' => '2',
-    'name' => '│ ├─Media News',
+    'level_name' => '│ ├─Media News',
   ),
   23 => 
   array (
@@ -50,8 +50,8 @@
     'pid' => '8',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'Staffs',
+    'name' => 'Staffs',
     'LEVEL' => '2',
-    'name' => '│ ├─Staffs',
+    'level_name' => '│ ├─Staffs',
   ),
 );?>
