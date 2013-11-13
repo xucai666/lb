@@ -57,7 +57,8 @@ class Product extends CI_Controller {
 		$this->load->model('Tree_model');
 		$pid = $this->uri->segment(3);
 		$pid = $pid?$pid:2;
-		$ls = $this->Tree_model->fetch_belong_tree($pid,true);
+		$ls = (array)$this->Tree_model->fetch_belong_tree($pid,true);
+		
 		foreach($ls as $k=>&$v){
 				$vls = $this->Tree_model->fetch_belong_tree($v['id'],true);
 				$lnk = $vls?'action_category':'action_list';

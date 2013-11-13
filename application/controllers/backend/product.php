@@ -57,8 +57,7 @@ class Product extends CI_Controller{
 			'class_theme'=>$parent_class_info['c_title'],
 			'parent_class'=>$parent_class_info['c_sn'],
 			'class_select'=>$class_select,
-		);	
-	
+		);		
 		$data = array(
 			'main'=>$main,
 			'editor'=>$this->Common_model->editor($main['pro_content'],'content','Full'),
