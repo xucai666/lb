@@ -22,6 +22,8 @@ class Mdata extends CI_Controller{
 		$this->load->model("Mdata_model",'im');
 		$this->lang->load('item_backend_mdata',lang_get());
 		$this->lang->load('item_backend',lang_get());
+
+	
 	}
 
 	function index(){

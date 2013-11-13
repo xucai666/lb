@@ -10,6 +10,7 @@
  return array (
   1 => 'Multimedia',
   2 => 'Primary',  
+  3 => 'SEO',  
 );
  
 ?>

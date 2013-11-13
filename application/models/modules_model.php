@@ -116,6 +116,7 @@ class Modules_model extends CI_Model{
 		return array_re_index($r,'f_id','f_ext');
 	}
 
+
 	function is_primary($f_id){
 		if(!$f_id) return false;
 		$r = $this->fetch_field_ext();		
@@ -174,6 +175,12 @@ class Modules_model extends CI_Model{
 
 	function fetch_primary($m_id,$key){
 		$this->db->select('a.*',false)->from('module_relations as a')->join('module_fields as b','a.f_id=b.f_id','left')->where('b.f_ext',2)->where('a.m_id',$m_id);
+		$dt = $this->db->get()->first_row('array');
+		return $key?$dt[$key]:$dt;
+	}
+
+	function fetch_seo($m_id,$key){
+		$this->db->select('a.*',false)->from('module_relations as a')->join('module_fields as b','a.f_id=b.f_id','left')->where('b.f_ext',3)->where('a.m_id',$m_id);
 		$dt = $this->db->get()->first_row('array');
 		return $key?$dt[$key]:$dt;
 	}

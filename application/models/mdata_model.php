@@ -208,7 +208,13 @@ class Mdata_model extends CI_Model{
 		return array('list'=>$list);
 	}
 
-
+	function fetch_seo_var($mid,$id){
+		$primary = $this->m->fetch_primary($mid,'r_name');
+		$tb = $this->m->main($mid,'m_tb');
+		$fs = $this->m->fetch_seo($mid,'r_name');
+		$r = $this->db->select('*',false)->from($tb)->where($primary,$id)->get()->first_row('array');
+		return $r[$fs];
+	}
 }
 
 

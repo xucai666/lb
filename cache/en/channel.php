@@ -12,6 +12,7 @@
     'c_type' => '1',
     'c_dir' => './../',
     'c_img_rotator' => '',
+    'c_seo' => '',
   ),
   12 => 
   array (
@@ -26,6 +27,7 @@
     'c_type' => '2',
     'c_dir' => 'bout__us',
     'c_img_rotator' => '',
+    'c_seo' => '',
   ),
   13 => 
   array (
@@ -40,6 +42,7 @@
     'c_type' => '3',
     'c_dir' => 'xin_wen_zhong_xin',
     'c_img_rotator' => '',
+    'c_seo' => '',
   ),
   14 => 
   array (
@@ -54,6 +57,7 @@
     'c_type' => '3',
     'c_dir' => 'roducts',
     'c_img_rotator' => 'http://localhost//lb/uploads/2013-11-07/2013110707253653.jpg||http://www.baidu.com,http://localhost//lb/uploads/2013-11-07/2013110707253971.jpg||http://www.baidu.com,http://localhost//lb/uploads/2013-11-07/2013110707264732.jpg||http://www.baidu.com',
+    'c_seo' => 'products',
   ),
   15 => 
   array (
@@ -68,6 +72,7 @@
     'c_type' => '2',
     'c_dir' => '',
     'c_img_rotator' => '',
+    'c_seo' => '',
   ),
   17 => 
   array (
@@ -82,6 +87,7 @@
     'c_type' => '1',
     'c_dir' => 'ervices',
     'c_img_rotator' => '',
+    'c_seo' => '',
   ),
   18 => 
   array (
@@ -96,6 +102,7 @@
     'c_type' => '2',
     'c_dir' => '',
     'c_img_rotator' => '',
+    'c_seo' => '',
   ),
   19 => 
   array (
@@ -110,6 +117,7 @@
     'c_type' => '1',
     'c_dir' => 'earch',
     'c_img_rotator' => '',
+    'c_seo' => '',
   ),
   20 => 
   array (
@@ -124,5 +132,6 @@
     'c_type' => '1',
     'c_dir' => 'ign__n',
     'c_img_rotator' => 'http://localhost//lb/uploads/2013-11-07/2013110712370149.png||请输入链接地址',
+    'c_seo' => '',
   ),
 );?>
