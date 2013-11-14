@@ -1,9 +1,9 @@
-<!--{include file="`$dir_backend`/top.htm"}-->
+﻿<!--{include file="`$dir_backend`/top.htm"}-->
 <div class="nav_title" align="left" >友情链接</div>
-<div  align="right"><a href="<!--{$site_url}-->/backend/friendlink/action_add"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
+<div  align="right"><a href="<!--{site_url('d=backend&c=friendlink&m=action_add')}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
 
 
-<div class="search"><form action="<!--{$site_url}-->/backend/friendlink/action_list/" method="get">
+<div class="search"><form action="<!--{site_url('d=backend&c=friendlink&m=action_list')}-->" method="get">
     
     站点名称： 
       <input type="text" name="link_title" value="<!--{$smarty.get.link_title}-->" />
@@ -41,10 +41,10 @@
    
     <td  > 
       
-        <a  title="查看链接"   href="<!--{$site_url}-->/backend/friendlink/action_add/?link_id=<!--{$item.link_id}-->&parent_class=<!--{$smarty.get.parent_class}-->" > 
+        <a  title="查看链接"   href="<!--{site_url('d=backend&c=friendlink&m=action_add&link_id=<!--{$item.link_id}-->&parent_class=<!--{$smarty.get.parent_class}-->')}-->" > 
       <img src="<!--{$img_url}-->/mod1.gif" border="0" > </a> 
       
-      <a  title="删除链接" href="<!--{$site_url}-->/backend/friendlink/action_del/?link_id=<!--{$item.link_id}-->&parent_class=<!--{$smarty.get.parent_class}-->" onclick="return confirm('确定删除?');"> 
+      <a  title="删除链接" href="<!--{site_url('d=backend&c=friendlink&m=action_del&link_id=<!--{$item.link_id}-->&parent_class=<!--{$smarty.get.parent_class}-->')}-->" onclick="return confirm('确定删除?');"> 
       <img src="<!--{$img_url}-->/del1.gif" border="0" > </a> 
     
      

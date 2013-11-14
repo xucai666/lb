@@ -3,7 +3,7 @@
 
 <table class="search"   style="width:100%">
 <tr><td>
-	<form action="<!--{$site_url}-->/backend/logs/action_list/" method="get">   
+	<form action="<!--{site_url('d=backend&c=logs&m=action_list')}-->" method="get">   
     <!--{$lang_log.operator}-->：
         <input type="text" name="log_user" value="<!--{$smarty.get.log_user}-->" />
 
@@ -32,7 +32,7 @@
 <br />
 
 
-<form id="form1" name="form1" method="post" action="<!--{$site_url}-->/backend/logs/action_del">
+<form id="form1" name="form1" method="post" action="<!--{site_url('d=backend&c=logs&m=action_del')}-->">
 
 
 <table width="100%" class="mytable" >

@@ -22,6 +22,7 @@ class Product extends CI_Controller {
 
  		$cache = &get_init_cache();
  		$channel = $cache->cache_fetch('channel');
+ 		
 		
 	}
 	
@@ -47,7 +48,6 @@ class Product extends CI_Controller {
 	
 
 	function action_category(){
-
 		//css
 		$this->init_page->fetch_front_css('classes');
 		// add breadcrumbs
@@ -55,14 +55,14 @@ class Product extends CI_Controller {
 		$this->breadcrumb->append_crumb('Product', 'product');
 		$this->breadcrumb->output();
 		$this->load->model('Tree_model');
-		$pid = $this->uri->segment(3);
+		$pid = $this->input->get('pid');
 		$pid = $pid?$pid:2;
 		$ls = (array)$this->Tree_model->fetch_belong_tree($pid,true);
 		
 		foreach($ls as $k=>&$v){
 				$vls = $this->Tree_model->fetch_belong_tree($v['id'],true);
 				$lnk = $vls?'action_category':'action_list';
-				$v['lnk'] = 'product/'.$lnk.'/'.$v['id'];
+				$v['lnk'] = 'c=product&m='.$lnk.'&d=front&id='.$v['id'];
 				$v['ctp'] = $this->im->count_products($v['id']);
 				 if($v['pic']){
 				  $img = current(explode(',',$this->Common_model->fetch_images($v['pic'],1)));

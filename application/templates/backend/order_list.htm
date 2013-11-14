@@ -1,9 +1,9 @@
-<!--{include file="`$dir_backend`/top.htm"}-->
+﻿<!--{include file="`$dir_backend`/top.htm"}-->
 <div class="nav_title" align="left" >订单管理</div>
 <div  align="right"></div>
 
 <div class="search">
-	<form action="<!--{$site_url}-->/backend/product/action_order/" method="get">
+	<form action="<!--{site_url('d=backend&c=product&m=action_order')}-->" method="get">
    订单状态：
 
    <select name="status">
@@ -53,10 +53,10 @@
    
     <td class="l8"> 
       
-      <a  title="查看订单"   href="<!--{$site_url}-->/backend/product/action_order_view/?order_id=<!--{$item.order_id}-->&parent_class=<!--{$smarty.get.parent_class}-->" > 
+      <a  title="查看订单"   href="<!--{site_url('d=backend&c=product&m=action_order_view&order_id=<!--{$item.order_id}-->&parent_class=<!--{$smarty.get.parent_class}-->')}-->" > 
       <img src="<!--{$img_url}-->/view.png" border="0" > </a> 
       
-      <a  title="删除订单" href="<!--{$site_url}-->/backend/product/action_order_del/?order_id=<!--{$item.order_id}-->&parent_class=<!--{$smarty.get.parent_class}-->" onclick="return confirm('确定删除?');"> 
+      <a  title="删除订单" href="<!--{site_url('d=backend&c=product&m=action_order_del&order_id=<!--{$item.order_id}-->&parent_class=<!--{$smarty.get.parent_class}-->')}-->" onclick="return confirm('确定删除?');"> 
       <img src="<!--{$img_url}-->/del1.gif" border="0" > </a> 
       </td>
   </tr>

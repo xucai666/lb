@@ -243,6 +243,8 @@ class System_manage extends CI_Controller{
  	 
  	 	$this->init_cache->cache_create($channel_types,'channel_types');
 
+ 	 	
+
 
 
  		$this->init_page->pop_redirect('缓存更新成功！','javascript:parent.location.reload();');

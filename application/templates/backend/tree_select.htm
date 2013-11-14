@@ -21,12 +21,12 @@
 <!--{foreach from=$treeIds key=key item=item}-->	
 <tr>
 	<td>
-		<a href="<!--{func_site_url segments="backend/tree/action_root_set/`$key`"}-->">
+		<a href="<!--{func_site_url segments="d=backend&c=tree&m=action_root_set&tree_id=`$key`"}-->">
 			<!--{$item}--></a>
 	</td>
 	<td>
-		<!--{ci_anchor segment="backend/tree/action_root_add/`$key`" attrs="class:link_mod"}-->
-		<!--{ci_anchor segment="backend/tree/action_root_set/`$key`" attrs="class:link_view"}-->
+		<!--{ci_anchor segment="d=backend&c=tree&m=action_root_add&tree_id=`$key`" attrs="class:link_mod"}-->
+		<!--{ci_anchor segment="d=backend&c=tree&m=action_root_set&tree_id=`$key`" attrs="class:link_view"}-->
 	</td>
 	
 </tr>

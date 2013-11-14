@@ -89,14 +89,14 @@ $(function($){
 
 <table class='search'>
 	<tr><td>
-		<form action='<!--{func_site_url segments="backend/templates/view_list"}-->' method="get">
+		<form action='<!--{func_site_url segments="d=backend&c=templates&m=view_list"}-->' method="get">
 			
 			名称：
 			<input type="text" name="t_name" value="<!--{$smarty.get.t_name}-->">
 			
 			<input type="hidden" name="root_path"  value="<!--{$root_path}-->"/>
 			<!--{create_button type="search"}-->
-			<!--{create_button type="prev" url="backend/templates/view_list/`$root_path_parent`"}-->
+			<!--{create_button type="prev" url="d=backend&c=templates&m=view_list/`$root_path_parent`"}-->
 
             <span id="spanButtonPlaceholder_view"></span>
 
@@ -138,7 +138,7 @@ $(function($){
 	<td><!--{$item.size}--></td>
 	<td align='center'>
 		
-		<!--{ci_anchor segment="backend/templates/view_add/`$item.server_path|my_encrypt:'ENCODE'`" attrs="class:link_mod `$item.edit_able`"}-->
+		<!--{ci_anchor segment="d=backend&c=templates&m=view_add&path=`$item.server_path|my_encrypt:'ENCODE'`" attrs="class:link_mod `$item.edit_able`"}-->
 	</td>
 </tr>
 <!--{/foreach}-->

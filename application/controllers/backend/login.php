@@ -21,6 +21,7 @@ class Login extends CI_Controller {
 		$cur_lang = $this->lang->language;
 		$this->tpl->assign('lang_login',$cur_lang);
 		$this->m_lang = (object)$cur_lang;
+	
 		
 	}
 	
@@ -123,7 +124,6 @@ class Login extends CI_Controller {
 				}	
 				$data['weather'] = $weather;
 			endif;
-			
 			$this->init_page->fetch_css('style',null,getRootUrl('css','backend'));
 			$this->init_page->load_backend_view("center",$data);
 	}

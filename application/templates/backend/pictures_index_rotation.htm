@@ -1,4 +1,4 @@
-<!--{include file="`$dir_backend`/top.htm"}-->
+﻿<!--{include file="`$dir_backend`/top.htm"}-->
 <div class="nav_title" align="left" >图片管理</div>
 <script type="text/javascript">
 	 <!--{foreach from=$list key=key item=item}-->
@@ -55,7 +55,7 @@
 				
 				$.ajax({
 				   type: "POST",
-				   url: '<!--{$site_url}-->/backend/pictures/action_index_rotation_save',
+				   url: '<!--{site_url("d=backend&c=pictures&m=action_index_rotation_save")}-->',
 				   data: {"p_type":"index_rotation","p_tb":"pictures_config",'p_key':'1','p_id':$('#p_id_<!--{$key}-->').val(),'p_thumb':rs.url},
 				   dataType:"json",
 				   success: function(msg){	
@@ -116,7 +116,7 @@
 
 				$.ajax({
 				   type: "POST",
-				   url: '<!--{$site_url}-->/backend/pictures/action_index_rotation_save',
+				   url: '<!--{site_url("d=backend&c=pictures&m=action_index_rotation_save")}-->',
 				   data: {"p_type":"index_rotation","p_tb":"pictures_config",'p_key':'1','p_thumb':rs.url},
 				   dataType:"json",
 				   success: function(msg){	
@@ -145,7 +145,7 @@
 			if(p_id>0){
 				$.ajax({
 				   type: "POST",
-				   url: '<!--{$site_url}-->/backend/pictures/action_sort_save',
+				   url: '<!--{site_url("d=backend&c=pictures&m=action_sort_save")}-->',
 				   data: {"p_sort":$('#p_sort_'+p_index).val(),'p_id':p_id},
 				   dataType:"json",
 				   success: function(msg){					  
@@ -225,7 +225,7 @@
       &nbsp;</td>
       <td align="center">
       <!--{if $item.p_id}-->
-      <a href="<!--{$site_url}-->/backend/pictures/action_del_index_rotation/?p_id=<!--{$item.p_id}-->" onclick='return confirm("确定删除?");'> <img src="<!--{$img_url}-->/del.png"></a>
+      <a href="<!--{site_url('d=backend&c=pictures&m=action_del_index_rotation&p_id=<!--{$item.p_id}-->')}-->" onclick='return confirm("确定删除?");'> <img src="<!--{$img_url}-->/del.png"></a>
       <!--{/if}-->
       &nbsp;</td>
     </tr>

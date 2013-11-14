@@ -1,5 +1,5 @@
 	<div id='pros'>
-	<form id="form2" method="post" action="<!--{$site_url}-->/backend/product/action_del/?parent_class=<!--{$smarty.get.parent_class}-->">   
+	<form id="form2" method="post" action="<!--{site_url('d=backend&c=product&m=action_del&parent_class=<!--{$smarty.get.parent_class}-->')}-->">   
 	  
 	<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="mytable">
 		<thead>
@@ -29,9 +29,9 @@
 	    <td align="center"><!--{$item.pro_view}-->&nbsp;</td>
 	    <td align="center"><!--{$item.pro_date}-->&nbsp;</td>
 	    <td align="center"><!--{$item.pro_order}-->&nbsp;</td>
-	    <td align="center"> <a  title="<!--{$lang_products.view}-->"   href="<!--{$site_url}-->/backend/product/action_add/?pro_id=<!--{$item.pro_id}-->&parent_class=<!--{$smarty.get.parent_class}-->" > 
+	    <td align="center"> <a  title="<!--{$lang_products.view}-->"   href="<!--{site_url('d=backend&c=product&m=action_add&pro_id=<!--{$item.pro_id}-->&parent_class=<!--{$smarty.get.parent_class}-->')}-->" > 
 	      <img src="<!--{$img_url}-->/mod1.gif" border="0" > </a> 
-	      <a  title="<!--{$lang_products.delete}-->" href="javascript:;" onclick="delRecord('<!--{$site_url}-->/backend/product/action_del/?pro_id=<!--{$item.pro_id}-->&parent_class=<!--{$smarty.get.parent_class}-->',this);"> 
+	      <a  title="<!--{$lang_products.delete}-->" href="javascript:;" onclick="delRecord('<!--{site_url("d=backend&c=product&m=action_del/?pro_id=<!--{$item.pro_id}-->&parent_class=<!--{$smarty.get.parent_class}-->")}-->',this);"> 
 	      <img src="<!--{$img_url}-->/del1.gif" border="0" > </a> &nbsp;</td>
 	  </tr>
 	  <!--{/foreach}-->

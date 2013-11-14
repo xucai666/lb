@@ -7,9 +7,9 @@
 	<!--{if $querys}-->
 	<table class='search '>
 		<tr><td>
-			<form action='<!--{func_site_url segments="backend/mdata/action_list"}-->' method="get">
+			<form action='<!--{site_url("backend/mdata/action_list")}-->' method="post">
 				<!--{foreach from=$querys key=k item=v}-->
-					<!--{$v.name}-->:<!--{func_vsprintf html =$v.html name=$k value=','|implode:(array)$smarty.get.$k}-->
+					<!--{$v.name}-->:<!--{func_vsprintf html =$v.html name=$k value=','|implode:(array)$smarty.request.$k}-->
 				<!--{/foreach}-->
 				<!--{create_button type="search"}-->
 			</form>
@@ -21,7 +21,7 @@
 
 <div style="margin-top:67px;" >
 
-<form id="form2" method="post" action="<!--{func_site_url segments='/backend/mdata/action_del'}-->" onsubmit="return chkdel2();">   
+<form id="form2" method="post" action="<!--{site_url('backend/mdata/action_del')}-->" onsubmit="return chkdel2();">   
 	<div id="ajax_content">
 			<table class='mytable' >
 				<thead>
@@ -51,9 +51,9 @@
 				<td>
 						 
 						
-						<!--{ci_anchor segment="backend/mdata/action_view/`$item[$primary]`" attrs="class:link_view,target:_blank"}-->
-						<a href="javascript:art_dialog_open('<!--{$site_url}-->/backend/mdata/action_add/<!--{$item[$primary]}-->','数据管理');" class="link_mod"></a>
-						<!--{ci_anchor segment="backend/mdata/action_del/`$item[$primary]`" attrs="class:link_del,onclick:return confirm('<!--{"confirm_delete"|lang}-->');"}-->
+						<!--{ci_anchor segment="d=backend&c=mdata&m=action_view&pri_id=`$item[$primary]`" attrs="class:link_view,target:_blank"}-->
+						<a href="javascript:art_dialog_open('<!--{site_url("d=backend&c=mdata&m=action_add&pri_id=<!--{$item[$primary]}-->")}-->','数据管理');" class="link_mod"></a>
+						<!--{ci_anchor segment="d=backend&c=mdata&maction_del&pri_id=`$item[$primary]`" attrs="class:link_del,onclick:return confirm('<!--{"confirm_delete"|lang}-->');"}-->
 
 						
 				</td>
@@ -70,7 +70,7 @@
 		</div>		
 			<input type="checkbox" id="chkall"  value="1" onclick="CheckAll(this.form);">全选
 			<!--{create_button type='delete' ext=''}-->	
-			<!--{create_button type='add' url="javascript:art_dialog_open('`$site_url`backend/mdata/action_add','数据管理');"}-->		
+			<!--{create_button type='add' url="javascript:art_dialog_open('`$site_url`d=backend&c=mdata&m=action_add','数据管理');"}-->		
 		</div>
 
 	</div>

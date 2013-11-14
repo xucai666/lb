@@ -600,12 +600,10 @@ class tpl extends Smarty
 	        }
          }
          
-         
         // check if the template file exists.
         if (!is_file($this->getTemplateDir(0). $resource_name)) {
             show_error("template: [$resource_name] cannot be found.");
         }
- 
        return parent::fetch($resource_name);
     }
     

@@ -1,9 +1,9 @@
-<!--{include file="`$dir_backend`/top.htm"}-->
+﻿<!--{include file="`$dir_backend`/top.htm"}-->
 <div class="nav_title" align="left" >&nbsp;<!--{$lang_log.theme_list}--></div>
 
 <table class="search"   style="width:100%">
 <tr><td>
-	<form action="<!--{$site_url}-->/backend/logs/action_login_log/" method="get">   
+	<form action="<!--{site_url('d=backend&c=logs&m=action_login_log')}-->" method="get">   
     <!--{$lang_log.operator}-->：
         <input type="text" name="login_user" value="<!--{$smarty.get.login_user}-->" />
 
@@ -24,7 +24,7 @@
 <br />
 
 
-<form id="form1" name="form1" method="post" action="<!--{$site_url}-->/backend/logs/action_login_del">
+<form id="form1" name="form1" method="post" action="<!--{site_url('d=backend&c=logs&m=action_login_del')}-->">
 
 
 <table width="100%" class="mytable" >

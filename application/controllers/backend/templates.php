@@ -44,7 +44,7 @@ class Templates extends CI_Controller {
          $this->init_page->fetch_css('item/templates','view',getRootUrl('css','backend'));
          $this->init_page->fetch_js('item/templates','view',getRootUrl('js','backend'));
          //snippet
-      		$main_id = $this->uri->segment(4);
+      		$main_id = $this->input->get_post('t_id');
       		if($main_id){
             $main = $this->db->select('*',false)->from('templates')->where('t_id',$main_id)->get()->first_row('array');
       		}
@@ -58,7 +58,7 @@ class Templates extends CI_Controller {
       function action_copy(){
           $this->init_page->fetch_css('templates','item/view',$this->init_page->getRes('css','backend').'/item/');
           $this->init_page->fetch_js('templates','view',$this->init_page->getRes('js','backend').'/item/');
-          $main_id = $this->uri->segment(4);
+          $main_id = $this->input->get_post('t_id');
           $main = $this->db->select('*')->from('templates')->where('t_id',$main_id)->get()->first_row('array');
           unset($main[t_id]);
           unset($main[t_mid]);
@@ -97,9 +97,7 @@ class Templates extends CI_Controller {
        function action_del(){
         	try{
             $ids = $this->input->post('t_id');
-            $ids = $ids?$ids:$this->uri->segment(4);
-           
-
+            $ids = $ids?$ids:$this->input->get('t_id');
         		$this->init_db->delete($ids,$this->im->db_config());		
         		$this->init_page->pop_redirect('删除成功',site_url("backend/templates/action_list"));		
         	}catch(Excpetion $e){
@@ -120,7 +118,7 @@ class Templates extends CI_Controller {
          $this->init_page->fetch_css('jquery.snippet','view',getRootUrl('css','backend'));
          $this->init_page->fetch_js('jquery.snippet','view',getRootUrl('js','backend'));
 
-         $main_id = $this->uri->segment(4);
+         $main_id = $this->input->get_post('t_id');
          $main = $this->im->detail($main_id);
         
          $t_types = $this->init_cache->cache_fetch('template_types');
@@ -146,7 +144,7 @@ class Templates extends CI_Controller {
        
 
        //view file list
-       function view_list(){
+       function view_list(){      
           $this->init_page->fetch_js('swfupload','loadview',base_url().'/swfupload/api');
           $this->init_page->fetch_js(array('fileprogress','handlers','swfupload.queue'),'loadview',base_url().'swfupload/js');
           $this->load->helper('file'); 
@@ -155,7 +153,7 @@ class Templates extends CI_Controller {
           $init_path = config_item('template_dir').'/front/'.$develop['template'].'/'.lang_get();
           $t_name = $this->input->get('t_name');
 
-          $root_path = my_encrypt($this->uri->segment(4),'DECODE');
+          $root_path = my_encrypt($this->input->get('path'),'DECODE');
 
           $root_path = $root_path ? $root_path:my_encrypt($this->input->get('root_path'),'DECODE');
           $root_path = $root_path ? $root_path:$init_path;
@@ -188,7 +186,7 @@ class Templates extends CI_Controller {
                   $v['css_name'] = 'icon_file';
               }else{
                   $v['edit_able'] = 'hide';
-                  $v['href'] = "backend/templates/view_list/".my_encrypt($v['server_path'],'ENCODE');
+                  $v['href'] = "d=backend&c=templates&m=view_list&path=".my_encrypt($v['server_path'],'ENCODE');
                   $v['target'] = '_self';
                   $v['css_name'] = 'icon_forder';
               }
@@ -201,7 +199,7 @@ class Templates extends CI_Controller {
 
        //view add or delete
        function view_add(){
-           $t_file = my_encrypt($this->uri->segment(4),'DECODE');
+           $t_file = my_encrypt($this->input->get('path'),'DECODE');
            $data = array('main'=>array('t_file'=>$t_file,'t_name'=>basename($t_file),'t_html'=>htmlspecialchars(file_get_contents($t_file)))); 
            $this->init_page->load_backend_view('view_add',$data);
 
@@ -211,7 +209,7 @@ class Templates extends CI_Controller {
        function view_save(){
            $main = $this->input->post('main');
            file_put_contents($main[t_file],$main[t_html]);
-           $this->init_page->backend_redirect('templates/view_list/'.my_encrypt(dirname($main[t_file]),'ENCODE'),$data);
+           $this->init_page->backend_redirect('d=backend&c=templates&m=view_list&path='.my_encrypt(dirname($main[t_file]),'ENCODE'),'修改成功');
 
        }
 

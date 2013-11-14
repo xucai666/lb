@@ -311,7 +311,7 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
  		$CI = &get_instance();
  		if($total<=0) return '';
  		$config = array(
- 			'base_url'=>current_url().$CI->init_page->array_to_url($_GET),
+ 			'base_url'=>current_url().$CI->init_page->array_to_url(array_merge((array)$CI->input->get(),(array)$CI->input->post())),
  			'per_page'=>$size,
  			'total_rows'=>$total,
  		);		

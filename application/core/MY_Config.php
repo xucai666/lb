@@ -55,7 +55,27 @@ class MY_Config  extends CI_Config {
         }
         else
         {
-            return $this->slash_item('base_url').$this->item('index_page').'?'.$uri;
+
+            if(is_array($uri)){
+               return  $this->slash_item('base_url').$this->item('index_page').'?'.$this->_uri_string($uri);
+            }
+            elseif(strpos($uri,'=')!==false){
+                return $this->slash_item('base_url').$this->item('index_page').'?'.$uri;
+            }else{
+                 $urs = explode('/',$uri);
+                 if(count($urs)==1){
+                     $u['c'] = $uri;
+                     $u['m'] = 'index';
+                 }else{
+                     $u['m'] = end($urs);
+                     $u['c'] = prev($urs);
+                     $d = implode('/',array_slice($urs,0,-2));
+                 }
+                 $u['d'] = $d?$d:'front';
+                 $uri_str = http_build_query($u);
+                 return $this->slash_item('base_url').$this->item('index_page').'?'.$uri_str;
+            }
+            
         }
     }
 

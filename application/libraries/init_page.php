@@ -96,7 +96,7 @@ class Init_page{
 	 		$tpl->assign('js_url',js_url(null,'backend')); 
 	 		$tpl->assign('css_url',css_url(null,'backend')); 
 	 		$tpl->assign('img_url',img_url(null,'backend')); 	
-	 		$tpl->assign('theme_url',theme_url('backend')); 	
+	 		$tpl->assign('theme_url',theme_url('backend')); 
 			//debug mode
 			$sys_config = $cache->cache_fetch('sys_config','develop',lang_get());
 			if($sys_config['time_page_redirect']){ 				
@@ -387,15 +387,9 @@ class Init_page{
 	/**
 	 * 数组转成url
 	 */
-	function array_to_url($array){			
-		$link='?1=1';
-		$split ='&';
-		if(empty($array)) return '?1=1';				
-		foreach($array as $k=>$v){
-			if(in_array($k,array('1','per_page'))) continue;
-			$link .= $split.$k.'='.$v;				
-		}
-		return $link;
+	function array_to_url($a){			
+		unset($a['per_page']);
+		return '?'.http_build_query($a);
 	}
 	
 	/**

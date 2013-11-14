@@ -98,17 +98,6 @@
     'LEVEL' => '2',
     'level_name' => '│ ├─HYUNDAI',
   ),
-  51 => 
-  array (
-    'id' => '51',
-    'treeId' => '2',
-    'pid' => '15',
-    'orderId' => '100',
-    'code' => '',
-    'name' => 'KIA',
-    'LEVEL' => '2',
-    'level_name' => '│ ├─KIA',
-  ),
   52 => 
   array (
     'id' => '52',
@@ -119,17 +108,6 @@
     'name' => 'SUZUKI',
     'LEVEL' => '2',
     'level_name' => '│ ├─SUZUKI',
-  ),
-  53 => 
-  array (
-    'id' => '53',
-    'treeId' => '2',
-    'pid' => '15',
-    'orderId' => '100',
-    'code' => '',
-    'name' => ' VW',
-    'LEVEL' => '2',
-    'level_name' => '│ ├─ VW',
   ),
   54 => 
   array (

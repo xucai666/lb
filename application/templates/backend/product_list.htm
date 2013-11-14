@@ -1,7 +1,7 @@
-<!--{include file="`$dir_backend`/top.htm"}-->
+﻿<!--{include file="`$dir_backend`/top.htm"}-->
 
 <div class="nav_title" align="left" ><!--{$class_info.class_theme}--></div>
-<div  align="right"><a href="<!--{$site_url}-->/backend/product/action_add/?parent_class=<!--{$smarty.get.parent_class}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
+<div  align="right"><a href="<!--{site_url('d=backend&c=product&m=action_add&parent_class=<!--{$smarty.get.parent_class}-->')}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
 
 <table class="search">
 <tr>
@@ -76,7 +76,7 @@
 	//ajax search form
 	var options = {
 	    target:     '#ajax_content',
-	    url:        '<!--{$site_url}-->/backend/product/action_ajax_list/',
+	    url:        '<!--{site_url("d=backend&c=product&m=action_ajax_list/")}-->',
 	    dataType:        null,
 	    clearForm: false,
 	 	resetForm: false ,

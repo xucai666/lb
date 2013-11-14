@@ -46,7 +46,7 @@
 
 <table class="search"  style="width:100%">
 <tr><td>
-	<form action="<!--{$site_url}-->/backend/message/action_list/" method="get">   
+	<form action="<!--{site_url('d=backend&c=message&m=action_list')}-->" method="get">   
     <!--{$lang_message.name}-->：
         <input type="text" name="ms_name" value="<!--{$smarty.get.ms_name}-->" />
 
@@ -83,7 +83,7 @@
 		&nbsp;&nbsp;
 		<!--{$item.ms_date}-->&nbsp;&nbsp;<!--{$item.ms_ip}-->
 		&nbsp;&nbsp;
-       <a href="<!--{$site_url}-->/backend/message/action_del?ms_id=<!--{$item.ms_id}-->" onclick="return confirm('确定删除?');"><img name="" src="<!--{$img_url}-->/del.png"  alt="" /></a>    </div> 
+       <a href="<!--{site_url('d=backend&c=message&m=action_del?ms_id=<!--{$item.ms_id}-->')}-->" onclick="return confirm('确定删除?');"><img name="" src="<!--{$img_url}-->/del.png"  alt="" /></a>    </div> 
 
     <div style="display:none;margin-left:50px;">
 	    <li>公司名称：<!--{$item.ms_company}--></li>
@@ -109,7 +109,7 @@
     </tr>
   <tr>
     <th align="right">答：</th>
-    <td colspan="3" align="left"><form action="<!--{$site_url}-->/backend/message/action_save" method="post" name="form1" target="_myiframe" id="form1">
+    <td colspan="3" align="left"><form action="<!--{site_url('d=backend&c=message&m=action_save')}-->" method="post" name="form1" target="_myiframe" id="form1">
       <textarea name="main[ms_feedback]" cols="50" rows="5" id="main[ms_feedback]"><!--{$item.ms_feedback}--></textarea>
         <label>
         <input name="main[ms_id]" type="hidden" id="main[ms_id]"  value="<!--{$item.ms_id}-->"/>

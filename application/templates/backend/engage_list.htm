@@ -1,4 +1,4 @@
-<!--{include file="`$dir_backend`/top.htm"}-->
+﻿<!--{include file="`$dir_backend`/top.htm"}-->
 
 
           
@@ -40,7 +40,7 @@
                   <td align="left"><div title="2010-06-24 08:52" align="center">
                     <!--{$item.pub_date}-->
                   </div></td>
-                  <td align="center" ><div><a href="<!--{$site_url}-->/backend/engage/action_del?eg_id=<!--{$item.eg_id}-->"  onclick="return confirm('<!--{$lang_engage.confirm_delete}-->')" target="_self"><img src="<!--{$img_url}-->/del1.gif" width="16" height="16" border="0" /></a> <a href="<!--{$site_url}-->/backend/engage/action_add?eg_id=<!--{$item.eg_id}-->" ><img src="<!--{$img_url}-->/mod1.gif" width="16" height="16" border="0" /></a></div></td>
+                  <td align="center" ><div><a href="<!--{site_url('d=backend&c=engage&m=action_del?eg_id=<!--{$item.eg_id}-->')}-->"  onclick="return confirm('<!--{$lang_engage.confirm_delete}-->')" target="_self"><img src="<!--{$img_url}-->/del1.gif" width="16" height="16" border="0" /></a> <a href="<!--{site_url('d=backend&c=engage&m=action_add?eg_id=<!--{$item.eg_id}-->')}-->" ><img src="<!--{$img_url}-->/mod1.gif" width="16" height="16" border="0" /></a></div></td>
                 </tr>
                 <!--{/foreach}-->
               </table>

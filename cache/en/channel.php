@@ -93,7 +93,7 @@
   array (
     'c_id' => '18',
     'c_title' => 'Contact',
-    'c_url' => 'front/contact',
+    'c_url' => 'contact',
     'c_order' => '5',
     'c_display' => '1',
     'c_pic' => 'http://localhost/lb//swfupload/uploads/2013-08-21/ban_05.jpg',

@@ -76,7 +76,7 @@ class Tree extends CI_Controller{
 
 
 	function action_root_set(){
-		$this->im->set_root($this->uri->segment(4));
+		$this->im->set_root($this->input->get('tree_id'));
 		$this->init_page->backend_redirect('tree/action_list');
 
 	}
@@ -90,7 +90,7 @@ class Tree extends CI_Controller{
 	function action_add(){
 		
 		$pids = $this->im->fetch_select($this->im->get_root(),'level_name');
-		$id = $this->uri->segment(4);
+		$id = $this->input->get('id');
 		$main = array();
 		if($id){
 			$main = $this->im->detail($id);
@@ -136,11 +136,13 @@ class Tree extends CI_Controller{
 	function action_del(){
 		try{
 			$id = $this->input->post('id');
-            $id = $id?$id:$this->uri->segment(4);
+            $id = $id?$id:$this->input->get('id');
 			if(empty($id)) throw new Exception('参数错误');
 			foreach((array)$id as $item){
 				$this->im->delete_tree_node($item);
 			}
+			//create cache
+			$this->im->cache_create();
 			
 			$this->init_page->backend_redirect('tree/action_list','删除成功');
 		}catch(EXCEPTION $e){

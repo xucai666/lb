@@ -23,6 +23,8 @@ class Mdata extends CI_Controller{
 		$this->lang->load('item_backend_mdata',lang_get());
 		$this->lang->load('item_backend',lang_get());
 
+		
+
 	
 	}
 
@@ -32,13 +34,13 @@ class Mdata extends CI_Controller{
 	}
 
 	function action_set_module(){
-		$this->im->set_mid($this->uri->segment(4));
+		$this->im->set_mid($this->input->get('m_id'));
 		$this->init_page->backend_redirect('mdata/action_list');
 	}
 
 
 	function action_add(){
-		$id = $this->uri->segment(4);
+		$id = $this->input->get('pri_id');
 		$module_id = $this->im->get_mid();
 		//fetch fileds
 
@@ -82,7 +84,7 @@ class Mdata extends CI_Controller{
 	}
 
 	function action_view(){
-		$id = $this->uri->segment(4);
+		$id = $this->input->get('pri_id');
 		$module_id = $this->im->get_mid();
 		//fetch fileds
 
@@ -132,7 +134,7 @@ class Mdata extends CI_Controller{
 	}
 
 	function action_view_front(){
-		$id = $this->uri->segment(4);
+		$id = $this->input->get('pri_id');
 		$module_id = $this->im->get_mid();
 		//primary key
 		$primary = $this->m->fetch_primary($module_id,'r_name');
@@ -219,7 +221,7 @@ class Mdata extends CI_Controller{
 		
 			$primary = $this->m->fetch_primary($this->im->get_mid(),'r_name');
 			$ids = $this->input->post($primary);
-            $ids = $ids?$ids:$this->uri->segment(4);
+            $ids = $ids?$ids:$this->input->get('pri_id');
 			if(empty($ids)) throw new Exception(lang('errro_parameter'));
 			$cfg = $this->im->save_config();
 			$rs = $this->init_db->delete($ids,$cfg);
@@ -283,8 +285,9 @@ class Mdata extends CI_Controller{
 		}
 	}
 
-	function action_list(){
-		$query  = $this->input->get();
+	function action_list(){	
+
+		$query  = $this->input->post();
 		$size = 6;
 		$data = $this->im->fetch_list($size,$query);
 	
@@ -296,7 +299,7 @@ class Mdata extends CI_Controller{
 
 
 	function action_ajax_list(){
-		$query  = $this->input->get();
+		$query  = $this->input->post();
 		$size = 6;
 		$data = $this->im->fetch_list($size,$query,true);
 		$data = array_merge($data,array('theme'=>$this->m->main($this->im->get_mid(),'m_name')));

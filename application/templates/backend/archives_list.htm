@@ -1,11 +1,11 @@
 <!--{include file="`$dir_backend`/top.htm"}-->
 <div class="nav_title" align="left" ><!--{$class_info.class_theme}--></div>
-<div  align="right"><a href="<!--{$site_url}-->/backend/archives/action_add/?parent_class=<!--{$smarty.get.parent_class}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
+<div  align="right"><a href="<!--{site_url('d=backend&c=archives&m=action_add&parent_class=<!--{$smarty.get.parent_class}-->')}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
 
 <table class="search" >
 <tr>
 <td>
-	<form action="<!--{$site_url}-->/backend/archives/action_list/" method="get">
+	<form action="<!--{site_url('d=backend&c=archives&m=action_list')}-->" method="get">
     <!--{$lang_archives.category}-->：
     <select name="search_class">
     <!--{$class_info.class_select}-->
@@ -22,7 +22,7 @@
 </table>
 
 <div id='archives'>
-  <form id="form2" method="post" action="<!--{$site_url}-->/backend/archives/action_del/?parent_class=<!--{$smarty.get.parent_class}-->">   
+  <form id="form2" method="post" action="<!--{site_url('d=backend&c=archives&m=action_del&parent_class=<!--{$smarty.get.parent_class}-->')}-->">   
   
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="mytable">
   <tr >
@@ -56,10 +56,10 @@
     <td align="center"><!--{$item.info_order}-->&nbsp;</td>
     <td align="center"> 
                 
-                 <a  title=" <!--{$lang_archives.view}-->"   href="<!--{$site_url}-->/backend/archives/action_add/?info_id=<!--{$item.info_id}-->&parent_class=<!--{$smarty.get.parent_class}-->" > 
+                 <a  title=" <!--{$lang_archives.view}-->"   href="<!--{site_url('d=backend&c=archives&m=action_add&info_id=<!--{$item.info_id}-->&parent_class=<!--{$smarty.get.parent_class}-->')}-->" > 
                   <img src="<!--{$img_url}-->/mod1.gif" border="0" > </a> 
                   
-                  <a  title=" <!--{$lang_archives.delete}-->" href="<!--{$site_url}-->/backend/archives/action_del/?info_id=<!--{$item.info_id}-->&parent_class=<!--{$smarty.get.parent_class}-->" onclick="return confirm(' <!--{$lang_archives.confirm_delete}-->');"> 
+                  <a  title=" <!--{$lang_archives.delete}-->" href="<!--{site_url('d=backend&c=archives&m=action_del&info_id=<!--{$item.info_id}-->&parent_class=<!--{$smarty.get.parent_class}-->')}-->" onclick="return confirm(' <!--{$lang_archives.confirm_delete}-->');"> 
                   <img src="<!--{$img_url}-->/del1.gif" border="0" > </a> 
     
     </td>

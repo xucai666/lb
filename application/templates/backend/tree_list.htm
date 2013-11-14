@@ -50,16 +50,16 @@
 			\$attrs  = array(
 				"class"=>"link_mod",
 			);
-			echo anchor("backend/tree/action_add/".\$template->tpl_vars['item']->value['id'],"&nbsp;",\$attrs);
+			echo anchor("d=backend&c=tree&m=action_add&id=".\$template->tpl_vars['item']->value['id'],"&nbsp;",\$attrs);
 			
 			\$attrs  = array(
 				"class"=>"link_del",
 				"onclick"=>"return confirm('确定删除?');",
 			);
 			
-			echo anchor("backend/tree/action_del/".\$template->tpl_vars['item']->value['id'],"&nbsp;",\$attrs);
+			echo anchor("d=backend&c=tree&m=action_del&id=".\$template->tpl_vars['item']->value['id'],"&nbsp;",\$attrs);
 			<!--{/php}-->
-			<!--{''|cat:anchor("backend/tree/action_add?bid=`$item.id`", '&nbsp;', 'class=link_add')}-->
+			<!--{''|cat:anchor("d=backend&c=tree&m=action_add?bid=`$item.id`", '&nbsp;', 'class=link_add')}-->
 
 
 

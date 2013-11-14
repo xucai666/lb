@@ -1,10 +1,10 @@
-<!--{include file="`$dir_backend`/top.htm"}-->
+﻿<!--{include file="`$dir_backend`/top.htm"}-->
 <div class="nav_title" align="left" ><!--{$theme_var}-->申请列表</div>
 
 <table class="search">
 <tr>
 <td>
-	<form action="<!--{$site_url}-->/backend/joinus/action_002_002" method="get">
+	<form action="<!--{site_url('d=backend&c=joinus&m=action_002_002')}-->" method="get">
     名称： 
     <input type="text" name="apply_title" value="<!--{$search.apply_title}-->" />
 	
@@ -39,10 +39,10 @@
    
     <li class="l8"> 
       
-        <a  title="查看申请"  target="_blank" href="<!--{$site_url}-->/backend/joinus/action_002_002_view/?apply_id=<!--{$item.apply_id}-->" > 
+        <a  title="查看申请"  target="_blank" href="<!--{site_url('d=backend&c=joinus&m=action_002_002_view&apply_id=<!--{$item.apply_id}-->')}-->" > 
       <img src="<!--{$img_url}-->/view.png" border="0" > </a> 
       
-      <a  title="删除申请" href="<!--{$site_url}-->/backend/joinus/action_002_002_del/?apply_id=<!--{$item.apply_id}-->" onclick="return confirm('确定删除?');"> 
+      <a  title="删除申请" href="<!--{site_url('d=backend&c=joinus&m=action_002_002_del&apply_id=<!--{$item.apply_id}-->')}-->" onclick="return confirm('确定删除?');"> 
       <img src="<!--{$img_url}-->/del1.gif" border="0" > </a> 
       </li>
   </ul>
