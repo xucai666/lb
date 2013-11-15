@@ -3,22 +3,22 @@
   array (
     'title' => 'Pristine',
     'meta' => 'Pristine',
-    'description' => 'Codeigniter CMS',
+    'description' => 'Pristine',
   ),
   'smtp' => false,
   'contact' => 
   array (
-    'addr' => '福州工业路523号',
+    'addr' => 'fuzhou university',
     'tel' => '13600964906',
     'fax' => '0591-888888',
     'email' => 'conqweal@163.com',
     'qq' => '150672834,56055473',
-    'skype' => '',
-    'kefu_type' => '1',
+    'skype' => 'conqweal',
+    'kefu_type' => '2',
   ),
   'develop' => 
   array (
-    'template' => 'corcms',
+    'template' => 'black',
     'time_page_redirect' => '2000',
   ),
 );?>
