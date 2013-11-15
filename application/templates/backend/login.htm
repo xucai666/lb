@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<form action="<!--{site_url('d=backend&c=login&m=chklogin')}-->" target="_parent" method="post"> 
+<form action="<!--{site_url("d=backend&c=login&m=chklogin")}-->" target="_parent" method="post"> 
     
   
 
@@ -17,7 +17,7 @@
   <tr>
     <td colspan="3"><img src="<!--{$img_url}-->/logins_r1_c6.png" width="184" height="60" /></td>
   </tr>
-  <!-- fwtable fwsrc="未命名-1.png" fwbase="login_panel.png" fwstyle="Dreamweaver" fwdocid = "1613780109" fwnested="0" -->
+
   <tr>
     <td width="25" height="312"><img name="login_panel_r1_c1" src="<!--{$img_url}-->/login_panel_r1_c1.png" width="25" height="312" border="0" id="login_panel_r1_c1" alt="" /></td>
     <td valign="top" background="<!--{$img_url}-->/login_panel_r1_c3.png"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
@@ -47,9 +47,9 @@
            <tr>
             <td height="45"><!--{$lang_login.captcha}-->：            </td>
             <td height="45" align="left" style="margin-top:0px;display:inline;padding-top:2px;">
-              <input name="captcha" type="text" style="width:40px;" onfocus="document.getElementById('yzm').style.display='block'" maxlength="4">
+              <input name="captcha" type="text" style="width:40px;"  maxlength="4">
                <!--{type_error obj="captcha"}-->
-              <img id="code_img" onclick="javascript:document.getElementById('code_img').src='<!--{site_url("d=backend&c=login&m=action_captcha")}-->?time='+Math.random();void(0);" src="<!--{site_url("d=backend&c=login&m=action_captcha/")}-->?time=<!--{mt_rand()}-->">
+              <img id="code_img" onclick="javascript:document.getElementById('code_img').src='<!--{site_url("d=backend&c=login&m=action_captcha")}-->&time='+Math.random();void(0);" src="<!--{site_url("d=backend&c=login&m=action_captcha&time=`mt_rand()`")}-->">
             
              
              

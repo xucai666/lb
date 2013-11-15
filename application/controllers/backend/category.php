@@ -32,16 +32,16 @@ class Category extends CI_Controller{
 	 function action_add(){
  		try{
  			
- 			$c_id = $this->input->get('c_id');
+ 			$c_id = $this->input->get_post('c_id');
  			if($c_id){ 	
-	 			$main = $this->Category_model->detail($this->input->get('c_id'),'byid');
+	 			$main = $this->Category_model->detail($this->input->get_post('c_id'),'byid');
 	 			$parent_cat  = $this->Category_model->fetch_parent($main['c_sn']);
 
 	 			$cat = $this->Category_model->fetch_category_option(null,$parent_cat['c_sn'],$main['c_sn']);
 	 		
  			}else{
- 				$c_parent = $this->input->get('c_parent');
-				$c_parent = $c_parent?$c_parent:$this->input->get('parent');
+ 				$c_parent = $this->input->get_post('c_parent');
+				$c_parent = $c_parent?$c_parent:$this->input->get_post('parent');
  				$cat = $this->Category_model->fetch_category_option($c_parent,$c_parent);
  				
  			}	
@@ -62,9 +62,9 @@ class Category extends CI_Controller{
 	 */
 	 function action_save(){
 	 	//数据
-	 	$main = $this->input->post('main');
+	 	$main = $this->input->get_post('main');
 	 	$c_sn = $main['c_sn'];
-	 	$parent_cat = $this->input->post('parent_cat');
+	 	$parent_cat = $this->input->get_post('parent_cat');
 	 	try{
 	 		
  			$data = array(
@@ -93,7 +93,7 @@ class Category extends CI_Controller{
 		 		//扩展更新
 		 		
 		 		$this->Category_model->ext_save($main['c_sn'],$data['main']['c_sn']);
-		 		$this->init_page->pop_redirect('已保存',site_url('backend/category/action_list?parent='.$parent_cat));
+		 		$this->init_page->pop_redirect('已保存',site_url("d=backend&c=category&m=action_list&parent=".$parent_cat));
 		 	}else{
 		 		$this->init_page->load_backend_view(strtolower($this->act).'_add',$data);
 		 	}
@@ -108,7 +108,7 @@ class Category extends CI_Controller{
 	 */
 	 function action_list(){
 	 	try{
-	 		$c_parent = $this->input->get('parent');
+	 		$c_parent = $this->input->get_post('parent');
  			$data = $this->Category_model->fetch_list($c_parent); 	
 	 		$this->init_page->load_backend_view(strtolower($this->act).'_list',$data);
 		 	
@@ -124,17 +124,17 @@ class Category extends CI_Controller{
 	 */
 	 function action_del(){
 	 	try{
- 			$main = $this->db->select('*',false)->from('category')->where('c_id',$this->input->get('c_id'))->get()->first_row('array');
+ 			$main = $this->db->select('*',false)->from('category')->where('c_id',$this->input->get_post('c_id'))->get()->first_row('array');
  			//验证是否可删除
  			$del_ok = $this->Category_model->valid_del($main['c_sn']);
  			
  			if(empty($del_ok)) throw new Exception('相关信息未删除，分类不可删除');
-			$this->init_db->delete($this->input->get('c_id'),$this->Category_model->db_config());
+			$this->init_db->delete($this->input->get_post('c_id'),$this->Category_model->db_config());
 			
 			//扩展处理
 			
 			$this->Category_model->ext_del($main['c_sn']);
-			$this->init_page->pop_redirect('已删除',site_url('backend/category/action_list/'));
+			$this->init_page->pop_redirect('已删除',site_url("d=backend&c=category&m=action_list"));
 		 	
 	 		
 	 	}catch(Exception $e){

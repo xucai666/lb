@@ -352,7 +352,7 @@ class Modules_model extends CI_Model{
 				'r_pid'=>$root_id,
 				'r_order'=>1,
 				'r_display'=>1,
-				'r_url'=>'backend/mdata/action_set_module/'.$t_mid,
+				'r_url'=>"d=backend&c=mdata&m=action_set_module".$t_mid,
 			);
 		if(empty($r_id)){
 			$this->db->insert('system_rights',$data);

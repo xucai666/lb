@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
   * start page for webaccess
   *
@@ -60,7 +60,7 @@ class Vote extends CI_Controller {
 	
 	//新闻列表
 	function action_save(){	
-		$posts = $this->input->post('vd_item');
+		$posts = $this->input->get_post('vd_item');
 		if(!($posts)){
 			@header("content-type:text/html;charset=utf-8");
 			echo "<script>top.art.dialog.tips('您还没有选择');setTimeout(function(){history.back(1)},1000);</script>";

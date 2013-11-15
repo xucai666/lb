@@ -28,9 +28,9 @@ class Templates extends CI_Controller {
        **/
        function action_list(){
        		$this->db->select('*',false)->from('templates')
-       		->like('t_name',$this->input->get('t_name'))
-       		->like('t_type',$this->input->get('t_type'))
-       		->like('t_db_name',$this->input->get('t_db_name'))
+       		->like('t_name',$this->input->get_post('t_name'))
+       		->like('t_type',$this->input->get_post('t_type'))
+       		->like('t_db_name',$this->input->get_post('t_db_name'))
        		->order_by('t_id','desc');       			
        		$data = $this->init_db->fetch_all(15);
        		$data['template_types'] = $this->init_cache->cache_fetch('template_types');
@@ -72,12 +72,12 @@ class Templates extends CI_Controller {
        **/
        function action_save(){
        		try{
-       			$main = $this->input->post('main');
+       			$main = $this->input->get_post('main');
        			
 	       		$this->form_validation->set_rules($this->im->validator_save());
 	       		if($this->form_validation->run()==true){
 	       			$main = $this->init_db->save(array('main'=>$main),$this->im->db_config());
-	       			$this->init_page->pop_redirect('保存成功',site_url('backend/templates/action_list'));
+	       			$this->init_page->pop_redirect('保存成功',site_url('d=backend&c=templates&m=action_list'));
 	       		}else{
               $this->init_page->fetch_css('templates','view',$this->init_page->getRes('css','backend','item/'));
               $this->init_page->fetch_js('templates','view',$this->init_page->getRes('js','backend','item/'));
@@ -85,7 +85,7 @@ class Templates extends CI_Controller {
 	       			$this->init_page->load_backend_view('templates_add',array('main'=>$main,'template_types'=>$t_types));
 	       		}
        		}catch(Exception $e){
-       			$this->init_page->pop_redirect($e->getMessage(),site_url('backend/templates/action_list'));
+       			$this->init_page->pop_redirect($e->getMessage(),site_url('d=backend&c=templates&m=action_list'));
        		}
        		
        	
@@ -96,12 +96,12 @@ class Templates extends CI_Controller {
        **/
        function action_del(){
         	try{
-            $ids = $this->input->post('t_id');
-            $ids = $ids?$ids:$this->input->get('t_id');
+            $ids = $this->input->get_post('t_id');
+            $ids = $ids?$ids:$this->input->get_post('t_id');
         		$this->init_db->delete($ids,$this->im->db_config());		
-        		$this->init_page->pop_redirect('删除成功',site_url("backend/templates/action_list"));		
+        		$this->init_page->pop_redirect('删除成功',site_url("d=backend&c=templates&m=action_list"));		
         	}catch(Excpetion $e){
-        		$this->init_page->pop_redirect($e->getMessage(),site_url("backend/templates/action_list"));		
+        		$this->init_page->pop_redirect($e->getMessage(),site_url("d=backend&c=templates&m=action_list"));		
         	}
         	
        }
@@ -128,7 +128,7 @@ class Templates extends CI_Controller {
 
 
        function tempate_fields_check($str){ 
-          $main = $this->input->post('main');         
+          $main = $this->input->get_post('main');         
           preg_match_all("/\%s/i",$main['t_html'],$s);        
           $flag = count($s[0]) == count(explode(',', $str));
           if (empty($flag))
@@ -151,11 +151,11 @@ class Templates extends CI_Controller {
           //define root_path
           $develop = $this->init_cache->cache_fetch('sys_config','develop',lang_get());
           $init_path = config_item('template_dir').'/front/'.$develop['template'].'/'.lang_get();
-          $t_name = $this->input->get('t_name');
+          $t_name = $this->input->get_post('t_name');
 
-          $root_path = my_encrypt($this->input->get('path'),'DECODE');
+          $root_path = my_encrypt($this->input->get_post('path'),'DECODE');
 
-          $root_path = $root_path ? $root_path:my_encrypt($this->input->get('root_path'),'DECODE');
+          $root_path = $root_path ? $root_path:my_encrypt($this->input->get_post('root_path'),'DECODE');
           $root_path = $root_path ? $root_path:$init_path;
 
           $root_path = realpath($root_path); 
@@ -199,7 +199,7 @@ class Templates extends CI_Controller {
 
        //view add or delete
        function view_add(){
-           $t_file = my_encrypt($this->input->get('path'),'DECODE');
+           $t_file = my_encrypt($this->input->get_post('path'),'DECODE');
            $data = array('main'=>array('t_file'=>$t_file,'t_name'=>basename($t_file),'t_html'=>htmlspecialchars(file_get_contents($t_file)))); 
            $this->init_page->load_backend_view('view_add',$data);
 
@@ -207,7 +207,7 @@ class Templates extends CI_Controller {
 
           //view save
        function view_save(){
-           $main = $this->input->post('main');
+           $main = $this->input->get_post('main');
            file_put_contents($main[t_file],$main[t_html]);
            $this->init_page->backend_redirect('d=backend&c=templates&m=view_list&path='.my_encrypt(dirname($main[t_file]),'ENCODE'),'修改成功');
 

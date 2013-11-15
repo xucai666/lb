@@ -55,7 +55,7 @@ class Product extends CI_Controller {
 		$this->breadcrumb->append_crumb('Product', 'product');
 		$this->breadcrumb->output();
 		$this->load->model('Tree_model');
-		$pid = $this->input->get('pid');
+		$pid = $this->input->get_post('pid');
 		$pid = $pid?$pid:2;
 		$ls = (array)$this->Tree_model->fetch_belong_tree($pid,true);
 		
@@ -177,7 +177,7 @@ class Product extends CI_Controller {
 
 		$this->load->library('cart');	
 		//$this->cart->destroy();
-		$ids = $this->uri->segment(3)?array($this->uri->segment(3)):explode(',',$this->input->get('ids'));
+		$ids = $this->uri->segment(3)?array($this->uri->segment(3)):explode(',',$this->input->get_post('ids'));
 		$ls = $this->db->select('*',false)->from('module_product')->where_in('p_id',$ids)->get()->result_array();
 		$cart_arr =  $this->cart->contents();
 		foreach($ls as $v):
@@ -204,7 +204,7 @@ class Product extends CI_Controller {
 	//购物车更新
 	function good_cart_update(){	
 		$rowid = $this->uri->segment(3);	
-		$qty = $this->input->post('qty');	
+		$qty = $this->input->get_post('qty');	
 		
 		$this->load->library('cart');	
 		$data = array('qty'=>$qty,'rowid'=>$rowid);
@@ -263,7 +263,7 @@ class Product extends CI_Controller {
 	//提交订单
 	
 	function order_save(){	
-		$main = $this->input->post('main');	
+		$main = $this->input->get_post('main');	
 		try{
 			
 			$this->load->library('cart');	

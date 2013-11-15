@@ -42,7 +42,7 @@ class Tree extends CI_Controller{
 
 
 	function action_root_save(){
-		$main = $this->input->post('main');				
+		$main = $this->input->get_post('main');				
 		$data = array('main'=>$main);
 		try{
 			$this->form_validation->set_rules($this->im->valid_config());
@@ -76,7 +76,7 @@ class Tree extends CI_Controller{
 
 
 	function action_root_set(){
-		$this->im->set_root($this->input->get('tree_id'));
+		$this->im->set_root($this->input->get_post('tree_id'));
 		$this->init_page->backend_redirect('tree/action_list');
 
 	}
@@ -90,7 +90,7 @@ class Tree extends CI_Controller{
 	function action_add(){
 		
 		$pids = $this->im->fetch_select($this->im->get_root(),'level_name');
-		$id = $this->input->get('id');
+		$id = $this->input->get_post('id');
 		$main = array();
 		if($id){
 			$main = $this->im->detail($id);
@@ -100,7 +100,7 @@ class Tree extends CI_Controller{
 	}
 
 	function action_save(){
-		$main = $this->input->post('main');
+		$main = $this->input->get_post('main');
 		$main = php_escape($main);
 		$main['treeId'] = $this->im->detail($main[pid],'treeId');
 		$data = array('main'=>$main);
@@ -135,8 +135,8 @@ class Tree extends CI_Controller{
 
 	function action_del(){
 		try{
-			$id = $this->input->post('id');
-            $id = $id?$id:$this->input->get('id');
+			$id = $this->input->get_post('id');
+            $id = $id?$id:$this->input->get_post('id');
 			if(empty($id)) throw new Exception('参数错误');
 			foreach((array)$id as $item){
 				$this->im->delete_tree_node($item);

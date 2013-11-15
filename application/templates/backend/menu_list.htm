@@ -1,6 +1,6 @@
 ﻿<!--{include file="`$dir_backend`/top.htm"}-->
 <div class="nav_title" align="left" ><!--{$lang_menu.menu.list}--></div>
-<div  align="right"><a href="<!--{site_url('d=backend&c=menu&m=action_add')}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
+<div  align="right"><a href="<!--{site_url("d=backend&c=menu&m=action_add")}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
 <div class="search">
 </div>
 <table class="mytable">
@@ -19,18 +19,18 @@
 			\$attrs  = array(
 				"class"=>"link_mod",
 			);
-			echo anchor("d=backend&c=menu&m=action_add/".\$template->tpl_vars["v"]->value["r_id"],"&nbsp;",\$attrs);
+			echo anchor("d=backend&c=menu&m=action_add&r_id=".\$template->tpl_vars["v"]->value["r_id"],"&nbsp;",\$attrs);
 			
 			\$attrs  = array(
 				"class"=>"link_del",
 				"onclick"=>"return confirm('确定删除?');",
 			);
 			
-			echo anchor("d=backend&c=menu&m=action_del/".\$template->tpl_vars["v"]->value["r_id"],"&nbsp;",\$attrs);
+			echo anchor("d=backend&c=menu&m=action_del&r_id=".\$template->tpl_vars["v"]->value["r_id"],"&nbsp;",\$attrs);
 			
 			
 			<!--{/php}-->
-			<a href="<!--{'d=backend&c=menu&m=action_add'|site_url|cat:"?pid=`$v.r_id`"}-->" class="link_add">&nbsp;</a>
+			<a href="<!--{'d=backend&c=menu&m=action_add'|site_url|cat:"&pid=`$v.r_id`"}-->" class="link_add">&nbsp;</a>
 		</td>
 	
 	</tr>

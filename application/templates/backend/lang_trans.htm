@@ -11,23 +11,23 @@
 
 <table class='search'>
 	<tr><td>
-		<form action='<!--{func_site_url segments="d=backend&c=system_manage&m=action_lang_trans"}-->' method="get">
+		<form action='<!--{func_site_url segments="d=backend&c=system_manage&m=action_lang_trans"}-->' method="post">
 			下标		
-			<input type="text" name="lang_key" value="<!--{$smarty.get.lang_key}-->">
+			<input type="text" name="lang_key" value="<!--{$smarty.request.lang_key}-->">
 			关键字：
 		
-			<input type="text" name="lang_val" value="<!--{$smarty.get.lang_val}-->">
+			<input type="text" name="lang_val" value="<!--{$smarty.request.lang_val}-->">
 			语种：
 		
 			<select name="lang_type">
 				<option value=''>请选择</option>
-				<!--{html_options values=$ci_config.support_language output=$ci_config.support_language selected=$smarty.get.lang_type}-->
+				<!--{html_options values=$ci_config.support_language output=$ci_config.support_language selected=$smarty.request.lang_type}-->
 			</select>
 
 			状态:
 			<select name="status">
 				<option value='-1'>请选择</option>
-				<!--{html_options options=$status  selected=$smarty.get.status}-->
+				<!--{html_options options=$status  selected=$smarty.request.status}-->
 			</select>
 			<!--{create_button type="search"}-->
 			<!--{create_button type="trans" url="javascript:run=0;next_trans();;"}-->
@@ -68,7 +68,7 @@
 				<!--{if $item.is_trans}--><img src="<!--{$img_url}-->/yes.gif" /><!--{else}--><a class="a_trans" href="javascript:;" onclick="single_trans('<!--{$key}-->');return false;"><img src="<!--{$img_url}-->/no.gif" border="0" /></a><!--{/if}-->
 				
 			</span>	&nbsp;
-			<script  id="js_<!--{$key}-->" type="text/javascript"  translink="<!--{func_site_url segments="d=backend&c=system_manage&m=action_trans"}-->?type=auto&lang_id=<!--{$item.lang_id}-->&run=<!--{$key}-->" ></script>
+			<script  id="js_<!--{$key}-->" type="text/javascript"  translink="<!--{func_site_url segments="d=backend&c=system_manage&m=action_trans"}-->?type=auto&lang_id=`$item.lang_id`&run=`$key`" ></script>
 			<script language="javascript" type="text/javascript">var js_id_<!--{$key}--> = "<!--{$item.lang_id}-->";</script>
 
 	</td>

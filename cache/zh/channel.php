@@ -12,6 +12,7 @@
     'c_type' => '1',
     'c_dir' => './../',
     'c_img_rotator' => '',
+    'c_seo' => '',
   ),
   12 => 
   array (
@@ -26,6 +27,7 @@
     'c_type' => '2',
     'c_dir' => 'gong_si_jian_jie',
     'c_img_rotator' => '',
+    'c_seo' => '',
   ),
   13 => 
   array (
@@ -40,6 +42,7 @@
     'c_type' => '3',
     'c_dir' => 'xin_wen_zhong_xin',
     'c_img_rotator' => '',
+    'c_seo' => '',
   ),
   14 => 
   array (
@@ -54,6 +57,7 @@
     'c_type' => '3',
     'c_dir' => 'chan_pin_zhan_shi',
     'c_img_rotator' => '',
+    'c_seo' => '',
   ),
   15 => 
   array (
@@ -68,6 +72,7 @@
     'c_type' => '2',
     'c_dir' => '',
     'c_img_rotator' => '',
+    'c_seo' => '',
   ),
   16 => 
   array (
@@ -82,6 +87,7 @@
     'c_type' => '2',
     'c_dir' => '',
     'c_img_rotator' => '',
+    'c_seo' => '',
   ),
   17 => 
   array (
@@ -96,6 +102,7 @@
     'c_type' => '1',
     'c_dir' => '',
     'c_img_rotator' => '',
+    'c_seo' => '',
   ),
   18 => 
   array (
@@ -110,6 +117,7 @@
     'c_type' => '2',
     'c_dir' => '',
     'c_img_rotator' => '',
+    'c_seo' => '',
   ),
   19 => 
   array (
@@ -124,6 +132,7 @@
     'c_type' => '1',
     'c_dir' => '',
     'c_img_rotator' => '',
+    'c_seo' => '',
   ),
   20 => 
   array (
@@ -138,6 +147,7 @@
     'c_type' => '1',
     'c_dir' => '',
     'c_img_rotator' => '',
+    'c_seo' => '',
   ),
   23 => 
   array (
@@ -152,5 +162,6 @@
     'c_type' => '2',
     'c_dir' => 'guan_yu_wo_men',
     'c_img_rotator' => 'http://localhost//lb/uploads/2013-11-07/2013110702140515.jpg||http://www.baidu.com,http://localhost//lb/uploads/2013-11-07/2013110702144819.jpg||http://www.baidu.com,http://localhost//lb/uploads/2013-11-07/2013110702154793.jpg||http://www.baidu.com',
+    'c_seo' => '',
   ),
 );?>

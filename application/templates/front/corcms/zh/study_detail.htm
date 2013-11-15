@@ -35,10 +35,10 @@
           <td height="373" align="left" valign="top" style="padding:18px;line-height:180%;">
           <div style="text-align:right;color:#b0b0b0">作者：<!--{$about.info_author}--> &nbsp;&nbsp; 点击率：<!--{$about.info_view}--> &nbsp;&nbsp; 日期：<!--{$about.info_date}--></div>
           <div style="_height:290px;min-height:290px;"><!--{$about.info_content}--></div>
-        <!--{if $smarty.get.from!='left'}-->
+        <!--{if $smarty.request.from!='left'}-->
         <div align="left" style="margin-top:10px;border-top:1px dashed #999;padding-top:5px;">
         <!--{foreach from=$nav item=v2}-->
-        	<!--{$v2.type}-->：<a href="<!--{$site_url}-->/study/detail/?info_id=<!--{$v2.info_id}-->"><!--{$v2.info_title}--></a><br>
+        	<!--{$v2.type}-->：<a href="<!--{$site_url}-->/study/detail/?info_id=`$v2.info_id`"><!--{$v2.info_title}--></a><br>
          <!--{/foreach}-->        
         </div>
         <!--{/if}-->

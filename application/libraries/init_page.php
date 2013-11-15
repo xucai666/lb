@@ -155,7 +155,7 @@ class Init_page{
 			$next_lang = next_lang($this->lang_type);
 			$next_lang_name  = $cache->cache_fetch("lang_type",$next_lang);			
 			
-			$data['lang_link']  = anchor($next_lang,$next_lang_name);	
+			$data['lang_link']  = anchor(site_url()."/".$next_lang,$next_lang_name);	
 			
 			
 			//预加载配置信息

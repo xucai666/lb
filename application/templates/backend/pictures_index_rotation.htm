@@ -225,7 +225,7 @@
       &nbsp;</td>
       <td align="center">
       <!--{if $item.p_id}-->
-      <a href="<!--{site_url('d=backend&c=pictures&m=action_del_index_rotation&p_id=<!--{$item.p_id}-->')}-->" onclick='return confirm("确定删除?");'> <img src="<!--{$img_url}-->/del.png"></a>
+      <a href="<!--{site_url("d=backend&c=pictures&m=action_del_index_rotation&p_id=`$item.p_id`")}-->" onclick='return confirm("确定删除?");'> <img src="<!--{$img_url}-->/del.png"></a>
       <!--{/if}-->
       &nbsp;</td>
     </tr>

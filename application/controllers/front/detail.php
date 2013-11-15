@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
   * start page for webaccess
   *
@@ -26,7 +26,7 @@ class Detail extends CI_Controller {
 	function index()
 	{
 
- 		$about  = $this->db->select('*',false)->from('infos')->where('info_id',$this->input->get('info_id'))->get()->first_row('array');
+ 		$about  = $this->db->select('*',false)->from('infos')->where('info_id',$this->input->get_post('info_id'))->get()->first_row('array');
  		$develop = $this->db->select('a.*,b.c_title')
  		->from($this->init_db->table('infos'.' as a '))
  		->like('a.info_class_sn','0102')
@@ -52,7 +52,7 @@ class Detail extends CI_Controller {
  			'nav'=>$nav, 			
  		);
 
- 		$this->db->query("update ".$this->init_db->table('infos')." set info_view=info_view+1 where info_id=".$this->input->get('info_id'));
+ 		$this->db->query("update ".$this->init_db->table('infos')." set info_view=info_view+1 where info_id=".$this->input->get_post('info_id'));
  	
 		$this->init_page->load_front_view("detail",$data);
 		

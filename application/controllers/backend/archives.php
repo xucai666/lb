@@ -34,8 +34,8 @@ class Archives extends CI_Controller{
 	 */
 	function action_add(){
 		//查询
-		$info_id = $this->input->get('info_id');
-		$parent_class = $this->input->get('parent_class');
+		$info_id = $this->input->get_post('info_id');
+		$parent_class = $this->input->get_post('parent_class');
 		if($info_id){
 			$main = $this->db->select('*')->from('infos')->where('info_id',$info_id)->get()->first_row('array');		
 			
@@ -74,8 +74,8 @@ class Archives extends CI_Controller{
 	 	try{
 	 		
 	 		//数据
-	 		$main = $this->input->post('main'); 		 		
-			$parent_class = $this->input->post('parent_class');
+	 		$main = $this->input->get_post('main'); 		 		
+			$parent_class = $this->input->get_post('parent_class');
 			$parent_class_info = $this->Category_model->detail($parent_class,'bysn');
 			$class_select  = $this->Category_model->fetch_category_option($parent_class,$parent_class);
 			$class_info = array(
@@ -117,7 +117,7 @@ class Archives extends CI_Controller{
 		 		
 			 		
 		 		
-		 		$this->init_page->pop_redirect('已保存',site_url('backend/archives/action_list/?parent_class='.$parent_class));
+		 		$this->init_page->pop_redirect('已保存',site_url('d=backend&c=archives&m=action_list&parent_class='.$parent_class));
 		 	}else{
 				$data['editor']  = $this->Common_model->editor($main['info_content']);
 		 		$this->init_page->load_backend_view(strtolower($this->act).'_add',$data);
@@ -133,9 +133,9 @@ class Archives extends CI_Controller{
 	//新闻列表
 	
 	function action_list(){
-		$parent_class = $this->input->get('parent_class');
-		$search_class = $this->input->get('search_class');
-		$info_title = $this->input->get('info_title');
+		$parent_class = $this->input->get_post('parent_class');
+		$search_class = $this->input->get_post('search_class');
+		$info_title = $this->input->get_post('info_title');
 		$parent_class_info = $this->Category_model->detail($parent_class,'bysn');
 		$class_select  = $this->Category_model->fetch_category_option($parent_class,$search_class);
 		$class_info = array(
@@ -164,13 +164,13 @@ class Archives extends CI_Controller{
 	
 	function action_del(){
 		try{			
-			$id = $this->input->post("info_id");
-			$id = $id?$id:$this->input->get("info_id");
+			$id = $this->input->get_post("info_id");
+			$id = $id?$id:$this->input->get_post("info_id");
 						
-			$parent_class = $this->input->get('parent_class');
+			$parent_class = $this->input->get_post('parent_class');
 			$this->db->where_in('info_id',$id);
 	 		$this->db->delete($this->init_db->table('infos'));			
-			$this->init_page->pop_redirect('已删除',site_url('backend/'.$this->act.'/action_list/?parent_class='.$parent_class));
+			$this->init_page->pop_redirect('已删除',site_url('d=backend&c='.$this->act.'&m=action_list&parent_class='.$parent_class));
 		}catch(Exception $e){			
 			show_error($e->getMessage());
 		}

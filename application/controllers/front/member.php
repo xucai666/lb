@@ -46,7 +46,7 @@ class Member extends CI_Controller {
 	 	$this->load->model('Common_model','cm');
 	 	try{
 	 		$this->form_validation->set_error_delimiters('<span id="error_span">', '</span>');
-	 		$data = $this->input->post();	 		
+	 		$data = $this->init_form->get_post();	 		
 	 		$this->form_validation->set_rules($this->im->valid_login_rule());
 	 		if($this->form_validation->run()){
 			    $cookie = array(
@@ -89,7 +89,7 @@ class Member extends CI_Controller {
  	function action_register_save(){
  		try{
  			$this->form_validation->set_error_delimiters('<span id="error_span">', '</span>');
-	 		$data = array('main'=>$this->input->post('main'));
+	 		$data = array('main'=>$this->input->get_post('main'));
 	 		$data['main']['m_pass'] = base64_encode($data['main']['m_pass']);
 	 		$this->form_validation->set_rules($this->im->valid_save_rule());
  		    if($this->form_validation->run()){
@@ -113,7 +113,7 @@ class Member extends CI_Controller {
  	function action_register_update(){
  		try{
  			$this->form_validation->set_error_delimiters('<span id="error_span">', '</span>');
-	 		$data = array('main'=>$this->input->post('main'));
+	 		$data = array('main'=>$this->input->get_post('main'));
 	 		if($data['main']['m_pass']){
 	 			$data['main']['m_pass'] = base64_encode($data['main']['m_pass']);
 	 		}else{
@@ -176,7 +176,7 @@ class Member extends CI_Controller {
 	 }
 
 	 function valid_login_m_pass($val){
- 		$this->db->select('*')->from('module_member')->where('m_user',$this->input->post('m_user'));
+ 		$this->db->select('*')->from('module_member')->where('m_user',$this->input->get_post('m_user'));
  		$rs = $this->db->get()->first_row('array');
  		
  		if(base64_encode($val) == $rs['m_pass']){
@@ -209,8 +209,8 @@ class Member extends CI_Controller {
 	 }
 
 	 function valid_password_repeat($val){
-	 		if($val || $this->input->post('m_pass_repeat')){
-		 		if($this->input->post('m_pass_repeat')!=$val){
+	 		if($val || $this->input->get_post('m_pass_repeat')){
+		 		if($this->input->get_post('m_pass_repeat')!=$val){
 		 			return false;
 		 		}else{
 		 			return true;

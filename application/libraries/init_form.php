@@ -69,6 +69,21 @@ if (!defined('BASEPATH')) show_error('No direct script access allowed');
 		return $strval;
 	}
 	
+	function get_post(){
+		$CI = &get_instance();
+		$r = $gets  = $posts = array();
+		$gets = $CI->input->get();
+		$posts = $CI->input->post();
+		if($posts && $gets){
+			$r =  array_merge($gets,$posts);
+		}elseif($gets && empty($posts)){
+			$r = $gets;
+		}elseif(empty($gets) && $posts){
+			$r = $posts;
+		}
+		
+		return $r;
+	}
 	
 	
 	/**

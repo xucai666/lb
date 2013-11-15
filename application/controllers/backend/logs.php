@@ -33,10 +33,10 @@
 	
 		
 		$this->db->select("a.*",false)->from($this->init_db->table('log').' as a ')	
-		->like('a.log_user',$this->input->get('log_user'))		
-		->like('a.log_type',$this->input->get('log_type'))		
+		->like('a.log_user',$this->input->get_post('log_user'))		
+		->like('a.log_type',$this->input->get_post('log_type'))		
 		->order_by("log_id","desc");
-		$this->input->get('log_date') && $this->db->like('a.log_date',$this->input->get('log_date'),'after');
+		$this->input->get_post('log_date') && $this->db->like('a.log_date',$this->input->get_post('log_date'),'after');
 		$data = $this->init_db->fetch_all(100);	
 		$cache_log_types = $this->init_cache->cache_fetch("log_types");
 		foreach($data['list'] as &$v){
@@ -44,7 +44,7 @@
 		}
 		$data = array_merge($data,array(
 				'log_types'=>$this->init_cache->cache_fetch('log_types'),
-				'log_type_default'=>$this->input->get('log_type'),
+				'log_type_default'=>$this->input->get_post('log_type'),
 			)		
 		);
 		
@@ -56,7 +56,7 @@
 	//删除
 	function action_del(){
 		try{
-			$ids = $this->input->post('log_ids');
+			$ids = $this->input->get_post('log_ids');
 			if(empty($ids)){				
 				throw new Exception($this->m_lang['unselect']);
 			}
@@ -71,14 +71,14 @@
 	}
 
 	function action_login_log(){
-			$this->db->select('*',false)->from('log_login')->like('login_user',$this->input->get('login_user'))->like('login_time',$this->input->get('login_time'))->order_by('login_id','desc');
+			$this->db->select('*',false)->from('log_login')->like('login_user',$this->input->get_post('login_user'))->like('login_time',$this->input->get_post('login_time'))->order_by('login_id','desc');
 			$data = $this->init_db->fetch_all(15);
 			$this->init_page->load_backend_view("logs_login_list",$data);
 	}
 
 	function action_login_del(){
 		try{
-			$ids = $this->input->post('login_ids');
+			$ids = $this->input->get_post('login_ids');
 			if(empty($ids)){				
 				throw new Exception($this->m_lang['unselect']);
 			}

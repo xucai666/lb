@@ -20,7 +20,6 @@
 	 * 设置语种 
 	 */
 	function lang_set($lang){	
-	echo $lang;
 		$cookie = array(
                'name'   => 'lang',
                'value'  => $lang,

@@ -1,4 +1,4 @@
-<!--{include file="`$dir_backend`/top.htm"}-->
+﻿<!--{include file="`$dir_backend`/top.htm"}-->
 
 
 <style>
@@ -24,7 +24,7 @@ $("#form_ajax_upload").trigger("submit");
 
 })
 
-var input_id = "<!--{$smarty.get.id}-->";
+var input_id = "<!--{$smarty.request.id}-->";
 // prepare the form when the DOM is ready 
 $(document).ready(function() { 
     var options = { 

@@ -95,7 +95,7 @@ class Download extends CI_Controller {
 	//显示信息
 	function show_archives(){
 		$cache = $this->init_cache->cache_fetch('archives_class');
-		$info_class = $this->input->get('info_class');
+		$info_class = $this->input->get_post('info_class');
 		$data['nav_title'] = $cache[$info_class];		
 		$data['main'] = $this->db->query('select * from '.$this->init_db->table('infos').' where info_class='.$info_class)->first_row('array');
 		
@@ -108,7 +108,7 @@ class Download extends CI_Controller {
 	
 	//新闻列表
 	function archives_list(){		
-		$parent_class = $this->input->get('c_sn');
+		$parent_class = $this->input->get_post('c_sn');
 		$parent_class = $parent_class?$parent_class:'010501';
 		$this->db->select("a.*,b.c_title",false)->from($this->init_db->table('infos').' as a ')
 		->join($this->init_db->table('category').' as b ','a.info_class_sn=b.c_sn')
@@ -141,7 +141,7 @@ class Download extends CI_Controller {
 	function view()
 	{
 		
- 		$about  = $this->db->select('*',false)->from('infos')->where('info_id',$this->input->get('info_id'))->get()->first_row('array');
+ 		$about  = $this->db->select('*',false)->from('infos')->where('info_id',$this->input->get_post('info_id'))->get()->first_row('array');
  		$data['download_class_left'] = $this->im->download_left();
  		$this->load->model("Category_model");
  		$about['class_name'] = $this->Category_model->detail($about['info_class_sn'],'by_c_sn','c_title');
@@ -165,7 +165,7 @@ class Download extends CI_Controller {
 	function view2()
 	{
 		
- 		$about = $this->db->select('*')->from('infos')->where('info_id',$this->input->get("info_id"))->get()->first_row('array');
+ 		$about = $this->db->select('*')->from('infos')->where('info_id',$this->input->get_post("info_id"))->get()->first_row('array');
  		
  		$this->db->query("update ".$this->init_db->table('infos')." set info_download_times=info_download_times+1 where info_id=".$about['info_id']."");
  		$this->Common_model->download(base_url().'/'.$about['info_soft_url']);	

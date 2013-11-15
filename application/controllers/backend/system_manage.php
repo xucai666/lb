@@ -30,6 +30,7 @@ class System_manage extends CI_Controller{
 	 * 修改密码
 	 */
 	function change_password(){
+	
 		$data = array('main'=>$this->Admins_model->fetch_detail(get_cookie('user_id')));
 		$this->init_page->load_backend_view('admins_change_password',$data);
 	}
@@ -38,14 +39,14 @@ class System_manage extends CI_Controller{
 	 *退出系统
 	 */
 	function exit_system(){		
-		$this->init_auth->process_logout(array('user_name','user_id'),'/admin');		
+		$this->init_auth->process_logout(array('user_name','user_id'),'c=admin&m=index');		
 	}
 	
 	/*
 	  *退出系统
 	 */
 	function relogin(){		
-		$this->init_auth->process_logout(array('user_name','user_id'),"admin");		
+		$this->init_auth->process_logout(array('user_name','user_id'),"c=admin&m=index");		
 	}
 	
 	
@@ -55,7 +56,7 @@ class System_manage extends CI_Controller{
 	function save_pass(){		
 		$rules = $this->Admins_model->validator_pwd();
 		$this->form_validation->set_rules($rules);
-		$data = array('main'=>$this->input->post('main'));
+		$data = array('main'=>$this->input->get_post('main'));
 		if($this->form_validation->run()==false){		
 			$this->init_page->load_backend_view('admins_change_password',$data);
 		}else{
@@ -72,7 +73,7 @@ class System_manage extends CI_Controller{
  	 *检查密码是否一致 
  	 */
  	function confirm_password_check($str){
- 		$main  = $this->input->post('main');
+ 		$main  = $this->input->get_post('main');
  		if($main['confirm_password']!=$main['new_password']){
  			$this->form_validation->set_message("confirm_password_check","两次输入的密码不一致！");
  			return false;
@@ -85,7 +86,7 @@ class System_manage extends CI_Controller{
  	 *检查旧密码输入是否正确 
  	 */
  	function old_password_check($str){
- 		$main_form  = $this->input->post('main');
+ 		$main_form  = $this->input->get_post('main');
  		$main_db = $this->Admins_model->fetch_detail($main_form['admin_id']);
  		$db_pass = $this->init_page->my_encrypt($main_db['admin_pass'],"DECODE");
  		if($db_pass != $main_form['old_password']){
@@ -130,7 +131,7 @@ class System_manage extends CI_Controller{
 				$this->load->helper('download');
 				force_download($file_name, $backup);
 			}			
-			$this->init_page->pop_redirect(implode(',',(array)$words_return),site_url("backend/system_manage/db_backup_list"));
+			$this->init_page->pop_redirect(implode(',',(array)$words_return),site_url("d=backend&c=system_manage&m=db_backup_list"));
  
  		}catch(Exception $e){
  			show_error($e->getMessage());
@@ -178,14 +179,14 @@ class System_manage extends CI_Controller{
  	
  	function action_config_save(){
 		$arr = array(
-			'optimize'=>$this->input->post('optimize'),
-			'smtp'=>$this->input->post('smtp'),
-			'contact'=>$this->input->post('contact'),
-			'develop'=>$this->input->post('develop'),
+			'optimize'=>$this->input->get_post('optimize'),
+			'smtp'=>$this->input->get_post('smtp'),
+			'contact'=>$this->input->get_post('contact'),
+			'develop'=>$this->input->get_post('develop'),
 		);		
  		$this->init_cache->cache_create($arr,'sys_config'); 
  		
- 		$this->init_page->pop_redirect('保存成功',site_url("backend/system_manage/basic_config"));
+ 		$this->init_page->pop_redirect('保存成功',site_url("d=backend&c=system_manage&m=basic_config"));
  				
  	}
  	
@@ -202,10 +203,10 @@ class System_manage extends CI_Controller{
  	
  	
  	function action_execute_sql_submit(){
- 		$sql = $this->input->post("sql");
+ 		$sql = $this->input->get_post("sql");
  		$sql = $this->init_db->adjust_sql_str($sql);
  		if(empty($sql)){
- 			$this->init_page->pop_redirect('请输入要执行的sql语句',site_url("backend/system_manage/action_execute_sql"));
+ 			$this->init_page->pop_redirect('请输入要执行的sql语句',site_url("d=backend&c=system_manage&m=action_execute_sql"));
  		} 
  		$query = $this->db->query($sql);
  		if ($query->num_rows() > 0){
@@ -267,12 +268,12 @@ class System_manage extends CI_Controller{
  	 */
  	function action_lang_trans(){
  		$this->db->select('*',false)->from('lang');
- 		$this->input->get('lang_type') && $this->db->where('lang_type',$this->input->get('lang_type'));
- 		$this->input->get('lang_val') && $this->db->like('lang_val',$this->input->get('lang_val'));
- 		$this->input->get('lang_key') && $this->db->like('lang_key',$this->input->get('lang_key'));
+ 		$this->input->get_post('lang_type') && $this->db->where('lang_type',$this->input->get_post('lang_type'));
+ 		$this->input->get_post('lang_val') && $this->db->like('lang_val',$this->input->get_post('lang_val'));
+ 		$this->input->get_post('lang_key') && $this->db->like('lang_key',$this->input->get_post('lang_key'));
  		
  		if(isset($_GET['status']) && $_GET['status']!="-1"){
- 			$this->db->where('is_trans',$this->input->get('status'));
+ 			$this->db->where('is_trans',$this->input->get_post('status'));
  			if(empty($_GET['status'])) $this->db->or_where('is_trans is null');
  		}
  		$this->db->order_by('lang_id','asc');

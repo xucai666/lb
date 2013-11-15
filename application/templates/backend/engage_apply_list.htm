@@ -28,10 +28,10 @@
    
     <td class="l8"> 
       
-      <a  title="<!--{$lang_engage.apply_view}-->"   href="<!--{site_url('d=backend&c=engage&m=action_apply_view&apply_id=<!--{$item.apply_id}-->&parent_class=<!--{$smarty.get.parent_class}-->')}-->" > 
+      <a  title="<!--{$lang_engage.apply_view}-->"   href="<!--{site_url("d=backend&c=engage&m=action_apply_view&apply_id=`$item.apply_id`&parent_class=`$smarty.request.parent_class`")}-->" > 
       <img src="<!--{$img_url}-->/view.png" border="0" > </a> 
       
-      <a  title="<!--{$lang_engage.apply_delete}-->" href="<!--{site_url('d=backend&c=engage&m=action_apply_del&apply_id=<!--{$item.apply_id}-->&parent_class=<!--{$smarty.get.parent_class}-->')}-->" onclick="return confirm('<!--{$lang_engage.apply_confirm_delete}-->?');"> 
+      <a  title="<!--{$lang_engage.apply_delete}-->" href="<!--{site_url("d=backend&c=engage&m=action_apply_del&apply_id=`$item.apply_id`&parent_class=`$smarty.request.parent_class`")}-->" onclick="return confirm('<!--{$lang_engage.apply_confirm_delete}-->?');"> 
       <img src="<!--{$img_url}-->/del1.gif" border="0" > </a> 
       </td>
   </tr>

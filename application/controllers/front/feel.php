@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
   * start page for webaccess
   *
@@ -25,7 +25,7 @@ class Feel extends CI_Controller {
 	 */
 	function index()
 	{
-		$like_sn = $this->input->get('info_class_sn'); 
+		$like_sn = $this->input->get_post('info_class_sn'); 
  		$like_sn = $like_sn?$like_sn:'0105';
  	
 		$this->db->select("a.*",false)->from($this->init_db->table('feel').' as a ')
@@ -55,7 +55,7 @@ class Feel extends CI_Controller {
 	
 	//显示明细
 	function show_archives(){
-		$main = $this->db->query("select * from ".$this->init_db->table('feel').' as a left join '.$this->init_db->table('category').' as b on a.pro_class_sn=b.c_sn'." where a.pro_id=".$this->input->get("id"))->first_row('array');
+		$main = $this->db->query("select * from ".$this->init_db->table('feel').' as a left join '.$this->init_db->table('category').' as b on a.pro_class_sn=b.c_sn'." where a.pro_id=".$this->input->get_post("id"))->first_row('array');
 		
 		//分类目录
  		$category = $this->db->query("select * from ".$this->init_db->table('category')." where c_sn like '0105_%' order by c_order desc ")->result_array();

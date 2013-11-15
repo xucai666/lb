@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
   * start page for webaccess
   *
@@ -24,7 +24,7 @@
 	 * @return [type] [description]
 	 */
 	function index(){	
-		redirect("backend/login/index");
+		redirect("d=backend&c=login&m=index");
 	}
 	
 	
@@ -33,7 +33,7 @@
 	 */
 	
 	function en(){
-		redirect("backend/common/lang_set?lang=en&url=".site_url("admin"));
+		redirect("d=backend&c=common&m=lang_set?lang=en&url=".site_url("admin"));
 		
 	}
 	
@@ -43,7 +43,7 @@
 	 */
 	
 	function zh(){
-		redirect("backend/common/lang_set?lang=zh&url=".site_url("admin"));
+		redirect("d=backend&c=common&m=lang_set?lang=zh&url=".site_url("admin"));
 		
 	}
 	

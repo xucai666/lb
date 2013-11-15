@@ -2,14 +2,14 @@
 <div class="nav_title" align="left" >问题</div>
 
 <div class="search">
-	<form action="<!--{site_url('d=backend&c=ask&m=action_list')}-->" method="get">
+	<form action="<!--{site_url("d=backend&c=ask&m=action_list")}-->" method="post">
 	  
 	问题查找：
 	  <input type="text" name="info_title" value="<!--{$search.info_title}-->" />
 	
 	<input type="submit" name="submit" value="查询" />
 	</form>
-<a href="<!--{site_url('d=backend&c=joinus&m=action_002_001_add')}-->">+添加题目</a>
+<a href="<!--{site_url("d=backend&c=joinus&m=action_002_001_add")}-->">+添加题目</a>
 
 </div>
 
@@ -33,11 +33,11 @@
 	
 	
 	<!--{if $item.more==0}-->
-	<a  title="删除问题" href="<!--{site_url('d=backend&c=joinus&m=action_002_001_del&ask_id=<!--{$item.ask_id}-->')}-->" onclick="return confirm('确定删除?');">
+	<a  title="删除问题" href="<!--{site_url("d=backend&c=joinus&m=action_002_001_del&ask_id=`$item.ask_id`")}-->" onclick="return confirm('确定删除?');">
 		<img src="<!--{$img_url}-->/del1.gif" border="0" >
 	</a>
 	<!--{/if}-->
-	<a  title="修改问题" href="<!--{site_url('d=backend&c=joinus&m=action_002_001_add&ask_id=<!--{$item.ask_id}-->')}-->">
+	<a  title="修改问题" href="<!--{site_url("d=backend&c=joinus&m=action_002_001_add&ask_id=`$item.ask_id`")}-->">
 		<img src="<!--{$img_url}-->/mod1.gif" border="0"  >
 	</a>
 

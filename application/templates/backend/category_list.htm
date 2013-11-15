@@ -27,15 +27,15 @@
 <li class="l3">
 
 	
-	<a  title="<!--{$lang_category.add_sub}-->" href="<!--{site_url('d=backend&c=category&m=action_add&parent=<!--{$item.c_sn}-->')}-->">
+	<a  title="<!--{$lang_category.add_sub}-->" href="<!--{site_url("d=backend&c=category&m=action_add&parent=`$item.c_sn`")}-->">
 	<img src="<!--{$img_url}-->/new.gif" border="0"  >
 	</a>
 	<!--{if $item.more==0&&$item.undel==0}-->
-	<a  title="<!--{$lang_category.delete}-->" href="<!--{site_url('d=backend&c=category&m=action_del&c_id=<!--{$item.c_id}-->')}-->" onclick="return confirm('<!--{$lang_category.delete_confirm}-->');">
+	<a  title="<!--{$lang_category.delete}-->" href="<!--{site_url("d=backend&c=category&m=action_del&c_id=`$item.c_id`")}-->" onclick="return confirm('<!--{$lang_category.delete_confirm}-->');">
 		<img src="<!--{$img_url}-->/del1.gif" border="0" >
 	</a>
 	<!--{/if}-->
-	<a  title="<!--{$lang_category.modify}-->" href="<!--{site_url('d=backend&c=category&m=action_add&c_id=<!--{$item.c_id}-->')}-->">
+	<a  title="<!--{$lang_category.modify}-->" href="<!--{site_url("d=backend&c=category&m=action_add&c_id=`$item.c_id`")}-->">
 		<img src="<!--{$img_url}-->/mod1.gif" border="0"  >
 	</a>
 

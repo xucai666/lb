@@ -33,7 +33,7 @@ class Archive extends CI_Controller{
 	function action_add(){
 		
 
-		$class_id = $this->input->get('info_class');
+		$class_id = $this->input->get_post('info_class');
 		
 		$class_info = array(
 			'class_theme'=>$this->init_cache->cache_fetch($this->act.'_class',$class_id),
@@ -61,7 +61,7 @@ class Archive extends CI_Controller{
 	 	try{
 	 		
 	 		//数据
-	 		$main = $this->input->post('main'); 	
+	 		$main = $this->input->get_post('main'); 	
 	 		$class_id = $main['info_class'];		 	
 			$class_info = array(
 				'class_theme'=>$this->init_cache->cache_fetch($this->act.'_class',$class_id),
@@ -77,7 +77,7 @@ class Archive extends CI_Controller{
 		 		$db_config = $this->im->db_config();		 		 		
 		 		$data_var = $this->init_db->save($data,$db_config);
 		 		
-		 		$this->init_page->pop_redirect('已保存',site_url('backend/archive/action_add/?info_class='.$class_id));
+		 		$this->init_page->pop_redirect('已保存',site_url('d=backend&c=archive&m=action_add&info_class='.$class_id));
 		 	}else{
 				$data['editor']  = $this->Common_model->editor($main['info_content']);
 		 		$this->init_page->load_backend_view(strtolower($this->act).'_add',$data);

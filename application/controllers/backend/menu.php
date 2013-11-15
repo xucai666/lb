@@ -41,7 +41,7 @@
 	 	
  	function action_add(){
  		
- 		$m_id = $this->uri->segment(4);
+ 		$m_id = $this->input->get_post('r_id');
 
  		
 
@@ -52,7 +52,7 @@
 		}else{
 
 			$main['checked'] = "checked=checked";
-			$main['r_pid'] =  $this->input->get('pid');
+			$main['r_pid'] =  $this->input->get_post('pid');
 			
 		}
 		//parent menu	
@@ -71,7 +71,7 @@
  		try{
  			//验证
 		 	$this->form_validation->set_rules($this->im->validator_rights());
-		 	$main = $this->input->post('main');
+		 	$main = $this->input->get_post('main');
 		 	if($this->form_validation->run()==true):	
 		 		if($main['r_id']):
 		 			$main['r_display'] = $main['r_display']?1:0;
@@ -130,7 +130,7 @@
  	}
  	
  	function action_del(){
- 		$this->init_db->delete($this->uri->segment(4),$this->im->db_menu_config());
+ 		$this->init_db->delete($this->input->get_post('r_id'),$this->im->db_menu_config());
  		$this->init_page->backend_redirect('menu/action_list','删除成功');
  	}
  }

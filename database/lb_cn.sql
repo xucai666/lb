@@ -700,7 +700,7 @@ CREATE TABLE `mysys_log_login` (
   `login_ip` varchar(20) DEFAULT NULL,
   `login_user` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`login_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=95 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=97 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -709,6 +709,7 @@ CREATE TABLE `mysys_log_login` (
 
 LOCK TABLES `mysys_log_login` WRITE;
 /*!40000 ALTER TABLE `mysys_log_login` DISABLE KEYS */;
+INSERT INTO `mysys_log_login` VALUES (95,'2013-11-15 14:26:10','Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36','127.0.0.1','admin'),(96,'2013-11-15 14:27:04','Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36','127.0.0.1','admin');
 /*!40000 ALTER TABLE `mysys_log_login` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1418,7 +1419,7 @@ CREATE TABLE `mysys_system_rights` (
   `r_js_action` varchar(150) DEFAULT NULL,
   `r_type` tinyint(4) DEFAULT NULL COMMENT '1标示核心',
   PRIMARY KEY (`r_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=130 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=131 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1632,4 +1633,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-11-14 20:52:27
+-- Dump completed on 2013-11-15 15:02:20

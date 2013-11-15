@@ -1,11 +1,11 @@
 <!--{include file="`$dir_backend`/top.htm"}-->
 <div class="nav_title" align="left" ><!--{$class_info.class_theme}--></div>
-<div  align="right"><a href="<!--{site_url('d=backend&c=download&m=action_add&parent_class=<!--{$smarty.get.parent_class}-->')}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
+<div  align="right"><a href="<!--{site_url("d=backend&c=download&m=action_add&parent_class=`$smarty.request.parent_class`")}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
 
 <table class="search" >
 <tr>
 <td>
-	<form action="<!--{site_url('d=backend&c=download&m=action_list')}-->" method="get">
+	<form action="<!--{site_url("d=backend&c=download&m=action_list")}-->" method="post">
  
  
  
@@ -16,8 +16,8 @@
     </select>
     
      <!--{$lang_download.title}-->： 
-    <input type="text" name="info_title" value="<!--{$smarty.get.info_title}-->" />
-	<input type="hidden" name="parent_class" value="<!--{$smarty.get.parent_class}-->">
+    <input type="text" name="info_title" value="<!--{$smarty.request.info_title}-->" />
+	<input type="hidden" name="parent_class" value="<!--{$smarty.request.parent_class}-->">
 	<input type="submit" name="submit" value=" <!--{$lang_download.query}-->" />
 	</form>
 
@@ -26,7 +26,7 @@
 </table>
 
 <div id='download'>
-  <form id="form2" method="post" action="<!--{site_url('d=backend&c=download&m=action_del&parent_class=<!--{$smarty.get.parent_class}-->')}-->">   
+  <form id="form2" method="post" action="<!--{site_url("d=backend&c=download&m=action_del&parent_class=`$smarty.request.parent_class`")}-->">   
   
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="mytable">
   <thead>
@@ -59,10 +59,10 @@
 
     <td align="center"> 
                 
-            <a  title=" <!--{$lang_download.view}-->"   href="<!--{site_url('d=backend&c=download&m=action_add&info_id=<!--{$item.info_id}-->&parent_class=<!--{$smarty.get.parent_class}-->')}-->" > 
+            <a  title=" <!--{$lang_download.view}-->"   href="<!--{site_url("d=backend&c=download&m=action_add&info_id=`$item.info_id`&parent_class=`$smarty.request.parent_class`")}-->" > 
           <img src="<!--{$img_url}-->/mod1.gif" border="0" > </a> 
           
-          <a  title=" <!--{$lang_download.delete}-->" href="<!--{site_url('d=backend&c=download&m=action_del&info_id=<!--{$item.info_id}-->&parent_class=<!--{$smarty.get.parent_class}-->')}-->" onclick="return confirm(' <!--{$lang_download.confirm_delete}-->');"> 
+          <a  title=" <!--{$lang_download.delete}-->" href="<!--{site_url("d=backend&c=download&m=action_del&info_id=`$item.info_id`&parent_class=`$smarty.request.parent_class`")}-->" onclick="return confirm(' <!--{$lang_download.confirm_delete}-->');"> 
           <img src="<!--{$img_url}-->/del1.gif" border="0" > </a> 
     
     </td>

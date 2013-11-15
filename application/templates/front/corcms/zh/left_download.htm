@@ -1,4 +1,4 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <div id="left_menu">
     	<dl>
             <dt>资源下载</dt>
@@ -7,7 +7,7 @@
                 
                 <!--{foreach from=$download_class_left item=item}-->
                 
-                	<li><a href="<!--{$site_url}-->/download/archives_list?module=6&c_sn=<!--{$item.c_sn}-->"><!--{$item.c_title}--></a></li>
+                	<li><a href="<!--{$site_url}-->/download/archives_list?module=6&c_sn=`$item.c_sn`"><!--{$item.c_title}--></a></li>
                     <!--{/foreach}-->
                 
                 </ul>

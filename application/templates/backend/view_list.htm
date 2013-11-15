@@ -89,10 +89,10 @@ $(function($){
 
 <table class='search'>
 	<tr><td>
-		<form action='<!--{func_site_url segments="d=backend&c=templates&m=view_list"}-->' method="get">
+		<form action='<!--{func_site_url segments="d=backend&c=templates&m=view_list"}-->' method="post">
 			
 			名称：
-			<input type="text" name="t_name" value="<!--{$smarty.get.t_name}-->">
+			<input type="text" name="t_name" value="<!--{$smarty.request.t_name}-->">
 			
 			<input type="hidden" name="root_path"  value="<!--{$root_path}-->"/>
 			<!--{create_button type="search"}-->

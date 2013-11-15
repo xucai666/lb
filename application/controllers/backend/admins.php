@@ -38,7 +38,7 @@
 	 * @return [type] [description]
 	 */
  	function action_add(){ 	
- 		$main_id = $this->uri->segment(4); 	  		
+ 		$main_id = $this->input->get_post('admin_id'); 	  		
  		if($main_id) { 		
 	 		//验证权限
 	 		$this->init_auth->execute_auth(array('35,28,32,121')) ;	
@@ -77,8 +77,8 @@
  	function action_save(){
  		try{ 	
 	 		$this->form_validation->set_rules($this->im->validator_user());
-	 		$main = $this->input->post('main');
-	 		$post  = $this->input->post('main');
+	 		$main = $this->input->get_post('main');
+	 		$post  = $this->input->get_post('main');
 	 		if($this->form_validation->run()==true){
 	 			//保存用户修改信息	 
 	 			if(empty($main['admin_pass'])){
@@ -107,7 +107,7 @@
 		 			'log_desc'=>$log_desc,
 		 		));
 			 		
-	 			$this->init_page->pop_redirect('保存成功',site_url("backend/".$this->act."/action_list"));	
+	 			$this->init_page->pop_redirect('保存成功',site_url("d=backend&c=".$this->act."&m=action_list"));	
 	 		}else{
 	 			$data = array(
 	 				'main'=>$main,
@@ -132,7 +132,7 @@
  			return false; 			
  		}
 		$db_admin = $this->ds->select('admin_user,admin_id',false)->from('admins')->where('admin_user',$str)->get()->first_row('array');
-		$form_admin = $this->input->post('main');
+		$form_admin = $this->input->get_post('main');
 		if(($form_admin['admin_id']!=$db_admin['admin_id'])&&$db_admin){
 			$this->form_validation->set_message('admin_user_check',' 对不起，%s 已存在');
 			return false;
@@ -147,8 +147,8 @@
  	/*检查密码是否一致 
  	 */
  	function confirm_password_check($str){
- 		$main  = $this->input->post('main'); 	
- 		if($main['admin_pass']!=''&&($main['admin_pass']!=$this->input->post('confirm_password'))){
+ 		$main  = $this->input->get_post('main'); 	
+ 		if($main['admin_pass']!=''&&($main['admin_pass']!=$this->input->get_post('confirm_password'))){
  			$this->form_validation->set_message("confirm_password_check","两次输入的密码不一致！");
  			return false;
  		}else{
@@ -165,9 +165,9 @@
 
  		$groups = $this->Roles_model->fetch_roles_list();
  			
- 		$this->ds->like('admin_user',$this->input->get('admin_user'));
- 		$this->ds->like('name',$this->input->get('name'));
- 		$this->ds->like('mobile',$this->input->get('mobile'));
+ 		$this->ds->like('admin_user',$this->input->get_post('admin_user'));
+ 		$this->ds->like('name',$this->input->get_post('name'));
+ 		$this->ds->like('mobile',$this->input->get_post('mobile'));
 	 	$this->ds->select("*",false)->from('admins',false)
 	 	->order_by('admin_id','desc');	 	
 	 	$data = array_merge($this->init_db->fetch_all(),array('group_options'=>$groups)); 
@@ -190,7 +190,7 @@
  			//验证权限
 	 		$this->init_auth->execute_auth(array('35,28,32,122')) ;	
 
- 			$rs = $this->init_db->delete($this->uri->segment(4),$this->im->db_config());
+ 			$rs = $this->init_db->delete($this->input->get_post('admin_id'),$this->im->db_config());
 
  			//添加日志	
 	 		$cf  = $this->im->db_config();	 
@@ -224,7 +224,7 @@
  	 * 查看
  	 */
  	function action_view(){
- 		$data = array('main'=>$this->ds->select('*')->from('admins')->where('admin_id',$this->uri->segment(4))->get()->first_row('array'));
+ 		$data = array('main'=>$this->ds->select('*')->from('admins')->where('admin_id',$this->input->get_post('admin_id'))->get()->first_row('array'));
  		$this->init_page->load_backend_view(strtolower($this->act).'_view',$data);
  	}
  	

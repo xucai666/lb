@@ -64,6 +64,7 @@
   'button_receipt' => 'Have receipt',
   'button_view' => 'View',
   'button_preview' => 'Preview',
+  'button_execute' => 'Execute',
   'success_save' => 'Successfully saved',
   'success_delete' => 'Deleted successfully',
   'success_add' => 'Added successfully',

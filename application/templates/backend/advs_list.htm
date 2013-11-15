@@ -1,12 +1,12 @@
 ﻿<!--{include file="`$dir_backend`/top.htm"}-->
 
 <div class="nav_title" align="left" >广告列表</div>
-<div  align="right"><a href="<!--{site_url('d=backend&c=advs&m=action_add')}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
+<div  align="right"><a href="<!--{site_url("d=backend&c=advs&m=action_add")}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
 
 <div class="search">
-	<form action="<!--{site_url('d=backend&c=advs&m=action_list')}-->" method="get">
+	<form action="<!--{site_url("d=backend&c=advs&m=action_list")}-->" method="post">
     名称： 
-    <input type="text" name="adv_title" value="<!--{$smarty.get.adv_title}-->" />
+    <input type="text" name="adv_title" value="<!--{$smarty.request.adv_title}-->" />
 	
   <!--{create_button type='search'}-->
 	</form>

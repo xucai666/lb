@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
   * start page for webaccess
   *
@@ -29,7 +29,7 @@ class Common extends CI_Controller{
    * ajax调用区域
    */
   function region(){  
-    $pid = $this->input->get("pid");
+    $pid = $this->input->get_post("pid");
     $pid = $pid?$pid:0;
     $list = $this->db->query("SELECT region_id, region_name from ".$this->init_db->table('ecs_region')." where parent_id=" .$pid )->result_array();
     if($list) {
@@ -48,7 +48,7 @@ class Common extends CI_Controller{
   function insert(){
     $this->Common_model->set_uid();
     $uid =  $this->Common_model->get_uid();
-    $array = $this->input->post();
+    $array = $this->init_form->get_post();
     $pic = $array['p_pic'];
     $array['p_pic'] = $uid;
     $tb = array_shift($array);

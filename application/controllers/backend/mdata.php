@@ -34,13 +34,13 @@ class Mdata extends CI_Controller{
 	}
 
 	function action_set_module(){
-		$this->im->set_mid($this->input->get('m_id'));
+		$this->im->set_mid($this->input->get_post('m_id'));
 		$this->init_page->backend_redirect('mdata/action_list');
 	}
 
 
 	function action_add(){
-		$id = $this->input->get('pri_id');
+		$id = $this->input->get_post('pri_id');
 		$module_id = $this->im->get_mid();
 		//fetch fileds
 
@@ -84,7 +84,7 @@ class Mdata extends CI_Controller{
 	}
 
 	function action_view(){
-		$id = $this->input->get('pri_id');
+		$id = $this->input->get_post('pri_id');
 		$module_id = $this->im->get_mid();
 		//fetch fileds
 
@@ -134,7 +134,7 @@ class Mdata extends CI_Controller{
 	}
 
 	function action_view_front(){
-		$id = $this->input->get('pri_id');
+		$id = $this->input->get_post('pri_id');
 		$module_id = $this->im->get_mid();
 		//primary key
 		$primary = $this->m->fetch_primary($module_id,'r_name');
@@ -149,8 +149,8 @@ class Mdata extends CI_Controller{
 	}
 
 	function action_save(){
-		$main = $this->input->post('main');
-		$detail = $this->init_form->post_to_set($this->input->post('detail'));
+		$main = $this->input->get_post('main');
+		$detail = $this->init_form->post_to_set($this->input->get_post('detail'));
 		$data = array('main'=>$main,'detail'=>$detail);
 		try{
 			$rules = $this->im->valid_config($data);
@@ -220,8 +220,8 @@ class Mdata extends CI_Controller{
 		try{
 		
 			$primary = $this->m->fetch_primary($this->im->get_mid(),'r_name');
-			$ids = $this->input->post($primary);
-            $ids = $ids?$ids:$this->input->get('pri_id');
+			$ids = $this->input->get_post($primary);
+            $ids = $ids?$ids:$this->input->get_post('pri_id');
 			if(empty($ids)) throw new Exception(lang('errro_parameter'));
 			$cfg = $this->im->save_config();
 			$rs = $this->init_db->delete($ids,$cfg);
@@ -287,7 +287,7 @@ class Mdata extends CI_Controller{
 
 	function action_list(){	
 
-		$query  = $this->input->post();
+		$query  = $this->init_form->get_post();
 		$size = 6;
 		$data = $this->im->fetch_list($size,$query);
 	
@@ -299,7 +299,7 @@ class Mdata extends CI_Controller{
 
 
 	function action_ajax_list(){
-		$query  = $this->input->post();
+		$query  = $this->init_form->get_post();
 		$size = 6;
 		$data = $this->im->fetch_list($size,$query,true);
 		$data = array_merge($data,array('theme'=>$this->m->main($this->im->get_mid(),'m_name')));

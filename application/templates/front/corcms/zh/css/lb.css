@@ -552,3 +552,7 @@ white-space: nowrap;
 .language-bar a.selected {
 border-bottom: 2px solid #DA333A;
 }
+
+.m_captcha{
+	width:40px;
+}

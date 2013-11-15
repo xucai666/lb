@@ -31,8 +31,8 @@ class Download extends CI_Controller{
 	 */
 	function action_add(){
 		//查询
-		$info_id = $this->input->get('info_id');
-		$parent_class = $this->input->get('parent_class');
+		$info_id = $this->input->get_post('info_id');
+		$parent_class = $this->input->get_post('parent_class');
 		if($info_id){
 			$main = $this->db->select('*')->from('infos')->where('info_id',$info_id)->get()->first_row('array');
 			
@@ -82,8 +82,8 @@ class Download extends CI_Controller{
 	 		
 	 		
 	 		//数据
-	 		$main = $this->input->post('main'); 		 		
-			$parent_class = $this->input->post('parent_class');
+	 		$main = $this->input->get_post('main'); 		 		
+			$parent_class = $this->input->get_post('parent_class');
 			$parent_class_info = $this->Category_model->detail($parent_class,'bysn');
 			$class_select  = $this->Category_model->fetch_category_option($parent_class,$parent_class);
 			$class_info = array(
@@ -126,7 +126,7 @@ class Download extends CI_Controller{
 		 		$db_config = $this->im->db_config(); 
 		 		$data['main']['pro_id'] = implode(",",$data['main']['pro_id']);
 		 		$data_var = $this->init_db->save($data,$db_config);
-		 		$this->init_page->pop_redirect('已保存',site_url('backend/'.$this->act.'/action_list/?parent_class='.$parent_class));
+		 		$this->init_page->pop_redirect('已保存',site_url('d=backend&c='.$this->act.'&m=action_list&parent_class='.$parent_class));
 		 	}else{
 				$data['editor']  = $this->Common_model->editor($main['info_content']);
 		 		$this->init_page->load_backend_view(strtolower($this->act).'_add',$data);
@@ -142,8 +142,8 @@ class Download extends CI_Controller{
 	//新闻列表
 	
 	function action_list(){
-		$parent_class = $this->input->get('parent_class');
-		$search_class = $this->input->get('search_class');
+		$parent_class = $this->input->get_post('parent_class');
+		$search_class = $this->input->get_post('search_class');
 		$parent_class_info = $this->Category_model->detail($parent_class,'bysn');
 		$class_select  = $this->Category_model->fetch_category_option($parent_class,$search_class);
 		$class_info = array(
@@ -158,7 +158,7 @@ class Download extends CI_Controller{
 		->like('a.info_class_sn',$parent_class,'after')
 		->like('a.info_class_sn',$search_class,'after');
 		
-		$query_pro_id = $this->input->get('pro_id');
+		$query_pro_id = $this->input->get_post('pro_id');
 		$query_pro_id && $this->db->where("pro_id",$query_pro_id,false);
 
 		$this->db->order_by("info_id","desc");
@@ -173,7 +173,7 @@ class Download extends CI_Controller{
 		array(
 			'class_info'=>$class_info,
 			'product_options'=>$pro_options,
-			'product_select'=>$this->input->get('pro_id'),
+			'product_select'=>$this->input->get_post('pro_id'),
 		)
 		);	
 		$pro_all = implode(',',(array)array_re_index($data['list'],'pro_id','pro_id'));
@@ -189,12 +189,12 @@ class Download extends CI_Controller{
 	
 	function action_del(){
 		try{			
-			$id = $this->input->post("info_id");
-			$id = $id?$id:$this->input->get("info_id");				
-			$parent_class = $this->input->get('parent_class');		
+			$id = $this->input->get_post("info_id");
+			$id = $id?$id:$this->input->get_post("info_id");				
+			$parent_class = $this->input->get_post('parent_class');		
 			$this->db->where_in('info_id',$id);
 	 		$this->db->delete($this->init_db->table('infos'));			
-			$this->init_page->pop_redirect('已删除',site_url('backend/'.$this->act.'/action_list/?parent_class='.$parent_class));
+			$this->init_page->pop_redirect('已删除',site_url('d=backend&c='.$this->act.'&m=action_list&parent_class='.$parent_class));
 		}catch(Exception $e){			
 			show_error($e->getMessage());
 		}

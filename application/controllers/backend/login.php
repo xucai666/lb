@@ -55,15 +55,15 @@ class Login extends CI_Controller {
 			  else{				  	
 				  	$select_config  = array(
 			 			'primary_id'=>'admin_user',
-			 			'primary_val'=>$this->input->post("user_name"),
+			 			'primary_val'=>$this->input->get_post("user_name"),
 			 			'table_name'=>$this->init_db->table('admins'),
 		 			);	
 		 			
 			  		$login_info_temp = $this->db->select('a.*,b.rights',false)->from($this->init_db->table('admins').' as a')->join($this->init_db->table('roles').' as b','a.group_id=b.role_id','`')
-			  		->where('a.admin_user','\''.$this->input->post("user_name").'\'',false)->get()->result_array();
+			  		->where('a.admin_user','\''.$this->input->get_post("user_name").'\'',false)->get()->result_array();
 			  		$login_info = $login_info_temp[0];
 			  		$this->init_auth->process_login(array("user_name"=>$login_info['admin_user'],"user_id"=>$login_info['admin_id']));
-			  		$this->init_page->pop_redirect(null,site_url("backend/login/center"),'parent');
+			  		$this->init_page->pop_redirect(null,site_url("d=backend&c=login&m=center"),'parent');
 			  }
 			
 		}catch(Exception $e){
@@ -83,7 +83,7 @@ class Login extends CI_Controller {
 			//检查锁屏状态
 			$lock_screen = $this->session->userdata('lock_screen');	
 			if(isset($lock_screen) && $lock_screen==1) {
-				$this->init_auth->process_logout(array('user_name','user_id'),'/admin');	
+				$this->init_auth->process_logout(array('user_name','user_id'),'c=admin&m=index');	
 			}
 
 			$this->init_page->fetch_js('artdialog/jquery.artDialog','view',getRootUrl('js','backend'));	
@@ -132,7 +132,7 @@ class Login extends CI_Controller {
 	function user_name_check($str)
 	{
 		
-		$group_id = $this->input->post('group_id');
+		$group_id = $this->input->get_post('group_id');
 		$user_flag = $this->db->select('count(1) as user_flag',false)->from($this->init_db->table('admins'))->where('admin_user',$str)
 		->where('group_id in','(1,2,3,4)',false)->get()->first_row('array');
 		if ($user_flag['user_flag']==0)
@@ -153,7 +153,7 @@ class Login extends CI_Controller {
 		
 	
 		 
-		$db_temp = $this->db->select('admin_pass',false)->from($this->init_db->table('admins'))->where('admin_user',$this->input->post('user_name'))->get()->result_array();
+		$db_temp = $this->db->select('admin_pass',false)->from($this->init_db->table('admins'))->where('admin_user',$this->input->get_post('user_name'))->get()->result_array();
 		$admin_pass = $db_temp[0]['admin_pass'];
 		if(empty($admin_pass)) {
 			$this->form_validation->set_message('user_pass_check','');
@@ -175,7 +175,7 @@ class Login extends CI_Controller {
 	
  	//验证码
  	function user_captcha_check(){ 	
- 		if(strtolower($this->session->userdata('captcha_backend'))!=strtolower($this->input->post('captcha'))){
+ 		if(strtolower($this->session->userdata('captcha_backend'))!=strtolower($this->input->get_post('captcha'))){
  			$this->form_validation->set_message('user_captcha_check',$this->m_lang->inp_pardon.'，'.$this->m_lang->inp_error);
 			return FALSE;
  			
@@ -263,12 +263,12 @@ class Login extends CI_Controller {
 		
 		
 
-		$rs = $this->db->select('admin_pass',false)->from('admins')->where('admin_user',$this->input->get('lock_user'))->get()->first_row('array');
+		$rs = $this->db->select('admin_pass',false)->from('admins')->where('admin_user',$this->input->get_post('lock_user'))->get()->first_row('array');
 		$admin_pass = $rs['admin_pass'];
 		
 		$de_str = $this->init_page->my_encrypt($admin_pass,"DECODE");	
 			
-		if ($this->input->get('lock_password') != $de_str)
+		if ($this->input->get_post('lock_password') != $de_str)
 		{
 			
 			exit('2');

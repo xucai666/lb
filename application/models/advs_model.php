@@ -78,7 +78,7 @@ class Advs_model extends CI_Model{
 	function fetch_list(){	
 			$rs = $this->db->select('a.*,count(b.detail_id) as pic_stat',false)
  			->from($this->init_db->table('advs').' as a ')
- 			->like('a.adv_title',$this->input->get('adv_title'))
+ 			->like('a.adv_title',$this->input->get_post('adv_title'))
  			->join($this->init_db->table('adv_detail').' as b','a.adv_id=b.adv_id','left')
  			->group_by('a.adv_id')
  			->order_by('a.adv_id','desc');
@@ -91,8 +91,8 @@ class Advs_model extends CI_Model{
 		$config = config_item('advs_files');
 		$this->Common_model->mkdirs($config['upload_path']);
 		$this->load->library('upload');						
-		$detail = $this->input->post('detail');	
-		$main = $this->input->post('main');	
+		$detail = $this->input->get_post('detail');	
+		$main = $this->input->get_post('main');	
 		$file_s = $_FILES;
 			
 			
@@ -112,7 +112,7 @@ class Advs_model extends CI_Model{
 		$_FILES = $file_s_new;	
 		foreach((array)$_FILES as $key=>$v){
 			$index = $key;
-			@unlink($this->input->post('adv_pic_'.$index));	
+			@unlink($this->input->get_post('adv_pic_'.$index));	
 			$this->upload->initialize($config);		
 			if(!$this->upload->do_upload($key)){	
 

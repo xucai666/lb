@@ -1,4 +1,4 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background:#e60012;">
   <tr>
     <td width="16"><img src="<!--{$img_url}-->/index_25.jpg" width="16" height="27" alt="" /></td>
@@ -16,7 +16,7 @@
      
      <!--{foreach from=$category item=v}-->
      
-      <tr><td><a href="<!--{$site_url}-->/engage/?eg_job_class=<!--{$v.c_sn}-->"><!--{$v.c_title}--></a></td></tr>
+      <tr><td><a href="<!--{$site_url}-->/engage/?eg_job_class=`$v.c_sn`"><!--{$v.c_title}--></a></td></tr>
       
       		
 		<!--{/foreach}-->

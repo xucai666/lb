@@ -51,8 +51,8 @@
 	 */
 	function detail()
 	{
-		if($this->input->get("eg_id")){		
-				$main = $this->db->select('*',false)->from('engage')->where('eg_id',$this->input->get('eg_id'))->get()->first_row('array');
+		if($this->input->get_post("eg_id")){		
+				$main = $this->db->select('*',false)->from('engage')->where('eg_id',$this->input->get_post('eg_id'))->get()->first_row('array');
 				$edu_level = $this->init_cache->cache_fetch('edu_level');
 		}
 					
@@ -90,13 +90,13 @@
 		try{
 		
 
-			$eg_id = $this->input->get('eg_id');
+			$eg_id = $this->input->get_post('eg_id');
 			if($eg_id){		
 				
-				$main = $this->db->select('*',false)->from('engage')->where('eg_id',$this->input->get('eg_id'))->get()->first_row('array');
+				$main = $this->db->select('*',false)->from('engage')->where('eg_id',$this->input->get_post('eg_id'))->get()->first_row('array');
 				$edu_level = $this->init_cache->cache_fetch('edu_level');
 				
-				$email = $this->input->post("email");
+				$email = $this->input->get_post("email");
 				
 				$this->load->library('email');
 
@@ -166,7 +166,7 @@
 		$this->init_page->fetch_js(array('jscript','common'),'view',$this->init_page->getRes('js','front'));
 		$this->load->model('Engage_model');
 		
-		$eg_id = $this->input->get('eg_id');
+		$eg_id = $this->input->get_post('eg_id');
 		
 		
 		$engage = $this->db->select('*',false)->from('engage')->where('eg_id',$eg_id)->get()->first_row('array');
@@ -195,7 +195,7 @@
 	//职位申请
 	function action_apply2(){
 		
-		$eg_id = $this->input->get('eg_id');
+		$eg_id = $this->input->get_post('eg_id');
 		$data = array(
 		
 			'eg_id'=>$eg_id,
@@ -213,8 +213,8 @@
 	function action_apply_save(){		
 		try{
 			$this->load->model('Engage_model');
-			$main = $this->input->post('main');
-			$main['l_place'] = $this->Common_model->fetchPostArrea($this->input->post('area'));
+			$main = $this->input->get_post('main');
+			$main['l_place'] = $this->Common_model->fetchPostArrea($this->input->get_post('area'));
 			$data = array(			
 				'eg_id'=>$eg_id,
 				

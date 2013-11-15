@@ -48,7 +48,7 @@ $(function($){
   $('#do_shop').click(function(){     
 
    var s =  $('input.drop_box').map(function() { return $(this).prop("checked")==true?$(this).val():null; }).get();
-    location.href='<!--{site_url('product/good_cart_add')}-->?ids='+s;
+    location.href='<!--{site_url("product/good_cart_add")}-->?ids='+s;
 
   })
 

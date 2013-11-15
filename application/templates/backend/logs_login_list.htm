@@ -3,16 +3,16 @@
 
 <table class="search"   style="width:100%">
 <tr><td>
-	<form action="<!--{site_url('d=backend&c=logs&m=action_login_log')}-->" method="get">   
+	<form action="<!--{site_url("d=backend&c=logs&m=action_login_log")}-->" method="post">   
     <!--{$lang_log.operator}-->：
-        <input type="text" name="login_user" value="<!--{$smarty.get.login_user}-->" />
+        <input type="text" name="login_user" value="<!--{$smarty.request.login_user}-->" />
 
     <!--{$lang_log.module_name}-->：
     
     
   
     <!--{$lang_log.date}-->：
-        <input type="text" name="login_time" size="10" readonly="readonly" onclick="WdatePicker()" class="Wdate" value="<!--{$smarty.get.login_time}-->" />      
+        <input type="text" name="login_time" size="10" readonly="readonly" onclick="WdatePicker()" class="Wdate" value="<!--{$smarty.request.login_time}-->" />      
         
 
         <!--{create_button type='search'}-->
@@ -24,7 +24,7 @@
 <br />
 
 
-<form id="form1" name="form1" method="post" action="<!--{site_url('d=backend&c=logs&m=action_login_del')}-->">
+<form id="form1" name="form1" method="post" action="<!--{site_url("d=backend&c=logs&m=action_login_del")}-->">
 
 
 <table width="100%" class="mytable" >

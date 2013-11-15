@@ -434,7 +434,7 @@ class Tree_model extends CI_Model{
 
 
 	function cache_create(){
-		$arr =$this->db->select('id,treeId,pid,orderId,code,name',false)->select('LEVEL,CONCAT(REPEAT("│ ",LEVEL-1),"├─",NAME) as level_name',false)->from('tree_node')->where('treeId',$this->im->get_root())->like('name',$this->input->get('name'))->order_by('leftId','asc')->get()->result_array();
+		$arr =$this->db->select('id,treeId,pid,orderId,code,name',false)->select('LEVEL,CONCAT(REPEAT("│ ",LEVEL-1),"├─",NAME) as level_name',false)->from('tree_node')->where('treeId',$this->im->get_root())->like('name',$this->input->get_post('name'))->order_by('leftId','asc')->get()->result_array();
 		$arr = array_re_index($arr,'id');	
 		$this->init_cache->cache_create($arr,'tree_'.$this->get_root());
 	}

@@ -52,15 +52,15 @@
 	 	try{
 	 		
 	 		//数据
-	 		$main = $this->input->post('main'); 		 	
+	 		$main = $this->input->get_post('main'); 		 	
 	 		$data =  array(
 	 			'main'=>$main,
 	 		);			
-	 		$this->input->post('is_feed') &&  $data['main']['ms_feed_date'] = date('Y-m-d H:i:s');
+	 		$this->input->get_post('is_feed') &&  $data['main']['ms_feed_date'] = date('Y-m-d H:i:s');
 	 		
 	 		$this->init_db->save($data,$this->im->db_config());
 	 		//echo "保存成功";
-	 		if($this->input->post('is_feed')) myalert('保存成功!');
+	 		if($this->input->get_post('is_feed')) myalert('保存成功!');
 	 		$this->init_page->pop_redirect('保存成功',"javascript:;");	 	
 	 		
 	 	}catch(Exception $e){
@@ -74,7 +74,7 @@
 	function action_del(){
 		
 		try{
-	 		$this->db->where("ms_id",$this->input->get('ms_id'));
+	 		$this->db->where("ms_id",$this->input->get_post('ms_id'));
 			$this->db->delete($this->init_db->table("message"));
 	 		$this->init_page->backend_redirect($this->act.'/action_list','删除成功');	 	
 	 		

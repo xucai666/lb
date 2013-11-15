@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
@@ -59,9 +59,9 @@ class Alipay extends CI_Controller {
          * 必填参数
          */
         $out_trade_no = local_to_gmt(now()); // 唯一订单号，这里生成了一个 Unix 时间的例子
-        $subject = $this->input->post('subject', TRUE); // 订单名称，显示在支付宝收银台里的“商品名称”里，显示在支付宝的交易管理的“商品名称”的列表里。
-        $body = $this->input->post('body', TRUE); // 订单描述、订单详细、订单备注，显示在支付宝收银台里的“商品描述”里。
-        $total_fee = $this->input->post('total_fee', TRUE); // 订单总金额，显示在支付宝收银台里的“应付总额”里，可以有两位小数。
+        $subject = $this->input->get_post('subject', TRUE); // 订单名称，显示在支付宝收银台里的“商品名称”里，显示在支付宝的交易管理的“商品名称”的列表里。
+        $body = $this->input->get_post('body', TRUE); // 订单描述、订单详细、订单备注，显示在支付宝收银台里的“商品描述”里。
+        $total_fee = $this->input->get_post('total_fee', TRUE); // 订单总金额，显示在支付宝收银台里的“应付总额”里，可以有两位小数。
 
         /**
          * 扩展参数

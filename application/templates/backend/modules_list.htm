@@ -7,9 +7,9 @@
 		<form action='<!--{func_site_url segments="d=backend&c=modules&m=action_list"}-->' method="post">
 			<li>
 			模块名称：
-			<input type="text" name="m_name" value="<!--{$smarty.get.m_name}-->">			
+			<input type="text" name="m_name" value="<!--{$smarty.request.m_name}-->">			
 			数据表：
-			<input type="text" name="m_tb" value="<!--{$smarty.get.m_tb}-->">
+			<input type="text" name="m_tb" value="<!--{$smarty.request.m_tb}-->">
 			</li>
 			<li><!--{create_button type="search"}--></li>
 		</form>

@@ -66,7 +66,7 @@
 				'class'=>'link_view',
 				'target'=>'_blank',
 			);
-			echo anchor('d=backend&c=admins&m=action_view/'.\$template->tpl_vars["v"]->value["admin_id"],'&nbsp;',\$attrs);
+			echo anchor('d=backend&c=admins&m=action_view&admin_id='.\$template->tpl_vars["v"]->value["admin_id"],'&nbsp;',\$attrs);
 			 <!--{/php}-->
 			
 
@@ -75,9 +75,9 @@
 				\$attrs  = array(
 					'class'=>'link_mod',
 				);
-				echo anchor('d=backend&c=admins&m=action_add/'.\$template->tpl_vars["v"]->value["admin_id"],'&nbsp;',\$attrs);
+				echo anchor('d=backend&c=admins&m=action_add&admin_id='.\$template->tpl_vars["v"]->value["admin_id"],'&nbsp;',\$attrs);
 				<!--{/php}-->
-				<a  href='<!--{func_site_url segments="d=backend&c=admins&m=action_delete/`$v.admin_id`"}-->' onclick="return confirm('<!--{$lang_admins.delete_confirm}-->')" class="link_del">&nbsp;</a>
+				<a  href='<!--{func_site_url segments="d=backend&c=admins&m=action_delete&admin_id=`$v.admin_id`"}-->' onclick="return confirm('<!--{$lang_admins.delete_confirm}-->')" class="link_del">&nbsp;</a>
                 <!--{/if}-->
            
 			

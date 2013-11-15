@@ -97,6 +97,7 @@
 		$lang['button_receipt']					 = '已收货';
 		$lang['button_view']					 = '查看';
 		$lang['button_preview']					 = '预览';
+		$lang['button_execute']					 = '执行';
 
 		//save
 		$lang['success_save']					 = '保存成功';

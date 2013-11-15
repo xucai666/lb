@@ -26,7 +26,7 @@ class Fields extends CI_Controller{
 	function action_add(){
 		$fields_types = $this->init_cache->cache_fetch('fields_types');
 		$fields_ext = $this->init_cache->cache_fetch('fields_ext');
-		$f_id = $this->input->get('f_id');
+		$f_id = $this->input->get_post('f_id');
 		$main = array();
 		if($f_id){
 			$main = $this->im->detail($f_id);
@@ -39,7 +39,7 @@ class Fields extends CI_Controller{
 	function action_save(){
 		$fields_types = $this->init_cache->cache_fetch('fields_types');
 		$fields_ext= $this->init_cache->cache_fetch('fields_ext');
-		$data = array('main'=>$this->input->post('main'),'fields_types'=>$fields_types,'fields_ext'=>$fields_ext);
+		$data = array('main'=>$this->input->get_post('main'),'fields_types'=>$fields_types,'fields_ext'=>$fields_ext);
 		try{
 			$this->form_validation->set_rules($this->im->valid_config());
 			if($this->form_validation->run()){
@@ -71,8 +71,8 @@ class Fields extends CI_Controller{
 
 	function action_del(){
 		try{
-			$f_id = $this->input->post('f_id');
-            $f_id = $f_id?$f_id:$this->input->get('f_id');
+			$f_id = $this->input->get_post('f_id');
+            $f_id = $f_id?$f_id:$this->input->get_post('f_id');
 			if(empty($f_id)) throw new Exception(lang('fields_parameter_error'));
 			$rs = $this->init_db->delete($f_id,$this->im->save_config());
 			//insert log
@@ -97,9 +97,9 @@ class Fields extends CI_Controller{
 	function action_list(){
 		$fields_types = $this->init_cache->cache_fetch('fields_types');
 		$fields_ext = $this->init_cache->cache_fetch('fields_ext');
-		$f_type = $this->input->post('f_type');
-		$f_ext = $this->input->post('f_ext');
-		$this->db->select('*',false)->from('module_fields')->like('f_name',$this->input->post('f_name'));
+		$f_type = $this->input->get_post('f_type');
+		$f_ext = $this->input->get_post('f_ext');
+		$this->db->select('*',false)->from('module_fields')->like('f_name',$this->input->get_post('f_name'));
 		if($f_type) $this->db->where('f_type',$f_type);
 		if($f_ext) $this->db->where('f_ext',$f_ext);
 		$this->db->order_by('f_id','desc');
@@ -113,7 +113,7 @@ class Fields extends CI_Controller{
 
 	function action_view(){
 		$fields_types = $this->init_cache->cache_fetch('fields_types');
-		$data = array('main'=>$this->im->detail($this->input->get('f_id')),'fields_types'=>$fields_types);
+		$data = array('main'=>$this->im->detail($this->input->get_post('f_id')),'fields_types'=>$fields_types);
 		$this->init_page->load_backend_view('fields_view',$data);
 	}
 }

@@ -8,15 +8,15 @@
 			字段类型：
 			<select name="f_type">
 				<option value=''>请选择</option>
-				<!--{html_options options=$fields_types selected=$smarty.get.f_type}-->
+				<!--{html_options options=$fields_types selected=$smarty.request.f_type}-->
 			</select>
 			属性：
 			<select name="f_ext">
 				<option value=''>请选择</option>
-				<!--{html_options options=$fields_ext selected=$smarty.get.f_ext}-->
+				<!--{html_options options=$fields_ext selected=$smarty.request.f_ext}-->
 			</select>
 			字段名称：
-			<input type="text" name="f_name" value="<!--{$smarty.get.f_name}-->">
+			<input type="text" name="f_name" value="<!--{$smarty.request.f_name}-->">
 			
 			<!--{create_button type="search"}-->
 			

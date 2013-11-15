@@ -19,7 +19,7 @@ class Advs extends CI_Controller{
 		$this->init_auth->execute_auth();
 		$this->load->model('Advs_model'); 
 		$this->load->model('Category_model'); 
-		$this->parent_cat = $this->input->get('parent_cat');
+		$this->parent_cat = $this->input->get_post('parent_cat');
 		$this->parent_cat_detail  =$this->Category_model->detail($this->parent_cat,'c_sn');
 		$this->im = $this->Advs_model;
 		$this->act = 'Advs';
@@ -32,9 +32,9 @@ class Advs extends CI_Controller{
 	 */
 	function action_add(){
 		//查询
-		$adv_id = $this->input->get('adv_id');
+		$adv_id = $this->input->get_post('adv_id');
 		if($adv_id){
-			$main = $this->db->select('*')->from('advs')->where('adv_id',$this->input->get('adv_id'))->get()->first_row('array');
+			$main = $this->db->select('*')->from('advs')->where('adv_id',$this->input->get_post('adv_id'))->get()->first_row('array');
 			$detail = $this->db->query("select * from ".$this->init_db->table('adv_detail')." where adv_id=".$adv_id)->result_array();
 		}else{
 			
@@ -61,8 +61,8 @@ class Advs extends CI_Controller{
 	 function action_save(){
 	 	try{		 	
 	 		 //数据
-	 		$main = $this->input->post('main');	
-	 		$detail = $this->input->post('detail');	
+	 		$main = $this->input->get_post('main');	
+	 		$detail = $this->input->get_post('detail');	
 	 		
 	 		$data['main'] = $main;
 		 	//验证
@@ -77,7 +77,7 @@ class Advs extends CI_Controller{
 
 				$adv_show =  "document.write('".str_replace(array("\r","\n"),array('',''),addslashes($adv_show))."');";
 				MakeHtmlFile(FCPATH.config_item('html_root').'/js/zh_'.$adv_id.'.js',$adv_show);	
-		 		$this->init_page->pop_redirect('已保存',site_url('backend/advs/action_list/?parent_cat='.$main['info_class_sn']));
+		 		$this->init_page->pop_redirect('已保存',site_url('d=backend&c=advs&m=action_list&parent_cat='.$main['info_class_sn']));
 		 	}else{
 		 	
 		 		$data['detail'] = array_pad((array)$this->init_form->post_to_set($detail),2,'');
@@ -92,7 +92,7 @@ class Advs extends CI_Controller{
 	 }
 	
 	 function action_view(){
-	 	 $adv_id   = $this->input->get('adv_id');
+	 	 $adv_id   = $this->input->get_post('adv_id');
 	 	 $data['adv_url'] = base_url().config_item('html_root').'/js/zh_'.$adv_id.'.js';
 		 $this->init_page->load_backend_view('advs_view',$data);	
 	 }
@@ -124,8 +124,8 @@ class Advs extends CI_Controller{
 	 */
 	 function action_del(){
 	 	try{
-			$this->init_db->delete($this->input->get('adv_id'),$this->im->db_config());
-			$this->init_page->pop_redirect('已删除',site_url('backend/advs/action_list/'));
+			$this->init_db->delete($this->input->get_post('adv_id'),$this->im->db_config());
+			$this->init_page->pop_redirect('已删除',site_url("d=backend&c=advs&m=action_list"));
 		 	
 	 		
 	 	}catch(Exception $e){

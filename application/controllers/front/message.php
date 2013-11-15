@@ -74,7 +74,7 @@ class Message extends CI_Controller {
 		try{
 	 		
 		 	@session_start();
-			if(strtolower($_SESSION['IMGCODE'])!=strtolower($this->input->post('captcha'))){
+			if(strtolower($_SESSION['IMGCODE'])!=strtolower($this->input->get_post('captcha'))){
 				throw new Exception('验证码输入错误');
 				
 			}

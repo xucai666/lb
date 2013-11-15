@@ -31,8 +31,8 @@ class Friendlink extends CI_Controller{
 	function action_add(){
 		
 		//查询
-		$link_id = $this->input->get('link_id');
-		$parent_class = $this->input->get('parent_class');
+		$link_id = $this->input->get_post('link_id');
+		$parent_class = $this->input->get_post('parent_class');
 		if($link_id){
 
 			$main = $this->db->select('*',false)->from('friendlink')->where('link_id',$link_id)->get()->first_row('array');		
@@ -55,7 +55,7 @@ class Friendlink extends CI_Controller{
 	 	try{
 	 		
 	 		//数据
-	 		$main = $this->input->post('main'); 		 		
+	 		$main = $this->input->get_post('main'); 		 		
 			$data  = array(
 				'main'=>$main,
 			);
@@ -83,7 +83,7 @@ class Friendlink extends CI_Controller{
 			 }			
 			 
 	 		$this->init_db->save($data,$this->im->db_config());
-	 		$this->init_page->pop_redirect('已保存',site_url('backend/'.$this->act.'/action_list/'));
+	 		$this->init_page->pop_redirect('已保存',site_url("d=backend&c='.$this->act.'&m=action_list"));
 		 	}else{
 				$data['editor']  = $this->Common_model->editor($main['link_content']);
 		 		$this->init_page->load_backend_view(strtolower($this->act).'_add',$data);
@@ -102,7 +102,7 @@ class Friendlink extends CI_Controller{
 					
 		$this->init_page->fetch_css(array('backend_link'));
 		$this->db->select("a.*",false)->from($this->table.' as a ')
-		->like('a.link_title',$this->input->get('link_title'))
+		->like('a.link_title',$this->input->get_post('link_title'))
 		->order_by("link_id","desc");
 		$data = $this->init_db->fetch_all(15);	
 		$this->init_page->load_backend_view(strtolower($this->act)."_list",$data);
@@ -112,7 +112,7 @@ class Friendlink extends CI_Controller{
 	
 	function action_del(){
 		try{			
-			$id  = $this->input->get("link_id");	
+			$id  = $this->input->get_post("link_id");	
 			$this->db->where('link_id',$id);
 	 		$this->db->delete($this->table);			
 			$this->init_page->pop_redirect('已删除',site_url('backend/'.$this->act.'_list'));

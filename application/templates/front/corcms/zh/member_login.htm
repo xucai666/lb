@@ -13,9 +13,9 @@
         <h1 align="center"><!--{lang('mb_login2')}--></h1>
        <form method="post" action="<!--{'front/member/action_login'|site_url}-->">
        <ul>
-           <li><!--{lang('mb_uname')}-->：<input type="text" name="m_user" value="<!--{$m_user}-->"/><!--{"m_user"|form_error}--></li>
-           <li> <!--{lang('mb_pwd2')}-->：<input type="password" name="m_pass" /><!--{"m_pass"|form_error}--></li>
-           <li><!--{lang('mb_captcha')}-->：<input type="text" name="m_captcha" /><img src="<!--{'front/member/action_captcha'|site_url}-->" /><!--{"m_captcha"|form_error}--></li>
+           <li><!--{lang('mb_uname')}-->：<input type="text" name="m_user" value="<!--{$m_user}-->"/><!--{"m_user"|form_error}-->
+            <!--{lang('mb_pwd2')}-->：<input type="password" name="m_pass" /><!--{"m_pass"|form_error}-->
+           <!--{lang('mb_captcha')}-->：<input type="text" name="m_captcha" class="m_captcha" /><img src="<!--{'front/member/action_captcha'|site_url}-->" /><!--{"m_captcha"|form_error}--></li>
          
 
        </ul>

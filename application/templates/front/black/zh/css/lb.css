@@ -417,16 +417,22 @@ td,span,th,div,input,button,a{
 	list-style-type: none;
 	height: auto;
 
-	padding: auto;
-	width:500px;
+	
+	width:600px;
 	text-align: left;
-	margin-left:30%;
+	
 }
 .login li {
-	width: 500px;
+	width: 600px;
 	height: 35px;
 	line-height: 150%;
+	margin:0;
+	padding:0;
+	
+	padding-top: 10px;
+	
 }
+
 
 .red{
 	color:#ff0000;
@@ -551,4 +557,7 @@ white-space: nowrap;
 
 .language-bar a.selected {
 border-bottom: 2px solid #DA333A;
+}
+.m_captcha{
+	width:40px;
 }

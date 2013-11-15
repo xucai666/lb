@@ -26,8 +26,8 @@ class Common extends CI_Controller{
 	 * 设置语种 
 	 */
 	function lang_set(){	
-		lang_set($this->input->get('lang'));
-		$url = $this->input->get("url");	
+		lang_set($this->input->get_post('lang'));
+		$url = $this->input->get_post("url");	
 		$url = $url?$url:$_SERVER['HTTP_REFERER'];	
 		header("location:".$url."");
 		exit();
@@ -70,8 +70,8 @@ class Common extends CI_Controller{
 
 	 		$data = array(
 		 			'main'=>array(
-		 				'i_url'=>urldecode($this->input->post("i_url")),
-		 				'i_content'=>mysql_real_escape_string($this->input->post("i_content"))
+		 				'i_url'=>urldecode($this->input->get_post("i_url")),
+		 				'i_content'=>mysql_real_escape_string($this->input->get_post("i_content"))
 		 			)
 	 		);
 	 		$this->Common_model->ajax_invoke_save($data);
@@ -87,7 +87,7 @@ class Common extends CI_Controller{
 
  	//get invoke
  	function ajax_invoke_get(){
- 		$rs = $this->db->get_where('invoke',array('i_url'=>urldecode($this->input->post('i_url'))))->first_row();
+ 		$rs = $this->db->get_where('invoke',array('i_url'=>urldecode($this->input->get_post('i_url'))))->first_row();
  		echo stripcslashes($rs->i_content);
  		exit;		
  	}
@@ -95,7 +95,7 @@ class Common extends CI_Controller{
 
 	function action_autocomplete_admins(){
 		$ls = $this->db->select('admin_id as id,admin_user as label',false)->from('admins');
-		$term = $this->input->get('term');
+		$term = $this->input->get_post('term');
 		$term && $this->db->like('admin_user',$term,'after');
 		$ls =  $this->db->get()->result_array();
 		echo json_encode($ls);
@@ -106,13 +106,13 @@ class Common extends CI_Controller{
 
  	//picture id
  	function ajax_imgid_get(){
- 		$rs = $this->db->get_where('module_images',"i_url like '%".urldecode($this->input->post('i_url'))."'")->first_row();
+ 		$rs = $this->db->get_where('module_images',"i_url like '%".urldecode($this->input->get_post('i_url'))."'")->first_row();
  		echo $rs->i_uid;
  		exit;	
  	}
 
  	function ajax_img_del(){
- 		$url = urldecode($this->input->post('url'));
+ 		$url = urldecode($this->input->get_post('url'));
 	 	$this->db->from('module_images')->where('i_url',$url);
 	 	$this->db->delete();
 		$f =  realpath(str_replace(base_url().'/', '', $url));
@@ -124,7 +124,7 @@ class Common extends CI_Controller{
  	//拼音
  	function ajax_pinyin(){
  		$this->load->helper('pinyin');		
- 		echo GetPinyin($this->input->post('str'));
+ 		echo GetPinyin($this->input->get_post('str'));
  		exit;
  	}
 

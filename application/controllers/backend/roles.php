@@ -40,7 +40,7 @@
  	function action_add(){ 
  		try{
  			
-	 		$main_id = $this->uri->segment(4); 	  		
+	 		$main_id = $this->input->get_post('role_id'); 	  		
 	 		if($main_id) { 
 		 		//验证权限
 		 		$this->init_auth->execute_auth(array('35,28,29,118')) ;
@@ -95,16 +95,16 @@
  	 */
  	function action_save(){
  		try{ 			
-	 		$main = $this->input->post('main'); 
+	 		$main = $this->input->get_post('main'); 
 
-	 		$main['rights'] = serialize($this->input->post('admin'));
+	 		$main['rights'] = serialize($this->input->get_post('admin'));
 	 		$db_config = array('main'=>array('primary_key'=>'role_id','table_name'=>$this->init_db->table('roles')));			
  			
  			$roles_return = $this->init_db->save(array('main'=>$main),$db_config);
  			
  			//添加日志	
 	 		$lang = $this->m_lang;				 
-	 		$log_desc = sprintf($lang['log_mod'],$this->input->post('role_name'));	
+	 		$log_desc = sprintf($lang['log_mod'],$this->input->get_post('role_name'));	
 	 		$this->load->model('Logs_model');	
 	 	
 	 		$this->Logs_model->log_insert(array(
@@ -118,7 +118,7 @@
 	 		));
 		 		
 		 				
- 			$this->init_page->pop_redirect('保存成功',site_url("backend/".$this->act."/action_list"));	
+ 			$this->init_page->pop_redirect('保存成功',site_url("d=backend&c=".$this->act."&m=action_list"));	
  		}catch(Exception $e){
  			show_error($e->getMessage());
  		}
@@ -148,7 +148,7 @@
  		try{
  			//验证权限
 		 	$this->init_auth->execute_auth(array('35,28,29,119')) ;
- 			$rs = $this->init_db->delete($this->uri->segment(4),$this->im->db_config());
+ 			$rs = $this->init_db->delete($this->input->get_post('role_id'),$this->im->db_config());
  			//-------------添加日志
  			$cf = $this->im->db_config();
  			$this->load->model('Logs_model');
@@ -162,7 +162,7 @@
 	 			'log_desc'=>'删除角色',
 	 		));
 
- 			$this->init_page->pop_redirect('删除成功',site_url("backend/".$this->act."/action_list"));	
+ 			$this->init_page->pop_redirect('删除成功',site_url("d=backend&c=".$this->act."&m=action_list"));	
 
  			
 

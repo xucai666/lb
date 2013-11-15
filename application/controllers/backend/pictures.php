@@ -42,15 +42,15 @@ class Pictures extends CI_Controller{
 	 */
 	function action_head_save(){
 		$post['main'] = array(
-			'p_type'=>$this->input->post('p_type'),
-			'p_tb'=>$this->input->post('p_tb'),
-			'p_key'=>$this->input->post('p_key'),
-			'p_thumb'=>$this->input->post('p_thumb'),
-			'p_sort'=>$this->input->post('p_sort'),
+			'p_type'=>$this->input->get_post('p_type'),
+			'p_tb'=>$this->input->get_post('p_tb'),
+			'p_key'=>$this->input->get_post('p_key'),
+			'p_thumb'=>$this->input->get_post('p_thumb'),
+			'p_sort'=>$this->input->get_post('p_sort'),
 		);
 		//删除旧文件
-		$this->db->where('p_key',$this->input->post('p_key'));
-		$this->db->where('p_type',$this->input->post('p_type'));
+		$this->db->where('p_key',$this->input->get_post('p_key'));
+		$this->db->where('p_type',$this->input->get_post('p_type'));
 		$this->db->delete($this->init_db->table('pictures'));
 		$this->im->save_single($post);
 		exit(0);
@@ -72,15 +72,15 @@ class Pictures extends CI_Controller{
 	 */
 	function action_index_rotation_save(){
 		$post['main'] = array(
-			'p_type'=>$this->input->post('p_type'),
-			'p_tb'=>$this->input->post('p_tb'),
-			'p_key'=>$this->input->post('p_key'),
-			'p_thumb'=>$this->input->post('p_thumb'),
-			'p_sort'=>$this->input->post('p_sort'),
+			'p_type'=>$this->input->get_post('p_type'),
+			'p_tb'=>$this->input->get_post('p_tb'),
+			'p_key'=>$this->input->get_post('p_key'),
+			'p_thumb'=>$this->input->get_post('p_thumb'),
+			'p_sort'=>$this->input->get_post('p_sort'),
 		);
 		//删除旧文件
-		$this->db->where('p_id',$this->input->post('p_id'));
-		$this->db->where('p_type',$this->input->post('p_type'));
+		$this->db->where('p_id',$this->input->get_post('p_id'));
+		$this->db->where('p_type',$this->input->get_post('p_type'));
 		$this->db->delete($this->init_db->table('pictures'));
 		$data = $this->im->save_single($post);
 		echo json_encode($data);
@@ -92,8 +92,8 @@ class Pictures extends CI_Controller{
 	 */
 	function action_sort_save(){
 		$post['main'] = array(
-			'p_id'=>$this->input->post('p_id'),
-			'p_sort'=>$this->input->post('p_sort'),
+			'p_id'=>$this->input->get_post('p_id'),
+			'p_sort'=>$this->input->get_post('p_sort'),
 		);
 		$data = $this->im->save_single($post);
 		exit();
@@ -103,7 +103,7 @@ class Pictures extends CI_Controller{
  	 * 删除图片
  	 */
  	function action_del_index_rotation(){
- 		$this->db->where('p_id',$this->input->get('p_id'));
+ 		$this->db->where('p_id',$this->input->get_post('p_id'));
 		$this->db->delete($this->init_db->table('pictures'));
 		$this->init_page->backend_redirect('pictures/action_index_rotation');
  		

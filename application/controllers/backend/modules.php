@@ -25,7 +25,7 @@ class Modules extends CI_Controller{
 
 	function action_add(){
 		$f_ids = $this->fm->fetch_select();
-		$m_id = $this->input->get('m_id');
+		$m_id = $this->input->get_post('m_id');
 		if($m_id){
 			$main = $this->im->main($m_id);
 			
@@ -45,8 +45,8 @@ class Modules extends CI_Controller{
 	}
 
 	function action_save(){
-		$post_detail = $this->input->post('detail');
-		$post_main = $this->input->post('main');
+		$post_detail = $this->input->get_post('detail');
+		$post_main = $this->input->get_post('main');
 		$data = array('main'=>$post_main,'detail'=>$this->init_form->post_to_set($post_detail),'query_types'=>$this->init_cache->cache_fetch('query_types'));
 		try{
 			
@@ -102,7 +102,7 @@ class Modules extends CI_Controller{
 
 	function action_del(){
 		try{
-			$m_id = $this->input->get('m_id');
+			$m_id = $this->input->get_post('m_id');
             $m_id = $m_id?$m_id:$this->uri->segment(4);
             if(!is_array($m_id)){
             	$m_id = array($m_id);
@@ -164,8 +164,8 @@ class Modules extends CI_Controller{
 
 	function action_list(){
 		$f_ids = $this->fm->fetch_select();
-		$m_type = $this->input->post('m_type');
-		$this->db->select('*',false)->from('module')->like('m_name',$this->input->post('m_name'))->like('m_tb',$this->input->post('m_tb'))->order_by('m_id','desc');
+		$m_type = $this->input->get_post('m_type');
+		$this->db->select('*',false)->from('module')->like('m_name',$this->input->get_post('m_name'))->like('m_tb',$this->input->get_post('m_tb'))->order_by('m_id','desc');
 		if($m_type) $this->db->where('m_type',$m_type);
 		$data = $this->init_db->fetch_all(15);
 		$data['f_ids'] = $f_ids;

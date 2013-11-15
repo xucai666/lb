@@ -29,9 +29,9 @@
 
 
 	function action_add(){	
-		if($this->input->get("eg_id")){		
+		if($this->input->get_post("eg_id")){		
 				
-				$main = $this->db->select('*',false)->from('engage')->where('eg_id',$this->input->get('eg_id'))->get()->first_row('array');
+				$main = $this->db->select('*',false)->from('engage')->where('eg_id',$this->input->get_post('eg_id'))->get()->first_row('array');
 		}
 		//分类
 		$class_select =  $this->Category_model->fetch_category_option('0106',$main['eg_job_class']);	
@@ -56,8 +56,8 @@
 
 	function action_save(){	
 		try{			
-			$form_array = $this->input->post('main');	
-			//$area = $this->Common_model->fetchPostArrea($this->input->post('area'));	
+			$form_array = $this->input->get_post('main');	
+			//$area = $this->Common_model->fetchPostArrea($this->input->get_post('area'));	
 			$data['main'] = array_merge($form_array,
 				array(
 						'eg_addtime'=>date('Y-m-d H:i:s'),
@@ -65,7 +65,7 @@
 				)
 			);
 			$this->init_db->save($data,$this->im->save_config());
-			$this->init_page->pop_redirect('已保存',site_url('backend/'.$this->act.'/action_list'));
+			$this->init_page->pop_redirect('已保存',site_url('d=backend&c='.$this->act.'&m=action_list'));
 		}catch(Exception $e){			
 			show_error($e->getMessage());
 		}
@@ -79,7 +79,7 @@
 		
 		//查询条件
 		$search = array(
-			'eg_pos'=>$this->input->get('eg_pos'),
+			'eg_pos'=>$this->input->get_post('eg_pos'),
 		);
 		$search['eg_pos'] && $this->db->like('eg_pos',$search['eg_pos']);
 		
@@ -95,10 +95,10 @@
 
 	function action_del(){
 		try{			
-			$id  = $this->input->get("eg_id");			
+			$id  = $this->input->get_post("eg_id");			
 			$this->db->where('eg_id',$id);
 	 		$this->db->delete($this->init_db->table('engage'));			
-			$this->init_page->backend_redirect("backend/'.$this->act.'/action_list","删除成功");
+			$this->init_page->backend_redirect("d=backend&c=engage&m=action_list","删除成功");
 		}catch(Exception $e){			
 			show_error($e->getMessage());
 		}
@@ -128,7 +128,7 @@
 	//查看简历
 	function action_apply_view(){
 		$this->init_page->fetch_css('table');
-		$id  = $this->input->get("apply_id");			
+		$id  = $this->input->get_post("apply_id");			
 		if($id){		
 				$sql_arr = array(
 					'table_name'=>$this->init_db->table('engage_apply'),
@@ -157,10 +157,10 @@
 	//删除简历
 	function action_apply_del(){
 		try{			
-			$id  = $this->input->get("apply_id");			
+			$id  = $this->input->get_post("apply_id");			
 			$this->db->where('apply_id',$id);
 	 		$this->db->delete($this->init_db->table('engage_apply'));			
-			$this->init_page->pop_redirect('已删除',site_url('backend/engage/action_apply'));
+			$this->init_page->pop_redirect('已删除',site_url('d=backend&c=engage&m=action_apply'));
 		}catch(Exception $e){			
 			show_error($e->getMessage());
 		}

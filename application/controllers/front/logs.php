@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
   * start page for webaccess
   *
@@ -27,8 +27,8 @@ class Logs extends CI_Controller {
 	function index()
 	{
 		$this->db->select("a.*",false)->from($this->init_db->table('log').' as a ')	
-		->like('a.log_user',$this->input->get('log_user'))		
-		->like('a.log_type',$this->input->get('log_type'))		
+		->like('a.log_user',$this->input->get_post('log_user'))		
+		->like('a.log_type',$this->input->get_post('log_type'))		
 		->order_by("log_id","desc");
 		$data = $this->init_db->fetch_all();	
 		$data = array_merge($data,

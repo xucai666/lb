@@ -42,9 +42,9 @@ class Product extends CI_Controller{
 	 */
 	function action_add(){
 		//查询
-		$pro_id = $this->input->get('pro_id');
+		$pro_id = $this->input->get_post('pro_id');
 		
-		$parent_class = $this->input->get('parent_class');
+		$parent_class = $this->input->get_post('parent_class');
 		
 		
 		$pro_id?$main = $this->im->read($pro_id):$main['pro_class_sn'] = $parent_class;
@@ -76,9 +76,9 @@ class Product extends CI_Controller{
 	 	try{
 	 		
 	 		//数据
-	 		$main = $this->input->post('main');
+	 		$main = $this->input->get_post('main');
 	 		
-			$parent_class = $this->input->post('parent_class');
+			$parent_class = $this->input->get_post('parent_class');
 			
 			$parent_class_info = $this->Category_model->detail($parent_class,'bysn');
 			
@@ -148,8 +148,8 @@ class Product extends CI_Controller{
 	
 	function action_list(){
 		$this->init_page->fetch_js('jquery.form','loadview',$this->init_page->getRes('js','backend'));
-		$parent_class = $this->input->get('parent_class');
-		$search_class = $this->input->get('search_class');
+		$parent_class = $this->input->get_post('parent_class');
+		$search_class = $this->input->get_post('search_class');
 		$parent_class_info = $this->Category_model->detail($parent_class,'bysn');
 		$class_select  = $this->Category_model->fetch_category_option($parent_class,$search_class);
 		$class_info = array(
@@ -163,7 +163,7 @@ class Product extends CI_Controller{
 		->join('category as b','a.pro_class_sn=b.c_sn')
 		->like('a.pro_class_sn',$parent_class,'after')
 		->like('a.pro_class_sn',$search_class,'after')
-		->like('a.pro_title',$this->input->get('pro_title'))
+		->like('a.pro_title',$this->input->get_post('pro_title'))
 		->order_by("pro_id","desc");
 		$data = $this->init_db->fetch_all(12);	
 		$data = array_merge($data,
@@ -179,8 +179,8 @@ class Product extends CI_Controller{
 	//产品列表
 	
 	function action_ajax_list(){
-		$parent_class = $this->input->get('parent_class');
-		$search_class = $this->input->get('search_class');
+		$parent_class = $this->input->get_post('parent_class');
+		$search_class = $this->input->get_post('search_class');
 		$parent_class_info = $this->Category_model->detail($parent_class,'bysn');
 		$class_select  = $this->Category_model->fetch_category_option($parent_class,$search_class);
 		$class_info = array(
@@ -194,7 +194,7 @@ class Product extends CI_Controller{
 		->join('category as b','a.pro_class_sn=b.c_sn')
 		->like('a.pro_class_sn',$parent_class,'after')
 		->like('a.pro_class_sn',$search_class,'after')
-		->like('a.pro_title',$this->input->get('pro_title'))
+		->like('a.pro_title',$this->input->get_post('pro_title'))
 		->order_by("pro_id","desc");
 		$data = $this->init_db->fetch_all(12,true);	
 		$data = array_merge($data,
@@ -210,13 +210,13 @@ class Product extends CI_Controller{
 	
 	function action_del(){
 		try{	
-			$id = $this->input->post("pro_id");
-			$id = $id?$id:$this->input->get("pro_id");
+			$id = $this->input->get_post("pro_id");
+			$id = $id?$id:$this->input->get_post("pro_id");
 						
-			$parent_class = $this->input->get('parent_class');		
+			$parent_class = $this->input->get_post('parent_class');		
 			$this->db->where_in('pro_id',$id);
 	 		$this->db->delete($this->init_db->table('products'));			
-			$this->init_page->pop_redirect('已删除',site_url('backend/'.$this->act.'/action_list/?parent_class='.$parent_class));
+			$this->init_page->pop_redirect('已删除',site_url('d=backend&c='.$this->act.'&m=action_list&parent_class='.$parent_class));
 		}catch(Exception $e){			
 			show_error($e->getMessage());
 		}
@@ -255,14 +255,14 @@ class Product extends CI_Controller{
 	//订单删除
 	function action_order_del(){
 	
-		$dt = $this->db->select('*')->from('order_main')->where('order_id',$this->input->get('order_id'))->get()->first_row('array');
+		$dt = $this->db->select('*')->from('order_main')->where('order_id',$this->input->get_post('order_id'))->get()->first_row('array');
 		if($dt['status']>0){
 
-			$this->init_page->pop_redirect('订单状态变更，不允许删除',site_url('backend/'.$this->act.'/action_order/'));
+			$this->init_page->pop_redirect('订单状态变更，不允许删除',site_url("d=backend&c='.$this->act.'&m=action_order"));
 
 		}else{
-		$this->init_db->delete($this->input->get('order_id'),$this->im->db_config_order());	
-		$this->init_page->pop_redirect('已删除',site_url('backend/'.$this->act.'/action_order/'));
+		$this->init_db->delete($this->input->get_post('order_id'),$this->im->db_config_order());	
+		$this->init_page->pop_redirect('已删除',site_url("d=backend&c='.$this->act.'&m=action_order"));
 		
 		}
 		
@@ -273,7 +273,7 @@ class Product extends CI_Controller{
 	function action_order_view(){
 		$this->init_page->fetch_css(array('backend_order'),'view',getRootUrl('css','backend').'/item/');
 		$this->init_page->fetch_css(array('table'),'view',getRootUrl('css','backend'));
-		$order_id = $this->input->get("order_id");
+		$order_id = $this->input->get_post("order_id");
 		$main = $this->db->select('*',false)->from('order_main')->where('order_id',$order_id)->get()->first_row('array');
 		$detail = $this->db->query('select a.*,b.p_pic,(a.p_price*a.p_qty) as sub_total from '.$this->init_db->table('order_detail').' as a left join '.$this->init_db->table('module_product').' as b  on a.p_id=b.p_id where a.order_id='.$order_id)
 		->result_array();
@@ -302,8 +302,8 @@ class Product extends CI_Controller{
 	
 	
 	function action_order_status_change(){
-		$this->db->where('order_id',$this->input->get('order_id'));
-		$this->db->update('order_main',array('status'=>$this->input->get('status')));
+		$this->db->where('order_id',$this->input->get_post('order_id'));
+		$this->db->update('order_main',array('status'=>$this->input->get_post('status')));
 		$this->init_page->backend_redirect($_SERVER['HTTP_REFERER'],'订单状态更新成功');
 	}
 

@@ -1,7 +1,7 @@
 <?php return array (
   'list' => 
   array (
-    35 => 
+    0 => 
     array (
       'r_id' => '35',
       'r_title' => '系统管理',
@@ -15,7 +15,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    113 => 
+    1 => 
     array (
       'r_id' => '113',
       'r_title' => '多语言',
@@ -23,13 +23,13 @@
       'r_name' => NULL,
       'r_order' => '111',
       'r_display' => '1',
-      'r_url' => 'backend/system_manage/action_lang_trans',
+      'r_url' => 'd=backend&c=system_manage&m=action_lang_trans',
       'r_code' => '35,113',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    128 => 
+    2 => 
     array (
       'r_id' => '128',
       'r_title' => '正则测试',
@@ -37,13 +37,13 @@
       'r_name' => NULL,
       'r_order' => '100',
       'r_display' => '1',
-      'r_url' => 'backend/system_manage/action_regexp_test',
+      'r_url' => 'd=backend&c=system_manage&m=action_regexp_test',
       'r_code' => '35,128',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    28 => 
+    3 => 
     array (
       'r_id' => '28',
       'r_title' => '权限',
@@ -57,7 +57,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    29 => 
+    4 => 
     array (
       'r_id' => '29',
       'r_title' => '角色管理',
@@ -65,13 +65,13 @@
       'r_name' => '角色管理',
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/roles/action_list',
+      'r_url' => 'd=backend&c=roles&m=action_list',
       'r_code' => '35,28,29',
       'r_level' => '3',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    117 => 
+    5 => 
     array (
       'r_id' => '117',
       'r_title' => '添加',
@@ -85,7 +85,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    118 => 
+    6 => 
     array (
       'r_id' => '118',
       'r_title' => '修改',
@@ -99,7 +99,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    119 => 
+    7 => 
     array (
       'r_id' => '119',
       'r_title' => '删除',
@@ -113,7 +113,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    32 => 
+    8 => 
     array (
       'r_id' => '32',
       'r_title' => '系统账号管理',
@@ -121,13 +121,13 @@
       'r_name' => '用户',
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/admins/action_list',
+      'r_url' => 'd=backend&c=admins&m=action_list',
       'r_code' => '35,28,32',
       'r_level' => '3',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    120 => 
+    9 => 
     array (
       'r_id' => '120',
       'r_title' => '添加',
@@ -141,7 +141,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    121 => 
+    10 => 
     array (
       'r_id' => '121',
       'r_title' => '修改',
@@ -155,7 +155,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    122 => 
+    11 => 
     array (
       'r_id' => '122',
       'r_title' => '删除',
@@ -169,7 +169,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    36 => 
+    12 => 
     array (
       'r_id' => '36',
       'r_title' => '系统变量配置',
@@ -177,13 +177,13 @@
       'r_name' => '基本配置',
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/system_manage/basic_config',
+      'r_url' => 'd=backend&c=system_manage&m=basic_config',
       'r_code' => '35,36',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    37 => 
+    13 => 
     array (
       'r_id' => '37',
       'r_title' => '备份数据库',
@@ -191,13 +191,13 @@
       'r_name' => '备份数据库',
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/system_manage/db_backup_list',
+      'r_url' => 'd=backend&c=system_manage&m=db_backup_list',
       'r_code' => '35,37',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    38 => 
+    14 => 
     array (
       'r_id' => '38',
       'r_title' => '执行sql',
@@ -205,13 +205,13 @@
       'r_name' => '执行sql',
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/system_manage/action_execute_sql',
+      'r_url' => 'd=backend&c=system_manage&m=action_execute_sql',
       'r_code' => '35,38',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    39 => 
+    15 => 
     array (
       'r_id' => '39',
       'r_title' => '更新缓存',
@@ -219,13 +219,13 @@
       'r_name' => '更新缓存',
       'r_order' => '127',
       'r_display' => '1',
-      'r_url' => 'backend/system_manage/action_clear_cache',
+      'r_url' => 'd=backend&c=system_manage&m=action_clear_cache',
       'r_code' => '35,39',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    40 => 
+    16 => 
     array (
       'r_id' => '40',
       'r_title' => '修改密码',
@@ -233,13 +233,13 @@
       'r_name' => '修改密码',
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/system_manage/change_password',
+      'r_url' => 'd=backend&c=system_manage&m=change_password',
       'r_code' => '35,40',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    44 => 
+    17 => 
     array (
       'r_id' => '44',
       'r_title' => '权限菜单',
@@ -247,13 +247,13 @@
       'r_name' => '权限菜单',
       'r_order' => '127',
       'r_display' => '1',
-      'r_url' => 'backend/menu/action_list',
+      'r_url' => 'd=backend&c=menu&m=action_list',
       'r_code' => '35,44',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    97 => 
+    18 => 
     array (
       'r_id' => '97',
       'r_title' => '日志',
@@ -267,7 +267,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    123 => 
+    19 => 
     array (
       'r_id' => '123',
       'r_title' => '操作日志',
@@ -275,13 +275,13 @@
       'r_name' => NULL,
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/logs/action_list',
+      'r_url' => 'd=backend&c=logs&m=action_list',
       'r_code' => '35,97,123',
       'r_level' => '3',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    124 => 
+    20 => 
     array (
       'r_id' => '124',
       'r_title' => '登陆日志',
@@ -289,13 +289,13 @@
       'r_name' => NULL,
       'r_order' => '2',
       'r_display' => '1',
-      'r_url' => 'backend/logs/action_login_log',
+      'r_url' => 'd=backend&c=logs&m=action_login_log',
       'r_code' => '35,97,124',
       'r_level' => '3',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    98 => 
+    21 => 
     array (
       'r_id' => '98',
       'r_title' => '统计',
@@ -309,7 +309,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    66 => 
+    22 => 
     array (
       'r_id' => '66',
       'r_title' => '辅助插件',
@@ -323,7 +323,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    20 => 
+    23 => 
     array (
       'r_id' => '20',
       'r_title' => '留言反馈',
@@ -331,13 +331,13 @@
       'r_name' => '留言反馈',
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/message/action_list/?parent_class=010202',
+      'r_url' => 'd=backend&c=message&m=action_list&parent_class=010202',
       'r_code' => '66,20',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    25 => 
+    24 => 
     array (
       'r_id' => '25',
       'r_title' => '广告管理',
@@ -351,7 +351,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    26 => 
+    25 => 
     array (
       'r_id' => '26',
       'r_title' => '广告添加',
@@ -359,13 +359,13 @@
       'r_name' => '添加',
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/advs/action_add/',
+      'r_url' => 'd=backend&c=advs&m=action_add',
       'r_code' => '66,25,26',
       'r_level' => '3',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    27 => 
+    26 => 
     array (
       'r_id' => '27',
       'r_title' => '广告管理',
@@ -373,13 +373,13 @@
       'r_name' => '管理',
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/advs/action_list/',
+      'r_url' => 'd=backend&c=advs&m=action_list',
       'r_code' => '66,25,27',
       'r_level' => '3',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    96 => 
+    27 => 
     array (
       'r_id' => '96',
       'r_title' => '客户订单管理',
@@ -387,13 +387,13 @@
       'r_name' => NULL,
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/product/action_order',
+      'r_url' => 'd=backend&c=product&m=action_order',
       'r_code' => '66,96',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    99 => 
+    28 => 
     array (
       'r_id' => '99',
       'r_title' => '招聘管理',
@@ -407,7 +407,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    100 => 
+    29 => 
     array (
       'r_id' => '100',
       'r_title' => '职位发布',
@@ -415,13 +415,13 @@
       'r_name' => NULL,
       'r_order' => '12',
       'r_display' => '1',
-      'r_url' => 'backend/engage/action_list',
+      'r_url' => 'd=backend&c=engage&m=action_list',
       'r_code' => '66,99,100',
       'r_level' => '3',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    101 => 
+    30 => 
     array (
       'r_id' => '101',
       'r_title' => '应聘管理',
@@ -429,13 +429,13 @@
       'r_name' => NULL,
       'r_order' => '13',
       'r_display' => '1',
-      'r_url' => 'backend/engage/action_apply',
+      'r_url' => 'd=backend&c=engage&m=action_apply',
       'r_code' => '66,99,101',
       'r_level' => '3',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    67 => 
+    31 => 
     array (
       'r_id' => '67',
       'r_title' => '模板管理',
@@ -449,7 +449,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    69 => 
+    32 => 
     array (
       'r_id' => '69',
       'r_title' => '自定义调用标签',
@@ -457,13 +457,13 @@
       'r_name' => NULL,
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/templates/action_list',
+      'r_url' => 'd=backend&c=templates&m=action_list',
       'r_code' => '67,69',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    70 => 
+    33 => 
     array (
       'r_id' => '70',
       'r_title' => '模块管理',
@@ -477,7 +477,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    71 => 
+    34 => 
     array (
       'r_id' => '71',
       'r_title' => '模型字段模板',
@@ -485,13 +485,13 @@
       'r_name' => NULL,
       'r_order' => '1',
       'r_display' => '0',
-      'r_url' => 'backend/fields/action_list',
+      'r_url' => 'd=backend&c=fields&m=action_list',
       'r_code' => '67,70,71',
       'r_level' => '3',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    72 => 
+    35 => 
     array (
       'r_id' => '72',
       'r_title' => '内容模型管理',
@@ -499,13 +499,13 @@
       'r_name' => NULL,
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/modules/action_list',
+      'r_url' => 'd=backend&c=modules&m=action_list',
       'r_code' => '67,70,72',
       'r_level' => '3',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    73 => 
+    36 => 
     array (
       'r_id' => '73',
       'r_title' => '模型数据管理',
@@ -513,13 +513,13 @@
       'r_name' => NULL,
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/mdata/index',
+      'r_url' => 'd=backend&c=mdata&m=index',
       'r_code' => '67,70,73',
       'r_level' => '3',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    74 => 
+    37 => 
     array (
       'r_id' => '74',
       'r_title' => '模板文件',
@@ -527,13 +527,13 @@
       'r_name' => NULL,
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/templates/view_list',
+      'r_url' => 'd=backend&c=templates&m=view_list',
       'r_code' => '67,74',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    78 => 
+    38 => 
     array (
       'r_id' => '78',
       'r_title' => '内容维护',
@@ -541,13 +541,13 @@
       'r_name' => NULL,
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/mdata/action_set_module/',
+      'r_url' => 'd=backend&c=mdata&m=action_set_module',
       'r_code' => '78',
       'r_level' => '1',
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    110 => 
+    39 => 
     array (
       'r_id' => '110',
       'r_title' => '招聘模块',
@@ -555,13 +555,13 @@
       'r_name' => '招聘模块',
       'r_order' => '1',
       'r_display' => '0',
-      'r_url' => 'backend/mdata/action_set_module/69',
+      'r_url' => 'd=backend&c=mdata&m=action_set_module&m_id=69',
       'r_code' => '78,110',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    115 => 
+    40 => 
     array (
       'r_id' => '115',
       'r_title' => '会员管理',
@@ -569,13 +569,13 @@
       'r_name' => '会员管理',
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/mdata/action_set_module/74',
+      'r_url' => 'd=backend&c=mdata&m=action_set_module&m_id=74',
       'r_code' => '78,115',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    116 => 
+    41 => 
     array (
       'r_id' => '116',
       'r_title' => '双编辑器<test>',
@@ -583,13 +583,13 @@
       'r_name' => '双编辑器<test>',
       'r_order' => '1',
       'r_display' => '0',
-      'r_url' => 'backend/mdata/action_set_module/75',
+      'r_url' => 'd=backend&c=mdata&m=action_set_module&m_id=75',
       'r_code' => '78,116',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    126 => 
+    42 => 
     array (
       'r_id' => '126',
       'r_title' => '投票',
@@ -597,13 +597,13 @@
       'r_name' => '投票',
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/mdata/action_set_module/77',
+      'r_url' => 'd=backend&c=mdata&m=action_set_module&m_id=77',
       'r_code' => '78,126',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    129 => 
+    43 => 
     array (
       'r_id' => '129',
       'r_title' => '生成html',
@@ -611,13 +611,13 @@
       'r_name' => NULL,
       'r_order' => '111',
       'r_display' => '1',
-      'r_url' => 'backend/system_manage/action_create_html',
+      'r_url' => 'd=backend&c=system_manage&m=action_create_html',
       'r_code' => '78,129',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    79 => 
+    44 => 
     array (
       'r_id' => '79',
       'r_title' => '复选框测试',
@@ -625,13 +625,13 @@
       'r_name' => '复选框测试',
       'r_order' => '1',
       'r_display' => '0',
-      'r_url' => 'backend/mdata/action_set_module/61',
+      'r_url' => 'd=backend&c=mdata&m=action_set_module&m_id=61',
       'r_code' => '78,79',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    80 => 
+    45 => 
     array (
       'r_id' => '80',
       'r_title' => '单选框测试',
@@ -639,69 +639,27 @@
       'r_name' => '单选框测试',
       'r_order' => '1',
       'r_display' => '0',
-      'r_url' => 'backend/mdata/action_set_module/60',
+      'r_url' => 'd=backend&c=mdata&m=action_set_module&m_id=60',
       'r_code' => '78,80',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    82 => 
-    array (
-      'r_id' => '82',
-      'r_title' => '是否',
-      'r_pid' => '78',
-      'r_name' => '是否',
-      'r_order' => '1',
-      'r_display' => '0',
-      'r_url' => 'backend/mdata/action_set_module/57',
-      'r_code' => '78,82',
-      'r_level' => '2',
-      'r_js_action' => NULL,
-      'r_type' => '1',
-    ),
-    83 => 
-    array (
-      'r_id' => '83',
-      'r_title' => '单图',
-      'r_pid' => '78',
-      'r_name' => '单图',
-      'r_order' => '1',
-      'r_display' => '0',
-      'r_url' => 'backend/mdata/action_set_module/56',
-      'r_code' => '78,83',
-      'r_level' => '2',
-      'r_js_action' => NULL,
-      'r_type' => '1',
-    ),
-    84 => 
-    array (
-      'r_id' => '84',
-      'r_title' => '多图',
-      'r_pid' => '78',
-      'r_name' => '多图',
-      'r_order' => '1',
-      'r_display' => '0',
-      'r_url' => 'backend/mdata/action_set_module/55',
-      'r_code' => '78,84',
-      'r_level' => '2',
-      'r_js_action' => NULL,
-      'r_type' => '1',
-    ),
-    85 => 
+    46 => 
     array (
       'r_id' => '85',
       'r_title' => '碎片管理',
       'r_pid' => '78',
       'r_name' => '碎片管理',
       'r_order' => '1',
-      'r_display' => '1',
-      'r_url' => 'backend/mdata/action_set_module/53',
+      'r_display' => '0',
+      'r_url' => 'd=backend&c=mdata&m=action_set_module&m_id=53',
       'r_code' => '78,85',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    87 => 
+    47 => 
     array (
       'r_id' => '87',
       'r_title' => '新闻管理',
@@ -709,13 +667,13 @@
       'r_name' => '新闻管理',
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/mdata/action_set_module/62',
+      'r_url' => 'd=backend&c=mdata&m=action_set_module&m_id=62',
       'r_code' => '78,87',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    89 => 
+    48 => 
     array (
       'r_id' => '89',
       'r_title' => '树形栏目',
@@ -723,13 +681,13 @@
       'r_name' => NULL,
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/tree/index',
+      'r_url' => 'd=backend&c=tree&m=index',
       'r_code' => '78,89',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    90 => 
+    49 => 
     array (
       'r_id' => '90',
       'r_title' => '产品模块',
@@ -737,13 +695,13 @@
       'r_name' => '产品模块',
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/mdata/action_set_module/63',
+      'r_url' => 'd=backend&c=mdata&m=action_set_module&m_id=63',
       'r_code' => '78,90',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    91 => 
+    50 => 
     array (
       'r_id' => '91',
       'r_title' => '友情链接',
@@ -751,13 +709,13 @@
       'r_name' => '友情链接',
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/mdata/action_set_module/64',
+      'r_url' => 'd=backend&c=mdata&m=action_set_module&m_id=64',
       'r_code' => '78,91',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    92 => 
+    51 => 
     array (
       'r_id' => '92',
       'r_title' => '网站栏目',
@@ -765,13 +723,13 @@
       'r_name' => '网站栏目',
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/mdata/action_set_module/65',
+      'r_url' => 'd=backend&c=mdata&m=action_set_module&m_id=65',
       'r_code' => '78,92',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => '1',
     ),
-    95 => 
+    52 => 
     array (
       'r_id' => '95',
       'r_title' => '开发文档',
@@ -785,7 +743,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    76 => 
+    53 => 
     array (
       'r_id' => '76',
       'r_title' => '系统手册',
@@ -799,7 +757,7 @@
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
-    77 => 
+    54 => 
     array (
       'r_id' => '77',
       'r_title' => '插件文档',
@@ -807,13 +765,27 @@
       'r_name' => NULL,
       'r_order' => '1',
       'r_display' => '1',
-      'r_url' => 'backend/system_manage/action_helper_docs',
+      'r_url' => 'd=backend&c=system_manage&m=action_helper_docs',
       'r_code' => '95,77',
       'r_level' => '2',
       'r_js_action' => NULL,
       'r_type' => NULL,
     ),
+    55 => 
+    array (
+      'r_id' => '130',
+      'r_title' => '34345',
+      'r_pid' => '77',
+      'r_name' => NULL,
+      'r_order' => '127',
+      'r_display' => '1',
+      'r_url' => '3435',
+      'r_code' => '95,77,130',
+      'r_level' => '3',
+      'r_js_action' => NULL,
+      'r_type' => NULL,
+    ),
   ),
-  'count' => '58',
+  'count' => '56',
   'page_link' => '',
 );?>
