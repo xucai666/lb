@@ -43,8 +43,9 @@ class MY_Config  extends CI_Config {
     function site_url($uri = '')
     {
 
-        if ($uri == '')
+        if ($uri == '' ||$uri == '/')
         {
+
             return $this->slash_item('base_url').$this->item('index_page');
         }
 

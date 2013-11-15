@@ -52,12 +52,12 @@
 		<td>
             <table width="100%" >
             <tr><td><img id="dlarticle_ctl02_companyImg" alt="" src="" style="height:100px;width:365px;border-width:0px;display:none;" /></td></tr>
-            <tr><td><a href="<!--{$site_url}-->/detail?info_id=`$v.info_id` "><strong><!--{$v.info_title}--></strong></a></td>
+            <tr><td><a href="<!--{site_url('d=front&c=detail&info_id=`$v.info_id` &m=index')}-->"><strong><!--{$v.info_title}--></strong></a></td>
             <td align ="right" style="height:44px" ><!--{$v.info_date}-->&nbsp;&nbsp;(<span style="color:Blue;"><!--{$v.info_author}--></span>)</td>
             </tr>
             <tr><td width="100%" colspan="2"><!--{$v.info_content|strip_tags|truncate:200:"..."}-->...<br/></td></tr>
             </table>
-           <div style ="width:100px;"><a href="<!--{$site_url}-->/detail?info_id=`$v.info_id` "><strong>&gt;&gt; 阅读全文</strong></a></div><hr />
+           <div style ="width:100px;"><a href="<!--{site_url('d=front&c=detail&info_id=`$v.info_id` &m=index')}-->"><strong>&gt;&gt; 阅读全文</strong></a></div><hr />
             </td>
 	</tr>
 </table>

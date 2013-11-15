@@ -21,7 +21,7 @@
 		
 			<select name="lang_type">
 				<option value=''>请选择</option>
-				<!--{html_options values=$ci_config.support_language output=$ci_config.support_language selected=$smarty.request.lang_type}-->
+				<!--{html_options values=config_item('support_language') output=$ci_config.support_language selected=$smarty.request.lang_type}-->
 			</select>
 
 			状态:

@@ -26,9 +26,7 @@ class Index extends CI_Controller {
   {
     
     
-    //图片轮显    
-    $this->load->model('Pictures_model'); 
-    $data['pics'] = $this->Pictures_model->list_index(); 
+  
     $this->load->model('Advs_model');
     $langs = config_item('support_language');
 

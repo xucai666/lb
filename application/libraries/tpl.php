@@ -514,7 +514,6 @@ class tpl extends Smarty
         $this->assign("dir_front", config_item('template_dir').'front/'.$sys_config['template'].'/'.$lang_type); // so we can get the full path to CI easily
         $this->assign("dir_backend", config_item('template_dir').'backend/'); // so we can get the full path to CI easily
         $ci_config  = &get_config();
-        $this->assign('ci_config',$ci_config);
         $this->assign('ci_uri',ci_uri());
       
         //function registerpri

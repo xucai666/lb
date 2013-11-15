@@ -701,7 +701,7 @@ CREATE TABLE `mysys_log_login` (
   `login_ip` varchar(20) DEFAULT NULL,
   `login_user` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`login_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=97 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=99 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -710,7 +710,7 @@ CREATE TABLE `mysys_log_login` (
 
 LOCK TABLES `mysys_log_login` WRITE;
 /*!40000 ALTER TABLE `mysys_log_login` DISABLE KEYS */;
-INSERT INTO `mysys_log_login` VALUES (95,'2013-11-15 14:26:10','Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36','127.0.0.1','admin'),(96,'2013-11-15 14:27:04','Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36','127.0.0.1','admin');
+INSERT INTO `mysys_log_login` VALUES (95,'2013-11-15 14:26:10','Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36','127.0.0.1','admin'),(96,'2013-11-15 14:27:04','Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36','127.0.0.1','admin'),(97,'2013-11-15 20:45:18','Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36','127.0.0.1','supper'),(98,'2013-11-15 21:11:16','Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36','127.0.0.1','admin');
 /*!40000 ALTER TABLE `mysys_log_login` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -728,9 +728,9 @@ CREATE TABLE `mysys_message` (
   `ms_content` text,
   `ms_name` varchar(50) DEFAULT NULL,
   `ms_qq` varchar(20) DEFAULT NULL,
-  `ms_tel` varchar(20) DEFAULT NULL,
-  `ms_mobile` varchar(12) DEFAULT NULL,
-  `ms_email` varchar(150) DEFAULT NULL,
+  `ms_tel` varchar(20) DEFAULT '',
+  `ms_mobile` varchar(12) DEFAULT '',
+  `ms_email` varchar(150) DEFAULT '',
   `ms_date` date DEFAULT NULL,
   `ms_feedback` text,
   `ms_valid` tinyint(4) DEFAULT NULL,
@@ -741,7 +741,7 @@ CREATE TABLE `mysys_message` (
   `ms_homepage` varchar(150) DEFAULT NULL,
   `ms_img` int(2) DEFAULT NULL,
   PRIMARY KEY (`ms_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -750,7 +750,7 @@ CREATE TABLE `mysys_message` (
 
 LOCK TABLES `mysys_message` WRITE;
 /*!40000 ALTER TABLE `mysys_message` DISABLE KEYS */;
-INSERT INTO `mysys_message` VALUES (20,2122,12,'12','','150672834','','','','0000-00-00','12112adfa\ndf22\nasdfasdfasdfsadf12',0,'','','','0000-00-00 00:00:00','http://www.baidu.com',1),(19,12,12,'1212','12','150672834','','','','0000-00-00','1212\nasdf\nas\ndfasdf',0,'','','','0000-00-00 00:00:00','http://www.baidu.com',1),(21,0,0,'12121234343','12','150672834','212','','212@1.com','0000-00-00','',0,'','','','0000-00-00 00:00:00','http://www.baidu.com',1),(22,0,0,'212121221212','121','150672834','121','','12121@1.com','0000-00-00','',0,'','','','0000-00-00 00:00:00','http://www.baidu.com',1),(23,0,0,'12121212121212','121212','150672834','12121','','21212@1.com','0000-00-00','',0,'','','','0000-00-00 00:00:00','http://www.baidu.com',1),(24,0,0,'2adfasdfasdf','1212','150672834','121212','','1212Q@1.com','0000-00-00','43435',0,'','','','0000-00-00 00:00:00','http://www.baidu.com',1),(25,0,0,'12121asdfadsffa','121','150672834','2121','','112@1.com','0000-00-00','12123',0,'','','','0000-00-00 00:00:00','http://www.baidu.com',1),(26,0,0,'1212344q342q34q234','121212','150672834','211212','','12121212@1.com','0000-00-00','121233545',0,'','','','0000-00-00 00:00:00','http://www.baidu.com',1),(27,0,0,'2asdfasdfas343','12112','150672834','121212','','121212@1.com','0000-00-00','',0,'','','','0000-00-00 00:00:00','http://www.baidu.com',1),(28,0,0,'123123123123123123123123123123123123','2323','150672834','123123123','','12312312@1.com','0000-00-00','',0,'','','','0000-00-00 00:00:00','http://www.baidu.com',1),(29,0,0,'323323233232332323323233232332323323233232332','121212','150672834','1212','','121221@1.com','0000-00-00','',0,'','','','0000-00-00 00:00:00','http://www.baidu.com',1),(31,0,0,'23423423423423','1212','150672834','','','12@1.com','2011-01-16','',0,'','121','127.0.0.1','0000-00-00 00:00:00','http://www.baidu.com',1),(32,0,0,'2342342342342312','1212','150672834','','','12@1.com','2011-01-16','',0,'','121','127.0.0.1','0000-00-00 00:00:00','http://www.baidu.com',1),(33,0,0,'2342342342342312','1212','150672834','','','12@1.com','2011-01-16','',0,'','121','127.0.0.1','0000-00-00 00:00:00','http://www.baidu.com',1),(34,0,0,'2342342342342312','1212','150672834','','','12@1.com','2011-01-16','',0,'','121','127.0.0.1','2013-01-27 03:31:03','http://www.baidu.com',1),(35,0,0,'2342342342342312','1212','150672834','','','12@1.com','2011-01-16','',0,'','121','127.0.0.1','0000-00-00 00:00:00','http://www.baidu.com',1),(36,0,0,'234234','121212','150672834','','','12@1.com','2011-01-16','2',0,'','213','127.0.0.1','2013-07-01 11:08:14','http://www.baidu.com',1),(37,0,0,'3234','121212','150672834','','','212@1.com','2011-01-16','22344554',0,'','234234','127.0.0.1','2013-02-03 13:25:06','http://www.baidu.com',1),(39,0,0,'42342','32423','150672834','','','234@1.com','2013-03-22','3',0,'','423','127.0.0.1','2013-07-03 15:38:24','http://www.baidu.com',1),(40,0,0,'asdf','23423','150672834','','','343@1.com','2013-03-22','',0,'','asdf','127.0.0.1','2013-03-22 08:19:37','http://www.baidu.com',1),(41,0,0,'a','a','150672834','','','a@1.com','2013-07-15','',1,'','a','127.0.0.1','2013-07-15 09:28:41','http://www.baidu.com',1),(42,0,0,'55','555','150672834','','','55@1.com','2013-07-15','23234',1,'','55','127.0.0.1','2013-07-15 09:31:30','http://www.baidu.com',1),(43,NULL,NULL,'12','12','150672834',NULL,NULL,'12@1.com','2013-08-20',NULL,0,NULL,'12','127.0.0.1','2013-08-20 11:14:15','http://www.baidu.com',1),(44,NULL,NULL,'12','12','150672834',NULL,NULL,'12@1.com','2013-08-20',NULL,0,NULL,'12','127.0.0.1','2013-08-20 11:14:34','http://www.baidu.com',1),(45,NULL,NULL,'23443','23423','150672834',NULL,NULL,'4323@1.com','2013-08-20',NULL,0,NULL,'2343','127.0.0.1','2013-08-20 11:20:40','http://www.baidu.com',1),(46,NULL,NULL,'1212','1212','150672834',NULL,NULL,'1211@1.com','2013-08-21',NULL,0,NULL,'1212','127.0.0.1','2013-08-21 06:11:58','http://www.baidu.com',1),(47,NULL,NULL,'sdfsd','23423','150672834',NULL,NULL,'234@1.com','2013-09-07',NULL,0,NULL,NULL,'127.0.0.1','2013-09-07 03:02:03','http://www.baidu.com',1);
+INSERT INTO `mysys_message` VALUES (50,NULL,NULL,'12121','23423',NULL,'11111111111','','12@1.com','2013-11-15','55',1,NULL,NULL,'127.0.0.1','2013-11-15 13:16:27',NULL,1);
 /*!40000 ALTER TABLE `mysys_message` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1475,30 +1475,6 @@ INSERT INTO `mysys_templates` VALUES (49,'分类调用<产品中心>','<?php\r\n
 UNLOCK TABLES;
 
 --
--- Table structure for table `mysys_test6`
---
-
-DROP TABLE IF EXISTS `mysys_test6`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `mysys_test6` (
-  `t1` varchar(20) NOT NULL,
-  `t2` int(20) NOT NULL,
-  `t4` date NOT NULL COMMENT '日期',
-  PRIMARY KEY (`t2`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `mysys_test6`
---
-
-LOCK TABLES `mysys_test6` WRITE;
-/*!40000 ALTER TABLE `mysys_test6` DISABLE KEYS */;
-/*!40000 ALTER TABLE `mysys_test6` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `mysys_tree_node`
 --
 
@@ -1608,4 +1584,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-11-15 19:49:18
+-- Dump completed on 2013-11-15 21:17:05

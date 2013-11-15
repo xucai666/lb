@@ -16,7 +16,6 @@
 	function __construct(){
 		parent::__construct();
 		
-		
 	}
 	
 	/**
@@ -24,13 +23,11 @@
 	 * @return [type] [description]
 	 */
 	function index(){	
-		
-	}
-
-	function phpinfo(){	
 		phpinfo();
 		exit;
 	}
+
+	
 	
 
 	
