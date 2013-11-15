@@ -57,7 +57,7 @@
     'c_type' => '3',
     'c_dir' => 'chan_pin_zhan_shi',
     'c_img_rotator' => '',
-    'c_seo' => '',
+    'c_seo' => '-Product',
   ),
   15 => 
   array (

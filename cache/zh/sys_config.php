@@ -1,8 +1,8 @@
 <?php return array (
   'optimize' => 
   array (
-    'title' => 'Welcome to visit this site',
-    'meta' => 'Welcome to visit this site',
+    'title' => 'Pristine',
+    'meta' => 'Pristine',
     'description' => 'Codeigniter CMS',
   ),
   'smtp' => false,
