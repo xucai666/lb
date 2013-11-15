@@ -23,7 +23,7 @@
 	 * [index description]
 	 * @return [type] [description]
 	 */
-	function index(){	
+	function index(){		
 		redirect("d=backend&c=login&m=index");
 	}
 	

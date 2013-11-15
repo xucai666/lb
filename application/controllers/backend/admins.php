@@ -208,7 +208,7 @@
 		 		));
 	 		//跳页
 	 		
- 			$this->init_page->backend_redirect('admins/action_list','删除成功');	
+ 			$this->init_page->backend_redirect('d=backend&c=admins&m=action_list','删除成功');	
 
 
  			

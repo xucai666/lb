@@ -6,9 +6,9 @@
     'pid' => '0',
     'orderId' => '100',
     'code' => '2001',
-    'init_name' => '产品中心',
+    'name' => '产品中心',
     'LEVEL' => '0',
-    'name' => '├─产品中心',
+    'level_name' => '├─产品中心',
   ),
   14 => 
   array (
@@ -17,9 +17,9 @@
     'pid' => '2',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'Car Products & Accessories',
+    'name' => 'Car Products & Accessories',
     'LEVEL' => '1',
-    'name' => '├─Car Products & Accessories',
+    'level_name' => '├─Car Products & Accessories',
   ),
   41 => 
   array (
@@ -28,9 +28,9 @@
     'pid' => '14',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'FM Transmitter',
+    'name' => 'FM Transmitter',
     'LEVEL' => '2',
-    'name' => '│ ├─FM Transmitter',
+    'level_name' => '│ ├─FM Transmitter',
   ),
   42 => 
   array (
@@ -39,9 +39,9 @@
     'pid' => '14',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'Bluetooth Car kit',
+    'name' => 'Bluetooth Car kit',
     'LEVEL' => '2',
-    'name' => '│ ├─Bluetooth Car kit',
+    'level_name' => '│ ├─Bluetooth Car kit',
   ),
   43 => 
   array (
@@ -50,9 +50,9 @@
     'pid' => '14',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'Car camcorder',
+    'name' => 'Car camcorder',
     'LEVEL' => '2',
-    'name' => '│ ├─Car camcorder',
+    'level_name' => '│ ├─Car camcorder',
   ),
   44 => 
   array (
@@ -61,9 +61,9 @@
     'pid' => '14',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'Car camcorder',
+    'name' => 'Car camcorder',
     'LEVEL' => '2',
-    'name' => '│ ├─Car camcorder',
+    'level_name' => '│ ├─Car camcorder',
   ),
   15 => 
   array (
@@ -72,9 +72,9 @@
     'pid' => '2',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'Gifts & Premiums',
+    'name' => 'Gifts & Premiums',
     'LEVEL' => '1',
-    'name' => '├─Gifts & Premiums',
+    'level_name' => '├─Gifts & Premiums',
   ),
   16 => 
   array (
@@ -83,9 +83,9 @@
     'pid' => '2',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'Garments & Textiles',
+    'name' => 'Garments & Textiles',
     'LEVEL' => '1',
-    'name' => '├─Garments & Textiles',
+    'level_name' => '├─Garments & Textiles',
   ),
   17 => 
   array (
@@ -94,9 +94,9 @@
     'pid' => '2',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'Fashion Accessories',
+    'name' => 'Fashion Accessories',
     'LEVEL' => '1',
-    'name' => '├─Fashion Accessories',
+    'level_name' => '├─Fashion Accessories',
   ),
   18 => 
   array (
@@ -105,9 +105,9 @@
     'pid' => '2',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'Electronics',
+    'name' => 'Electronics',
     'LEVEL' => '1',
-    'name' => '├─Electronics',
+    'level_name' => '├─Electronics',
   ),
   19 => 
   array (
@@ -116,9 +116,9 @@
     'pid' => '2',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'Electronic Components',
+    'name' => 'Electronic Components',
     'LEVEL' => '1',
-    'name' => '├─Electronic Components',
+    'level_name' => '├─Electronic Components',
   ),
   20 => 
   array (
@@ -127,9 +127,9 @@
     'pid' => '2',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'Computer Products',
+    'name' => 'Computer Products',
     'LEVEL' => '1',
-    'name' => '├─Computer Products',
+    'level_name' => '├─Computer Products',
   ),
   21 => 
   array (
@@ -138,9 +138,9 @@
     'pid' => '2',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'Baby & Children\\\'s  Products',
+    'name' => 'Baby & Children\\\'s  Products',
     'LEVEL' => '1',
-    'name' => '├─Baby & Children\\\'s  Products',
+    'level_name' => '├─Baby & Children\\\'s  Products',
   ),
   22 => 
   array (
@@ -149,8 +149,8 @@
     'pid' => '2',
     'orderId' => '100',
     'code' => '',
-    'init_name' => 'Auto Parts & Accessories',
+    'name' => 'Auto Parts & Accessories',
     'LEVEL' => '1',
-    'name' => '├─Auto Parts & Accessories',
+    'level_name' => '├─Auto Parts & Accessories',
   ),
 );?>

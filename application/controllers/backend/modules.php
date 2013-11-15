@@ -84,7 +84,7 @@ class Modules extends CI_Controller{
 		 			'log_desc'=>sprintf('%s module %s success.',$rs['sys_db_type'],$rs['main']['m_name']),
 		 		));
 
-				$this->init_page->backend_redirect('modules/action_list',lang('modules_success_save'));
+				$this->init_page->backend_redirect('d=backend&c=modules&m=action_list',lang('modules_success_save'));
 			}else{	
 				
 				$f_ids = $this->fm->fetch_select();
@@ -156,9 +156,9 @@ class Modules extends CI_Controller{
 
 
 			//page redirect
-			$this->init_page->backend_redirect('modules/action_list',lang('modules_success_delete'));
+			$this->init_page->backend_redirect('d=backend&c=modules&m=action_list',lang('modules_success_delete'));
 		}catch(EXCEPTION $e){
-			$this->init_page->backend_redirect('modules/action_list',$e->getMessage());
+			$this->init_page->backend_redirect('d=backend&c=modules&m=action_list',$e->getMessage());
 		}
 	}
 

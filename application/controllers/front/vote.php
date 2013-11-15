@@ -83,7 +83,7 @@ class Vote extends CI_Controller {
                ); 
        	
         set_cookie($cookie);  
-		$this->init_page->front_redirect('vote/view');
+		$this->init_page->front_redirect('d=front&c=vote&m=view');
 	}	
 
 	

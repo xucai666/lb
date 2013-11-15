@@ -230,7 +230,7 @@ class Init_page{
 	function fetch_js_var(){
 	   $str = '';
 		$str .=   "var base_url ='".base_url('/')."';\n";
-		$str .=   "var site_url='".site_url('/')."';\n";
+		$str .=   "var site_url='".site_url()."';\n";
 		foreach(array('js','img','css','theme') as $k){
 			foreach(array('front','backend') as $v){
 				$str .=   "var ${k}_${v}='".getRootUrl($k,$v)."';\n";
@@ -303,8 +303,8 @@ class Init_page{
 			$url_new = $url;
 			
 		}else{
-			if(!preg_match("/front/",$url)){
-				$url = 'front/'.$url;
+			if(!preg_match("/d=front/",$url)){
+				$url =  $url.'&d=front';
 			}			
 			$url_new = site_url($url);
 		}
@@ -327,8 +327,8 @@ class Init_page{
 			$url_new = $url;
 			
 		}else{
-			if(!preg_match("/backend/",$url)){
-				$url = 'backend/'.$url;
+			if(!preg_match("/d=backend/",$url)){
+				$url = $url.'&d=backend';
 			}			
 			$url_new = site_url($url);
 		}

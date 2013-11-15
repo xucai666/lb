@@ -105,7 +105,7 @@ class Pictures extends CI_Controller{
  	function action_del_index_rotation(){
  		$this->db->where('p_id',$this->input->get_post('p_id'));
 		$this->db->delete($this->init_db->table('pictures'));
-		$this->init_page->backend_redirect('pictures/action_index_rotation');
+		$this->init_page->backend_redirect('d=backend&c=pictures&m=action_index_rotation');
  		
  	}
  	

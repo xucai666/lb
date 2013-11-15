@@ -27,7 +27,7 @@
                 
                 <!--{foreach from=$list item=item}-->
                 
-                <tr onmouseover="overclass(this);" style="cursor:pointer" onclick="self.location.href='<!--{$site_url}-->/engage/detail/?eg_id=`$item.eg_id`'">
+                <tr onmouseover="overclass(this);" style="cursor:pointer" onclick="self.location.href='<!--{site_url("d=front&c=engage&m=detail&eg_id=`$item.eg_id`")}-->'">
                   <td height="25" align="center" ><!--{$item.eg_pos}--></td>
                   <td align="center" ><!--{func_get_area_str id=$item.eg_area }--></td>
                   <td align="center" ><!--{$item.eg_zone}--></td>

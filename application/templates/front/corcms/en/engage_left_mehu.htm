@@ -16,7 +16,7 @@
      
      <!--{foreach from=$category item=v}-->
      
-      <tr><td><a href="<!--{$site_url}-->/engage/?eg_job_class=`$v.c_sn`"><!--{$v.c_title}--></a></td></tr>
+      <tr><td><a href="<!--{site_url("d=front&c=engage&m=index&eg_job_class=`$v.c_sn`")}-->"><!--{$v.c_title}--></a></td></tr>
       
       		
 		<!--{/foreach}-->

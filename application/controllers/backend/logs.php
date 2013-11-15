@@ -62,7 +62,7 @@
 			}
 			$this->db->where_in("log_id",$ids);
 			$this->db->delete($this->init_db->table('log'));
-			$this->init_page->backend_redirect('logs/action_list');
+			$this->init_page->backend_redirect('d=backend&c=logs&m=action_list');
 			
 		}catch(Exception $e){
 	 		$this->init_page->backend_redirect('logs/action_list',$e->getMessage());
@@ -84,7 +84,7 @@
 			}
 			$this->db->where_in("login_id",$ids);
 			$this->db->delete($this->init_db->table('log_login'));
-			$this->init_page->backend_redirect('logs/action_login_log');
+			$this->init_page->backend_redirect('d=backend&c=logs&m=action_login_log');
 			
 		}catch(Exception $e){
 	 		$this->init_page->backend_redirect('logs/action_login_log',$e->getMessage());

@@ -27,7 +27,7 @@
     <!--{$smarty.foreach.download_list.iteration}-->
     
     &nbsp;</td>
-    <td height="25" bgcolor="#FFFFFF">&nbsp;<a href="<!--{$site_url}-->/download/view/?info_id=`$item.info_id`"><!--{$item.info_title}--></a>&nbsp;</td>
+    <td height="25" bgcolor="#FFFFFF">&nbsp;<a href="<!--{site_url("d=front&c=download&m=view&info_id=`$item.info_id`")}-->"><!--{$item.info_title}--></a>&nbsp;</td>
     <td height="25" align="center" bgcolor="#FFFFFF"><span><!--{$item.info_file_size}--></span>&nbsp;</td>
     <td height="25" bgcolor="#FFFFFF" align="center"><span><!--{$item.info_last_update}--></span>&nbsp;</td>
   </tr>

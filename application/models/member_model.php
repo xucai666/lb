@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
   * start page for webaccess
   *
@@ -104,7 +104,7 @@ class Member_model extends CI_Model{
     function auth_login(){
    
       if(!get_cookie('member')){
-         $this->init_page->front_redirect('member/index','请先登陆');
+         $this->init_page->front_redirect('d=front&c=member&m=index','请先登陆');
          exit;
 
       }

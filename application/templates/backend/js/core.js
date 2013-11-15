@@ -546,10 +546,13 @@ function art_dialog_close(msg,callback){
 function frmright_reload(){
 
 	var win_obj = window.ifr_main.main;	
+	
+	
 	var url = site_url+replace_url_param(win_obj.location.search,'m','action_ajax_list');
+
 	$.ajax({
 		url: url,
-		type: 'GET',
+		type: 'POST',
 		dataType: 'html',
 		data: {param1: 'value1'}
 	})

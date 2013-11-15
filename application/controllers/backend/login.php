@@ -28,7 +28,7 @@ class Login extends CI_Controller {
 	function index()
 	{
 		if(get_cookie('user_id')){
-			$this->init_page->backend_redirect('login/center');
+			$this->init_page->backend_redirect('d=backend&c=login&m=center');
 		}			
 		$this->load->helper('form');	
 		$this->init_page->fetch_css(array('login'));	

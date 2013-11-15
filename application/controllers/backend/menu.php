@@ -111,7 +111,7 @@
 	   		
 	   		
 	   		
-		 		$this->init_page->backend_redirect('menu/action_list','保存成功');
+		 		$this->init_page->backend_redirect('d=backend&c=menu&m=action_list','保存成功');
 		 	else:
 			 	//parent menu	
 		 		$db_menus = $this->init_auth->getAuthMenu();
@@ -131,7 +131,7 @@
  	
  	function action_del(){
  		$this->init_db->delete($this->input->get_post('r_id'),$this->im->db_menu_config());
- 		$this->init_page->backend_redirect('menu/action_list','删除成功');
+ 		$this->init_page->backend_redirect('d=backend&c=menu&m=action_list','删除成功');
  	}
  }
 ?>

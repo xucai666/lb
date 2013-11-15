@@ -40,7 +40,7 @@
     <td><!--{$item.adv_w}-->×<!--{$item.adv_h}-->px&nbsp;</td>
     <td><!--{$item.adv_exp_date}-->&nbsp;</td>
     <td><!--{$item.adv_visit}-->&nbsp;</td>
-    <td><textarea><script type="text/javascript" src="<!--{$site_url|cat:config_item('html_root')|cat:'/js/zh_'|cat:$item.adv_id|cat:'.js'}-->"></script></textarea></td>
+    <td><textarea><script type="text/javascript" src="<!--{base_url()|cat:config_item('html_root')|cat:'/js/zh_'|cat:$item.adv_id|cat:'.js'}-->"></script></textarea></td>
     <td> <!--{if $item.more==0}-->
       <a  title="删除广告" href="<!--{site_url("d=backend&c=advs&m=action_del&adv_id=`$item.adv_id`")}-->" onclick="return confirm('确定删除?');"> 
       <img src="<!--{$img_url}-->/del1.gif" border="0" > </a> 

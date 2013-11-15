@@ -234,8 +234,9 @@
 			 $file_upload_path = $root_path.$file_upload_path_ext.'/';
 			 $file_config['upload_path']	  =  $file_upload_path;	
 			 $this->Common_model->mkdirs($file_upload_path);
-			 $this->load->library('upload', $file_config);				
+			 $this->load->library('upload', $file_config);		
 			 if($_FILES['file1']['size']>0){
+			
 				if ( ! $this->upload->do_upload("file1")){	
 					
 						 throw new Exception('文件上传错误,注意上传格式');			
@@ -249,7 +250,7 @@
 			
 			$this->init_db->save($data,$this->Engage_model->db_config_apply())	;			
 			
-			$this->init_page->front_redirect("engage/",'应聘信息已经提交');	
+			$this->init_page->front_redirect("d=front&c=engage&m=index",'应聘信息已经提交');	
 			
 		
 		}catch(Exception $e){

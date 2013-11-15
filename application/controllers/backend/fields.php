@@ -57,7 +57,7 @@ class Fields extends CI_Controller{
 		 			'log_desc'=>sprintf('%s field %s success.',$rs['sys_db_type'],$rs['main']['f_name']),
 		 		));
 
-				$this->init_page->backend_redirect('fields/action_list',lang('fields_save_ok'));
+				$this->init_page->backend_redirect('d=backend&c=fields&m=action_list',lang('fields_save_ok'));
 			}else{
 
 				$this->init_page->load_backend_view('fields_add',$data);
@@ -88,7 +88,7 @@ class Fields extends CI_Controller{
 	 			'log_desc'=>sprintf('delete field %s success.',$rs['f_name']),
 	 		));
 
-			$this->init_page->backend_redirect('fields/action_list',lang('fields_delete_ok'));
+			$this->init_page->backend_redirect('d=backend&c=fields&m=action_list',lang('fields_delete_ok'));
 		}catch(EXCEPTION $e){
 			$this->init_page->backend_redirect($_SERVER['HTTP_REFERER'],$e->getMessage());
 		}
@@ -113,7 +113,9 @@ class Fields extends CI_Controller{
 
 	function action_view(){
 		$fields_types = $this->init_cache->cache_fetch('fields_types');
-		$data = array('main'=>$this->im->detail($this->input->get_post('f_id')),'fields_types'=>$fields_types);
+		$fid = $this->input->get_post('f_id');
+		$data = array('main'=>$this->im->detail($fid),'fields_types'=>$fields_types);
+		$data['app'] = $this->db->select('group_concat(m_name) as name',false)->from('module as a')->join('module_relations as b','a.m_id=b.m_id','left')->where('b.f_id',$fid)->get()->first_row('array');
 		$this->init_page->load_backend_view('fields_view',$data);
 	}
 }

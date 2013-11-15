@@ -61,7 +61,7 @@ class Tree extends CI_Controller{
 		 	 	$treeIds = array_re_index($this->db->select('treeId,name')->from('tree_node')->where('pid',0)->get()->result_array(),'treeId','name');
 		 	 	$this->init_cache->cache_create($treeIds,'treeIds');
 			
-				$this->init_page->backend_redirect('tree/index','保存成功');
+				$this->init_page->backend_redirect('d=backend&c=tree&m=index','保存成功');
 			}else{
 				$data = array_merge(array('pids'=>$this->im->fetch_select()),$data);				
 				$this->init_page->load_backend_view('tree_root_add',$data);
@@ -77,7 +77,7 @@ class Tree extends CI_Controller{
 
 	function action_root_set(){
 		$this->im->set_root($this->input->get_post('tree_id'));
-		$this->init_page->backend_redirect('tree/action_list');
+		$this->init_page->backend_redirect('d=backend&c=tree&m=action_list');
 
 	}
 
@@ -120,7 +120,7 @@ class Tree extends CI_Controller{
 				$this->im->cache_create();
 
 				//save ok
-				$this->init_page->backend_redirect('tree/action_list','保存成功');
+				$this->init_page->backend_redirect('d=backend&c=tree&m=action_list','保存成功');
 			}else{
 				$data = array_merge(array('pids'=>$this->im->fetch_select($this->im->get_root(),'level_name')),$data);				
 				$this->init_page->load_backend_view('tree_add',$data);
@@ -144,14 +144,22 @@ class Tree extends CI_Controller{
 			//create cache
 			$this->im->cache_create();
 			
-			$this->init_page->backend_redirect('tree/action_list','删除成功');
+			$this->init_page->backend_redirect('d=backend&c=tree&m=action_list','删除成功');
 		}catch(EXCEPTION $e){
 			$this->init_page->backend_redirect($_SERVER['HTTP_REFERER'],$e->getMessage());
 		}
 	}
 
 	function action_list(){
+
 		$data = $this->im->fetch_cache();
+		$search_name = $this->input->get_post('name');
+		if($search_name){
+
+			foreach($data['list'] as $k=>$v){			
+				if(strpos(strtolower($v['name']),strtolower($search_name))===false) unset($data['list'][$k]);
+			}
+		}
 		$this->init_page->load_backend_view('tree_list',$data);
 	}
 

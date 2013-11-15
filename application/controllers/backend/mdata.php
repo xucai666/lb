@@ -35,7 +35,7 @@ class Mdata extends CI_Controller{
 
 	function action_set_module(){
 		$this->im->set_mid($this->input->get_post('m_id'));
-		$this->init_page->backend_redirect('mdata/action_list');
+		$this->init_page->backend_redirect('d=backend&c=mdata&m=action_list');
 	}
 
 

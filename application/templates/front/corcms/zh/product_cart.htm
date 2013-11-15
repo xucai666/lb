@@ -44,7 +44,7 @@ $(document).ready(function($) {
       
     <td valign="top">
 	 <div class="product_cart">
-		<form method="post" action="<!--{$site_url}-->/product/good_cart_update">
+		<form method="post" action="<!--{site_url("d=front&c=product&m=good_cart_update")}-->">
         <table >
    
          <tr>
@@ -87,9 +87,9 @@ $(document).ready(function($) {
 
     <div class="opt">
       <!--{if $list}-->
-      <!--{create_button type="settle" url="product/order_create"}-->
+      <!--{create_button type="settle" url="d=front&c=product&m=order_create"}-->
       <!--{/if}-->
-      <!--{create_button type="continue" url="front/product"}-->
+      <!--{create_button type="continue" url="d=front&c=product&m=index"}-->
     </div>
   </form>
 </div>

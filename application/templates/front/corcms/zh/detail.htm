@@ -38,7 +38,7 @@
         <!--{if $smarty.request.from!='left'}-->
         <div align="left" style="margin-top:30px;border-top:1px dashed #999;padding-top:5px;">
         <!--{foreach from=$nav item=v2}-->
-        	<!--{$v2.type}-->：<a href="<!--{$site_url}-->/detail/?info_id=`$v2.info_id`"><!--{$v2.info_title}--></a><br>
+        	<!--{$v2.type}-->：<a href="<!--{site_url("d=front&c=detail&m=index&info_id=`$v2.info_id`")}-->"><!--{$v2.info_title}--></a><br>
          <!--{/foreach}-->        
         </div>
         <!--{/if}-->

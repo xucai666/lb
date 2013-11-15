@@ -36,7 +36,7 @@ $(document).ready(function($) {
       
     <td valign="top">
 	 <div class="product_cart">
-		<form method="post" action="<!--{$site_url}-->/product/order_save">
+		<form method="post" action="<!--{site_url("d=front&c=product&m=order_save")}-->">
       <input type="hidden" name="main[member]" value="<!--{$main.member|default:$member_info.m_user}-->">
      <div>
        <img src="<!--{$img_url}-->/checkout-title.gif"><*号位必填项>

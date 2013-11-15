@@ -58,11 +58,11 @@ class Product extends CI_Controller {
 		$pid = $this->input->get_post('pid');
 		$pid = $pid?$pid:2;
 		$ls = (array)$this->Tree_model->fetch_belong_tree($pid,true);
-		
+	
 		foreach($ls as $k=>&$v){
 				$vls = $this->Tree_model->fetch_belong_tree($v['id'],true);
 				$lnk = $vls?'action_category':'action_list';
-				$v['lnk'] = 'c=product&m='.$lnk.'&d=front&id='.$v['id'];
+				$v['lnk'] = 'c=product&m='.$lnk.'&d=front&pid='.$v['id'];
 				$v['ctp'] = $this->im->count_products($v['id']);
 				 if($v['pic']){
 				  $img = current(explode(',',$this->Common_model->fetch_images($v['pic'],1)));
@@ -94,7 +94,7 @@ class Product extends CI_Controller {
 				$i++;
 				$vls = $this->Tree_model->fetch_belong_tree($v['id'],true);
 				$lnk = $vls?'action_category':'action_list';
-				$v['lnk'] = 'product/'.$lnk.'/'.$v['id'];
+				$v['lnk'] = 'd=front&c=product&m='.$lnk.'&pid='.$v['id'];
 				$v['ctp'] = $this->im->count_products($v['id']);
 				 if($v['pic']){
 				  $img = current(explode(',',$this->Common_model->fetch_images($v['pic'],1)));
@@ -177,7 +177,7 @@ class Product extends CI_Controller {
 
 		$this->load->library('cart');	
 		//$this->cart->destroy();
-		$ids = $this->uri->segment(3)?array($this->uri->segment(3)):explode(',',$this->input->get_post('ids'));
+		$ids = $this->input->get_post('pid')?array($this->input->get_post('pid')):explode(',',$this->input->get_post('ids'));
 		$ls = $this->db->select('*',false)->from('module_product')->where_in('p_id',$ids)->get()->result_array();
 		$cart_arr =  $this->cart->contents();
 		foreach($ls as $v):
@@ -195,7 +195,7 @@ class Product extends CI_Controller {
 		       
 			$this->cart->insert($item);	
 		endforeach;	
-		redirect("product/good_cart_list");		
+		redirect("d=front&c=product&m=good_cart_list");		
 	}
 	
 	
@@ -307,7 +307,7 @@ class Product extends CI_Controller {
 				}
 
 
-				$this->init_page->front_redirect("product",'订单提交成功');	
+				$this->init_page->front_redirect("c=product&m=index",'订单提交成功');	
 			}else{
 				$this->load->library('cart');			
 				$cart_arr =  $this->cart->contents();
@@ -337,7 +337,7 @@ class Product extends CI_Controller {
 		}	
 		catch(Exception $e){
 			
-			$this->init_page->front_redirect('product',$e->getMessage());
+			$this->init_page->front_redirect('d=front&c=product&m=index',$e->getMessage());
 			
 		}	
 		

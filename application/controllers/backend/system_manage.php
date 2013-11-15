@@ -65,7 +65,7 @@ class System_manage extends CI_Controller{
 				'admin_id'=>$data['main']['admin_id'],
 			));			
 			$this->init_db->save($save_data,$this->Admins_model->db_config());
-			$this->init_page->backend_redirect('system_manage/exit_system','修改成功，需要重新登陆系统');
+			$this->init_page->backend_redirect('d=backend&c=system_manage&m=exit_system','修改成功，需要重新登陆系统');
 		}
 	}
 	
@@ -317,7 +317,7 @@ class System_manage extends CI_Controller{
  			}
  		}
 
- 		$this->init_page->backend_redirect('system_manage/action_lang_trans','导入完毕');
+ 		$this->init_page->backend_redirect('d=backend&c=system_manage&m=action_lang_trans','导入完毕');
 
 		
  	}
@@ -333,7 +333,7 @@ class System_manage extends CI_Controller{
  		
  		$ls = $this->db->select('*',false)->from('lang')->where("lang_type !='zh'")->order_by('lang_id','asc')->get()->result_array();
  		if(!count($ls)){
- 			$this->init_page->backend_redirect('system_manage/action_lang_trans','操作失败，无数据');
+ 			$this->init_page->backend_redirect('d=backend&c=system_manage&m=action_lang_trans','操作失败，无数据');
  		}
  		foreach($ls as $v){
  			$file = $path.$v['lang_type'].'/'.$v['lang_file'];
@@ -344,7 +344,7 @@ class System_manage extends CI_Controller{
  			write_file($key,"<?php\n \$lang = ".var_export($v,true).";\n?>");
  		}
 
- 		$this->init_page->backend_redirect('system_manage/action_lang_trans','导出完毕');
+ 		$this->init_page->backend_redirect('d=backend&c=system_manage&m=action_lang_trans','导出完毕');
 		
  	}
 

@@ -102,6 +102,7 @@ class Tree_model extends CI_Model{
 		$this->load->library('Init_tree');
 		$ds = $this->detail($id);
 		$ls = $this->init_cache->cache_fetch('tree_'.$ds['treeId']);
+		
 		$rs = array_re_index($ls,'id',array(array('id'=>'id'),array('parentid'=>'pid'),array('name'=>'name')));	
 		$this->init_tree->set_tree($rs);	
 		if($norecur && $a = $this->init_tree->get_child($id)){

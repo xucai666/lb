@@ -21,8 +21,8 @@ class Member extends CI_Controller {
 		//initial Breadcrumb
 		$this->load->library('Breadcrumb');
 		$this->load->model('Member_model','im');
-		$this->lang->load('item_front_member');
-		$this->lang->load('item_front');
+		$this->lang->load('item_front_member',lang_get());
+		$this->lang->load('item_front',lang_get());
 
 	}
 	
@@ -58,13 +58,13 @@ class Member extends CI_Controller {
                    'prefix' => 'mysys_',
                 );
 	 			set_cookie($cookie);
-	 			$this->init_page->front_redirect('member/action_member_center',lang('mb_msg_sign_in'));
+	 			$this->init_page->front_redirect('d=front&c=member&m=action_member_center',lang('mb_msg_sign_in'));
 	 		}else{
 
 	 			$this->init_page->load_front_view('member_login',$data);
 	 		}
 	 	}catch(Exception $e){
-	 		$this->init_page->front_redirect('member/index',$e->getMessage());
+	 		$this->init_page->front_redirect('d=front&c=member&m=index',$e->getMessage());
 	 	  	
 	 	}
 	 }
@@ -95,13 +95,13 @@ class Member extends CI_Controller {
  		    if($this->form_validation->run()){
  		    	$db_config = $this->im->db_config();
 	 			$this->init_db->save($data,$db_config);
-		 		$this->init_page->front_redirect('member/index','注册成功，请登陆');
+		 		$this->init_page->front_redirect('d=front&c=member&m=index','注册成功，请登陆');
 
  		    }else{
  		    	$this->init_page->load_front_view('member_register',$data);
  		    }
  		}catch(Exception $e){
-	 		$this->init_page->front_redirect('member/register',$e->getMessage());
+	 		$this->init_page->front_redirect('d=front&c=member&m=register',$e->getMessage());
  			
  		}
 
@@ -123,13 +123,13 @@ class Member extends CI_Controller {
  		    if($this->form_validation->run()){
  		    	$this->db->where('m_user',$this->init_page->my_encrypt(get_cookie('member'),'DECODE'));
  		    	$this->db->update('module_member',$data['main']);
-		 		$this->init_page->front_redirect('member/action_member_center','资料更新成功');
+		 		$this->init_page->front_redirect('d=front&c=member&m=action_member_center','资料更新成功');
 
  		    }else{
  		    	$this->init_page->load_front_view('member_center',$data);
  		    }
  		}catch(Exception $e){
-	 		$this->init_page->front_redirect('member/action_member_center',$e->getMessage());
+	 		$this->init_page->front_redirect('d=front&c=member&m=action_member_center',$e->getMessage());
  			
  		}
 
@@ -152,7 +152,7 @@ class Member extends CI_Controller {
 		$this->db->select('*')->from('module_member')->where('m_user',$this->init_page->my_encrypt(get_cookie('member'),'DECODE'));
  		$rs = $this->db->get()->first_row('array');
  		$data = array('main'=>$rs);
- 		
+ 
 	 	$this->init_page->load_front_view('member_center',$data);
 	 }
 
@@ -224,7 +224,7 @@ class Member extends CI_Controller {
 	 
 	 function action_exit(){
 	 	delete_cookie('member');
-	 	$this->init_page->front_redirect('member/index',lang('mb_msg_exit'));
+	 	$this->init_page->front_redirect('d=front&c=member&m=index',lang('mb_msg_exit'));
 	 }
 
 	 function action_order(){
@@ -239,16 +239,16 @@ class Member extends CI_Controller {
 	 }
 
 	 function action_order_detail(){
-	 	$stats = $this->db->select('sum(1) as p_stat,sum(p_qty*p_price ) as sub',false)->from('order_detail')->where('order_id',$this->uri->segment(4))->get()->first_row('array');
-	 	$main = $this->db->select('*',false)->from('order_main')->where('order_id',$this->uri->segment(4))->get()->first_row('array');
-	 	$list = $this->db->select('*',false)->from('order_detail')->where('order_id',$this->uri->segment(4))->get()->result_array();
+	 	$stats = $this->db->select('sum(1) as p_stat,sum(p_qty*p_price ) as sub',false)->from('order_detail')->where('order_id',$this->input->get_post('order_id'))->get()->first_row('array');
+	 	$main = $this->db->select('*',false)->from('order_main')->where('order_id',$this->input->get_post('order_id'))->get()->first_row('array');
+	 	$list = $this->db->select('*',false)->from('order_detail')->where('order_id',$this->input->get_post('order_id'))->get()->result_array();
 	 	$data = array('stats'=>$stats,'main'=>$main,'list'=>$list,'status'=>$this->init_cache->cache_fetch('order_status'));
 	 	$this->init_page->load_front_view('member_order_detail',$data);
 	 }
 
 	 function action_order_pay(){
-	 	$stats = $this->db->select('sum(1) as p_stat,sum(p_qty*p_price ) as sub',false)->from('order_detail')->where('order_id',$this->uri->segment(4))->get()->first_row('array');
-	 	$main = $this->db->select('*',false)->from('order_main')->where('order_id',$this->uri->segment(4))->get()->first_row('array');
+	 	$stats = $this->db->select('sum(1) as p_stat,sum(p_qty*p_price ) as sub',false)->from('order_detail')->where('order_id',$this->input->get_post('order_id'))->get()->first_row('array');
+	 	$main = $this->db->select('*',false)->from('order_main')->where('order_id',$this->input->get_post('order_id'))->get()->first_row('array');
 	 	$data = array('stats'=>$stats,'main'=>$main);
 	 	$this->init_page->load_front_view('member_order_pay',$data);
 	 }
