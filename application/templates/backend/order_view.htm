@@ -1,4 +1,4 @@
-<!--{include file="`$dir_backend`/top.htm"}-->
+﻿<!--{include file="`$dir_backend`/top.htm"}-->
 <div class="nav_title" align="left" >订单查看</div>
 <div  align="right"></div>
 <h2>订单状态</h2>
@@ -89,16 +89,16 @@
 <!--{include file="`$dir_backend`/foot.htm"}-->
   <div align="center" style="margin:20px 0px 0px 0px;" class="noprint">
    <!--{if $main.status==0}-->
-   <!--{create_button type="payed" url="backend/product/action_order_status_change?order_id=`$main.order_id`&status=1"}-->
+   <!--{create_button type="payed" url="d=backend&c=product&m=action_order_status_change&order_id=`$main.order_id`&status=1"}-->
    <!--{/if}-->
    <!--{if $main.status==1 }-->
-   <!--{create_button type="shipped" url="backend/product/action_order_status_change?order_id=`$main.order_id`&status=2"}-->
+   <!--{create_button type="shipped" url="d=backend&c=product&m=action_order_status_change&order_id=`$main.order_id`&status=2"}-->
    <!--{/if}-->
 
    <!--{if $main.status==2 }-->
-   <!--{create_button type="receipt" url="backend/product/action_order_status_change?order_id=`$main.order_id`&status=3"}-->
+   <!--{create_button type="receipt" url="d=backend&c=product&m=action_order_status_change&order_id=`$main.order_id`&status=3"}-->
    <!--{/if}-->
 
    <!--{create_button type="print" url="javascript:window.print();"}-->
-   <!--{create_button type="back" url="backend/product/action_order"}-->
+   <!--{create_button type="back" url="d=backend&c=product&m=action_order"}-->
     </div>

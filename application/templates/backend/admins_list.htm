@@ -3,9 +3,9 @@
 
 <!--{php}-->
 	$attr  = array('method'=>'get');
-	echo form_open("backend/admins/action_list",$attr);
+	echo form_open("d=backend&c=admins&m=action_list",$attr);
 <!--{/php}-->
-<div  align="right"><a href="<!--{func_site_url segments='/backend/admins/action_add'}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
+<div  align="right"><a href="<!--{func_site_url segments='d=backend&c=admins&m=action_add'}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
 <table  align="center" class="search" >
 <tr>
 	<td>
@@ -66,7 +66,7 @@
 				'class'=>'link_view',
 				'target'=>'_blank',
 			);
-			echo anchor('backend/admins/action_view/'.\$template->tpl_vars["v"]->value["admin_id"],'&nbsp;',\$attrs);
+			echo anchor('d=backend&c=admins&m=action_view/'.\$template->tpl_vars["v"]->value["admin_id"],'&nbsp;',\$attrs);
 			 <!--{/php}-->
 			
 
@@ -75,9 +75,9 @@
 				\$attrs  = array(
 					'class'=>'link_mod',
 				);
-				echo anchor('backend/admins/action_add/'.\$template->tpl_vars["v"]->value["admin_id"],'&nbsp;',\$attrs);
+				echo anchor('d=backend&c=admins&m=action_add/'.\$template->tpl_vars["v"]->value["admin_id"],'&nbsp;',\$attrs);
 				<!--{/php}-->
-				<a  href='<!--{func_site_url segments="backend/admins/action_delete/`$v.admin_id`"}-->' onclick="return confirm('<!--{$lang_admins.delete_confirm}-->')" class="link_del">&nbsp;</a>
+				<a  href='<!--{func_site_url segments="d=backend&c=admins&m=action_delete/`$v.admin_id`"}-->' onclick="return confirm('<!--{$lang_admins.delete_confirm}-->')" class="link_del">&nbsp;</a>
                 <!--{/if}-->
            
 			

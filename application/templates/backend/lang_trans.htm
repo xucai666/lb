@@ -1,17 +1,17 @@
-<!--{include file="`$dir_backend`/top.htm"}-->
+﻿<!--{include file="`$dir_backend`/top.htm"}-->
 <div class="nav_title">多语言翻译</div>
 <div  align="right">
 
-	<a href="<!--{func_site_url segments='/backend/system_manage/action_lang_import'}-->" ><img src="<!--{$img_url}-->/import_lang.png"  /></a>
+	<a href="<!--{func_site_url segments='d=backend&c=system_manage&m=action_lang_import'}-->" ><img src="<!--{$img_url}-->/import_lang.png"  /></a>
 
-	<a href="<!--{func_site_url segments='/backend/system_manage/action_lang_export'}-->" onclick="return confirm('确定导出？');"><img src="<!--{$img_url}-->/export_lang.png"  /></a>
+	<a href="<!--{func_site_url segments='d=backend&c=system_manage&m=action_lang_export'}-->" onclick="return confirm('确定导出？');"><img src="<!--{$img_url}-->/export_lang.png"  /></a>
 
 
 </div>
 
 <table class='search'>
 	<tr><td>
-		<form action='<!--{func_site_url segments="backend/system_manage/action_lang_trans"}-->' method="get">
+		<form action='<!--{func_site_url segments="d=backend&c=system_manage&m=action_lang_trans"}-->' method="get">
 			下标		
 			<input type="text" name="lang_key" value="<!--{$smarty.get.lang_key}-->">
 			关键字：
@@ -35,7 +35,7 @@
 	</td></tr>
 </table>
 
-  <form id="form2" method="post" action="<!--{func_site_url segments='/backend/system_manage/action_del'}-->" onsubmit="return chkdel2();">   
+  <form id="form2" method="post" action="<!--{func_site_url segments='d=backend&c=system_manage&m=action_del'}-->" onsubmit="return chkdel2();">   
 <table class='mytable'>
 	<thead>
 <tr>
@@ -68,7 +68,7 @@
 				<!--{if $item.is_trans}--><img src="<!--{$img_url}-->/yes.gif" /><!--{else}--><a class="a_trans" href="javascript:;" onclick="single_trans('<!--{$key}-->');return false;"><img src="<!--{$img_url}-->/no.gif" border="0" /></a><!--{/if}-->
 				
 			</span>	&nbsp;
-			<script  id="js_<!--{$key}-->" type="text/javascript"  translink="<!--{func_site_url segments="backend/system_manage/action_trans"}-->?type=auto&lang_id=<!--{$item.lang_id}-->&run=<!--{$key}-->" ></script>
+			<script  id="js_<!--{$key}-->" type="text/javascript"  translink="<!--{func_site_url segments="d=backend&c=system_manage&m=action_trans"}-->?type=auto&lang_id=<!--{$item.lang_id}-->&run=<!--{$key}-->" ></script>
 			<script language="javascript" type="text/javascript">var js_id_<!--{$key}--> = "<!--{$item.lang_id}-->";</script>
 
 	</td>

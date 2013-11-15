@@ -51,7 +51,7 @@ class Common extends CI_Controller{
  	 */
  	function ajax_change_state(){
  		try{			
-			extract($_GET);
+			extract($_POST);
 	 		//更新状态
 	 		$to_update = array($change_key=>$change_val);
 	 	 	$this->db->update($tb,$to_update,array($key=>$val));

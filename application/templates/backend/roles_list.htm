@@ -22,13 +22,13 @@
 			\$attrs  = array(
 				'class'=>'link_mod',
 			);
-			echo anchor('backend/roles/action_add/'.\$template->tpl_vars['v']->value['role_id'],'&nbsp;',\$attrs);
+			echo anchor('d=backend&c=roles&m=action_add/'.\$template->tpl_vars['v']->value['role_id'],'&nbsp;',\$attrs);
 			
 			\$attrs  = array(
 				'class'=>'link_del',
 			);
 			
-			echo anchor('backend/roles/action_del/'.\$template->tpl_vars['v']->value['role_id'],'&nbsp;',\$attrs);
+			echo anchor('d=backend&c=roles&m=action_del/'.\$template->tpl_vars['v']->value['role_id'],'&nbsp;',\$attrs);
 			
 			
 			 <!--{/php}-->

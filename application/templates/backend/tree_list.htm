@@ -1,10 +1,10 @@
-<!--{include file="`$dir_backend`/top.htm"}-->
+﻿<!--{include file="`$dir_backend`/top.htm"}-->
 <div class="nav_title">分类管理</div>
-<div  align="right"><a href="<!--{func_site_url segments='/backend/tree/action_add'}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
+<div  align="right"><a href="<!--{func_site_url segments='d=backend&c=tree&m=action_add'}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
 
 <table class='search'>
 	<tr><td>
-		<form action='<!--{func_site_url segments="backend/tree/action_list"}-->' method="get">
+		<form action='<!--{func_site_url segments="d=backend&c=tree&m=action_list"}-->' method="get">
 			
 			分类名称：
 			<input type="text" name="name" value="<!--{$smarty.get.name}-->">
@@ -14,7 +14,7 @@
 	</td></tr>
 </table>
 
-  <form id="form2" method="post" action="<!--{func_site_url segments='/backend/tree/action_del'}-->" onsubmit="return chkdel2();">   
+  <form id="form2" method="post" action="<!--{func_site_url segments='d=backend&c=tree&m=action_del'}-->" onsubmit="return chkdel2();">   
 <table class='mytable'>
 	<thead>
 <tr>

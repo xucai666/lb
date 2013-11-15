@@ -7,7 +7,7 @@
 	<!--{if $querys}-->
 	<table class='search '>
 		<tr><td>
-			<form action='<!--{site_url("backend/mdata/action_list")}-->' method="post">
+			<form action='<!--{site_url("d=backend&c=mdata&m=action_list")}-->' method="post">
 				<!--{foreach from=$querys key=k item=v}-->
 					<!--{$v.name}-->:<!--{func_vsprintf html =$v.html name=$k value=','|implode:(array)$smarty.request.$k}-->
 				<!--{/foreach}-->
@@ -21,7 +21,7 @@
 
 <div style="margin-top:67px;" >
 
-<form id="form2" method="post" action="<!--{site_url('backend/mdata/action_del')}-->" onsubmit="return chkdel2();">   
+<form id="form2" method="post" action="<!--{site_url('d=backend&c=mdata&m=action_del')}-->" onsubmit="return chkdel2();">   
 	<div id="ajax_content">
 			<table class='mytable' >
 				<thead>

@@ -46,16 +46,16 @@
 
 <table class="search"  style="width:100%">
 <tr><td>
-	<form action="<!--{site_url('d=backend&c=message&m=action_list')}-->" method="get">   
+	<form action="<!--{site_url('d=backend&c=message&m=action_list')}-->" method="post">   
     <!--{$lang_message.name}-->：
-        <input type="text" name="ms_name" value="<!--{$smarty.get.ms_name}-->" />
+        <input type="text" name="ms_name" value="<!--{$smarty.request.ms_name}-->" />
 
     <!--{$lang_message.tel}-->：
-        <input type="text" name="ms_tel" value="<!--{$smarty.get.ms_tel}-->" />
+        <input type="text" name="ms_tel" value="<!--{$smarty.request.ms_tel}-->" />
         
   
     <!--{$lang_message.email}-->：
-        <input type="text" name="ms_email" value="<!--{$smarty.get.ms_email}-->" />      
+        <input type="text" name="ms_email" value="<!--{$smarty.request.ms_email}-->" />      
         
 
 	 <!--{create_button type='search'}-->
@@ -83,7 +83,7 @@
 		&nbsp;&nbsp;
 		<!--{$item.ms_date}-->&nbsp;&nbsp;<!--{$item.ms_ip}-->
 		&nbsp;&nbsp;
-       <a href="<!--{site_url('d=backend&c=message&m=action_del?ms_id=<!--{$item.ms_id}-->')}-->" onclick="return confirm('确定删除?');"><img name="" src="<!--{$img_url}-->/del.png"  alt="" /></a>    </div> 
+       <a href='<!--{site_url("d=backend&c=message&m=action_del&ms_id=`$item.ms_id`")}-->' onclick="return confirm('确定删除?');"><img name="" src="<!--{$img_url}-->/del.png"  alt="" /></a>    </div> 
 
     <div style="display:none;margin-left:50px;">
 	    <li>公司名称：<!--{$item.ms_company}--></li>

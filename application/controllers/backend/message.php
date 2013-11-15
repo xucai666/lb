@@ -32,10 +32,10 @@
 		
 		//js
 		$this->db->select("a.*",false)->from('message as  a ')	
-		->like('a.ms_name',$this->input->get('ms_name'),'after')
-		->like('a.ms_tel',$this->input->get('ms_tel'),'after')
-		->like('a.ms_mobile',$this->input->get('ms_mobile'),'after')
-		->like('a.ms_email',$this->input->get('ms_email'),'after')		
+		->like('a.ms_name',$this->input->get_post('ms_name'),'after')
+		->like('a.ms_tel',$this->input->get_post('ms_tel'),'after')
+		->like('a.ms_mobile',$this->input->get_post('ms_mobile'),'after')
+		->like('a.ms_email',$this->input->get_post('ms_email'),'after')		
 		->order_by("a.ms_id","desc");
 		
 		$data = $this->init_db->fetch_all(5);	

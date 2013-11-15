@@ -19,18 +19,18 @@
 			\$attrs  = array(
 				"class"=>"link_mod",
 			);
-			echo anchor("backend/menu/action_add/".\$template->tpl_vars["v"]->value["r_id"],"&nbsp;",\$attrs);
+			echo anchor("d=backend&c=menu&m=action_add/".\$template->tpl_vars["v"]->value["r_id"],"&nbsp;",\$attrs);
 			
 			\$attrs  = array(
 				"class"=>"link_del",
 				"onclick"=>"return confirm('确定删除?');",
 			);
 			
-			echo anchor("backend/menu/action_del/".\$template->tpl_vars["v"]->value["r_id"],"&nbsp;",\$attrs);
+			echo anchor("d=backend&c=menu&m=action_del/".\$template->tpl_vars["v"]->value["r_id"],"&nbsp;",\$attrs);
 			
 			
 			<!--{/php}-->
-			<a href="<!--{'backend/menu/action_add'|site_url|cat:"?pid=`$v.r_id`"}-->" class="link_add">&nbsp;</a>
+			<a href="<!--{'d=backend&c=menu&m=action_add'|site_url|cat:"?pid=`$v.r_id`"}-->" class="link_add">&nbsp;</a>
 		</td>
 	
 	</tr>

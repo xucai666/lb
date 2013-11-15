@@ -1,10 +1,10 @@
-<!--{include file="`$dir_backend`/top.htm"}-->
+﻿<!--{include file="`$dir_backend`/top.htm"}-->
 <div class="nav_title">模型管理</div>
-<div  align="right"><a href="<!--{func_site_url segments='/backend/modules/action_add'}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
+<div  align="right"><a href="<!--{func_site_url segments='d=backend&c=modules&m=action_add'}-->"><img src="<!--{$img_url}-->/add_<!--{$lang_type}-->.png"  /></a></div>
 
 <div class='search'>
 	
-		<form action='<!--{func_site_url segments="backend/modules/action_list"}-->' method="get">
+		<form action='<!--{func_site_url segments="d=backend&c=modules&m=action_list"}-->' method="post">
 			<li>
 			模块名称：
 			<input type="text" name="m_name" value="<!--{$smarty.get.m_name}-->">			
@@ -16,7 +16,7 @@
 	
 </div>
 
-  <form id="form2" method="post" action="<!--{func_site_url segments='/backend/modules/action_del'}-->" onsubmit="return chkdel2();">   
+  <form id="form2" method="post" action="<!--{func_site_url segments='d=backend&c=modules&m=action_del'}-->" onsubmit="return chkdel2();">   
 <table class='mytable'>
 	<thead>
 <tr>
@@ -52,8 +52,8 @@
 </td>
 	<td align='center'>
 			<!--{if !$item.m_lock}-->
-			<!--{ci_anchor segment="backend/modules/action_add/`$item.m_id`" title="&nbsp;" attrs="class:link_mod"}-->
-			<!--{ci_anchor segment="backend/modules/action_del/`$item.m_id`" title="&nbsp;" attrs="class:link_del,onclick:return confirm('确定删除?');"}-->
+			<!--{ci_anchor segment="d=backend&c=modules&m=action_add&m_id=`$item.m_id`" title="&nbsp;" attrs="class:link_mod"}-->
+			<!--{ci_anchor segment="d=backend&c=modules&m=action_del&m_id=`$item.m_id`" title="&nbsp;" attrs="class:link_del,onclick:return confirm('确定删除?');"}-->
 			<!--{/if}-->
 	</td>
 </tr>

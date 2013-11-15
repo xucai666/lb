@@ -3,21 +3,21 @@
 <div  align="right"></div>
 
 <div class="search">
-	<form action="<!--{site_url('d=backend&c=product&m=action_order')}-->" method="get">
+	<form action="<!--{site_url('d=backend&c=product&m=action_order')}-->" method="post">
    订单状态：
 
    <select name="status">
     <option value=''>请选择</option>
-    <!--{html_options options=$status selected=$smarty.get.status }-->
+    <!--{html_options options=$status selected=$smarty.request.status }-->
    </select>
 
     订单编号：
-      <input name="order_no" type="text" id="order_no" value="<!--{$smarty.get.order_no}-->" size="15" />
+      <input name="order_no" type="text" id="order_no" value="<!--{$smarty.request.order_no}-->" size="15" />
 联系人：
-<input name="contact" type="text" id="contact" value="<!--{$smarty.get.contact}-->" />
+<input name="contact" type="text" id="contact" value="<!--{$smarty.request.contact}-->" />
     &nbsp;手机：
     <label>
-      <input name="mobile" type="text" id="mobile" size="15"  value="<!--{$smarty.get.mobile}-->"/>
+      <input name="mobile" type="text" id="mobile" size="15"  value="<!--{$smarty.request.mobile}-->"/>
     </label>
    
 <!--{create_button type="search"}-->
@@ -53,10 +53,10 @@
    
     <td class="l8"> 
       
-      <a  title="查看订单"   href="<!--{site_url('d=backend&c=product&m=action_order_view&order_id=<!--{$item.order_id}-->&parent_class=<!--{$smarty.get.parent_class}-->')}-->" > 
+      <a  title="查看订单"   href='<!--{site_url("d=backend&c=product&m=action_order_view&order_id=`$item.order_id`&parent_class=`$smarty.get.parent_class`")}-->' > 
       <img src="<!--{$img_url}-->/view.png" border="0" > </a> 
       
-      <a  title="删除订单" href="<!--{site_url('d=backend&c=product&m=action_order_del&order_id=<!--{$item.order_id}-->&parent_class=<!--{$smarty.get.parent_class}-->')}-->" onclick="return confirm('确定删除?');"> 
+      <a  title="删除订单" href='<!--{site_url("d=backend&c=product&m=action_order_del&order_id=`$item.order_id`&parent_class=`$smarty.get.parent_class`")}-->' onclick="return confirm('确定删除?');"> 
       <img src="<!--{$img_url}-->/del1.gif" border="0" > </a> 
       </td>
   </tr>

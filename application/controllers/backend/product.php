@@ -231,10 +231,10 @@ class Product extends CI_Controller{
 						
 		$this->init_page->fetch_css(array('backend_order'),'view',$this->init_page->getRes('css','backend').'item/');
 		$this->db->select("a.*",false)->from($this->init_db->table('order_main').' as a ')
-		->like('a.order_no',$this->input->get('order_no'))
-		->like('a.contact',$this->input->get('contact'))
-		->like('a.mobile',$this->input->get('mobile'));
-		$this->input->get('status') && $this->db->where('status',$this->input->get('status'));
+		->like('a.order_no',$this->input->get_post('order_no'))
+		->like('a.contact',$this->input->get_post('contact'))
+		->like('a.mobile',$this->input->get_post('mobile'));
+		if($this->input->get_post('status')!=='') $this->db->where('status',$this->input->get_post('status'));
 		$this->db->order_by("order_id","desc");
 		$data = $this->init_db->fetch_all();	
 		

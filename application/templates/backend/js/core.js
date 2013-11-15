@@ -229,9 +229,9 @@ function ajax_change_state(obj,tb,key,val,change_key){
 function ajax_change_val(tb,key,val,change_key,change_val){
     var suc = 0 ;
     $.ajax({
-    	type:'GET',
+    	type:'POST',
     	async:false,
-    	url:site_url +"/backend/common/ajax_change_state/",
+    	url:site_url +"?d=backend&c=common&m=ajax_change_state",
     	data:{tb:tb,key:key,val:val,change_key:change_key,change_val:change_val}
     	
     }).done(function(msg){
@@ -289,36 +289,7 @@ function start_download(files_id){
 }
 
 
-function getTeachersContact(teacher_id){
-	if(!teacher_id) return false;
-	$.getJSON(site_url+"/common/ajax_teacher_contact/?teacher_id="+teacher_id,function(data){		
-					
-			if(data.vars=='-1'){
-					alert('请先登录！');
-					self.location.href="/members/logon.php";
-			}else if(data.vars=='-2'){
-					alert('积分不足，无法查看联系方式！');		
-			}else if(data.vars==''){			
-				var msg = '你点太快了';				
-				alert('发生错误：'+msg);		
-			}else{			
-				var reval;	
-				reval  = "";
-				reval += " <div class=\"G1\">";
-				reval += "                        <h3 style=\"font-size:14px;\">联系方式</h3>              ";
-				reval += "                        <p>固定电话: "+data.vars.teacher_phone+"</p>";
-				reval += "                        <p>手机: "+data.vars.teacher_mobile+"</p>";
-				reval += "                        <p>E-mail: "+data.vars.teacher_email+"</p>";
-				reval += "                        <p>QQ/MSN: "+data.vars.teacher_im+"</p>";
-				reval += " </div>";		
-				$('#con_one_8').html(reval);		
-			}
-		
-	});
 
-
-
-}
 
 
 
@@ -350,7 +321,7 @@ function ajax_sort(obj,tb,key,val,change_key){
 	change_val = $(obj).val();
 	$(obj).hide();
 	$(obj).next().show();
-	$.get(site_url+"/backend/common/ajax_change_state/?tb="+tb+"&key="+key+"&val="+val+"&change_key="+change_key+"&change_val="+change_val,function(msg){	
+	$.post(site_url+"?d=backend&c=common&m=ajax_change_state?tb="+tb+"&key="+key+"&val="+val+"&change_key="+change_key+"&change_val="+change_val,function(msg){	
 				if(msg>0){
 					
 					$(obj).show();
@@ -650,7 +621,7 @@ function ajax_pinyin(str,obj){
 
 	$.ajax({
 	  type: "POST",
-	  url: site_url+"backend/common/ajax_pinyin",
+	  url: site_url+"?d=backend&c=common&m=ajax_pinyin",
 	  data:{str:str},
 	  dataType: "text",
 	  success:function(msg){
