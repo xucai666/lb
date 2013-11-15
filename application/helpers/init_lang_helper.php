@@ -59,7 +59,7 @@
 	 {
 	 
 		function lang_url(){
-			if(config_item('lang_multiple')){
+			if(count(config_item('support_language'))>1){
 				$lang = get_cookie('lang');
 				$lang_get = $_GET['lang'];		
 				$lang = $lang_get?$lang_get:$lang;	

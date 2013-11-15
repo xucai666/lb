@@ -3,7 +3,7 @@
   array (
     'c_id' => '11',
     'c_title' => 'Home',
-    'c_url' => 'product/action_home',
+    'c_url' => 'index',
     'c_order' => '1',
     'c_display' => '1',
     'c_pic' => 'http://localhost/lb//swfupload/uploads/2013-08-21/nav-11.jpg',

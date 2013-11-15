@@ -1,6 +1,6 @@
  <form id="form1" name="form1" method="post" action="<!--{func_site_url segments='search'}-->"  style="display:;" >
          <ul class="index_top_right">          
-         <!--{if config_item('lang_multiple')}-->        
+         <!--{if count(config_item('support_language'))>1}-->        
           <li  class="" >
            <img src="<!--{$img_url}-->/lang_change.gif">&nbsp; <!--{$lang_link}-->         
          </li>

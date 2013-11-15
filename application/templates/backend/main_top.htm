@@ -37,8 +37,7 @@
 
 </ul></div></td>
 		<td align="right"><div class="nav">
-
-			 <!--{if config_item('lang_multiple')}-->
+			 <!--{if count(config_item('support_language'))>1}-->
 					当前编辑:
 					<select onChange="parent.location.href='<!--{site_url("d=backend&c=common&m=lang_set&lang=")}-->'+this.value+'&url=<!--{site_url("d=backend&c=login&m=center")|urlencode}-->';" >
 					<!--{html_options options=$lang_all_options selected=$lang_type}-->

@@ -62,7 +62,6 @@ $config['url_suffix'] = "";
 */
 $config['language']	= "en";
 $config['support_language']	=array('en','zh');
-$config['lang_multiple']	= true;
 /*
 |--------------------------------------------------------------------------
 | Default Character Set
