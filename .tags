@@ -147,6 +147,7 @@ CI	.\application\libraries\init_db.php	/^ 		$CI = &get_instance();	$/;"	v	langua
 CI	.\application\libraries\init_db.php	/^ 		$CI = &get_instance();$/;"	v	language:PHP
 CI	.\application\libraries\init_db.php	/^ 	 	$CI = &get_instance();$/;"	v	language:PHP
 CI	.\application\libraries\init_db.php	/^ 	    $CI = &get_instance();$/;"	v	language:PHP
+CI	.\application\libraries\init_form.php	/^		$CI = &get_instance();$/;"	v	language:PHP
 CI	.\application\libraries\init_lang.php	/^ 		$CI = &get_instance();$/;"	v	language:PHP
 CI	.\application\libraries\init_page.php	/^			$CI = & get_instance();	$/;"	v	language:PHP
 CI	.\application\libraries\init_page.php	/^		$CI =  &get_instance();$/;"	v	language:PHP
@@ -1348,7 +1349,7 @@ Tree_model	.\application\models\tree_model.php	/^class Tree_model extends CI_Mod
 TrimFunction	.\application\libraries\Doctrine\ORM\Query\AST\Functions\TrimFunction.php	/^class TrimFunction extends FunctionNode$/;"	c	language:PHP
 Type	.\application\libraries\Doctrine\DBAL\Types\Type.php	/^abstract class Type$/;"	c	language:PHP
 UNI	.\system\core\CodeIgniter.php	/^	$UNI =& load_class('Utf8', 'core');$/;"	v	language:PHP
-URI	.\application\hooks\Langclass.php	/^        $URI =& load_class('URI');  $/;"	v	language:PHP
+URI	.\application\hooks\Langclass.php	/^        $URI =& load_class('URI');        $/;"	v	language:PHP
 URI	.\system\core\CodeIgniter.php	/^	$URI =& load_class('URI', 'core');$/;"	v	language:PHP
 URL	.\application\models\alipay_model.php	/^        $URL = "https:\/\/mapi.alipay.com\/gateway.do?service=query_timestamp&partner=" . $partner;$/;"	v	language:PHP
 UTF8_ENABLED	.\system\core\Utf8.php	/^			define('UTF8_ENABLED', FALSE);$/;"	d	language:PHP
@@ -2113,24 +2114,14 @@ _block_content	.\application\compiles\48b3bf156caac4611871a9f97a32d9e3526d2ee7.f
 _block_content	.\application\compiles\48b3bf156caac4611871a9f97a32d9e3526d2ee7.file.adminindex.htm.php	/^echo $_SERVER['SERVER_SOFTWARE'];<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
 _block_content	.\application\compiles\48b3bf156caac4611871a9f97a32d9e3526d2ee7.file.adminindex.htm.php	/^echo ini_get('upload_max_filesize');<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
 _block_content	.\application\compiles\48b3bf156caac4611871a9f97a32d9e3526d2ee7.file.adminindex.htm.php	/^echo mysql_get_server_info();<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_content	.\application\compiles\8c0f5deb55a2073602a5d80816b3dcfc3a2ff05d.file.fields_add.htm.php	/^			<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_content	.\application\compiles\8c0f5deb55a2073602a5d80816b3dcfc3a2ff05d.file.fields_add.htm.php	/^		<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
 _block_content	.\application\compiles\953a405057c384f7b533a7d330268c4e316031b0.file.foot.htm.php	/^echo base_url();<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_content	.\application\compiles\aed55288a8a7014e3b88a67165c42c31b301031b.file.fields_list.htm.php	/^			<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_content	.\application\compiles\b86766964ec747a4d2666fa842dc49b6955f01ed.file.modules_add.htm.php	/^			<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
-_block_content	.\application\compiles\b86766964ec747a4d2666fa842dc49b6955f01ed.file.modules_add.htm.php	/^		<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_php_tag(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_tag_stack);?>$/;"	v	language:PHP
 _block_content	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_compile_extends.php	/^            $_block_content = str_replace($compiler->smarty->left_delimiter . '$smarty.block.parent' . $compiler->smarty->right_delimiter, '%%%%SMARTY_PARENT%%%%',$/;"	v	language:PHP
 _block_content	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_resource_extends.php	/^                    $_block_content = str_replace($source->smarty->left_delimiter . '$smarty.block.parent' . $source->smarty->right_delimiter, '%%%%SMARTY_PARENT%%%%',$/;"	v	language:PHP
 _block_repeat	.\application\compiles\48b3bf156caac4611871a9f97a32d9e3526d2ee7.file.adminindex.htm.php	/^&gt<\/td><td width="15%">MYSQL版本<\/td><td width="35%"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
 _block_repeat	.\application\compiles\48b3bf156caac4611871a9f97a32d9e3526d2ee7.file.adminindex.htm.php	/^<\/td><td width="15%">上传许可<\/td><td width="35%"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
 _block_repeat	.\application\compiles\48b3bf156caac4611871a9f97a32d9e3526d2ee7.file.adminindex.htm.php	/^<\/td><td width="15%">剩余空间<\/td><td width="35%"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
 _block_repeat	.\application\compiles\48b3bf156caac4611871a9f97a32d9e3526d2ee7.file.adminindex.htm.php	/^<\/td><td width="15%">运行环境<\/td><td width="35%"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_block_repeat	.\application\compiles\8c0f5deb55a2073602a5d80816b3dcfc3a2ff05d.file.fields_add.htm.php	/^			<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_block_repeat	.\application\compiles\8c0f5deb55a2073602a5d80816b3dcfc3a2ff05d.file.fields_add.htm.php	/^		<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
 _block_repeat	.\application\compiles\953a405057c384f7b533a7d330268c4e316031b0.file.foot.htm.php	/^<div id="sys_base_url" class="hide"><?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_block_repeat	.\application\compiles\aed55288a8a7014e3b88a67165c42c31b301031b.file.fields_list.htm.php	/^		<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_block_repeat	.\application\compiles\b86766964ec747a4d2666fa842dc49b6955f01ed.file.modules_add.htm.php	/^			<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
-_block_repeat	.\application\compiles\b86766964ec747a4d2666fa842dc49b6955f01ed.file.modules_add.htm.php	/^		<?php $_smarty_tpl->smarty->_tag_stack[] = array('php', array()); $_block_repeat=true; echo smarty_php_tag(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>$/;"	v	language:PHP
 _blur	.\system\libraries\javascript\Jquery.php	/^	function _blur($element = 'this', $js = '')$/;"	f	language:PHP
 _bmpSupported	.\ckfinder\core\connector\php\php5\Core\ThumbnailsConfig.php	/^            $this->_bmpSupported = CKFinder_Connector_Utils_Misc::booleanValue($thumbnailsNode['bmpSupported']);$/;"	v	language:PHP
 _bmpSupported	.\ckfinder\core\connector\php\php5\Core\ThumbnailsConfig.php	/^    private $_bmpSupported = false;$/;"	v	language:PHP
@@ -2948,21 +2939,8 @@ _foreignColumnNames	.\application\libraries\Doctrine\DBAL\Schema\ForeignKeyConst
 _foreignTableName	.\application\libraries\Doctrine\DBAL\Schema\ForeignKeyConstraint.php	/^        $this->_foreignTableName = $foreignTableName;$/;"	v	language:PHP
 _foreignTableName	.\application\libraries\Doctrine\DBAL\Schema\ForeignKeyConstraint.php	/^    protected $_foreignTableName;$/;"	v	language:PHP
 _format_newlines	.\system\libraries\Typography.php	/^	function _format_newlines($str)$/;"	f	language:PHP
-_from	.\application\compiles\2e821847d08f8c1286d29bf203ffd9942147bd46.file.mdata_add.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['detail']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_from	.\application\compiles\2e821847d08f8c1286d29bf203ffd9942147bd46.file.mdata_add.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['dt_fields']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_from	.\application\compiles\2e821847d08f8c1286d29bf203ffd9942147bd46.file.mdata_add.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['fields']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_from	.\application\compiles\3208a6ab045d17c1af2e7b4c242e8e6eb3b59798.file.product_home.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
 _from	.\application\compiles\48b3bf156caac4611871a9f97a32d9e3526d2ee7.file.adminindex.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['stat']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_from	.\application\compiles\5984fee68a031fe027ec1321472267e20f3394e2.file.ajax_mdata_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['fields']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_from	.\application\compiles\5984fee68a031fe027ec1321472267e20f3394e2.file.ajax_mdata_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_from	.\application\compiles\5cb130d199a9d25b03242a7e41bbf7a4dd9d3fc8.file.product_category.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_from	.\application\compiles\6198384cd845e543a0e9ede3662e24a650b37b8c.file.modules_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_from	.\application\compiles\6504e46477fb2b6fde0be3147d250090d2f3a23e.file.mdata_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['fields']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_from	.\application\compiles\6504e46477fb2b6fde0be3147d250090d2f3a23e.file.mdata_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_from	.\application\compiles\6504e46477fb2b6fde0be3147d250090d2f3a23e.file.mdata_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['querys']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
 _from	.\application\compiles\7a13a428f227f5e0241239623ea74b2bd99202e8.file.main_top.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['rights_options']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_from	.\application\compiles\aed55288a8a7014e3b88a67165c42c31b301031b.file.fields_list.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
-_from	.\application\compiles\b86766964ec747a4d2666fa842dc49b6955f01ed.file.modules_add.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['detail']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
 _from	.\application\compiles\c24ddf38273e8e56d19986adbceee8bb5cc65835.file.main_left.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['item']->value['detail']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
 _from	.\application\compiles\c24ddf38273e8e56d19986adbceee8bb5cc65835.file.main_left.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['item1']->value['detail']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
 _from	.\application\compiles\c24ddf38273e8e56d19986adbceee8bb5cc65835.file.main_left.htm.php	/^ $_from = $_smarty_tpl->tpl_vars['rights_options']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v	language:PHP
@@ -4565,8 +4543,6 @@ _thumbsServerPath	.\ckfinder\core\connector\php\php5\Core\FolderHandler.php	/^  
 _thumbsServerPath	.\ckfinder\core\connector\php\php5\Core\FolderHandler.php	/^            $this->_thumbsServerPath = CKFinder_Connector_Utils_FileSystem::combinePaths($this->_thumbsServerPath, ltrim($this->_clientPath, '\/'));$/;"	v	language:PHP
 _thumbsServerPath	.\ckfinder\core\connector\php\php5\Core\FolderHandler.php	/^    private $_thumbsServerPath;$/;"	v	language:PHP
 _time	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_cacheresource_file.php	/^            $_time = time();$/;"	v	language:PHP
-_tmp1	.\application\compiles\5984fee68a031fe027ec1321472267e20f3394e2.file.ajax_mdata_list.htm.php	/^<?php $_tmp1=ob_get_clean();?><?php echo ci_anchor(array('segment'=>"backend\/mdata\/action_del\/".((string)$_smarty_tpl->tpl_vars['item']->value[$_smarty_tpl->tpl_vars['primary']->value]),'attrs'=>"class:link_del,onclick:return confirm('".$_tmp1."');"),$_smarty_tpl);?>$/;"	v	language:PHP
-_tmp1	.\application\compiles\6504e46477fb2b6fde0be3147d250090d2f3a23e.file.mdata_list.htm.php	/^<?php $_tmp1=ob_get_clean();?><?php echo ci_anchor(array('segment'=>"backend\/mdata\/action_del\/".((string)$_smarty_tpl->tpl_vars['item']->value[$_smarty_tpl->tpl_vars['primary']->value]),'attrs'=>"class:link_del,onclick:return confirm('".$_tmp1."');"),$_smarty_tpl);?>$/;"	v	language:PHP
 _tmp_file	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_write_file.php	/^        $_tmp_file = $_dirpath . DS . uniqid('wrt', true);$/;"	v	language:PHP
 _toSql	.\application\libraries\Doctrine\DBAL\Schema\SchemaDiff.php	/^    protected function _toSql(AbstractPlatform $platform, $saveMode = false)$/;"	f	language:PHP
 _toggle	.\system\libraries\javascript\Jquery.php	/^	function _toggle($element = 'this')$/;"	f	language:PHP
@@ -4679,21 +4655,15 @@ _val	.\application\libraries\Smarty-3.1.14\libs\plugins\function.html_select_tim
 _valid	.\application\compiles\06ff25ca233d231618498294d149a1e4f56a4b05.file.about.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\13e99ae1354d8e8478c23610d871c8c3a5f548a7.file.left_message.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\19538fe7f7c30bc0063df3ae95e3896891ffaf8a.file.top.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\1b110be4c3b72712b4c28e8e42173259235a6d63.file.ajax_upload_image.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\2b3f2a0557d37e4517ea920a4556669cd7f63555.file.contact.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\2e03fbd86f5f200b3c9ebe3f0ec081a55475dc30.file.product_index.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\2e821847d08f8c1286d29bf203ffd9942147bd46.file.mdata_add.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\3208a6ab045d17c1af2e7b4c242e8e6eb3b59798.file.product_home.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\3cbf949ff136d34a4bc14ddb8994c48b8a4df047.file.center.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\48b3bf156caac4611871a9f97a32d9e3526d2ee7.file.adminindex.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\58bed561f5d770a044f58720a3aa0236590c1d97.file.main_center.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\5984fee68a031fe027ec1321472267e20f3394e2.file.ajax_mdata_list.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\5cb130d199a9d25b03242a7e41bbf7a4dd9d3fc8.file.product_category.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\6198384cd845e543a0e9ede3662e24a650b37b8c.file.modules_list.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\6504e46477fb2b6fde0be3147d250090d2f3a23e.file.mdata_list.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\675c08882697db4ca46f3cc80b047ed52f00b775.file.index.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\7477647c4e1c633f807857d0dbeed5f3b034275e.file.index.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\7a13a428f227f5e0241239623ea74b2bd99202e8.file.main_top.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\7d4191c4d2808257d92c1bf653edb35f57ca2e1b.file.top_login.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\863e29e7b53b7a30553012b009d9f315e8cc7304.file.foot.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\8c0f5deb55a2073602a5d80816b3dcfc3a2ff05d.file.fields_add.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\8b2ccbca6cd952602225ef14328668bf65dbf08a.file.top.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\953a405057c384f7b533a7d330268c4e316031b0.file.foot.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\968c2a79e5004581150a70b6b6f2ed3a5ff0fb55.file.top_login.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\9aeca3804bb129eb064ec979aa18193f16f02d84.file.top.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
@@ -4701,9 +4671,8 @@ _valid	.\application\compiles\9ce272856afe015d17c98a2c22e3e1aac4ca4b34.file.left
 _valid	.\application\compiles\9e7bdd69d5a3038552b0a9fd761e3c758dcf7022.file.page_redirect.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\a56b8ad349e4159bfcd065b7265fb6bdf28c7276.file.main_foot.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\a80777e45e00e3e9b2d9c0f79ebc590a9ba677bf.file.left_product.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\aaa4c03f9b5381b2d86ca837a1e2457565b78cda.file.product.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\aed55288a8a7014e3b88a67165c42c31b301031b.file.fields_list.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
-_valid	.\application\compiles\b86766964ec747a4d2666fa842dc49b6955f01ed.file.modules_add.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\ae0446f50b5c68d1a71cae5d127e6988ad63b43f.file.foot.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
+_valid	.\application\compiles\b3c6f4dedb6a7d5cd576d044691086d0377c1bca.file.config_save.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\c24ddf38273e8e56d19986adbceee8bb5cc65835.file.main_left.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\cffc664fd2027b6688322ea8dfe8f7f33ec3bac4.file.left_contact.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
 _valid	.\application\compiles\e17195d3d4f77db723229cd04e89f033d1463a13.file.main_index.htm.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v	language:PHP
@@ -4810,11 +4779,11 @@ abbrevs	.\application\libraries\Doctrine\Symfony\Component\Console\Application.p
 abbrevs	.\application\libraries\Doctrine\Symfony\Component\Console\Application.php	/^        $abbrevs = array();$/;"	v	language:PHP
 abbrevs	.\application\libraries\Doctrine\Symfony\Component\Console\Application.php	/^        $abbrevs = static::getAbbreviations(array_unique($commands));$/;"	v	language:PHP
 abort_and_recompile	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_templatecompilerbase.php	/^            $this->abort_and_recompile = false;$/;"	v	language:PHP
-about	.\application\controllers\front\detail.php	/^ 		$about  = $this->db->select('*',false)->from('infos')->where('info_id',$this->input->get('info_id'))->get()->first_row('array');$/;"	v	language:PHP
+about	.\application\controllers\front\detail.php	/^ 		$about  = $this->db->select('*',false)->from('infos')->where('info_id',$this->input->get_post('info_id'))->get()->first_row('array');$/;"	v	language:PHP
 about	.\application\controllers\front\download.php	/^ 		$about  = $this->db->select('*',false)->from('infos')->where('info_class','-1')->get()->first_row('array');$/;"	v	language:PHP
 about	.\application\controllers\front\download.php	/^ 		$about  = $this->db->select('*',false)->from('infos')->where('info_class','-33')->get()->first_row('array');$/;"	v	language:PHP
-about	.\application\controllers\front\download.php	/^ 		$about  = $this->db->select('*',false)->from('infos')->where('info_id',$this->input->get('info_id'))->get()->first_row('array');$/;"	v	language:PHP
-about	.\application\controllers\front\download.php	/^ 		$about = $this->db->select('*')->from('infos')->where('info_id',$this->input->get("info_id"))->get()->first_row('array');$/;"	v	language:PHP
+about	.\application\controllers\front\download.php	/^ 		$about  = $this->db->select('*',false)->from('infos')->where('info_id',$this->input->get_post('info_id'))->get()->first_row('array');$/;"	v	language:PHP
+about	.\application\controllers\front\download.php	/^ 		$about = $this->db->select('*')->from('infos')->where('info_id',$this->input->get_post("info_id"))->get()->first_row('array');$/;"	v	language:PHP
 above	.\system\core\Common.php	/^* called by the load_class() function above$/;"	f	language:PHP
 above	.\system\database\DB_active_rec.php	/^				\/\/ batch function above returns an error on an empty array$/;"	f	language:PHP
 abs	.\application\libraries\Doctrine\ORM\Query\Expr.php	/^    public function abs($x)$/;"	f	language:PHP
@@ -4984,7 +4953,7 @@ action_list	.\application\controllers\backend\engage.php	/^	function action_list
 action_list	.\application\controllers\backend\fields.php	/^	function action_list(){$/;"	f	language:PHP
 action_list	.\application\controllers\backend\friendlink.php	/^	function action_list(){$/;"	f	language:PHP
 action_list	.\application\controllers\backend\logs.php	/^	function action_list(){	$/;"	f	language:PHP
-action_list	.\application\controllers\backend\mdata.php	/^	function action_list(){$/;"	f	language:PHP
+action_list	.\application\controllers\backend\mdata.php	/^	function action_list(){	$/;"	f	language:PHP
 action_list	.\application\controllers\backend\menu.php	/^ 	function action_list(){$/;"	f	language:PHP
 action_list	.\application\controllers\backend\message.php	/^	function action_list(){	$/;"	f	language:PHP
 action_list	.\application\controllers\backend\modules.php	/^	function action_list(){$/;"	f	language:PHP
@@ -5238,8 +5207,8 @@ admin_user_check	.\application\controllers\backend\admins.php	/^ 	function admin
 adminindex	.\application\controllers\backend\login.php	/^ 	function adminindex(){$/;"	f	language:PHP
 admins	.\application\libraries\init_auth.php	/^		$admins = $rights_all['admin'];$/;"	v	language:PHP
 adv_id	.\application\controllers\backend\advs.php	/^		 		$adv_id = $main['adv_id'];$/;"	v	language:PHP
-adv_id	.\application\controllers\backend\advs.php	/^		$adv_id = $this->input->get('adv_id');$/;"	v	language:PHP
-adv_id	.\application\controllers\backend\advs.php	/^	 	 $adv_id   = $this->input->get('adv_id');$/;"	v	language:PHP
+adv_id	.\application\controllers\backend\advs.php	/^		$adv_id = $this->input->get_post('adv_id');$/;"	v	language:PHP
+adv_id	.\application\controllers\backend\advs.php	/^	 	 $adv_id   = $this->input->get_post('adv_id');$/;"	v	language:PHP
 adv_main	.\application\models\advs_model.php	/^function  adv_main($id){$/;"	f	language:PHP
 adv_show	.\application\controllers\backend\advs.php	/^				$adv_show =  "document.write('".str_replace(array("\\r","\\n"),array('',''),addslashes($adv_show))."');";$/;"	v	language:PHP
 adv_show	.\application\controllers\backend\advs.php	/^				$adv_show = $this->im->showadv($adv_id);	$/;"	v	language:PHP
@@ -5713,13 +5682,13 @@ arr	.\application\libraries\init_tree.php	/^    var $arr = array();$/;"	v	langua
 arr	.\application\libraries\tree.php	/^       $this->arr = $arr;$/;"	v	language:PHP
 arr	.\application\libraries\tree.php	/^    var $arr = array();$/;"	v	language:PHP
 arr	.\application\models\tree_model.php	/^		$arr = array_re_index($arr,'id');	$/;"	v	language:PHP
-arr	.\application\models\tree_model.php	/^		$arr =$this->db->select('id,treeId,pid,orderId,code,name',false)->select('LEVEL,CONCAT(REPEAT("│ ",LEVEL-1),"├─",NAME) as level_name',false)->from('tree_node')->where('treeId',$this->im->get_root())->like('name',$this->input->get('name'))->order_by('leftId','asc')->get()->result_array();$/;"	v	language:PHP
+arr	.\application\models\tree_model.php	/^		$arr =$this->db->select('id,treeId,pid,orderId,code,name',false)->select('LEVEL,CONCAT(REPEAT("│ ",LEVEL-1),"├─",NAME) as level_name',false)->from('tree_node')->where('treeId',$this->im->get_root())->like('name',$this->input->get_post('name'))->order_by('leftId','asc')->get()->result_array();$/;"	v	language:PHP
 arr	.\swfupload\upload.php	/^	$arr = scandir($dir); 	$/;"	v	language:PHP
 arr	.\system\database\drivers\sqlite\sqlite_result.php	/^			$arr = sqlite_fetch_array($this->result_id, SQLITE_ASSOC);$/;"	v	language:PHP
 arr	.\system\libraries\Xmlrpc.php	/^			$arr = array();$/;"	v	language:PHP
 arrExportData	.\charts\ExportHandlers\PHP\Resources\FCExporter_IMG.php	/^	var $arrExportData;$/;"	v	language:PHP
 arrExportData	.\charts\ExportHandlers\PHP\Resources\FCExporter_PDF.php	/^	var $arrExportData;$/;"	v	language:PHP
-array	.\application\controllers\front\common.php	/^    $array = $this->input->post();$/;"	v	language:PHP
+array	.\application\controllers\front\common.php	/^    $array = $this->init_form->get_post();$/;"	v	language:PHP
 array	.\application\libraries\Doctrine\Common\Annotations\DocParser.php	/^        $array = $values = array();$/;"	v	language:PHP
 array	.\application\libraries\Doctrine\ORM\Id\SequenceGenerator.php	/^        $array = unserialize($serialized);$/;"	v	language:PHP
 array	.\application\libraries\Doctrine\ORM\Mapping\Driver\XmlDriver.php	/^        $array = array();$/;"	v	language:PHP
@@ -5739,7 +5708,7 @@ array_js	.\system\libraries\javascript\Jquery.php	/^			$array_js = array($array_
 array_max_index	.\application\libraries\init_form.php	/^	function array_max_index($detail){$/;"	f	language:PHP
 array_re_index	.\application\helpers\common_helper.php	/^	function array_re_index($array,$key,$field_value=null){$/;"	f	language:PHP
 array_to_str	.\application\libraries\init_form.php	/^	function array_to_str($arrays,$split=','){$/;"	f	language:PHP
-array_to_url	.\application\libraries\init_page.php	/^	function array_to_url($array){			$/;"	f	language:PHP
+array_to_url	.\application\libraries\init_page.php	/^	function array_to_url($a){			$/;"	f	language:PHP
 as	.\application\libraries\Doctrine\ORM\Mapping\Builder\ClassMetadataBuilder.php	/^     * Mark the class as mapped superclass.$/;"	c	language:PHP
 as	.\application\libraries\Doctrine\ORM\Mapping\Builder\ClassMetadataBuilder.php	/^     * Set class as root of a joined table inheritance hierachy.$/;"	c	language:PHP
 as	.\application\libraries\Doctrine\ORM\Mapping\Builder\ClassMetadataBuilder.php	/^     * Set class as root of a single table inheritance hierachy.$/;"	c	language:PHP
@@ -6129,7 +6098,7 @@ block_nesting_level	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty
 block_nesting_level	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_templateparser.php	/^    $this->block_nesting_level = count($this->compiler->_tag_stack);$/;"	v	language:PHP
 blur	.\system\libraries\Javascript.php	/^	function blur($element = 'this', $js = '')$/;"	f	language:PHP
 bmpSupported	.\ckfinder\core\connector\php\php5\CommandHandler\Thumbnail.php	/^    public static function createThumb($sourceFile, $targetFile, $maxWidth, $maxHeight, $quality, $preserverAspectRatio, $bmpSupported = false)$/;"	v	language:PHP
-body	.\application\controllers\front\alipay.php	/^        $body = $this->input->post('body', TRUE); \/\/ 订单描述、订单详细、订单备注，显示在支付宝收银台里的“商品描述”里。$/;"	v	language:PHP
+body	.\application\controllers\front\alipay.php	/^        $body = $this->input->get_post('body', TRUE); \/\/ 订单描述、订单详细、订单备注，显示在支付宝收银台里的“商品描述”里。$/;"	v	language:PHP
 body	.\application\libraries\Doctrine\ORM\Tools\EntityGenerator.php	/^        $body = $this->generateEntityBody($metadata);$/;"	v	language:PHP
 body	.\application\libraries\Doctrine\ORM\Tools\EntityGenerator.php	/^        $body = str_replace('<spaces>', $this->spaces, $body);$/;"	v	language:PHP
 body	.\system\libraries\Email.php	/^			$body = $match['1'];$/;"	v	language:PHP
@@ -6257,11 +6226,11 @@ c	.\system\libraries\Sha1.php	/^				$c = $this->_rol($b, 30);$/;"	v	language:PHP
 c	.\system\libraries\Sha1.php	/^			$c = $this->_safe_add($c, $oldc);$/;"	v	language:PHP
 c	.\system\libraries\Sha1.php	/^		$c = -1732584194;$/;"	v	language:PHP
 c_f	.\application\helpers\MY_url_helper.php	/^	         $c_f = $CI->init_cache->cache_fetch('sys_config');$/;"	v	language:PHP
-c_id	.\application\controllers\backend\category.php	/^ 			$c_id = $this->input->get('c_id');$/;"	v	language:PHP
+c_id	.\application\controllers\backend\category.php	/^ 			$c_id = $this->input->get_post('c_id');$/;"	v	language:PHP
 c_len	.\tools\faisunsql_v40_utf8\faisunsql_files\zipclass.php	/^        $c_len   = strlen($zdata);$/;"	v	language:PHP
-c_parent	.\application\controllers\backend\category.php	/^				$c_parent = $c_parent?$c_parent:$this->input->get('parent');$/;"	v	language:PHP
-c_parent	.\application\controllers\backend\category.php	/^	 		$c_parent = $this->input->get('parent');$/;"	v	language:PHP
-c_parent	.\application\controllers\backend\category.php	/^ 				$c_parent = $this->input->get('c_parent');$/;"	v	language:PHP
+c_parent	.\application\controllers\backend\category.php	/^				$c_parent = $c_parent?$c_parent:$this->input->get_post('parent');$/;"	v	language:PHP
+c_parent	.\application\controllers\backend\category.php	/^	 		$c_parent = $this->input->get_post('parent');$/;"	v	language:PHP
+c_parent	.\application\controllers\backend\category.php	/^ 				$c_parent = $this->input->get_post('c_parent');$/;"	v	language:PHP
 c_sn	.\application\controllers\backend\category.php	/^	 	$c_sn = $main['c_sn'];$/;"	v	language:PHP
 c_sn	.\application\models\archives_model.php	/^		$this->c_sn = '0101';$/;"	v	language:PHP
 c_sn	.\application\models\product_model.php	/^		$this->c_sn = '0102'; \/\/产品基类$/;"	v	language:PHP
@@ -6646,7 +6615,6 @@ check_existance	.\system\helpers\path_helper.php	/^	function set_realpath($path,
 check_fields	.\swfupload\libs\mysql.class.php	/^	public function check_fields($table, $array) {$/;"	f	language:PHP
 check_locations	.\system\core\Config.php	/^		$check_locations = defined('ENVIRONMENT')$/;"	v	language:PHP
 check_path	.\system\database\DB_cache.php	/^	function check_path($path = '')$/;"	f	language:PHP
-check_screenlock	.\application\compiles\3cbf949ff136d34a4bc14ddb8994c48b8a4df047.file.center.htm.php	/^function check_screenlock() {$/;"	f	language:PHP
 check_uploadObject	.\tools\unpack.php	/^function check_uploadObject(form){$/;"	f	language:PHP
 checkcode	.\application\controllers\backend\login.php	/^		$checkcode = $this->checkcode;$/;"	v	language:PHP
 checkcode	.\application\libraries\checkcode.php	/^ * $checkcode = new checkcode();$/;"	v	language:PHP
@@ -6664,9 +6632,6 @@ checks	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_com
 child	.\application\libraries\init_tree.php	/^        $child = $this->get_child($myid);$/;"	v	language:PHP
 child	.\application\libraries\tree.php	/^        $child = $this->get_child($myid);$/;"	v	language:PHP
 child_class	.\system\libraries\Driver.php	/^		$child_class = $this->lib_name.'_'.$child;$/;"	v	language:PHP
-chkdel2	.\application\compiles\6198384cd845e543a0e9ede3662e24a650b37b8c.file.modules_list.htm.php	/^	function chkdel2(){$/;"	f	language:PHP
-chkdel2	.\application\compiles\6504e46477fb2b6fde0be3147d250090d2f3a23e.file.mdata_list.htm.php	/^	function chkdel2(){$/;"	f	language:PHP
-chkdel2	.\application\compiles\aed55288a8a7014e3b88a67165c42c31b301031b.file.fields_list.htm.php	/^	function chkdel2(){$/;"	f	language:PHP
 chklogin	.\application\controllers\backend\login.php	/^	function chklogin(){	$/;"	f	language:PHP
 chmod	.\system\libraries\Ftp.php	/^	function chmod($path, $perm)$/;"	f	language:PHP
 chooseConnectionConfiguration	.\application\libraries\Doctrine\DBAL\Connections\MasterSlaveConnection.php	/^    protected function chooseConnectionConfiguration($connectionName, $params)$/;"	f	language:PHP
@@ -6886,7 +6851,7 @@ classToTableName	.\application\libraries\Doctrine\ORM\Mapping\DefaultNamingStrat
 classToTableName	.\application\libraries\Doctrine\ORM\Mapping\NamingStrategy.php	/^    function classToTableName($className);$/;"	f	language:PHP
 classToTableName	.\application\libraries\Doctrine\ORM\Mapping\UnderscoreNamingStrategy.php	/^    public function classToTableName($className)$/;"	f	language:PHP
 classToTableNames	.\application\libraries\Doctrine\ORM\Mapping\Driver\DatabaseDriver.php	/^    private $classToTableNames = array();$/;"	v	language:PHP
-class_id	.\application\controllers\backend\archive.php	/^		$class_id = $this->input->get('info_class');$/;"	v	language:PHP
+class_id	.\application\controllers\backend\archive.php	/^		$class_id = $this->input->get_post('info_class');$/;"	v	language:PHP
 class_id	.\application\controllers\backend\archive.php	/^	 		$class_id = $main['info_class'];		 	$/;"	v	language:PHP
 class_info	.\application\controllers\backend\archive.php	/^			$class_info = array($/;"	v	language:PHP
 class_info	.\application\controllers\backend\archive.php	/^		$class_info = array($/;"	v	language:PHP
@@ -8319,13 +8284,14 @@ cycle_array	.\application\libraries\Smarty-3.1.14\libs\plugins\function.cycle.ph
 cycle_array	.\application\libraries\Smarty-3.1.14\libs\plugins\function.cycle.php	/^        $cycle_array = explode($cycle_vars[$name]['delimiter'],$cycle_vars[$name]['values']);$/;"	v	language:PHP
 cycle_vars	.\application\libraries\Smarty-3.1.14\libs\plugins\function.cycle.php	/^    static $cycle_vars;$/;"	v	language:PHP
 cycles	.\system\libraries\Profiler.php	/^	 * This function cycles through the entire array of mark points and$/;"	f	language:PHP
+d	.\application\core\MY_Config.php	/^                     $d = implode('\/',array_slice($urs,0,-2));$/;"	v	language:PHP
 d	.\system\libraries\Sha1.php	/^				$d = $c;$/;"	v	language:PHP
 d	.\system\libraries\Sha1.php	/^			$d = $this->_safe_add($d, $oldd);$/;"	v	language:PHP
 d	.\system\libraries\Sha1.php	/^		$d =  271733878;$/;"	v	language:PHP
 data	.\application\controllers\backend\admins.php	/^		$data = array($/;"	v	language:PHP
 data	.\application\controllers\backend\admins.php	/^	 			$data = array($/;"	v	language:PHP
 data	.\application\controllers\backend\admins.php	/^	 	$data = array_merge($this->init_db->fetch_all(),array('group_options'=>$groups)); $/;"	v	language:PHP
-data	.\application\controllers\backend\admins.php	/^ 		$data = array('main'=>$this->ds->select('*')->from('admins')->where('admin_id',$this->uri->segment(4))->get()->first_row('array'));$/;"	v	language:PHP
+data	.\application\controllers\backend\admins.php	/^ 		$data = array('main'=>$this->ds->select('*')->from('admins')->where('admin_id',$this->input->get_post('admin_id'))->get()->first_row('array'));$/;"	v	language:PHP
 data	.\application\controllers\backend\advs.php	/^		 		$data = $this->im->do_upload($main);$/;"	v	language:PHP
 data	.\application\controllers\backend\advs.php	/^		$data = array($/;"	v	language:PHP
 data	.\application\controllers\backend\advs.php	/^ 			$data = $this->im->fetch_list();$/;"	v	language:PHP
@@ -8347,8 +8313,8 @@ data	.\application\controllers\backend\engage.php	/^		$data = array_merge($data,
 data	.\application\controllers\backend\engage.php	/^ 		$data = array(		$/;"	v	language:PHP
 data	.\application\controllers\backend\fields.php	/^		$data = $this->init_db->fetch_all(15);$/;"	v	language:PHP
 data	.\application\controllers\backend\fields.php	/^		$data = array('main'=>$main,'fields_types'=>$fields_types,'fields_ext'=>$fields_ext);$/;"	v	language:PHP
-data	.\application\controllers\backend\fields.php	/^		$data = array('main'=>$this->im->detail($this->uri->segment(4)),'fields_types'=>$fields_types);$/;"	v	language:PHP
-data	.\application\controllers\backend\fields.php	/^		$data = array('main'=>$this->input->post('main'),'fields_types'=>$fields_types,'fields_ext'=>$fields_ext);$/;"	v	language:PHP
+data	.\application\controllers\backend\fields.php	/^		$data = array('main'=>$this->im->detail($fid),'fields_types'=>$fields_types);$/;"	v	language:PHP
+data	.\application\controllers\backend\fields.php	/^		$data = array('main'=>$this->input->get_post('main'),'fields_types'=>$fields_types,'fields_ext'=>$fields_ext);$/;"	v	language:PHP
 data	.\application\controllers\backend\friendlink.php	/^			$data  = array($/;"	v	language:PHP
 data	.\application\controllers\backend\friendlink.php	/^		$data = $this->init_db->fetch_all(15);	$/;"	v	language:PHP
 data	.\application\controllers\backend\friendlink.php	/^		$data = array($/;"	v	language:PHP
@@ -8392,7 +8358,7 @@ data	.\application\controllers\backend\roles.php	/^			$data = array($/;"	v	langu
 data	.\application\controllers\backend\roles.php	/^ 		$data = array('list'=>$this->im->fetch_roles_list());$/;"	v	language:PHP
 data	.\application\controllers\backend\system_manage.php	/^		$data = $this->init_cache->cache_fetch('sys_config');$/;"	v	language:PHP
 data	.\application\controllers\backend\system_manage.php	/^		$data = array('main'=>$this->Admins_model->fetch_detail(get_cookie('user_id')));$/;"	v	language:PHP
-data	.\application\controllers\backend\system_manage.php	/^		$data = array('main'=>$this->input->post('main'));$/;"	v	language:PHP
+data	.\application\controllers\backend\system_manage.php	/^		$data = array('main'=>$this->input->get_post('main'));$/;"	v	language:PHP
 data	.\application\controllers\backend\system_manage.php	/^ 						$data = array('lang_type'=>$v2,'lang_file'=>$v,'lang_key'=>$k1,'lang_val'=>is_array($v1)?implode('|',$v1):$v1,'is_trans'=>$v2=='zh'?1:0); $/;"	v	language:PHP
 data	.\application\controllers\backend\system_manage.php	/^ 			$data = array('ls'=>get_dir_file_info(getcwd().'\/docs'));$/;"	v	language:PHP
 data	.\application\controllers\backend\system_manage.php	/^ 		$data = $this->init_db->fetch_all($page_size);$/;"	v	language:PHP
@@ -8423,8 +8389,8 @@ data	.\application\controllers\front\feel.php	/^		$data = array($/;"	v	language:
 data	.\application\controllers\front\feel.php	/^		$data = array_merge($data,$/;"	v	language:PHP
 data	.\application\controllers\front\logs.php	/^		$data = $this->init_db->fetch_all();	$/;"	v	language:PHP
 data	.\application\controllers\front\logs.php	/^		$data = array_merge($data,$/;"	v	language:PHP
-data	.\application\controllers\front\member.php	/^	 		$data = $this->input->post();	 		$/;"	v	language:PHP
-data	.\application\controllers\front\member.php	/^	 		$data = array('main'=>$this->input->post('main'));$/;"	v	language:PHP
+data	.\application\controllers\front\member.php	/^	 		$data = $this->init_form->get_post();	 		$/;"	v	language:PHP
+data	.\application\controllers\front\member.php	/^	 		$data = array('main'=>$this->input->get_post('main'));$/;"	v	language:PHP
 data	.\application\controllers\front\member.php	/^	 	$data = $this->init_db->fetch_all();$/;"	v	language:PHP
 data	.\application\controllers\front\member.php	/^	 	$data = array('stats'=>$stats,'main'=>$main);$/;"	v	language:PHP
 data	.\application\controllers\front\member.php	/^	 	$data = array('stats'=>$stats,'main'=>$main,'list'=>$list,'status'=>$this->init_cache->cache_fetch('order_status'));$/;"	v	language:PHP
@@ -8732,7 +8698,7 @@ db_set_charset	.\system\database\drivers\pdo\pdo_driver.php	/^	function db_set_c
 db_set_charset	.\system\database\drivers\postgre\postgre_driver.php	/^	function db_set_charset($charset, $collation)$/;"	f	language:PHP
 db_set_charset	.\system\database\drivers\sqlite\sqlite_driver.php	/^	function db_set_charset($charset, $collation)$/;"	f	language:PHP
 db_set_charset	.\system\database\drivers\sqlsrv\sqlsrv_driver.php	/^	function db_set_charset($charset, $collation)$/;"	f	language:PHP
-db_temp	.\application\controllers\backend\login.php	/^		$db_temp = $this->db->select('admin_pass',false)->from($this->init_db->table('admins'))->where('admin_user',$this->input->post('user_name'))->get()->result_array();$/;"	v	language:PHP
+db_temp	.\application\controllers\backend\login.php	/^		$db_temp = $this->db->select('admin_pass',false)->from($this->init_db->table('admins'))->where('admin_user',$this->input->get_post('user_name'))->get()->result_array();$/;"	v	language:PHP
 db_temp	.\application\models\menu_model.php	/^		$db_temp  = $this->db->select('*')->from($this->init_db->table('admins'))->where('admin_id',$admin_id)->get()->result_array();$/;"	v	language:PHP
 db_temp	.\application\models\roles_model.php	/^		$db_temp  = $this->ds->select('*')->from($this->init_db->table('admins'))->where('admin_id',1)->get()->result_array();$/;"	v	language:PHP
 db_user	.\application\libraries\init_auth.php	/^ 	function db_user($field=null){$/;"	f	language:PHP
@@ -9063,9 +9029,9 @@ detachedEntityCannot	.\application\libraries\Doctrine\ORM\ORMInvalidArgumentExce
 detachedEntityFoundThroughRelationship	.\application\libraries\Doctrine\ORM\ORMInvalidArgumentException.php	/^    static public function detachedEntityFoundThroughRelationship(array $assoc, $entry)$/;"	f	language:PHP
 detail	.\application\controllers\backend\advs.php	/^			$detail = $this->db->query("select * from ".$this->init_db->table('adv_detail')." where adv_id=".$adv_id)->result_array();$/;"	v	language:PHP
 detail	.\application\controllers\backend\advs.php	/^		$detail = array_pad((array)$detail,2,'');$/;"	v	language:PHP
-detail	.\application\controllers\backend\advs.php	/^	 		$detail = $this->input->post('detail');	$/;"	v	language:PHP
+detail	.\application\controllers\backend\advs.php	/^	 		$detail = $this->input->get_post('detail');	$/;"	v	language:PHP
 detail	.\application\controllers\backend\mdata.php	/^		$detail = $this->im->details($id);$/;"	v	language:PHP
-detail	.\application\controllers\backend\mdata.php	/^		$detail = $this->init_form->post_to_set($this->input->post('detail'));$/;"	v	language:PHP
+detail	.\application\controllers\backend\mdata.php	/^		$detail = $this->init_form->post_to_set($this->input->get_post('detail'));$/;"	v	language:PHP
 detail	.\application\controllers\backend\modules.php	/^			$detail = $this->im->details($m_id);$/;"	v	language:PHP
 detail	.\application\controllers\backend\modules.php	/^ 			$detail = array_fill(0,$t,array('f_id'=>'','r_name'=>'','r_desc'=>'','r_value'=>'','main_id'=>'','detail_id'=>''));$/;"	v	language:PHP
 detail	.\application\controllers\backend\product.php	/^		$detail = $this->db->query('select a.*,b.p_pic,(a.p_price*a.p_qty) as sub_total from '.$this->init_db->table('order_detail').' as a left join '.$this->init_db->table('module_product').' as b  on a.p_id=b.p_id where a.order_id='.$order_id)$/;"	v	language:PHP
@@ -9075,7 +9041,7 @@ detail	.\application\libraries\init_tree.php	/^    function detail($id,$key=null
 detail	.\application\libraries\tpl.php	/^			$detail =   $this->db->select('*',false)->from('infos')->where('info_class','-4')->get()->first_row('array');$/;"	v	language:PHP
 detail	.\application\libraries\tree.php	/^    function detail($id,$key=null){$/;"	f	language:PHP
 detail	.\application\models\advs_model.php	/^		$detail = $this->db->query( "SELECT * from ".$this->init_db->table("adv_detail")." where adv_type=2 and   adv_id='".$id."'" )->first_row("array");$/;"	v	language:PHP
-detail	.\application\models\advs_model.php	/^		$detail = $this->input->post('detail');	$/;"	v	language:PHP
+detail	.\application\models\advs_model.php	/^		$detail = $this->input->get_post('detail');	$/;"	v	language:PHP
 detail	.\application\models\advs_model.php	/^	$detail = $this->db->query( "SELECT * from ".$this->init_db->table("adv_detail")." where adv_type=1 and adv_id='".$id."'" )->result_array();$/;"	v	language:PHP
 detail	.\application\models\advs_model.php	/^	$detail = $this->init_db->fetchAll( "SELECT * from ".$this->init_db->table("adv_detail")." where adv_type=3 and   adv_id='".$id."'" );$/;"	v	language:PHP
 detail	.\application\models\category_model.php	/^	function detail($val,$type='byid',$key=null){$/;"	f	language:PHP
@@ -9615,7 +9581,7 @@ dst_x	.\up.php	/^                        $dst_x = ($fileinfo[0] - $wminfo[0]) \/
 dst_x	.\up.php	/^                        $dst_x = 0; $dst_y = $fileinfo[1]; break;$/;"	v	language:PHP
 dst_x	.\up.php	/^                        $dst_x = 0; $dst_y = 0; break;$/;"	v	language:PHP
 dst_x	.\up.php	/^                        $dst_x = mt_rand(0,$fileinfo[0]-$wminfo[0]); $dst_y = mt_rand(0,$fileinfo[1]-$wminfo[1]);$/;"	v	language:PHP
-dt	.\application\controllers\backend\product.php	/^		$dt = $this->db->select('*')->from('order_main')->where('order_id',$this->input->get('order_id'))->get()->first_row('array');$/;"	v	language:PHP
+dt	.\application\controllers\backend\product.php	/^		$dt = $this->db->select('*')->from('order_main')->where('order_id',$this->input->get_post('order_id'))->get()->first_row('array');$/;"	v	language:PHP
 dt	.\application\models\mdata_model.php	/^			$dt =  $this->db->select('*',false)->from($detail_tb)->where($primary,$main_id);$/;"	v	language:PHP
 dt	.\application\models\mdata_model.php	/^			$dt = $this->db->order_by($detail_primary,'asc')->get()->result_array();$/;"	v	language:PHP
 dt	.\application\models\mdata_model.php	/^		$dt = array();$/;"	v	language:PHP
@@ -9686,8 +9652,8 @@ edit_tree_root_node	.\application\models\tree_model.php	/^	function edit_tree_ro
 editor	.\application\models\common_model.php	/^	function editor($v,$i='content',$tool_bar='Basic',$w=600,$h=400){$/;"	f	language:PHP
 edu_level	.\application\controllers\front\engage.php	/^				$edu_level = $this->init_cache->cache_fetch('edu_level');$/;"	v	language:PHP
 effect	.\system\libraries\javascript\Jquery.php	/^	function effect($src, $relative = FALSE)$/;"	f	language:PHP
-eg_id	.\application\controllers\front\engage.php	/^			$eg_id = $this->input->get('eg_id');$/;"	v	language:PHP
-eg_id	.\application\controllers\front\engage.php	/^		$eg_id = $this->input->get('eg_id');$/;"	v	language:PHP
+eg_id	.\application\controllers\front\engage.php	/^			$eg_id = $this->input->get_post('eg_id');$/;"	v	language:PHP
+eg_id	.\application\controllers\front\engage.php	/^		$eg_id = $this->input->get_post('eg_id');$/;"	v	language:PHP
 elapsed	.\system\core\Output.php	/^		$elapsed = $BM->elapsed_time('total_execution_time_start', 'total_execution_time_end');$/;"	v	language:PHP
 elapsed_time	.\system\core\Benchmark.php	/^	function elapsed_time($point1 = '', $point2 = '', $decimals = 4)$/;"	f	language:PHP
 elapsed_time	.\system\database\DB_driver.php	/^	function elapsed_time($decimals = 6)$/;"	f	language:PHP
@@ -9758,7 +9724,7 @@ em	.\application\libraries\Doctrine\ORM\Tools\SchemaValidator.php	/^    private 
 em	.\application\libraries\Doctrine\ORM\UnitOfWork.php	/^        $this->em = $em;$/;"	v	language:PHP
 em	.\application\libraries\Doctrine\ORM\UnitOfWork.php	/^    private $em;$/;"	v	language:PHP
 emHelper	.\application\libraries\Doctrine\ORM\Tools\Console\Command\SchemaTool\AbstractCommand.php	/^        $emHelper = $this->getHelper('em');$/;"	v	language:PHP
-email	.\application\controllers\front\engage.php	/^				$email = $this->input->post("email");$/;"	v	language:PHP
+email	.\application\controllers\front\engage.php	/^				$email = $this->input->get_post("email");$/;"	v	language:PHP
 email	.\application\models\Entity\User.php	/^		$this->email = $email;$/;"	v	language:PHP
 email	.\application\models\Entity\User.php	/^	protected $email;$/;"	v	language:PHP
 email	.\system\libraries\Email.php	/^				$email = preg_split('\/[\\s,]\/', $email, -1, PREG_SPLIT_NO_EMPTY);$/;"	v	language:PHP
@@ -10581,16 +10547,16 @@ f	.\application\controllers\backend\mdata.php	/^		 							$f =  realpath(str_rep
 f	.\application\controllers\backend\mdata.php	/^	 						$f =  realpath(str_replace(base_url().'\/', '', $v1));$/;"	v	language:PHP
 f	.\system\libraries\Migration.php	/^			$f = glob(sprintf($this->_migration_path . '%03d_*.php', $i));$/;"	v	language:PHP
 f	.\tools\bom.php	/^		$f = $path . '\/' . $file;$/;"	v	language:PHP
-f_ext	.\application\controllers\backend\fields.php	/^		$f_ext = $this->input->get('f_ext');$/;"	v	language:PHP
-f_id	.\application\controllers\backend\fields.php	/^			$f_id = $this->input->post('f_id');$/;"	v	language:PHP
-f_id	.\application\controllers\backend\fields.php	/^		$f_id = $this->uri->segment(4);$/;"	v	language:PHP
-f_id	.\application\controllers\backend\fields.php	/^            $f_id = $f_id?$f_id:$this->uri->segment(4);$/;"	v	language:PHP
+f_ext	.\application\controllers\backend\fields.php	/^		$f_ext = $this->input->get_post('f_ext');$/;"	v	language:PHP
+f_id	.\application\controllers\backend\fields.php	/^			$f_id = $this->input->get_post('f_id');$/;"	v	language:PHP
+f_id	.\application\controllers\backend\fields.php	/^		$f_id = $this->input->get_post('f_id');$/;"	v	language:PHP
+f_id	.\application\controllers\backend\fields.php	/^            $f_id = $f_id?$f_id:$this->input->get_post('f_id');$/;"	v	language:PHP
 f_ids	.\application\controllers\backend\modules.php	/^				$f_ids = $this->fm->fetch_select();$/;"	v	language:PHP
 f_ids	.\application\controllers\backend\modules.php	/^		$f_ids = $this->fm->fetch_select();$/;"	v	language:PHP
 f_info	.\application\controllers\backend\login.php	/^					$f_info = $this->init_cache->cache_info('weather');			$/;"	v	language:PHP
 f_info	.\application\libraries\init_cache.php	/^	 			$f_info = fstat($h);$/;"	v	language:PHP
 f_info	.\application\libraries\init_cache.php	/^	 		$f_info = null;$/;"	v	language:PHP
-f_type	.\application\controllers\backend\fields.php	/^		$f_type = $this->input->get('f_type');$/;"	v	language:PHP
+f_type	.\application\controllers\backend\fields.php	/^		$f_type = $this->input->get_post('f_type');$/;"	v	language:PHP
 f_types	.\application\models\modules_model.php	/^ 		$f_types = $this->fetch_f_types();$/;"	v	language:PHP
 factors	.\application\libraries\Doctrine\ORM\Query\Parser.php	/^        $factors = array();$/;"	v	language:PHP
 fadeIn	.\system\libraries\Javascript.php	/^	function fadeIn($element = 'this', $speed = '', $callback = '')$/;"	f	language:PHP
@@ -10730,6 +10696,7 @@ ffooter	.\tools\faisunsql_v40_utf8\index.php	/^function ffooter(){$/;"	f	languag
 fh	.\application\libraries\Doctrine\ORM\Tools\DebugUnitOfWorkListener.php	/^        $fh = fopen($this->file, "x+");$/;"	v	language:PHP
 fh	.\ckfinder\core\connector\php\php5\Utils\FileSystem.php	/^        if (!is_dir($serverPath) || (false === $fh = @opendir($serverPath))) {$/;"	v	language:PHP
 fheader	.\tools\faisunsql_v40_utf8\index.php	/^function fheader(){$/;"	f	language:PHP
+fid	.\application\controllers\backend\fields.php	/^		$fid = $this->input->get_post('f_id');$/;"	v	language:PHP
 field	.\application\libraries\Doctrine\Common\Collections\ArrayCollection.php	/^            foreach (array_reverse($orderings) as $field => $ordering) {$/;"	v	language:PHP
 field	.\application\libraries\Doctrine\Common\Collections\Expr\ClosureExpressionVisitor.php	/^        $field = $comparison->getField();$/;"	v	language:PHP
 field	.\application\libraries\Doctrine\Common\Collections\Expr\Comparison.php	/^        $this->field = $field;$/;"	v	language:PHP
@@ -11539,8 +11506,8 @@ form	.\system\helpers\form_helper.php	/^			$form = "\\n";$/;"	v	language:PHP
 form	.\system\helpers\form_helper.php	/^		$form = '<form action="'.$action.'"';$/;"	v	language:PHP
 form	.\system\helpers\form_helper.php	/^		$form = '<select name="'.$name.'"'.$extra.$multiple.">\\n";$/;"	v	language:PHP
 form	.\system\helpers\form_helper.php	/^		static $form;$/;"	v	language:PHP
-form_admin	.\application\controllers\backend\admins.php	/^		$form_admin = $this->input->post('main');$/;"	v	language:PHP
-form_array	.\application\controllers\backend\engage.php	/^			$form_array = $this->input->post('main');	$/;"	v	language:PHP
+form_admin	.\application\controllers\backend\admins.php	/^		$form_admin = $this->input->get_post('main');$/;"	v	language:PHP
+form_array	.\application\controllers\backend\engage.php	/^			$form_array = $this->input->get_post('main');	$/;"	v	language:PHP
 form_button	.\system\helpers\form_helper.php	/^	function form_button($data = '', $content = '', $extra = '')$/;"	f	language:PHP
 form_checkbox	.\system\helpers\form_helper.php	/^	function form_checkbox($data = '', $value = '', $checked = FALSE, $extra = '')$/;"	f	language:PHP
 form_close	.\system\helpers\form_helper.php	/^	function form_close($extra = '')$/;"	f	language:PHP
@@ -13564,6 +13531,7 @@ get_pos	.\application\libraries\init_tree.php	/^   function get_pos($myid)$/;"	f
 get_pos	.\application\libraries\tree.php	/^   function get_pos($myid)$/;"	f	language:PHP
 get_pos_ids	.\application\libraries\init_tree.php	/^    function get_pos_ids($id){$/;"	f	language:PHP
 get_pos_ids	.\application\libraries\tree.php	/^    function get_pos_ids($id){$/;"	f	language:PHP
+get_post	.\application\libraries\init_form.php	/^	function get_post(){$/;"	f	language:PHP
 get_post	.\system\core\Input.php	/^	function get_post($index = '', $xss_clean = FALSE)$/;"	f	language:PHP
 get_primary	.\swfupload\libs\mysql.class.php	/^	public function get_primary($table) {$/;"	f	language:PHP
 get_real_url	.\application\models\common_model.php	/^	function get_real_url(){$/;"	f	language:PHP
@@ -13596,6 +13564,7 @@ getcon	.\tools\UenuProbe\index.php	/^    function getcon($varName)$/;"	f	languag
 getcon	.\tools\UenuProbe\uenu.php	/^    function getcon($varName)$/;"	f	language:PHP
 gets	.\application\libraries\Doctrine\DBAL\Connection.php	/^     * The function gets passed this Connection instance as an (optional) parameter.$/;"	f	language:PHP
 gets	.\application\libraries\Doctrine\ORM\EntityManager.php	/^     * The function gets passed this EntityManager instance as an (optional) parameter.$/;"	f	language:PHP
+gets	.\application\libraries\init_form.php	/^		$gets = $CI->input->get();$/;"	v	language:PHP
 getsize	.\tools\faisunsql_v40_utf8\index.php	/^	  function getsize(){$/;"	f	language:PHP
 gg	.\charts\ExportHandlers\PHP\Resources\FCExporter_IMG.php	/^		$gg = hexdec(substr($strHexColor, 2, 2));$/;"	v	language:PHP
 glimpse	.\application\libraries\Doctrine\Common\Lexer.php	/^    public function glimpse()$/;"	f	language:PHP
@@ -13629,7 +13598,7 @@ groupByItems	.\application\libraries\Doctrine\ORM\Query\AST\GroupByClause.php	/^
 groupByItems	.\application\libraries\Doctrine\ORM\Query\AST\GroupByClause.php	/^    public $groupByItems = array();$/;"	v	language:PHP
 groupByItems	.\application\libraries\Doctrine\ORM\Query\Parser.php	/^        $groupByItems = array($this->GroupByItem());$/;"	v	language:PHP
 group_by	.\system\database\DB_active_rec.php	/^	public function group_by($by)$/;"	f	language:PHP
-group_id	.\application\controllers\backend\login.php	/^		$group_id = $this->input->post('group_id');$/;"	v	language:PHP
+group_id	.\application\controllers\backend\login.php	/^		$group_id = $this->input->get_post('group_id');$/;"	v	language:PHP
 groups	.\application\controllers\backend\admins.php	/^ 		$groups = $this->Roles_model->fetch_roles_list();$/;"	v	language:PHP
 groups	.\system\core\Input.php	/^		$groups = 8;$/;"	v	language:PHP
 groups	.\system\core\Input.php	/^		return $collapsed OR $groups == 1;$/;"	v	language:PHP
@@ -14067,20 +14036,20 @@ icon	.\tools\UenuProbe\index.php	/^  $icon = "image";$/;"	v	language:PHP
 icon	.\tools\UenuProbe\index.php	/^  $icon = $_GET['icon'];$/;"	v	language:PHP
 icon	.\tools\UenuProbe\uenu.php	/^  $icon = "image";$/;"	v	language:PHP
 icon	.\tools\UenuProbe\uenu.php	/^  $icon = $_GET['icon'];$/;"	v	language:PHP
-id	.\application\controllers\backend\archives.php	/^			$id = $id?$id:$this->input->get("info_id");$/;"	v	language:PHP
-id	.\application\controllers\backend\archives.php	/^			$id = $this->input->post("info_id");$/;"	v	language:PHP
-id	.\application\controllers\backend\download.php	/^			$id = $id?$id:$this->input->get("info_id");				$/;"	v	language:PHP
-id	.\application\controllers\backend\download.php	/^			$id = $this->input->post("info_id");$/;"	v	language:PHP
-id	.\application\controllers\backend\engage.php	/^			$id  = $this->input->get("apply_id");			$/;"	v	language:PHP
-id	.\application\controllers\backend\engage.php	/^			$id  = $this->input->get("eg_id");			$/;"	v	language:PHP
-id	.\application\controllers\backend\engage.php	/^		$id  = $this->input->get("apply_id");			$/;"	v	language:PHP
-id	.\application\controllers\backend\friendlink.php	/^			$id  = $this->input->get("link_id");	$/;"	v	language:PHP
-id	.\application\controllers\backend\mdata.php	/^		$id = $this->uri->segment(4);$/;"	v	language:PHP
-id	.\application\controllers\backend\product.php	/^			$id = $id?$id:$this->input->get("pro_id");$/;"	v	language:PHP
-id	.\application\controllers\backend\product.php	/^			$id = $this->input->post("pro_id");$/;"	v	language:PHP
-id	.\application\controllers\backend\tree.php	/^			$id = $this->input->post('id');$/;"	v	language:PHP
-id	.\application\controllers\backend\tree.php	/^		$id = $this->uri->segment(4);$/;"	v	language:PHP
-id	.\application\controllers\backend\tree.php	/^            $id = $id?$id:$this->uri->segment(4);$/;"	v	language:PHP
+id	.\application\controllers\backend\archives.php	/^			$id = $id?$id:$this->input->get_post("info_id");$/;"	v	language:PHP
+id	.\application\controllers\backend\archives.php	/^			$id = $this->input->get_post("info_id");$/;"	v	language:PHP
+id	.\application\controllers\backend\download.php	/^			$id = $id?$id:$this->input->get_post("info_id");				$/;"	v	language:PHP
+id	.\application\controllers\backend\download.php	/^			$id = $this->input->get_post("info_id");$/;"	v	language:PHP
+id	.\application\controllers\backend\engage.php	/^			$id  = $this->input->get_post("apply_id");			$/;"	v	language:PHP
+id	.\application\controllers\backend\engage.php	/^			$id  = $this->input->get_post("eg_id");			$/;"	v	language:PHP
+id	.\application\controllers\backend\engage.php	/^		$id  = $this->input->get_post("apply_id");			$/;"	v	language:PHP
+id	.\application\controllers\backend\friendlink.php	/^			$id  = $this->input->get_post("link_id");	$/;"	v	language:PHP
+id	.\application\controllers\backend\mdata.php	/^		$id = $this->input->get_post('pri_id');$/;"	v	language:PHP
+id	.\application\controllers\backend\product.php	/^			$id = $id?$id:$this->input->get_post("pro_id");$/;"	v	language:PHP
+id	.\application\controllers\backend\product.php	/^			$id = $this->input->get_post("pro_id");$/;"	v	language:PHP
+id	.\application\controllers\backend\tree.php	/^			$id = $this->input->get_post('id');$/;"	v	language:PHP
+id	.\application\controllers\backend\tree.php	/^		$id = $this->input->get_post('id');$/;"	v	language:PHP
+id	.\application\controllers\backend\tree.php	/^            $id = $id?$id:$this->input->get_post('id');$/;"	v	language:PHP
 id	.\application\helpers\common_helper.php	/^		$id = $a['parent_id'];		$/;"	v	language:PHP
 id	.\application\helpers\common_helper.php	/^		$id = $a['parent_id'];$/;"	v	language:PHP
 id	.\application\libraries\Doctrine\Common\Persistence\PersistentObject.php	/^ *      private $id;$/;"	v	language:PHP
@@ -14216,14 +14185,14 @@ identityMap	.\application\libraries\Doctrine\ORM\UnitOfWork.php	/^            $t
 identityMap	.\application\libraries\Doctrine\ORM\UnitOfWork.php	/^    private $identityMap = array();$/;"	v	language:PHP
 idiom	.\system\core\Lang.php	/^			$idiom = ($deft_lang == '') ? 'english' : $deft_lang;$/;"	v	language:PHP
 idiom	.\system\core\Lang.php	/^	function load($langfile = '', $idiom = '', $return = FALSE, $add_suffix = TRUE, $alt_path = '')$/;"	v	language:PHP
-ids	.\application\controllers\backend\logs.php	/^			$ids = $this->input->post('log_ids');$/;"	v	language:PHP
-ids	.\application\controllers\backend\logs.php	/^			$ids = $this->input->post('login_ids');$/;"	v	language:PHP
-ids	.\application\controllers\backend\mdata.php	/^			$ids = $this->input->post($primary);$/;"	v	language:PHP
-ids	.\application\controllers\backend\mdata.php	/^            $ids = $ids?$ids:$this->uri->segment(4);$/;"	v	language:PHP
-ids	.\application\controllers\backend\templates.php	/^            $ids = $ids?$ids:$this->uri->segment(4);$/;"	v	language:PHP
-ids	.\application\controllers\backend\templates.php	/^            $ids = $this->input->post('t_id');$/;"	v	language:PHP
+ids	.\application\controllers\backend\logs.php	/^			$ids = $this->input->get_post('log_ids');$/;"	v	language:PHP
+ids	.\application\controllers\backend\logs.php	/^			$ids = $this->input->get_post('login_ids');$/;"	v	language:PHP
+ids	.\application\controllers\backend\mdata.php	/^			$ids = $this->input->get_post($primary);$/;"	v	language:PHP
+ids	.\application\controllers\backend\mdata.php	/^            $ids = $ids?$ids:$this->input->get_post('pri_id');$/;"	v	language:PHP
+ids	.\application\controllers\backend\templates.php	/^            $ids = $ids?$ids:$this->input->get_post('t_id');$/;"	v	language:PHP
+ids	.\application\controllers\backend\templates.php	/^            $ids = $this->input->get_post('t_id');$/;"	v	language:PHP
 ids	.\application\controllers\front\member.php	/^	 	$ids  = array_re_index($data['list'],'order_id','order_id');$/;"	v	language:PHP
-ids	.\application\controllers\front\product.php	/^		$ids = $this->uri->segment(3)?array($this->uri->segment(3)):explode(',',$this->input->get('ids'));$/;"	v	language:PHP
+ids	.\application\controllers\front\product.php	/^		$ids = $this->input->get_post('pid')?array($this->input->get_post('pid')):explode(',',$this->input->get_post('ids'));$/;"	v	language:PHP
 ids	.\application\libraries\Doctrine\ORM\Mapping\Driver\DatabaseDriver.php	/^        $ids = array();$/;"	v	language:PHP
 ids	.\application\libraries\Doctrine\ORM\Tools\DebugUnitOfWorkListener.php	/^            $ids = $uow->getEntityIdentifier($entity);$/;"	v	language:PHP
 ids	.\application\libraries\Doctrine\ORM\Tools\Export\Driver\YamlExporter.php	/^        $ids = array();$/;"	v	language:PHP
@@ -14416,7 +14385,7 @@ indent	.\application\libraries\Doctrine\Symfony\Component\Yaml\Parser.php	/^    
 indent	.\application\libraries\Smarty-3.1.14\libs\plugins\block.textformat.php	/^    $indent = 0;$/;"	v	language:PHP
 indent_char	.\application\libraries\Smarty-3.1.14\libs\plugins\block.textformat.php	/^    $indent_char = ' ';$/;"	v	language:PHP
 indent_first	.\application\libraries\Smarty-3.1.14\libs\plugins\block.textformat.php	/^    $indent_first = 0;$/;"	v	language:PHP
-index	.\application\controllers\admin.php	/^	function index(){	$/;"	f	language:PHP
+index	.\application\controllers\admin.php	/^	function index(){		$/;"	f	language:PHP
 index	.\application\controllers\backend\login.php	/^	function index()$/;"	f	language:PHP
 index	.\application\controllers\backend\mdata.php	/^	function index(){$/;"	f	language:PHP
 index	.\application\controllers\backend\tree.php	/^	function index(){$/;"	f	language:PHP
@@ -14565,10 +14534,10 @@ info	.\application\libraries\curl.php	/^	public $info;                   \/\/ Re
 info	.\application\libraries\init_db.php	/^		$info  = $this->main_save($save_info,$save_config); \/\/保存主表信息		$/;"	v	language:PHP
 info	.\swfupload\libs\db_access.class.php	/^		$info = array();$/;"	v	language:PHP
 info	.\system\database\drivers\sqlsrv\sqlsrv_driver.php	/^		$info = sqlsrv_server_info($this->conn_id);$/;"	v	language:PHP
-info_class	.\application\controllers\front\download.php	/^		$info_class = $this->input->get('info_class');$/;"	v	language:PHP
-info_id	.\application\controllers\backend\archives.php	/^		$info_id = $this->input->get('info_id');$/;"	v	language:PHP
-info_id	.\application\controllers\backend\download.php	/^		$info_id = $this->input->get('info_id');$/;"	v	language:PHP
-info_title	.\application\controllers\backend\archives.php	/^		$info_title = $this->input->get('info_title');$/;"	v	language:PHP
+info_class	.\application\controllers\front\download.php	/^		$info_class = $this->input->get_post('info_class');$/;"	v	language:PHP
+info_id	.\application\controllers\backend\archives.php	/^		$info_id = $this->input->get_post('info_id');$/;"	v	language:PHP
+info_id	.\application\controllers\backend\download.php	/^		$info_id = $this->input->get_post('info_id');$/;"	v	language:PHP
+info_title	.\application\controllers\backend\archives.php	/^		$info_title = $this->input->get_post('info_title');$/;"	v	language:PHP
 information	.\application\libraries\Doctrine\ORM\Tools\SchemaTool.php	/^                    \/\/ Parent class information is already contained in this class$/;"	c	language:PHP
 inheritance	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_templatecompilerbase.php	/^    public $inheritance = false;$/;"	v	language:PHP
 inheritanceClassMap	.\application\libraries\Doctrine\ORM\Tools\EntityGenerator.php	/^            $inheritanceClassMap = array();$/;"	v	language:PHP
@@ -14734,7 +14703,6 @@ inputStream	.\application\libraries\Doctrine\Symfony\Component\Console\Helper\Di
 inputStream	.\application\libraries\Doctrine\Symfony\Component\Console\Helper\DialogHelper.php	/^    private $inputStream;$/;"	v	language:PHP
 input_charset	.\application\libraries\alipay.php	/^	var $input_charset='utf-8';$/;"	v	language:PHP
 input_charset	.\tools\alipay\lib\alipay_core.function.php	/^function getHttpResponsePOST($url, $cacert_url, $para, $input_charset = '') {$/;"	v	language:PHP
-input_img_html	.\application\compiles\1b110be4c3b72712b4c28e8e42173259235a6d63.file.ajax_upload_image.htm.php	/^function input_img_html(){$/;"	f	language:PHP
 input_key	.\application\controllers\backend\roles.php	/^						$input_key =  $parent_key .'[detail]'.'['.$key.']';$/;"	v	language:PHP
 input_tag_close	.\application\libraries\MY_Pagination.php	/^	var $input_tag_close		= '<\/kbd>';$/;"	v	language:PHP
 input_tag_open	.\application\libraries\MY_Pagination.php	/^	var $input_tag_open		= '<kbd>'; $/;"	v	language:PHP
@@ -15512,6 +15480,7 @@ k	.\application\controllers\backend\menu.php	/^ 		foreach($db_menus['list'] as $
 k	.\application\controllers\backend\system_manage.php	/^			  	 foreach($backarr as $k=>$v){$/;"	v	language:PHP
 k	.\application\controllers\backend\system_manage.php	/^   		foreach($channel as $k=>$v){$/;"	v	language:PHP
 k	.\application\controllers\backend\templates.php	/^          foreach($list as $k=>$v){$/;"	v	language:PHP
+k	.\application\controllers\backend\tree.php	/^			foreach($data['list'] as $k=>$v){			$/;"	v	language:PHP
 k	.\application\controllers\front\engage.php	/^			  	foreach($replace_flag as $k=>$v){$/;"	v	language:PHP
 k	.\application\controllers\front\product.php	/^						foreach($p_all as $k=>$v1){$/;"	v	language:PHP
 k	.\application\controllers\front\product.php	/^			foreach($cart_arr as $k=>$v){$/;"	v	language:PHP
@@ -15560,7 +15529,6 @@ k	.\application\libraries\init_auth.php	/^ 		foreach((array)$menu_rights[detail]
 k	.\application\libraries\init_db.php	/^ 		foreach($array_where as $k=>$v){$/;"	v	language:PHP
 k	.\application\libraries\init_db.php	/^ 		foreach($info['main'] as $k=>$v){$/;"	v	language:PHP
 k	.\application\libraries\init_form.php	/^	 		foreach($form_detail as $k=>$v){ $/;"	v	language:PHP
-k	.\application\libraries\init_page.php	/^		foreach($array as $k=>$v){$/;"	v	language:PHP
 k	.\application\libraries\init_page.php	/^		foreach($url_array as $k=>$url){$/;"	v	language:PHP
 k	.\application\libraries\init_tree.php	/^                    $k = $adds ? $this->icon[0] : '';$/;"	v	language:PHP
 k	.\application\libraries\tpl.php	/^		foreach($r as $k=>$v){$/;"	v	language:PHP
@@ -15965,8 +15933,7 @@ lang	.\application\helpers\init_lang_helper.php	/^				$lang = $lang?$lang:config
 lang	.\application\helpers\init_lang_helper.php	/^				$lang = $lang_get?$lang_get:$lang;	$/;"	v	language:PHP
 lang	.\application\helpers\init_lang_helper.php	/^				$lang = get_cookie('lang');$/;"	v	language:PHP
 lang	.\application\helpers\init_lang_helper.php	/^		$lang = $lang?$lang:config_item('language');		$/;"	v	language:PHP
-lang	.\application\helpers\init_lang_helper.php	/^		$lang = $lang_get?$lang_get:$lang;	$/;"	v	language:PHP
-lang	.\application\helpers\init_lang_helper.php	/^		$lang = get_cookie('lang');$/;"	v	language:PHP
+lang	.\application\helpers\init_lang_helper.php	/^		$lang = isset($_GET['lang'])?$_GET['lang']:get_cookie('lang');		$/;"	v	language:PHP
 lang	.\application\helpers\init_lang_helper.php	/^        	$lang =config_item('support_language');$/;"	v	language:PHP
 lang	.\application\language\en\item_backend_admins_lang.php	/^ $lang = array ($/;"	v	language:PHP
 lang	.\application\language\en\item_backend_archive_lang.php	/^ $lang = array ($/;"	v	language:PHP
@@ -16003,7 +15970,6 @@ langCode	.\ckfinder\core\connector\php\php5\Utils\Misc.php	/^        $langCode =
 lang_all	.\application\models\common_model.php	/^	function lang_all(){$/;"	f	language:PHP
 lang_files	.\application\controllers\backend\system_manage.php	/^ 		$lang_files = get_filenames($path);$/;"	v	language:PHP
 lang_get	.\application\helpers\init_lang_helper.php	/^				$lang_get = $_GET['lang'];		$/;"	v	language:PHP
-lang_get	.\application\helpers\init_lang_helper.php	/^		$lang_get = $_GET['lang'];		$/;"	v	language:PHP
 lang_get	.\application\helpers\init_lang_helper.php	/^	function lang_get(){$/;"	f	language:PHP
 lang_link	.\application\controllers\backend\login.php	/^			$lang_link  = $this->init_cache->cache_fetch("lang_type",null,$lang_show);	$/;"	v	language:PHP
 lang_set	.\application\controllers\backend\common.php	/^	function lang_set(){	$/;"	f	language:PHP
@@ -16262,7 +16228,7 @@ like	.\system\database\drivers\postgre\postgre_driver.php	/^	function escape_str
 like	.\system\database\drivers\sqlite\sqlite_driver.php	/^	function escape_str($str, $like = FALSE)$/;"	v	language:PHP
 like	.\system\database\drivers\sqlsrv\sqlsrv_driver.php	/^	function escape_str($str, $like = FALSE)$/;"	v	language:PHP
 likeExpr	.\application\libraries\Doctrine\ORM\Query\Parser.php	/^        $likeExpr = new AST\\LikeExpression($stringExpr, $stringPattern, $escapeChar);$/;"	v	language:PHP
-like_sn	.\application\controllers\front\feel.php	/^		$like_sn = $this->input->get('info_class_sn'); $/;"	v	language:PHP
+like_sn	.\application\controllers\front\feel.php	/^		$like_sn = $this->input->get_post('info_class_sn'); $/;"	v	language:PHP
 like_sn	.\application\controllers\front\feel.php	/^ 		$like_sn = $like_sn?$like_sn:'0105';$/;"	v	language:PHP
 like_statement	.\system\database\DB_active_rec.php	/^				$like_statement = $like_statement.sprintf($this->_like_escape_str, $this->_like_escape_chr);$/;"	v	language:PHP
 like_statement	.\system\database\DB_active_rec.php	/^				$like_statement = $prefix." $k $not LIKE '%{$v}%'";$/;"	v	language:PHP
@@ -16340,21 +16306,20 @@ lines	.\application\libraries\Doctrine\Symfony\Component\Yaml\Parser.php	/^     
 lines	.\application\libraries\Doctrine\Symfony\Component\Yaml\Parser.php	/^    private $lines          = array();$/;"	v	language:PHP
 lines	.\install\libs\phpMyImporter.php	/^			$lines = file($file);$/;"	v	language:PHP
 lines	.\install\libs\phpMyImporter.php	/^			$lines = gzfile($file);$/;"	v	language:PHP
-lines	.\install\libs\phpMyImporter.php	/^		if($this->getDbPrefix()) $lines = preg_replace("\/mysys_\/",$this->getDbPrefix(),$lines);	$/;"	v	language:PHP
+lines	.\install\libs\phpMyImporter.php	/^		if($this->getDbPrefix()) $lines = preg_replace("\/corcms_\/",$this->getDbPrefix(),$lines);	$/;"	v	language:PHP
 lines	.\system\libraries\Email.php	/^		$lines = explode("\\n", $str);$/;"	v	language:PHP
 lines	.\system\libraries\Xmlrpc.php	/^		$lines = explode("\\r\\n", $data);$/;"	v	language:PHP
-link	.\application\libraries\init_page.php	/^		$link='?1=1';$/;"	v	language:PHP
 link	.\swfupload\libs\db_access.class.php	/^	public $link = null;$/;"	v	language:PHP
 link	.\swfupload\libs\mysql.class.php	/^	public $link = null;$/;"	v	language:PHP
 link	.\system\helpers\html_helper.php	/^		$link = '<link ';$/;"	v	language:PHP
-link_id	.\application\controllers\backend\friendlink.php	/^		$link_id = $this->input->get('link_id');$/;"	v	language:PHP
+link_id	.\application\controllers\backend\friendlink.php	/^		$link_id = $this->input->get_post('link_id');$/;"	v	language:PHP
 link_str	.\application\libraries\init_db.php	/^ 		$link_str = $CI->init_page->array_to_url($_GET);		$/;"	v	language:PHP
 link_str	.\application\models\common_model.php	/^		$link_str = $init_page->array_to_url($_GET);		$/;"	v	language:PHP
 link_tag	.\system\helpers\html_helper.php	/^	function link_tag($href = '', $rel = 'stylesheet', $type = 'text\/css', $title = '', $media = '', $index_page = FALSE)$/;"	f	language:PHP
 list	.\application\controllers\backend\templates.php	/^          $list = get_dir_file_info($root_path, true);$/;"	v	language:PHP
 list	.\application\controllers\front\alipay.php	/^        $list = $this->db->select('*',false)->from('order_detail')->where('order_id',$this->uri->segment(4))->get()->result_array();$/;"	v	language:PHP
 list	.\application\controllers\front\common.php	/^    $list = $this->db->query("SELECT region_id, region_name from ".$this->init_db->table('ecs_region')." where parent_id=" .$pid )->result_array();$/;"	v	language:PHP
-list	.\application\controllers\front\member.php	/^	 	$list = $this->db->select('*',false)->from('order_detail')->where('order_id',$this->uri->segment(4))->get()->result_array();$/;"	v	language:PHP
+list	.\application\controllers\front\member.php	/^	 	$list = $this->db->select('*',false)->from('order_detail')->where('order_id',$this->input->get_post('order_id'))->get()->result_array();$/;"	v	language:PHP
 list	.\application\libraries\Doctrine\DBAL\Schema\AbstractSchemaManager.php	/^        $list = array();$/;"	v	language:PHP
 list	.\application\libraries\Doctrine\DBAL\Schema\MySqlSchemaManager.php	/^        $list = array();$/;"	v	language:PHP
 list	.\application\libraries\Doctrine\DBAL\Schema\OracleSchemaManager.php	/^        $list = array();$/;"	v	language:PHP
@@ -16527,7 +16492,6 @@ lockSql	.\application\libraries\Doctrine\ORM\Persisters\JoinedSubclassPersister.
 lockVersion	.\application\libraries\Doctrine\ORM\EntityManager.php	/^    public function lock($entity, $lockMode, $lockVersion = null)$/;"	v	language:PHP
 lockVersion	.\application\libraries\Doctrine\ORM\UnitOfWork.php	/^    public function lock($entity, $lockMode, $lockVersion = null)$/;"	v	language:PHP
 lock_id	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_cacheresource.php	/^    public $lock_id = null;$/;"	v	language:PHP
-lock_screen	.\application\compiles\3cbf949ff136d34a4bc14ddb8994c48b8a4df047.file.center.htm.php	/^function lock_screen() {$/;"	f	language:PHP
 lock_screen	.\application\controllers\backend\login.php	/^			$lock_screen = $this->session->userdata('lock_screen');	$/;"	v	language:PHP
 lock_screen	.\application\controllers\backend\login.php	/^			if(isset($lock_screen) && $lock_screen==1) {$/;"	v	language:PHP
 locked	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_cacheresource.php	/^    public function locked(Smarty $smarty, Smarty_Template_Cached $cached)$/;"	f	language:PHP
@@ -16541,7 +16505,7 @@ log_cf	.\application\controllers\backend\modules.php	/^			$log_cf = $this->im->s
 log_clear	.\application\models\logs_model.php	/^	function log_clear(){$/;"	f	language:PHP
 log_desc	.\application\controllers\backend\admins.php	/^		 		$log_desc = sprintf('修改用户%s',$rs[main]['admin_user']);	$/;"	v	language:PHP
 log_desc	.\application\controllers\backend\admins.php	/^	 		$log_desc = sprintf('删除用户%s',$rs['admin_user']);	$/;"	v	language:PHP
-log_desc	.\application\controllers\backend\roles.php	/^	 		$log_desc = sprintf($lang['log_mod'],$this->input->post('role_name'));	$/;"	v	language:PHP
+log_desc	.\application\controllers\backend\roles.php	/^	 		$log_desc = sprintf($lang['log_mod'],$this->input->get_post('role_name'));	$/;"	v	language:PHP
 log_error	.\install\index_2.php	/^function log_error($txt){$/;"	f	language:PHP
 log_error	.\system\core\Common.php	/^	function show_404($page = '', $log_error = TRUE)$/;"	v	language:PHP
 log_error	.\system\core\Exceptions.php	/^	function show_404($page = '', $log_error = TRUE)$/;"	v	language:PHP
@@ -16579,6 +16543,7 @@ ls	.\application\controllers\backend\mdata.php	/^	 							$ls = $this->db->selec
 ls	.\application\controllers\backend\system_manage.php	/^ 		$ls = $this->db->select('*',false)->from('lang')->where("lang_type !='zh'")->order_by('lang_id','asc')->get()->result_array();$/;"	v	language:PHP
 ls	.\application\controllers\front\product.php	/^		$ls = $this->Tree_model->fetch_belong_tree($pid,true);$/;"	v	language:PHP
 ls	.\application\controllers\front\product.php	/^		$ls = $this->db->select('*',false)->from('module_product')->where_in('p_id',$ids)->get()->result_array();$/;"	v	language:PHP
+ls	.\application\controllers\front\product.php	/^		$ls = (array)$this->Tree_model->fetch_belong_tree($pid,true);$/;"	v	language:PHP
 ls	.\application\controllers\front\search.php	/^		$ls = $query->result_array();$/;"	v	language:PHP
 ls	.\application\libraries\init_auth.php	/^	   		$ls = array_re_index($data['list'],'r_id');$/;"	v	language:PHP
 ls	.\application\libraries\init_db.php	/^ 			$ls = array_re_index($ls,$key);$/;"	v	language:PHP
@@ -16607,9 +16572,9 @@ m	.\system\helpers\smiley_helper.php	/^				$m = array();$/;"	v	language:PHP
 m	.\system\libraries\Xmlrpcs.php	/^			$m = new XML_RPC_Message($parser_object->xh[$parser]['method']);$/;"	v	language:PHP
 m	.\system\libraries\Xmlrpcs.php	/^			$m = new XML_RPC_Message($value[0]);$/;"	v	language:PHP
 m_id	.\application\controllers\backend\menu.php	/^		 		$m_id  = $save['main']['r_id'];$/;"	v	language:PHP
-m_id	.\application\controllers\backend\menu.php	/^ 		$m_id = $this->uri->segment(4);$/;"	v	language:PHP
-m_id	.\application\controllers\backend\modules.php	/^			$m_id = $this->input->post('m_id');$/;"	v	language:PHP
-m_id	.\application\controllers\backend\modules.php	/^		$m_id = $this->uri->segment(4);$/;"	v	language:PHP
+m_id	.\application\controllers\backend\menu.php	/^ 		$m_id = $this->input->get_post('r_id');$/;"	v	language:PHP
+m_id	.\application\controllers\backend\modules.php	/^			$m_id = $this->input->get_post('m_id');$/;"	v	language:PHP
+m_id	.\application\controllers\backend\modules.php	/^		$m_id = $this->input->get_post('m_id');$/;"	v	language:PHP
 m_id	.\application\controllers\backend\modules.php	/^            	$m_id = array($m_id);$/;"	v	language:PHP
 m_id	.\application\controllers\backend\modules.php	/^            $m_id = $m_id?$m_id:$this->uri->segment(4);$/;"	v	language:PHP
 m_lang	.\application\controllers\backend\admins.php	/^ 		$this->m_lang = $this->lang->language;	$/;"	v	language:PHP
@@ -16624,7 +16589,7 @@ m_lang	.\application\controllers\backend\roles.php	/^ 		$this->m_lang = $this->l
 m_lang	.\application\controllers\backend\system_manage.php	/^		$this->m_lang = $this->lang->language;	$/;"	v	language:PHP
 m_sub	.\application\models\mdata_model.php	/^		$m_sub = array_re_index($this->m->all(array("m_sub > "=>0)),'m_sub','m_sub');$/;"	v	language:PHP
 m_sub	.\application\models\modules_model.php	/^		$m_sub = array_re_index($this->all(array("m_sub > "=>0)),'m_sub','m_sub');$/;"	v	language:PHP
-m_type	.\application\controllers\backend\modules.php	/^		$m_type = $this->input->get('m_type');$/;"	v	language:PHP
+m_type	.\application\controllers\backend\modules.php	/^		$m_type = $this->input->get_post('m_type');$/;"	v	language:PHP
 mailRe	.\tools\UenuProbe\index.php	/^        $mailRe = "MAIL邮件发送测试结果：发送";$/;"	v	language:PHP
 mailRe	.\tools\UenuProbe\uenu.php	/^        $mailRe = "MAIL邮件发送测试结果：发送";$/;"	v	language:PHP
 mailReShow	.\tools\UenuProbe\index.php	/^        $mailReShow = "show";$/;"	v	language:PHP
@@ -16637,61 +16602,61 @@ mailto	.\application\libraries\Smarty-3.1.14\libs\plugins\function.mailto.php	/^
 mailto	.\system\helpers\url_helper.php	/^	function mailto($email, $title = '', $attributes = '')$/;"	f	language:PHP
 mailtype	.\system\libraries\Email.php	/^		$this->mailtype = ($type == 'html') ? 'html' : 'text';$/;"	v	language:PHP
 mailtype	.\system\libraries\Email.php	/^	var	$mailtype		= "text";	\/\/ text\/html  Defines email formatting$/;"	v	language:PHP
-main	.\application\controllers\backend\admins.php	/^	 		$main = $this->input->post('main');$/;"	v	language:PHP
-main	.\application\controllers\backend\admins.php	/^ 		$main  = $this->input->post('main'); 	$/;"	v	language:PHP
-main	.\application\controllers\backend\advs.php	/^			$main = $this->db->select('*')->from('advs')->where('adv_id',$this->input->get('adv_id'))->get()->first_row('array');$/;"	v	language:PHP
+main	.\application\controllers\backend\admins.php	/^	 		$main = $this->input->get_post('main');$/;"	v	language:PHP
+main	.\application\controllers\backend\admins.php	/^ 		$main  = $this->input->get_post('main'); 	$/;"	v	language:PHP
+main	.\application\controllers\backend\advs.php	/^			$main = $this->db->select('*')->from('advs')->where('adv_id',$this->input->get_post('adv_id'))->get()->first_row('array');$/;"	v	language:PHP
 main	.\application\controllers\backend\advs.php	/^		 		$main  = $rs['main'];$/;"	v	language:PHP
-main	.\application\controllers\backend\advs.php	/^	 		$main = $this->input->post('main');	$/;"	v	language:PHP
+main	.\application\controllers\backend\advs.php	/^	 		$main = $this->input->get_post('main');	$/;"	v	language:PHP
 main	.\application\controllers\backend\archive.php	/^		$main = $this->db->select('*')->from('infos')->where('info_class',$class_id)->get()->first_row('array');$/;"	v	language:PHP
-main	.\application\controllers\backend\archive.php	/^	 		$main = $this->input->post('main'); 	$/;"	v	language:PHP
+main	.\application\controllers\backend\archive.php	/^	 		$main = $this->input->get_post('main'); 	$/;"	v	language:PHP
 main	.\application\controllers\backend\archives.php	/^			$main = $this->db->select('*')->from('infos')->where('info_id',$info_id)->get()->first_row('array');		$/;"	v	language:PHP
-main	.\application\controllers\backend\archives.php	/^	 		$main = $this->input->post('main'); 		 		$/;"	v	language:PHP
-main	.\application\controllers\backend\category.php	/^	 			$main = $this->Category_model->detail($this->input->get('c_id'),'byid');$/;"	v	language:PHP
-main	.\application\controllers\backend\category.php	/^	 	$main = $this->input->post('main');$/;"	v	language:PHP
-main	.\application\controllers\backend\category.php	/^ 			$main = $this->db->select('*',false)->from('category')->where('c_id',$this->input->get('c_id'))->get()->first_row('array');$/;"	v	language:PHP
+main	.\application\controllers\backend\archives.php	/^	 		$main = $this->input->get_post('main'); 		 		$/;"	v	language:PHP
+main	.\application\controllers\backend\category.php	/^	 			$main = $this->Category_model->detail($this->input->get_post('c_id'),'byid');$/;"	v	language:PHP
+main	.\application\controllers\backend\category.php	/^	 	$main = $this->input->get_post('main');$/;"	v	language:PHP
+main	.\application\controllers\backend\category.php	/^ 			$main = $this->db->select('*',false)->from('category')->where('c_id',$this->input->get_post('c_id'))->get()->first_row('array');$/;"	v	language:PHP
 main	.\application\controllers\backend\download.php	/^			$main = $this->db->select('*')->from('infos')->where('info_id',$info_id)->get()->first_row('array');$/;"	v	language:PHP
-main	.\application\controllers\backend\download.php	/^	 		$main = $this->input->post('main'); 		 		$/;"	v	language:PHP
+main	.\application\controllers\backend\download.php	/^	 		$main = $this->input->get_post('main'); 		 		$/;"	v	language:PHP
 main	.\application\controllers\backend\engage.php	/^				$main = $this->db->select('*')->from('engage_apply')->where('apply_id',$id)->get()->first_row('array');$/;"	v	language:PHP
-main	.\application\controllers\backend\engage.php	/^				$main = $this->db->select('*',false)->from('engage')->where('eg_id',$this->input->get('eg_id'))->get()->first_row('array');$/;"	v	language:PHP
+main	.\application\controllers\backend\engage.php	/^				$main = $this->db->select('*',false)->from('engage')->where('eg_id',$this->input->get_post('eg_id'))->get()->first_row('array');$/;"	v	language:PHP
 main	.\application\controllers\backend\fields.php	/^			$main = $this->im->detail($f_id);$/;"	v	language:PHP
 main	.\application\controllers\backend\fields.php	/^		$main = array();$/;"	v	language:PHP
 main	.\application\controllers\backend\friendlink.php	/^			$main = $this->db->select('*',false)->from('friendlink')->where('link_id',$link_id)->get()->first_row('array');		$/;"	v	language:PHP
-main	.\application\controllers\backend\friendlink.php	/^	 		$main = $this->input->post('main'); 		 		$/;"	v	language:PHP
+main	.\application\controllers\backend\friendlink.php	/^	 		$main = $this->input->get_post('main'); 		 		$/;"	v	language:PHP
 main	.\application\controllers\backend\mdata.php	/^			$main = $this->im->detail($id);$/;"	v	language:PHP
 main	.\application\controllers\backend\mdata.php	/^		$main = $this->im->detail($id);$/;"	v	language:PHP
-main	.\application\controllers\backend\mdata.php	/^		$main = $this->input->post('main');$/;"	v	language:PHP
+main	.\application\controllers\backend\mdata.php	/^		$main = $this->input->get_post('main');$/;"	v	language:PHP
 main	.\application\controllers\backend\mdata.php	/^		$main = array();$/;"	v	language:PHP
 main	.\application\controllers\backend\menu.php	/^			$main = $this->db->select('*',false)->from('system_rights')->where('r_id',$m_id)->get()->first_row('array');$/;"	v	language:PHP
-main	.\application\controllers\backend\menu.php	/^		 	$main = $this->input->post('main');$/;"	v	language:PHP
-main	.\application\controllers\backend\message.php	/^	 		$main = $this->input->post('main'); 		 	$/;"	v	language:PHP
+main	.\application\controllers\backend\menu.php	/^		 	$main = $this->input->get_post('main');$/;"	v	language:PHP
+main	.\application\controllers\backend\message.php	/^	 		$main = $this->input->get_post('main'); 		 	$/;"	v	language:PHP
 main	.\application\controllers\backend\modules.php	/^			$main = $this->im->main($m_id);$/;"	v	language:PHP
 main	.\application\controllers\backend\modules.php	/^			$main = array();$/;"	v	language:PHP
 main	.\application\controllers\backend\product.php	/^		$main = $this->db->select('*',false)->from('order_main')->where('order_id',$order_id)->get()->first_row('array');$/;"	v	language:PHP
-main	.\application\controllers\backend\product.php	/^	 		$main = $this->input->post('main');$/;"	v	language:PHP
-main	.\application\controllers\backend\roles.php	/^	 		$main = $this->input->post('main'); $/;"	v	language:PHP
-main	.\application\controllers\backend\system_manage.php	/^ 		$main  = $this->input->post('main');$/;"	v	language:PHP
+main	.\application\controllers\backend\product.php	/^	 		$main = $this->input->get_post('main');$/;"	v	language:PHP
+main	.\application\controllers\backend\roles.php	/^	 		$main = $this->input->get_post('main'); $/;"	v	language:PHP
+main	.\application\controllers\backend\system_manage.php	/^ 		$main  = $this->input->get_post('main');$/;"	v	language:PHP
 main	.\application\controllers\backend\templates.php	/^	       			$main = $this->init_db->save(array('main'=>$main),$this->im->db_config());$/;"	v	language:PHP
-main	.\application\controllers\backend\templates.php	/^       			$main = $this->input->post('main');$/;"	v	language:PHP
+main	.\application\controllers\backend\templates.php	/^       			$main = $this->input->get_post('main');$/;"	v	language:PHP
 main	.\application\controllers\backend\templates.php	/^            $main = $this->db->select('*',false)->from('templates')->where('t_id',$main_id)->get()->first_row('array');$/;"	v	language:PHP
-main	.\application\controllers\backend\templates.php	/^           $main = $this->input->post('main');$/;"	v	language:PHP
+main	.\application\controllers\backend\templates.php	/^           $main = $this->input->get_post('main');$/;"	v	language:PHP
 main	.\application\controllers\backend\templates.php	/^          $main = $this->db->select('*')->from('templates')->where('t_id',$main_id)->get()->first_row('array');$/;"	v	language:PHP
-main	.\application\controllers\backend\templates.php	/^          $main = $this->input->post('main');         $/;"	v	language:PHP
+main	.\application\controllers\backend\templates.php	/^          $main = $this->input->get_post('main');         $/;"	v	language:PHP
 main	.\application\controllers\backend\templates.php	/^         $main = $this->im->detail($main_id);$/;"	v	language:PHP
 main	.\application\controllers\backend\tree.php	/^			$main = $this->im->detail($id);$/;"	v	language:PHP
 main	.\application\controllers\backend\tree.php	/^			$main = $this->im->tree_detail($treeId);$/;"	v	language:PHP
-main	.\application\controllers\backend\tree.php	/^		$main = $this->input->post('main');				$/;"	v	language:PHP
-main	.\application\controllers\backend\tree.php	/^		$main = $this->input->post('main');$/;"	v	language:PHP
+main	.\application\controllers\backend\tree.php	/^		$main = $this->input->get_post('main');				$/;"	v	language:PHP
+main	.\application\controllers\backend\tree.php	/^		$main = $this->input->get_post('main');$/;"	v	language:PHP
 main	.\application\controllers\backend\tree.php	/^		$main = array();$/;"	v	language:PHP
 main	.\application\controllers\backend\tree.php	/^		$main = php_escape($main);$/;"	v	language:PHP
 main	.\application\controllers\front\alipay.php	/^        $main = $this->db->select('*',false)->from('order_main')->where('order_id',$this->uri->segment(3))->get()->first_row('array');$/;"	v	language:PHP
-main	.\application\controllers\front\engage.php	/^				$main = $this->db->select('*',false)->from('engage')->where('eg_id',$this->input->get('eg_id'))->get()->first_row('array');$/;"	v	language:PHP
-main	.\application\controllers\front\engage.php	/^			$main = $this->input->post('main');$/;"	v	language:PHP
-main	.\application\controllers\front\feel.php	/^		$main = $this->db->query("select * from ".$this->init_db->table('feel').' as a left join '.$this->init_db->table('category').' as b on a.pro_class_sn=b.c_sn'." where a.pro_id=".$this->input->get("id"))->first_row('array');$/;"	v	language:PHP
-main	.\application\controllers\front\member.php	/^	 	$main = $this->db->select('*',false)->from('order_main')->where('order_id',$this->uri->segment(4))->get()->first_row('array');$/;"	v	language:PHP
-main	.\application\controllers\front\product.php	/^		$main = $this->input->post('main');	$/;"	v	language:PHP
+main	.\application\controllers\front\engage.php	/^				$main = $this->db->select('*',false)->from('engage')->where('eg_id',$this->input->get_post('eg_id'))->get()->first_row('array');$/;"	v	language:PHP
+main	.\application\controllers\front\engage.php	/^			$main = $this->input->get_post('main');$/;"	v	language:PHP
+main	.\application\controllers\front\feel.php	/^		$main = $this->db->query("select * from ".$this->init_db->table('feel').' as a left join '.$this->init_db->table('category').' as b on a.pro_class_sn=b.c_sn'." where a.pro_id=".$this->input->get_post("id"))->first_row('array');$/;"	v	language:PHP
+main	.\application\controllers\front\member.php	/^	 	$main = $this->db->select('*',false)->from('order_main')->where('order_id',$this->input->get_post('order_id'))->get()->first_row('array');$/;"	v	language:PHP
+main	.\application\controllers\front\product.php	/^		$main = $this->input->get_post('main');	$/;"	v	language:PHP
 main	.\application\libraries\init_db.php	/^ 		$main = $this->main_delete($id,$save_config);$/;"	v	language:PHP
 main	.\application\models\advs_model.php	/^		$main = $this->adv_main($id);$/;"	v	language:PHP
-main	.\application\models\advs_model.php	/^		$main = $this->input->post('main');	$/;"	v	language:PHP
+main	.\application\models\advs_model.php	/^		$main = $this->input->get_post('main');	$/;"	v	language:PHP
 main	.\application\models\advs_model.php	/^	$main = $this->adv_main($id);$/;"	v	language:PHP
 main	.\application\models\advs_model.php	/^	$main = self::adv_main($id);$/;"	v	language:PHP
 main	.\application\models\modules_model.php	/^	function main($m_id,$key=null){$/;"	f	language:PHP
@@ -16699,12 +16664,12 @@ main_center	.\application\controllers\backend\login.php	/^	function main_center(
 main_db	.\application\controllers\backend\system_manage.php	/^ 		$main_db = $this->Admins_model->fetch_detail($main_form['admin_id']);$/;"	v	language:PHP
 main_delete	.\application\libraries\init_db.php	/^ 	function main_delete($id,$save_config){ $/;"	f	language:PHP
 main_foot	.\application\controllers\backend\login.php	/^ 	function  main_foot(){$/;"	f	language:PHP
-main_form	.\application\controllers\backend\system_manage.php	/^ 		$main_form  = $this->input->post('main');$/;"	v	language:PHP
-main_id	.\application\controllers\backend\admins.php	/^ 		$main_id = $this->uri->segment(4); 	  		$/;"	v	language:PHP
-main_id	.\application\controllers\backend\roles.php	/^	 		$main_id = $this->uri->segment(4); 	  		$/;"	v	language:PHP
-main_id	.\application\controllers\backend\templates.php	/^      		$main_id = $this->uri->segment(4);$/;"	v	language:PHP
-main_id	.\application\controllers\backend\templates.php	/^          $main_id = $this->uri->segment(4);$/;"	v	language:PHP
-main_id	.\application\controllers\backend\templates.php	/^         $main_id = $this->uri->segment(4);$/;"	v	language:PHP
+main_form	.\application\controllers\backend\system_manage.php	/^ 		$main_form  = $this->input->get_post('main');$/;"	v	language:PHP
+main_id	.\application\controllers\backend\admins.php	/^ 		$main_id = $this->input->get_post('admin_id'); 	  		$/;"	v	language:PHP
+main_id	.\application\controllers\backend\roles.php	/^	 		$main_id = $this->input->get_post('role_id'); 	  		$/;"	v	language:PHP
+main_id	.\application\controllers\backend\templates.php	/^      		$main_id = $this->input->get_post('t_id');$/;"	v	language:PHP
+main_id	.\application\controllers\backend\templates.php	/^          $main_id = $this->input->get_post('t_id');$/;"	v	language:PHP
+main_id	.\application\controllers\backend\templates.php	/^         $main_id = $this->input->get_post('t_id');$/;"	v	language:PHP
 main_index	.\application\controllers\backend\login.php	/^ 	function main_index(){$/;"	f	language:PHP
 main_info	.\application\controllers\backend\admins.php	/^			$main_info = array($/;"	v	language:PHP
 main_info	.\application\controllers\backend\admins.php	/^ 			$main_info = $this->ds->select('*',false)->from('admins')->where('admin_id',$main_id)->get()->first_row('array');$/;"	v	language:PHP
@@ -17267,7 +17232,7 @@ module	.\application\libraries\init_page.php	/^			$module = $module?$module:1;		
 module_id	.\application\controllers\backend\mdata.php	/^			$module_id = $this->im->get_mid();$/;"	v	language:PHP
 module_id	.\application\controllers\backend\mdata.php	/^		$module_id = $this->im->get_mid();$/;"	v	language:PHP
 module_id	.\application\models\mdata_model.php	/^		$module_id = $this->get_mid();$/;"	v	language:PHP
-module_slt	.\application\controllers\front\search.php	/^		$module_slt = $this->uri->segment(3)?$this->uri->segment(3):implode(',',array_keys($modules));$/;"	v	language:PHP
+module_slt	.\application\controllers\front\search.php	/^		$module_slt = $this->input->get_post('pid')?$this->input->get_post('pid'):implode(',',array_keys($modules));$/;"	v	language:PHP
 modules	.\application\controllers\front\search.php	/^		$modules = array($/;"	v	language:PHP
 mon	.\application\models\common_model.php	/^		$mon = $date_array["mon"];$/;"	v	language:PHP
 month	.\application\libraries\init_zip.php	/^      $month = ($header['mdate'] & 0x01E0) >> 5;$/;"	v	language:PHP
@@ -17361,7 +17326,6 @@ my_datastr_len	.\tools\faisunsql_v40_utf8\faisunsql_files\zipclass.php	/^		$my_d
 my_encrypt	.\application\helpers\auth_helper.php	/^	 function my_encrypt($string=null, $operation) { $/;"	f	language:PHP
 my_encrypt	.\application\libraries\init_page.php	/^	 function my_encrypt($string=null, $operation) { $/;"	f	language:PHP
 my_lang	.\application\hooks\Langclass.php	/^        $my_lang =  $URI->segment(1);  $/;"	v	language:PHP
-my_lang	.\application\hooks\Langclass.php	/^        if ($my_lang=='zh' || $my_lang=='en')  $/;"	v	language:PHP
 myalert	.\application\libraries\init_page.php	/^function myalert($msg){$/;"	f	language:PHP
 mydir	.\application\libraries\init_zip.php	/^$mydir = '';$/;"	v	language:PHP
 mydir	.\tools\unpack.php	/^$mydir = '';$/;"	v	language:PHP
@@ -18563,7 +18527,7 @@ orderField	.\application\libraries\Doctrine\ORM\Tools\SchemaValidator.php	/^    
 orderMap	.\application\libraries\Doctrine\ORM\Tools\Export\Driver\XmlExporter.php	/^        $orderMap = array($/;"	v	language:PHP
 order_by	.\system\database\DB_active_rec.php	/^	public function order_by($orderby, $direction = '')$/;"	f	language:PHP
 order_create	.\application\controllers\front\product.php	/^	function order_create(){$/;"	f	language:PHP
-order_id	.\application\controllers\backend\product.php	/^		$order_id = $this->input->get("order_id");$/;"	v	language:PHP
+order_id	.\application\controllers\backend\product.php	/^		$order_id = $this->input->get_post("order_id");$/;"	v	language:PHP
 order_save	.\application\controllers\front\product.php	/^	function order_save(){	$/;"	f	language:PHP
 orderby	.\application\libraries\Doctrine\DBAL\Platforms\SQLServerPlatform.php	/^                $orderby = stristr($query, 'ORDER BY');$/;"	v	language:PHP
 orderby	.\system\database\DB_active_rec.php	/^			$orderby = $this->_protect_identifiers($orderby);$/;"	v	language:PHP
@@ -19091,22 +19055,21 @@ parentPersister	.\application\libraries\Doctrine\ORM\Persisters\JoinedSubclassPe
 parentStaticReflectionParser	.\application\libraries\Doctrine\Common\Reflection\StaticReflectionParser.php	/^            $this->parentStaticReflectionParser = new static($this->parentClassName, $this->finder);$/;"	v	language:PHP
 parentStaticReflectionParser	.\application\libraries\Doctrine\Common\Reflection\StaticReflectionParser.php	/^    protected $parentStaticReflectionParser;$/;"	v	language:PHP
 parentTableName	.\application\libraries\Doctrine\ORM\Persisters\JoinedSubclassPersister.php	/^            $parentTableName = $parentClass->getTableName();$/;"	v	language:PHP
-parent_cat	.\application\controllers\backend\advs.php	/^		$this->parent_cat = $this->input->get('parent_cat');$/;"	v	language:PHP
+parent_cat	.\application\controllers\backend\advs.php	/^		$this->parent_cat = $this->input->get_post('parent_cat');$/;"	v	language:PHP
 parent_cat	.\application\controllers\backend\category.php	/^	 			$parent_cat  = $this->Category_model->fetch_parent($main['c_sn']);$/;"	v	language:PHP
-parent_cat	.\application\controllers\backend\category.php	/^	 	$parent_cat = $this->input->post('parent_cat');$/;"	v	language:PHP
+parent_cat	.\application\controllers\backend\category.php	/^	 	$parent_cat = $this->input->get_post('parent_cat');$/;"	v	language:PHP
 parent_cat_detail	.\application\controllers\backend\advs.php	/^		$this->parent_cat_detail  =$this->Category_model->detail($this->parent_cat,'c_sn');$/;"	v	language:PHP
-parent_class	.\application\controllers\backend\archives.php	/^			$parent_class = $this->input->get('parent_class');$/;"	v	language:PHP
-parent_class	.\application\controllers\backend\archives.php	/^			$parent_class = $this->input->post('parent_class');$/;"	v	language:PHP
-parent_class	.\application\controllers\backend\archives.php	/^		$parent_class = $this->input->get('parent_class');$/;"	v	language:PHP
-parent_class	.\application\controllers\backend\download.php	/^			$parent_class = $this->input->get('parent_class');		$/;"	v	language:PHP
-parent_class	.\application\controllers\backend\download.php	/^			$parent_class = $this->input->post('parent_class');$/;"	v	language:PHP
-parent_class	.\application\controllers\backend\download.php	/^		$parent_class = $this->input->get('parent_class');$/;"	v	language:PHP
-parent_class	.\application\controllers\backend\friendlink.php	/^		$parent_class = $this->input->get('parent_class');$/;"	v	language:PHP
-parent_class	.\application\controllers\backend\product.php	/^			$parent_class = $this->input->get('parent_class');		$/;"	v	language:PHP
-parent_class	.\application\controllers\backend\product.php	/^			$parent_class = $this->input->post('parent_class');$/;"	v	language:PHP
-parent_class	.\application\controllers\backend\product.php	/^		$parent_class = $this->input->get('parent_class');$/;"	v	language:PHP
+parent_class	.\application\controllers\backend\archives.php	/^			$parent_class = $this->input->get_post('parent_class');$/;"	v	language:PHP
+parent_class	.\application\controllers\backend\archives.php	/^		$parent_class = $this->input->get_post('parent_class');$/;"	v	language:PHP
+parent_class	.\application\controllers\backend\download.php	/^			$parent_class = $this->input->get_post('parent_class');		$/;"	v	language:PHP
+parent_class	.\application\controllers\backend\download.php	/^			$parent_class = $this->input->get_post('parent_class');$/;"	v	language:PHP
+parent_class	.\application\controllers\backend\download.php	/^		$parent_class = $this->input->get_post('parent_class');$/;"	v	language:PHP
+parent_class	.\application\controllers\backend\friendlink.php	/^		$parent_class = $this->input->get_post('parent_class');$/;"	v	language:PHP
+parent_class	.\application\controllers\backend\product.php	/^			$parent_class = $this->input->get_post('parent_class');		$/;"	v	language:PHP
+parent_class	.\application\controllers\backend\product.php	/^			$parent_class = $this->input->get_post('parent_class');$/;"	v	language:PHP
+parent_class	.\application\controllers\backend\product.php	/^		$parent_class = $this->input->get_post('parent_class');$/;"	v	language:PHP
 parent_class	.\application\controllers\front\download.php	/^		$parent_class = $parent_class?$parent_class:'010501';$/;"	v	language:PHP
-parent_class	.\application\controllers\front\download.php	/^		$parent_class = $this->input->get('c_sn');$/;"	v	language:PHP
+parent_class	.\application\controllers\front\download.php	/^		$parent_class = $this->input->get_post('c_sn');$/;"	v	language:PHP
 parent_class_info	.\application\controllers\backend\archives.php	/^			$parent_class_info = $this->Category_model->detail($parent_class,'bysn');$/;"	v	language:PHP
 parent_class_info	.\application\controllers\backend\archives.php	/^		$parent_class_info = $this->Category_model->detail($parent_class,'bysn');$/;"	v	language:PHP
 parent_class_info	.\application\controllers\backend\download.php	/^			$parent_class_info = $this->Category_model->detail($parent_class,'bysn');$/;"	v	language:PHP
@@ -19481,13 +19444,13 @@ php_handling	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_intern
 php_handling	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_security.php	/^    public $php_handling = Smarty::PHP_PASSTHRU;$/;"	v	language:PHP
 php_modifiers	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_security.php	/^    public $php_modifiers = array($/;"	v	language:PHP
 php_self	.\application\helpers\common_helper.php	/^        $php_self     = $_SERVER['PHP_SELF'] ? $_SERVER['PHP_SELF'] : $_SERVER['SCRIPT_NAME'];$/;"	v	language:PHP
-phpinfo	.\application\controllers\test.php	/^	function phpinfo(){	$/;"	f	language:PHP
 pic	.\application\controllers\front\common.php	/^    $pic = $array['p_pic'];$/;"	v	language:PHP
 pickShard	.\application\libraries\Doctrine\DBAL\Sharding\ShardChoser\MultiTenantShardChoser.php	/^    public function pickShard($distributionValue, PoolingShardConnection $conn)$/;"	f	language:PHP
 pickShard	.\application\libraries\Doctrine\DBAL\Sharding\ShardChoser\ShardChoser.php	/^    function pickShard($distributionValue, PoolingShardConnection $conn);$/;"	f	language:PHP
 pid	.\application\controllers\front\common.php	/^    $pid = $pid?$pid:0;$/;"	v	language:PHP
-pid	.\application\controllers\front\common.php	/^    $pid = $this->input->get("pid");$/;"	v	language:PHP
+pid	.\application\controllers\front\common.php	/^    $pid = $this->input->get_post("pid");$/;"	v	language:PHP
 pid	.\application\controllers\front\product.php	/^		$pid = $pid?$pid:2;$/;"	v	language:PHP
+pid	.\application\controllers\front\product.php	/^		$pid = $this->input->get_post('pid');$/;"	v	language:PHP
 pid	.\application\controllers\front\product.php	/^		$pid = $this->uri->segment(3);$/;"	v	language:PHP
 pid	.\application\libraries\init_tree.php	/^        $pid = $this->arr[$myid]['parentid'];       $/;"	v	language:PHP
 pid	.\application\libraries\init_tree.php	/^        $pid = $this->arr[$myid]['parentid'];$/;"	v	language:PHP
@@ -19693,7 +19656,7 @@ position	.\application\libraries\Doctrine\ORM\Query\Parser.php	/^    public func
 position	.\system\helpers\text_helper.php	/^		$position = ($position > 1) ? 1 : $position;$/;"	v	language:PHP
 position	.\system\helpers\text_helper.php	/^	function ellipsize($str, $max_length, $position = 1, $ellipsis = '&hellip;')$/;"	v	language:PHP
 possibleAliases	.\application\libraries\Doctrine\ORM\Tools\Pagination\LimitSubqueryOutputWalker.php	/^                $possibleAliases = array_keys($this->rsm->fieldMappings, $item->expression->field);$/;"	v	language:PHP
-post	.\application\controllers\backend\admins.php	/^	 		$post  = $this->input->post('main');$/;"	v	language:PHP
+post	.\application\controllers\backend\admins.php	/^	 		$post  = $this->input->get_post('main');$/;"	v	language:PHP
 post	.\application\controllers\backend\system_manage.php	/^	    $post = $this->input->post();$/;"	v	language:PHP
 post	.\application\libraries\curl.php	/^	public function post($params = array(), $options = array())$/;"	f	language:PHP
 post	.\application\models\alipay_model.php	/^            $post = $this->para_filter($_POST); \/\/对所有POST返回的参数去空$/;"	v	language:PHP
@@ -19710,8 +19673,8 @@ postSeparator	.\application\libraries\Doctrine\ORM\Query\Expr\GroupBy.php	/^    
 postSeparator	.\application\libraries\Doctrine\ORM\Query\Expr\Literal.php	/^    protected $postSeparator = '';$/;"	v	language:PHP
 postSeparator	.\application\libraries\Doctrine\ORM\Query\Expr\OrderBy.php	/^    protected $postSeparator = '';$/;"	v	language:PHP
 postSeparator	.\application\libraries\Doctrine\ORM\Query\Expr\Select.php	/^    protected $postSeparator = '';$/;"	v	language:PHP
-post_detail	.\application\controllers\backend\modules.php	/^		$post_detail = $this->input->post('detail');$/;"	v	language:PHP
-post_main	.\application\controllers\backend\modules.php	/^		$post_main = $this->input->post('main');$/;"	v	language:PHP
+post_detail	.\application\controllers\backend\modules.php	/^		$post_detail = $this->input->get_post('detail');$/;"	v	language:PHP
+post_main	.\application\controllers\backend\modules.php	/^		$post_main = $this->input->get_post('main');$/;"	v	language:PHP
 post_path	.\swfupload\upload.php	/^	$post_path = $_POST['save_path'];$/;"	v	language:PHP
 post_ref	.\system\libraries\Form_validation.php	/^							$post_ref =& $post_ref[$val];$/;"	v	language:PHP
 post_ref	.\system\libraries\Form_validation.php	/^						$post_ref = $array;$/;"	v	language:PHP
@@ -19725,7 +19688,8 @@ postdata	.\system\libraries\Form_validation.php	/^	protected function _execute($
 posted	.\ckfinder\core\connector\php\php5\Utils\Misc.php	/^     * function posted by e dot a dot schultz at gmail dot com$/;"	f	language:PHP
 postfix	.\application\libraries\Doctrine\Common\Reflection\StaticReflectionParser.php	/^                                $postfix = '';$/;"	v	language:PHP
 postfix	.\application\libraries\Doctrine\Common\Reflection\StaticReflectionParser.php	/^                                $postfix = substr($this->parentClassName, $nsPos);$/;"	v	language:PHP
-posts	.\application\controllers\front\vote.php	/^		$posts = $this->input->post('vd_item');$/;"	v	language:PHP
+posts	.\application\controllers\front\vote.php	/^		$posts = $this->input->get_post('vd_item');$/;"	v	language:PHP
+posts	.\application\libraries\init_form.php	/^		$posts = $CI->input->post();$/;"	v	language:PHP
 postvars_function	.\tools\faisunsql_v40_utf8\index.php	/^function postvars_function(){$/;"	f	language:PHP
 potentialAssociationMappingIndexes	.\application\libraries\Doctrine\ORM\Tools\Export\Driver\PhpExporter.php	/^                $potentialAssociationMappingIndexes = array($/;"	v	language:PHP
 ppath	.\system\libraries\Trackback.php	/^		$ppath = ( ! isset($target['path'])) ? $url : $target['path'];$/;"	v	language:PHP
@@ -19893,7 +19857,7 @@ priority	.\system\libraries\Email.php	/^			$this->priority = 3;$/;"	v	language:P
 priority	.\system\libraries\Email.php	/^		$this->priority = $n;$/;"	v	language:PHP
 priority	.\system\libraries\Email.php	/^	var	$priority		= "3";		\/\/ Default priority (1 - 5)$/;"	v	language:PHP
 pro_all	.\application\controllers\backend\download.php	/^		$pro_all = implode(',',(array)array_re_index($data['list'],'pro_id','pro_id'));$/;"	v	language:PHP
-pro_id	.\application\controllers\backend\product.php	/^		$pro_id = $this->input->get('pro_id');$/;"	v	language:PHP
+pro_id	.\application\controllers\backend\product.php	/^		$pro_id = $this->input->get_post('pro_id');$/;"	v	language:PHP
 pro_list	.\application\controllers\backend\download.php	/^			$pro_list = $this->db->query("select pro_title,pro_id from ".$this->init_db->table('products')." where pro_id in(".$pro_all.")")->result_array();$/;"	v	language:PHP
 pro_name_all	.\application\controllers\backend\download.php	/^			$pro_name_all = array_re_index($pro_list,'pro_id','pro_title');$/;"	v	language:PHP
 pro_options	.\application\controllers\backend\download.php	/^		$pro_options  = $this->Product_model->product_select();			$/;"	v	language:PHP
@@ -20073,7 +20037,7 @@ qqs	.\application\libraries\online.php	/^		$qqs = explode(',', $cfg['contact']['
 qs	.\ckfinder\core\ckfinder_php5.php	/^		$qs = "" ;$/;"	v	language:PHP
 qs	.\ckfinder\core\ckfinder_php5.php	/^		$qs = ( strpos($url, "?") !== false ) ? "&" : "?" ;$/;"	v	language:PHP
 qty	.\application\controllers\front\product.php	/^				$qty = $v['qty']?$v['qty']:0;$/;"	v	language:PHP
-qty	.\application\controllers\front\product.php	/^		$qty = $this->input->post('qty');	$/;"	v	language:PHP
+qty	.\application\controllers\front\product.php	/^		$qty = $this->input->get_post('qty');	$/;"	v	language:PHP
 quality	.\charts\ExportHandlers\PHP\FCExporter.php	/^ *		d) a function - exportOutput ( $exportObj, $exportSettings, $quality=1 ) $/;"	v	language:PHP
 quality	.\charts\ExportHandlers\PHP\Resources\FCExporter_IMG.php	/^ *		d) a function - exportOutput ( $exportObj, $exportSettings, $quality=1 ) $/;"	v	language:PHP
 quality	.\charts\ExportHandlers\PHP\Resources\FCExporter_IMG.php	/^function exportOutput ( $exportObj, $exportSettings , $quality = 1 )$/;"	v	language:PHP
@@ -20088,9 +20052,9 @@ quality	.\system\libraries\Image_lib.php	/^	var $quality			= '90';$/;"	v	languag
 queries	.\application\libraries\Doctrine\DBAL\Logging\DebugStack.php	/^    public $queries = array();$/;"	v	language:PHP
 queries	.\application\libraries\Doctrine\DBAL\Schema\AbstractSchemaManager.php	/^        $queries = $this->_platform->getAlterTableSQL($tableDiff);$/;"	v	language:PHP
 queries	.\system\database\DB_driver.php	/^	var $queries		= array();$/;"	v	language:PHP
-query	.\application\controllers\backend\mdata.php	/^		$query  = $this->input->get();$/;"	v	language:PHP
+query	.\application\controllers\backend\mdata.php	/^		$query  = $this->init_form->get_post();$/;"	v	language:PHP
 query	.\application\controllers\backend\system_manage.php	/^ 		$query = $this->db->query($sql);$/;"	v	language:PHP
-query	.\application\controllers\front\search.php	/^		$query = $this->db->query("CALL  proc_all('".$this->input->get("title")."','".$module_slt."','".(int)$this->input->get('per_page')."',".$page_size.")");  $/;"	v	language:PHP
+query	.\application\controllers\front\search.php	/^		$query = $this->db->query("CALL  proc_all('".$this->input->get_post("title")."','".$module_slt."','".(int)$this->input->get_post('per_page')."',".$page_size.")");  $/;"	v	language:PHP
 query	.\application\libraries\Doctrine\DBAL\Connection.php	/^        $query = 'DELETE FROM ' . $tableName . ' WHERE ' . implode(' AND ', $criteria);$/;"	v	language:PHP
 query	.\application\libraries\Doctrine\DBAL\Connection.php	/^        $query = 'INSERT INTO ' . $tableName$/;"	v	language:PHP
 query	.\application\libraries\Doctrine\DBAL\Connection.php	/^    public function query()$/;"	f	language:PHP
@@ -20149,7 +20113,7 @@ query	.\application\models\tree_model.php	/^			$query = $this->db->query($sql);$
 query	.\application\models\tree_model.php	/^    		$query = $this->db->query($sql);$/;"	v	language:PHP
 query	.\install\index_2.php	/^	$query = mysql_query('show tables from '.CFG_DB_NAME,$connect); $/;"	v	language:PHP
 query	.\install\index_3.php	/^$query  = file_get_contents(DB_FILE);$/;"	v	language:PHP
-query	.\install\index_3.php	/^$query  = preg_replace("\/mysys_\/",CFG_DB_PREFIX,$query);	$/;"	v	language:PHP
+query	.\install\index_3.php	/^$query  = preg_replace("\/corcms_\/",CFG_DB_PREFIX,$query);	$/;"	v	language:PHP
 query	.\install\libs\phpMyImporter.php	/^				$query = @mysql_query($importSql, $this->connection);$/;"	v	language:PHP
 query	.\swfupload\libs\db_access.class.php	/^			$query = $this->conn->Execute($sql);$/;"	v	language:PHP
 query	.\swfupload\libs\db_access.class.php	/^	function query($sql, $type = '', $expires = 3600, $dbname = '')$/;"	f	language:PHP
@@ -20219,7 +20183,7 @@ queryParts	.\application\libraries\Doctrine\DBAL\Platforms\DrizzlePlatform.php	/
 queryParts	.\application\libraries\Doctrine\DBAL\Platforms\MySqlPlatform.php	/^        $queryParts = array();$/;"	v	language:PHP
 queryParts	.\application\libraries\Doctrine\DBAL\Platforms\SQLServerPlatform.php	/^        $queryParts = array();$/;"	v	language:PHP
 query_count	.\system\database\DB_driver.php	/^	var $query_count	= 0;$/;"	v	language:PHP
-query_pro_id	.\application\controllers\backend\download.php	/^		$query_pro_id = $this->input->get('pro_id');$/;"	v	language:PHP
+query_pro_id	.\application\controllers\backend\download.php	/^		$query_pro_id = $this->input->get_post('pro_id');$/;"	v	language:PHP
 query_string_segment	.\system\libraries\Pagination.php	/^	var $query_string_segment = 'per_page';$/;"	v	language:PHP
 query_times	.\system\database\DB_driver.php	/^	var $query_times	= array();$/;"	v	language:PHP
 query_timestamp	.\application\models\alipay_model.php	/^    function query_timestamp($partner) {$/;"	f	language:PHP
@@ -20294,6 +20258,10 @@ r	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_template
 r	.\application\libraries\init_auth.php	/^				    	$r = '$righs['.$a.']';$/;"	v	language:PHP
 r	.\application\libraries\init_auth.php	/^	    				$r = '$righs['.str_replace(',','][detail][',$a).']';$/;"	v	language:PHP
 r	.\application\libraries\init_db.php	/^ 		$r =  array($/;"	v	language:PHP
+r	.\application\libraries\init_form.php	/^			$r =  array_merge($gets,$posts);$/;"	v	language:PHP
+r	.\application\libraries\init_form.php	/^			$r = $gets;$/;"	v	language:PHP
+r	.\application\libraries\init_form.php	/^			$r = $posts;$/;"	v	language:PHP
+r	.\application\libraries\init_form.php	/^		$r = $gets  = $posts = array();$/;"	v	language:PHP
 r	.\application\libraries\init_tree.php	/^        $r =   $this->arr[$id];$/;"	v	language:PHP
 r	.\application\libraries\tpl.php	/^	$r =  $CI->Common_model->get_nav($tb,$id,$title_field,$where);$/;"	v	language:PHP
 r	.\application\libraries\tpl.php	/^ 	$r = $CI->Common_model->tag($parameter);$/;"	v	language:PHP
@@ -21184,8 +21152,8 @@ root_path	.\application\controllers\backend\download.php	/^			 $root_path = $fil
 root_path	.\application\controllers\backend\friendlink.php	/^			 $root_path = $file_config['upload_path'].'\/';$/;"	v	language:PHP
 root_path	.\application\controllers\backend\product.php	/^			 $root_path = $file_config['upload_path'].'\/';$/;"	v	language:PHP
 root_path	.\application\controllers\backend\templates.php	/^          $root_path = $root_path ? $root_path:$init_path;$/;"	v	language:PHP
-root_path	.\application\controllers\backend\templates.php	/^          $root_path = $root_path ? $root_path:my_encrypt($this->input->get('root_path'),'DECODE');$/;"	v	language:PHP
-root_path	.\application\controllers\backend\templates.php	/^          $root_path = my_encrypt($this->uri->segment(4),'DECODE');$/;"	v	language:PHP
+root_path	.\application\controllers\backend\templates.php	/^          $root_path = $root_path ? $root_path:my_encrypt($this->input->get_post('root_path'),'DECODE');$/;"	v	language:PHP
+root_path	.\application\controllers\backend\templates.php	/^          $root_path = my_encrypt($this->input->get_post('path'),'DECODE');$/;"	v	language:PHP
 root_path	.\application\controllers\backend\templates.php	/^          $root_path = realpath($root_path); $/;"	v	language:PHP
 root_path	.\application\controllers\front\engage.php	/^			 $root_path = $file_config['upload_path'].'\/';$/;"	v	language:PHP
 root_path	.\system\libraries\Zip.php	/^			$root_path = dirname($path).'\/';$/;"	v	language:PHP
@@ -21268,18 +21236,18 @@ rows	.\system\libraries\Table.php	/^		$this->rows				= array();$/;"	v	language:P
 rows	.\system\libraries\Table.php	/^	var $rows				= array();$/;"	v	language:PHP
 rr	.\charts\ExportHandlers\PHP\Resources\FCExporter_IMG.php	/^		$rr = hexdec(substr($strHexColor, 0, 2));$/;"	v	language:PHP
 rs	.\application\controllers\backend\admins.php	/^	 			$rs = $this->init_db->save(array('main'=>$main),$db_config);		$/;"	v	language:PHP
-rs	.\application\controllers\backend\admins.php	/^ 			$rs = $this->init_db->delete($this->uri->segment(4),$this->im->db_config());$/;"	v	language:PHP
+rs	.\application\controllers\backend\admins.php	/^ 			$rs = $this->init_db->delete($this->input->get_post('admin_id'),$this->im->db_config());$/;"	v	language:PHP
 rs	.\application\controllers\backend\advs.php	/^		 		$rs = $this->init_db->save($data,$this->im->db_config());$/;"	v	language:PHP
-rs	.\application\controllers\backend\common.php	/^ 		$rs = $this->db->get_where('invoke',array('i_url'=>urldecode($this->input->post('i_url'))))->first_row();$/;"	v	language:PHP
-rs	.\application\controllers\backend\common.php	/^ 		$rs = $this->db->get_where('module_images',"i_url like '%".urldecode($this->input->post('i_url'))."'")->first_row();$/;"	v	language:PHP
+rs	.\application\controllers\backend\common.php	/^ 		$rs = $this->db->get_where('invoke',array('i_url'=>urldecode($this->input->get_post('i_url'))))->first_row();$/;"	v	language:PHP
+rs	.\application\controllers\backend\common.php	/^ 		$rs = $this->db->get_where('module_images',"i_url like '%".urldecode($this->input->get_post('i_url'))."'")->first_row();$/;"	v	language:PHP
 rs	.\application\controllers\backend\fields.php	/^				$rs = $this->init_db->save($data,$this->im->save_config());$/;"	v	language:PHP
 rs	.\application\controllers\backend\fields.php	/^			$rs = $this->init_db->delete($f_id,$this->im->save_config());$/;"	v	language:PHP
-rs	.\application\controllers\backend\login.php	/^		$rs = $this->db->select('admin_pass',false)->from('admins')->where('admin_user',$this->input->get('lock_user'))->get()->first_row('array');$/;"	v	language:PHP
+rs	.\application\controllers\backend\login.php	/^		$rs = $this->db->select('admin_pass',false)->from('admins')->where('admin_user',$this->input->get_post('lock_user'))->get()->first_row('array');$/;"	v	language:PHP
 rs	.\application\controllers\backend\mdata.php	/^				$rs = $this->init_db->save($data,$this->im->save_config());$/;"	v	language:PHP
 rs	.\application\controllers\backend\mdata.php	/^			$rs = $this->init_db->delete($ids,$cfg);$/;"	v	language:PHP
 rs	.\application\controllers\backend\modules.php	/^				$rs = $this->init_db->save($data,$this->im->save_config());$/;"	v	language:PHP
 rs	.\application\controllers\backend\modules.php	/^			$rs = $this->init_db->delete($m_id,$this->im->save_config());$/;"	v	language:PHP
-rs	.\application\controllers\backend\roles.php	/^ 			$rs = $this->init_db->delete($this->uri->segment(4),$this->im->db_config());$/;"	v	language:PHP
+rs	.\application\controllers\backend\roles.php	/^ 			$rs = $this->init_db->delete($this->input->get_post('role_id'),$this->im->db_config());$/;"	v	language:PHP
 rs	.\application\controllers\backend\system_manage.php	/^			   $rs = preg_replace("\/$testrule\/$testmode",$rpvalue,$testtext);$/;"	v	language:PHP
 rs	.\application\controllers\front\member.php	/^ 		$rs = $this->db->get()->first_row('array');$/;"	v	language:PHP
 rs	.\application\libraries\Doctrine.php	/^	$rs = $em->getRepository('Entity\\User')$/;"	v	language:PHP
@@ -21564,9 +21532,10 @@ search	.\application\libraries\Smarty-3.1.14\libs\plugins\modifier.regex_replace
 searchName	.\application\libraries\Doctrine\Symfony\Component\Console\Application.php	/^            $searchName = $namespace.substr($name, $pos);$/;"	v	language:PHP
 searchName	.\application\libraries\Doctrine\Symfony\Component\Console\Application.php	/^        $searchName = $name;$/;"	v	language:PHP
 searchPaths	.\application\libraries\Doctrine\DBAL\Schema\AbstractSchemaManager.php	/^        $searchPaths = $this->getSchemaSearchPaths();$/;"	v	language:PHP
-search_class	.\application\controllers\backend\archives.php	/^		$search_class = $this->input->get('search_class');$/;"	v	language:PHP
-search_class	.\application\controllers\backend\download.php	/^		$search_class = $this->input->get('search_class');$/;"	v	language:PHP
-search_class	.\application\controllers\backend\product.php	/^		$search_class = $this->input->get('search_class');$/;"	v	language:PHP
+search_class	.\application\controllers\backend\archives.php	/^		$search_class = $this->input->get_post('search_class');$/;"	v	language:PHP
+search_class	.\application\controllers\backend\download.php	/^		$search_class = $this->input->get_post('search_class');$/;"	v	language:PHP
+search_class	.\application\controllers\backend\product.php	/^		$search_class = $this->input->get_post('search_class');$/;"	v	language:PHP
+search_name	.\application\controllers\backend\tree.php	/^		$search_name = $this->input->get_post('name');$/;"	v	language:PHP
 search_parents	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_internal_data.php	/^    public function getConfigVars($varname = null, $search_parents = true)$/;"	v	language:PHP
 sec	.\application\models\common_model.php	/^		$sec = $date_array["seconds"];$/;"	v	language:PHP
 sec	.\system\helpers\date_helper.php	/^			$sec  = (strlen($ex['2']) == 1) ? '0'.$ex['2'] : $ex['2'];$/;"	v	language:PHP
@@ -22295,8 +22264,6 @@ should	.\system\core\Security.php	/^	 * Note: This function should only be used 
 should	.\system\libraries\Security.php	/^	 * Note: This function should only be used to deal with data$/;"	f	language:PHP
 show	.\system\libraries\Javascript.php	/^	function show($element = 'this', $speed = '', $callback = '')$/;"	f	language:PHP
 showPercent	.\install\libs\phpMyImporter.php	/^	function showPercent($percent){$/;"	f	language:PHP
-showRequest	.\application\compiles\1b110be4c3b72712b4c28e8e42173259235a6d63.file.ajax_upload_image.htm.php	/^function showRequest(formData, jqForm, options) { $/;"	f	language:PHP
-showResponse	.\application\compiles\1b110be4c3b72712b4c28e8e42173259235a6d63.file.ajax_upload_image.htm.php	/^function showResponse(responseText, statusText, xhr, $form)  { $/;"	f	language:PHP
 show_404	.\system\core\Common.php	/^	function show_404($page = '', $log_error = TRUE)$/;"	f	language:PHP
 show_404	.\system\core\Exceptions.php	/^	function show_404($page = '', $log_error = TRUE)$/;"	f	language:PHP
 show_archives	.\application\controllers\front\download.php	/^	function show_archives(){$/;"	f	language:PHP
@@ -22665,7 +22632,6 @@ speed	.\system\libraries\javascript\Jquery.php	/^	function _slideToggle($element
 speed	.\system\libraries\javascript\Jquery.php	/^	function _slideUp($element = 'this', $speed = '', $callback = '')$/;"	v	language:PHP
 split	.\application\libraries\init_form.php	/^				$split=',';$/;"	v	language:PHP
 split	.\application\libraries\init_form.php	/^		$split = '';$/;"	v	language:PHP
-split	.\application\libraries\init_page.php	/^		$split ='&';$/;"	v	language:PHP
 split	.\system\helpers\date_helper.php	/^		$split = explode(' ', $datestr);$/;"	v	language:PHP
 splitFederation	.\application\libraries\Doctrine\DBAL\Sharding\SQLAzure\SQLAzureShardManager.php	/^    public function splitFederation($splitDistributionValue)$/;"	f	language:PHP
 split_str	.\application\libraries\init_cache.php	/^ 		$split_str = ''; 		$/;"	v	language:PHP
@@ -22674,7 +22640,7 @@ spoof	.\system\core\Input.php	/^						$spoof = FALSE;$/;"	v	language:PHP
 spoof	.\system\core\Input.php	/^						$spoof = explode(',', $spoof, 2);$/;"	v	language:PHP
 sq	.\application\libraries\init_db.php	/^		$sq = $CI->db->_compile_select();	$/;"	v	language:PHP
 sq	.\application\libraries\init_db.php	/^ 		$sq = $this->get_list_sq();$/;"	v	language:PHP
-sq	.\application\models\archives_model.php	/^		$sq = "SELECT (SELECT b.c_sn   FROM mysys_category  AS b  WHERE   a.info_class_sn   LIKE  CONCAT(b.c_sn,'%') ORDER BY b.c_sn ASC LIMIT 1)  AS  parent_sn  FROM mysys_infos AS a WHERE a.info_id=?";$/;"	v	language:PHP
+sq	.\application\models\archives_model.php	/^		$sq = "SELECT (SELECT b.c_sn   FROM ".$this->db->dbprefix."category  AS b  WHERE   a.info_class_sn   LIKE  CONCAT(b.c_sn,'%') ORDER BY b.c_sn ASC LIMIT 1)  AS  parent_sn  FROM  ".$this->db->dbprefix."infos AS a WHERE a.info_id=?";$/;"	v	language:PHP
 sq	.\application\models\archives_model.php	/^		$sq = <<<EOT$/;"	v	language:PHP
 sq	.\application\models\common_model.php	/^		$sq = <<<EOT$/;"	v	language:PHP
 sq	.\application\models\modules_model.php	/^		$sq = array();$/;"	v	language:PHP
@@ -22683,7 +22649,7 @@ sql	.\application\controllers\backend\category.php	/^		 			$sql = "update ".$thi
 sql	.\application\controllers\backend\menu.php	/^			 		$sql = "update ".$this->init_db->table('system_rights')." set r_code = replace(r_code,'$r_code_old','$r_code_new') where r_code like '".$r_code_old."_%'";$/;"	v	language:PHP
 sql	.\application\controllers\backend\menu.php	/^			 		$sql = 'select  r_code  from  '.$this->init_db->table('system_rights','r_code').' where r_id=?';$/;"	v	language:PHP
 sql	.\application\controllers\backend\system_manage.php	/^ 		$sql = $this->init_db->adjust_sql_str($sql);$/;"	v	language:PHP
-sql	.\application\controllers\backend\system_manage.php	/^ 		$sql = $this->input->post("sql");$/;"	v	language:PHP
+sql	.\application\controllers\backend\system_manage.php	/^ 		$sql = $this->input->get_post("sql");$/;"	v	language:PHP
 sql	.\application\controllers\front\detail.php	/^ 		$sql =		"select info_id,info_title,'上一篇' as type  from (select info_id,info_title from ".$this->init_db->table('infos') ." where info_class_sn like '010702%' and info_id>".$about['info_id']." order by info_id asc limit 1) as b  $/;"	v	language:PHP
 sql	.\application\libraries\Doctrine\DBAL\Connection.php	/^        $sql  = 'UPDATE ' . $tableName . ' SET ' . implode(', ', $set)$/;"	v	language:PHP
 sql	.\application\libraries\Doctrine\DBAL\Driver\IBMDB2\DB2Connection.php	/^        $sql = $args[0];$/;"	v	language:PHP
@@ -23129,7 +23095,7 @@ staticReflectionParser	.\application\libraries\Doctrine\Common\Reflection\Static
 staticReflectionParser	.\application\libraries\Doctrine\Common\Reflection\StaticReflectionProperty.php	/^    protected $staticReflectionParser;$/;"	v	language:PHP
 static_classes	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_security.php	/^    public $static_classes = array();$/;"	v	language:PHP
 stats	.\application\controllers\front\alipay.php	/^        $stats = $this->db->select('sum(1) as p_stat,sum(p_qty*p_price ) as sub',false)->from('order_detail')->where('order_id',$this->uri->segment(3))->get()->first_row('array');$/;"	v	language:PHP
-stats	.\application\controllers\front\member.php	/^	 	$stats = $this->db->select('sum(1) as p_stat,sum(p_qty*p_price ) as sub',false)->from('order_detail')->where('order_id',$this->uri->segment(4))->get()->first_row('array');$/;"	v	language:PHP
+stats	.\application\controllers\front\member.php	/^	 	$stats = $this->db->select('sum(1) as p_stat,sum(p_qty*p_price ) as sub',false)->from('order_detail')->where('order_id',$this->input->get_post('order_id'))->get()->first_row('array');$/;"	v	language:PHP
 stats	.\application\controllers\front\member.php	/^	 	$stats = array_re_index($this->db->select('sum(1) as p_stat,sum(p_qty*p_price ) as sub,order_id',false)->from('order_detail')->group_by('order_id')->get()->result_array(),'order_id');$/;"	v	language:PHP
 stats	.\application\libraries\Doctrine\Common\Cache\MemcacheCache.php	/^        $stats = $this->memcache->getStats();$/;"	v	language:PHP
 stats	.\application\libraries\Doctrine\Common\Cache\MemcachedCache.php	/^        $stats   = $stats[$key];$/;"	v	language:PHP
@@ -23607,7 +23573,7 @@ sub_table	.\application\models\modules_model.php	/^		$sub_table = $this->main($r
 subclass	.\system\core\Loader.php	/^			$subclass = APPPATH.'libraries\/'.$subdir.config_item('subclass_prefix').$class.'.php';$/;"	v	language:PHP
 subdir	.\system\core\Loader.php	/^			$subdir = substr($class, 0, $last_slash + 1);$/;"	v	language:PHP
 subdir	.\system\core\Loader.php	/^		$subdir = '';$/;"	v	language:PHP
-subject	.\application\controllers\front\alipay.php	/^        $subject = $this->input->post('subject', TRUE); \/\/ 订单名称，显示在支付宝收银台里的“商品名称”里，显示在支付宝的交易管理的“商品名称”的列表里。$/;"	v	language:PHP
+subject	.\application\controllers\front\alipay.php	/^        $subject = $this->input->get_post('subject', TRUE); \/\/ 订单名称，显示在支付宝收银台里的“商品名称”里，显示在支付宝的交易管理的“商品名称”的列表里。$/;"	v	language:PHP
 subject	.\application\libraries\Doctrine\Symfony\Component\Yaml\Inline.php	/^        $subject = substr($scalar, $i);$/;"	v	language:PHP
 subject	.\application\libraries\Doctrine\Symfony\Component\Yaml\Inline.php	/^        $subject = substr($subject, 0, strlen($items[0]) + 1);$/;"	v	language:PHP
 subject	.\application\libraries\Smarty-3.1.14\libs\plugins\shared.mb_str_replace.php	/^                    $subject = smarty_mb_str_replace($string, $replace, $subject, $c);$/;"	v	language:PHP
@@ -23798,7 +23764,7 @@ t	.\tools\UenuProbe\uenu.php	/^            $t = 1+1;$/;"	v	language:PHP
 t	.\tools\UenuProbe\uenu.php	/^        $t = pi();$/;"	v	language:PHP
 t_db_fields	.\application\models\modules_model.php	/^		$t_db_fields = array_keys(array_re_index($info['detail'],'r_name','r_name'));$/;"	v	language:PHP
 t_db_name	.\application\models\modules_model.php	/^		$t_db_name = $info['main']['m_tb'];$/;"	v	language:PHP
-t_file	.\application\controllers\backend\templates.php	/^           $t_file = my_encrypt($this->uri->segment(4),'DECODE');$/;"	v	language:PHP
+t_file	.\application\controllers\backend\templates.php	/^           $t_file = my_encrypt($this->input->get_post('path'),'DECODE');$/;"	v	language:PHP
 t_height	.\tools\ajax_form\up.php	/^            $t_height = ($t_width \/ $src_info[0]) * $src_info[1];$/;"	v	language:PHP
 t_height	.\tools\ajax_form\up.php	/^        $t_height = $this->thumb_height;$/;"	v	language:PHP
 t_height	.\up.php	/^            $t_height = ($t_width \/ $src_info[0]) * $src_info[1];$/;"	v	language:PHP
@@ -23806,7 +23772,7 @@ t_height	.\up.php	/^        $t_height = $this->thumb_height;$/;"	v	language:PHP
 t_id	.\application\controllers\backend\mdata.php	/^		$t_id = $this->Templates_model->detail_by_mid($module_id,'t_id');$/;"	v	language:PHP
 t_id	.\application\models\modules_model.php	/^		$t_id = $t['t_id'];$/;"	v	language:PHP
 t_mid	.\application\models\modules_model.php	/^		$t_mid = $info['main']['m_id'];$/;"	v	language:PHP
-t_name	.\application\controllers\backend\templates.php	/^          $t_name = $this->input->get('t_name');$/;"	v	language:PHP
+t_name	.\application\controllers\backend\templates.php	/^          $t_name = $this->input->get_post('t_name');$/;"	v	language:PHP
 t_name	.\application\models\modules_model.php	/^		$t_name = $info['main']['m_name'];$/;"	v	language:PHP
 t_types	.\application\controllers\backend\templates.php	/^	       			$t_types = $this->init_cache->cache_fetch('template_types');$/;"	v	language:PHP
 t_types	.\application\controllers\backend\templates.php	/^         $t_types = $this->init_cache->cache_fetch('template_types');$/;"	v	language:PHP
@@ -24191,7 +24157,7 @@ template_sha1	.\application\libraries\Smarty-3.1.14\libs\sysplugins\smarty_inter
 tenantColumnName	.\application\libraries\Doctrine\DBAL\Sharding\SQLAzure\Schema\MultiTenantVisitor.php	/^        $this->tenantColumnName = $tenantColumnName;$/;"	v	language:PHP
 tenantColumnName	.\application\libraries\Doctrine\DBAL\Sharding\SQLAzure\Schema\MultiTenantVisitor.php	/^    private $tenantColumnName;$/;"	v	language:PHP
 tenantColumnType	.\application\libraries\Doctrine\DBAL\Sharding\SQLAzure\Schema\MultiTenantVisitor.php	/^    private $tenantColumnType = 'integer';$/;"	v	language:PHP
-term	.\application\controllers\backend\common.php	/^		$term = $this->input->get('term');$/;"	v	language:PHP
+term	.\application\controllers\backend\common.php	/^		$term = $this->input->get_post('term');$/;"	v	language:PHP
 terms	.\application\libraries\Doctrine\ORM\Query\Parser.php	/^        $terms = array();$/;"	v	language:PHP
 test	.\application\controllers\backend\login.php	/^ 	function test(){$/;"	f	language:PHP
 test	.\application\libraries\Doctrine\Symfony\Component\Yaml\Tests\DumperTest.php	/^                $test = $this->parser->parse($yaml);$/;"	v	language:PHP
@@ -24821,7 +24787,7 @@ total	.\system\libraries\Typography.php	/^		for ($i = 0, $total = count($html_co
 total_chunks	.\system\libraries\Typography.php	/^		$total_chunks = count($chunks);$/;"	v	language:PHP
 total_days	.\system\libraries\Calendar.php	/^		$total_days = $this->get_total_days($month, $year);$/;"	v	language:PHP
 total_errors	.\system\libraries\Form_validation.php	/^		$total_errors = count($this->_error_array);$/;"	v	language:PHP
-total_fee	.\application\controllers\front\alipay.php	/^        $total_fee = $this->input->post('total_fee', TRUE); \/\/ 订单总金额，显示在支付宝收银台里的“应付总额”里，可以有两位小数。$/;"	v	language:PHP
+total_fee	.\application\controllers\front\alipay.php	/^        $total_fee = $this->input->get_post('total_fee', TRUE); \/\/ 订单总金额，显示在支付宝收银台里的“应付总额”里，可以有两位小数。$/;"	v	language:PHP
 total_fee	.\tools\alipay\alipayapi.php	/^        $total_fee = $_POST['WIDtotal_fee'];$/;"	v	language:PHP
 total_files	.\application\libraries\init_zip.php	/^var $total_files = 0;$/;"	v	language:PHP
 total_files	.\tools\unpack.php	/^var $total_files = 0;$/;"	v	language:PHP
@@ -25405,6 +25371,7 @@ uri	.\system\libraries\Form_validation.php	/^			$uri = ($group == '') ? trim($th
 uri_page_number	.\application\libraries\MY_Pagination.php	/^		$uri_page_number = $this->cur_page;$/;"	v	language:PHP
 uri_page_number	.\system\libraries\Pagination.php	/^		$uri_page_number = $this->cur_page;$/;"	v	language:PHP
 uri_segment	.\system\libraries\Pagination.php	/^	var $uri_segment		= 3;$/;"	v	language:PHP
+uri_str	.\application\core\MY_Config.php	/^                 $uri_str = http_build_query($u);$/;"	v	language:PHP
 uri_string	.\system\core\URI.php	/^			$this->uri_string = '';$/;"	v	language:PHP
 uri_string	.\system\core\URI.php	/^			$this->uri_string = preg_replace("|".preg_quote($this->config->item('url_suffix'))."$|", "", $this->uri_string);$/;"	v	language:PHP
 uri_string	.\system\core\URI.php	/^		$this->uri_string = ($str == '\/') ? '' : $str;$/;"	v	language:PHP
@@ -25412,9 +25379,9 @@ uri_string	.\system\core\URI.php	/^	function uri_string()$/;"	f	language:PHP
 uri_string	.\system\core\URI.php	/^	var $uri_string;$/;"	v	language:PHP
 uri_string	.\system\helpers\url_helper.php	/^	function uri_string()$/;"	f	language:PHP
 uri_to_assoc	.\system\core\URI.php	/^	function uri_to_assoc($n = 3, $default = array())$/;"	f	language:PHP
-url	.\application\controllers\backend\common.php	/^		$url = $this->input->get("url");	$/;"	v	language:PHP
+url	.\application\controllers\backend\common.php	/^		$url = $this->input->get_post("url");	$/;"	v	language:PHP
 url	.\application\controllers\backend\common.php	/^		$url = $url?$url:$_SERVER['HTTP_REFERER'];	$/;"	v	language:PHP
-url	.\application\controllers\backend\common.php	/^ 		$url = urldecode($this->input->post('url'));$/;"	v	language:PHP
+url	.\application\controllers\backend\common.php	/^ 		$url = urldecode($this->input->get_post('url'));$/;"	v	language:PHP
 url	.\application\controllers\front\alipay.php	/^        $url = $this->Alipay_Model->create_url($parameter);$/;"	v	language:PHP
 url	.\application\libraries\curl.php	/^			$url = 'ftp:\/\/' . $url;$/;"	v	language:PHP
 url	.\application\libraries\curl.php	/^			$url = site_url($url);$/;"	v	language:PHP
@@ -25422,8 +25389,8 @@ url	.\application\libraries\curl.php	/^			$url = str_replace(':\/\/', ':\/\/' . 
 url	.\application\libraries\curl.php	/^		$this->url = $url;$/;"	v	language:PHP
 url	.\application\libraries\curl.php	/^	protected $url;                 \/\/ URL of the session$/;"	v	language:PHP
 url	.\application\libraries\init_page.php	/^					$url = 'backend\/'.$url;$/;"	v	language:PHP
-url	.\application\libraries\init_page.php	/^				$url = 'backend\/'.$url;$/;"	v	language:PHP
-url	.\application\libraries\init_page.php	/^				$url = 'front\/'.$url;$/;"	v	language:PHP
+url	.\application\libraries\init_page.php	/^				$url =  $url.'&d=front';$/;"	v	language:PHP
+url	.\application\libraries\init_page.php	/^				$url = $url.'&d=backend';$/;"	v	language:PHP
 url	.\application\models\alipay_model.php	/^        $url = $this->gateway;$/;"	v	language:PHP
 url	.\application\models\common_model.php	/^		$url =  substr($url,0,strrpos($url,"\/")+1);$/;"	v	language:PHP
 url	.\application\models\common_model.php	/^		$url = $this->uri->uri_string();$/;"	v	language:PHP
@@ -25461,6 +25428,7 @@ urls	.\system\libraries\Trackback.php	/^		$urls = array_unique($urls);$/;"	v	lan
 urls	.\system\libraries\Trackback.php	/^		$urls = preg_replace("\/\\s*(\\S+)\\s*\/", "\\\\1,", $urls);$/;"	v	language:PHP
 urls	.\system\libraries\Trackback.php	/^		$urls = preg_split('\/[,]\/', $urls);$/;"	v	language:PHP
 urls	.\system\libraries\Trackback.php	/^		$urls = str_replace(",,", ",", $urls);$/;"	v	language:PHP
+urs	.\application\core\MY_Config.php	/^                 $urs = explode('\/',$uri);$/;"	v	language:PHP
 use	.\application\helpers\JSON.php	/^        $this->use = $use;$/;"	v	language:PHP
 use	.\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php	/^     * Checks whether the class use a UUID for id generation$/;"	c	language:PHP
 useAliasesBefore	.\application\libraries\Doctrine\ORM\Query\SqlWalker.php	/^        $useAliasesBefore  = $this->useSqlTableAliases;$/;"	v	language:PHP
@@ -26049,7 +26017,7 @@ viewName	.\application\libraries\Doctrine\DBAL\Schema\AbstractSchemaManager.php	
 view_add	.\application\controllers\backend\templates.php	/^       function view_add(){$/;"	f	language:PHP
 view_cascade	.\system\core\Loader.php	/^	public function add_package_path($path, $view_cascade=TRUE)$/;"	v	language:PHP
 view_file	.\system\core\Loader.php	/^			foreach ($this->_ci_view_paths as $view_file => $cascade)$/;"	v	language:PHP
-view_list	.\application\controllers\backend\templates.php	/^       function view_list(){$/;"	f	language:PHP
+view_list	.\application\controllers\backend\templates.php	/^       function view_list(){      $/;"	f	language:PHP
 view_save	.\application\controllers\backend\templates.php	/^       function view_save(){$/;"	f	language:PHP
 views	.\application\libraries\Doctrine\DBAL\Schema\AbstractSchemaManager.php	/^        $views = $this->_conn->fetchAll($sql);$/;"	v	language:PHP
 violations	.\application\libraries\Doctrine\DBAL\Platforms\Keywords\ReservedKeywordsValidator.php	/^    private $violations = array();$/;"	v	language:PHP

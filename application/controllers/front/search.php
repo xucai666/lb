@@ -46,7 +46,7 @@ class Search extends CI_Controller {
 		$module_slt = $this->input->get_post('pid')?$this->input->get_post('pid'):implode(',',array_keys($modules));
 
 	
-		$query = $this->db->query("CALL  proc_all('".$this->input->get_post("title")."','".$module_slt."','".(int)$this->input->get_post('per_page')."',".$page_size.")");  
+		$query = $this->db->query("CALL  ".$this->db->dbprefix."proc_all('".$this->input->get_post("title")."','".$module_slt."','".(int)$this->input->get_post('per_page')."',".$page_size.")");  
 		$ls = $query->result_array();
 		$ct = $ls[0]['rt'];
 

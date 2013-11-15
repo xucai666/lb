@@ -55,7 +55,7 @@ class Member extends CI_Controller {
                    'expire' => '86500',
                    'domain' => '',
                    'path'   => '/',
-                   'prefix' => 'mysys_',
+                   'prefix' => config_item('cookie_prefix'),
                 );
 	 			set_cookie($cookie);
 	 			$this->init_page->front_redirect('d=front&c=member&m=action_member_center',lang('mb_msg_sign_in'));

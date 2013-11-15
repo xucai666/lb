@@ -45,7 +45,7 @@ if (mysqli_connect_errno()) {
 
 //替换表前缀
 $query  = file_get_contents(DB_FILE);
-$query  = preg_replace("/mysys_/",CFG_DB_PREFIX,$query);	
+$query  = preg_replace("/corcms_/",CFG_DB_PREFIX,$query);	
 /* execute multi query */
 echo multiQuery($query);exit;
 if ($mysqli->multi_query($query)) {

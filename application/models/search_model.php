@@ -38,8 +38,8 @@ class Search_model  extends CI_Model{
 	 */
 	function url_define(){
 		return array(
-			'mysys_module_news'=>'d=front&c=dynamic&m=view&id=',
-			'mysys_module_product'=>'d=front&c=product&m=view&id=',
+			$this->db->dbprefix.'module_news'=>'d=front&c=dynamic&m=view&id=',
+			$this->db->dbprefix.'module_product'=>'d=front&c=product&m=view&id=',
 			
 		);
 	}

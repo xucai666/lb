@@ -56,7 +56,7 @@ try{
 	$dump->setDbPrefix(CFG_DB_PREFIX);
 	$dump->doImport();
 	@fopen("install.lock", 'w');
-	echo "<script>location.href='".$base_url."'</script>";
+	echo "<script>setTimeout(function(){location.href='".$base_url."'},5000);</script>";
 }catch (Exception $e){
     echo($e->getMessage()),'&nbsp;&nbsp;<a href="javascript:history.back(1);">&laquo;&nbsp;Back</a>';
 }

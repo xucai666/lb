@@ -118,7 +118,7 @@ $(document).ready(function(){
 
 <tr>
 <td align="right" bgcolor="#FFFFFF">表前缀:</td>
-<td align="left" bgcolor="#FFFFFF"><input name="db_prefix" type="text" id="db_prefix" value='mysys_' /></td>
+<td align="left" bgcolor="#FFFFFF"><input name="db_prefix" type="text" id="db_prefix" value='corcms_' /></td>
 </tr>
 
 

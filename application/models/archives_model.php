@@ -113,7 +113,7 @@ class Archives_model extends CI_Model{
 	 * @return [type]
 	 */
 	function archive_content_nav($id){
-		$sq = "SELECT (SELECT b.c_sn   FROM mysys_category  AS b  WHERE   a.info_class_sn   LIKE  CONCAT(b.c_sn,'%') ORDER BY b.c_sn ASC LIMIT 1)  AS  parent_sn  FROM mysys_infos AS a WHERE a.info_id=?";
+		$sq = "SELECT (SELECT b.c_sn   FROM ".$this->db->dbprefix."category  AS b  WHERE   a.info_class_sn   LIKE  CONCAT(b.c_sn,'%') ORDER BY b.c_sn ASC LIMIT 1)  AS  parent_sn  FROM  ".$this->db->dbprefix."infos AS a WHERE a.info_id=?";
 		$p_sn = $this->init_db->fetchColumn($sq,array($id));
 		$tb = $this->init_db->table('infos');
 		$sq = <<<EOT

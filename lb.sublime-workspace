@@ -131,6 +131,40 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "Searching 924 files for \"proc_all\" (regex)\n\nE:\\phpnow\\htdocs\\lb\\application\\controllers\\front\\search.php:\n   47  \n   48  	\n   49: 		$query = $this->db->query(\"CALL  proc_all('\".$this->input->get_post(\"title\").\"','\".$module_slt.\"','\".(int)$this->input->get_post('per_page').\"',\".$page_size.\")\");  \n   50  		$ls = $query->result_array();\n   51  		$ct = $ls[0]['rt'];\n\n1 match in 1 file\n",
+			"settings":
+			{
+				"buffer_size": 384,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "application/config/database.php",
+			"settings":
+			{
+				"buffer_size": 2598,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "database/proc_all.sql",
+			"settings":
+			{
+				"buffer_size": 2469,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "database/db.bat",
+			"settings":
+			{
+				"buffer_size": 281,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -180,6 +214,18 @@
 	},
 	"file_history":
 	[
+		"/E/phpnow/htdocs/lb/install/index.php",
+		"/E/phpnow/htdocs/lb/swfupload/upload.php",
+		"/E/phpnow/htdocs/lb/application/config/config.php",
+		"/E/phpnow/htdocs/lb/tools/faisunsql_v40_utf8/index/index_pg1.php",
+		"/E/phpnow/htdocs/lb/application/config/database.php",
+		"/E/phpnow/htdocs/lb/system/core/Loader.php",
+		"/E/phpnow/htdocs/lb/install/index_2.php",
+		"/E/phpnow/htdocs/lb/install/libs/phpMyImporter.php",
+		"/E/phpnow/htdocs/lb/install/index_3.php",
+		"/E/phpnow/htdocs/lb/.tags",
+		"/E/phpnow/htdocs/lb/database/db.bat",
+		"/E/phpnow/htdocs/lb/application/templates/front/black/zh/top.htm",
 		"/E/phpnow/htdocs/lb/application/libraries/tpl.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/black/en/left_message.htm",
 		"/E/phpnow/htdocs/lb/application/controllers/test.php",
@@ -192,7 +238,6 @@
 		"/E/phpnow/htdocs/lb/application/helpers/auth_helper.php",
 		"/E/phpnow/htdocs/lb/application/helpers/MY_url_helper.php",
 		"/E/phpnow/htdocs/lb/application/controllers/front/index.php",
-		"/E/phpnow/htdocs/lb/application/config/database.php",
 		"/E/phpnow/htdocs/lb/application/controllers/front/sales.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/black/en/sales.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/black/en/about.htm",
@@ -202,7 +247,6 @@
 		"/E/phpnow/htdocs/lb/html/gong_si_jian_jie/about.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/black/en/left_sales.htm",
 		"/E/phpnow/htdocs/lb/application/templates/backend/lang_trans.htm",
-		"/E/phpnow/htdocs/lb/application/config/config.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/search.htm",
 		"/E/phpnow/htdocs/lb/application/models/search_model.php",
 		"/E/phpnow/htdocs/lb/application/controllers/front/search.php",
@@ -214,7 +258,6 @@
 		"/E/phpnow/htdocs/lb/application/templates/front/black/zh/dynamic_view.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/dynamic_view.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/dynamic_view.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/black/zh/top.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/black/en/top.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/top.htm",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/en/css/lb.css",
@@ -298,26 +341,22 @@
 		"/E/phpnow/htdocs/lb/application/templates/backend/sys_execute_sql.htm",
 		"/E/phpnow/htdocs/lb/application/language/zh/item_backend_lang.php",
 		"/E/phpnow/htdocs/lb/application/language/en/item_backend_lang.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/engage_apply_list.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/apply_list.htm",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/engage.php",
-		"/E/phpnow/htdocs/lb/application/templates/backend/engage_apply_view.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/engage_list.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/black/en/engage.htm",
-		"/E/phpnow/htdocs/lb/application/models/engage_model.php",
-		"/E/phpnow/htdocs/lb/application/controllers/backend/advs.php",
-		"/E/phpnow/htdocs/lb/application/libraries/init_db.php",
-		"/C/Users/Administrator/AppData/Local/Temp/_tc/config.php"
+		"/E/phpnow/htdocs/lb/application/templates/backend/engage_apply_list.htm"
 	],
 	"find":
 	{
-		"height": 72.0
+		"height": 70.0
 	},
 	"find_in_files":
 	{
 		"height": 90.0,
 		"where_history":
 		[
+			"E:\\phpnow\\htdocs\\lb\\application,*.php",
+			"E:\\phpnow\\htdocs\\lb,*.php",
+			"E:\\phpnow\\htdocs\\lb",
+			"E:\\phpnow\\htdocs\\lb\\application",
+			"E:\\phpnow\\htdocs\\lb\\install",
 			"E:\\phpnow\\htdocs\\lb\\application",
 			"E:\\phpnow\\htdocs\\lb\\application\\templates",
 			"E:\\phpnow\\htdocs\\lb\\application",
@@ -408,6 +447,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"proc_all",
+			"mysy",
+			"mysys",
+			"$lang",
+			"path",
+			"apppath",
+			"path",
+			"mysys_",
+			"db_prefix",
+			"$this->db_prefix",
+			"CFG_DB_PREFIX",
+			"prefix",
+			"mysys_",
 			"func_site_url",
 			"smarty_php_tag",
 			"<!--{php",
@@ -522,20 +574,7 @@
 			"save_url",
 			"save_path",
 			"$uid",
-			"uniqid",
-			"$uid",
-			"save_path",
-			"save_url",
-			"realUrl",
-			"upload_complete_handler",
-			"server_data",
-			"json_en",
-			"post_params",
-			"save_url",
-			"file.url",
-			"file.name",
-			"save_path",
-			"saev_path"
+			"uniqid"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -566,8 +605,132 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"settings":
+					{
+						"buffer_size": 384,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										165,
+										173
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "application/config/database.php",
+					"settings":
+					{
+						"buffer_size": 2598,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2371,
+								2371
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 918.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "database/proc_all.sql",
+					"settings":
+					{
+						"buffer_size": 2469,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								2469
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQL/SQL.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2142.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "database/db.bat",
+					"settings":
+					{
+						"buffer_size": 281,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								201,
+								201
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Batch File/Batch File.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -612,6 +775,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"top.htm",
+				"application/templates/front/black/zh/top.htm"
+			],
 			[
 				"left_me",
 				"application/templates/front/black/en/left_message.htm"
@@ -687,10 +854,6 @@
 			[
 				"dynamic.php",
 				"application/controllers/front/dynamic.php"
-			],
-			[
-				"top.htm",
-				"application/templates/front/black/zh/top.htm"
 			],
 			[
 				"lb.css",
