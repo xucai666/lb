@@ -17,6 +17,7 @@ class phpMyImporter {
 	var $connection = null;
 	var $compress = null;
 	var $utf8 = null;
+	var $r= null;
 
 	var $importFilename = null;
 	private  $db_prefix;
@@ -48,7 +49,16 @@ class phpMyImporter {
 			return false;
 		return true;
   	}
+
+  	
+  	function setReplace($r){
+  		$this->r = $r;
+
+  	}
 	
+	function getReplace(){
+		return $this->r;
+	}
 	/**
 	* Read from SQL file and make sql query
 	*/
@@ -90,6 +100,10 @@ class phpMyImporter {
 			// Importing SQL
 			$importSql .= $line;
 			if ( substr(trim($line), strlen(trim($line))-1) == ";" ) {
+				$r = $this->getReplace();
+				if($r){
+					$importSql = str_replace($r['key'],$r['value'],$importSql);
+				}
 				$query = @mysql_query($importSql, $this->connection);
 				if (!$query) return false;
 				$importSql = "";

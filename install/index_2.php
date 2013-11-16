@@ -54,6 +54,8 @@ try{
 	$dump = new phpMyImporter(CFG_DB_NAME,$connect,DB_FILE,false);
 	$dump->utf8 = true; // Uses UTF8 connection with MySQL server, default: true
 	$dump->setDbPrefix(CFG_DB_PREFIX);
+	//replace default url
+	$dump->setReplace(array('key'=>'http://localhost/lb','value'=>$base_url));
 	$dump->doImport();	
 	
 	@fopen("install.lock", 'w');

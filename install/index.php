@@ -32,6 +32,11 @@ function directory_map($source_dir, $directory_depth = 0, $hidden = FALSE)
 		return FALSE;
 	}
 
+//re-install
+if($_GET['act']=='reinstall'){
+	@unlink('./install.lock');
+}
+
 if(file_exists('install.lock')){
 	$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME'];
 	$url = substr($url,0,-9);
