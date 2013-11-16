@@ -45,11 +45,6 @@ try{
 	@mysql_query($sql2) or tri_err('create db error.');	
 	mysql_select_db(CFG_DB_NAME);
 	mysql_query("set names 'utf8' ");			
-	$query = mysql_query('show tables from '.CFG_DB_NAME,$connect); 
-	while(($row = mysql_fetch_array($query)) && substr($row[0],0,strlen(CFG_DB_PREFIX)+2) != CFG_DB_PREFIX.'v_') {	
-					
-		@mysql_query("TRUNCATE TABLE `".$row[0]."`;") or tri_err('truncate error.');	
-	}
 	//import files
 	$dump = new phpMyImporter(CFG_DB_NAME,$connect,DB_FILE,false);
 	$dump->utf8 = true; // Uses UTF8 connection with MySQL server, default: true

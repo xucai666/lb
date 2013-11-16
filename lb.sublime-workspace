@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"impo",
+				"importSql"
+			],
+			[
 				"preg_mat",
 				"preg_match_all"
 			],
@@ -123,30 +127,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "install/index_2.php",
-			"settings":
-			{
-				"buffer_size": 2945,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "install/libs/phpMyImporter.php",
-			"settings":
-			{
-				"buffer_size": 4586,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "database/db.bat",
-			"settings":
-			{
-				"buffer_size": 283,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -196,11 +176,15 @@
 	},
 	"file_history":
 	[
-		"/E/phpnow/htdocs/lb/application/config/database.php",
-		"/E/phpnow/htdocs/lb/application/config/config.php",
+		"/E/phpnow/htdocs/lb/application/libraries/online.php",
+		"/E/phpnow/htdocs/lb/install/index_2.php",
+		"/E/phpnow/htdocs/lb/database/db.bat",
 		"/E/phpnow/htdocs/lb/install/index.php",
 		"/E/phpnow/htdocs/lb/install/libs/phpMyImporter.php",
-		"/E/phpnow/htdocs/lb/install/index_2.php",
+		"/E/phpnow/htdocs/lb/application/config/database.php",
+		"/E/phpnow/htdocs/lb/application/config/config.php",
+		"/E/phpnow/htdocs/lb/database/lb_last.sql",
+		"/E/phpnow/htdocs/lb/readme.txt",
 		"/E/phpnow/htdocs/lb/install/index_3.php",
 		"/C/Users/Administrator/AppData/Local/Temp/_tc/config.php",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/top.htm",
@@ -319,11 +303,7 @@
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jquery-ui-1.10.3.custom.min.js",
 		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/jquery-1.4.2.min.js",
 		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/js/artdialog/skins/default.css",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/artdialog/skins/default.css",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/vote_list.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/vote_list_single.htm",
-		"/E/phpnow/htdocs/lb/application/templates/front/corcms/zh/vote_view.htm",
-		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/item/templates.js"
+		"/E/phpnow/htdocs/lb/application/templates/backend/corcms/js/artdialog/skins/default.css"
 	],
 	"find":
 	{
@@ -411,6 +391,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"getReplace",
+			"$importSql",
+			"dbprefix",
+			"base_url",
 			"procedure",
 			"CFG_DB_PREFIX",
 			"getdbprefix",
@@ -534,11 +518,7 @@
 			"$array[value]",
 			"$array[name]",
 			"func_vsprintf",
-			"mainp",
-			"main[",
-			"main",
-			"$v",
-			"product_name_rules"
+			"mainp"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -565,89 +545,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "install/index_2.php",
-					"settings":
-					{
-						"buffer_size": 2945,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "install/libs/phpMyImporter.php",
-					"settings":
-					{
-						"buffer_size": 4586,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3051,
-								3051
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1879.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "database/db.bat",
-					"settings":
-					{
-						"buffer_size": 283,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								283,
-								283
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Batch File/Batch File.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
