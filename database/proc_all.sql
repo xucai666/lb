@@ -1,9 +1,9 @@
 
-DELIMITER \g
+DELIMITER $$
 
 
-DROP PROCEDURE IF EXISTS `corcms_zh_proc_all`\g
-CREATE DEFINER=`root`@`localhost` PROCEDURE `corcms_zh_proc_all`(query_key VARCHAR(50),inp_mid VARCHAR(20),lmt_from INT,page_size INT)
+DROP PROCEDURE IF EXISTS `corcms_zh_proc_all`$$
+CREATE  PROCEDURE `corcms_zh_proc_all`(query_key VARCHAR(50),inp_mid VARCHAR(20),lmt_from INT,page_size INT)
 BEGIN
 
 
@@ -100,16 +100,16 @@ SET @SQL = CONCAT("select  a.*,",@t," as rt  from corcms_zh_sp_output_all_tmp  a
 
 
 
-    END\g
+    END$$
 
 DELIMITER ;
 
 
-DELIMITER \g
+DELIMITER $$
 
 
-DROP PROCEDURE IF EXISTS `corcms_en_proc_all`\g
-CREATE DEFINER=`root`@`localhost` PROCEDURE `corcms_en_proc_all`(query_key VARCHAR(50),inp_mid VARCHAR(20),lmt_from INT,page_size INT)
+DROP PROCEDURE IF EXISTS `corcms_en_proc_all`$$
+CREATE  PROCEDURE `corcms_en_proc_all`(query_key VARCHAR(50),inp_mid VARCHAR(20),lmt_from INT,page_size INT)
 BEGIN
 
 
@@ -206,6 +206,6 @@ SET @SQL = CONCAT("select  a.*,",@t," as rt  from corcms_en_sp_output_all_tmp  a
 
 
 
-    END\g
+    END$$
 
 DELIMITER ;

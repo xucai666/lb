@@ -69,8 +69,9 @@ class phpMyImporter {
 		$x = 0;
 		$importSql = "";
 		$procent = 0;
-
-		foreach ($lines as $line) {
+		$flag_proc = 0;
+		$line_proc_key = 0;
+		foreach ($lines as $k=>$line) {
 			// Print progress
 			$x++;
 			$numOfLines = count($lines);
@@ -81,6 +82,10 @@ class phpMyImporter {
 				
 			}
 
+			if(strpos($line,'DELIMITER')!==false){				
+				$line_proc_key = $k;
+				break;
+			} 
 
 			// Importing SQL
 			$importSql .= $line;
@@ -90,10 +95,39 @@ class phpMyImporter {
 				$importSql = "";
 			}
 		}
+
+		//import procedure
+		if($line_proc_key>0){
+
+			$cr = array_slice($lines,$line_proc_key);
+			$line_content  = implode("\n",$cr);
+			
+			return $this->import_procedure($line_content);
+		}
 		return true;
 	}
 	
+	/**
+	 * import procedure
+	 * @param  [type] $ct [description]
+	 * @return [type]     [description]
+	 */
+	function import_procedure($sql){
+		preg_match_all("/DELIMITER (.*)/", $sql, $splits);
+		$str =  $splits[1][0];	
+
+		$sqls = explode($str,$sql);
 	
+		foreach($sqls as $v){
+			if(strpos($v,'DELIMITER')!==false){
+				continue;
+			}		
+			$query = @mysql_query($v,$this->connection) ;
+			if (!$query) return false;
+		}
+		$this->showPercent("100%");
+		return true;
+	}
 	/**
 	 * Short description. 
 	 *

@@ -52,12 +52,7 @@ if(file_exists('install.lock')){
 function setDb(v){
 	document.getElementById('db_name').value=v.substr(0,v.lastIndexOf("."));
 }
-$(document).ready(function(){
-		$('.install_m').click(function(){
-			$('#form1').attr('action',$(this).val());
-		})
-		
-});
+
 </script>
 </head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -70,16 +65,9 @@ $(document).ready(function(){
 <td align="left" bgcolor="#FFFFFF"><label>
 <input name="base_url" size="80" type="text" id="base_url"  value='<?php echo dirname(dirname("http://".$_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME']));?>' />
 </label>（如：http://localhost/lb/）</td>
-</tr><tr>
-<tr>
-<td align="right" bgcolor="#FFFFFF">安装数据方式:</td>
-<td align="left" bgcolor="#FFFFFF">
-	<input type="radio" class="install_m" name="install_method" value='index_2.php' checked="checked">msyql
-	<input type="radio" class="install_m" name="install_method"  value='index_3.php'>msyqli
-
-
-</td>
 </tr>
+<tr>
+
 <td align="right" bgcolor="#FFFFFF">数据库地址：</td>
 <td align="left" bgcolor="#FFFFFF"><label>
 <input name="db_host" type="text" id="db_host" value="localhost" />
