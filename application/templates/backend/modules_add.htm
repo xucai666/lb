@@ -110,6 +110,10 @@
 						<select name="detail[r_queryable][<!--{$k}-->]">
 						<!--{html_options options=$query_types selected=$v.r_queryable}-->
 						</select>
+						<a class="query_define_a" href="javascript:;" target="_self"><!--{img_url('icons/cfg.gif','backend')}--></a>
+						<div class="query_define_div">
+							<textarea name="detail[r_query_define][<!--{$k}-->]" ><!--{$v.r_query_define|default:""|escape:'html'}--></textarea>
+						</div>
 					</td>
 					<td>
 
@@ -147,5 +151,19 @@
 </table>
 </form>	
 </fieldset>
-
+<script language="javascript">
+	$(document).ready(function(){
+		$('.query_define_a').on('click',function(){
+				var obj = $(this).next('.query_define_div');
+				$(obj).toggle(200,function(){
+					if($(this).find("textarea").text()==''){
+						$(this).find("textarea").text('自定义显示');
+					}else if($(this).find("textarea").text()=='自定义显示'){
+						$(this).find("textarea").text(''); 
+					} 
+				});
+		})
+		
+	})
+</script>
 <!--{include file="`$dir_backend`/foot.htm"}-->

@@ -126,6 +126,7 @@ class Tree_model extends CI_Model{
 
 	//detail
 	function detail($id,$key=null){
+
 		$rs = array();
 		$r = $this->init_cache->cache_fetch('treeids');
 		foreach($r as $k=>$v){
@@ -134,6 +135,8 @@ class Tree_model extends CI_Model{
 				$rs += $this->init_cache->cache_fetch('tree_'.$k);
 			}
 		}
+		
+		
 		
 		return $key ? $rs[$id][$key] : $rs[$id];
 	}

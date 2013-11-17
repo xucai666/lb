@@ -24,6 +24,8 @@ define('CFG_DB_ADAPTER','mysql');
 define('CFG_DB_NAME',$db_name);	
 define('CFG_DB_PREFIX',$db_prefix);	
 define('DB_FILE',$base_dir.'database'.$dl.$db_file);
+//fetch all lang by config
+$supprt_lang = get_config('support_language','config.php');
 try{
 	if(!file_exists(DB_FILE)){
 		throw new Exception('db file is not exists.');
@@ -36,8 +38,10 @@ try{
 	update_config('username',CFG_DB_USER,'string');
 	update_config('password',CFG_DB_PASSWORD,'string');
 	update_config('database',CFG_DB_NAME,'string');
-	update_config('dbprefix',CFG_DB_PREFIX,'string');
-
+	//update by lang define
+	foreach((array)$supprt_lang as $k=>$v){		
+		update_config('[\''.$v.'\'][\'dbprefix',CFG_DB_PREFIX.$v.'_','string');
+	}	
 
 	update_config('base_url',$base_url,'string','config.php');
 	$connect = @mysql_connect(CFG_DB_HOST,CFG_DB_USER,CFG_DB_PASSWORD) or tri_err('connect error.');
@@ -52,9 +56,8 @@ try{
 	//replace default url
 	$dump->setReplace(array('key'=>'http://localhost/lb','value'=>$base_url));
 	$dump->doImport();	
-	
 	@fopen("install.lock", 'w');
-	echo "<script>setTimeout(function(){location.href='".$base_url."'},5000);</script>";
+	echo "<script>setTimeout(function(){location.href='".$base_url."'},3000);</script>";
 }catch (Exception $e){
     echo($e->getMessage()),'&nbsp;&nbsp;<a href="javascript:history.back(1);">&laquo;&nbsp;Back</a>';
 }
@@ -73,6 +76,21 @@ function update_config($ini, $value,$type="string",$file='database.php'){
 	} 
 	file_put_contents($config_dir.$file, $dlr2); 
 } 
+
+	
+/**
+ * [get_config description]
+ * @param  [type] $file [description]
+ * @param  [type] $item [description]
+ * @return [type]       [description]
+ */
+function get_config($item,$file='database.php'){
+	global $config_dir;
+	$exp = "/\['".$item."'\]\s*=(.*?);/";
+	preg_match_all($exp,file_get_contents($config_dir.$file),$var);
+	eval(" \$t  = ".$var[1][0].";");
+	return $t;
+}
 
 function log_error($txt){
 	echo $txt,'<hr>';

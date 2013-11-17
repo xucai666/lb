@@ -398,7 +398,7 @@ td,span,th,div,input,button,a{
 
 .button_bg{
 	height:21px;
-	width:69px;
+	width:auto;
 	background-image:url(../images/button_bg.png);
 	background-repeat:no-repeat;
 	text-align: center;

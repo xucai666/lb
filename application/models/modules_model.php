@@ -112,14 +112,19 @@ class Modules_model extends CI_Model{
 	 * @return [type]       [description]
 	 */
 	function fetch_field_ext(){
+
 		$r = $this->db->select('f_id,f_ext',false)->from('module_fields')->get()->result_array();
 		return array_re_index($r,'f_id','f_ext');
 	}
 
 
-	function is_primary($f_id){
+	function is_primary($f_id,$field_ext=null){
 		if(!$f_id) return false;
-		$r = $this->fetch_field_ext();		
+		if($field_ext){
+			$r = $field_ext;
+		}else{
+			$r = $this->fetch_field_ext();
+		}
 		return $r[$f_id]==2;
 	}
 

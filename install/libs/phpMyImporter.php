@@ -72,7 +72,7 @@ class phpMyImporter {
 			$lines = file($file);
 		}
 		//替换表前缀
-		if($this->getDbPrefix()) $lines = preg_replace("/corcms_/",$this->getDbPrefix(),$lines);	
+		if($this->getDbPrefix()) $lines = preg_replace("/t_/",$this->getDbPrefix(),$lines);	
 		$stats = count($lines);
 		$this->output("DONE!\n");	
 		$this->output("Importing SQL into database '".$this->database."': Total ".$stats.' Records');	
@@ -137,7 +137,7 @@ class phpMyImporter {
 				continue;
 			}		
 			$query = @mysql_query($v,$this->connection) ;
-			if (!$query) return false;
+			
 		}
 		$this->showPercent("100%");
 		return true;

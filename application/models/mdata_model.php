@@ -106,8 +106,10 @@ class Mdata_model extends CI_Model{
 		
 		//fields html
 		$fields_html = $this->m->fetch_f_html();
+		//field ext
+		$field_ext = $this->m->fetch_field_ext();
 		foreach($fields_r as $k=>$v){
-			if($this->m->is_primary($v['f_id'])) $primary = $v['r_name'];
+			if($this->m->is_primary($v['f_id'],$field_ext)) $primary = $v['r_name'];
 		}
 
 		foreach($fields_r as $k=>$v){
@@ -120,11 +122,11 @@ class Mdata_model extends CI_Model{
 						$this->db->where("FIND_IN_SET('$v1',$v[r_name])>0",NULL,'or');
 					endforeach;	
 				}else{
-					$query[$v['r_name']] && $this->db->like($v['r_name'],$query[$v['r_name']],$query_types[$v[r_queryable]]);
+					$query[$v['r_name']]!=='' && $query[$v['r_name']] && $this->db->like($v['r_name'],$query[$v['r_name']],$query_types[$v[r_queryable]]);
 				}
 
-				
-				$querys[$v['r_name']] = array('name'=>$v['r_alias'],'html'=>$fields_html[$v['f_id']]);
+				$query_html = $v['r_query_define']?$v['r_query_define']:$fields_html[$v['f_id']];
+				$querys[$v['r_name']] = array('name'=>$v['r_alias'],'html'=>$query_html);
 			}
 			//数据列表页面，隐藏未配置输出格式的字段
 			if(empty($v['r_output'])) unset($fields_r[$k]);

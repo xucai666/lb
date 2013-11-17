@@ -72,7 +72,6 @@ class CI_DB_mysql_driver extends CI_DB {
 
 		define("CLIENT_MULTI_RESULTS",131072);//Enable/disable multi-results
     	define("CLIENT_MULTI_STATEMENTS",65536);//Enable/disable multi-statement support
-
 		return @mysql_connect($this->hostname, $this->username, $this->password, TRUE,CLIENT_MULTI_STATEMENTS);
 	}
 
